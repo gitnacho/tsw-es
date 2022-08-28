@@ -1,0 +1,6 @@
+---
+display: "Conservar la salida del observador"
+oneline: "Desactiva la limpieza de la consola en modo observador."
+---
+
+Ya sea para mantener la salida de la consola obsoleta en modo `watch` en lugar de borrar la pantalla cada vez que ocurre un cambio.
