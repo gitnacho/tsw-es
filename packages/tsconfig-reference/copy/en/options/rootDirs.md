@@ -1,5 +1,5 @@
 ---
-display: "Root Dirs"
+display: "Directorios raíz"
 oneline: "Permite que varios directorios se traten como uno solo al resolver módulos."
 ---
 

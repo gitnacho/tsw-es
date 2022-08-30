@@ -1,5 +1,5 @@
 ---
-display: "noImplicitOverride"
+display: "Sin override implícito"
 oneline: "Se asegura de que la redefinición de miembros de las clases derivadas estén marcados con un modificador `override`."
 ---
 
@@ -45,7 +45,7 @@ class SharedAlbum extends Album {
 
 En este caso, *TypeScript* no ha proporcionado ninguna advertencia de que `download` en `SharedAlbum` *se esperaba* para anular una función en la clase base.
 
-Usando `noImplicitOverride` te puedes asegurar de que las subclases nunca se desincronicen, garantizando que las funciones que reemplazan incluyen la palabra clave `override`.
+Al usar `noImplicitOverride` te puedes asegurar de que las subclases nunca se desincronicen, garantizando que las funciones que reemplazan incluyen la palabra clave `override`.
 
 El siguiente ejemplo tiene habilitado `noImplicitOverride` y puedes ver el error recibido cuando falta `override`:
 

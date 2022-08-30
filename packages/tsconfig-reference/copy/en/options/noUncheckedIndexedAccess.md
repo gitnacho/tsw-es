@@ -1,9 +1,9 @@
 ---
-display: "noUncheckedIndexedAccess"
+display: "Sin acceso indexado no verificado"
 oneline: "Agrega `undefined` a un tipo cuando se acceda mediante un índice ."
 ---
 
-*TypeScript* tiene una forma de describir objetos que tienen claves desconocidas pero valores conocidos en un objeto, a través de índice de firmas.
+*TypeScript* tiene una forma de describir objetos que tienen claves desconocidas pero valores conocidos en un objeto, a través del índice de firmas.
 
 ```ts twoslash
 interface EnvironmentVars {

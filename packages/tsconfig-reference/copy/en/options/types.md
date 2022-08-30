@@ -3,7 +3,7 @@ display: "Tipos"
 oneline: "Especifica los nombres de los paquetes de tipo que se incluirán sin que se haga referencia a ellos en un archivo fuente."
 ---
 
-De manera predeterminada, todos los paquetes *visibles* "`@types`" están incluidos en tu compilación.
+De manera predeterminada, todos los paquetes "`@types`" *visibles* están incluidos en tu compilación.
 Los paquetes en `node_modules/@types` de cualquier directorio adjunto se consideran *visibles*.
 Por ejemplo, eso significa paquetes dentro de `./node_modules/@types/`, `../node_modules/@types/`, `../../node_modules/@types/`, y así sucesivamente.
 

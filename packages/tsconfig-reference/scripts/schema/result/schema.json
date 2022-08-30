@@ -70,34 +70,34 @@
               "default": false
             },
             "force": {
-              "description": "Crea todos los proyectos, incluidos los que parecen estar actualizados.",
+              "description": "Build all projects, including those that appear to be up to date.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Crea todos los proyectos, incluidos los que parecen estar actualizados.\n\nSee more: https://www.typescriptlang.org/tsconfig#force"
+              "markdownDescription": "Build all projects, including those that appear to be up to date.\n\nSee more: https://www.typescriptlang.org/tsconfig#force"
             },
             "verbose": {
-              "description": "Habilita el registro detallado.",
+              "description": "Enable verbose logging.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Habilita el registro detallado.\n\nSee more: https://www.typescriptlang.org/tsconfig#verbose"
+              "markdownDescription": "Enable verbose logging.\n\nSee more: https://www.typescriptlang.org/tsconfig#verbose"
             },
             "incremental": {
-              "description": "Guarda los archivos `.tsbuildinfo` para permitir la compilación incremental de proyectos.",
+              "description": "Save .tsbuildinfo files to allow for incremental compilation of projects.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Guarda los archivos `.tsbuildinfo` para permitir la compilación incremental de proyectos.\n\nSee more: https://www.typescriptlang.org/tsconfig#incremental"
+              "markdownDescription": "Save .tsbuildinfo files to allow for incremental compilation of projects.\n\nSee more: https://www.typescriptlang.org/tsconfig#incremental"
             },
             "assumeChangesOnlyAffectDirectDependencies": {
-              "description": "Tener recompilaciones en proyectos que usan `incremental` y el modo `watch` suponen que los cambios dentro de un archivo solo afectarán a los archivos que dependan directamente de él.",
+              "description": "Have recompiles in projects that use `incremental` and `watch` mode assume that changes within a file will only affect files directly depending on it.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Tener recompilaciones en proyectos que usan `incremental` y el modo `watch` suponen que los cambios dentro de un archivo solo afectarán a los archivos que dependan directamente de él.\n\nSee more: https://www.typescriptlang.org/tsconfig#assumeChangesOnlyAffectDirectDependencies"
+              "markdownDescription": "Have recompiles in projects that use `incremental` and `watch` mode assume that changes within a file will only affect files directly depending on it.\n\nSee more: https://www.typescriptlang.org/tsconfig#assumeChangesOnlyAffectDirectDependencies"
             },
             "traceResolution": {
-              "description": "Rutas de registro utilizadas durante el proceso `moduleResolution`.",
+              "description": "Log paths used during the `moduleResolution` process.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Rutas de registro utilizadas durante el proceso `moduleResolution`.\n\nSee more: https://www.typescriptlang.org/tsconfig#traceResolution"
+              "markdownDescription": "Log paths used during the `moduleResolution` process.\n\nSee more: https://www.typescriptlang.org/tsconfig#traceResolution"
             }
           }
         }
@@ -110,9 +110,9 @@
           "description": "Settings for the watch mode in TypeScript.",
           "properties": {
             "watchFile": {
-              "description": "Especifica cómo funciona el modo de observación de TypeScript.",
+              "description": "Specify how the TypeScript watch mode works.",
               "type": "string",
-              "markdownDescription": "Especifica cómo funciona el modo de observación de TypeScript.\n\nSee more: https://www.typescriptlang.org/tsconfig#watchFile",
+              "markdownDescription": "Specify how the TypeScript watch mode works.\n\nSee more: https://www.typescriptlang.org/tsconfig#watchFile",
               "enum": [
                 "fixedpollinginterval",
                 "prioritypollinginterval",
@@ -123,9 +123,9 @@
               ]
             },
             "watchDirectory": {
-              "description": "Especifica cómo se ven los directorios en los sistemas que carecen de la funcionalidad de observación recursiva de archivos.",
+              "description": "Specify how directories are watched on systems that lack recursive file-watching functionality.",
               "type": "string",
-              "markdownDescription": "Especifica cómo se ven los directorios en los sistemas que carecen de la funcionalidad de observación recursiva de archivos.\n\nSee more: https://www.typescriptlang.org/tsconfig#watchDirectory",
+              "markdownDescription": "Specify how directories are watched on systems that lack recursive file-watching functionality.\n\nSee more: https://www.typescriptlang.org/tsconfig#watchDirectory",
               "enum": [
                 "usefsevents",
                 "fixedpollinginterval",
@@ -134,9 +134,9 @@
               ]
             },
             "fallbackPolling": {
-              "description": "Especifica qué enfoque debe utilizar el observador si el sistema se queda sin observadores de archivos nativos.",
+              "description": "Specify what approach the watcher should use if the system runs out of native file watchers.",
               "type": "string",
-              "markdownDescription": "Especifica qué enfoque debe utilizar el observador si el sistema se queda sin observadores de archivos nativos.\n\nSee more: https://www.typescriptlang.org/tsconfig#fallbackPolling",
+              "markdownDescription": "Specify what approach the watcher should use if the system runs out of native file watchers.\n\nSee more: https://www.typescriptlang.org/tsconfig#fallbackPolling",
               "enum": [
                 "fixedinterval",
                 "priorityinterval",
@@ -145,27 +145,27 @@
               ]
             },
             "synchronousWatchDirectory": {
-              "description": "Llama sincrónicamente a las devoluciones de llamada y actualiza el estado de los observadores de directorios en plataformas que no admiten la visualización recursiva de forma nativa.",
+              "description": "Synchronously call callbacks and update the state of directory watchers on platforms that don`t support recursive watching natively.",
               "type": "boolean",
-              "markdownDescription": "Llama sincrónicamente a las devoluciones de llamada y actualiza el estado de los observadores de directorios en plataformas que no admiten la visualización recursiva de forma nativa.\n\nSee more: https://www.typescriptlang.org/tsconfig#synchronousWatchDirectory"
+              "markdownDescription": "Synchronously call callbacks and update the state of directory watchers on platforms that don`t support recursive watching natively.\n\nSee more: https://www.typescriptlang.org/tsconfig#synchronousWatchDirectory"
             },
             "excludeFiles": {
-              "description": "Elimina una lista de archivos del procesamiento del modo de observación.",
+              "description": "Remove a list of files from the watch mode's processing.",
               "type": "array",
               "uniqueItems": true,
               "items": {
                 "type": "string"
               },
-              "markdownDescription": "Elimina una lista de archivos del procesamiento del modo de observación.\n\nSee more: https://www.typescriptlang.org/tsconfig#excludeFiles"
+              "markdownDescription": "Remove a list of files from the watch mode's processing.\n\nSee more: https://www.typescriptlang.org/tsconfig#excludeFiles"
             },
             "excludeDirectories": {
-              "description": "Elimina una lista de directorios del proceso de observación.",
+              "description": "Remove a list of directories from the watch process.",
               "type": "array",
               "uniqueItems": true,
               "items": {
                 "type": "string"
               },
-              "markdownDescription": "Elimina una lista de directorios del proceso de observación.\n\nSee more: https://www.typescriptlang.org/tsconfig#excludeDirectories"
+              "markdownDescription": "Remove a list of directories from the watch process.\n\nSee more: https://www.typescriptlang.org/tsconfig#excludeDirectories"
             }
           }
         }
@@ -178,84 +178,84 @@
           "description": "Instructs the TypeScript compiler how to compile .ts files.",
           "properties": {
             "charset": {
-              "description": "Ya no es compatible. En versiones anteriores, configura manualmente la codificación de texto para leer archivos.",
+              "description": "No longer supported. In early versions, manually set the text encoding for reading files.",
               "type": "string",
-              "markdownDescription": "Ya no es compatible. En versiones anteriores, configura manualmente la codificación de texto para leer archivos.\n\nSee more: https://www.typescriptlang.org/tsconfig#charset"
+              "markdownDescription": "No longer supported. In early versions, manually set the text encoding for reading files.\n\nSee more: https://www.typescriptlang.org/tsconfig#charset"
             },
             "composite": {
-              "description": "Habilita las restricciones que permiten utilizar un proyecto de TypeScript con referencias de proyecto.",
+              "description": "Enable constraints that allow a TypeScript project to be used with project references.",
               "type": "boolean",
               "default": true,
-              "markdownDescription": "Habilita las restricciones que permiten utilizar un proyecto de TypeScript con referencias de proyecto.\n\nSee more: https://www.typescriptlang.org/tsconfig#composite"
+              "markdownDescription": "Enable constraints that allow a TypeScript project to be used with project references.\n\nSee more: https://www.typescriptlang.org/tsconfig#composite"
             },
             "declaration": {
-              "description": "Genera archivos .d.ts a partir de archivos TypeScript y JavaScript en su proyecto.",
+              "description": "Generate .d.ts files from TypeScript and JavaScript files in your project.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Genera archivos .d.ts a partir de archivos TypeScript y JavaScript en su proyecto.\n\nSee more: https://www.typescriptlang.org/tsconfig#declaration"
+              "markdownDescription": "Generate .d.ts files from TypeScript and JavaScript files in your project.\n\nSee more: https://www.typescriptlang.org/tsconfig#declaration"
             },
             "declarationDir": {
-              "description": "Especifica el directorio de salida para los archivos de declaración generados.",
+              "description": "Specify the output directory for generated declaration files.",
               "type": ["string", "null"],
-              "markdownDescription": "Especifica el directorio de salida para los archivos de declaración generados.\n\nSee more: https://www.typescriptlang.org/tsconfig#declarationDir"
+              "markdownDescription": "Specify the output directory for generated declaration files.\n\nSee more: https://www.typescriptlang.org/tsconfig#declarationDir"
             },
             "diagnostics": {
-              "description": "Salida de información de rendimiento del compilador después de la construcción.",
+              "description": "Output compiler performance information after building.",
               "type": "boolean",
-              "markdownDescription": "Salida de información de rendimiento del compilador después de la construcción.\n\nSee more: https://www.typescriptlang.org/tsconfig#diagnostics"
+              "markdownDescription": "Output compiler performance information after building.\n\nSee more: https://www.typescriptlang.org/tsconfig#diagnostics"
             },
             "disableReferencedProjectLoad": {
-              "description": "Reduce el número de proyectos cargados automáticamente por TypeScript.",
+              "description": "Reduce the number of projects loaded automatically by TypeScript.",
               "type": "boolean",
-              "markdownDescription": "Reduce el número de proyectos cargados automáticamente por TypeScript.\n\nSee more: https://www.typescriptlang.org/tsconfig#disableReferencedProjectLoad"
+              "markdownDescription": "Reduce the number of projects loaded automatically by TypeScript.\n\nSee more: https://www.typescriptlang.org/tsconfig#disableReferencedProjectLoad"
             },
             "noPropertyAccessFromIndexSignature": {
-              "description": "Exige el uso de descriptores de acceso indexados para las claves declaradas con un tipo indexado.",
+              "description": "Enforces using indexed accessors for keys declared using an indexed type.",
               "type": "boolean",
-              "markdownDescription": "Exige el uso de descriptores de acceso indexados para las claves declaradas con un tipo indexado.\n\nSee more: https://www.typescriptlang.org/tsconfig#noPropertyAccessFromIndexSignature"
+              "markdownDescription": "Enforces using indexed accessors for keys declared using an indexed type.\n\nSee more: https://www.typescriptlang.org/tsconfig#noPropertyAccessFromIndexSignature"
             },
             "emitBOM": {
-              "description": "Emite una marca de orden de bytes (BOM) UTF-8 al principio de los archivos de salida.",
+              "description": "Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Emite una marca de orden de bytes (BOM) UTF-8 al principio de los archivos de salida.\n\nSee more: https://www.typescriptlang.org/tsconfig#emitBOM"
+              "markdownDescription": "Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files.\n\nSee more: https://www.typescriptlang.org/tsconfig#emitBOM"
             },
             "emitDeclarationOnly": {
-              "description": "sólo produce archivos d.ts y no archivos JavaScript.",
+              "description": "Only output d.ts files and not JavaScript files.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "sólo produce archivos d.ts y no archivos JavaScript.\n\nSee more: https://www.typescriptlang.org/tsconfig#emitDeclarationOnly"
+              "markdownDescription": "Only output d.ts files and not JavaScript files.\n\nSee more: https://www.typescriptlang.org/tsconfig#emitDeclarationOnly"
             },
             "exactOptionalPropertyTypes": {
-              "description": "Interpreta los tipos de propiedad opcionales tal como están escritos, en lugar de agregar 'undefined'.",
+              "description": "Interpret optional property types as written, rather than adding `undefined`.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Interpreta los tipos de propiedad opcionales tal como están escritos, en lugar de agregar 'undefined'.\n\nSee more: https://www.typescriptlang.org/tsconfig#exactOptionalPropertyTypes"
+              "markdownDescription": "Interpret optional property types as written, rather than adding `undefined`.\n\nSee more: https://www.typescriptlang.org/tsconfig#exactOptionalPropertyTypes"
             },
             "incremental": {
               "description": "Enable incremental compilation. Requires TypeScript version 3.4 or later.",
               "type": "boolean"
             },
             "tsBuildInfoFile": {
-              "description": "Especifica el directorio para los archivos de compilación incremental `.tsbuildinfo`.",
+              "description": "Specify the folder for .tsbuildinfo incremental compilation files.",
               "default": ".tsbuildinfo",
               "type": "string",
-              "markdownDescription": "Especifica el directorio para los archivos de compilación incremental `.tsbuildinfo`.\n\nSee more: https://www.typescriptlang.org/tsconfig#tsBuildInfoFile"
+              "markdownDescription": "Specify the folder for .tsbuildinfo incremental compilation files.\n\nSee more: https://www.typescriptlang.org/tsconfig#tsBuildInfoFile"
             },
             "inlineSourceMap": {
-              "description": "Incluir archivos de mapas fuente dentro del JavaScript emitido.",
+              "description": "Include sourcemap files inside the emitted JavaScript.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Incluir archivos de mapas fuente dentro del JavaScript emitido.\n\nSee more: https://www.typescriptlang.org/tsconfig#inlineSourceMap"
+              "markdownDescription": "Include sourcemap files inside the emitted JavaScript.\n\nSee more: https://www.typescriptlang.org/tsconfig#inlineSourceMap"
             },
             "inlineSources": {
-              "description": "Incluye el código fuente en los mapas fuente dentro del JavaScript emitido.",
+              "description": "Include source code in the sourcemaps inside the emitted JavaScript.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Incluye el código fuente en los mapas fuente dentro del JavaScript emitido.\n\nSee more: https://www.typescriptlang.org/tsconfig#inlineSources"
+              "markdownDescription": "Include source code in the sourcemaps inside the emitted JavaScript.\n\nSee more: https://www.typescriptlang.org/tsconfig#inlineSources"
             },
             "jsx": {
-              "description": "Especifica qué código JSX se genera.",
+              "description": "Specify what JSX code is generated.",
               "enum": [
                 "preserve",
                 "react-native",
@@ -265,42 +265,42 @@
               ]
             },
             "reactNamespace": {
-              "description": "Especifica el objeto invocado para `createElement`. Esto solo se aplica al apuntar a la emisión JSX de `react`.",
+              "description": "Specify the object invoked for `createElement`. This only applies when targeting `react` JSX emit.",
               "type": "string",
               "default": "React",
-              "markdownDescription": "Especifica el objeto invocado para `createElement`. Esto solo se aplica al apuntar a la emisión JSX de `react`.\n\nSee more: https://www.typescriptlang.org/tsconfig#reactNamespace"
+              "markdownDescription": "Specify the object invoked for `createElement`. This only applies when targeting `react` JSX emit.\n\nSee more: https://www.typescriptlang.org/tsconfig#reactNamespace"
             },
             "jsxFactory": {
-              "description": "Especifica la función de fábrica JSX que se utiliza al apuntar a React JSX emit, por ejemplo, 'React.createElement' o 'h'.",
+              "description": "Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h'.",
               "type": "string",
               "default": "React.createElement",
-              "markdownDescription": "Especifica la función de fábrica JSX que se utiliza al apuntar a React JSX emit, por ejemplo, 'React.createElement' o 'h'.\n\nSee more: https://www.typescriptlang.org/tsconfig#jsxFactory"
+              "markdownDescription": "Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h'.\n\nSee more: https://www.typescriptlang.org/tsconfig#jsxFactory"
             },
             "jsxFragmentFactory": {
-              "description": "Especifica la referencia de fragmento JSX utilizada para los fragmentos al apuntar a la emisión de React JSX, por ejemplo, 'React.Fragment' o 'Fragment'.",
+              "description": "Specify the JSX Fragment reference used for fragments when targeting React JSX emit e.g. 'React.Fragment' or 'Fragment'.",
               "type": "string",
               "default": "React.Fragment",
-              "markdownDescription": "Especifica la referencia de fragmento JSX utilizada para los fragmentos al apuntar a la emisión de React JSX, por ejemplo, 'React.Fragment' o 'Fragment'.\n\nSee more: https://www.typescriptlang.org/tsconfig#jsxFragmentFactory"
+              "markdownDescription": "Specify the JSX Fragment reference used for fragments when targeting React JSX emit e.g. 'React.Fragment' or 'Fragment'.\n\nSee more: https://www.typescriptlang.org/tsconfig#jsxFragmentFactory"
             },
             "jsxImportSource": {
-              "description": "Especifica el especificador de módulo utilizado para importar las funciones de fábrica JSX cuando se usa `jsx: react-jsx`.",
+              "description": "Specify module specifier used to import the JSX factory functions when using `jsx: react-jsx`.",
               "type": "string",
               "default": "react",
-              "markdownDescription": "Especifica el especificador de módulo utilizado para importar las funciones de fábrica JSX cuando se usa `jsx: react-jsx`.\n\nSee more: https://www.typescriptlang.org/tsconfig#jsxImportSource"
+              "markdownDescription": "Specify module specifier used to import the JSX factory functions when using `jsx: react-jsx`.\n\nSee more: https://www.typescriptlang.org/tsconfig#jsxImportSource"
             },
             "listFiles": {
-              "description": "Imprime todos los archivos leídos durante la compilación.",
+              "description": "Print all of the files read during the compilation.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Imprime todos los archivos leídos durante la compilación.\n\nSee more: https://www.typescriptlang.org/tsconfig#listFiles"
+              "markdownDescription": "Print all of the files read during the compilation.\n\nSee more: https://www.typescriptlang.org/tsconfig#listFiles"
             },
             "mapRoot": {
-              "description": "Especifica la ubicación donde el depurador debe encontrar los archivos de mapa en lugar de las ubicaciones generadas.",
+              "description": "Specify the location where debugger should locate map files instead of generated locations.",
               "type": "string",
-              "markdownDescription": "Especifica la ubicación donde el depurador debe encontrar los archivos de mapa en lugar de las ubicaciones generadas.\n\nSee more: https://www.typescriptlang.org/tsconfig#mapRoot"
+              "markdownDescription": "Specify the location where debugger should locate map files instead of generated locations.\n\nSee more: https://www.typescriptlang.org/tsconfig#mapRoot"
             },
             "module": {
-              "description": "Especifica qué código de módulo se genera.",
+              "description": "Specify what module code is generated.",
               "type": "string",
               "anyOf": [
                 {
@@ -323,16 +323,16 @@
                   "pattern": "^([Cc][Oo][Mm][Mm][Oo][Nn][Jj][Ss]|[AaUu][Mm][Dd]|[Ss][Yy][Ss][Tt][Ee][Mm]|[Ee][Ss]([356]|201[567]|2020|[Nn][Ee][Xx][Tt])|[Nn][Oo][Nn][Ee])$"
                 }
               ],
-              "markdownDescription": "Especifica qué código de módulo se genera.\n\nSee more: https://www.typescriptlang.org/tsconfig#module"
+              "markdownDescription": "Specify what module code is generated.\n\nSee more: https://www.typescriptlang.org/tsconfig#module"
             },
             "moduleDetection": {
-              "description": "Controla qué método se usa para detectar si un archivo JS es un módulo.",
+              "description": "Control what method is used to detect the whether a JS file is a module.",
               "type": "string",
               "enum": ["auto", "legacy", "force"],
               "default": "auto"
             },
             "moduleResolution": {
-              "description": "Especifica cómo busca TypeScript un archivo de un determinado especificador de módulo.",
+              "description": "Specify how TypeScript looks up a file from a given module specifier.",
               "type": "string",
               "anyOf": [
                 {
@@ -343,19 +343,19 @@
                 }
               ],
               "default": "classic",
-              "markdownDescription": "Especifica cómo busca TypeScript un archivo de un determinado especificador de módulo.\n\nSee more: https://www.typescriptlang.org/tsconfig#moduleResolution"
+              "markdownDescription": "Specify how TypeScript looks up a file from a given module specifier.\n\nSee more: https://www.typescriptlang.org/tsconfig#moduleResolution"
             },
             "moduleSuffixes": {
-              "description": "Lista de sufijos de nombre de archivo para buscar al resolver un módulo.",
+              "description": "List of file name suffixes to search when resolving a module.",
               "type": "array",
               "uniqueItems": true,
               "items": {
                 "type": "string"
               },
-              "markdownDescription": "Lista de sufijos de nombre de archivo para buscar al resolver un módulo.\n\nSee more: https://www.typescriptlang.org/tsconfig#moduleSuffixes"
+              "markdownDescription": "List of file name suffixes to search when resolving a module.\n\nSee more: https://www.typescriptlang.org/tsconfig#moduleSuffixes"
             },
             "newLine": {
-              "description": "Establece el carácter de nueva línea para emitir archivos.",
+              "description": "Set the newline character for emitting files.",
               "type": "string",
               "anyOf": [
                 {
@@ -365,164 +365,164 @@
                   "pattern": "^(CRLF|LF|crlf|lf)$"
                 }
               ],
-              "markdownDescription": "Establece el carácter de nueva línea para emitir archivos.\n\nSee more: https://www.typescriptlang.org/tsconfig#newLine"
+              "markdownDescription": "Set the newline character for emitting files.\n\nSee more: https://www.typescriptlang.org/tsconfig#newLine"
             },
             "noEmit": {
-              "description": "Desactiva la emisión de archivos de una compilación.",
+              "description": "Disable emitting files from a compilation.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Desactiva la emisión de archivos de una compilación.\n\nSee more: https://www.typescriptlang.org/tsconfig#noEmit"
+              "markdownDescription": "Disable emitting files from a compilation.\n\nSee more: https://www.typescriptlang.org/tsconfig#noEmit"
             },
             "noEmitHelpers": {
-              "description": "Deshabilita la generación de funciones auxiliares personalizadas como `extends` en la salida compilada.",
+              "description": "Disable generating custom helper functions like `extends` in compiled output.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Deshabilita la generación de funciones auxiliares personalizadas como `extends` en la salida compilada.\n\nSee more: https://www.typescriptlang.org/tsconfig#noEmitHelpers"
+              "markdownDescription": "Disable generating custom helper functions like `extends` in compiled output.\n\nSee more: https://www.typescriptlang.org/tsconfig#noEmitHelpers"
             },
             "noEmitOnError": {
-              "description": "Deshabilita la emisión de archivos si se informa algún error de verificación de tipo.",
+              "description": "Disable emitting files if any type checking errors are reported.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Deshabilita la emisión de archivos si se informa algún error de verificación de tipo.\n\nSee more: https://www.typescriptlang.org/tsconfig#noEmitOnError"
+              "markdownDescription": "Disable emitting files if any type checking errors are reported.\n\nSee more: https://www.typescriptlang.org/tsconfig#noEmitOnError"
             },
             "noImplicitAny": {
-              "description": "Habilita el informe de errores para expresiones y declaraciones con un tipo `any` implícito.",
+              "description": "Enable error reporting for expressions and declarations with an implied `any` type.",
               "type": "boolean",
-              "markdownDescription": "Habilita el informe de errores para expresiones y declaraciones con un tipo `any` implícito.\n\nSee more: https://www.typescriptlang.org/tsconfig#noImplicitAny"
+              "markdownDescription": "Enable error reporting for expressions and declarations with an implied `any` type.\n\nSee more: https://www.typescriptlang.org/tsconfig#noImplicitAny"
             },
             "noImplicitThis": {
-              "description": "Habilita el reporte de errores cuando a `this` se le asigne el tipo `any`.",
+              "description": "Enable error reporting when `this` is given the type `any`.",
               "type": "boolean",
-              "markdownDescription": "Habilita el reporte de errores cuando a `this` se le asigne el tipo `any`.\n\nSee more: https://www.typescriptlang.org/tsconfig#noImplicitThis"
+              "markdownDescription": "Enable error reporting when `this` is given the type `any`.\n\nSee more: https://www.typescriptlang.org/tsconfig#noImplicitThis"
             },
             "noUnusedLocals": {
-              "description": "Habilita el informe de errores cuando no se leen las variables locales.",
+              "description": "Enable error reporting when local variables aren't read.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Habilita el informe de errores cuando no se leen las variables locales.\n\nSee more: https://www.typescriptlang.org/tsconfig#noUnusedLocals"
+              "markdownDescription": "Enable error reporting when local variables aren't read.\n\nSee more: https://www.typescriptlang.org/tsconfig#noUnusedLocals"
             },
             "noUnusedParameters": {
-              "description": "Genera un error cuando no se lee un parámetro de función.",
+              "description": "Raise an error when a function parameter isn't read.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Genera un error cuando no se lee un parámetro de función.\n\nSee more: https://www.typescriptlang.org/tsconfig#noUnusedParameters"
+              "markdownDescription": "Raise an error when a function parameter isn't read.\n\nSee more: https://www.typescriptlang.org/tsconfig#noUnusedParameters"
             },
             "noLib": {
-              "description": "Desactiva la inclusión de cualquier archivo de biblioteca, incluido el `lib.d.ts` predeterminado.",
+              "description": "Disable including any library files, including the default lib.d.ts.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Desactiva la inclusión de cualquier archivo de biblioteca, incluido el `lib.d.ts` predeterminado.\n\nSee more: https://www.typescriptlang.org/tsconfig#noLib"
+              "markdownDescription": "Disable including any library files, including the default lib.d.ts.\n\nSee more: https://www.typescriptlang.org/tsconfig#noLib"
             },
             "noResolve": {
-              "description": "No permite que las `import`s, `require`s o `<reference>`s expandan el número de archivos que TypeScript debe agregar a un proyecto.",
+              "description": "Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "No permite que las `import`s, `require`s o `<reference>`s expandan el número de archivos que TypeScript debe agregar a un proyecto.\n\nSee more: https://www.typescriptlang.org/tsconfig#noResolve"
+              "markdownDescription": "Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project.\n\nSee more: https://www.typescriptlang.org/tsconfig#noResolve"
             },
             "noStrictGenericChecks": {
-              "description": "Desactiva la comprobación estricta de firmas genéricas en tipos de `function`.",
+              "description": "Disable strict checking of generic signatures in function types.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Desactiva la comprobación estricta de firmas genéricas en tipos de `function`.\n\nSee more: https://www.typescriptlang.org/tsconfig#noStrictGenericChecks"
+              "markdownDescription": "Disable strict checking of generic signatures in function types.\n\nSee more: https://www.typescriptlang.org/tsconfig#noStrictGenericChecks"
             },
             "skipDefaultLibCheck": {
-              "description": "Omite la comprobación de tipos de archivos `.d.ts` que se incluyen con TypeScript.",
+              "description": "Skip type checking .d.ts files that are included with TypeScript.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Omite la comprobación de tipos de archivos `.d.ts` que se incluyen con TypeScript.\n\nSee more: https://www.typescriptlang.org/tsconfig#skipDefaultLibCheck"
+              "markdownDescription": "Skip type checking .d.ts files that are included with TypeScript.\n\nSee more: https://www.typescriptlang.org/tsconfig#skipDefaultLibCheck"
             },
             "skipLibCheck": {
-              "description": "Omite la comprobación de tipo de todos los archivos `.d.ts`.",
+              "description": "Skip type checking all .d.ts files.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Omite la comprobación de tipo de todos los archivos `.d.ts`.\n\nSee more: https://www.typescriptlang.org/tsconfig#skipLibCheck"
+              "markdownDescription": "Skip type checking all .d.ts files.\n\nSee more: https://www.typescriptlang.org/tsconfig#skipLibCheck"
             },
             "outFile": {
-              "description": "Especifique un archivo que agrupe todas las salidas en un archivo JavaScript. Si `declaration` es `true`, también designa un archivo que agrupa toda la salida `.d.ts`.",
+              "description": "Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output.",
               "type": "string",
-              "markdownDescription": "Especifique un archivo que agrupe todas las salidas en un archivo JavaScript. Si `declaration` es `true`, también designa un archivo que agrupa toda la salida `.d.ts`.\n\nSee more: https://www.typescriptlang.org/tsconfig#outFile"
+              "markdownDescription": "Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output.\n\nSee more: https://www.typescriptlang.org/tsconfig#outFile"
             },
             "outDir": {
-              "description": "Especifica un directorio de salida para todos los archivos emitidos.",
+              "description": "Specify an output folder for all emitted files.",
               "type": "string",
-              "markdownDescription": "Especifica un directorio de salida para todos los archivos emitidos.\n\nSee more: https://www.typescriptlang.org/tsconfig#outDir"
+              "markdownDescription": "Specify an output folder for all emitted files.\n\nSee more: https://www.typescriptlang.org/tsconfig#outDir"
             },
             "preserveConstEnums": {
-              "description": "Desactiva el borrado de declaraciones `const enum` en el código generado.",
+              "description": "Disable erasing `const enum` declarations in generated code.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Desactiva el borrado de declaraciones `const enum` en el código generado.\n\nSee more: https://www.typescriptlang.org/tsconfig#preserveConstEnums"
+              "markdownDescription": "Disable erasing `const enum` declarations in generated code.\n\nSee more: https://www.typescriptlang.org/tsconfig#preserveConstEnums"
             },
             "preserveSymlinks": {
-              "description": "Desactiva la resolución de enlaces simbólicos a su ruta real. Esto se correlaciona con la misma bandera en el node.",
+              "description": "Disable resolving symlinks to their realpath. This correlates to the same flag in node.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Desactiva la resolución de enlaces simbólicos a su ruta real. Esto se correlaciona con la misma bandera en el node.\n\nSee more: https://www.typescriptlang.org/tsconfig#preserveSymlinks"
+              "markdownDescription": "Disable resolving symlinks to their realpath. This correlates to the same flag in node.\n\nSee more: https://www.typescriptlang.org/tsconfig#preserveSymlinks"
             },
             "preserveValueImports": {
-              "description": "Conserva los valores importados no utilizados en la salida de JavaScript que de otro modo se eliminarían.",
+              "description": "Preserve unused imported values in the JavaScript output that would otherwise be removed.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Conserva los valores importados no utilizados en la salida de JavaScript que de otro modo se eliminarían.\n\nSee more: https://www.typescriptlang.org/tsconfig#preserveValueImports"
+              "markdownDescription": "Preserve unused imported values in the JavaScript output that would otherwise be removed.\n\nSee more: https://www.typescriptlang.org/tsconfig#preserveValueImports"
             },
             "preserveWatchOutput": {
-              "description": "Desactiva la limpieza de la consola en modo observador.",
+              "description": "Disable wiping the console in watch mode.",
               "type": "boolean",
-              "markdownDescription": "Desactiva la limpieza de la consola en modo observador.\n\nSee more: https://www.typescriptlang.org/tsconfig#preserveWatchOutput"
+              "markdownDescription": "Disable wiping the console in watch mode.\n\nSee more: https://www.typescriptlang.org/tsconfig#preserveWatchOutput"
             },
             "pretty": {
-              "description": "Habilita el color y el formato en la salida de TypeScript para facilitar la lectura de los errores del compilador.",
+              "description": "Enable color and formatting in TypeScript's output to make compiler errors easier to read.",
               "type": "boolean",
               "default": true,
-              "markdownDescription": "Habilita el color y el formato en la salida de TypeScript para facilitar la lectura de los errores del compilador.\n\nSee more: https://www.typescriptlang.org/tsconfig#pretty"
+              "markdownDescription": "Enable color and formatting in TypeScript's output to make compiler errors easier to read.\n\nSee more: https://www.typescriptlang.org/tsconfig#pretty"
             },
             "removeComments": {
-              "description": "Desactivar la emisión de comentarios.",
+              "description": "Disable emitting comments.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Desactivar la emisión de comentarios.\n\nSee more: https://www.typescriptlang.org/tsconfig#removeComments"
+              "markdownDescription": "Disable emitting comments.\n\nSee more: https://www.typescriptlang.org/tsconfig#removeComments"
             },
             "rootDir": {
-              "description": "Especifica el directorio raíz dentro de tus archivos fuente.",
+              "description": "Specify the root folder within your source files.",
               "type": "string",
-              "markdownDescription": "Especifica el directorio raíz dentro de tus archivos fuente.\n\nSee more: https://www.typescriptlang.org/tsconfig#rootDir"
+              "markdownDescription": "Specify the root folder within your source files.\n\nSee more: https://www.typescriptlang.org/tsconfig#rootDir"
             },
             "isolatedModules": {
-              "description": "Se asegura de que cada archivo se pueda transpilar de forma segura sin depender de otras importaciones.",
+              "description": "Ensure that each file can be safely transpiled without relying on other imports.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Se asegura de que cada archivo se pueda transpilar de forma segura sin depender de otras importaciones.\n\nSee more: https://www.typescriptlang.org/tsconfig#isolatedModules"
+              "markdownDescription": "Ensure that each file can be safely transpiled without relying on other imports.\n\nSee more: https://www.typescriptlang.org/tsconfig#isolatedModules"
             },
             "sourceMap": {
-              "description": "Crea archivos de mapas fuente para archivos JavaScript emitidos.",
+              "description": "Create source map files for emitted JavaScript files.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Crea archivos de mapas fuente para archivos JavaScript emitidos.\n\nSee more: https://www.typescriptlang.org/tsconfig#sourceMap"
+              "markdownDescription": "Create source map files for emitted JavaScript files.\n\nSee more: https://www.typescriptlang.org/tsconfig#sourceMap"
             },
             "sourceRoot": {
-              "description": "Especifica la ruta raíz para que los depuradores encuentren el código fuente de referencia.",
+              "description": "Specify the root path for debuggers to find the reference source code.",
               "type": "string",
-              "markdownDescription": "Especifica la ruta raíz para que los depuradores encuentren el código fuente de referencia.\n\nSee more: https://www.typescriptlang.org/tsconfig#sourceRoot"
+              "markdownDescription": "Specify the root path for debuggers to find the reference source code.\n\nSee more: https://www.typescriptlang.org/tsconfig#sourceRoot"
             },
             "suppressExcessPropertyErrors": {
-              "description": "Deshabilita la notificación de errores de propiedad en exceso durante la creación de literales de objeto.",
+              "description": "Disable reporting of excess property errors during the creation of object literals.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Deshabilita la notificación de errores de propiedad en exceso durante la creación de literales de objeto.\n\nSee more: https://www.typescriptlang.org/tsconfig#suppressExcessPropertyErrors"
+              "markdownDescription": "Disable reporting of excess property errors during the creation of object literals.\n\nSee more: https://www.typescriptlang.org/tsconfig#suppressExcessPropertyErrors"
             },
             "suppressImplicitAnyIndexErrors": {
-              "description": "Suprime los errores `noImplicitAny` al indexar objetos que carecen de índice de firmas.",
+              "description": "Suppress `noImplicitAny` errors when indexing objects that lack index signatures.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Suprime los errores `noImplicitAny` al indexar objetos que carecen de índice de firmas.\n\nSee more: https://www.typescriptlang.org/tsconfig#suppressImplicitAnyIndexErrors"
+              "markdownDescription": "Suppress `noImplicitAny` errors when indexing objects that lack index signatures.\n\nSee more: https://www.typescriptlang.org/tsconfig#suppressImplicitAnyIndexErrors"
             },
             "stripInternal": {
-              "description": "Deshabilita la emisión de declaraciones que tengan `@internal` en sus comentarios JSDoc.",
+              "description": "Disable emitting declarations that have `@internal` in their JSDoc comments.",
               "type": "boolean",
-              "markdownDescription": "Deshabilita la emisión de declaraciones que tengan `@internal` en sus comentarios JSDoc.\n\nSee more: https://www.typescriptlang.org/tsconfig#stripInternal"
+              "markdownDescription": "Disable emitting declarations that have `@internal` in their JSDoc comments.\n\nSee more: https://www.typescriptlang.org/tsconfig#stripInternal"
             },
             "target": {
-              "description": "Establece la versión de lenguaje JavaScript para JavaScript emitido e incluye declaraciones de biblioteca compatibles.",
+              "description": "Set the JavaScript language version for emitted JavaScript and include compatible library declarations.",
               "type": "string",
               "default": "ES3",
               "anyOf": [
@@ -546,76 +546,76 @@
                   "pattern": "^([Ee][Ss]([356]|(20(1[56789]|2[01]))|[Nn][Ee][Xx][Tt]))$"
                 }
               ],
-              "markdownDescription": "Establece la versión de lenguaje JavaScript para JavaScript emitido e incluye declaraciones de biblioteca compatibles.\n\nSee more: https://www.typescriptlang.org/tsconfig#target"
+              "markdownDescription": "Set the JavaScript language version for emitted JavaScript and include compatible library declarations.\n\nSee more: https://www.typescriptlang.org/tsconfig#target"
             },
             "useUnknownInCatchVariables": {
-              "description": "Variables predeterminadas de la cláusula `catch` como `unknown` en lugar de `any`.",
+              "description": "Default catch clause variables as `unknown` instead of `any`.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Variables predeterminadas de la cláusula `catch` como `unknown` en lugar de `any`.\n\nSee more: https://www.typescriptlang.org/tsconfig#useUnknownInCatchVariables"
+              "markdownDescription": "Default catch clause variables as `unknown` instead of `any`.\n\nSee more: https://www.typescriptlang.org/tsconfig#useUnknownInCatchVariables"
             },
             "experimentalDecorators": {
-              "description": "Habilita el soporte experimental para decoradores de borrador TC39 etapa 2.",
+              "description": "Enable experimental support for TC39 stage 2 draft decorators.",
               "type": "boolean",
-              "markdownDescription": "Habilita el soporte experimental para decoradores de borrador TC39 etapa 2.\n\nSee more: https://www.typescriptlang.org/tsconfig#experimentalDecorators"
+              "markdownDescription": "Enable experimental support for TC39 stage 2 draft decorators.\n\nSee more: https://www.typescriptlang.org/tsconfig#experimentalDecorators"
             },
             "emitDecoratorMetadata": {
-              "description": "Emite metadatos de tipo diseño para declaraciones decoradas en archivos fuente.",
+              "description": "Emit design-type metadata for decorated declarations in source files.",
               "type": "boolean",
-              "markdownDescription": "Emite metadatos de tipo diseño para declaraciones decoradas en archivos fuente.\n\nSee more: https://www.typescriptlang.org/tsconfig#emitDecoratorMetadata"
+              "markdownDescription": "Emit design-type metadata for decorated declarations in source files.\n\nSee more: https://www.typescriptlang.org/tsconfig#emitDecoratorMetadata"
             },
             "allowUnusedLabels": {
-              "description": "Deshabilita el informe de errores para las etiquetas no utilizadas.",
+              "description": "Disable error reporting for unused labels.",
               "type": "boolean",
-              "markdownDescription": "Deshabilita el informe de errores para las etiquetas no utilizadas.\n\nSee more: https://www.typescriptlang.org/tsconfig#allowUnusedLabels"
+              "markdownDescription": "Disable error reporting for unused labels.\n\nSee more: https://www.typescriptlang.org/tsconfig#allowUnusedLabels"
             },
             "noImplicitReturns": {
-              "description": "Habilita el reporte de errores para las rutas de código que explícitamente no tienen `return` en una función.",
+              "description": "Enable error reporting for codepaths that do not explicitly return in a function.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Habilita el reporte de errores para las rutas de código que explícitamente no tienen `return` en una función.\n\nSee more: https://www.typescriptlang.org/tsconfig#noImplicitReturns"
+              "markdownDescription": "Enable error reporting for codepaths that do not explicitly return in a function.\n\nSee more: https://www.typescriptlang.org/tsconfig#noImplicitReturns"
             },
             "noUncheckedIndexedAccess": {
-              "description": "Agrega `undefined` a un tipo cuando se acceda mediante un índice .",
+              "description": "Add `undefined` to a type when accessed using an index.",
               "type": "boolean",
-              "markdownDescription": "Agrega `undefined` a un tipo cuando se acceda mediante un índice .\n\nSee more: https://www.typescriptlang.org/tsconfig#noUncheckedIndexedAccess"
+              "markdownDescription": "Add `undefined` to a type when accessed using an index.\n\nSee more: https://www.typescriptlang.org/tsconfig#noUncheckedIndexedAccess"
             },
             "noFallthroughCasesInSwitch": {
-              "description": "Habilita el informe de errores para casos fallidos en declaraciones switch.",
+              "description": "Enable error reporting for fallthrough cases in switch statements.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Habilita el informe de errores para casos fallidos en declaraciones switch.\n\nSee more: https://www.typescriptlang.org/tsconfig#noFallthroughCasesInSwitch"
+              "markdownDescription": "Enable error reporting for fallthrough cases in switch statements.\n\nSee more: https://www.typescriptlang.org/tsconfig#noFallthroughCasesInSwitch"
             },
             "noImplicitOverride": {
-              "description": "Se asegura de que la redefinición de miembros de las clases derivadas estén marcados con un modificador `override`.",
+              "description": "Ensure overriding members in derived classes are marked with an override modifier.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Se asegura de que la redefinición de miembros de las clases derivadas estén marcados con un modificador `override`.\n\nSee more: https://www.typescriptlang.org/tsconfig#noImplicitOverride"
+              "markdownDescription": "Ensure overriding members in derived classes are marked with an override modifier.\n\nSee more: https://www.typescriptlang.org/tsconfig#noImplicitOverride"
             },
             "allowUnreachableCode": {
-              "description": "Deshabilita el informe de errores para el código inalcanzable.",
+              "description": "Disable error reporting for unreachable code.",
               "type": "boolean",
-              "markdownDescription": "Deshabilita el informe de errores para el código inalcanzable.\n\nSee more: https://www.typescriptlang.org/tsconfig#allowUnreachableCode"
+              "markdownDescription": "Disable error reporting for unreachable code.\n\nSee more: https://www.typescriptlang.org/tsconfig#allowUnreachableCode"
             },
             "forceConsistentCasingInFileNames": {
-              "description": "Asegúrate de que la carcasa sea la correcta en las importaciones.",
+              "description": "Ensure that casing is correct in imports.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Asegúrate de que la carcasa sea la correcta en las importaciones.\n\nSee more: https://www.typescriptlang.org/tsconfig#forceConsistentCasingInFileNames"
+              "markdownDescription": "Ensure that casing is correct in imports.\n\nSee more: https://www.typescriptlang.org/tsconfig#forceConsistentCasingInFileNames"
             },
             "generateCpuProfile": {
-              "description": "Emite un perfil de CPU v8 del compilador ejecutado para depuración.",
+              "description": "Emit a v8 CPU profile of the compiler run for debugging.",
               "type": "string",
               "default": "profile.cpuprofile",
-              "markdownDescription": "Emite un perfil de CPU v8 del compilador ejecutado para depuración.\n\nSee more: https://www.typescriptlang.org/tsconfig#generateCpuProfile"
+              "markdownDescription": "Emit a v8 CPU profile of the compiler run for debugging.\n\nSee more: https://www.typescriptlang.org/tsconfig#generateCpuProfile"
             },
             "baseUrl": {
-              "description": "Especifica el directorio base para resolver nombres de módulos no relativos.",
+              "description": "Specify the base directory to resolve non-relative module names.",
               "type": "string",
-              "markdownDescription": "Especifica el directorio base para resolver nombres de módulos no relativos.\n\nSee more: https://www.typescriptlang.org/tsconfig#baseUrl"
+              "markdownDescription": "Specify the base directory to resolve non-relative module names.\n\nSee more: https://www.typescriptlang.org/tsconfig#baseUrl"
             },
             "paths": {
-              "description": "Especifica un conjunto de entradas que reasignen las importaciones a ubicaciones de búsqueda adicionales.",
+              "description": "Specify a set of entries that re-map imports to additional lookup locations.",
               "type": "object",
               "additionalProperties": {
                 "type": "array",
@@ -625,10 +625,10 @@
                   "description": "Path mapping to be computed relative to baseUrl option."
                 }
               },
-              "markdownDescription": "Especifica un conjunto de entradas que reasignen las importaciones a ubicaciones de búsqueda adicionales.\n\nSee more: https://www.typescriptlang.org/tsconfig#paths"
+              "markdownDescription": "Specify a set of entries that re-map imports to additional lookup locations.\n\nSee more: https://www.typescriptlang.org/tsconfig#paths"
             },
             "plugins": {
-              "description": "Especifica una lista de complementos de servicios de idioma a incluir.",
+              "description": "Specify a list of language service plugins to include.",
               "type": "array",
               "items": {
                 "type": "object",
@@ -639,34 +639,34 @@
                   }
                 }
               },
-              "markdownDescription": "Especifica una lista de complementos de servicios de idioma a incluir.\n\nSee more: https://www.typescriptlang.org/tsconfig#plugins"
+              "markdownDescription": "Specify a list of language service plugins to include.\n\nSee more: https://www.typescriptlang.org/tsconfig#plugins"
             },
             "rootDirs": {
-              "description": "Permite que varios directorios se traten como uno solo al resolver módulos.",
+              "description": "Allow multiple folders to be treated as one when resolving modules.",
               "type": "array",
               "uniqueItems": true,
               "items": {
                 "type": "string"
               },
-              "markdownDescription": "Permite que varios directorios se traten como uno solo al resolver módulos.\n\nSee more: https://www.typescriptlang.org/tsconfig#rootDirs"
+              "markdownDescription": "Allow multiple folders to be treated as one when resolving modules.\n\nSee more: https://www.typescriptlang.org/tsconfig#rootDirs"
             },
             "typeRoots": {
-              "description": "Especifica varios directorios que actúen como `./Node_modules/@types`.",
+              "description": "Specify multiple folders that act like `./node_modules/@types`.",
               "type": "array",
               "uniqueItems": true,
               "items": {
                 "type": "string"
               },
-              "markdownDescription": "Especifica varios directorios que actúen como `./Node_modules/@types`.\n\nSee more: https://www.typescriptlang.org/tsconfig#typeRoots"
+              "markdownDescription": "Specify multiple folders that act like `./node_modules/@types`.\n\nSee more: https://www.typescriptlang.org/tsconfig#typeRoots"
             },
             "types": {
-              "description": "Especifica los nombres de los paquetes de tipo que se incluirán sin que se haga referencia a ellos en un archivo fuente.",
+              "description": "Specify type package names to be included without being referenced in a source file.",
               "type": "array",
               "uniqueItems": true,
               "items": {
                 "type": "string"
               },
-              "markdownDescription": "Especifica los nombres de los paquetes de tipo que se incluirán sin que se haga referencia a ellos en un archivo fuente.\n\nSee more: https://www.typescriptlang.org/tsconfig#types"
+              "markdownDescription": "Specify type package names to be included without being referenced in a source file.\n\nSee more: https://www.typescriptlang.org/tsconfig#types"
             },
             "traceResolution": {
               "description": "Enable tracing of the name resolution process. Requires TypeScript version 2.0 or later.",
@@ -674,42 +674,42 @@
               "default": false
             },
             "allowJs": {
-              "description": "Permite que los archivos JavaScript formen parte de tu programa. Utiliza la opción `checkJS` para obtener errores de estos archivos.",
+              "description": "Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Permite que los archivos JavaScript formen parte de tu programa. Utiliza la opción `checkJS` para obtener errores de estos archivos.\n\nSee more: https://www.typescriptlang.org/tsconfig#allowJs"
+              "markdownDescription": "Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files.\n\nSee more: https://www.typescriptlang.org/tsconfig#allowJs"
             },
             "noErrorTruncation": {
-              "description": "Deshabilita los tipos de truncamiento en los mensajes de error.",
+              "description": "Disable truncating types in error messages.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Deshabilita los tipos de truncamiento en los mensajes de error.\n\nSee more: https://www.typescriptlang.org/tsconfig#noErrorTruncation"
+              "markdownDescription": "Disable truncating types in error messages.\n\nSee more: https://www.typescriptlang.org/tsconfig#noErrorTruncation"
             },
             "allowSyntheticDefaultImports": {
-              "description": "Permite 'import x from y' cuando un módulo no tiene una 'export' predeterminada.",
+              "description": "Allow 'import x from y' when a module doesn't have a default export.",
               "type": "boolean",
-              "markdownDescription": "Permite 'import x from y' cuando un módulo no tiene una 'export' predeterminada.\n\nSee more: https://www.typescriptlang.org/tsconfig#allowSyntheticDefaultImports"
+              "markdownDescription": "Allow 'import x from y' when a module doesn't have a default export.\n\nSee more: https://www.typescriptlang.org/tsconfig#allowSyntheticDefaultImports"
             },
             "noImplicitUseStrict": {
-              "description": "Deshabilita la adición de directivas de 'use strict' en los archivos JavaScript emitidos.",
+              "description": "Disable adding 'use strict' directives in emitted JavaScript files.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Deshabilita la adición de directivas de 'use strict' en los archivos JavaScript emitidos.\n\nSee more: https://www.typescriptlang.org/tsconfig#noImplicitUseStrict"
+              "markdownDescription": "Disable adding 'use strict' directives in emitted JavaScript files.\n\nSee more: https://www.typescriptlang.org/tsconfig#noImplicitUseStrict"
             },
             "listEmittedFiles": {
-              "description": "Imprime los nombres de los archivos emitidos después de una compilación.",
+              "description": "Print the names of emitted files after a compilation.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Imprime los nombres de los archivos emitidos después de una compilación.\n\nSee more: https://www.typescriptlang.org/tsconfig#listEmittedFiles"
+              "markdownDescription": "Print the names of emitted files after a compilation.\n\nSee more: https://www.typescriptlang.org/tsconfig#listEmittedFiles"
             },
             "disableSizeLimit": {
-              "description": "Elimina el límite de 20 MB en el tamaño total del código fuente para los archivos JavaScript en el servidor de lenguaje TypeScript.",
+              "description": "Remove the 20mb cap on total source code size for JavaScript files in the TypeScript language server.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Elimina el límite de 20 MB en el tamaño total del código fuente para los archivos JavaScript en el servidor de lenguaje TypeScript.\n\nSee more: https://www.typescriptlang.org/tsconfig#disableSizeLimit"
+              "markdownDescription": "Remove the 20mb cap on total source code size for JavaScript files in the TypeScript language server.\n\nSee more: https://www.typescriptlang.org/tsconfig#disableSizeLimit"
             },
             "lib": {
-              "description": "Especifica un conjunto de archivos de declaración de biblioteca empaquetados que describen el entorno de ejecución destino.",
+              "description": "Specify a set of bundled library declaration files that describe the target runtime environment.",
               "type": "array",
               "uniqueItems": true,
               "items": {
@@ -792,127 +792,127 @@
                   }
                 ]
               },
-              "markdownDescription": "Especifica un conjunto de archivos de declaración de biblioteca empaquetados que describen el entorno de ejecución destino.\n\nSee more: https://www.typescriptlang.org/tsconfig#lib"
+              "markdownDescription": "Specify a set of bundled library declaration files that describe the target runtime environment.\n\nSee more: https://www.typescriptlang.org/tsconfig#lib"
             },
             "strictNullChecks": {
-              "description": "Cuando la comprobación de tipo, tenga en cuenta `null` y `undefined`.",
+              "description": "When type checking, take into account `null` and `undefined`.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Cuando la comprobación de tipo, tenga en cuenta `null` y `undefined`.\n\nSee more: https://www.typescriptlang.org/tsconfig#strictNullChecks"
+              "markdownDescription": "When type checking, take into account `null` and `undefined`.\n\nSee more: https://www.typescriptlang.org/tsconfig#strictNullChecks"
             },
             "maxNodeModuleJsDepth": {
-              "description": "Especifica la profundidad máxima del directorio utilizado para comprobar archivos JavaScript de `node_modules`. Solo aplicable con `allowJs`.",
+              "description": "Specify the maximum folder depth used for checking JavaScript files from `node_modules`. Only applicable with `allowJs`.",
               "type": "number",
               "default": 0,
-              "markdownDescription": "Especifica la profundidad máxima del directorio utilizado para comprobar archivos JavaScript de `node_modules`. Solo aplicable con `allowJs`.\n\nSee more: https://www.typescriptlang.org/tsconfig#maxNodeModuleJsDepth"
+              "markdownDescription": "Specify the maximum folder depth used for checking JavaScript files from `node_modules`. Only applicable with `allowJs`.\n\nSee more: https://www.typescriptlang.org/tsconfig#maxNodeModuleJsDepth"
             },
             "importHelpers": {
-              "description": "Permite importar funciones auxiliares desde 'tslib' una vez por proyecto, en lugar de incluirlas por archivo.",
+              "description": "Allow importing helper functions from tslib once per project, instead of including them per-file.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Permite importar funciones auxiliares desde 'tslib' una vez por proyecto, en lugar de incluirlas por archivo.\n\nSee more: https://www.typescriptlang.org/tsconfig#importHelpers"
+              "markdownDescription": "Allow importing helper functions from tslib once per project, instead of including them per-file.\n\nSee more: https://www.typescriptlang.org/tsconfig#importHelpers"
             },
             "importsNotUsedAsValues": {
-              "description": "Especifica el comportamiento de emisión/comprobación para las importaciones que solo se utilizan para tipos.",
+              "description": "Specify emit/checking behavior for imports that are only used for types.",
               "default": "remove",
               "enum": ["remove", "preserve", "error"]
             },
             "alwaysStrict": {
-              "description": "Se asegura de que siempre se emita 'use strict'.",
+              "description": "Ensure 'use strict' is always emitted.",
               "type": "boolean",
-              "markdownDescription": "Se asegura de que siempre se emita 'use strict'.\n\nSee more: https://www.typescriptlang.org/tsconfig#alwaysStrict"
+              "markdownDescription": "Ensure 'use strict' is always emitted.\n\nSee more: https://www.typescriptlang.org/tsconfig#alwaysStrict"
             },
             "strict": {
-              "description": "Habilita todas las opciones de verificación estricta de tipo.",
+              "description": "Enable all strict type-checking options.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Habilita todas las opciones de verificación estricta de tipo.\n\nSee more: https://www.typescriptlang.org/tsconfig#strict"
+              "markdownDescription": "Enable all strict type-checking options.\n\nSee more: https://www.typescriptlang.org/tsconfig#strict"
             },
             "strictBindCallApply": {
-              "description": "Comprueba que los argumentos de los métodos `bind`, `call` y `apply` coincidan con la función original.",
+              "description": "Check that the arguments for `bind`, `call`, and `apply` methods match the original function.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Comprueba que los argumentos de los métodos `bind`, `call` y `apply` coincidan con la función original.\n\nSee more: https://www.typescriptlang.org/tsconfig#strictBindCallApply"
+              "markdownDescription": "Check that the arguments for `bind`, `call`, and `apply` methods match the original function.\n\nSee more: https://www.typescriptlang.org/tsconfig#strictBindCallApply"
             },
             "downlevelIteration": {
-              "description": "Emite JavaScript más compatible, pero detallado y con menos rendimiento para la iteración.",
+              "description": "Emit more compliant, but verbose and less performant JavaScript for iteration.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Emite JavaScript más compatible, pero detallado y con menos rendimiento para la iteración.\n\nSee more: https://www.typescriptlang.org/tsconfig#downlevelIteration"
+              "markdownDescription": "Emit more compliant, but verbose and less performant JavaScript for iteration.\n\nSee more: https://www.typescriptlang.org/tsconfig#downlevelIteration"
             },
             "checkJs": {
-              "description": "Habilita el informe de errores en la comprobación de tipo de archivos JavaScript.",
+              "description": "Enable error reporting in type-checked JavaScript files.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Habilita el informe de errores en la comprobación de tipo de archivos JavaScript.\n\nSee more: https://www.typescriptlang.org/tsconfig#checkJs"
+              "markdownDescription": "Enable error reporting in type-checked JavaScript files.\n\nSee more: https://www.typescriptlang.org/tsconfig#checkJs"
             },
             "strictFunctionTypes": {
-              "description": "Al asignar funciones, verifica que los parámetros y los valores devueltos sean compatibles con el subtipo.",
+              "description": "When assigning functions, check to ensure parameters and the return values are subtype-compatible.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Al asignar funciones, verifica que los parámetros y los valores devueltos sean compatibles con el subtipo.\n\nSee more: https://www.typescriptlang.org/tsconfig#strictFunctionTypes"
+              "markdownDescription": "When assigning functions, check to ensure parameters and the return values are subtype-compatible.\n\nSee more: https://www.typescriptlang.org/tsconfig#strictFunctionTypes"
             },
             "strictPropertyInitialization": {
-              "description": "Comprueba las propiedades de la clase que están declaradas pero no establecidas en el constructor.",
+              "description": "Check for class properties that are declared but not set in the constructor.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Comprueba las propiedades de la clase que están declaradas pero no establecidas en el constructor.\n\nSee more: https://www.typescriptlang.org/tsconfig#strictPropertyInitialization"
+              "markdownDescription": "Check for class properties that are declared but not set in the constructor.\n\nSee more: https://www.typescriptlang.org/tsconfig#strictPropertyInitialization"
             },
             "esModuleInterop": {
-              "description": "Emite JavaScript adicional para facilitar la compatibilidad con la importación de módulos CommonJS. Esto habilita `allowSyntheticDefaultImports` para compatibilidad de tipos.",
+              "description": "Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Emite JavaScript adicional para facilitar la compatibilidad con la importación de módulos CommonJS. Esto habilita `allowSyntheticDefaultImports` para compatibilidad de tipos.\n\nSee more: https://www.typescriptlang.org/tsconfig#esModuleInterop"
+              "markdownDescription": "Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility.\n\nSee more: https://www.typescriptlang.org/tsconfig#esModuleInterop"
             },
             "allowUmdGlobalAccess": {
-              "description": "Permitir acceder a global a UMD desde módulos.",
+              "description": "Allow accessing UMD globals from modules.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Permitir acceder a global a UMD desde módulos.\n\nSee more: https://www.typescriptlang.org/tsconfig#allowUmdGlobalAccess"
+              "markdownDescription": "Allow accessing UMD globals from modules.\n\nSee more: https://www.typescriptlang.org/tsconfig#allowUmdGlobalAccess"
             },
             "keyofStringsOnly": {
-              "description": "Hacer keyof solo devuelve cadenas en lugar de cadenas, números o símbolos. Opción heredada.",
+              "description": "Make keyof only return strings instead of string, numbers or symbols. Legacy option.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Hacer keyof solo devuelve cadenas en lugar de cadenas, números o símbolos. Opción heredada.\n\nSee more: https://www.typescriptlang.org/tsconfig#keyofStringsOnly"
+              "markdownDescription": "Make keyof only return strings instead of string, numbers or symbols. Legacy option.\n\nSee more: https://www.typescriptlang.org/tsconfig#keyofStringsOnly"
             },
             "useDefineForClassFields": {
-              "description": "Emitir campos de clase compatibles con el estándar ECMAScript.",
+              "description": "Emit ECMAScript-standard-compliant class fields.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Emitir campos de clase compatibles con el estándar ECMAScript.\n\nSee more: https://www.typescriptlang.org/tsconfig#useDefineForClassFields"
+              "markdownDescription": "Emit ECMAScript-standard-compliant class fields.\n\nSee more: https://www.typescriptlang.org/tsconfig#useDefineForClassFields"
             },
             "declarationMap": {
-              "description": "Cree mapas fuente para archivos d.ts.",
+              "description": "Create sourcemaps for d.ts files.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Cree mapas fuente para archivos d.ts.\n\nSee more: https://www.typescriptlang.org/tsconfig#declarationMap"
+              "markdownDescription": "Create sourcemaps for d.ts files.\n\nSee more: https://www.typescriptlang.org/tsconfig#declarationMap"
             },
             "resolveJsonModule": {
-              "description": "Habilita la importación de archivos .json.",
+              "description": "Enable importing .json files.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Habilita la importación de archivos .json.\n\nSee more: https://www.typescriptlang.org/tsconfig#resolveJsonModule"
+              "markdownDescription": "Enable importing .json files.\n\nSee more: https://www.typescriptlang.org/tsconfig#resolveJsonModule"
             },
             "assumeChangesOnlyAffectDirectDependencies": {
               "description": "Have recompiles in '--incremental' and '--watch' assume that changes within a file will only affect files directly depending on it. Requires TypeScript version 3.8 or later.",
               "type": "boolean"
             },
             "extendedDiagnostics": {
-              "description": "Genera información más detallada sobre el rendimiento del compilador después de la compilación.",
+              "description": "Output more detailed compiler performance information after building.",
               "type": "boolean",
               "default": false,
-              "markdownDescription": "Genera información más detallada sobre el rendimiento del compilador después de la compilación.\n\nSee more: https://www.typescriptlang.org/tsconfig#extendedDiagnostics"
+              "markdownDescription": "Output more detailed compiler performance information after building.\n\nSee more: https://www.typescriptlang.org/tsconfig#extendedDiagnostics"
             },
             "disableSourceOfProjectReferenceRedirect": {
-              "description": "Desactiva la preferencia de archivos fuente en lugar de archivos de declaración al hacer referencia a proyectos compuestos.",
+              "description": "Disable preferring source files instead of declaration files when referencing composite projects.",
               "type": "boolean",
-              "markdownDescription": "Desactiva la preferencia de archivos fuente en lugar de archivos de declaración al hacer referencia a proyectos compuestos.\n\nSee more: https://www.typescriptlang.org/tsconfig#disableSourceOfProjectReferenceRedirect"
+              "markdownDescription": "Disable preferring source files instead of declaration files when referencing composite projects.\n\nSee more: https://www.typescriptlang.org/tsconfig#disableSourceOfProjectReferenceRedirect"
             },
             "disableSolutionSearching": {
-              "description": "Opta por excluir un proyecto de la comprobación de referencias multiproyecto al editarlo.",
+              "description": "Opt a project out of multi-project reference checking when editing.",
               "type": "boolean",
-              "markdownDescription": "Opta por excluir un proyecto de la comprobación de referencias multiproyecto al editarlo.\n\nSee more: https://www.typescriptlang.org/tsconfig#disableSolutionSearching"
+              "markdownDescription": "Opt a project out of multi-project reference checking when editing.\n\nSee more: https://www.typescriptlang.org/tsconfig#disableSolutionSearching"
             }
           }
         }

@@ -65,12 +65,12 @@ export const QuickJump = (props: Props) => {
         <ul>
           <li>
             <IntlLink to="/docs/handbook/basic-types.html">
-              Basic Types
+              Tipos básicos
             </IntlLink>
           </li>
           <li>
             <IntlLink to="/docs/handbook/advanced-types.html">
-              Advanced Types
+              Tipos avanzados
             </IntlLink>
           </li>
           <li>

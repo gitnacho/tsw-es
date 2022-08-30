@@ -1,4 +1,4 @@
-/** Takes JS and turns it into markdown */
+/** Toma JS y lo convierte en markdown */
 export const invertCodeToHTML = (code: string) => {
   const newlines = [] as string[]
 
@@ -11,7 +11,7 @@ export const invertCodeToHTML = (code: string) => {
 
   const oldLines = code.split("\n")
   oldLines.forEach((line, index) => {
-    // Skip first line
+    // Salta la primera línea
     if (line.startsWith("////")) return
 
     const isComment = line.startsWith("//")
@@ -30,7 +30,7 @@ export const invertCodeToHTML = (code: string) => {
     }
 
     if (!isComment && state === State.InComment) {
-      // Start of code
+      // Inicia el código
       state = State.InCode
       newlines.push("<code><pre>")
       newlines.push(line)

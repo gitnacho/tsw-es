@@ -13,7 +13,7 @@ import { isTouchDevice } from "../../lib/isTouchDevice"
 import { SuppressWhenTouch } from "../../components/SuppressWhenTouch"
 import { getPlaygroundUrls } from "../../lib/playgroundURLs"
 
-/** Note: to run all the web infra in debug, run:
+/** Nota: to run all the web infra in debug, run:
   localStorage.debug = '*'
 
   to remove logging: localStorage.debug = undefined
@@ -255,7 +255,7 @@ const Index: React.FC<Props> = props => {
                   </li>
                   <li>Splitting a code sample to hide distracting code</li>
                   <li>
-                    Declaratively highlighting symbols in your code sample
+                    Resaltar símbolos declarativamente en tu código de ejemplo
                   </li>
                   <li>
                     Replacing code with the results of transpilation to
@@ -387,7 +387,7 @@ fn(42)`
     name: "Set Compiler Flags",
     blurb: "You can define compiler flags inline in a code sample which are removed from the output",
     code: `// @noImplicitAny: false
-// This will not throw because of the noImplicitAny
+// Esto no lanzará debido al noImplicitAny
 function fn(s) {
   console.log(s.subtr(3))
 }
@@ -396,10 +396,10 @@ fn(42);`
   }, {
     name: "Trims code",
     blurb: "You can write code to help it compile in the sample which is hidden in the output",
-    code: `interface IdLabel {id: number, /* some fields */ }
-interface NameLabel {name: string, /* other fields */ }
+    code: `interface IdLabel {id: number, /* algunos campos */ }
+interface NameLabel {name: string, /* otros campos */
 type NameOrId<T extends number | string> = T extends number ? IdLabel : NameLabel;
-// This comment should not be included
+// Este comentario no se debe incluir
 
 // ---cut---
 function createLabel<T extends number | string>(idOrName: T): NameOrId<T> {
@@ -423,8 +423,8 @@ export function getStringLength(value: string) {
 // @showEmit
 // @showEmittedFile: index.d.ts
 /**
- * Gets the length of a string
- * @param value a string
+ * Obtiene la longitud de una cadena
+ * @param valor una cadena
  */
 export function getStringLength(value: string) {
   return value

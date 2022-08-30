@@ -45,7 +45,7 @@ const HandbookTemplate: React.FC<Props> = (props) => {
     return <div></div>
   }
 
-  // Note: This can, and does, change triggering re-renders
+  // Nota: This can, and does, change triggering re-renders
   const showPopup = useQuickInfoPopup(props.pageContext.lang)
 
   const [deprecationURL, setDeprecationURL] = useState(post.frontmatter!.deprecated_by)
@@ -64,7 +64,7 @@ const HandbookTemplate: React.FC<Props> = (props) => {
 
     overrideSubNavLinksWithSmoothScroll()
 
-    // Handles setting the scroll 
+    // Maneja el ajuste del desplazamiento 
     window.addEventListener("scroll", updateSidebarOnScroll, { passive: true, capture: true });
     // Sets current selection
     updateSidebarOnScroll()

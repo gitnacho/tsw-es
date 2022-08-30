@@ -69,7 +69,7 @@ export const createPlaygroundExamplePages = async (
 
     const { inlineTitle, compilerSettings } = getCompilerDetailsFromCode(code)
 
-    // Intentionally not adding addPathToSite here
+    // Intencionalmente no agrega addPathToSite aquí
 
     createPage({
       path: newPagePath + ".html",
@@ -106,7 +106,7 @@ const getCompilerDetailsFromCode = (contents: string) => {
   let inlineTitle = undefined
 
   if (contents.startsWith("//// {")) {
-    // convert windows newlines to linux new lines
+    // convertir nuevas líneas de windows a nuevas líneas de linux
     const preJSON = contents
       .replace(/\r\n/g, "\n")
       .split("//// {")[1]

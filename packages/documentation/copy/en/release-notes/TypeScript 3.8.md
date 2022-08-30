@@ -381,7 +381,7 @@ new Foo().stuff++;
 *TypeScript 3.8* incluye una nueva estrategia para ver directorios, que es crucial para recoger de manera eficiente los cambios en `node_modules`.
 
 Para algún contexto, en sistemas operativos como *Linux*, *TypeScript* instala observadores de directorios (a diferencia de los observadores de archivos) en `node_modules` y muchos de sus subdirectorios para detectar cambios en las dependencias.
-Esto se debe a que la cantidad de observadores de archivos disponibles a menudo se ve eclipsada por la cantidad de archivos en `node_modules`, mientras que hay muchos menos directorios para rastrear.
+Esto se debe a que la cantidad disponible de observadores de archivo a menudo se ve eclipsada por la cantidad de archivos en `node_modules`, mientras que hay mucho menos directorios para rastrear.
 
 Las versiones anteriores de *TypeScript* instalarían *inmediatamente* los observadores de directorios en los directorios, y al inicio eso estaría bien; sin embargo, durante una instalación de `npm`, se llevará a cabo una gran cantidad de actividad dentro de `node_modules` y eso puede abrumar a *TypeScript*, a menudo ralentizando las sesiones del editor.
 Para evitar esto, *TypeScript 3.8* espera un poco antes de instalar los observadores de directorios para dar tiempo a que estos directorios altamente volátiles se estabilicen.

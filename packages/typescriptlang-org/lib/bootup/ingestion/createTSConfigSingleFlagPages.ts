@@ -45,7 +45,7 @@ export const createTSConfigSingleFlagPages = async (
   // },
 
   options.forEach(option => {
-    // Intentionally not adding addPathToSite here
+    // Intencionalmente no agrega addPathToSite aquí
     const url = `/tsconfig/${option.name}`
 
     createPage({

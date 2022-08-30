@@ -44,7 +44,7 @@ const TSConfigReferenceTemplateComponent = (props: Props) => {
     ) => {
       let offset = target.offsetTop
       if (subnav) {
-        // Subtract height of subnav if "position: sticky" is active
+        // Resta la altura de subnav si "position: sticky" está activa
         const style = window.getComputedStyle(subnav)
         if (style.position === "sticky") {
           offset -= subnav.clientHeight
@@ -58,7 +58,7 @@ const TSConfigReferenceTemplateComponent = (props: Props) => {
       const target = document.querySelector<HTMLElement>(hash)
       if (!target) return
 
-      // Search for subnav if the target is a descendant of <article>
+      // Busca subnav si el objetivo es descendiente de <article>
       let search = target
       let subnav: HTMLElement | null = null
       while (search.parentElement) {
@@ -69,7 +69,7 @@ const TSConfigReferenceTemplateComponent = (props: Props) => {
         }
       }
 
-      // Smooth scroll to the target
+      // Se desplaza suavemente hacia el objetivo
       const offset = calculateOffset(target, subnav)
       if (!offset) return
       window.scrollTo({
@@ -87,13 +87,13 @@ const TSConfigReferenceTemplateComponent = (props: Props) => {
         event.preventDefault()
         scrollToHash(link.hash)
 
-        // Update URL without triggering default scroll behavior
+        // Actualiza la URL sin activar el comportamiento de desplazamiento predeterminado
         window.history.pushState(null, "", link.hash)
       })
     })
 
-    // Sets the current selection
-    // Based on https://css-tricks.com/sticky-smooth-active-nav/
+    // Establece la selección actual
+    // Basado en https://css-tricks.com/sticky-smooth-active-nav/
     const subnavs = document.querySelectorAll<HTMLElement>(
       ".tsconfig article nav"
     )
@@ -106,7 +106,7 @@ const TSConfigReferenceTemplateComponent = (props: Props) => {
         )
         let currentPossibleAnchor: HTMLAnchorElement | undefined
 
-        // Scroll down to find the highest anchor on the screen
+        // Se Desplaza hacia abajo para encontrar el ancla más alta en la pantalla
         subnavLinks.forEach(link => {
           const section = document.querySelector<HTMLElement>(link.hash)
           if (!section) return
@@ -115,7 +115,7 @@ const TSConfigReferenceTemplateComponent = (props: Props) => {
           if (isBelow) currentPossibleAnchor = link
         })
 
-        // Then set the active tag
+        // A continuación, establece la etiqueta activa
         subnavLinks.forEach(link => {
           if (link === currentPossibleAnchor) {
             link.classList.add("current")
@@ -126,7 +126,7 @@ const TSConfigReferenceTemplateComponent = (props: Props) => {
       })
     }
 
-    // Handles setting the scroll 
+    // Maneja el ajuste del desplazamiento 
     window.addEventListener("scroll", updateSidebar, { passive: true, capture: true });
     updateSidebar()
 

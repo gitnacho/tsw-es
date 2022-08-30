@@ -1,5 +1,5 @@
 ---
-display: "Resolución del módulo"
+display: "Resolución de módulo"
 oneline: "Especifica cómo busca *TypeScript* un archivo de un determinado especificador de módulo."
 ---
 

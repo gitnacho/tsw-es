@@ -16,17 +16,17 @@ export const HeadSEO = (props: SeoProps) => {
     "twitter:site": "typescriptlang",
   }
 
-  // Skip search engine indexing on the staging site, this is changed by running:
+  // Omite la indexación del motor de búsqueda en el sitio de prueba, esto se cambia ejecutando:
   // yarn workspace typescriptlang-org setup-staging
   const staging = false;
 
-  // do we want localized pages to be the english version?
+  // ¿Queremos que las páginas localizadas sean la versión en inglés?
   //{seo.url && <meta property="og:url" content={seo.url} />}
 
-  // TODO: a lot of pages should have this
+  // TODO: Muchas páginas deberían tener esto.
   // <meta property="og:type" content="article" />
 
-  // TODO: Maybe on prod we can generate an image for each file
+  // TODO: Tal vez en prod podamos generar una imagen para cada archivo
   // <meta name="image" content={seo.image} />
 
   return (

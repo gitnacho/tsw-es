@@ -32,22 +32,22 @@ const Index: React.FC<Props> = (props) => {
           </div>
 
           <div className="raised main-content-block">
-            <h2>Quick Tutorial</h2>
-            <p>You need about 5 minutes, Node.js, yarn and Firefox/Edge or Chrome.</p>
-            <p><b>Step 1</b>: Use the template to bootstrap: <code>yarn create typescript-playground-plugin playground-my-plugin</code></p>
-            <p><b>Step 2</b>: Run <code>yarn start</code> in the new repo, to start up the local dev server</p>
-            <p><b>Step 3</b>: Open the <a href={withPrefix("/play/")}>playground</a> in your browser, click "Options" and enable <code>"Connect to localhost:5000/index.js"</code></p>
-            <p><b>Step 4</b>: Refresh, and see the new tab. That's your plugin up and running</p>
+            <h2>Tutorial rápido</h2>
+            <p>Necesitas unos 5 minutos, Node.js, yarn y Firefox/Edge o Chrome.</p>
+            <p><b>Paso 1</b>: Utiliza la plantilla para arrancar: <code>yarn create typescript-playground-plugin playground-my-plugin</code></p>
+            <p><b>Paso 2</b>: Ejecuta <code>yarn start</code> en el nuevo repositorio, para iniciar el servidor de desarrollo local</p>
+            <p><b>Paso 3</b>: Open the <a href={withPrefix("/play/")}>playground</a> in your browser, click "Options" and enable <code>"Connect to localhost:5000/index.js"</code></p>
+            <p><b>Paso 4</b>: Actualiza, y ve la nueva pestaña. Ese es tu complemento en funcionamiento</p>
             <p>&nbsp;</p>
-            <p>That's all the pieces working in tandem, now you can make changes to the template and build out your plugin. The plugin in dev mode will always become forefront when connected, so you can re-load without a lot of clicks. To understand the template's technology, read the <a href='https://github.com/microsoft/TypeScript-Website/blob/v2/packages/create-typescript-playground-plugin/template/CONTRIBUTING.md'>CONTRIBUTING.md</a></p>
+            <p>Todas las piezas funcionan en conjunto, ahora puedes realizar cambios en la plantilla y crear tu complemento. The plugin in dev mode will always become forefront when connected, so you can re-load without a lot of clicks. Para comprender la tecnología de la plantilla, lee <a href='https://github.com/microsoft/TypeScript-Website/blob/v2/packages/create-typescript-playground-plugin/template/CONTRIBUTING.md'>CONTRIBUTING.md</a></p>
 
-            <h2>Alternatives</h2>
-            <p>There are community-run templates for Playground plugins which bootstrap your plugin with well-known view libraries:</p>
+            <h2>Alternativas</h2>
+            <p>Hay plantillas administradas por la comunidad para complementos de Playground que inician tu complemento con bibliotecas de vistas conocidas:</p>
             <ul>
               <li><a href="https://github.com/gojutin/typescript-playground-plugin-react#typescript-playground-plugin-react">gojutin/typescript-playground-plugin-react</a></li>
               <li><a href="https://github.com/gojutin/typescript-playground-plugin-svelte#typescript-playground-plugin-svelte">gojutin/typescript-playground-plugin-svelte</a></li>
             </ul>
-            <p>They have their own up-to-date documentation in their READMEs.</p>
+            <p>Tienen su propia documentación actualizada en sus archivos README.</p>
           </div>
         </div>
       </Layout>

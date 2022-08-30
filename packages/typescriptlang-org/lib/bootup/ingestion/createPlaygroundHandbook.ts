@@ -44,7 +44,7 @@ export const createPlaygroundHandbookPages = async (
   // },
 
   options.forEach(option => {
-    // Intentionally not adding addPathToSite here
+    // Intencionalmente no agrega addPathToSite aquí
 
     const idize = string =>
       string

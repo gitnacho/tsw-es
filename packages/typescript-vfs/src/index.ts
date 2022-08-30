@@ -27,11 +27,11 @@ export interface VirtualTypeScriptEnvironment {
  * Realiza una copia virtual del entorno TypeScript. Esta es la API principal que deseas utilizar con
  * @typescript/vfs. Muchas de las otras funciones expuestas las utiliza esta función para configurarse.
  *
- * @param sys an object which conforms to the TS Sys (a shim over read/write access to the fs)
- * @param rootFiles a list of files which are considered inside the project
- * @param ts a copy pf the TypeScript module
- * @param compilerOptions the options for this compiler run
- * @param customTransformers custom transformers for this compiler run
+ * @param sys un objeto que se ajusta al Sys de TS (una corrección sobre el acceso de lectura/escritura al fs)
+ * @param rootFiles una lista de archivos que se consideran dentro del proyecto
+ * @param envía una copia del módulo TypeScript
+ * @param compilerOptions las opciones para ejecutar este compilador
+ * @param customTransformers Transformadores personalizados para esta ejecución del compilador
  */
 
 export function createVirtualTypeScriptEnvironment(
@@ -75,7 +75,7 @@ export function createVirtualTypeScriptEnvironment(
       }
       const prevFullContents = prevSourceFile.text
 
-      // TODO: Validate if the default text span has a fencepost error?
+      // TODO: ¿Validar si el tramo de texto predeterminado tiene un error fencepost?
       const prevTextSpan = optPrevTextSpan ?? ts.createTextSpan(0, prevFullContents.length)
       const newText =
         prevFullContents.slice(0, prevTextSpan.start) +
@@ -92,11 +92,11 @@ export function createVirtualTypeScriptEnvironment(
 }
 
 /**
- * Grab the list of lib files for a particular target, will return a bit more than necessary (by including
- * the dom) but that's OK
+ * Toma la lista de archivos lib para un objetivo en particular, devolverá un poco más de lo necesario (al incluir
+ * el dom) pero, está bien
  *
- * @param target The compiler settings target baseline
- * @param ts A copy of the TypeScript module
+ * @param target La línea base del objetivo de la configuración del compilador
+ * @param ts Una copia del módulo TypeScript
  */
 export const knownLibFilesForCompilerOptions = (compilerOptions: CompilerOptions, ts: TS) => {
   const target = compilerOptions.target || ts.ScriptTarget.ES5
@@ -172,7 +172,7 @@ export const knownLibFilesForCompilerOptions = (compilerOptions: CompilerOptions
   const getMax = (array: number[]) =>
     array && array.length ? array.reduce((max, current) => (current > max ? current : max)) : undefined
 
-  // Find the index for everything in
+  // Encuentra el índice para todo en
   const indexesForCutting = lib.map(lib => {
     const matches = files.filter(f => f.startsWith(`lib.${lib.toLowerCase()}`))
     if (matches.length === 0) return 0
@@ -188,8 +188,8 @@ export const knownLibFilesForCompilerOptions = (compilerOptions: CompilerOptions
 }
 
 /**
- * Sets up a Map with lib contents by grabbing the necessary files from
- * the local copy of typescript via the file system.
+ * Configura un mapa con contenido lib tomando los archivos necesarios de
+ * la copia local de typescript a través del sistema de archivos.
  */
 export const createDefaultMapFromNodeModules = (compilerOptions: CompilerOptions, ts?: typeof import("typescript")) => {
   const tsModule = ts || require("typescript")
@@ -210,7 +210,7 @@ export const createDefaultMapFromNodeModules = (compilerOptions: CompilerOptions
 }
 
 /**
- * Adds recursively files from the FS into the map based on the folder
+ * Agrega recursivamente archivos del FS al mapa basándose en el directorio
  */
 export const addAllFilesFromFolder = (map: Map<string, string>, workingDir: string): void => {
   const path = requirePath()
@@ -223,10 +223,10 @@ export const addAllFilesFromFolder = (map: Map<string, string>, workingDir: stri
       file = path.join(dir, file)
       const stat = fs.statSync(file)
       if (stat && stat.isDirectory()) {
-        /* Recurse into a subdirectory */
+        /* Ingresa en un subdirectorio */
         results = results.concat(walk(file))
       } else {
-        /* Is a file */
+        /* Es un archivo */
         results.push(file)
       }
     })
@@ -246,21 +246,21 @@ export const addAllFilesFromFolder = (map: Map<string, string>, workingDir: stri
   })
 }
 
-/** Adds all files from node_modules/@types into the FS Map */
+/** Agrega todos los archivos de node_modules/@types al Map de FS */
 export const addFilesForTypesIntoFolder = (map: Map<string, string>) =>
   addAllFilesFromFolder(map, "node_modules/@types")
 
 /**
- * Create a virtual FS Map with the lib files from a particular TypeScript
- * version based on the target, Always includes dom ATM.
+ * Crea un map virtual de FS con los archivos lib de una versión de TypeScript
+ * en particular basada en el objetivo, siempre incluye dom ATM.
  *
- * @param options The compiler target, which dictates the libs to set up
- * @param version the versions of TypeScript which are supported
- * @param cache should the values be stored in local storage
- * @param ts a copy of the typescript import
- * @param lzstring an optional copy of the lz-string import
- * @param fetcher an optional replacement for the global fetch function (tests mainly)
- * @param storer an optional replacement for the localStorage global (tests mainly)
+ * @param options El objetivo del compilador, que dicta las bibliotecas a configurar
+ * @param version las versiones de TypeScript que son compatibles
+ * @param cache si los valores se guardan en el almacenamiento local
+ * @param ts envía una copia de la import de typescript
+ * @param lzstring una copia opcional de la import de lz-string
+ * @param fetcher un reemplazo opcional para la función de búsqueda global (pruebas principalmente)
+ * @param storer un reemplazo opcional para localStorage global (pruebas principalmente)
  */
 export const createDefaultMapFromCDN = (
   options: CompilerOptions,
@@ -284,20 +284,20 @@ export const createDefaultMapFromCDN = (
     return lzstring ? lzstring.decompressFromUTF16(str) : str
   }
 
-  // Map the known libs to a node fetch promise, then return the contents
+  // Asigna las bibliotecas conocidas a una promesa de búsqueda de nodo y, a continuación, devuelve el contenido
   function uncached() {
     return Promise.all(files.map(lib => fetchlike(prefix + lib).then(resp => resp.text()))).then(contents => {
       contents.forEach((text, index) => fsMap.set("/" + files[index], text))
     })
   }
 
-  // A localstorage and lzzip aware version of the lib files
+  // Una versión compatible con localstorage e lzzip de los archivos lib
   function cached() {
     const storelike = storer || localStorage
 
     const keys = Object.keys(localStorage)
     keys.forEach(key => {
-      // Remove anything which isn't from this version
+      // Elimina todo lo que no sea de esta versión
       if (key.startsWith("ts-lib-") && !key.startsWith("ts-lib-" + version)) {
         storelike.removeItem(key)
       }
@@ -309,7 +309,7 @@ export const createDefaultMapFromCDN = (
         const content = storelike.getItem(cacheKey)
 
         if (!content) {
-          // Make the API call and store the text concent in the cache
+          // Realiza la llamada API y almacena el contenido de texto en caché
           return fetchlike(prefix + lib)
             .then(resp => resp.text())
             .then(t => {
@@ -333,7 +333,7 @@ export const createDefaultMapFromCDN = (
 }
 
 function notImplemented(methodName: string): any {
-  throw new Error(`Method '${methodName}' is not implemented.`)
+  throw new Error(`El método '${methodName}' no se ha implementado.`)
 }
 
 function audit<ArgsT extends any[], ReturnT>(
@@ -351,7 +351,7 @@ function audit<ArgsT extends any[], ReturnT>(
   }
 }
 
-/** The default compiler options if TypeScript could ever change the compiler options */
+/** Las opciones predeterminadas del compilador si TypeScript pudiera cambiar las opciones del compilador */
 const defaultCompilerOptions = (ts: typeof import("typescript")): CompilerOptions => {
   return {
     ...ts.getDefaultCompilerOptions(),
@@ -370,14 +370,14 @@ const defaultCompilerOptions = (ts: typeof import("typescript")): CompilerOption
 const libize = (path: string) => path.replace("/", "/lib.").toLowerCase()
 
 /**
- * Creates an in-memory System object which can be used in a TypeScript program, this
- * is what provides read/write aspects of the virtual fs
+ * Crea en memoria un objeto System que se puede usar en un programa TypeScript, este
+ * es el que proporciona aspectos de lectura/escritura del fs virtual
  */
 export function createSystem(files: Map<string, string>): System {
   return {
     args: [],
     createDirectory: () => notImplemented("createDirectory"),
-    // TODO: could make a real file tree
+    // TODO: debería hacer un árbol de archivos real
     directoryExists: audit("directoryExists", directory => {
       return Array.from(files.keys()).some(path => path.startsWith(directory))
     }),
@@ -399,17 +399,17 @@ export function createSystem(files: Map<string, string>): System {
 }
 
 /**
- * Creates a file-system backed System object which can be used in a TypeScript program, you provide
- * a set of virtual files which are prioritised over the FS versions, then a path to the root of your
- * project (basically the folder your node_modules lives)
+ * Crea un objeto System respaldado por un sistema de archivos que se puede usar en un programa TypeScript, proporcionas
+ * un conjunto de archivos virtuales que tienen prioridad sobre las versiones FS, luego una ruta a la raíz de tu
+ * proyecto (básicamente el directorio en el que vive tu node_modules)
  */
 export function createFSBackedSystem(files: Map<string, string>, _projectRoot: string, ts: TS): System {
-  // We need to make an isolated folder for the tsconfig, but also need to be able to resolve the
-  // existing node_modules structures going back through the history
+  // Necesitamos crear un directorio aislado para tsconfig, pero también debemos poder resolver la
+  // estructura de node_modules existente retrocediendo a través de la historia.
   const root = _projectRoot + "/vfs"
   const path = requirePath()
 
-  // The default System in TypeScript
+  // El sistema predeterminado en TypeScript
   const nodeSys = ts.sys
   const tsLib = path.dirname(require.resolve("typescript"))
 
@@ -419,14 +419,14 @@ export function createFSBackedSystem(files: Map<string, string>, _projectRoot: s
     root,
     args: [],
     createDirectory: () => notImplemented("createDirectory"),
-    // TODO: could make a real file tree
+    // TODO: debería hacer un árbol de archivos real
     directoryExists: audit("directoryExists", directory => {
       return Array.from(files.keys()).some(path => path.startsWith(directory)) || nodeSys.directoryExists(directory)
     }),
     exit: nodeSys.exit,
     fileExists: audit("fileExists", fileName => {
       if (files.has(fileName)) return true
-      // Don't let other tsconfigs end up touching the vfs
+      // No permite que otros tsconfigs terminen tocando el vfs
       if (fileName.includes("tsconfig.json") || fileName.includes("tsconfig.json")) return false
       if (fileName.startsWith("/lib")) {
         const tsLibName = `${tsLib}/${fileName.replace("/", "")}`
@@ -452,7 +452,7 @@ export function createFSBackedSystem(files: Map<string, string>, _projectRoot: s
         if (!result) {
           const libs = nodeSys.readDirectory(tsLib)
           throw new Error(
-            `TSVFS: A request was made for ${tsLibName} but there wasn't a file found in the file map. You likely have a mismatch in the compiler options for the CDN download vs the compiler program. Existing Libs: ${libs}.`
+            `TSVFS: Se realizó una solicitud a ${tsLibName} pero no se encontró ningún archivo en el mapa de archivos. Es probable que tengas una discrepancia entre las opciones del compilador para la descarga de CDN y el programa compilador. Bibliotecas existentes: ${libs}.`
           )
         }
         return result
@@ -473,9 +473,9 @@ export function createFSBackedSystem(files: Map<string, string>, _projectRoot: s
 }
 
 /**
- * Creates an in-memory CompilerHost -which is essentially an extra wrapper to System
- * which works with TypeScript objects - returns both a compiler host, and a way to add new SourceFile
- * instances to the in-memory file system.
+ * Crea un CompilerHost en memoria, que esencialmente es un contenedor adicional para System
+ * que trabaja con objetos TypeScript - devuelve un host compilador y una forma de agregar una nueva instancia
+ * de SourceFile al sistema de archivos en memoria.
  */
 export function createVirtualCompilerHost(sys: System, compilerOptions: CompilerOptions, ts: TS) {
   const sourceFiles = new Map<string, SourceFile>()
@@ -523,7 +523,7 @@ export function createVirtualCompilerHost(sys: System, compilerOptions: Compiler
 }
 
 /**
- * Creates an object which can host a language service against the virtual file-system
+ * Crea un objeto que puede albergar un servicio de idioma contra el sistema de archivos virtual
  */
 export function createVirtualLanguageServiceHost(
   sys: System,

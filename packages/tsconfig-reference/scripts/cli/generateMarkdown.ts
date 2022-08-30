@@ -56,7 +56,7 @@ languages.forEach((lang) => {
   <thead>
     <tr>
       <th>Bandera</th>
-      <th>Tipo</th>${opts?.noDefaults ? "" : "\n      <th>Predeterminado</th>"}
+      <th>Tipo</th>${opts?.noDefaults ? "" : "\n      <th>Predefinido</th>"}
     </tr>
   </thead>
   <tbody>

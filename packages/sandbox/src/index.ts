@@ -121,7 +121,7 @@ export const createTypeScriptSandbox = (
     ? config.text
     : getInitialCode(config.text, document.location)
 
-  // Predeterminados
+  // Predefinidos
   const compilerDefaults = getDefaultSandboxCompilerOptions(config, monaco)
 
   // Toma las banderas del compilador a través de los parámetros de consulta

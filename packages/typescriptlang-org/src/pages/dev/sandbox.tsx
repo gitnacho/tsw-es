@@ -46,7 +46,7 @@ const Index: React.FC<Props> = props => {
           const initialCode = `import {markdown, danger} from "danger"
 
 export default async function () {
-    // Check for new @types in devDependencies
+    // Comprueba si hay nuevos @types en devDependencies
     const packageJSONDiff = await danger.git.JSONDiffForFile("package.json")
     const newDeps = packageJSONDiff.devDependencies.added
     const newTypesDeps = newDeps?.filter(d => d.includes("@types")) ?? []
@@ -221,23 +221,23 @@ export default async function () {
             <pre>
               <code className="html-code">
                 {`<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
   </head>
   <div id="loader">Loading...</div>
   <div id="monaco-editor-embed" style="height: 800px;" />
   <script>
-    // First set up the VSCode loader in a script tag
+    // Primero configura el cargador VSCode en una etiqueta script
     const getLoaderScript = document.createElement('script')
     getLoaderScript.src = 'https://www.typescriptlang.org/js/vs.loader.js'
     getLoaderScript.async = true
     getLoaderScript.onload = () => {
-      // Now the loader is ready, tell require where it can get the version of monaco, and the sandbox
-      // This version uses the latest version of the sandbox, which is used on the TypeScript website
+      // Ahora que el cargador está listo, dile a require dónde puede obtener la versión de monaco y sandbox
+      // Esta versión utiliza la última versión del sandbox, que se utiliza en el sitio web de TypeScript.
 
       // For the monaco version you can use unpkg or the TypeSCript web infra CDN
-      // You can see the available releases for TypeScript here:
+      // Puedes ver las versiones disponibles para TypeScript aquí:
       // https://typescript.azureedge.net/indexes/releases.json
       //
       require.config({
@@ -246,11 +246,11 @@ export default async function () {
           // vs: 'https://unpkg.com/@typescript-deploys/monaco-editor@4.0.5/min/vs',
           sandbox: 'https://www.typescriptlang.org/js/sandbox',
         },
-        // This is something you need for monaco to work
+        // Esto es algo que necesitas para que monaco funcione.
         ignoreDuplicateModules: ['vs/editor/editor.main'],
       })
 
-      // Grab a copy of monaco, TypeScript and the sandbox
+      // Coge una copia de monaco, TypeScript y el sandbox
       require(['vs/editor/editor.main', 'vs/language/typescript/tsWorker', 'sandbox/index'], (
         main,
         _tsWorker,
@@ -259,7 +259,7 @@ export default async function () {
         const initialCode = \`import {markdown, danger} from "danger"
 
 export default async function () {
-    // Check for new @types in devDependencies
+    // Comprueba si hay nuevos @types en devDependencies
     const packageJSONDiff = await danger.git.JSONDiffForFile("package.json")
     const newDeps = packageJSONDiff.devDependencies.added
     const newTypesDeps = newDeps?.filter(d => d.includes("@types")) ?? []
@@ -278,7 +278,7 @@ export default async function () {
           return
         }
 
-        // Create a sandbox and embed it into the the div #monaco-editor-embed
+        // Crea un sandbox y lo inserta en el div #monaco-editor-embed
         const sandboxConfig = {
           text: initialCode,
           compilerOptions: {},

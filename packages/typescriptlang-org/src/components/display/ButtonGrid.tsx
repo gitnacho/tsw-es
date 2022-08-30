@@ -8,7 +8,7 @@ export type GridProps = {
 }
 
 
-/** A pretty grid of grey buttons */
+/** Una bonita cuadrícula de botones grises */
 export const ButtonGrid = (props: GridProps) => (
   <div className="flow-links">
     {props.buttons.map(b =>

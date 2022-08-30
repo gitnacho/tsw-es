@@ -11,9 +11,9 @@ const Slack = () => (
     <div className="slack small_full_width">
       <div className='illustration'>
         <div className="fg">
-          <p><strong>First</strong>, we were surprised by the number of small bugs we found when converting our code.</p>
-          <p><strong>Second</strong>, we underestimated how powerful the editor integration is.</p>
-          <p>TypeScript was such a boon to our stability and sanity that we started using it for all new code within days of starting the conversion.</p>
+          <p><strong>Primero</strong>, nos sorprendió la cantidad de pequeños errores que encontramos al convertir nuestro código.</p>
+          <p><strong>Segundo</strong>, subestimamos lo poderosa que es la integración del editor.</p>
+          <p>TypeScript fue tan buena ayuda para nuestra estabilidad y cordura, que a los pocos días de iniciar la conversión, comenzamos a usarlo para todo el código nuevo.</p>
         </div>
         <div className="bg">
           <svg width="780" height="380" viewBox="0 0 780 380" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,9 +46,9 @@ const Slack = () => (
           <path d="M35.567 41.327C32.3528 41.327 29.755 38.7295 29.755 35.5157C29.755 32.3018 32.3528 29.7043 35.567 29.7043H50.141C53.3552 29.7043 55.953 32.3018 55.953 35.5157C55.953 38.7295 53.3552 41.327 50.141 41.327H35.567Z" fill="black" />
         </svg>
 
-        <p>Felix Rieseberg at Slack covered the transition of their desktop app from JavaScript to TypeScript in their blog</p>
+        <p>Felix Rieseberg de Slack cubrió en su blog, la transición de su aplicación de escritorio de JavaScript a TypeScript </p>
 
-        <a className='migration-button' href="https://slack.engineering/typescript-at-slack-a81307fa288d" target="_blank">Read</a>
+        <a className='migration-button' href="https://slack.engineering/typescript-at-slack-a81307fa288d" target="_blank">Leer</a>
       </div>
     </div>
   </ReverseRow >
@@ -59,9 +59,9 @@ const AirBnB = () => (
     <div className="airbnb small_full_width">
       <div className='illustration airbnb'>
         <div className="fg">
-          <p><strong>38% [...] bugs preventable with TypeScript</strong> according to postmortem analysis</p>
-          <p>With TypeScript, engineers can move <strong>faster more safely</strong>.</p>
-          <p>End-to-end type safety because the types used by the back-end and the front-end share a source of truth.</p>
+          <p>El <strong>38% de [...] los errores con TypeScript son prevenibles</strong> según análisis post mortem</p>
+          <p>Con TypeScript, los ingenieros se pueden mover <strong>más rápido y con mayor seguridad</strong>.</p>
+          <p>La seguridad de tipos es de extremo a extremo debido a que, los tipos utilizados por el back-end y el front-end comparten una sola fuente.</p>
         </div>
         <div className="bg">
           <svg width="780" height="380" viewBox="0 0 780 380" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,9 +92,9 @@ const AirBnB = () => (
           </defs>
         </svg>
 
-        <p>Brie Bunge at Airbnb gave a talk at JSConf Hawaiʻi on how Airbnb adopted TypeScript at Scale</p>
+        <p>Brie Bunge de Airbnb dio una charla en JSConf Hawái, sobre cómo Airbnb adoptó TypeScript en Scale</p>
 
-        <a className='migration-button' href="https://www.youtube.com/watch?v=P-J9Eg7hJwE" target="_blank">Watch</a>
+        <a className='migration-button' href="https://www.youtube.com/watch?v=P-J9Eg7hJwE" target="_blank">Ver</a>
       </div>
     </div>
 
@@ -107,8 +107,8 @@ const Google = () => (
     <div className="goog small_full_width">
       <div className='illustration '>
         <div className="fg">
-          <p>Using TypeScript is <strong>simple and pleasant</strong> for all Google engineers.</p>
-          <p>Around eight or nine languages are officially supported and TypeScript is one of them.</p>
+          <p>Usar TypeScript es <strong>sencillo y agradable</strong> para todos los ingenieros de Google.</p>
+          <p>Alrededor de ocho o nueve lenguajes son compatibles oficialmente y TypeScript es uno de ellos.</p>
         </div>
         <div className="bg">
           <svg width="780" height="380" viewBox="0 0 780 380" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -133,9 +133,9 @@ const Google = () => (
           <path d="M22.705 26.5565V20.5218H43.1067C43.3061 21.5736 43.4091 22.8177 43.4091 24.1645C43.4091 28.6921 42.1674 34.2906 38.1655 38.2796C34.273 42.3198 29.2997 44.4746 22.7115 44.4746C10.5001 44.4746 0.231689 34.56 0.231689 22.388C0.231689 10.2161 10.5001 0.301514 22.7115 0.301514C29.467 0.301514 34.2795 2.94369 37.8953 6.38749L33.6232 10.6458C31.0304 8.22162 27.5175 6.33619 22.705 6.33619C13.7878 6.33619 6.81349 13.4996 6.81349 22.388C6.81349 31.2765 13.7878 38.4399 22.705 38.4399C28.489 38.4399 31.7832 36.1248 33.8935 34.0213C35.6049 32.3154 36.7308 29.8785 37.1747 26.5501L22.705 26.5565V26.5565Z" fill="black" />
         </svg>
 
-        <p>Rodoslav Kirov and Bowen Ni covered how TypeScript became one of the five languages available at Google at TSConf 2018.</p>
+        <p>Rodoslav Kirov y Bowen Ni, explicaron cómo TypeScript se convirtió en uno de los cinco lenguajes disponibles en Google en TSConf 2018.</p>
 
-        <a className='migration-button' href="https://www.youtube.com/watch?v=sjov1k5jexA" target="_blank">Watch</a>
+        <a className='migration-button' href="https://www.youtube.com/watch?v=sjov1k5jexA" target="_blank">Ver</a>
       </div>
     </div>
 
@@ -286,13 +286,13 @@ export const OSS = () => (
 export const MigrationStories = () => {
   const i = createInternational<typeof indexCopy>(useIntl())
 
-  // Controls which story we should show
+  // Controla qué historia debemos mostrar
   const [index, setIndex] = useState(0);
 
   const hasWindow = (typeof window !== `undefined`)
   const shouldShowOSS = hasWindow && window.innerWidth > 800
 
-  // slack airbnb google oss
+  // holgura para airbnb de google oss
   const bgColors = shouldShowOSS ? ["#faf9f8", "#faf9f8", "#faf9f8", "#086E12"] : ["#faf9f8", "#faf9f8", "#faf9f8"]
 
   const loadIndex = (index: number) => {

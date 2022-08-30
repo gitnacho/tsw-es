@@ -1,5 +1,5 @@
 ---
-display: "Include"
+display: "Incluye"
 oneline: "Especifica una lista de patrones globales que coincidan con los archivos que se incluirán en la compilación."
 ---
 

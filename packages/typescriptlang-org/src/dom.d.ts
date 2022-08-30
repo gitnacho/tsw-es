@@ -4311,11 +4311,11 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     /** @deprecated */
     readonly fullscreen: boolean;
     /**
-     * Returns true if document has the ability to display elements fullscreen and fullscreen is supported, or false otherwise.
+     * Devuelve true si el documento tiene la capacidad de mostrar elementos a pantalla completa y la pantalla completa es compatible, o false en caso contrario.
      */
     readonly fullscreenEnabled: boolean;
     /**
-     * Returns the head element.
+     * Devuelve el elemento head.
      */
     readonly head: HTMLHeadElement;
     readonly hidden: boolean;
@@ -4328,7 +4328,7 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     readonly implementation: DOMImplementation;
     /**
-     * Returns the character encoding used to create the webpage that is loaded into the document object.
+     * Devuelve la codificación de caracteres utilizada para crear la página web que se carga en el objeto document.
      */
     readonly inputEncoding: string;
     /**
@@ -4410,11 +4410,11 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     createAttribute(localName: string): Attr;
     createAttributeNS(namespace: string | null, qualifiedName: string): Attr;
     /**
-     * Returns a CDATASection node whose data is data.
+     * Devuelve un nodo CDATASection cuyos datos son datos.
      */
     createCDATASection(data: string): CDATASection;
     /**
-     * Creates a comment object with the specified data.
+     * Crea un objeto de comentario con los datos especificados.
      * @param data Sets the comment object's data.
      */
     createComment(data: string): Comment;
@@ -4431,7 +4431,7 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     createElement<K extends keyof HTMLElementDeprecatedTagNameMap>(tagName: K, options?: ElementCreationOptions): HTMLElementDeprecatedTagNameMap[K];
     createElement(tagName: string, options?: ElementCreationOptions): HTMLElement;
     /**
-     * Returns an element with namespace namespace. Its namespace prefix will be everything before ":" (U+003E) in qualifiedName or null. Its local name will be everything after ":" (U+003E) in qualifiedName or qualifiedName.
+     * Devuelve un elemento con namespace = namespace. Su prefijo de espacio de nombres será todo antes de ":" (U+003E) en nombre calificado o null. Su nombre local será todo después de ":" (U+003E) en nombre calificado o nombre calificado.
      *
      * If localName does not match the Name production an "InvalidCharacterError" DOMException will be thrown.
      *
@@ -4516,16 +4516,16 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     createNodeIterator(root: Node, whatToShow?: number, filter?: NodeFilter | null): NodeIterator;
     /**
-     * Returns a ProcessingInstruction node whose target is target and data is data. If target does not match the Name production an "InvalidCharacterError" DOMException will be thrown. If data contains "?>" an "InvalidCharacterError" DOMException will be thrown.
+     * Devuelve un nodo ProcessingInstruction cuyo destino es destino y los datos son data. Si el destino no coincide con la producción de Name, se lanzará una DOMException "InvalidCharacterError". Si data contienen "?>", se lanzará una DOMException "InvalidCharacterError".
      */
     createProcessingInstruction(target: string, data: string): ProcessingInstruction;
     /**
-     *  Returns an empty range object that has both of its boundary points positioned at the beginning of the document.
+     *  Devuelve un objeto de rango vacío que tiene sus dos puntos de límite colocados al principio del documento.
      */
     createRange(): Range;
     /**
-     * Creates a text string from the specified value.
-     * @param data String that specifies the nodeValue property of the text node.
+     * Crea una cadena de texto a partir del valor especificado.
+     * @param data String que especifica la propiedad nodeValue del nodo de texto.
      */
     createTextNode(data: string): Text;
     /**
@@ -4536,9 +4536,9 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     createTreeWalker(root: Node, whatToShow?: number, filter?: NodeFilter | null): TreeWalker;
     /**
-     * Returns the element for the specified x coordinate and the specified y coordinate.
-     * @param x The x-offset
-     * @param y The y-offset
+     * Devuelve el elemento para la coordenada x especificada y la coordenada y especificada.
+     * @param x El desplazamiento x
+     * @param y El desplazamiento y
      */
     elementFromPoint(x: number, y: number): Element | null;
     elementsFromPoint(x: number, y: number): Element[];
@@ -4557,12 +4557,12 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     exitPictureInPicture(): Promise<void>;
     exitPointerLock(): void;
     /**
-     * Returns a reference to the first object with the specified value of the ID attribute.
-     * @param elementId String that specifies the ID value.
+     * Devuelve una referencia al primer objeto con el valor especificado del atributo ID.
+     * @param elementId String que especifica el valor de ID.
      */
     getElementById(elementId: string): HTMLElement | null;
     /**
-     * Returns a HTMLCollection of the elements in the object on which the method was invoked (a document or an element) that have all the classes given by classNames. The classNames argument is interpreted as a space-separated list of classes.
+     * Devuelve una HTMLCollection de los elementos del objeto en el que se invocó el método (un documento o un elemento) que tienen todas las clases proporcionadas por classNames. El argumento classNames se interpreta como una lista de clases separadas por espacios.
      */
     getElementsByClassName(classNames: string): HTMLCollectionOf<Element>;
     /**
@@ -4590,18 +4590,18 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     getElementsByTagNameNS(namespaceURI: "http://www.w3.org/2000/svg", localName: string): HTMLCollectionOf<SVGElement>;
     getElementsByTagNameNS(namespace: string | null, localName: string): HTMLCollectionOf<Element>;
     /**
-     * Returns an object representing the current selection of the document that is loaded into the object displaying a webpage.
+     * Devuelve un objeto que representa la selección actual del documento que se carga en el objeto que muestra una página web.
      */
     getSelection(): Selection | null;
     /**
-     * Gets a value indicating whether the object currently has focus.
+     * Obtiene un valor que indica si el objeto tiene el foco actualmente.
      */
     hasFocus(): boolean;
     hasStorageAccess(): Promise<boolean>;
     /**
-     * Returns a copy of node. If deep is true, the copy also includes the node's descendants.
+     * Devuelve una copia de node. Si deep es true, la copia también incluye los descendientes del nodo.
      *
-     * If node is a document or a shadow root, throws a "NotSupportedError" DOMException.
+     * Si el nodo es un documento o una raíz oculta, genera una excepción DOMException "NotSupportedError".
      */
     importNode<T extends Node>(node: T, deep?: boolean): T;
     /**
@@ -4614,31 +4614,31 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     open(unused1?: string, unused2?: string): Document;
     open(url: string | URL, name: string, features: string): WindowProxy | null;
     /**
-     * Returns a Boolean value that indicates whether a specified command can be successfully executed using execCommand, given the current state of the document.
-     * @param commandId Specifies a command identifier.
+     * Devuelve un valor booleano que indica si un comando específico se puede ejecutar correctamente mediante execCommand, dado el estado actual del documento.
+     * @param commandId Especifica un identificador de comando.
      */
     /** @deprecated */
     queryCommandEnabled(commandId: string): boolean;
     /**
-     * Returns a Boolean value that indicates whether the specified command is in the indeterminate state.
-     * @param commandId String that specifies a command identifier.
+     * Devuelve un valor booleano que indica si el comando especificado está en estado indeterminado.
+     * @param commandId Cadena que especifica un identificador de comando.
      */
     queryCommandIndeterm(commandId: string): boolean;
     /**
-     * Returns a Boolean value that indicates the current state of the command.
-     * @param commandId String that specifies a command identifier.
+     * Devuelve un valor booleano que indica el estado actual del comando.
+     * @param commandId Cadena que especifica un identificador de comando.
      */
     /** @deprecated */
     queryCommandState(commandId: string): boolean;
     /**
-     * Returns a Boolean value that indicates whether the current command is supported on the current range.
-     * @param commandId Specifies a command identifier.
+     * Devuelve un valor booleano que indica si el comando actual es compatible con el rango actual.
+     * @param commandId Especifica un identificador de comando.
      */
     /** @deprecated */
     queryCommandSupported(commandId: string): boolean;
     /**
-     * Returns the current value of the document, range, or current selection for the given command.
-     * @param commandId String that specifies a command identifier.
+     * Devuelve el valor actual del documento, rango o selección actual para el comando dado.
+     * @param commandId Cadena que especifica un identificador de comando.
      */
     queryCommandValue(commandId: string): string;
     /** @deprecated */
@@ -4692,7 +4692,7 @@ declare var DocumentFragment: {
 
 interface DocumentOrShadowRoot {
     /**
-     * Returns the deepest element in the document through which or to which key events are being routed. This is, roughly speaking, the focused element in the document.
+     * Devuelve el elemento más profundo del documento a través del cual o al que se enrutan los eventos clave. Este es, en términos generales, el elemento enfocado en el documento.
      *
      * For the purposes of this API, when a child browsing context is focused, its container is focused in the parent browsing context. For example, if the user moves the focus to a text control in an iframe, the iframe is the element returned by the activeElement API in the iframe's node document.
      *
@@ -4700,7 +4700,7 @@ interface DocumentOrShadowRoot {
      */
     readonly activeElement: Element | null;
     /**
-     * Returns document's fullscreen element.
+     * Devuelve el elemento de pantalla completa del documento.
      */
     readonly fullscreenElement: Element | null;
     readonly pictureInPictureElement: Element | null;
@@ -4736,7 +4736,7 @@ declare var DocumentType: {
 /** A DOM event that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way. */
 interface DragEvent extends MouseEvent {
     /**
-     * Returns the DataTransfer object for the event.
+     * Devuelve el objeto DataTransfer para el evento.
      */
     readonly dataTransfer: DataTransfer | null;
 }
@@ -4819,7 +4819,7 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      */
     readonly classList: DOMTokenList;
     /**
-     * Returns the value of element's class content attribute. Can be set to change it.
+     * Devuelve el valor del atributo content de la clase del elemento. Se puede configurar para cambiarlo.
      */
     className: string;
     readonly clientHeight: number;
@@ -4827,15 +4827,15 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
     readonly clientTop: number;
     readonly clientWidth: number;
     /**
-     * Returns the value of element's id content attribute. Can be set to change it.
+     * Devuelve el valor del atributo content del elemento id. Se puede configurar para cambiarlo.
      */
     id: string;
     /**
-     * Returns the local name.
+     * Devuelve el nombre local.
      */
     readonly localName: string;
     /**
-     * Returns the namespace.
+     * Devuelve el espacio de nombres.
      */
     readonly namespaceURI: string | null;
     onfullscreenchange: ((this: Element, ev: Event) => any) | null;
@@ -4856,7 +4856,7 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      */
     readonly shadowRoot: ShadowRoot | null;
     /**
-     * Returns the value of element's slot content attribute. Can be set to change it.
+     * Returns the value of element's slot content attribute. Se puede configurar para cambiarlo.
      */
     slot: string;
     /**
@@ -4864,7 +4864,7 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      */
     readonly tagName: string;
     /**
-     * Creates a shadow root for element and returns it.
+     * Crea una raíz oculta para el elemento y la devuelve.
      */
     attachShadow(init: ShadowRootInit): ShadowRoot;
     /**
@@ -4890,7 +4890,7 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
     getBoundingClientRect(): DOMRect;
     getClientRects(): DOMRectList;
     /**
-     * Returns a HTMLCollection of the elements in the object on which the method was invoked (a document or an element) that have all the classes given by classNames. The classNames argument is interpreted as a space-separated list of classes.
+     * Devuelve una HTMLCollection de los elementos del objeto en el que se invocó el método (un documento o un elemento) que tienen todas las clases proporcionadas por classNames. El argumento classNames se interpreta como una lista de clases separadas por espacios.
      */
     getElementsByClassName(classNames: string): HTMLCollectionOf<Element>;
     getElementsByTagName<K extends keyof HTMLElementTagNameMap>(qualifiedName: K): HTMLCollectionOf<HTMLElementTagNameMap[K]>;
@@ -10418,7 +10418,7 @@ interface Node extends EventTarget {
     textContent: string | null;
     appendChild<T extends Node>(node: T): T;
     /**
-     * Returns a copy of node. If deep is true, the copy also includes the node's descendants.
+     * Devuelve una copia de node. Si deep es true, la copia también incluye los descendientes del nodo.
      */
     cloneNode(deep?: boolean): Node;
     /**

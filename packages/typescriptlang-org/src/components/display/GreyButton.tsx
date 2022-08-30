@@ -12,7 +12,7 @@ export type Props = {
   customClass?: string
 }
 
-/** A pretty grey button */
+/** Un bonito botón gris */
 export const GreyButton = (props: Props) => {
   const href = props.href.startsWith("http")
     ? props.href

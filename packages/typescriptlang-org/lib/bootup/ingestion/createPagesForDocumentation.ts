@@ -68,7 +68,7 @@ export const createDocumentationPages = async (
     const permalink = post.childMarkdownRemark.frontmatter.permalink
     if (!permalink)
       // prettier-ignore
-      throw new Error(`Did not find a permalink for page: ${JSON.stringify(post)}`)
+      throw new Error(`No se encontró un enlace permanente para la página: ${JSON.stringify(post)}`)
 
     const lang = langs.find(l => permalink.startsWith("/" + l + "/")) || "en"
     if (!isMultiLingual && lang !== "en") return

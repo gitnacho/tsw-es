@@ -1,5 +1,5 @@
 ---
-display: "exactOptionalPropertyTypes"
+display: "Tipos de propiedades opcionales exactas"
 oneline: "Interpreta los tipos de propiedad opcionales tal como están escritos, en lugar de agregar 'undefined'."
 ---
 
@@ -16,7 +16,7 @@ interface UserDefaults {
 
 Sin esta bandera habilitada, hay tres valores que puedes establecer en `colorThemeOverride` para que sean: `"dark"`, `"light"` y `undefined`.
 
-Establecer el valor en `undefined` permitirá que la mayoría de las comprobaciones de existencia en el entorno de ejecución *JavaScript* fallen, lo cual efectivamente es falso. Sin embargo, esto no es del todo exacto `colorThemeOverride: undefined` no es lo mismo que `colorThemeOverride` no está definido. Por ejemplo, `"colorThemeOverride" in the settings` tendría un comportamiento diferente con `undefined` como clave en comparación con no estar definido.
+Establecer el valor en `undefined` permitirá que la mayoría de las comprobaciones de existencia en el entorno de ejecución *JavaScript* fallen, lo cual efectivamente es falso. Sin embargo, esto no es del todo exacto `colorThemeOverride: undefined` no es lo mismo que `colorThemeOverride` no está definido. Por ejemplo, `"colorThemeOverride" in settings` tendría un comportamiento diferente con `undefined` como clave en comparación con no estar definido.
 
 `exactOptionalPropertyTypes` hace que *TypeScript* realmente aplique la definición proporcionada como una propiedad opcional:
 

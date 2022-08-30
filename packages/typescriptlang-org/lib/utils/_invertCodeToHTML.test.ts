@@ -63,7 +63,7 @@ it("it to convert to markdown", () => {
 
     <code><pre>
     interface AppConfiguration {
-      // Predefinido: \\"(no name)\\"; empty string IS valid
+      // Predefinido: \\"(no name)\\"; la cadena vacía ES válida
       name:  string;
 
       // Predefinido: -1; 0 es válido
@@ -85,7 +85,7 @@ it("it to convert to markdown", () => {
       config.active = typeof config.active === \\"boolean\\" ? config.active : true;
 
       // Usar el operador || que podría dar datos incorrectos
-      config.name = config.name || \\"(no name)\\"; // does not allow for \\"\\" input
+      config.name = config.name || \\"(no name)\\"; // no permite la entrada \\"\\"
       config.items = config.items || -1; // no permite la entrada 0
       config.active = config.active || true; // realmente mal, siempre true
     }

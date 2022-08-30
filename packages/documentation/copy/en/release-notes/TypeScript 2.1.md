@@ -475,7 +475,7 @@ Solo unas pocas opciones de configuración cambian entre estos dos destinos, y m
 - El valor de `extends` debe ser una cadena que contenga una ruta a otro archivo de configuración del que heredar.
 - La configuración del archivo base se carga primero y luego se reemplaza por las del archivo de configuración heredado.
 - No se permite la circularidad entre archivos de configuración.
-- [`files`](/tsconfig#files), [`include`](/tsconfig#include) y `exclude` del archivo de configuración heredado *sobrescribe* los del archivo de configuración base.
+- [`files`](/tsconfig#files), [`include`](/tsconfig#include) y `exclude` del archivo de configuración heredado *sobrescriben* los del archivo de configuración base.
 - Todas las rutas relativas que se encuentren en el archivo de configuración se resolverán en relación con el archivo de configuración en el que se originaron.
 
 ##### Ejemplo

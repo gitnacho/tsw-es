@@ -1,11 +1,11 @@
 ---
-display: "Sin casos fallidos en Switch"
-oneline: "Habilita el informe de errores para casos fallidos en declaraciones switch."
+display: "Sin cases fallidos en Switch"
+oneline: "Habilita el informe de errores para cases fallidos en declaraciones switch."
 ---
 
-Reportar errores para casos fallidos en declaraciones switch.
-Garantiza que cualquier caso que no esté vacío dentro de una declaración switch incluya `break` o `return`.
-Esto significa que no enviará accidentalmente un error de caso de fallo.
+Reportar errores para `case`s fallidos en declaraciones `switch`.
+Garantiza que cualquier `case` que no esté vacío dentro de una declaración `switch` incluya `break` o `return`.
+Esto significa que no enviará accidentalmente un error de `case` fallido.
 
 ```ts twoslash
 // @noFallthroughCasesInSwitch

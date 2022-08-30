@@ -1,5 +1,5 @@
 ---
-display: "Include"
+display: "Incluye"
 oneline: "Especifica una lista de módulos para los que adquirir tipos."
 ---
 

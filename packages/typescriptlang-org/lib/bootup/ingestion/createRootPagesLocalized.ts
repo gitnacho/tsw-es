@@ -8,9 +8,9 @@ import { isMultiLingual } from "./languageFilter"
 import { addPathToSite } from "../pathsOnSiteTracker"
 
 /**
- * Basically you can have a set of files in src/templates/pages
- * and we'll make a language prefixed version of it when there are languages
- * in the copy dir.
+ * Básicamente, puedes tener un conjunto de archivos en src/templates/pages
+ * y haremos una versión con prefijo de idioma cuando haya idiomas
+ * en el directorio copy.
  */
 
 export const createRootPagesLocalized = async (
@@ -36,8 +36,8 @@ export const createRootPagesLocalized = async (
     )
 
   const files = recursiveReadDirSync(rootPagesDir)
-    .filter(f => !f.startsWith(".")) // only useful files
-    .filter(f => !f.includes("dev") && !f.includes("css")) // skip these
+    .filter(f => !f.startsWith(".")) // solo archivos útiles
+    .filter(f => !f.includes("dev") && !f.includes("css")) // salta estos
 
   files.forEach(f => {
     const fullpath = path
@@ -47,18 +47,18 @@ export const createRootPagesLocalized = async (
       .relative(rootPagesDir, fullpath)
       .replace(/.tsx$/g, "")
 
-    // Remove the index files
+    // Elimina los archivos index
     if (originalSitePath.endsWith("index")) {
       // prettier-ignore
       originalSitePath = originalSitePath.substring(0, originalSitePath.length - 5)
     }
-    // If they have .en then just drop that completely
+    // Si tienen .en, simplemente los suelta por completo.
     if (originalSitePath.endsWith(".en")) {
       // prettier-ignore
       originalSitePath = originalSitePath.substring(0, originalSitePath.length - 3)
     }
 
-    // Always use /s for the path, because the join above in windows would be \
+    // Siempre utiliza /s para la ruta, porque la combinación anterior en Windows sería \
     originalSitePath = originalSitePath.split("\\").join("/")
 
     langs.forEach(lang => {

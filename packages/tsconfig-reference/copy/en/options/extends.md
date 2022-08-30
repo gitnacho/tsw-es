@@ -1,5 +1,5 @@
 ---
-display: "Extends"
+display: "Extiende"
 oneline: "Especifica una o más referencias de node module o ruta a los archivos de configuración base de los que se heredan las configuraciones."
 ---
 

@@ -6,7 +6,7 @@ oneline: "Habilita el reporte de errores cuando a `this` se le asigne el tipo `a
 Genera un error en las expresiones 'this' con un tipo 'any' implícito.
 
 Por ejemplo, la siguiente clase devuelve una función que intenta acceder a `this.width` y a `this.height`, pero el contexto
-porque `this` dentro de la función dentro de `getAreaFunction` no es la instancia del `Rectangle`.
+para `this` dentro de la función en `getAreaFunction` no es la instancia de `Rectangle`.
 
 ```ts twoslash
 // @errors: 2683

@@ -20,13 +20,13 @@ export function ExampleApp() {
 
 // Algunos de los principales cambios:
 //
-// - Use an `import` to provide functions instead of a React identifier
-// - Different functions for a single element (jsx) vs many children (jsxs)
-// - Key is separate from the props
+// - Usa una `import` para proporcionar funciones en lugar de un identificador React
+// - Diferentes funciones para un solo elemento (jsx) vs muchos hijos (jsxs)
+// - La llave está separada de los accesorios.
 //
-// You can read the RFC which this change implements here
+// Puedes leer el RFC que implementa este cambio aquí
 // https://github.com/reactjs/rfcs/blob/createlement-rfc/text/0000-create-element-changes.md
 
-// These changes are mostly under-the-hood changes
-// which shouldn't affect you you write JSX code as
-// an end user.
+// Estos cambios en su mayoría son cambios bajo el capó
+// lo cual no debería afectarte al escribir el código JSX como
+// un usuario final.

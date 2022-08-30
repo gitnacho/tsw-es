@@ -1,5 +1,5 @@
 ---
-display: "moduleSuffixes"
+display: "Sufijos de módulo"
 oneline: "Lista de sufijos de nombre de archivo para buscar al resolver un módulo."
 ---
 

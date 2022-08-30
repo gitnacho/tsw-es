@@ -47,7 +47,7 @@ export const Contributors = (props: ContributorsProps) => {
     const end = t.domInteractive;
     const loadTime = (end - start) / 1000;
 
-    // No idea how this is happening, likely from React re-rendering
+    // No tengo idea de cómo está sucediendo esto, probablemente debido a la re-renderización de React
     if (loadTime < 0) return;
 
     if (pageLoadIndicator) {
@@ -61,8 +61,8 @@ export const Contributors = (props: ContributorsProps) => {
       <Row className="justify-between small-columns">
         <Section sKey="pr">
           <p>
-            The TypeScript docs are an open source project. Help us improve
-            these pages <a href={repoPageURL}>by sending a Pull Request</a> ❤
+            La documentación de <em>TypeScript</em> es un proyecto de código abierto. Ayúdanos a mejorar
+            estas páginas <a href={repoPageURL}> enviando un Solicitud de extracción</a> ❤
           </p>
         </Section>
         <div
@@ -71,7 +71,7 @@ export const Contributors = (props: ContributorsProps) => {
           style={{ marginTop: "1.5rem" }}
         />
         <Section sKey="contribs">
-          Contributors to this page:<br />
+          Contribuidores de esta página:<br />
           <Avatars data={page} />
         </Section>
         <div
@@ -81,7 +81,7 @@ export const Contributors = (props: ContributorsProps) => {
         />
         <Section sKey="updated">
           <p>
-            {`Last updated: ${lastEdited}`}
+            {`Actualización más reciente: ${lastEdited}`}
             <br />
             <br />
             <span id="page-loaded-time">&nbsp;</span>

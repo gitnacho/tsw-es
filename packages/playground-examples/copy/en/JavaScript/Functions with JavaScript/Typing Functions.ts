@@ -132,5 +132,5 @@ const boolValue2 = boolOrNumberOrStringFunction("string");
 // Estos proporcionan una forma de tener tipos como marcadores de posición
 // de variables en definiciones de tipo.
 
-// example:generic-functions
+// ejemplo: funciones-genéricas
 // example:function-chaining

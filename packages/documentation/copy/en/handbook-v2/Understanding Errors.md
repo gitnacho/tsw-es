@@ -19,7 +19,7 @@ Existe cierta terminología que verás con frecuencia en los mensajes de error q
 *TypeScript* considera un tipo *asignable a* otro tipo si uno es un sustituto aceptable del otro.
 En otras palabras, un `Gato` es *asignable a* un `Animal` porque un `Gato` es un sustituto aceptable de un `Animal`.
 
-Como su nombre lo indica, esta relación se usa para comprobar la validez de una asignación `t = s;` examinando los tipos de `t` y `s`.
+Como su nombre indica, esta relación se usa para comprobar la validez de una asignación `t = s;` examinando los tipos de `t` y `s`.
 También se usa para revisar la mayoría de los otros lugares donde interactúan dos tipos.
 Por ejemplo, al llamar a una función, el tipo de cada argumento debe ser *asignable al* tipo declarado del parámetro.
 

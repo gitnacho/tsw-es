@@ -1,5 +1,5 @@
 ---
-display: "useUnknownInCatchVariables"
+display: "Usar variables unknown en catch"
 oneline: "Variables predeterminadas de la cláusula `catch` como `unknown` en lugar de `any`."
 ---
  

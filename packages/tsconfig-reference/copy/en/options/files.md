@@ -1,9 +1,9 @@
 ---
-display: "Files"
+display: "Archivos"
 oneline: "Incluye una lista de archivos. Esto no admite patrones globales, a diferencia de [`include`](#include)."
 ---
 
-Especifica una lista de archivos permitidos para incluir en el programa. Se produce un error si no se puede encontrar alguno de los archivos.
+Especifica una lista de archivos permitidos a incluir en el programa. Se produce un error si no se puede encontrar alguno de los archivos.
 
 ```json tsconfig
 {

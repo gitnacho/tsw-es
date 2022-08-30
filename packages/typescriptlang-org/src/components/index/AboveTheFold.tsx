@@ -68,7 +68,7 @@ export const AboveTheFold = () => {
 
   const CTAHeadlines = () => (
     <div className="cta-redirects">
-      <h2>Get Started With TypeScript</h2>
+      <h2>Comenzar con TypeScript</h2>
       <Row>
         <Col className="call-to-action">
           <img src={require("../../assets/index/play-light.png").default} width="100%"  />
@@ -114,7 +114,7 @@ export const AboveTheFold = () => {
 
   const CTAHeadlineMobile = () => (
     <div>
-      <h2>Get Started<br />With TypeScript</h2>
+      <h2>Comenzar<br />con TypeScript</h2>
       <Row>
         <Col className="call-to-action flex-column">
           <div className="handbook-preview">

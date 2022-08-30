@@ -1,5 +1,5 @@
 ---
-display: "Paths"
+display: "Rutas"
 oneline: "Especifica un conjunto de entradas que reasignen las importaciones a ubicaciones de búsqueda adicionales."
 ---
 

@@ -1,5 +1,5 @@
 ---
-display: "Exclude"
+display: "Excluye"
 oneline: "Especifica una lista de módulos a excluir de la adquisición de tipos."
 ---
 

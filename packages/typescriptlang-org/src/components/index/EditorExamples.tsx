@@ -11,7 +11,7 @@ import { Code as InterfaceExample } from "./twoslash/generated/interface";
 export const EditorExamples = () => {
   const i = createInternational<typeof indexCopy>(useIntl());
 
-  // Controls which story we should show
+  // Controla qué historia debemos mostrar
   const [index, setIndex] = useState(0);
 
   const loadIndex = (index: number) => {

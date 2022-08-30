@@ -1,6 +1,6 @@
 
 
 describe('it', () => {
-  it('renders without crashing', () => {
+  it('se renderiza sin fallar', () => {
   });
 });

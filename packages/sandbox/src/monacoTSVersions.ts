@@ -10,7 +10,7 @@ export type SupportedTSVersions = ReleaseVersions | 'Latest'
  */
 export const monacoTSVersions: SupportedTSVersions[] = [...supportedReleases, 'Latest']
 
-/** Returns the latest TypeScript version supported by the sandbox */
+/** Devuelve la última versión de TypeScript admitida por el sandbox */
 export const latestSupportedTypeScriptVersion: string = Object.keys(monacoTSVersions)
   .filter(key => key !== 'Nightly' && !key.includes('-'))
   .sort()

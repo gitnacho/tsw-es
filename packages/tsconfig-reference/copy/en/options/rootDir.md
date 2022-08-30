@@ -1,11 +1,11 @@
 ---
-display: "Root Dir"
+display: "Directorio raíz"
 oneline: "Especifica el directorio raíz dentro de tus archivos fuente."
 ---
 
-**Predeterminado**: La ruta común más larga de todos los archivos de entrada sin declaración. Si se establece [`composite`](#composite), el valor predeterminado es en cambio el directorio que contiene el archivo `tsconfig.json`.
+**Predefinido**: La ruta común más larga de todos los archivos de entrada sin declaración. Si se establece [`composite`](#composite), el valor predeterminado es en cambio el directorio que contiene el archivo `tsconfig.json`.
 
-Cuando *TypeScript* compila archivos, mantiene la misma estructura de directorios en el directorio de salida existente en el directorio de entrada.
+Cuando *TypeScript* compila archivos, mantiene la misma estructura de directorios en el directorio de salida, tal y como existe en el directorio de entrada.
 
 Por ejemplo, digamos que tienes algunos archivos de entrada:
 

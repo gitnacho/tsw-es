@@ -14,7 +14,7 @@ export const writeAllPathsToFixture = () => {
   writeFileSync(
     allPagesPath,
     `
-// Generated during bootstapping via pathsOnSiteTracker.ts
+// Generado durante el arranque a través de pathsOnSiteTracker.ts
   
 export const allFiles = [${paths
       .map(item => '"' + item.replace(/\\/g, "/") + '",')

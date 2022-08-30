@@ -43,7 +43,7 @@ const Index: React.FC<Props> = (props) => {
 
 
   useEffect(() => {
-    // NOOP on tiny devices where we need to re-orient the arrows.
+    // NOOP en dispositivos pequeños donde necesitamos reorientar las flechas.
     if (window.innerWidth < 900) return
 
     const adopt = document.getElementById("adopt-gradually-content")!
@@ -51,7 +51,7 @@ const Index: React.FC<Props> = (props) => {
     adopt.classList.add("fancy-scroll")   
 
     updateOnScroll(i)()
-    // Handles setting the scroll 
+    // Maneja el ajuste del desplazamiento 
     window.addEventListener("scroll", updateOnScroll(i), { passive: true, capture: true });
  
 
@@ -60,7 +60,7 @@ const Index: React.FC<Props> = (props) => {
     }
   });
 
-  /** Basically a <p> with bold set up */
+  /** Básicamente un <p> con configuración en negrita */
   const P = (props: { ikey: keyof typeof indexCopy }) =>  <p key={props.ikey}>{i(props.ikey, { strong: (...chunk) => <strong>{chunk}</strong> })}</p>
   const GetStarted = (props: { href: string, title: any, subtitle: any, classes: string }) => (
     <Link to={props.href} className={"get-started " + props.classes} >
@@ -78,7 +78,7 @@ const Index: React.FC<Props> = (props) => {
 
 
   return (
-    <Layout title="JavaScript With Syntax For Types." description="TypeScript extends JavaScript by adding types to the language. TypeScript speeds up your development experience by catching errors and providing fixes before you even run your code." lang={props.pageContext.lang} suppressCustomization suppressDocRecommendations>
+    <Layout title="JavaScript With Syntax For Types." description="TypeScript amplía JavaScript agregando tipos al lenguaje. TypeScript acelera su experiencia de desarrollo detectando errores y proporcionando correcciones incluso antes de que ejecute su código."  lang={props.pageContext.lang} suppressCustomization suppressDocRecommendations>
 
       <div id="index-2">
         <Section color="blue" className="headline">
@@ -206,7 +206,7 @@ const Index: React.FC<Props> = (props) => {
           <h2>{i("index_2_loved_by")} </h2>
           <Row>
             <Col key='TS improves JS'>
-                <img src={withPrefix("/images/index/stack-overflow.svg")} alt="Image of the stack overflow logo, and a graph showing TypeScript as the 2nd most popular language" />
+                <img src={withPrefix("/images/index/stack-overflow.svg")} alt="Imagen del logotipo de desbordamiento de pila y un gráfico que muestra TypeScript como el segundo lenguaje más popular" />
                 <div style={{ width: "60%", marginTop: "20px" }}>
                   <p>{i("index_2_loved_stack", { strong: (...chunk) => <strong>{chunk}</strong>, so: (...chunk) => <a href="https://insights.stackoverflow.com/survey/2020#most-loved-dreaded-and-wanted" target="_blank">{chunk}</a> })}</p>
                 </div>

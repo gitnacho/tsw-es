@@ -31,16 +31,16 @@ los mismos patrones de carga en el entorno de ejecución para importar a tu pág
   <div id="loader">Loading...</div>
   <div id="monaco-editor-embed" style="height: 800px;" />
   <script>
-    // Primero configura el cargador *VSCode* en una etiqueta script
+    // Primero configura el cargador VSCode en una etiqueta script
     const getLoaderScript = document.createElement("script")
     getLoaderScript.src = "https://www.typescriptlang.org/js/vs.loader.js"
     getLoaderScript.async = true
     getLoaderScript.onload = () => {
-      // Ahora que el cargador está listo, dile a `require` dónde puede obtener la versión de `monaco` y `sandbox`
-      // Esta versión utiliza la última versión del `sandbox`, que se utiliza en el sitio web de *TypeScript*.
+      // Ahora que el cargador está listo, dile a require dónde puede obtener la versión de monaco y sandbox
+      // Esta versión utiliza la última versión del sandbox, que se utiliza en el sitio web de TypeScript.
 
-      // Para la versión de `monaco`, puedes usar `unpkg` o la Infraestructura Web *CDN* de *TypeScript*.
-      // Puedes ver las versiones disponibles para *TypeScript* aquí:
+      // Para la versión de monaco, puedes usar unpkg o la Infraestructura Web CDN de TypeScript.
+      // Puedes ver las versiones disponibles para TypeScript aquí:
       // https://typescript.azureedge.net/indexes/releases.json
       //
       require.config({
@@ -81,7 +81,7 @@ export default async function () {
           return
         }
 
-        // Crea un sandbox e insértalo en el div #monaco-editor-embed
+        // Crea un sandbox y lo inserta en el div #monaco-editor-embed
         const sandboxConfig = {
           text: initialCode,
           compilerOptions: {},

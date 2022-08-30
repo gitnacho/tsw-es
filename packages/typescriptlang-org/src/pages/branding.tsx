@@ -34,7 +34,7 @@ const Index: React.FC<Props> = (props) => {
             <p style={{ flex: 1 }}>There is a capital “S” in TypeScript, just like in JavaScript.</p>
           </Row>
 
-          <h2>Alternatives</h2>
+          <h2>Alternativas</h2>
 
           <div className="main-content-block">
             <Row>

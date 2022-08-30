@@ -74,7 +74,7 @@ export const LanguageRecommendations = (props: Props) => {
     quickJump.title = lang.body
     quickJump.style.display = "inline-block";
 
-    // Adding the LI somehow makes the search bump up by 2px
+    // Agregar el LI, de alguna manera hace que la búsqueda aumente en 2px
     const search = document.getElementById("search-form")!
     search.style.position = "relative"
     search.style.top = "-2px"

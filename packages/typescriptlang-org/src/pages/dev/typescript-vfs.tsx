@@ -54,11 +54,11 @@ const program = ts.createProgram({
   host: host.compilerHost,
 })
 
-// This will update the fsMap with new files
-// for the .d.ts and .js files
+// Esto actualizará el fsMap con nuevos archivos.
+// para los archivos .d.ts y .js
 program.emit()
 
-// Now I can look at the AST for the .ts file too
+// Ahora puedo mirar el AST por el archivo .ts también
 const index = program.getSourceFile('index.ts')
               `}</code></pre>
             </div>

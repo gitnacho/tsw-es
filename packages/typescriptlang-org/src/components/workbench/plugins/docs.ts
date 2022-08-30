@@ -9,7 +9,7 @@ const examples = [
     issue: 37231,
     name: "Incorrect Type Inference Example",
     blurb:
-      "Using <code>// ^?</code> to highlight how inference gives different results at different locations",
+      "Usa <code>// ^?</code> para resaltar cómo la inferencia da diferentes resultados en diferentes ubicaciones",
     code: `// @noImplicitAny: false
 
 type Entity = {

@@ -238,7 +238,7 @@ function enumerable(value) {
 
 ## Propiedades calculadas
 
-Iniciar un objeto con propiedades dinámicas puede ser un poco complicado. Toma el siguiente ejemplo:
+Iniciar un objeto con propiedades dinámicas puede ser un poco complicado. Observa el siguiente ejemplo:
 
 ```ts
 type NeighborMap = { [name: string]: Node };
@@ -345,7 +345,7 @@ define(["require", "exports", "legacy/moduleA"], function (
 
 ## Soporte de proyectos a través de `tsconfig.json`
 
-Agrega un archivo `tsconfig.json` en un directorio indica que el directorio es la raíz de un proyecto de *TypeScript*.
+Agrega un archivo `tsconfig.json` en un directorio indica que el directorio es la raíz de un proyecto *TypeScript*.
 El archivo `tsconfig.json` especifica los archivos raíz y las opciones de compilación requeridas para compilar el proyecto. Un proyecto se compila de una de las siguientes maneras:
 
 - Invocar a `tsc` sin archivos de entrada, en cuyo caso el compilador busca el archivo `tsconfig.json` comenzando en el directorio actual y continuando hacia arriba en la cadena del directorio principal.

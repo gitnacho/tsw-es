@@ -191,7 +191,7 @@ Para ver estos métodos en acción, modifica el código existente para:
   <li> La tercera vez es un encanto.</li>
 </ul>;
 
-const first = document.querySelector("li"); // returns the first li element
+const first = document.querySelector("li"); // devuelve el primer elemento li
 const all = document.querySelectorAll("li"); // devuelve la lista de todos los elementos li
 ```
 

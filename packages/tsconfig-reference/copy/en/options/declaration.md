@@ -1,11 +1,11 @@
 ---
-display: "Declaration"
-oneline: "Genera archivos .d.ts a partir de archivos TypeScript y JavaScript en su proyecto."
+display: "Declaración"
+oneline: "Genera archivos .d.ts a partir de archivos TypeScript y JavaScript en tu proyecto."
 ---
 
 Genera archivos `.d.ts` para cada archivo *TypeScript* o *JavaScript* dentro de tu proyecto.
 Estos archivos `.d.ts` son archivos de definición de tipos que describen la *API* externa de tu módulo.
-Con archivos `.d.ts`, herramientas como *TypeScript* pueden proporcionar tipos *intellisense* y precisos para código sin escribir.
+Con archivos `.d.ts`, herramientas como *TypeScript* pueden proporcionar tipos *intellisense* y precisos para código sin tipos.
 
 Cuando `declaration` se establece en `true`, se ejecuta el compilador con este código *TypeScript*:
 

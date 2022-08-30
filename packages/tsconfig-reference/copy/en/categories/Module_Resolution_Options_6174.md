@@ -1,3 +1,3 @@
 ---
-display: "Resolución del módulo"
+display: "Resolución de módulo"
 ---

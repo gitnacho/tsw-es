@@ -1,5 +1,5 @@
 ---
-display: "Exclude"
+display: "Excluye"
 oneline: "Filtra los resultados de la opción [`include`](#include)."
 ---
 

@@ -91,7 +91,7 @@ like a number, or a list of dates.</p>
                                 <pre><code>{`
 // Before in JS
 var name = "Danger"
-// Also OK
+// También está bien
 var name = 1
 var name = false
 var name = ["2018-02-03", "2019-01-12"]
@@ -123,7 +123,7 @@ let's compare the scripts for "Hello, Danger" in JavaScript vs TypeScript:</p>
 var name = "Danger"
 console.log("Hello, " + name)
 
-// TypeScript
+// TypeScript:
 var name = "Danger"
 console.log("Hello, " + name)
 

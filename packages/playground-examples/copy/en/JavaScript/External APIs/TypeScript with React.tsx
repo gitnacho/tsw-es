@@ -1,54 +1,54 @@
 //// { "order": 2, "compiler": { "jsx": 2, "esModuleInterop": true } }
 
-// React is a popular library for creating user interfaces.
-// It provides a JavaScript abstraction for creating view
-// components using a JavaScript language extension called
+// React es una biblioteca popular para crear interfaces de usuario.
+// Proporciona una abstracción de JavaScript para crear componentes
+// vista usando una extensión del lenguaje JavaScript llamada
 // JSX.
 
-// TypeScript supports JSX, and provides a rich set of
-// type tools to richly model how components connect.
+// TypeScript es compatible con JSX y proporciona un amplio conjunto de
+// herramientas de tipo para modelar cómo se conectan los componentes.
 
-// To understand how TypeScript works with React components
-// you may want a primer on generics:
+// Para comprender cómo funciona TypeScript con los componentes de React
+// es posible que desees una introducción a los genéricos:
 //
-// - example:generic-functions
-// - example:generic-classes
+// - ejemplo: funciones-genéricas
+// - ejemplo: clases-genéricas
 
-// First we'll look at how generic interfaces are used to map
-// React components. This is a faux-React functional component:
+// Primero veremos cómo se usan las interfaces genéricas para mapear
+// componentes React. Este es un componente funcional de faux-React:
 
 type FauxactFunctionComponent<Props extends {}> = (
   props: Props,
   context?: any
 ) => FauxactFunctionComponent<any> | null | JSX.Element;
 
-// Roughly:
+// Aproximadamente:
 //
-// FauxactFunctionComponent is a generic function which relies on
-// another type, Props. Props has to be an object (to make sure
-// you don't pass a primitive) and the Props type will be
-// re-used as the first argument in the function.
+// FauxactFunctionComponent es una función genérica que se basa en
+// otro tipo, Props. Props tiene que ser un objeto (para asegurarte
+// que no pasas una primitiva) y el tipo Props será
+// reutilizado como el primer argumento en la función.
 
-// To use it, you need a props type:
+// Para usarlo, necesitas un tipo props:
 
 interface DateProps {
   iso8601Date: string;
   message: string;
 }
 
-// We can then create a DateComponent which uses the
-// DateProps interface, and renders the date.
+// Luego podemos crear un DateComponent que usa la
+// interfaz DateProps y representa la fecha.
 
 const DateComponent: FauxactFunctionComponent<DateProps> = props => (
   <time dateTime={props.iso8601Date}>{props.message}</time>
 );
 
-// This creates a function which is generic with a Props
-// variable which has to be an object. The component function
-// returns either another component function or null.
+// Esto crea una función que es genérica con una variable
+// props, la cual tiene que ser un objeto. La función componente
+// devuelve otra función componente o null.
 
-// The other component API is a class-based one. Here's a
-// simplified version of that API:
+// El otro componente API es uno basado en clases. Aquí está una
+// versión simplificada de esa API:
 
 interface FauxactClassComponent<Props extends {}, State = {}> {
   props: Props;
@@ -59,22 +59,22 @@ interface FauxactClassComponent<Props extends {}, State = {}> {
   render(): FauxactClassComponent<any> | null;
 }
 
-// Because this class can have both Props and State - it has
-// two generic arguments which are used throughout the class.
+// Porque esta clase puede tener Props y State - Tiene
+// dos argumentos genéricos que se utilizan en toda la clase.
 
-// The React library comes with its own type definitions
-// like these but are much more comprehensive. Let's bring
-// those into our playground and explore a few components.
+// La biblioteca React viene con sus propias definiciones de tipos.
+// como estos, pero son mucho más completos. Los vamos a traer
+// en nuestro playground y exploraremos algunos componentes.
 
 import * as React from "react";
 
-// Your props are your public API, so it's worth taking the
-// time to use JSDoc to explain how it works:
+// Tus accesorios son su API pública, por lo que vale la pena tomar la
+// hora de usar JSDoc para explicar cómo funciona:
 
 export interface Props {
-  /** The user's name */
+  /** El nombre del usuario */
   name: string;
-  /** Should the name be rendered in bold */
+  /** Se debe mostrar el nombre en negrita */
   priority?: boolean;
 }
 
@@ -86,23 +86,23 @@ const PrintName: React.FC<Props> = props => {
   );
 };
 
-// You can play with the new component's usage below:
+// Puedes jugar con el uso del nuevo componente a continuación:
 
 const ShowUser: React.FC<Props> = props => {
   return <PrintName name="Ned" />;
 };
 
-// TypeScript supports providing intellisense inside
-// the {} in an attribute
+// TypeScript admite proporcionar intellisense dentro
+// de {} en un atributo
 
 let username = "Cersei";
 const ShowStoredUser: React.FC<Props> = props => {
   return <PrintName name={username} priority />;
 };
 
-// TypeScript works with modern React code too, here you can
-// see that count and setCount have correctly been inferred
-// to use numbers based on the initial value passed into
+// TypeScript también funciona con el código React moderno, aquí puedes
+// ver que count y setCount se han inferido correctamente
+// para usar números basados ​​en el valor inicial pasado a
 // useState.
 
 import { useState, useEffect } from "react";
@@ -116,19 +116,19 @@ const CounterExample = () => {
 
   return (
     <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
+      <p>Hiciste clic {count} veces</p>
+      <button onClick={() => setCount(count + 1)}>Haz clic aquí</button>
     </div>
   );
 };
 
-// React and TypeScript is a really, really big topic
-// but the fundamentals are pretty small: TypeScript
-// supports JSX, and the rest is handled by the React
-// typings from Definitely Typed.
+// React y TypeScript es un tema muy, muy grande
+// pero los fundamentos son bastante pequeños: TypeScript:
+// es compatible con JSX, y el resto del tipado lo maneja
+// React desde Definitely Typed.
 
-// You can learn more about using React with TypeScript
-// from these sites:
+// Puedes conseguir más información sobre el uso de React con TypeScript
+// en estos sitios:
 //
 // https://github.com/typescript-cheatsheets/react-typescript-cheatsheet
 // https://egghead.io/courses/use-typescript-to-develop-react-applications

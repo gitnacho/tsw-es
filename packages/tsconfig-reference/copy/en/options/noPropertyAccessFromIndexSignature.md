@@ -1,5 +1,5 @@
 ---
-display: "noPropertyAccessFromIndexSignature"
+display: "Sin acceso a la propiedad desde la firma del índice"
 oneline: "Exige el uso de descriptores de acceso indexados para las claves declaradas con un tipo indexado."
 ---
 
@@ -12,7 +12,7 @@ Sin esta marca, *TypeScript* te permitirá usar la sintaxis de punto para accede
 declare function getSettings(): GameSettings;
 // ---cut---
 interface GameSettings {
-  // Known up-front properties
+  // Propiedades iniciales conocidas
   speed: "fast" | "medium" | "slow";
   quality: "high" | "low";
 

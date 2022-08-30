@@ -2,7 +2,7 @@
 
 // JavaScript agregó import/export al lenguaje en 2016
 // y TypeScript tiene soporte completo para este estilo de
-// vinculación entre archivos y módulos externos. *TypeScript*:
+// vinculación entre archivos y módulos externos. TypeScript:
 // expande esta sintaxis al permitir también que se pasen tipos
 // con código.
 
