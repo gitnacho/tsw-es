@@ -516,7 +516,7 @@ Hay una serie de asignaciones para configuraciones comunes de *TypeScript*, esta
 <td><code><a href='/tsconfig/#declarationMap'>--declarationMap</a></code></td>
 </tr>
 <tr class="option-description even"><td colspan="3">
-<p>Cree mapas fuente para archivos d.ts.</p>
+<p>Crea mapas fuente para archivos d.ts.</p>
 
 </tr></td>
 <tr class='odd' name='resolveJsonModule'>

@@ -1,8 +1,8 @@
 // TypeScript tiene algunos divertidos casos especiales para literales en
 // código fuente.
 
-// En parte, gran parte del soporte está cubierto por la ampliación de tipos
-// y reducción ( ejemplo: type-widening-narrowing ) y
+// Por un lado, gran parte del soporte está cubierto por la ampliación
+// y reducción de tipos ( ejemplo: type-widening-narrowing ) y
 // vale la pena cubrir eso primero.
 
 // Un literal es un subtipo más concreto de tipo colectivo.

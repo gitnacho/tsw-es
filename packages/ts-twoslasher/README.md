@@ -1,16 +1,16 @@
-# `TwoSlash` en *TypeScript*
+# `TwoSlash` en _TypeScript_
 
-Un formato de marcado para código *TypeScript*, ideal para crear ejemplos de código autónomos que permiten al compilador *TypeScript* hacer el trabajo adicional. Inspirado
+Un formato de marcado para código _TypeScript_, ideal para crear ejemplos de código autónomos que permiten al compilador _TypeScript_ hacer el trabajo adicional. Inspirado
 por el [sistema de prueba `fourslash`](https://github.com/orta/typescript-notes/blob/master/systems/testing/fourslash.md).
 
-Se utiliza como analizador previo antes de mostrar ejemplos de código dentro del sitio web de *TypeScript* y para crear una forma estándar para nosotros.
+Se utiliza como analizador previo antes de mostrar ejemplos de código dentro del sitio web de _TypeScript_ y para crear una forma estándar para nosotros.
 para crear ejemplos de errores en el rastreador de problemas del compilador.
 
-Puedes obtener una vista previa de `twoslash` en el sitio web de *TypeScript* aquí: https://www.typescriptlang.org/dev/twoslash/
+Puedes obtener una vista previa de `twoslash` en el sitio web de _TypeScript_ aquí: https://www.typescriptlang.org/dev/twoslash/
 
 ### ¿Qué es `Twoslash`?
 
-Puede que sea más fácil mostrarlo en lugar de decirlo, aquí hay un ejemplo de código del manual de *TypeScript*. Usaremos
+Puede que sea más fácil mostrarlo en lugar de decirlo, aquí hay un ejemplo de código del manual de _TypeScript_. Usaremos
 `twoslash` para permitir que el compilador maneje los mensajes de error y proporcione información de resaltado enriquecido.
 
 ##### Antes
@@ -66,7 +66,7 @@ console.log(x[1].substring(1));
 
 Cambiar este ejemplo de código para usar `twoslash` tiene algunas ventajas:
 
-- Los mensajes de error en ambos los proporciona el compilador de *TypeScript*, por lo que no es necesario escribir "OK" o "Error".
+- Los mensajes de error en ambos los proporciona el compilador de _TypeScript_, por lo que no es necesario escribir "OK" o "Error".
 - Marcamos explícitamente qué errores se esperan en el código de ejemplo, si no ocurre, `twoslash` lanzará
 - El segundo ejemplo es un ejemplo completo para el compilador. Esto lo hace disponible para realizar búsquedas de identificadores y errores reales del compilador, pero el usuario solo ve las dos últimas líneas.
 
@@ -76,22 +76,22 @@ Por otro lado, es un poco más detallado porque cada ejemplo de `twoslash` es un
 
 El lenguaje de marcado `Twoslash` ayuda con:
 
-- Aplicar errores precisos de un código de ejemplo *TypeScript* y dejar la mensajería al compilador
+- Aplicar errores precisos de un código de ejemplo _TypeScript_ y dejar la mensajería al compilador
 - Dividir un código de ejemplo para ocultar el código que distrae
 - Resaltar símbolos declarativamente en tu código de ejemplo
 - Reemplazo de código con los resultados de la transpilación a diferentes archivos o archivos auxiliares como archivos `.d.ts` o `.map`
 - Maneja importaciones de múltiples archivos en un solo código de ejemplo
-- Crear un enlace de *playground* para el código
+- Crear un enlace de _playground_ para el código
 
 ### Notas
 
 - Líneas que tienen `//prettier-ignore` se eliminan
 
-### *API*
+### _API_
 
 <!-- AUTO-GENERATED-CONTENT:START (FIXTURES) -->
 
-La *API* de marcado de `twoslash` vive dentro de tu código de ejemplo de código como comentarios, que pueden ejecutar comandos especiales. Existen los siguientes comandos:
+The twoslash markup API lives inside your code samples code as comments, which can do special commands. There are the following commands:
 
 ```ts
 /** Indicadores en línea disponibles que no son indicadores del compilador */
@@ -116,11 +116,11 @@ export interface ExampleOptions {
 }
 ```
 
-Además de este conjunto, puedes usar `@filename` que permite exportar entre archivos.
+In addition to this set, you can use `@filename` which allow for exporting between files.
 
-Finalmente, puedes configurar cualquier marca del compilador `tsconfig` usando esta sintaxis, que puedes ver en algunos de los ejemplos a continuación.
+Finally you can set any tsconfig compiler flag using this syntax, which you can see in some of the examples below.
 
-### Ejemplos
+### Examples
 
 #### `compiler_errors.ts`
 
@@ -135,7 +135,7 @@ function fn(s) {
 fn(42)
 ```
 
-Se convierte en:
+Turns to:
 
 > ```ts
 > function fn(s) {
@@ -185,10 +185,10 @@ function fn(s) {
 fn(42)
 ```
 
-Se convierte en:
+Turns to:
 
 > ```ts
-> // Esto no lanzará debido al noImplicitAny
+> // This will not throw because of the noImplicitAny
 > function fn(s) {
 >   console.log(s.subtr(3))
 > }
@@ -218,7 +218,7 @@ console.log
 //       ^|
 ```
 
-Se convierte en:
+Turns to:
 
 > ```ts
 > console.log
@@ -373,31 +373,27 @@ Se convierte en:
 #### `cuts_out_unneccessary_code.ts`
 
 ```ts
-interface IdLabel {
-  id: number /* some fields */
-}
-interface NameLabel {
-  name: string /* other fields */
-}
-type NameOrId<T extends number | string> = T extends number ? IdLabel : NameLabel
+interface IdLabel { id: number, /* algunos campos */ }
+interface NameLabel { name: string, /* otros campos */
+type NameOrId<T extends number | string> = T extends number ? IdLabel : NameLabel;
 // Este comentario no se debe incluir
 
 // ---cut---
 function createLabel<T extends number | string>(idOrName: T): NameOrId<T> {
-  throw "unimplemented"
+    throw "unimplemented"
 }
 
-let a = createLabel("typescript")
+let a = createLabel("typescript");
 //  ^?
 
-let b = createLabel(2.8)
+let b = createLabel(2.8);
 //  ^?
 
-let c = createLabel(Math.random() ? "hello" : 42)
+let c = createLabel(Math.random() ? "hello" : 42);
 //  ^?
 ```
 
-Se convierte en:
+Turns to:
 
 > ```ts
 > function createLabel<T extends number | string>(idOrName: T): NameOrId<T> {
@@ -470,12 +466,12 @@ export function getStringLength(value: string) {
 }
 ```
 
-Se convierte en:
+Turns to:
 
 > ```ts
 > /**
->  * Obtiene la longitud de una cadena
->  * @param valor una cadena
+>  * Gets the length of a string
+>  * @param value a string
 >  */
 > export declare function getStringLength(value: string): number
 > ```
@@ -504,7 +500,7 @@ let b: Record<string, number> = {}
 b = a
 ```
 
-Se convierte en:
+Turns to:
 
 > ```ts
 > const a: Record<string, string> = {}
@@ -529,7 +525,7 @@ Se convierte en:
 >       "start": 72,
 >       "line": 2,
 >       "character": 0,
->       "renderedMessage": "El tipo `Record<string, string>` no se puede asignar al tipo `Record<string, number>`.\n los índices de firmas de `string` son incompatibles.\n El tipo 'string' no se puede asignar al tipo 'number'.",
+>       "renderedMessage": "Type 'Record<string, string>' is not assignable to type 'Record<string, number>'.\n  'string' index signatures are incompatible.\n    Type 'string' is not assignable to type 'number'.",
 >       "id": "err-2322-72-1"
 >     }
 >   ],
@@ -549,7 +545,7 @@ greet("Maddison", new Date())
 //                ^^^^^^^^^^
 ```
 
-Se convierte en:
+Turns to:
 
 > ```ts
 > function greet(person: string, date: Date) {
@@ -594,7 +590,7 @@ import { helloWorld } from "./file-with-export"
 console.log(helloWorld)
 ```
 
-Se convierte en:
+Turns to:
 
 > ```ts
 > // @filename: file-with-export.ts
@@ -639,7 +635,7 @@ import { Hello } from "./Component"
 console.log(Hello)
 ```
 
-Se convierte en:
+Turns to:
 
 > ```ts
 > // @filename: Component.tsx
@@ -680,7 +676,7 @@ let foo = "hello there!"
 //  ^?
 ```
 
-Se convierte en:
+Turns to:
 
 > ```ts
 > let foo = "hello there!"
@@ -725,10 +721,10 @@ export function fn(arr: number[]) {
 }
 ```
 
-Se convierte en:
+Turns to:
 
 > ```js
-> // --importHelpers on: El asistente de propagación se importará desde 'tslib'
+> // --importHelpers on: Spread helper will be imported from 'tslib'
 > var __read =
 >   (this && this.__read) ||
 >   function (o, n) {
@@ -783,9 +779,9 @@ Se convierte en:
 > }
 > ```
 
-### *API*
+### API
 
-La *API* es una función `main` exportada:
+The API is one main exported function:
 
 ```ts
 /**
@@ -799,7 +795,7 @@ La *API* es una función `main` exportada:
 export function twoslasher(code: string, extension: string, options: TwoSlashOptions = {}): TwoSlashReturn
 ```
 
-Que toma las opciones:
+Which takes the options:
 
 ```ts
 export interface TwoSlashOptions {
@@ -825,7 +821,7 @@ export interface TwoSlashOptions {
 }
 ```
 
-Y devuelve:
+And returns:
 
 ```ts
 export interface TwoSlashReturn {
@@ -925,7 +921,7 @@ Ejecuta el proyecto en modo de desarrollo/observador. Tu proyecto se reconstruir
 
 ### `npm run build` o `yarn build`
 
-Agrupa el paquete en el directorio `dist`. El paquete está optimizado y empaquetado con `Rollup` en múltiples formatos (*CommonJS*, *UMD* y *ES Module*).
+Agrupa el paquete en el directorio `dist`. El paquete está optimizado y empaquetado con `Rollup` en múltiples formatos (_CommonJS_, _UMD_ y _ES Module_).
 
 ### `npm test` o `yarn test`
 

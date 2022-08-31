@@ -1,6 +1,6 @@
 ---
 display: "Declaración Map"
-oneline: "Cree mapas fuente para archivos d.ts."
+oneline: "Crea mapas fuente para archivos d.ts."
 ---
 
 Genera un mapa fuente para los archivos `.d.ts` que se asignan al archivo fuente `.ts` original.

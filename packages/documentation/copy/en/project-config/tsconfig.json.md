@@ -17,8 +17,8 @@ Un proyecto se compila de una de las siguientes maneras:
 
 ## Con `tsconfig.json` o `jsconfig.json`
 
-- Invocando a `tsc` sin archivos de entrada, en cuyo caso el compilador busca el archivo `tsconfig.json` comenzando en el directorio actual y continuando hacia arriba en la cadena del directorio principal.
-- Invocando a `tsc` sin archivos de entrada y una opción de línea de comando `--project` (o simplemente `-p`) que especifica la ruta de un directorio que contiene un archivo `tsconfig.json`, o una ruta a un archivo `.json` válido que contiene las opciones de configuración.
+- Invoca a `tsc` sin archivos de entrada, en cuyo caso el compilador busca el archivo `tsconfig.json` comenzando en el directorio actual y continuando hacia arriba en la cadena del directorio principal.
+- Invoca a `tsc` sin archivos de entrada y una opción de línea de comando `--project` (o simplemente `-p`) que especifica la ruta de un directorio que contiene un archivo `tsconfig.json`, o una ruta a un archivo `.json` válido que contiene las opciones de configuración.
 
 Cuando los archivos de entrada se especifican en la línea de comandos, los archivos `tsconfig.json` se ignoran.
 
@@ -75,7 +75,7 @@ Archivos `tsconfig.json` de ejemplo:
 ## `TSConfig` base
 
 Dependiendo del entorno de ejecución de *JavaScript* en el que pretendas ejecutar tu código, puede haber una configuración base que puedes usar en [github.com/tsconfig/bases](https://github.com/tsconfig/bases/).
-Estos son archivos `tsconfig.json` de los cuales se extiende tu proyecto y que simplifican tu `tsconfig.json` al manejar el soporte de el entorno de ejecución.
+Estos son archivos `tsconfig.json` de los cuales se extiende tu proyecto y que simplifican tu `tsconfig.json` al manejar el soporte del entorno de ejecución.
 
 Por ejemplo, si estás escribiendo un proyecto que usa *Node.js* versión 12 y superior, entonces podrías usar el módulo `npm` [`@tsconfig/node12`](https://www.npmjs.com/package/@tsconfig/node12):
 
@@ -109,7 +109,7 @@ Se puede omitir la propiedad `"compilerOptions"`, en cuyo caso se utilizan los v
 
 ## Referencia de `TSConfig`
 
-Para obtener más información sobre los cientos de opciones de configuración en la [Referencia de *TSConfig*](/tsconfig).
+Para obtener más información sobre los cientos de opciones de configuración, consulta la [Referencia de *TSConfig*](/tsconfig).
 
 ## Esquema
 

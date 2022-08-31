@@ -421,7 +421,7 @@ tsc app.ts util.ts --target esnext --outfile index.js
 </td>
 </tr>
 <tr class="option-description even"><td colspan="3">
-<p>Cree mapas fuente para archivos d.ts.</p>
+<p>Crea mapas fuente para archivos d.ts.</p>
 </td></tr>
 
 <tr class='odd' name='diagnostics'>
