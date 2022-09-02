@@ -4,7 +4,7 @@ import { createInternational } from "../lib/createInternational";
 import { docCopy } from "../copy/en/documentation";
 import { createIntlLink } from "./IntlLink";
 
-// Automatic metadata from npm and VS Marketplace
+// Metadatos automáticos de npm y VS Marketplace
 import releaseInfo from "../lib/release-info.json";
 import { withPrefix } from "gatsby";
 
@@ -24,44 +24,44 @@ export const QuickJump = (props: Props) => {
 
   const IntlLink = createIntlLink(props.lang);
 
-  // TODO: Internationalize these strings
+  // TODO: Internacionaliza estas cadenas
   return <div className="main-content-block">
     <h2 style={{ textAlign: "center" }}>{props.title}</h2>
     <div className="columns">
       <div className="item raised">
-        <h4>Get Started</h4>
+        <h4>Empezar</h4>
         <ul>
           <li>
             <IntlLink to="/docs/bootstrap">
-              Bootstrap a TS project
+              Bootstrap para proyectos TS
             </IntlLink>
           </li>
           <li>
             <IntlLink to="/docs/handbook/typescript-in-5-minutes.html">
-              JS to TS
+              JS a TS
             </IntlLink>
           </li>
           <li>
             <IntlLink to="/docs/handbook/typescript-from-scratch.html">
-              New to Programming
+              Nuevo en programación
             </IntlLink>
           </li>
           <li>
             <IntlLink to="/docs/handbook/typescript-in-5-minutes-oop.html">
-              OOP to JS
+              OOP a JS
             </IntlLink>
           </li>
           <li>
             <IntlLink to="/docs/handbook/typescript-in-5-minutes-func.html">
-              Functional to JS
+              Funcional a JS
             </IntlLink>
           </li>
-          <li><IntlLink to="/download">Installation</IntlLink></li>
+          <li><IntlLink to="/download">Instalación</IntlLink></li>
         </ul>
       </div>
 
       <div className="item raised">
-        <h4>Handbook</h4>
+        <h4>Manual</h4>
         <ul>
           <li>
             <IntlLink to="/docs/handbook/basic-types.html">
@@ -80,7 +80,7 @@ export const QuickJump = (props: Props) => {
           </li>
           <li>
             <IntlLink to="/docs/handbook/variable-declarations.html">
-              Variable Declarations
+              Declaración de variables
             </IntlLink>
           </li>
           <li>
@@ -90,42 +90,42 @@ export const QuickJump = (props: Props) => {
       </div>
 
       <div className="item raised">
-        <h4>Tools</h4>
+        <h4>Herramientas</h4>
         <ul>
           <li><IntlLink to="/play/">Playground</IntlLink></li>
-          <li><IntlLink to="/tsconfig/">TSConfig Reference</IntlLink></li>
+          <li><IntlLink to="/tsconfig/">Referencia de TSConfig</IntlLink></li>
         </ul>
-        <h4 style={{ marginTop: "28px" }}>Release Notes</h4>
+        <h4 style={{ marginTop: "28px" }}>Notas de la versión</h4>
         <ul>
           {betaURL
             ? <li>
               <a href={betaURL}>
-                What's upcoming in {releaseInfo.tags.betaMajMin}?
+                ¿Qué viene en {releaseInfo.tags.betaMajMin}?
               </a>
             </li>
             : null}
           <li>
             <IntlLink to={releaseURL}>
-              What's new in {releaseInfo.tags.stableMajMin}
+              Novedades en {releaseInfo.tags.stableMajMin}
             </IntlLink>
           </li>
         </ul>
       </div>
 
       <div className="item raised">
-        <h4>Tutorials</h4>
+        <h4>Tutoriales</h4>
         <ul>
           <li>
             <IntlLink to="/docs/handbook/asp-net-core.html">ASP.NET</IntlLink>
           </li>
           <li>
             <IntlLink to="/docs/handbook/migrating-from-javascript.html">
-              Migrating from JS
+              Migración desde JS
             </IntlLink>
           </li>
           <li>
             <IntlLink to="/docs/handbook/dom-manipulation.html">
-              Working with the DOM
+              Trabajar con el DOM
             </IntlLink>
           </li>
           <li>

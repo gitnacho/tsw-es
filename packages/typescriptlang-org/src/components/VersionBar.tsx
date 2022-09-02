@@ -7,7 +7,7 @@ import { createInternational } from "../lib/createInternational"
 import { useIntl } from "react-intl"
 
 /**
- * Shows the current versions, and upcoming releases
+ * Muestra las versiones actuales y los próximos lanzamientos.
  */
 export const VersionBar = () => {
   const i = createInternational<typeof navCopy>(useIntl())

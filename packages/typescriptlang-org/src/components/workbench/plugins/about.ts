@@ -3,26 +3,26 @@ type Factory = import("../../../../static/js/playground").PluginFactory
 type PluginUtils = import("../../../../static/js/playground").PluginUtils
 
 const intro = `
-El bug workbench utiliza <a href='https://www.npmjs.com/package/@typescript/twoslash'>Twoslash</a> para ayudodarte, a crear informes de error precisos. 
-Twoslash is a markup format for TypeScript files which lets you highlight code, handle-multiple files and
-show the files the TypeScript compiler creates.
+El error workbench utiliza <a href='https://www.npmjs.com/package/@typescript/twoslash'>Twoslash</a> para ayudarte a crear informes de error precisos. 
+Twoslash es un formato de marcado para archivos TypeScript que te permite resaltar código, manejar varios archivos y
+muestra los archivos que crea el compilador de TypeScript.
 `.trim()
 
 const why = `
-The bug workbench lets you make reproductions of bugs which are trivial to verify against many different versions of TypeScript over time.
+El banco de trabajo de errores te permite hacer reproducciones de errores que son triviales para verificar con muchas versiones diferentes de TypeScript a lo largo del tiempo.
 `.trim()
 
 const how = `
-A repro can highlight an issue in a few ways:
+Una reproducción puede resaltar un problema de varias maneras:
 <ul>
-  <li>Does this code sample fail to compile?</li>
-  <li>Is a type wrong at a position in the file?</li>
-  <li>Is the .js/.d.ts/.map file wrong?</li>
+  <li>¿Este ejemplo de código no se compila?</li>
+  <li>¿Hay un tipo incorrecto en una posición del archivo?</li>
+  <li>¿Es incorrecto el archivo .js/.d.ts/.map?</li>
 </ul>
 `.trim()
 
 const cta = `
-To learn how the tools for making a repro, go to "Docs"
+Para conocer las herramientas para hacer una reproducción, ve a "Docs"
 
 `.trim()
 

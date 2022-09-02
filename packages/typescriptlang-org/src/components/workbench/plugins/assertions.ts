@@ -17,7 +17,7 @@ export const workbenchAssertionsPlugin: import("../../../../static/js/playground
 
       ds.title("Exception Raised")
       ds.p(
-        "This could be a successful repro of a crashing compiler bug, or potentially an issue in Twoslash."
+        "Esto podría ser una reproducción exitosa de un error del compilador que falla, o potencialmente un problema en Twoslash."
       )
 
       ds.subtitle("Error:")
@@ -39,7 +39,7 @@ export const workbenchAssertionsPlugin: import("../../../../static/js/playground
       if (!anyOutput) {
         ds.title("No Assertions")
         ds.p(
-          "Assuming that this repro is for code which compiles but should not."
+          "Asumiendo que esta reproducción es para código que compila pero no debería."
         )
       } else {
         ds.title("Assertions Found")
@@ -60,7 +60,7 @@ export const workbenchAssertionsPlugin: import("../../../../static/js/playground
               // prettier-ignore
               const prefixed = t.completions.filter(c => c.name.startsWith(t.completionsPrefix || "____")).map(c => c.name).join(", ")
               const prefix = t.completionsPrefix?.length
-                ? `Filtered Completions: ${prefixed}.\n\n`
+                ? `Compleciones filtradas: ${prefixed}.\n\n`
                 : ""
               msg = `${prefix}All: ${all}.`
             }

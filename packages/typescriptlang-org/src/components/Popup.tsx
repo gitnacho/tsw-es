@@ -4,7 +4,7 @@ export interface PopupProps {
 	show: boolean
 	html?: string
 	url?: string
-	// These are absolute to the page
+	// Estos son absolutos para la página.
 	position?: {left: number, top: number} | null
 }
 
@@ -22,7 +22,7 @@ export const Popup = (props: PopupProps) => (
 export const useQuickInfoPopup = (lang: string) => {
 	const [showPopup, setShowPopup] = useState<PopupProps>({ show: false });
 
-  // Add event listeners for individual links and the popup itself on pageload
+  // Agrega escuchas de eventos para enlaces individuales y la ventana emergente en sí misma en la carga de la página
   useEffect(() => {
     const aTags = document.getElementsByTagName("a")
     const links: HTMLAnchorElement[] = []
@@ -40,7 +40,7 @@ export const useQuickInfoPopup = (lang: string) => {
     popupEl?.addEventListener("mouseenter", handlePopupMouseEnter)
     popupEl?.addEventListener("mouseleave", handlePopupMouseLeave)
 
-    // don't forget to clear them on leave
+    // no olvides limpiarlos al dejarlos
      return () => {
       for (const el of links) {
         el.removeEventListener("mouseenter", handleLinkMouseEnter)
@@ -52,8 +52,8 @@ export const useQuickInfoPopup = (lang: string) => {
      }
   }, [])
 
-  // Keep track of how long user is hovering
-  // or how long they have left the link.
+  // Mantén un registro de cuánto tiempo el usuario está flotando
+  // o cuánto tiempo han dejado el enlace.
   var enterTimeoutId, leaveTimeoutId
   function handleLinkMouseEnter(e) {
     clearTimeout(leaveTimeoutId); 
@@ -79,7 +79,7 @@ export const useQuickInfoPopup = (lang: string) => {
     }, 300);
   }
 
-  // Fetch content from the JSON based on url and set inner HTML
+  // Obtiene contenido del JSON según la URL y configura el HTML interno
   useEffect(() => {
     async function fetchHTML() {
 	  if (!showPopup.url) return
@@ -96,8 +96,8 @@ export const useQuickInfoPopup = (lang: string) => {
 
   }, [showPopup.show, showPopup.url, showPopup.html])
 
-  // In order to keep the popups when user leaves link
-  // but still hovers over the popup itself
+  // Para mantener las ventanas emergentes cuando el usuario deja el enlace
+  // pero aún se cierne sobre la ventana emergente en sí
   function handlePopupMouseEnter(e) {
     clearTimeout(leaveTimeoutId)
   }

@@ -10,7 +10,7 @@ El compilador admite la configuración de cómo ver archivos y directorios usand
 
 ## Antecedentes
 
-La implementación `--watch` del compilador se basa en el uso de `fs.watch` y `fs.watchFile` que proporcionan *node*, ambos métodos tienen pros y contras.
+La implementación `--watch` del compilador se basa en el uso de `fs.watch` y `fs.watchFile` que proporciona *node*, ambos métodos tienen pros y contras.
 
 `fs.watch` usa eventos del sistema de archivos para notificar los cambios en el archivo/directorio. Pero esto depende del sistema operativo y la notificación no es completamente confiable y no funciona como se espera en muchos sistemas operativos. También podría haber un límite en la cantidad de vigilantes que se pueden crear, p. ej. linux y podríamos agotarlo bastante rápido con programas que incluyen una gran cantidad de archivos. Pero debido a que esto usa eventos del sistema de archivos, no hay muchos ciclos de *CPU* involucrados. El compilador generalmente usa `fs.watch` para ver directorios (por ejemplo, directorios fuente incluidos en el archivo de configuración, directorios en los que falló la resolución del módulo, etc.). Estos pueden manejar la precisión que falta al notificar los cambios. Pero la observación recursiva solo es compatible con *Windows* y *OSX*. Eso significa que necesitamos algo para reemplazar la naturaleza recursiva en otros sistemas operativos.
 
@@ -40,8 +40,8 @@ La implementación `--watch` del compilador se basa en el uso de `fs.watch` y `f
     // No fusionar la notificación del observador
     "synchronousWatchDirectory": true,
 
-    // Finalmente, dos configuraciones adicionales para reducir la cantidad de posibles
-    // archivos para rastrear el trabajo de estos directorios
+    // Finalmente, dos configuraciones adicionales para reducir la cantidad de
+    // posibles archivos para rastrear el trabajo de estos directorios
     "excludeDirectories": ["**/node_modules", "_build"],
     "excludeFiles": ["build/fileWhichChangesOften.ts"]
   }

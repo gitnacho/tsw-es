@@ -44,13 +44,11 @@
     "clean": "yarn workspace typescriptlang-org gatsby clean",
     "clean-twoslash": "rm -rf packages/.cache/twoslash",
     "test": "CI=true yarn workspaces foreach -v -t --exclude root run test",
-    "update-test-snapshots": "CI=true yarn workspaces foreach --include gatsby-remark-shiki-twoslash  --include @typescript/twoslash --include shiki-twoslash --include @typescript/vfs run test -u",
-    "develop": "gatsby develop"
+    "update-test-snapshots": "CI=true yarn workspaces foreach --include gatsby-remark-shiki-twoslash  --include @typescript/twoslash --include shiki-twoslash --include @typescript/vfs run test -u"
   },
   "dependencies": {
     "@oss-docs/sync": "^1.1.4",
     "@types/express": "^4.17.6",
-    "gatsby": "^4.21.0",
     "gray-matter": "4.0.2",
     "node-polyfill-webpack-plugin": "^1.1.0",
     "serve-handler": "^6.1.2",

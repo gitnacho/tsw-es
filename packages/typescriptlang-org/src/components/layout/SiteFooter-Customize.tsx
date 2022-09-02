@@ -33,7 +33,7 @@ export const Customize = () => {
 
   // Localstorage: force-dark, force-light, undefined 
   // ->
-  // CSS Body class: theme-dark, theme-light, theme-dark | theme-light 
+  // Case CSS Body: theme-dark, theme-light, theme-dark | theme-light 
 
   const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     if (event.target.value === "system") {
@@ -54,7 +54,7 @@ export const Customize = () => {
 
   // Localstorage: undefined, cascadia, cascadia-ligatures, consolas, ...
   // ->
-  // CSS Body class: font-cascadia, font-cascadia, font-cascadia-ligatures | font-consolas, ...
+  // Case CSS Body: font-cascadia, font-cascadia, font-cascadia-ligatures | font-consolas, ...
 
   const handleFontChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     localStorage.setItem("force-font", event.target.value)

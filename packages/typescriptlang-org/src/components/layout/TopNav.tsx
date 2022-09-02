@@ -28,7 +28,7 @@ export const SiteNav = (props: Props) => {
       }
     }
 
-    // @ts-ignore - this comes from the script above
+    // @ts-ignore - esto viene del script de arriba
     docsearch({
       appId: "BGCDYOIYZ5",
       apiKey: '37ee06fa68db6aef451a490df6df7c60',
@@ -37,12 +37,12 @@ export const SiteNav = (props: Props) => {
       handleSelected: customHandleSelected,
     });
   }
-  // This extra bit of mis-direction ensures that non-essential code runs after
-  // the page is loaded
+  // Este bit adicional de dirección errónea asegura que el código no esencial se ejecute después
+  // de que la pagina esta cargada
   useEffect(() => {
     setupStickyNavigation()
 
-    // @ts-ignore - this comes from the script above
+    // @ts-ignore - esto viene del script de arriba
     if (window.docsearch) {
       loadDocSearch();
     }
@@ -55,7 +55,7 @@ export const SiteNav = (props: Props) => {
     searchScript.src = withPrefix("/js/docsearch.js");
     searchScript.async = true;
     searchScript.onload = () => {
-      // @ts-ignore - this comes from the script above
+      // @ts-ignore - esto viene del script de arriba
       if (window.docsearch) {
         loadDocSearch();
 

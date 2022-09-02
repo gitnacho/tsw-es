@@ -1,8 +1,8 @@
 import React from "react"
 
-// Taken from https://github.com/microsoft/fluentui-system-icons
-// They don't have a web pipeline, so I just C&P'd directly
-// It's licensed MIT
+// Tomado de https://github.com/microsoft/fluentui-system-icons
+// No tienen una tubería web, así que solo hice C&P directamente
+// Tiene licencia MIT
 // https://github.com/microsoft/fluentui-system-icons/blob/master/LICENSE
 
 export const LikeFilledSVG = () => <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

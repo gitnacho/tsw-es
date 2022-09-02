@@ -42,7 +42,7 @@ Las etiquetas de documentación funcionan tanto en *TypeScript* como en *JavaScr
 - [`@enum`](#enum)
 - [`@author`](#author)
 - [Otros patrones admitidos](#otros-patrones-admitidos)
-- [Patrones no admitidos](#patrones-no admitidos)
+- [Patrones no admitidos](#patrones-no-admitidos)
 - [Etiquetas no admitidas](#etiquetas-no-admitidas)
 
 El significado suele ser el mismo, o un superconjunto, del significado de la etiqueta dada en [`jsdoc.app`](https://jsdoc.app).
@@ -124,10 +124,10 @@ var arrayLike;
 
 Los dos tipos anteriores son equivalentes a los tipos de *TypeScript* `{[x: string]: number }` y `{ [x: number]: any }`. El compilador comprende ambas sintaxis.
 
-Puedes especificar tipos de funciones utilizando la sintaxis *TypeScript* o *Google Closure*:
+Puedes especificar tipos function utilizando la sintaxis *TypeScript* o de cierre *Google*:
 
 ```js twoslash
-/** @type {function(string, boolean): number} Closure syntax */
+/** @type {function(string, boolean): number} Sintaxis de cierre */
 var sbn;
 /** @type {(s: string, b: boolean) => number} TypeScript syntax */
 var sbn2;
@@ -176,7 +176,7 @@ let one = /** @type {const} */(1);
 
 #### Importar tipos
 
-Puedes importar declaraciones de otros archivos utilizando tipos `import`ación.
+Puedes importar declaraciones de otros archivos utilizando tipos `import`.
 Esta sintaxis es específica de *TypeScript* y difiere del *JSDoc* estándar:
 
 ```js twoslash
@@ -194,7 +194,7 @@ function walk(p) {
 }
 ```
 
-los tipos `import`ación se pueden utilizar en declaraciones de alias de tipo:
+los tipos `import` se pueden utilizar en declaraciones de alias de tipo:
 
 ```js twoslash
 // @filename: types.d.ts
@@ -245,10 +245,10 @@ El parámetro también se puede declarar opcional rodeando el nombre con corchet
 // Los parámetros se pueden declarar en una variedad de formas sintácticas
 /**
  * @param {string}  p1 - Un parámetro string.
- * @param {string=} p2 - Un parámetro opcional (sintaxis de cierres *Google*)
+ * @param {string=} p2 - Un parámetro opcional (sintaxis de cierre *Google*)
  * @param {string} [p3] - Otro parámetro opcional (sintaxis JSDoc).
  * @param {string} [p4="test"] ⏤ Un parámetro opcional con un valor predeterminado
- * @returns {string} Este es el resultado
+ * @returns {string} ⏤ Este es el resultado
  */
 function stringsStringStrings(p1, p2, p3, p4) {
   // PENDIENTE
@@ -264,7 +264,7 @@ De igual manera, para el tipo del retorno de una función:
 function ps() {}
 
 /**
- * @returns {{ a: string, b: number }} - Puede usar '@returns' así como '@return'
+ * @returns {{ a: string, b: number }} - Puedes usar '@returns' así como '@return'
  */
 function ab() {}
 ```
@@ -370,7 +370,7 @@ Utiliza comas o varias etiquetas para declarar varios parámetros de tipo:
  */
 ```
 
-También puedes especificar una restricción de tipo antes del nombre del tipo del parámetro.
+También puedes especificar una restricción de tipo antes del nombre de tipo del parámetro.
 Solo el primer parámetro de tipo de una lista está restringido:
 
 ```js twoslash
@@ -539,7 +539,7 @@ class TextBook {
 
 ### `@constructor`
 
-El compilador infiere funciones de constructor en función de las asignaciones de esta propiedad, pero puede hacer que la verificación sea más estricta y las sugerencias mejor si agregas una etiqueta `@constructor`:
+El compilador infiere funciones de constructor en función de las asignaciones de esta propiedad, pero puedes hacer que la verificación sea más estricta y las sugerencias mejor si agregas una etiqueta `@constructor`:
 
 ```js twoslash
 // @checkJs
@@ -575,7 +575,7 @@ c.size;
 var result = C(1);
 ```
 
-> Nota: Los mensajes de error solo aparecen en las bases de código *JS* con [*JSConfig*](/docs/handbook/tsconfig-json.html) y [`checkJs`](/tsconfig#checkJs) habilitados.
+> Nota: Los mensajes de error solo aparecen en el código base *JS* con [*JSConfig*](/docs/handbook/tsconfig-json.html) y [`checkJs`](/tsconfig#checkJs) habilitados.
 
 Con `@constructor`, `this` se marca dentro de la función constructora `C`, por lo que obtendrás sugerencias para el método `initialize` y un error si le pasas un número. Tu editor también puede mostrar advertencias si llamas a "C" en lugar de construirlo.
 
@@ -600,7 +600,7 @@ function callbackForLater(e) {
 ### `@deprecated`
 <div id="deprecated-comments"></div>
 
-Cuando una función, método o propiedad está en desuso, puedes informar a los usuarios marcándola con un comentario `/ **@deprecated */` Comentario *JSDoc*. Esa información aparece en listas de compleción y como un diagnóstico de sugerencia que los editores pueden manejar de manera especial. En un editor como *VS Code*, los valores obsoletos se muestran normalmente en un estilo tachado ~~como este~~.
+Cuando una función, método o propiedad está en desuso, puedes informar a los usuarios marcándola con un comentario `/ **@deprecated */` de *JSDoc*. Esa información aparece en listas de compleción y como un diagnóstico de sugerencia que los editores pueden manejar de manera especial. En un editor como *VS Code*, los valores obsoletos se muestran normalmente en un estilo tachado ~~como este~~.
 
 ```js twoslash
 // @noErrors
@@ -690,13 +690,13 @@ class Foo {}
 // ---cut---
 var someObj = {
   /**
-   * @param {string} param1 ⏤ JSDocs en el trabajo de asignaciones de propiedad
+   * @param {string} param1 ⏤ JSDocs en el trabajo de asignación de propiedades
    */
   x: function (param1) {},
 };
 
 /**
- * Al igual que `jsdocs` en asignaciones de variables
+ * Al igual que `jsdocs` en asignación de variables
  * @return {Window}
  */
 let someFunc = function () {};
@@ -741,7 +741,7 @@ function fn9(p1) {
 
 ### Patrones no admitidos
 
-El posfijo es igual a un tipo de propiedad en un tipo de objeto literal no especifica una propiedad opcional:
+El posfijo es igual a un tipo de propiedad en un tipo de objeto literal, no especifica una propiedad opcional:
 
 ```js twoslash
 /**

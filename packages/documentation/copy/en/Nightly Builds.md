@@ -15,7 +15,7 @@ Así es como lo puedes obtener y usar con tus herramientas.
 npm install -g typescript@next
 ```
 
-## Actualizar tu *IDE* para usar las compilaciones nocturnas
+## Actualiza tu&nbsp;*IDE*&nbsp;para usar las compilaciones nocturnas
 
 También puedes actualizar tu *IDE* para usar el servicio nocturno.
 Primero deberás instalar el paquete a través de `npm`.

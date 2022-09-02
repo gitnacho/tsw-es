@@ -75,7 +75,7 @@ C.prototype.method = function () {
 };
 ```
 
-## Los módulos *CommonJS* son compatibles
+## Los módulos*CommonJS*son compatibles
 
 En un archivo `.js`, *TypeScript* comprende el formato del módulo *CommonJS*.
 Las asignaciones a `export` y `module.exports` se reconocen como declaraciones `export`.

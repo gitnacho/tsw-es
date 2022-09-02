@@ -177,7 +177,7 @@ Ahora escribe lo siguiente en `greeter.html`:
 Opcional: Abre `greeter.ts` en *Visual Studio* o copia el código en el *playground* de *TypeScript*.
 Puedes pasar el cursor sobre los identificadores para ver sus tipos.
 Ten en cuenta que en algunos casos estos tipos se infieren automáticamente para ti.
-Vuelve a escribir la última línea y ve las listas de terminación y la ayuda de parámetros en función de los tipos de elementos del *DOM*.
+Vuelve a escribir la última línea y ve las listas de compleción y la ayuda de parámetros en función de los tipos de elementos del *DOM*.
 Coloca el cursor sobre la referencia a la función `greeter` y presiona *F12* para ir a su definición.
 Observa también que puedes hacer clic con el botón derecho en un símbolo y usar la refactorización para cambiarle el nombre.
 

@@ -3,8 +3,8 @@ import { GatsbyLinkProps, Link } from "gatsby"
 import { allFiles } from "../__generated__/allPages"
 
 /** 
- * Creates a <Link> which supports gradual migration, you provide a link to the english page and
- * if the page supports the same version but in your language, it opts for that.
+ * Crea un <Link> que admite la migración gradual, proporciona un enlace a la página en inglés y
+ * si la página soporta la misma versión pero en tu idioma, opta por esa.
  */
 export const createIntlLink = (currentLocale: string) => {
   const paths = allFiles
@@ -13,14 +13,14 @@ export const createIntlLink = (currentLocale: string) => {
     let to = linkProps.to
 
     // /thing -> /ja/thing
-    // This occurs when we want URL compat with old site
+    // Esto ocurre cuando queremos que la URL sea compatible con el sitio anterior
 
     const localeVersion = "/" + currentLocale + to
     if (currentLocale !== "en" && paths.includes(localeVersion)) {
       to = localeVersion
     }
 
-    // This effectively needs to be duplicated in gatsby-config.js too
+    // Esto también se debe duplicar en gatsby-config.js
     const blocklistIncludes = ["/play", "sandbox", "/dev"]
     const blocklisted = blocklistIncludes.find(blocked => to.includes(blocked))
 

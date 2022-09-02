@@ -2647,7 +2647,7 @@ declare var CSSRule: {
     readonly SUPPORTS_RULE: number;
 };
 
-/** A CSSRuleList is an (indirect-modify only) array-like object containing an ordered collection of CSSRule objects. */
+/** Una CSSRuleList es un objeto similar a un arreglo (solo modificación indirecta) que contiene una colección ordenada de objetos CSSRule. */
 interface CSSRuleList {
     readonly length: number;
     item(index: number): CSSRule | null;
@@ -2659,7 +2659,7 @@ declare var CSSRuleList: {
     new(): CSSRuleList;
 };
 
-/** An object that is a CSS declaration block, and exposes style information and various style-related methods and properties. */
+/** Un objeto que es un bloque de declaración CSS y, expone información de estilo y varios métodos y propiedades relacionados con el estilo. */
 interface CSSStyleDeclaration {
     alignContent: string;
     alignItems: string;
@@ -3192,7 +3192,7 @@ declare var CSSStyleDeclaration: {
     new(): CSSStyleDeclaration;
 };
 
-/** CSSStyleRule represents a single CSS style rule. It implements the CSSRule interface with a type value of 1 (CSSRule.STYLE_RULE). */
+/** CSSStyleRule representa una sola regla de estilo CSS. Implementa la interfaz CSSRule con un valor de tipo 1 (CSSRule.STYLE_RULE). */
 interface CSSStyleRule extends CSSRule {
     selectorText: string;
     readonly style: CSSStyleDeclaration;
@@ -3203,7 +3203,7 @@ declare var CSSStyleRule: {
     new(): CSSStyleRule;
 };
 
-/** A single CSS style sheet. It inherits properties and methods from its parent, StyleSheet. */
+/** Una sola hoja de estilo CSS. Hereda propiedades y métodos de su padre, StyleSheet. */
 interface CSSStyleSheet extends StyleSheet {
     readonly cssRules: CSSRuleList;
     readonly ownerRule: CSSRule | null;
@@ -3222,7 +3222,7 @@ declare var CSSStyleSheet: {
     new(): CSSStyleSheet;
 };
 
-/** An object representing a single CSS @supports at-rule. It implements the CSSConditionRule interface, and therefore the CSSRule and CSSGroupingRule interfaces with a type value of 12 (CSSRule.SUPPORTS_RULE). */
+/** Un objeto que representa una sola regla @supports de CSS. Implementa la interfaz CSSConditionRule y, por lo tanto, las interfaces CSSRule y CSSGroupingRule con un valor de tipo de 12 (CSSRule.SUPPORTS_RULE). */
 interface CSSSupportsRule extends CSSConditionRule {
 }
 
@@ -3244,7 +3244,7 @@ declare var CSSTransition: {
     new(): CSSTransition;
 };
 
-/** Provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec. */
+/** Proporciona un mecanismo de almacenamiento para pares de objetos de solicitud/respuesta que se almacenan en caché, por ejemplo, como parte del ciclo de vida de ServiceWorker. Ten en cuenta que la interfaz de caché está expuesta a ámbitos de ventana, así como a trabajadores. No tienes que usarlo junto con los trabajadores del servicio, aunque esté definido en la especificación del trabajador del servicio. */
 interface Cache {
     add(request: RequestInfo): Promise<void>;
     addAll(requests: RequestInfo[]): Promise<void>;
@@ -3260,7 +3260,7 @@ declare var Cache: {
     new(): Cache;
 };
 
-/** The storage for Cache objects. */
+/** El almacenamiento de objetos Cache. */
 interface CacheStorage {
     delete(cacheName: string): Promise<boolean>;
     has(cacheName: string): Promise<boolean>;
@@ -3311,7 +3311,7 @@ interface CanvasFilters {
     filter: string;
 }
 
-/** An opaque object describing a gradient. It is returned by the methods CanvasRenderingContext2D.createLinearGradient() or CanvasRenderingContext2D.createRadialGradient(). */
+/** Un objeto opaco que describe un degradado. Lo devuelven los métodos CanvasRenderingContext2D.createLinearGradient() o CanvasRenderingContext2D.createRadialGradient(). */
 interface CanvasGradient {
     /**
      * Agrega una parada de color con el color dado al degradado en el desplazamiento dado. 0.0 es el desplazamiento en un extremo del gradiente, 1.0 es el desplazamiento en el otro extremo.
@@ -3361,10 +3361,10 @@ interface CanvasPathDrawingStyles {
     setLineDash(segments: number[]): void;
 }
 
-/** An opaque object describing a pattern, based on an image, a canvas, or a video, created by the CanvasRenderingContext2D.createPattern() method. */
+/** Un objeto opaco que describe un patrón, basado en una imagen, un lienzo o un video, creado por el método CanvasRenderingContext2D.createPattern(). */
 interface CanvasPattern {
     /**
-     * Sets the transformation matrix that will be used when rendering the pattern during a fill or stroke painting operation.
+     * Establece el arreglo de transformación que se utilizará al renderizar el patrón durante una operación de pintura de relleno o trazo.
      */
     setTransform(transform?: DOMMatrix2DInit): void;
 }
@@ -3380,7 +3380,7 @@ interface CanvasRect {
     strokeRect(x: number, y: number, w: number, h: number): void;
 }
 
-/** The CanvasRenderingContext2D interface, part of the Canvas API, provides the 2D rendering context for the drawing surface of a <canvas> element. It is used for drawing shapes, text, images, and other objects. */
+/** La interfaz CanvasRenderingContext2D, parte de la API de Canvas, proporciona el contexto de representación 2D para la superficie de dibujo de un elemento <canvas>. Se utiliza para dibujar formas, texto, imágenes y otros objetos. */
 interface CanvasRenderingContext2D extends CanvasCompositing, CanvasDrawImage, CanvasDrawPath, CanvasFillStrokeStyles, CanvasFilters, CanvasImageData, CanvasImageSmoothing, CanvasPath, CanvasPathDrawingStyles, CanvasRect, CanvasShadowStyles, CanvasState, CanvasText, CanvasTextDrawingStyles, CanvasTransform, CanvasUserInterface {
     readonly canvas: HTMLCanvasElement;
 }
@@ -3431,7 +3431,7 @@ interface CanvasUserInterface {
     drawFocusIfNeeded(path: Path2D, element: Element): void;
 }
 
-/** The ChannelMergerNode interface, often used in conjunction with its opposite, ChannelSplitterNode, reunites different mono inputs into a single output. Each input is used to fill a channel of the output. This is useful for accessing each channels separately, e.g. for performing channel mixing where gain must be separately controlled on each channel. */
+/** La interfaz ChannelMergerNode, a menudo utilizada junto con su opuesto, ChannelSplitterNode, reúne diferentes entradas mono en una sola salida. Cada entrada se utiliza para llenar un canal de la salida. Esto es útil para acceder a cada canal por separado, p. ej. para realizar mezclas de canales donde la ganancia se debe controlar por separado en cada canal. */
 interface ChannelMergerNode extends AudioNode {
 }
 
@@ -3440,7 +3440,7 @@ declare var ChannelMergerNode: {
     new(context: BaseAudioContext, options?: ChannelMergerOptions): ChannelMergerNode;
 };
 
-/** The ChannelSplitterNode interface, often used in conjunction with its opposite, ChannelMergerNode, separates the different channels of an audio source into a set of mono outputs. This is useful for accessing each channel separately, e.g. for performing channel mixing where gain must be separately controlled on each channel. */
+/** La interfaz ChannelSplitterNode, a menudo utilizada junto con su opuesta, ChannelMergerNode, separa los diferentes canales de una fuente de audio en un conjunto de salidas mono. Esto es útil para acceder a cada canal por separado, p. ej. para realizar mezclas de canales donde la ganancia se debe controlar por separado en cada canal. */
 interface ChannelSplitterNode extends AudioNode {
 }
 
@@ -3449,7 +3449,7 @@ declare var ChannelSplitterNode: {
     new(context: BaseAudioContext, options?: ChannelSplitterOptions): ChannelSplitterNode;
 };
 
-/** The CharacterData abstract interface represents a Node object that contains characters. This is an abstract interface, meaning there aren't any object of type CharacterData: it is implemented by other interfaces, like Text, Comment, or ProcessingInstruction which aren't abstract. */
+/** La interfaz abstracta CharacterData representa un objeto Node que contiene caracteres. Esta es una interfaz abstracta, lo cual significa que no hay ningún objeto de tipo CharacterData: se implementa mediante otras interfaces, como Text, Comment o ProcessingInstruction, que no son abstractas. */
 interface CharacterData extends Node, ChildNode, NonDocumentTypeChildNode {
     data: string;
     readonly length: number;
@@ -3468,25 +3468,25 @@ declare var CharacterData: {
 
 interface ChildNode {
     /**
-     * Inserts nodes just after node, while replacing strings in nodes with equivalent Text nodes.
+     * Inserta nodos justo después del nodo, mientras reemplaza las cadenas en los nodos con nodos de texto equivalentes.
      *
-     * Throws a "HierarchyRequestError" DOMException if the constraints of the node tree are violated.
+     * Lanza una DOMException "HierarchyRequestError" si se violan las restricciones del árbol de nodos.
      */
     after(...nodes: (Node | string)[]): void;
     /**
-     * Inserts nodes just before node, while replacing strings in nodes with equivalent Text nodes.
+     * Inserta nodos justo antes del nodo, mientras reemplaza las cadenas en los nodos con nodos de texto equivalentes.
      *
-     * Throws a "HierarchyRequestError" DOMException if the constraints of the node tree are violated.
+     * Lanza una DOMException "HierarchyRequestError" si se violan las restricciones del árbol de nodos.
      */
     before(...nodes: (Node | string)[]): void;
     /**
-     * Removes node.
+     * Elimina el nodo.
      */
     remove(): void;
     /**
-     * Replaces node with nodes, while replacing strings in nodes with equivalent Text nodes.
+     * Reemplaza nodo con nodos, mientras reemplaza cadenas en nodos con nodos de texto equivalentes.
      *
-     * Throws a "HierarchyRequestError" DOMException if the constraints of the node tree are violated.
+     * Lanza una DOMException "HierarchyRequestError" si se violan las restricciones del árbol de nodos.
      */
     replaceWith(...nodes: (Node | string)[]): void;
 }
@@ -3503,7 +3503,7 @@ declare var Clipboard: {
     new(): Clipboard;
 };
 
-/** Events providing information related to modification of the clipboard, that is cut, copy, and paste events. */
+/** Eventos que proporcionan información relacionada con la modificación del portapapeles, es decir, eventos de cortar, copiar y pegar. */
 interface ClipboardEvent extends Event {
     readonly clipboardData: DataTransfer | null;
 }
@@ -3523,7 +3523,7 @@ declare var ClipboardItem: {
     new(items: Record<string, ClipboardItemData>, options?: ClipboardItemOptions): ClipboardItem;
 };
 
-/** A CloseEvent is sent to clients using WebSockets when the connection is closed. This is delivered to the listener indicated by the WebSocket object's onclose attribute. */
+/** Se envía un CloseEvent a los clientes que utilizan WebSockets cuando se cierra la conexión. Esto se entrega al escucha indicado por el atributo onclose del objeto WebSocket. */
 interface CloseEvent extends Event {
     /**
      * Devuelve el código de cierre de la conexión WebSocket proporcionado por el servidor.
@@ -3544,7 +3544,7 @@ declare var CloseEvent: {
     new(type: string, eventInitDict?: CloseEventInit): CloseEvent;
 };
 
-/** Textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view. */
+/** Anotaciones textuales dentro del marcado; aunque generalmente no se muestra visualmente, dichos comentarios están disponibles para leerse en la vista de código fuente. */
 interface Comment extends CharacterData {
 }
 
@@ -3553,7 +3553,7 @@ declare var Comment: {
     new(data?: string): Comment;
 };
 
-/** The DOM CompositionEvent represents events that occur due to the user indirectly entering text. */
+/** El DOM CompositionEvent representa eventos que ocurren debido a que el usuario ingresa texto indirectamente. */
 interface CompositionEvent extends UIEvent {
     readonly data: string;
     /** @deprecated */
@@ -3578,7 +3578,7 @@ declare var ConstantSourceNode: {
     new(context: BaseAudioContext, options?: ConstantSourceOptions): ConstantSourceNode;
 };
 
-/** An AudioNode that performs a Linear Convolution on a given AudioBuffer, often used to achieve a reverb effect. A ConvolverNode always has exactly one input and one output. */
+/** Un AudioNode que realiza una circunvolución lineal en un AudioBuffer determinado, a menudo utilizado para lograr un efecto de reverberación. Un ConvolverNode siempre tiene exactamente una entrada y una salida. */
 interface ConvolverNode extends AudioNode {
     buffer: AudioBuffer | null;
     normalize: boolean;
@@ -3622,7 +3622,7 @@ declare var CredentialsContainer: {
     new(): CredentialsContainer;
 };
 
-/** Basic cryptography features available in the current context. It allows access to a cryptographically strong random number generator and to cryptographic primitives. */
+/** Funciones básicas de criptografía disponibles en el contexto actual. Permite el acceso a un generador de números aleatorios criptográficamente fuerte y a primitivas criptográficas. */
 interface Crypto {
     readonly subtle: SubtleCrypto;
     getRandomValues<T extends ArrayBufferView | null>(array: T): T;
@@ -3633,7 +3633,7 @@ declare var Crypto: {
     new(): Crypto;
 };
 
-/** The CryptoKey dictionary of the Web Crypto API represents a cryptographic key. */
+/** El diccionario CryptoKey de la API Web Crypto representa una clave criptográfica. */
 interface CryptoKey {
     readonly algorithm: KeyAlgorithm;
     readonly extractable: boolean;
@@ -3660,7 +3660,7 @@ declare var CustomElementRegistry: {
 
 interface CustomEvent<T = any> extends Event {
     /**
-     * Devuelve cualquier evento de datos personalizado con el que se haya creado. Typically used for synthetic events.
+     * Devuelve cualquier evento de datos personalizado con el que se haya creado. Normalmente se utiliza para eventos sintéticos.
      */
     readonly detail: T;
     /** @deprecated */
@@ -3672,7 +3672,7 @@ declare var CustomEvent: {
     new<T>(type: string, eventInitDict?: CustomEventInit<T>): CustomEvent<T>;
 };
 
-/** An abnormal event (called an exception) which occurs as a result of calling a method or accessing a property of a web API. */
+/** Un evento anormal (llamado excepción) que ocurre como resultado de llamar a un método o acceder a una propiedad de una API web. */
 interface DOMException {
     readonly code: number;
     readonly message: string;
@@ -3734,7 +3734,7 @@ declare var DOMException: {
     readonly WRONG_DOCUMENT_ERR: number;
 };
 
-/** An object providing methods which are not dependent on any particular document. Such an object is returned by the Document.implementation property. */
+/** Un objeto que proporciona métodos que no dependen de ningún documento en particular. Dicho objeto es devuelto por la propiedad Document.implementation. */
 interface DOMImplementation {
     createDocument(namespace: string | null, qualifiedName: string | null, doctype?: DocumentType | null): XMLDocument;
     createDocumentType(qualifiedName: string, publicId: string, systemId: string): DocumentType;
@@ -3835,13 +3835,13 @@ declare var DOMMatrixReadOnly: {
 /** Brinda la capacidad de analizar el código fuente XML o HTML de una cadena en un documento DOM. */
 interface DOMParser {
     /**
-     * Parses string using either the HTML or XML parser, according to type, and returns the resulting Document. type can be "text/html" (which will invoke the HTML parser), or any of "text/xml", "application/xml", "application/xhtml+xml", or "image/svg+xml" (which will invoke the XML parser).
+     * Analiza la cadena mediante el analizador HTML o XML, según el tipo, y devuelve el documento resultante. el tipo puede ser "text/html" (que invocará el analizador HTML), o cualquiera de "text/xml", "application/xml", "application/xhtml+xml" o "image/svg+xml" (que invocará el analizador XML).
      *
-     * For the XML parser, if string cannot be parsed, then the returned Document will contain elements describing the resulting error.
+     * Para el analizador XML, si la cadena no se puede analizar, el documento devuelto contendrá elementos que describen el error resultante.
      *
-     * Note that script elements are not evaluated during parsing, and the resulting document's encoding will always be UTF-8.
+     * Ten en cuenta que los elementos del script no se evalúan durante el análisis y la codificación del documento resultante siempre será UTF-8.
      *
-     * Values other than the above for type will cause a TypeError exception to be thrown.
+     * Los valores distintos de los anteriores para el tipo provocarán que se produzca una excepción TypeError.
      */
     parseFromString(string: string, type: DOMParserSupportedType): Document;
 }
@@ -3935,7 +3935,7 @@ declare var DOMRectReadOnly: {
     fromRect(other?: DOMRectInit): DOMRectReadOnly;
 };
 
-/** A type returned by some APIs which contains a list of DOMString (strings). */
+/** Un tipo devuelto por algunas APIs que contiene una lista de DOMString (cadenas). */
 interface DOMStringList {
     /**
      * Devuelve el número de cadenas en strings.
@@ -3957,7 +3957,7 @@ declare var DOMStringList: {
     new(): DOMStringList;
 };
 
-/** Used by the dataset HTML attribute to represent data for custom attributes added to elements. */
+/** Utilizado por el atributo HTML del conjunto de datos para representar los datos de los atributos personalizados agregados a los elementos. */
 interface DOMStringMap {
     [name: string]: string | undefined;
 }
@@ -3967,7 +3967,7 @@ declare var DOMStringMap: {
     new(): DOMStringMap;
 };
 
-/** A set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList, HTMLAreaElement.relList, HTMLIframeElement.sandbox, or HTMLOutputElement.htmlFor. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive. */
+/** Un conjunto de segmentos separados por espacios. Dicho conjunto lo devuelven Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList, HTMLAreaElement.relList, HTMLIframeElement.sandbox o HTMLOutputElement.htmlFor. Se indexa comenzando con 0 como con los objetos Array de JavaScript. DOMTokenList siempre distingue entre mayúsculas y minúsculas. */
 interface DOMTokenList {
     /**
      * Devuelve el número de tokens.
@@ -3976,16 +3976,16 @@ interface DOMTokenList {
     /**
      * Devuelve el conjunto asociado como cadena.
      *
-     * Can be set, to change the associated attribute.
+     * Se puede configurar para cambiar el atributo asociado.
      */
     value: string;
     toString(): string;
     /**
-     * Adds all arguments passed, except those already present.
+     * Agrega todos los argumentos pasados, excepto los que ya están presentes.
      *
-     * Throws a "SyntaxError" DOMException if one of the arguments is the empty string.
+     * Lanza una excepción "SyntaxError" de DOMException si uno de los argumentos es la cadena vacía.
      *
-     * Throws an "InvalidCharacterError" DOMException if one of the arguments contains any ASCII whitespace.
+     * Lanza una excepción "InvalidCharacterError" de DOMException si uno de los argumentos contiene algún espacio en blanco ASCII.
      */
     add(...tokens: string[]): void;
     /**
@@ -3997,37 +3997,37 @@ interface DOMTokenList {
      */
     item(index: number): string | null;
     /**
-     * Removes arguments passed, if they are present.
+     * Elimina los argumentos pasados, si están presentes.
      *
-     * Throws a "SyntaxError" DOMException if one of the arguments is the empty string.
+     * Lanza una excepción "SyntaxError" de DOMException si uno de los argumentos es la cadena vacía.
      *
-     * Throws an "InvalidCharacterError" DOMException if one of the arguments contains any ASCII whitespace.
+     * Lanza una excepción "InvalidCharacterError" de DOMException si uno de los argumentos contiene algún espacio en blanco ASCII.
      */
     remove(...tokens: string[]): void;
     /**
-     * Replaces token with newToken.
+     * Reemplaza token con newToken.
      *
      * Devuelve true si el token se reemplazó con newToken y false en caso contrario.
      *
-     * Throws a "SyntaxError" DOMException if one of the arguments is the empty string.
+     * Lanza una excepción "SyntaxError" de DOMException si uno de los argumentos es la cadena vacía.
      *
-     * Throws an "InvalidCharacterError" DOMException if one of the arguments contains any ASCII whitespace.
+     * Lanza una excepción "InvalidCharacterError" de DOMException si uno de los argumentos contiene algún espacio en blanco ASCII.
      */
     replace(token: string, newToken: string): boolean;
     /**
      * Devuelve true si el token está en los tokens admitidos del atributo asociado. Devuelve false en caso contrario.
      *
-     * Throws a TypeError if the associated attribute has no supported tokens defined.
+     * Lanza un TypeError si el atributo asociado no tiene definidos tokens admitidos.
      */
     supports(token: string): boolean;
     /**
-     * If force is not given, "toggles" token, removing it if it's present and adding it if it's not present. If force is true, adds token (same as add()). If force is false, removes token (same as remove()).
+     * Si no se da fuerza, "alterna" - "toggles" - el token, eliminándolo si está presente y agregándolo si no está presente. Si force es true, agrega token (igual que add()). Si force es false, elimina el token (igual que remove()).
      *
      * Devuelve true si el token está ahora presente y false en caso contrario.
      *
-     * Throws a "SyntaxError" DOMException if token is empty.
+     * Lanza una excepción "SyntaxError" de DOMException si el token está vacío.
      *
-     * Throws an "InvalidCharacterError" DOMException if token contains any spaces.
+     * Lanza una "InvalidCharacterError" de DOMException si el token contiene espacios.
      */
     toggle(token: string, force?: boolean): boolean;
     forEach(callbackfn: (value: string, key: number, parent: DOMTokenList) => void, thisArg?: any): void;
@@ -4039,22 +4039,22 @@ declare var DOMTokenList: {
     new(): DOMTokenList;
 };
 
-/** Used to hold the data that is being dragged during a drag and drop operation. It may hold one or more data items, each of one or more data types. For more information about drag and drop, see HTML Drag and Drop API. */
+/** Se utiliza para contener los datos que se arrastran durante una operación de arrastrar y soltar. Puede contener uno o más elementos de datos, cada uno de uno o más tipos de datos. Para obtener más información acerca de arrastrar y soltar, consulta la API de arrastrar y soltar de HTML. */
 interface DataTransfer {
     /**
-     * Devuelve el tipo de operación que está seleccionada actualmente. If the kind of operation isn't one of those that is allowed by the effectAllowed attribute, then the operation will fail.
+     * Devuelve el tipo de operación que está seleccionada actualmente. Si el tipo de operación no es uno de los permitidos por el atributo effectAllowed, la operación fallará.
      *
-     * Can be set, to change the selected operation.
+     * Se puede configurar para cambiar la operación seleccionada.
      *
-     * The possible values are "none", "copy", "link", and "move".
+     * Los valores posibles son "none", "copy", "link" y "move".
      */
     dropEffect: "none" | "copy" | "link" | "move";
     /**
      * Devuelve los tipos de operaciones que se van a permitir.
      *
-     * Can be set (during the dragstart event), to change the allowed operations.
+     * Se puede configurar (durante el evento dragstart) para cambiar las operaciones permitidas.
      *
-     * The possible values are "none", "copy", "copyLink", "copyMove", "link", "linkMove", "move", "all", and "uninitialized",
+     * Los valores posibles son "none", "copy", "copyLink", "copyMove", "link", "linkMove", "move", "all" y "uninitialized",
      */
     effectAllowed: "none" | "copy" | "copyLink" | "copyMove" | "link" | "linkMove" | "move" | "all" | "uninitialized";
     /**
@@ -4066,23 +4066,23 @@ interface DataTransfer {
      */
     readonly items: DataTransferItemList;
     /**
-     * Devuelve un arreglo congelado que enumera los formatos que se establecieron en el evento dragstart. In addition, if any files are being dragged, then one of the types will be the string "Files".
+     * Devuelve un arreglo congelado que enumera los formatos que se establecieron en el evento dragstart. Además, si se arrastra algún archivo, uno de los tipos será la cadena "Files".
      */
     readonly types: ReadonlyArray<string>;
     /**
-     * Removes the data of the specified formats. Removes all data if the argument is omitted.
+     * Elimina los datos de los formatos especificados. Elimina todos los datos si se omite el argumento.
      */
     clearData(format?: string): void;
     /**
-     * Devuelve los datos especificados. If there is no such data, returns the empty string.
+     * Devuelve los datos especificados. Si no hay tales datos, devuelve la cadena vacía.
      */
     getData(format: string): string;
     /**
-     * Adds the specified data.
+     * Agrega los datos especificados.
      */
     setData(format: string, data: string): void;
     /**
-     * Uses the given element to update the drag feedback, replacing any previously specified feedback.
+     * Utiliza el elemento dado para actualizar la retroalimentación de arrastre, reemplazando cualquier retroalimentación especificada previamente.
      */
     setDragImage(image: Element, x: number, y: number): void;
 }
@@ -4092,7 +4092,7 @@ declare var DataTransfer: {
     new(): DataTransfer;
 };
 
-/** One drag data item. During a drag operation, each drag event has a dataTransfer property which contains a list of drag data items. Each item in the list is a DataTransferItem object. */
+/** Un elemento de datos de arrastre. Durante una operación de arrastre, cada evento de arrastre tiene una propiedad dataTransfer que contiene una lista de elementos de datos de arrastre. Cada elemento de la lista es un objeto DataTransferItem. */
 interface DataTransferItem {
     /**
      * Devuelve el tipo de elemento de datos de arrastre, uno de los siguientes: "string", "file".
@@ -4107,7 +4107,7 @@ interface DataTransferItem {
      */
     getAsFile(): File | null;
     /**
-     * Invokes the callback with the string data as the argument, if the drag data item kind is text.
+     * Invoca la devolución de llamada con los datos de cadena como argumento, si el tipo de elemento de datos de arrastre es text.
      */
     getAsString(callback: FunctionStringCallback | null): void;
     webkitGetAsEntry(): FileSystemEntry | null;
@@ -4118,23 +4118,23 @@ declare var DataTransferItem: {
     new(): DataTransferItem;
 };
 
-/** A list of DataTransferItem objects representing items being dragged. During a drag operation, each DragEvent has a dataTransfer property and that property is a DataTransferItemList. */
+/** Una lista de objetos DataTransferItem que representan elementos que se están arrastrando. Durante una operación de arrastre, cada DragEvent tiene una propiedad dataTransfer y esa propiedad es una DataTransferItemList. */
 interface DataTransferItemList {
     /**
      * Devuelve el número de elementos en el almacén de datos de arrastre.
      */
     readonly length: number;
     /**
-     * Adds a new entry for the given data to the drag data store. If the data is plain text then a type string has to be provided also.
+     * Agrega una nueva entrada para los datos proporcionados al almacén de datos de arrastre. Si los datos son texto sin formato, también se debe proporcionar una cadena de tipo.
      */
     add(data: string, type: string): DataTransferItem | null;
     add(data: File): DataTransferItem | null;
     /**
-     * Removes all the entries in the drag data store.
+     * Elimina todas las entradas en el almacén de datos de arrastre.
      */
     clear(): void;
     /**
-     * Removes the indexth entry in the drag data store.
+     * Elimina la entrada indexth en el almacén de datos de arrastre.
      */
     remove(index: number): void;
     [index: number]: DataTransferItem;
@@ -4145,7 +4145,7 @@ declare var DataTransferItemList: {
     new(): DataTransferItemList;
 };
 
-/** A delay-line; an AudioNode audio-processing module that causes a delay between the arrival of an input data and its propagation to the output. */
+/** Una línea de retraso; un módulo de procesamiento de audio AudioNode que provoca un retraso entre la llegada de un dato de entrada y su propagación a la salida. */
 interface DelayNode extends AudioNode {
     readonly delayTime: AudioParam;
 }
@@ -4155,7 +4155,7 @@ declare var DelayNode: {
     new(context: BaseAudioContext, options?: DelayOptions): DelayNode;
 };
 
-/** The DeviceMotionEvent provides web developers with information about the speed of changes for the device's position and orientation. */
+/** DeviceMotionEvent proporciona a los desarrolladores web información sobre la velocidad de los cambios de posición y orientación del dispositivo. */
 interface DeviceMotionEvent extends Event {
     readonly acceleration: DeviceMotionEventAcceleration | null;
     readonly accelerationIncludingGravity: DeviceMotionEventAcceleration | null;
@@ -4180,7 +4180,7 @@ interface DeviceMotionEventRotationRate {
     readonly gamma: number | null;
 }
 
-/** The DeviceOrientationEvent provides web developers with information from the physical orientation of the device running the web page. */
+/** DeviceOrientationEvent proporciona a los desarrolladores web información de la orientación física del dispositivo que ejecuta la página web. */
 interface DeviceOrientationEvent extends Event {
     readonly absolute: boolean;
     readonly alpha: number | null;
@@ -4202,14 +4202,14 @@ interface DocumentEventMap extends DocumentAndElementEventHandlersEventMap, Glob
     "visibilitychange": Event;
 }
 
-/** Any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. */
+/** Cualquier página web cargada en el navegador y sirve como punto de entrada al contenido de la página web, que es el árbol DOM. */
 interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShadowRoot, FontFaceSource, GlobalEventHandlers, NonElementParentNode, ParentNode, XPathEvaluatorBase {
     /**
-     * Sets or gets the URL for the current document.
+     * Establece u obtiene la URL del documento actual.
      */
     readonly URL: string;
     /**
-     * Sets or gets the color of all active links in the document.
+     * Establece u obtiene el color de todos los enlaces activos en el documento.
      */
     /** @deprecated */
     alinkColor: string;
@@ -4219,22 +4219,22 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     /** @deprecated */
     readonly all: HTMLAllCollection;
     /**
-     * Retrieves a collection of all a objects that have a name and/or id property. Objects in this collection are in HTML source order.
+     * Recupera una colección de todos los objetos que tienen una propiedad de name y/o id. Los objetos de esta colección están en orden de origen HTML.
      */
     /** @deprecated */
     readonly anchors: HTMLCollectionOf<HTMLAnchorElement>;
     /**
-     * Retrieves a collection of all applet objects in the document.
+     * Recupera una colección de todos los objetos applet en el documento.
      */
     /** @deprecated */
     readonly applets: HTMLCollection;
     /**
-     * Deprecated. Sets or retrieves a value that indicates the background color behind the object.
+     * Obsoleto. Establece o recupera un valor que indica el color de fondo detrás del objeto.
      */
     /** @deprecated */
     bgColor: string;
     /**
-     * Specifies the beginning and end of the document body.
+     * Especifica el principio y final del cuerpo del documento.
      */
     body: HTMLElement;
     /**
@@ -4242,11 +4242,11 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     readonly characterSet: string;
     /**
-     * Gets or sets the character set used to encode the object.
+     * Obtiene o establece el juego de caracteres usado para codificar el objeto.
      */
     readonly charset: string;
     /**
-     * Gets a value that indicates whether standards-compliant mode is switched on for the object.
+     * Obtiene un valor que indica si el modo compatible con los estándares está activado para el objeto.
      */
     readonly compatMode: string;
     /**
@@ -4254,15 +4254,15 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     readonly contentType: string;
     /**
-     * Devuelve las cookies HTTP que se aplican al Documento. If there are no cookies or cookies can't be applied to this resource, the empty string will be returned.
+     * Devuelve las cookies HTTP que se aplican al Documento. Si no hay cookies o las cookies no se pueden aplicar a este recurso, se devolverá la cadena vacía.
      *
-     * Can be set, to add a new cookie to the element's set of HTTP cookies.
+     * Se puede configurar para agregar una nueva cookie al conjunto de cookies HTTP del elemento.
      *
-     * If the contents are sandboxed into a unique origin (e.g. in an iframe with the sandbox attribute), a "SecurityError" DOMException will be thrown on getting and setting.
+     * Si el contenido está en un espacio aislado en un origen único (por ejemplo, en un iframe con el atributo de espacio aislado), se generará una "SecurityError"  de DOMException al obtener y configurar.
      */
     cookie: string;
     /**
-     * Devuelve el elemento script, o el elemento de script SVG, que se está ejecutando actualmente, siempre que el elemento represente un script clásico. In the case of reentrant script execution, returns the one that most recently started executing amongst those that have not yet finished executing.
+     * Devuelve el elemento script, o el elemento de script SVG, que se está ejecutando actualmente, siempre que el elemento represente un script clásico. En el caso de la ejecución de un script reentrante, devuelve el que comenzó a ejecutarse recientemente entre los que aún no han terminado de ejecutarse.
      *
      * Devuelve null si el documento no está ejecutando actualmente un script o un elemento script SVG (por ejemplo, porque el script en ejecución es un controlador de eventos o un timeout), o si el script o el elemento script SVG que se está ejecutando actualmente representa un script de módulo.
      */
@@ -4272,19 +4272,19 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     readonly defaultView: (WindowProxy & typeof globalThis) | null;
     /**
-     * Sets or gets a value that indicates whether the document can be edited.
+     * Establece u obtiene un valor que indica si el documento se puede editar.
      */
     designMode: string;
     /**
-     * Sets or retrieves a value that indicates the reading order of the object.
+     * Establece o recupera un valor que indica el orden de lectura del objeto.
      */
     dir: string;
     /**
-     * Gets an object representing the document type declaration associated with the current document.
+     * Obtiene un objeto que representa la declaración de tipo de documento asociada con el documento actual.
      */
     readonly doctype: DocumentType | null;
     /**
-     * Gets a reference to the root node of the document.
+     * Obtiene una referencia al nodo raíz del documento.
      */
     readonly documentElement: HTMLElement;
     /**
@@ -4292,20 +4292,20 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     readonly documentURI: string;
     /**
-     * Sets or gets the security domain of the document.
+     * Establece u obtiene el dominio de seguridad del documento.
      */
     domain: string;
     /**
-     * Retrieves a collection of all embed objects in the document.
+     * Recupera una colección de todos los objetos incrustados en el documento.
      */
     readonly embeds: HTMLCollectionOf<HTMLEmbedElement>;
     /**
-     * Sets or gets the foreground (text) color of the document.
+     * Establece u obtiene el color de primer plano (el texto) del documento.
      */
     /** @deprecated */
     fgColor: string;
     /**
-     * Retrieves a collection, in source order, of all form objects in the document.
+     * Recupera una colección, en orden de la fuente, de todos los objetos de formulario del documento.
      */
     readonly forms: HTMLCollectionOf<HTMLFormElement>;
     /** @deprecated */
@@ -4320,11 +4320,11 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     readonly head: HTMLHeadElement;
     readonly hidden: boolean;
     /**
-     * Retrieves a collection, in source order, of img objects in the document.
+     * Recupera una colección, en orden del origen, de objetos img en el documento.
      */
     readonly images: HTMLCollectionOf<HTMLImageElement>;
     /**
-     * Gets the implementation object of the current document.
+     * Obtiene el objeto de implementación del documento actual.
      */
     readonly implementation: DOMImplementation;
     /**
@@ -4336,16 +4336,16 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     readonly lastModified: string;
     /**
-     * Sets or gets the color of the document links.
+     * Establece u obtiene el color de los vínculos del documento.
      */
     /** @deprecated */
     linkColor: string;
     /**
-     * Retrieves a collection of all a objects that specify the href property and all area objects in the document.
+     * Recupera una colección de todos los objetos que especifican la propiedad href y todos los objetos de área en el documento.
      */
     readonly links: HTMLCollectionOf<HTMLAnchorElement | HTMLAreaElement>;
     /**
-     * Contains information about the current URL.
+     * Contiene información sobre la URL actual.
      */
     get location(): Location;
     set location(href: string | Location);
@@ -4354,8 +4354,8 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     onpointerlockchange: ((this: Document, ev: Event) => any) | null;
     onpointerlockerror: ((this: Document, ev: Event) => any) | null;
     /**
-     * Fires when the state of the object has changed.
-     * @param ev The event
+     * Se dispara cuando el estado del objeto ha cambiado.
+     * @param ev El evento
      */
     onreadystatechange: ((this: Document, ev: Event) => any) | null;
     onvisibilitychange: ((this: Document, ev: Event) => any) | null;
@@ -4366,33 +4366,33 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     readonly plugins: HTMLCollectionOf<HTMLEmbedElement>;
     /**
-     * Retrieves a value that indicates the current state of the object.
+     * Recupera un valor que indica el estado actual del objeto.
      */
     readonly readyState: DocumentReadyState;
     /**
-     * Gets the URL of the location that referred the user to the current page.
+     * Obtiene la URL de la ubicación que refirió al usuario a la página actual.
      */
     readonly referrer: string;
     /**
-     * Retrieves a collection of all script objects in the document.
+     * Recupera una colección de todos los objetos script del documento.
      */
     readonly scripts: HTMLCollectionOf<HTMLScriptElement>;
     readonly scrollingElement: Element | null;
     readonly timeline: DocumentTimeline;
     /**
-     * Contains the title of the document.
+     * Contiene el título del documento.
      */
     title: string;
     readonly visibilityState: VisibilityState;
     /**
-     * Sets or gets the color of the links that the user has visited.
+     * Establece u obtiene el color de los enlaces que ha visitado el usuario.
      */
     /** @deprecated */
     vlinkColor: string;
     /**
-     * Moves node from another document and returns it.
+     * Mueve el nodo de otro documento y lo devuelve.
      *
-     * If node is a document, throws a "NotSupportedError" DOMException or, if node is a shadow root, throws a "HierarchyRequestError" DOMException.
+     * Si el nodo es un documento, lanza una excepción DOMException "NotSupportedError" o, si el nodo es una raíz oculta, lanza una excepción DOMException "HierarchyRequestError".
      */
     adoptNode<T extends Node>(node: T): T;
     /** @deprecated */
@@ -4400,12 +4400,12 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     /** @deprecated */
     clear(): void;
     /**
-     * Closes an output stream and forces the sent data to display.
+     * Cierra un flujo de salida y fuerza la visualización de los datos enviados.
      */
     close(): void;
     /**
-     * Creates an attribute object with a specified name.
-     * @param name String that sets the attribute object's name.
+     * Crea un atributo de objeto con un nombre especificado.
+     * @param name Cadena que establece el nombre del objeto de atributo.
      */
     createAttribute(localName: string): Attr;
     createAttributeNS(namespace: string | null, qualifiedName: string): Attr;
@@ -4415,16 +4415,16 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     createCDATASection(data: string): CDATASection;
     /**
      * Crea un objeto de comentario con los datos especificados.
-     * @param data Sets the comment object's data.
+     * @param data Establece los datos del objeto comentario.
      */
     createComment(data: string): Comment;
     /**
-     * Creates a new document.
+     * Crea un nuevo documento.
      */
     createDocumentFragment(): DocumentFragment;
     /**
-     * Creates an instance of the element for the specified tag.
-     * @param tagName The name of an element.
+     * Crea una instancia del elemento para la etiqueta especificada.
+     * @param tagName El nombre de un elemento.
      */
     createElement<K extends keyof HTMLElementTagNameMap>(tagName: K, options?: ElementCreationOptions): HTMLElementTagNameMap[K];
     /** @deprecated */
@@ -4433,17 +4433,17 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     /**
      * Devuelve un elemento con namespace = namespace. Su prefijo de espacio de nombres será todo antes de ":" (U+003E) en nombre calificado o null. Su nombre local será todo después de ":" (U+003E) en nombre calificado o nombre calificado.
      *
-     * If localName does not match the Name production an "InvalidCharacterError" DOMException will be thrown.
+     * Si localName no coincide con la producción de Name, se generará una "InvalidCharacterError" de DOMException.
      *
-     * If one of the following conditions is true a "NamespaceError" DOMException will be thrown:
+     * Si una de las siguientes condiciones es true, se lanzará un "NamespaceError" de  DOMException:
      *
-     * localName does not match the QName production.
-     * Namespace prefix is not null and namespace is the empty string.
-     * Namespace prefix is "xml" and namespace is not the XML namespace.
-     * qualifiedName or namespace prefix is "xmlns" and namespace is not the XMLNS namespace.
-     * namespace is the XMLNS namespace and neither qualifiedName nor namespace prefix is "xmlns".
+     * localName no coincide con la producción de QName.
+     * El prefijo del espacio de nombres no es null y el espacio de nombres es la cadena vacía.
+     * El prefijo del espacio de nombres es "xml" y el espacio de nombres no es el espacio de nombres XML.
+     * El nombre calificado o el prefijo del espacio de nombres es "xmlns" y el espacio de nombres no es el espacio de nombres XMLNS.
+     * el espacio de nombres es el espacio de nombres XMLNS y ni el nombre calificado ni el prefijo del espacio de nombres son "xmlns".
      *
-     * When supplied, options's is can be used to create a customized built-in element.
+     * Cuando se suministran, las opciones se pueden utilizar para crear un elemento integrado personalizado.
      */
     createElementNS(namespaceURI: "http://www.w3.org/1999/xhtml", qualifiedName: string): HTMLElement;
     createElementNS<K extends keyof SVGElementTagNameMap>(namespaceURI: "http://www.w3.org/2000/svg", qualifiedName: K): SVGElementTagNameMap[K];
@@ -4509,10 +4509,10 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     createEvent(eventInterface: "WheelEvent"): WheelEvent;
     createEvent(eventInterface: string): Event;
     /**
-     * Creates a NodeIterator object that you can use to traverse filtered lists of nodes or elements in a document.
-     * @param root The root element or node to start traversing on.
-     * @param whatToShow The type of nodes or elements to appear in the node list
-     * @param filter A custom NodeFilter function to use. For more information, see filter. Use null for no filter.
+     * Crea un objeto NodeIterator que puedes usar para recorrer listas filtradas de nodos o elementos en un documento.
+     * @param root El elemento raíz o nodo por el que empezar a atravesar.
+     * @param whatToShow El tipo de nodos o elementos que aparecerán en la lista de nodos
+     * @param filter Una función NodeFilter personalizada para usar. Para obtener más información, consulta el filtro. Utiliza null para ningún filtro.
      */
     createNodeIterator(root: Node, whatToShow?: number, filter?: NodeFilter | null): NodeIterator;
     /**
@@ -4529,10 +4529,10 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     createTextNode(data: string): Text;
     /**
-     * Creates a TreeWalker object that you can use to traverse filtered lists of nodes or elements in a document.
-     * @param root The root element or node to start traversing on.
-     * @param whatToShow The type of nodes or elements to appear in the node list. For more information, see whatToShow.
-     * @param filter A custom NodeFilter function to use.
+     * Crea un objeto TreeWalker que puedes usar para recorrer listas filtradas de nodos o elementos en un documento.
+     * @param root El elemento raíz o nodo por el que empezar a atravesar.
+     * @param whatToShow El tipo de nodos o elementos que aparecerán en la lista de nodos. Para obtener más información, consulta whatToShow.
+     * @param filter Una función NodeFilter personalizada para usar.
      */
     createTreeWalker(root: Node, whatToShow?: number, filter?: NodeFilter | null): TreeWalker;
     /**
@@ -4543,15 +4543,15 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     elementFromPoint(x: number, y: number): Element | null;
     elementsFromPoint(x: number, y: number): Element[];
     /**
-     * Executes a command on the current document, current selection, or the given range.
-     * @param commandId String that specifies the command to execute. This command can be any of the command identifiers that can be executed in script.
-     * @param showUI Display the user interface, defaults to false.
-     * @param value Value to assign.
+     * Ejecuta un comando en el documento actual, la selección actual o el rango dado.
+     * @param commandId Cadena que especifica el comando a ejecutar. Este comando puede ser cualquiera de los identificadores de comando que se pueden ejecutar en el script.
+     * @param showUI Muestra la interfaz de usuario, el valor predeterminado es false.
+     * @param value Valor a asignar.
      */
     /** @deprecated */
     execCommand(commandId: string, showUI?: boolean, value?: string): boolean;
     /**
-     * Stops document's fullscreen element from being displayed fullscreen and resolves promise when done.
+     * Evita que el elemento de fullscreen del documento se muestre en pantalla completa y resuelve la promesa cuando finaliza.
      */
     exitFullscreen(): Promise<void>;
     exitPictureInPicture(): Promise<void>;
@@ -4566,25 +4566,25 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     getElementsByClassName(classNames: string): HTMLCollectionOf<Element>;
     /**
-     * Gets a collection of objects based on the value of the NAME or ID attribute.
-     * @param elementName Gets a collection of objects based on the value of the NAME or ID attribute.
+     * Obtiene una colección de objetos basada en el valor del atributo NAME o ID.
+     * @param elementName Obtiene una colección de objetos basada en el valor del atributo NAME o ID.
      */
     getElementsByName(elementName: string): NodeListOf<HTMLElement>;
     /**
-     * Retrieves a collection of objects based on the specified element name.
-     * @param name Specifies the name of an element.
+     * Recupera una colección de objetos basada en el nombre del elemento especificado.
+     * @param name Especifica el nombre de un elemento.
      */
     getElementsByTagName<K extends keyof HTMLElementTagNameMap>(qualifiedName: K): HTMLCollectionOf<HTMLElementTagNameMap[K]>;
     getElementsByTagName<K extends keyof SVGElementTagNameMap>(qualifiedName: K): HTMLCollectionOf<SVGElementTagNameMap[K]>;
     getElementsByTagName(qualifiedName: string): HTMLCollectionOf<Element>;
     /**
-     * If namespace and localName are "*" returns a HTMLCollection of all descendant elements.
+     * Si el espacio de nombres y el nombre local son "*", devuelve una colección HTMLCollection de todos los elementos descendientes.
      *
-     * If only namespace is "*" returns a HTMLCollection of all descendant elements whose local name is localName.
+     * Si solo el espacio de nombres es "*", devuelve una HTMLCollection de todos los elementos descendientes cuyo nombre local es localName.
      *
-     * If only localName is "*" returns a HTMLCollection of all descendant elements whose namespace is namespace.
+     * Si localName solo es "*", devuelve una HTMLCollection de todos los elementos descendientes cuyo espacio de nombres es namespace.
      *
-     * Otherwise, returns a HTMLCollection of all descendant elements whose namespace is namespace and local name is localName.
+     * De lo contrario, devuelve una HTMLCollection de todos los elementos descendientes cuyo espacio de nombres es espacio de nombres y el nombre local es localName.
      */
     getElementsByTagNameNS(namespaceURI: "http://www.w3.org/1999/xhtml", localName: string): HTMLCollectionOf<HTMLElement>;
     getElementsByTagNameNS(namespaceURI: "http://www.w3.org/2000/svg", localName: string): HTMLCollectionOf<SVGElement>;
@@ -4605,11 +4605,11 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     importNode<T extends Node>(node: T, deep?: boolean): T;
     /**
-     * Opens a new window and loads a document specified by a given URL. Also, opens a new window that uses the url parameter and the name parameter to collect the output of the write method and the writeln method.
-     * @param url Specifies a MIME type for the document.
-     * @param name Specifies the name of the window. This name is used as the value for the TARGET attribute on a form or an anchor element.
-     * @param features Contains a list of items separated by commas. Each item consists of an option and a value, separated by an equals sign (for example, "fullscreen=yes, toolbar=yes"). The following values are supported.
-     * @param replace Specifies whether the existing entry for the document is replaced in the history list.
+     * Abre una nueva ventana y carga un documento especificado por una URL dada. Además, abre una nueva ventana que usa el parámetro url y el parámetro name para recopilar la salida del método write y el método writeln.
+     * @param url Especifica un tipo MIME para el documento.
+     * @param name Especifica el nombre de la ventana. Este nombre se usa como valor para el atributo TARGET en un formulario o un elemento ancla.
+     * @param features Contiene una lista de elementos separados por comas. Cada elemento consta de una opción y un valor, separados por un signo igual (por ejemplo, "fullscreen=yes, toolbar=yes"). Se admiten los siguientes valores.
+     * @param replace Especifica si la entrada existente para el documento se reemplaza en la lista de historial.
      */
     open(unused1?: string, unused2?: string): Document;
     open(url: string | URL, name: string, features: string): WindowProxy | null;
@@ -4645,13 +4645,13 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
     releaseEvents(): void;
     requestStorageAccess(): Promise<void>;
     /**
-     * Writes one or more HTML expressions to a document in the specified window.
-     * @param content Specifies the text and HTML tags to write.
+     * Escribe una o más expresiones HTML en un documento en la ventana especificada.
+     * @param content Especifica el texto y las etiquetas HTML para escribir.
      */
     write(...text: string[]): void;
     /**
-     * Writes one or more HTML expressions, followed by a carriage return, to a document in the specified window.
-     * @param content The text and HTML tags to write.
+     * Escribe una o más expresiones HTML, seguidas de un retorno de carro, en un documento en la ventana especificada.
+     * @param content El texto y las etiquetas HTML para escribir.
      */
     writeln(...text: string[]): void;
     addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -4681,7 +4681,7 @@ interface DocumentAndElementEventHandlers {
     removeEventListener(type: string, listener: EventListener, options?: boolean | EventListenerOptions): void;
 }
 
-/** A minimal document object that has no parent. It is used as a lightweight version of Document that stores a segment of a document structure comprised of nodes just like a standard document. The key difference is that because the document fragment isn't part of the active document tree structure, changes made to the fragment don't affect the document, cause reflow, or incur any performance impact that can occur when changes are made. */
+/** Un objeto de documento mínimo que no tiene padre. Se utiliza como una versión ligera de Document que almacena un segmento de una estructura de documento compuesta por nodos como un documento estándar. La diferencia clave es que, debido a que el fragmento de documento no forma parte de la estructura de árbol del documento activo, los cambios realizados en el fragmento no afectan al documento, provocan reflujo ni tienen ningún impacto en el rendimiento que pueda ocurrir cuando se realizan los cambios. */
 interface DocumentFragment extends Node, NonElementParentNode, ParentNode {
 }
 
@@ -4694,9 +4694,9 @@ interface DocumentOrShadowRoot {
     /**
      * Devuelve el elemento más profundo del documento a través del cual o al que se enrutan los eventos clave. Este es, en términos generales, el elemento enfocado en el documento.
      *
-     * For the purposes of this API, when a child browsing context is focused, its container is focused in the parent browsing context. For example, if the user moves the focus to a text control in an iframe, the iframe is the element returned by the activeElement API in the iframe's node document.
+     * Para los fines de esta API, cuando se enfoca un contexto de navegación secundario, su contenedor se enfoca en el contexto de navegación principal. Por ejemplo, si el usuario mueve el foco a un control de texto en un iframe, el iframe es el elemento devuelto por la API activeElement en el nodo del documento de iframe.
      *
-     * Similarly, when the focused element is in a different node tree than documentOrShadowRoot, the element returned will be the host that's located in the same node tree as documentOrShadowRoot if documentOrShadowRoot is a shadow-including inclusive ancestor of the focused element, and null if not.
+     * De manera similar, cuando el elemento enfocado está en un árbol de nodos diferente al de documentOrShadowRoot, el elemento devuelto será el host que está ubicado en el mismo árbol de nodos que documentOrShadowRoot si documentOrShadowRoot es un ancestro inclusivo que incluye sombras del elemento enfocado, y null si no lo es.
      */
     readonly activeElement: Element | null;
     /**
@@ -4706,7 +4706,7 @@ interface DocumentOrShadowRoot {
     readonly pictureInPictureElement: Element | null;
     readonly pointerLockElement: Element | null;
     /**
-     * Retrieves a collection of styleSheet objects representing the style sheets that correspond to each instance of a link or style object in the document.
+     * Recupera una colección de objetos styleSheet que representan las hojas de estilo que corresponden a cada instancia de un enlace u objeto de estilo en el documento.
      */
     readonly styleSheets: StyleSheetList;
     getAnimations(): Animation[];
@@ -4720,7 +4720,7 @@ declare var DocumentTimeline: {
     new(options?: DocumentTimelineOptions): DocumentTimeline;
 };
 
-/** A Node containing a doctype. */
+/** Un nodo que contiene un doctype. */
 interface DocumentType extends Node, ChildNode {
     readonly name: string;
     readonly ownerDocument: Document;
@@ -4733,7 +4733,7 @@ declare var DocumentType: {
     new(): DocumentType;
 };
 
-/** A DOM event that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way. */
+/** Un evento DOM que representa una interacción de arrastrar y soltar. El usuario inicia un arrastre colocando un dispositivo de puntero (como un mouse) en la superficie táctil y luego arrastrando el puntero a una nueva ubicación (como otro elemento DOM). Las aplicaciones son libres de interpretar una interacción de arrastrar y soltar de una manera específica de la aplicación. */
 interface DragEvent extends MouseEvent {
     /**
      * Devuelve el objeto DataTransfer para el evento.
@@ -4746,7 +4746,7 @@ declare var DragEvent: {
     new(type: string, eventInitDict?: DragEventInit): DragEvent;
 };
 
-/** Inherits properties from its parent, AudioNode. */
+/** Hereda las propiedades de su padre, AudioNode. */
 interface DynamicsCompressorNode extends AudioNode {
     readonly attack: AudioParam;
     readonly knee: AudioParam;
@@ -4779,7 +4779,7 @@ interface EXT_color_buffer_half_float {
 interface EXT_float_blend {
 }
 
-/** The EXT_frag_depth extension is part of the WebGL API and enables to set a depth value of a fragment from within the fragment shader. */
+/** La extensión EXT_frag_depth es parte de la API de WebGL y permite establecer un valor de profundidad de un fragmento desde dentro del sombreador de fragmentos. */
 interface EXT_frag_depth {
 }
 
@@ -4800,7 +4800,7 @@ interface EXT_texture_compression_rgtc {
     readonly COMPRESSED_SIGNED_RED_RGTC1_EXT: GLenum;
 }
 
-/** The EXT_texture_filter_anisotropic extension is part of the WebGL API and exposes two constants for anisotropic filtering (AF). */
+/** La extensión EXT_texture_filter_anisotropic es parte de la API de WebGL y expone dos constantes para el filtrado anisotrópico (AF). */
 interface EXT_texture_filter_anisotropic {
     readonly MAX_TEXTURE_MAX_ANISOTROPY_EXT: GLenum;
     readonly TEXTURE_MAX_ANISOTROPY_EXT: GLenum;
@@ -4811,11 +4811,11 @@ interface ElementEventMap {
     "fullscreenerror": Event;
 }
 
-/** Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element. */
+/** Element es la clase base más general de la que heredan todos los objetos de Document. Sólo tiene métodos y propiedades comunes a todo tipo de elementos. Clases más específicas heredan de Element. */
 interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, NonDocumentTypeChildNode, ParentNode, Slottable {
     readonly attributes: NamedNodeMap;
     /**
-     * Allows for manipulation of element's class content attribute as a set of whitespace-separated tokens through a DOMTokenList object.
+     * Permite la manipulación del atributo content de la clase element, como un conjunto de tokens separados por espacios en blanco a través de un objeto DOMTokenList.
      */
     readonly classList: DOMTokenList;
     /**
@@ -4852,15 +4852,15 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
     scrollTop: number;
     readonly scrollWidth: number;
     /**
-     * Returns element's shadow root, if any, and if shadow root's mode is "open", and null otherwise.
+     * Devuelve la raíz oculta del elemento, si la hay, y si el modo de la raíz oculta es "open", y null en caso contrario.
      */
     readonly shadowRoot: ShadowRoot | null;
     /**
-     * Returns the value of element's slot content attribute. Se puede configurar para cambiarlo.
+     * Devuelve el valor del atributo de contenido de la ranura del elemento. Se puede configurar para cambiarlo.
      */
     slot: string;
     /**
-     * Returns the HTML-uppercased qualified name.
+     * Devuelve el nombre HTML completo en mayúsculas.
      */
     readonly tagName: string;
     /**
@@ -4868,21 +4868,21 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
      */
     attachShadow(init: ShadowRootInit): ShadowRoot;
     /**
-     * Returns the first (starting at element) inclusive ancestor that matches selectors, and null otherwise.
+     * Devuelve el primer ancestro inclusivo (que comienza en el elemento y) que coincide con los selectores y es null en caso contrario.
      */
     closest<K extends keyof HTMLElementTagNameMap>(selector: K): HTMLElementTagNameMap[K] | null;
     closest<K extends keyof SVGElementTagNameMap>(selector: K): SVGElementTagNameMap[K] | null;
     closest<E extends Element = Element>(selectors: string): E | null;
     /**
-     * Returns element's first attribute whose qualified name is qualifiedName, and null if there is no such attribute otherwise.
+     * Devuelve el primer atributo del elemento cuyo nombre calificado es qualifiedName, y null si no existe tal atributo de otra manera.
      */
     getAttribute(qualifiedName: string): string | null;
     /**
-     * Returns element's attribute whose namespace is namespace and local name is localName, and null if there is no such attribute otherwise.
+     * Devuelve el atributo del elemento cuyo espacio de nombres es espacio de nombres y el nombre local es localName, y es null si no existe dicho atributo.
      */
     getAttributeNS(namespace: string | null, localName: string): string | null;
     /**
-     * Returns the qualified names of all element's attributes. Can contain duplicates.
+     * Devuelve los nombres calificados de los atributos de todos los elementos. Puede contener duplicados.
      */
     getAttributeNames(): string[];
     getAttributeNode(qualifiedName: string): Attr | null;
@@ -4916,23 +4916,23 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
     insertAdjacentHTML(position: InsertPosition, text: string): void;
     insertAdjacentText(where: InsertPosition, data: string): void;
     /**
-     * Returns true if matching selectors against element's root yields element, and false otherwise.
+     * Devuelve true si los selectores coincidentes con la raíz del elemento da como resultado el elemento, y false en caso contrario.
      */
     matches(selectors: string): boolean;
     releasePointerCapture(pointerId: number): void;
     /**
-     * Removes element's first attribute whose qualified name is qualifiedName.
+     * Elimina el primer atributo del elemento cuyo nombre calificado es qualifiedName.
      */
     removeAttribute(qualifiedName: string): void;
     /**
-     * Removes element's attribute whose namespace is namespace and local name is localName.
+     * Elimina el atributo del elemento cuyo espacio de nombres es namespace y el nombre local es localName.
      */
     removeAttributeNS(namespace: string | null, localName: string): void;
     removeAttributeNode(attr: Attr): Attr;
     /**
-     * Displays element fullscreen and resolves promise when done.
+     * Muestra el elemento a pantalla completa y resuelve la promesa cuando termina.
      *
-     * When supplied, options's navigationUI member indicates whether showing navigation UI while in fullscreen is preferred or not. If set to "show", navigation simplicity is preferred over screen space, and if set to "hide", more screen space is preferred. User agents are always free to honor user preference over the application's. The default value "auto" indicates no application preference.
+     * Cuando se proporciona, el miembro de la interfaz de usuario de navegación de las opciones indica si se prefiere o no mostrar la interfaz de usuario de navegación en pantalla completa. Si se establece en "show", se prefiere la simplicidad de navegación al espacio de la pantalla, y si se establece en "hide", se prefiere más espacio en la pantalla. Los agentes de usuario siempre tienen la libertad de respetar las preferencias del usuario sobre las de la aplicación. El valor predeterminado "auto" indica que no hay preferencia de aplicación.
      */
     requestFullscreen(options?: FullscreenOptions): Promise<void>;
     requestPointerLock(): void;
@@ -4944,20 +4944,20 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
     scrollTo(options?: ScrollToOptions): void;
     scrollTo(x: number, y: number): void;
     /**
-     * Sets the value of element's first attribute whose qualified name is qualifiedName to value.
+     * Establece el valor del primer atributo del elemento cuyo nombre calificado es qualifiedName en valor.
      */
     setAttribute(qualifiedName: string, value: string): void;
     /**
-     * Sets the value of element's attribute whose namespace is namespace and local name is localName to value.
+     * Establece el valor del atributo del elemento cuyo espacio de nombres es namespace y el nombre local es localName en value.
      */
     setAttributeNS(namespace: string | null, qualifiedName: string, value: string): void;
     setAttributeNode(attr: Attr): Attr | null;
     setAttributeNodeNS(attr: Attr): Attr | null;
     setPointerCapture(pointerId: number): void;
     /**
-     * If force is not given, "toggles" qualifiedName, removing it if it is present and adding it if it is not present. If force is true, adds qualifiedName. If force is false, removes qualifiedName.
+     * Si no se da force, alterna -"toggles"- el qualifiedName, eliminándolo si está presente y agregándolo si no está presente. Si force es true, agrega el qualifiedName. Si force es false, elimina el qualifiedName.
      *
-     * Returns true if qualifiedName is now present, and false otherwise.
+     * Devuelve true si el qualifiedName ahora está presente y false en caso contrario.
      */
     toggleAttribute(qualifiedName: string, force?: boolean): boolean;
     /** @deprecated */
@@ -4984,7 +4984,7 @@ interface ElementContentEditable {
     readonly isContentEditable: boolean;
 }
 
-/** Events providing information related to errors in scripts or in files. */
+/** Eventos que proporcionan información relacionada con errores en scripts o en archivos. */
 interface ErrorEvent extends Event {
     readonly colno: number;
     readonly error: any;
@@ -4998,35 +4998,35 @@ declare var ErrorEvent: {
     new(type: string, eventInitDict?: ErrorEventInit): ErrorEvent;
 };
 
-/** An event which takes place in the DOM. */
+/** Un evento que tiene lugar en el DOM. */
 interface Event {
     /**
-     * Returns true or false depending on how event was initialized. True if event goes through its target's ancestors in reverse tree order, and false otherwise.
+     * Devuelve true o false dependiendo de cómo se inició el evento. True si el evento pasa por los ancestros de su destino en orden inverso del árbol, y false en caso contrario.
      */
     readonly bubbles: boolean;
     cancelBubble: boolean;
     /**
-     * Returns true or false depending on how event was initialized. Its return value does not always carry meaning, but true can indicate that part of the operation during which event was dispatched, can be canceled by invoking the preventDefault() method.
+     * Devuelve true o false dependiendo de cómo se inició el evento. Su valor de retorno no siempre tiene significado, pero true puede indicar que parte de la operación durante la cual se envió el evento se puede cancelar invocando el método preventDefault().
      */
     readonly cancelable: boolean;
     /**
-     * Returns true or false depending on how event was initialized. True if event invokes listeners past a ShadowRoot node that is the root of its target, and false otherwise.
+     * Devuelve true o false dependiendo de cómo se inició el evento. True si el evento invoca a los escuchas más allá de un nodo ShadowRoot que es la raíz de su destino, y false en caso contrario.
      */
     readonly composed: boolean;
     /**
-     * Returns the object whose event listener's callback is currently being invoked.
+     * Devuelve el objeto cuya devolución de llamada del escucha de eventos se está invocando actualmente.
      */
     readonly currentTarget: EventTarget | null;
     /**
-     * Returns true if preventDefault() was invoked successfully to indicate cancelation, and false otherwise.
+     * Devuelve true si preventDefault() se invocó con éxito para indicar la cancelación y false en caso contrario.
      */
     readonly defaultPrevented: boolean;
     /**
-     * Returns the event's phase, which is one of NONE, CAPTURING_PHASE, AT_TARGET, and BUBBLING_PHASE.
+     * Devuelve la fase del evento, que es NONE, CAPTURING_PHASE, AT_TARGET y BUBBLING_PHASE.
      */
     readonly eventPhase: number;
     /**
-     * Returns true if event was dispatched by the user agent, and false otherwise.
+     * Devuelve true si el evento fue enviado por el agente de usuario y false en caso contrario.
      */
     readonly isTrusted: boolean;
     /** @deprecated */
@@ -5052,15 +5052,15 @@ interface Event {
     /** @deprecated */
     initEvent(type: string, bubbles?: boolean, cancelable?: boolean): void;
     /**
-     * If invoked when the cancelable attribute value is true, and while executing a listener for the event with passive set to false, signals to the operation that caused event to be dispatched that it needs to be canceled.
+     * Si se invoca cuando el valor del atributo cancelable es true, y mientras se ejecuta un escucha para el evento con pasivo establecido en false, indica a la operación que provocó el envío del evento que se debe cancelar.
      */
     preventDefault(): void;
     /**
-     * Invoking this method prevents event from reaching any registered event listeners after the current one finishes running and, when dispatched in a tree, also prevents event from reaching any other objects.
+     * La invocación de este método evita que el evento llegue a los escuchas de eventos registrados después de que el actual termine de ejecutarse y, cuando se distribuye en un árbol, también evita que el evento llegue a cualquier otro objeto.
      */
     stopImmediatePropagation(): void;
     /**
-     * When dispatched in a tree, invoking this method prevents event from reaching any objects other than the current object.
+     * Cuando se distribuye en un árbol, la invocación de este método evita que el evento llegue a cualquier objeto que no sea el objeto actual.
      */
     stopPropagation(): void;
     readonly AT_TARGET: number;
@@ -5089,19 +5089,19 @@ interface EventSource extends EventTarget {
     onmessage: ((this: EventSource, ev: MessageEvent) => any) | null;
     onopen: ((this: EventSource, ev: Event) => any) | null;
     /**
-     * Returns the state of this EventSource object's connection. Puede tener los valores descritos a continuación.
+     * Devuelve el estado de la conexión de este objeto EventSource. Puede tener los valores descritos a continuación.
      */
     readonly readyState: number;
     /**
-     * Returns the URL providing the event stream.
+     * Devuelve la URL que proporciona el flujo de eventos.
      */
     readonly url: string;
     /**
-     * Returns true if the credentials mode for connection requests to the URL providing the event stream is set to "include", and false otherwise.
+     * Devuelve true si el modo de credenciales para las solicitudes de conexión a la URL que proporciona el flujo de eventos está establecido en "include", y false en caso contrario.
      */
     readonly withCredentials: boolean;
     /**
-     * Aborts any instances of the fetch algorithm started for this EventSource object, and sets the readyState attribute to CLOSED.
+     * Anula cualquier instancia del algoritmo de recuperación iniciado para este objeto EventSource y establece el atributo readyState en CLOSED.
      */
     close(): void;
     readonly CLOSED: number;
@@ -5121,30 +5121,30 @@ declare var EventSource: {
     readonly OPEN: number;
 };
 
-/** EventTarget is a DOM interface implemented by objects that can receive events and may have listeners for them. */
+/** EventTarget es una interfaz DOM implementada por objetos que pueden recibir eventos y pueden tener escuchas para ellos. */
 interface EventTarget {
     /**
-     * Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
+     * Agrega un escucha de eventos para eventos cuyo valor de atributo type es type. El argumento callback establece la devolución de llamada que se invocará cuando se envíe el evento.
      *
-     * The options argument sets listener-specific options. For compatibility this can be a boolean, in which case the method behaves exactly as if the value was specified as options's capture.
+     * El argumento options establece opciones específicas del escucha. Por compatibilidad, esto puede ser un valor booleano, en cuyo caso el método se comporta exactamente como si el valor se hubiera especificado como captura de opciones.
      *
-     * When set to true, options's capture prevents callback from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE. When false (or not present), callback will not be invoked when event's eventPhase attribute value is CAPTURING_PHASE. Either way, callback will be invoked if event's eventPhase attribute value is AT_TARGET.
+     * Cuando se establece en true, la captura de opciones evita que se invoque la devolución de llamada cuando el valor del atributo eventPhase del evento es BUBBLING_PHASE. Cuando es false (o no está presente), la devolución de llamada no se invocará cuando el valor del atributo eventPhase del evento sea CAPTURING_PHASE. De cualquier manera, se invocará la devolución de llamada si el valor del atributo eventPhase del evento es AT_TARGET.
      *
-     * When set to true, options's passive indicates that the callback will not cancel the event by invoking preventDefault(). This is used to enable performance optimizations described in § 2.8 Observing event listeners.
+     * Cuando se establece en true, el pasivo de las opciones indica que la devolución de llamada no cancelará el evento al invocar a  preventDefault(). Esto se utiliza para habilitar las optimizaciones de rendimiento descritas en § 2.8 Observación de escuchas de eventos.
      *
-     * When set to true, options's once indicates that the callback will only be invoked once after which the event listener will be removed.
+     * Cuando se establece en true, las opciones una vez indican que la devolución de llamada solo se invocará una vez, después de lo cual se eliminará el escucha de eventos.
      *
-     * If an AbortSignal is passed for options's signal, then the event listener will be removed when signal is aborted.
+     * Si se pasa un AbortSignal para la señal de opciones, el escucha de eventos se eliminará cuando se cancele la señal.
      *
-     * The event listener is appended to target's event listener list and is not appended if it has the same type, callback, and capture.
+     * El escucha de eventos se agrega a la lista de escuchas de eventos del destino y no se agrega si tiene el mismo tipo, callback y capture.
      */
     addEventListener(type: string, callback: EventListener | null, options?: AddEventListenerOptions | boolean): void;
     /**
-     * Dispatches a synthetic event event to target and returns true if either event's cancelable attribute value is false or its preventDefault() method was not invoked, and false otherwise.
+     * Envía un evento de evento sintético al destino y devuelve true si el valor del atributo cancelable de cualquiera de los eventos es false o si no se invocó a su método preventDefault(), y false en caso contrario.
      */
     dispatchEvent(event: Event): boolean;
     /**
-     * Removes the event listener in target's event listener list with the same type, callback, and options.
+     * Elimina el escucha de eventos en la lista de escuchas de eventos del objetivo con el mismo tipo, callback y options.
      */
     removeEventListener(type: string, callback: EventListener | null, options?: EventListenerOptions | boolean): void;
 }
@@ -5168,7 +5168,7 @@ declare var External: {
     new(): External;
 };
 
-/** Provides information about files and allows JavaScript in a web page to access their content. */
+/** Proporciona información sobre archivos y permite que JavaScript acceda al contenido de una página web. */
 interface File extends Blob {
     readonly lastModified: number;
     readonly name: string;
@@ -5180,7 +5180,7 @@ declare var File: {
     new(fileBits: BlobPart[], fileName: string, options?: FilePropertyBag): File;
 };
 
-/** An object of this type is returned by the files property of the HTML <input> element; this lets you access the list of files selected with the <input type="file"> element. It's also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage. */
+/** La propiedad de archivos del elemento HTML <input> devuelve un objeto de este tipo; esto te permite acceder a la lista de archivos seleccionados con el elemento <input type="file">. También se usa para una lista de archivos colocados en el contenido web cuando se usa la API de arrastrar y soltar; consulta el objeto DataTransfer para obtener detalles sobre este uso. */
 interface FileList {
     readonly length: number;
     item(index: number): File | null;
@@ -5201,7 +5201,7 @@ interface FileReaderEventMap {
     "progress": ProgressEvent<FileReader>;
 }
 
-/** Lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using File or Blob objects to specify the file or data to read. */
+/** Permite que las aplicaciones web lean de forma asincrónica el contenido de los archivos (o búferes de datos sin procesar) almacenados en la computadora del usuario, utilizando objetos File o Blob para especificar el archivo o los datos que se van a leer. */
 interface FileReader extends EventTarget {
     readonly error: DOMException | null;
     onabort: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null;
@@ -5290,7 +5290,7 @@ declare var FileSystemFileEntry: {
     new(): FileSystemFileEntry;
 };
 
-/** Focus-related events like focus, blur, focusin, or focusout. */
+/** Eventos relacionados con el enfoque como focus, blur, focusin o focusout. */
 interface FocusEvent extends UIEvent {
     readonly relatedTarget: EventTarget | null;
 }
@@ -5362,7 +5362,7 @@ interface FontFaceSource {
     readonly fonts: FontFaceSet;
 }
 
-/** Provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the XMLHttpRequest.send() method. It uses the same format a form would use if the encoding type were set to "multipart/form-data". */
+/** Proporciona una forma de construir fácilmente un conjunto de pares clave/valor que representan campos de formulario y sus valores, que luego se pueden enviar fácilmente mediante el método XMLHttpRequest.send(). Utiliza el mismo formato que usaría un formulario si el tipo de codificación se estableciera en "multipart/form-data". */
 interface FormData {
     append(name: string, value: string | Blob, fileName?: string): void;
     delete(name: string): void;
@@ -5380,7 +5380,7 @@ declare var FormData: {
 
 interface FormDataEvent extends Event {
     /**
-     * Returns a FormData object representing names and values of elements associated to the target form. Operations on the FormData object will affect form data to be submitted.
+     * Devuelve un objeto FormData que representa nombres y valores de elementos asociados al formulario destino. Las operaciones en el objeto FormData afectarán los datos del formulario que se enviarán.
      */
     readonly formData: FormData;
 }
@@ -5390,7 +5390,7 @@ declare var FormDataEvent: {
     new(type: string, eventInitDict: FormDataEventInit): FormDataEvent;
 };
 
-/** A change in volume. It is an AudioNode audio-processing module that causes a given gain to be applied to the input data before its propagation to the output. A GainNode always has exactly one input and one output, both with the same number of channels. */
+/** Un cambio de volumen. Es un módulo de procesamiento de audio de AudioNode que hace que se aplique una ganancia dada a los datos de entrada antes de su propagación a la salida. Un GainNode siempre tiene exactamente una entrada y una salida, ambas con el mismo número de canales. */
 interface GainNode extends AudioNode {
     readonly gain: AudioParam;
 }
@@ -5400,7 +5400,7 @@ declare var GainNode: {
     new(context: BaseAudioContext, options?: GainOptions): GainNode;
 };
 
-/** This Gamepad API interface defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id. */
+/** Esta interfaz API Gamepad define un gamepad individual u otro controlador, lo que permite el acceso a información como las pulsaciones de botones, las posiciones de los ejes y el id */
 interface Gamepad {
     readonly axes: ReadonlyArray<number>;
     readonly buttons: ReadonlyArray<GamepadButton>;
@@ -5417,7 +5417,7 @@ declare var Gamepad: {
     new(): Gamepad;
 };
 
-/** An individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device. */
+/** Un botón individual de un gamepad u otro controlador, que permite acceder al estado actual de diferentes tipos de botones disponibles en el dispositivo de control. */
 interface GamepadButton {
     readonly pressed: boolean;
     readonly touched: boolean;
@@ -5429,7 +5429,7 @@ declare var GamepadButton: {
     new(): GamepadButton;
 };
 
-/** This Gamepad API interface contains references to gamepads connected to the system, which is what the gamepad events Window.gamepadconnected and Window.gamepaddisconnected are fired in response to. */
+/** Esta interfaz API de gamepad contiene referencias a gamepads conectados al sistema, en respuesta a los que activan eventos de gamepad Window.gamepadconnected y Window.gamepaddisconnected. */
 interface GamepadEvent extends Event {
     readonly gamepad: Gamepad;
 }
@@ -5439,7 +5439,7 @@ declare var GamepadEvent: {
     new(type: string, eventInitDict: GamepadEventInit): GamepadEvent;
 };
 
-/** This Gamepad API interface represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware. */
+/** Esta interfaz API de Gamepad representa hardware en el controlador diseñado para proporcionar retroalimentación háptica al usuario (si está disponible), más comúnmente hardware de vibración. */
 interface GamepadHapticActuator {
     readonly type: GamepadHapticActuatorType;
 }
@@ -5454,7 +5454,7 @@ interface GenericTransformStream {
     readonly writable: WritableStream;
 }
 
-/** An object able to programmatically obtain the position of the device. It gives Web content access to the location of the device. This allows a Web site or app to offer customized results based on the user's location. */
+/** Un objeto capaz de obtener mediante programación la posición del dispositivo. Da acceso al contenido Web a la ubicación del dispositivo. Esto permite que un sitio web o una aplicación ofrezcan resultados personalizados según la ubicación del usuario. */
 interface Geolocation {
     clearWatch(watchId: number): void;
     getCurrentPosition(successCallback: PositionCallback, errorCallback?: PositionErrorCallback | null, options?: PositionOptions): void;
@@ -5606,8 +5606,8 @@ interface GlobalEventHandlersEventMap {
 
 interface GlobalEventHandlers {
     /**
-     * Fires when the user aborts the download.
-     * @param ev The event.
+     * Se dispara cuando el usuario aborta la descarga.
+     * @param ev El evento.
      */
     onabort: ((this: GlobalEventHandlers, ev: UIEvent) => any) | null;
     onanimationcancel: ((this: GlobalEventHandlers, ev: AnimationEvent) => any) | null;
@@ -5616,92 +5616,92 @@ interface GlobalEventHandlers {
     onanimationstart: ((this: GlobalEventHandlers, ev: AnimationEvent) => any) | null;
     onauxclick: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     /**
-     * Fires when the object loses the input focus.
-     * @param ev The focus event.
+     * Se dispara cuando el objeto pierde el foco de entrada.
+     * @param ev El evento focus.
      */
     onblur: ((this: GlobalEventHandlers, ev: FocusEvent) => any) | null;
     /**
-     * Occurs when playback is possible, but would require further buffering.
-     * @param ev The event.
+     * Ocurre cuando la reproducción es posible, pero requeriría más almacenamiento en búfer.
+     * @param ev El evento.
      */
     oncanplay: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     oncanplaythrough: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Fires when the contents of the object or selection have changed.
-     * @param ev The event.
+     * Se activa cuando el contenido del objeto o la selección ha cambiado.
+     * @param ev El evento.
      */
     onchange: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Fires when the user clicks the left mouse button on the object
-     * @param ev The mouse event.
+     * Se dispara cuando el usuario hace clic con el botón izquierdo del mouse en el objeto
+     * @param ev El evento del mouse.
      */
     onclick: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     onclose: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Fires when the user clicks the right mouse button in the client area, opening the context menu.
-     * @param ev The mouse event.
+     * Se dispara cuando el usuario hace clic con el botón derecho del mouse en el área del cliente, abriendo el menú contextual.
+     * @param ev El evento del mouse.
      */
     oncontextmenu: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     oncuechange: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Fires when the user double-clicks the object.
-     * @param ev The mouse event.
+     * Se activa cuando el usuario hace doble clic en el objeto.
+     * @param ev El evento del mouse.
      */
     ondblclick: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     /**
-     * Fires on the source object continuously during a drag operation.
-     * @param ev The event.
+     * Se dispara en el objeto fuente de forma continua durante una operación de arrastre.
+     * @param ev El evento.
      */
     ondrag: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null;
     /**
-     * Fires on the source object when the user releases the mouse at the close of a drag operation.
-     * @param ev The event.
+     * Se activa en el objeto fuente cuando el usuario suelta el mouse al finalizar una operación de arrastre.
+     * @param ev El evento.
      */
     ondragend: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null;
     /**
-     * Fires on the target element when the user drags the object to a valid drop target.
-     * @param ev The drag event.
+     * Se activa en el elemento destino cuando el usuario arrastra el objeto a un destino de colocación válido.
+     * @param ev El evento drag.
      */
     ondragenter: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null;
     /**
-     * Fires on the target object when the user moves the mouse out of a valid drop target during a drag operation.
-     * @param ev The drag event.
+     * Se activa en el objeto destino cuando el usuario mueve el mouse fuera de un destino de colocación válido durante una operación de arrastre.
+     * @param ev El evento drag.
      */
     ondragleave: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null;
     /**
-     * Fires on the target element continuously while the user drags the object over a valid drop target.
-     * @param ev The event.
+     * Se dispara continuamente en el elemento destino mientras el usuario arrastra el objeto sobre un destino de colocación válido.
+     * @param ev El evento.
      */
     ondragover: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null;
     /**
-     * Fires on the source object when the user starts to drag a text selection or selected object.
-     * @param ev The event.
+     * Se activa en el objeto fuente cuando el usuario comienza a arrastrar una selección de texto o un objeto seleccionado.
+     * @param ev El evento.
      */
     ondragstart: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null;
     ondrop: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null;
     /**
-     * Occurs when the duration attribute is updated.
-     * @param ev The event.
+     * Ocurre cuando se actualiza el atributo duration.
+     * @param ev El evento.
      */
     ondurationchange: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs when the media element is reset to its initial state.
-     * @param ev The event.
+     * Ocurre cuando el elemento multimedia se restablece a su estado inicial.
+     * @param ev El evento.
      */
     onemptied: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs when the end of playback is reached.
-     * @param ev The event
+     * Ocurre cuando se llega al final de la reproducción.
+     * @param ev El evento
      */
     onended: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Fires when an error occurs during object loading.
-     * @param ev The event.
+     * Se activa cuando se produce un error durante la carga del objeto.
+     * @param ev El evento.
      */
     onerror: OnErrorEventHandler;
     /**
-     * Fires when the object receives focus.
-     * @param ev The event.
+     * Se dispara cuando el objeto recibe el foco.
+     * @param ev El evento.
      */
     onfocus: ((this: GlobalEventHandlers, ev: FocusEvent) => any) | null;
     onformdata: ((this: GlobalEventHandlers, ev: FormDataEvent) => any) | null;
@@ -5709,82 +5709,82 @@ interface GlobalEventHandlers {
     oninput: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     oninvalid: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Fires when the user presses a key.
-     * @param ev The keyboard event
+     * Se dispara cuando el usuario presiona una tecla.
+     * @param ev El evento del teclado
      */
     onkeydown: ((this: GlobalEventHandlers, ev: KeyboardEvent) => any) | null;
     /**
-     * Fires when the user presses an alphanumeric key.
-     * @param ev The event.
+     * Se activa cuando el usuario pulsa una tecla alfanumérica.
+     * @param ev El evento.
      */
     /** @deprecated */
     onkeypress: ((this: GlobalEventHandlers, ev: KeyboardEvent) => any) | null;
     /**
-     * Fires when the user releases a key.
-     * @param ev The keyboard event
+     * Se dispara cuando el usuario suelta una tecla.
+     * @param ev El evento del teclado
      */
     onkeyup: ((this: GlobalEventHandlers, ev: KeyboardEvent) => any) | null;
     /**
-     * Fires immediately after the browser loads the object.
-     * @param ev The event.
+     * Se activa inmediatamente después de que el navegador carga el objeto.
+     * @param ev El evento.
      */
     onload: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs when media data is loaded at the current playback position.
-     * @param ev The event.
+     * Ocurre cuando los datos multimedia se cargan en la posición de reproducción actual.
+     * @param ev El evento.
      */
     onloadeddata: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs when the duration and dimensions of the media have been determined.
-     * @param ev The event.
+     * Ocurre cuando se han determinado la duración y las dimensiones del medio.
+     * @param ev El evento.
      */
     onloadedmetadata: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs when Internet Explorer begins looking for media data.
-     * @param ev The event.
+     * Ocurre cuando Internet Explorer comienza a buscar datos multimedia.
+     * @param ev El evento.
      */
     onloadstart: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     onlostpointercapture: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null;
     /**
-     * Fires when the user clicks the object with either mouse button.
-     * @param ev The mouse event.
+     * Se activa cuando el usuario hace clic en el objeto con cualquiera de los botones del mouse.
+     * @param ev El evento del mouse.
      */
     onmousedown: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     onmouseenter: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     onmouseleave: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     /**
      * Fires when the user moves the mouse over the object.
-     * @param ev The mouse event.
+     * @param ev El evento del mouse.
      */
     onmousemove: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     /**
      * Fires when the user moves the mouse pointer outside the boundaries of the object.
-     * @param ev The mouse event.
+     * @param ev El evento del mouse.
      */
     onmouseout: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     /**
      * Fires when the user moves the mouse pointer into the object.
-     * @param ev The mouse event.
+     * @param ev El evento del mouse.
      */
     onmouseover: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     /**
      * Fires when the user releases a mouse button while the mouse is over the object.
-     * @param ev The mouse event.
+     * @param ev El evento del mouse.
      */
     onmouseup: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     /**
      * Occurs when playback is paused.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onpause: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
      * Occurs when the play method is requested.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onplay: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
      * Occurs when the audio or video has started playing.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onplaying: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     onpointercancel: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null;
@@ -5797,56 +5797,56 @@ interface GlobalEventHandlers {
     onpointerup: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null;
     /**
      * Occurs to indicate progress while downloading media data.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onprogress: ((this: GlobalEventHandlers, ev: ProgressEvent) => any) | null;
     /**
      * Occurs when the playback rate is increased or decreased.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onratechange: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
      * Fires when the user resets a form.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onreset: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     onresize: ((this: GlobalEventHandlers, ev: UIEvent) => any) | null;
     /**
      * Fires when the user repositions the scroll box in the scroll bar on the object.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onscroll: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
      * Occurs when the seek operation ends.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onseeked: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
      * Occurs when the current playback position is moved.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onseeking: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
      * Fires when the current selection changes.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onselect: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     onselectionchange: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     onselectstart: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
      * Occurs when the download has stopped.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onstalled: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     onsubmit: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
      * Occurs if the load operation has been intentionally halted.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onsuspend: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
      * Occurs to indicate the current playback position.
-     * @param ev The event.
+     * @param ev El evento.
      */
     ontimeupdate: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     ontoggle: ((this: GlobalEventHandlers, ev: Event) => any) | null;
@@ -5860,12 +5860,12 @@ interface GlobalEventHandlers {
     ontransitionstart: ((this: GlobalEventHandlers, ev: TransitionEvent) => any) | null;
     /**
      * Occurs when the volume is changed, or playback is muted or unmuted.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onvolumechange: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
      * Occurs when playback stops because the next frame of a video resource is not available.
-     * @param ev The event.
+     * @param ev El evento.
      */
     onwaiting: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     onwebkitanimationend: ((this: GlobalEventHandlers, ev: Event) => any) | null;
@@ -10848,13 +10848,13 @@ interface ParentNode {
     /**
      * Inserts nodes after the last child of node, while replacing strings in nodes with equivalent Text nodes.
      *
-     * Throws a "HierarchyRequestError" DOMException if the constraints of the node tree are violated.
+     * Lanza una DOMException "HierarchyRequestError" si se violan las restricciones del árbol de nodos.
      */
     append(...nodes: (Node | string)[]): void;
     /**
      * Inserts nodes before the first child of node, while replacing strings in nodes with equivalent Text nodes.
      *
-     * Throws a "HierarchyRequestError" DOMException if the constraints of the node tree are violated.
+     * Lanza una DOMException "HierarchyRequestError" si se violan las restricciones del árbol de nodos.
      */
     prepend(...nodes: (Node | string)[]): void;
     /**
@@ -10874,7 +10874,7 @@ interface ParentNode {
     /**
      * Replace all children of node with nodes, while replacing strings in nodes with equivalent Text nodes.
      *
-     * Throws a "HierarchyRequestError" DOMException if the constraints of the node tree are violated.
+     * Lanza una DOMException "HierarchyRequestError" si se violan las restricciones del árbol de nodos.
      */
     replaceChildren(...nodes: (Node | string)[]): void;
 }
@@ -18276,14 +18276,14 @@ declare function scrollTo(x: number, y: number): void;
 declare function stop(): void;
 declare function toString(): string;
 /**
- * Dispatches a synthetic event event to target and returns true if either event's cancelable attribute value is false or its preventDefault() method was not invoked, and false otherwise.
+ * Envía un evento de evento sintético al destino y devuelve true si el valor del atributo cancelable de cualquiera de los eventos es false o si no se invocó a su método preventDefault(), y false en caso contrario.
  */
 declare function dispatchEvent(event: Event): boolean;
 declare function cancelAnimationFrame(handle: number): void;
 declare function requestAnimationFrame(callback: FrameRequestCallback): number;
 /**
- * Fires when the user aborts the download.
- * @param ev The event.
+ * Se dispara cuando el usuario aborta la descarga.
+ * @param ev El evento.
  */
 declare var onabort: ((this: Window, ev: UIEvent) => any) | null;
 declare var onanimationcancel: ((this: Window, ev: AnimationEvent) => any) | null;
@@ -18292,92 +18292,92 @@ declare var onanimationiteration: ((this: Window, ev: AnimationEvent) => any) | 
 declare var onanimationstart: ((this: Window, ev: AnimationEvent) => any) | null;
 declare var onauxclick: ((this: Window, ev: MouseEvent) => any) | null;
 /**
- * Fires when the object loses the input focus.
- * @param ev The focus event.
+ * Se dispara cuando el objeto pierde el foco de entrada.
+ * @param ev El evento focus.
  */
 declare var onblur: ((this: Window, ev: FocusEvent) => any) | null;
 /**
- * Occurs when playback is possible, but would require further buffering.
- * @param ev The event.
+ * Ocurre cuando la reproducción es posible, pero requeriría más almacenamiento en búfer.
+ * @param ev El evento.
  */
 declare var oncanplay: ((this: Window, ev: Event) => any) | null;
 declare var oncanplaythrough: ((this: Window, ev: Event) => any) | null;
 /**
- * Fires when the contents of the object or selection have changed.
- * @param ev The event.
+ * Se activa cuando el contenido del objeto o la selección ha cambiado.
+ * @param ev El evento.
  */
 declare var onchange: ((this: Window, ev: Event) => any) | null;
 /**
- * Fires when the user clicks the left mouse button on the object
- * @param ev The mouse event.
+ * Se dispara cuando el usuario hace clic con el botón izquierdo del mouse en el objeto
+ * @param ev El evento del mouse.
  */
 declare var onclick: ((this: Window, ev: MouseEvent) => any) | null;
 declare var onclose: ((this: Window, ev: Event) => any) | null;
 /**
- * Fires when the user clicks the right mouse button in the client area, opening the context menu.
- * @param ev The mouse event.
+ * Se dispara cuando el usuario hace clic con el botón derecho del mouse en el área del cliente, abriendo el menú contextual.
+ * @param ev El evento del mouse.
  */
 declare var oncontextmenu: ((this: Window, ev: MouseEvent) => any) | null;
 declare var oncuechange: ((this: Window, ev: Event) => any) | null;
 /**
- * Fires when the user double-clicks the object.
- * @param ev The mouse event.
+ * Se activa cuando el usuario hace doble clic en el objeto.
+ * @param ev El evento del mouse.
  */
 declare var ondblclick: ((this: Window, ev: MouseEvent) => any) | null;
 /**
- * Fires on the source object continuously during a drag operation.
- * @param ev The event.
+ * Se dispara en el objeto fuente de forma continua durante una operación de arrastre.
+ * @param ev El evento.
  */
 declare var ondrag: ((this: Window, ev: DragEvent) => any) | null;
 /**
- * Fires on the source object when the user releases the mouse at the close of a drag operation.
- * @param ev The event.
+ * Se activa en el objeto fuente cuando el usuario suelta el mouse al finalizar una operación de arrastre.
+ * @param ev El evento.
  */
 declare var ondragend: ((this: Window, ev: DragEvent) => any) | null;
 /**
- * Fires on the target element when the user drags the object to a valid drop target.
- * @param ev The drag event.
+ * Se activa en el elemento destino cuando el usuario arrastra el objeto a un destino de colocación válido.
+ * @param ev El evento drag.
  */
 declare var ondragenter: ((this: Window, ev: DragEvent) => any) | null;
 /**
- * Fires on the target object when the user moves the mouse out of a valid drop target during a drag operation.
- * @param ev The drag event.
+ * Se activa en el objeto destino cuando el usuario mueve el mouse fuera de un destino de colocación válido durante una operación de arrastre.
+ * @param ev El evento drag.
  */
 declare var ondragleave: ((this: Window, ev: DragEvent) => any) | null;
 /**
- * Fires on the target element continuously while the user drags the object over a valid drop target.
- * @param ev The event.
+ * Se dispara continuamente en el elemento destino mientras el usuario arrastra el objeto sobre un destino de colocación válido.
+ * @param ev El evento.
  */
 declare var ondragover: ((this: Window, ev: DragEvent) => any) | null;
 /**
- * Fires on the source object when the user starts to drag a text selection or selected object.
- * @param ev The event.
+ * Se activa en el objeto fuente cuando el usuario comienza a arrastrar una selección de texto o un objeto seleccionado.
+ * @param ev El evento.
  */
 declare var ondragstart: ((this: Window, ev: DragEvent) => any) | null;
 declare var ondrop: ((this: Window, ev: DragEvent) => any) | null;
 /**
- * Occurs when the duration attribute is updated.
- * @param ev The event.
+ * Ocurre cuando se actualiza el atributo duration.
+ * @param ev El evento.
  */
 declare var ondurationchange: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs when the media element is reset to its initial state.
- * @param ev The event.
+ * Ocurre cuando el elemento multimedia se restablece a su estado inicial.
+ * @param ev El evento.
  */
 declare var onemptied: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs when the end of playback is reached.
- * @param ev The event
+ * Ocurre cuando se llega al final de la reproducción.
+ * @param ev El evento
  */
 declare var onended: ((this: Window, ev: Event) => any) | null;
 /**
- * Fires when an error occurs during object loading.
- * @param ev The event.
+ * Se activa cuando se produce un error durante la carga del objeto.
+ * @param ev El evento.
  */
 declare var onerror: OnErrorEventHandler;
 /**
- * Fires when the object receives focus.
- * @param ev The event.
+ * Se dispara cuando el objeto recibe el foco.
+ * @param ev El evento.
  */
 declare var onfocus: ((this: Window, ev: FocusEvent) => any) | null;
 declare var onformdata: ((this: Window, ev: FormDataEvent) => any) | null;
@@ -18385,82 +18385,82 @@ declare var ongotpointercapture: ((this: Window, ev: PointerEvent) => any) | nul
 declare var oninput: ((this: Window, ev: Event) => any) | null;
 declare var oninvalid: ((this: Window, ev: Event) => any) | null;
 /**
- * Fires when the user presses a key.
- * @param ev The keyboard event
+ * Se dispara cuando el usuario presiona una tecla.
+ * @param ev El evento del teclado
  */
 declare var onkeydown: ((this: Window, ev: KeyboardEvent) => any) | null;
 /**
- * Fires when the user presses an alphanumeric key.
- * @param ev The event.
+ * Se activa cuando el usuario pulsa una tecla alfanumérica.
+ * @param ev El evento.
  */
 /** @deprecated */
 declare var onkeypress: ((this: Window, ev: KeyboardEvent) => any) | null;
 /**
- * Fires when the user releases a key.
- * @param ev The keyboard event
+ * Se dispara cuando el usuario suelta una tecla.
+ * @param ev El evento del teclado
  */
 declare var onkeyup: ((this: Window, ev: KeyboardEvent) => any) | null;
 /**
- * Fires immediately after the browser loads the object.
- * @param ev The event.
+ * Se activa inmediatamente después de que el navegador carga el objeto.
+ * @param ev El evento.
  */
 declare var onload: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs when media data is loaded at the current playback position.
- * @param ev The event.
+ * Ocurre cuando los datos multimedia se cargan en la posición de reproducción actual.
+ * @param ev El evento.
  */
 declare var onloadeddata: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs when the duration and dimensions of the media have been determined.
- * @param ev The event.
+ * Ocurre cuando se han determinado la duración y las dimensiones del medio.
+ * @param ev El evento.
  */
 declare var onloadedmetadata: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs when Internet Explorer begins looking for media data.
- * @param ev The event.
+ * Ocurre cuando Internet Explorer comienza a buscar datos multimedia.
+ * @param ev El evento.
  */
 declare var onloadstart: ((this: Window, ev: Event) => any) | null;
 declare var onlostpointercapture: ((this: Window, ev: PointerEvent) => any) | null;
 /**
- * Fires when the user clicks the object with either mouse button.
- * @param ev The mouse event.
+ * Se activa cuando el usuario hace clic en el objeto con cualquiera de los botones del mouse.
+ * @param ev El evento del mouse.
  */
 declare var onmousedown: ((this: Window, ev: MouseEvent) => any) | null;
 declare var onmouseenter: ((this: Window, ev: MouseEvent) => any) | null;
 declare var onmouseleave: ((this: Window, ev: MouseEvent) => any) | null;
 /**
  * Fires when the user moves the mouse over the object.
- * @param ev The mouse event.
+ * @param ev El evento del mouse.
  */
 declare var onmousemove: ((this: Window, ev: MouseEvent) => any) | null;
 /**
  * Fires when the user moves the mouse pointer outside the boundaries of the object.
- * @param ev The mouse event.
+ * @param ev El evento del mouse.
  */
 declare var onmouseout: ((this: Window, ev: MouseEvent) => any) | null;
 /**
  * Fires when the user moves the mouse pointer into the object.
- * @param ev The mouse event.
+ * @param ev El evento del mouse.
  */
 declare var onmouseover: ((this: Window, ev: MouseEvent) => any) | null;
 /**
  * Fires when the user releases a mouse button while the mouse is over the object.
- * @param ev The mouse event.
+ * @param ev El evento del mouse.
  */
 declare var onmouseup: ((this: Window, ev: MouseEvent) => any) | null;
 /**
  * Occurs when playback is paused.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onpause: ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when the play method is requested.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onplay: ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when the audio or video has started playing.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onplaying: ((this: Window, ev: Event) => any) | null;
 declare var onpointercancel: ((this: Window, ev: PointerEvent) => any) | null;
@@ -18473,56 +18473,56 @@ declare var onpointerover: ((this: Window, ev: PointerEvent) => any) | null;
 declare var onpointerup: ((this: Window, ev: PointerEvent) => any) | null;
 /**
  * Occurs to indicate progress while downloading media data.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onprogress: ((this: Window, ev: ProgressEvent) => any) | null;
 /**
  * Occurs when the playback rate is increased or decreased.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onratechange: ((this: Window, ev: Event) => any) | null;
 /**
  * Fires when the user resets a form.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onreset: ((this: Window, ev: Event) => any) | null;
 declare var onresize: ((this: Window, ev: UIEvent) => any) | null;
 /**
  * Fires when the user repositions the scroll box in the scroll bar on the object.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onscroll: ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when the seek operation ends.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onseeked: ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when the current playback position is moved.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onseeking: ((this: Window, ev: Event) => any) | null;
 /**
  * Fires when the current selection changes.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onselect: ((this: Window, ev: Event) => any) | null;
 declare var onselectionchange: ((this: Window, ev: Event) => any) | null;
 declare var onselectstart: ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when the download has stopped.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onstalled: ((this: Window, ev: Event) => any) | null;
 declare var onsubmit: ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs if the load operation has been intentionally halted.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onsuspend: ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs to indicate the current playback position.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var ontimeupdate: ((this: Window, ev: Event) => any) | null;
 declare var ontoggle: ((this: Window, ev: Event) => any) | null;
@@ -18536,12 +18536,12 @@ declare var ontransitionrun: ((this: Window, ev: TransitionEvent) => any) | null
 declare var ontransitionstart: ((this: Window, ev: TransitionEvent) => any) | null;
 /**
  * Occurs when the volume is changed, or playback is muted or unmuted.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onvolumechange: ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when playback stops because the next frame of a video resource is not available.
- * @param ev The event.
+ * @param ev El evento.
  */
 declare var onwaiting: ((this: Window, ev: Event) => any) | null;
 declare var onwebkitanimationend: ((this: Window, ev: Event) => any) | null;

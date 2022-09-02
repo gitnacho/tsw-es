@@ -13,24 +13,24 @@ const childOfType = (tag: string, element: any) => {
 }
 
 /**
- * Handles moving up and down through the navigation hierarchy
- * selecting leaf nodes and jumping up into section categories
+ * Controles que se mueven hacia arriba y hacia abajo a través de la jerarquía de navegación
+ * seleccionando hojas de nodo y saltando a categorías de sección
  */
 export const onAnchorKeyDown: KeyboardEventHandler = event => {
   const li = getTagFromParents("li", event.target as any)
 
-  // Up, and jump into section headers
+  // Arriba y salta a los encabezados de sección
   if (event.keyCode == UpArrow) {
     const aboveLI = li.previousElementSibling
     const a = aboveLI && childOfType("a", aboveLI)
     const button = aboveLI && childOfType("button", aboveLI)
 
     if (a) {
-      // next link
+      // siguiente enlace
       a.focus()
     } else if (aboveLI && button) {
-      // Jump to the subnav above, either at the bottom item if open or
-      // the main button otherwise
+      // Salta arriba a la subnav, ya sea en el elemento inferior si está abierto o
+      // el botón principal de lo contrario
       const open = aboveLI.classList.contains("open")
       if (open) {
         const listOfLinks = childOfType("ul", aboveLI)!
@@ -40,7 +40,7 @@ export const onAnchorKeyDown: KeyboardEventHandler = event => {
         button.focus()
       }
     } else {
-      // at the top
+      // en la cima
       const sectionHostingLI = getTagFromParents("li", li)
       childOfType("button", sectionHostingLI)!.focus()
     }
@@ -48,30 +48,30 @@ export const onAnchorKeyDown: KeyboardEventHandler = event => {
     event.preventDefault()
   }
 
-  // Down, and jump into section header belows
+  // Abajo, y salta al encabezado de la sección a continuación.
   if (event.keyCode === DownArrow) {
     const belowLI = li.nextElementSibling
     const a = belowLI && childOfType("a", belowLI)
     const button = belowLI && childOfType("button", belowLI)
 
     if (a) {
-      // next link
+      // siguiente enlace
       a.focus()
     } else if (button) {
-      // potential subnav above
+      // potencial subnav arriba
       button.focus()
     } else {
-      // at the bottom
+      // en el fondo
       const sectionHostingLI = getTagFromParents("li", li)
       const nextLI = sectionHostingLI.nextElementSibling
       const a = nextLI && childOfType("a", nextLI)
       const button = nextLI && childOfType("button", nextLI)
 
       if (a) {
-        // next link
+        // siguiente enlace
         a.focus()
       } else if (button) {
-        // potential subnav above
+        // potencial subnav arriba
         button.focus()
       }
     }
@@ -81,26 +81,26 @@ export const onAnchorKeyDown: KeyboardEventHandler = event => {
 }
 
 /**
- * Handles moving up and down through the navigation hierarchy
- * when it's at a section category, which has different semantics
- * from the a's above
+ * Controles que se mueven hacia arriba y hacia abajo a través de la jerarquía de navegación
+ * cuando está en una categoría de sección, que tiene una semántica diferente
+ * de las a de arriba
  */
 export const onButtonKeydown: KeyboardEventHandler = event => {
   const li = getTagFromParents("li", event.target as any)
-  // Up, either go to the bottom of the a's in the section above
+  // Arriba, va al final de las a en la sección de arriba
   // if it's open or jump to the previous sibling button
   if (event.keyCode == UpArrow) {
     const aboveLI = li.previousElementSibling
-    if (!aboveLI) return // Hit the top
+    if (!aboveLI) return // Golpea la cima
 
     const a = aboveLI && childOfType("a", aboveLI)
     const button = aboveLI && childOfType("button", aboveLI)
 
     if (a) {
-      // next link
+      // siguiente enlace
       a.focus()
     } else if (button) {
-      // potential subnav above
+      // potencial subnav arriba
       const open = aboveLI.classList.contains("open")
       if (open) {
         const listOfLinks = childOfType("ul", aboveLI)!
@@ -110,7 +110,7 @@ export const onButtonKeydown: KeyboardEventHandler = event => {
         button.focus()
       }
     } else {
-      // at the top
+      // en la cima
       const sectionHostingLI = getTagFromParents("li", li)
       childOfType("button", sectionHostingLI)!.focus()
     }
@@ -118,11 +118,11 @@ export const onButtonKeydown: KeyboardEventHandler = event => {
     event.preventDefault()
   }
 
-  // Down, and jump into section header belows
+  // Abajo, y salta al encabezado de la sección a continuación.
   if (event.keyCode == DownArrow) {
     const open = li.classList.contains("open")
     if (open) {
-      // Need to jump to first in the section
+      // Necesito saltar al primero en la sección
       const listOfLinks = childOfType("ul", li)!
       const lastLI = listOfLinks.firstElementChild
       childOfType("a", lastLI)!.focus()
@@ -133,10 +133,10 @@ export const onButtonKeydown: KeyboardEventHandler = event => {
         const button = belowLI && childOfType("button", belowLI)
 
         if (a) {
-          // next link
+          // siguiente enlace
           a.focus()
         } else if (button) {
-          // potential subnav above
+          // potencial subnav arriba
           button.focus()
         }
       }
@@ -144,7 +144,7 @@ export const onButtonKeydown: KeyboardEventHandler = event => {
     event.preventDefault()
   }
 
-  // Right, open
+  // Derecha, abrir
   if (event.key === "ArrowRight") {
     li.classList.remove("closed")
     li.classList.add("open")
@@ -152,7 +152,7 @@ export const onButtonKeydown: KeyboardEventHandler = event => {
     event.preventDefault()
   }
 
-  // Right, close
+  // Derecha, cerrar
   if (event.key === "ArrowLeft") {
     li.classList.remove("open")
     li.classList.add("closed")

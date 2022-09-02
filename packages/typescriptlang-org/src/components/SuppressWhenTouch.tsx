@@ -2,15 +2,15 @@ import React, { useEffect } from "react"
 import { isTouchDevice } from "../lib/isTouchDevice"
 
 /**
- * A React component which will remove its children (at runtime!)
- * from the hierarchy if we're on a touch device
+ * Un componente de React que eliminará sus elementos secundarios (¡en tiempo de ejecución!)
+ * de la jerarquía si estamos en un dispositivo táctil
  */
 export const SuppressWhenTouch = ({ children, hideOnTouch }: any) => {
 
   useEffect(() => {
     if (isTouchDevice()) {
-      // It's touch, so let's kill the content in the child and 
-      // replace it with a message that this section isn't good for mobile
+      // Es táctil, así que eliminemos el contenido en el hijo y 
+      // lo reemplazamos con un mensaje de que esta sección no es buena para dispositivos móviles
       const suppressible = document.getElementById("touch-suppressible")!
       while (suppressible.firstChild) {
         suppressible.removeChild(suppressible.firstChild)
@@ -19,10 +19,10 @@ export const SuppressWhenTouch = ({ children, hideOnTouch }: any) => {
       if (hideOnTouch) return
 
       const h4 = document.createElement("h4")
-      h4.textContent = "Section best on a computer"
+      h4.textContent = "Sección mejor en una computadora"
 
       const p = document.createElement("p")
-      p.textContent = "This part of the site does not run well on a touch-oriented browser. We recommend switching to a computer to carry on."
+      p.textContent = "Esta parte del sitio no funciona bien en un navegador táctil. Recomendamos cambiar a una computadora para continuar."
 
       suppressible.appendChild(h4)
       suppressible.appendChild(p)

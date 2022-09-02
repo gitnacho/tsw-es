@@ -6,7 +6,7 @@ export function setupStickyNavigation() {
   let previousY = 9999
 
   const updateNav = () => {
-    // iOS scrolls to make sure the viewport fits, don't hide the input then
+    // iOS se desplaza para asegurarse de que la ventana gráfica se ajuste, no oculta la entrada entonces
     const hasKeyboardFocus =
       document.activeElement &&
       (document.activeElement.nodeName === "INPUT" ||
@@ -38,7 +38,7 @@ export function setupStickyNavigation() {
     }
   }
 
-  // Non-blocking nav change
+  // Cambio de navegación sin bloqueo
   document.removeEventListener("scroll", updateNav, {
     capture: true,
     passive: true,

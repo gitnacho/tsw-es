@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { withPrefix } from "gatsby"
 import "./ShowExamples.scss"
 
-// @ts-ignore - this is a fallback to english
+// @ts-ignore - esto es un retroceso al ingles
 import english from "../../static/js/examples/en"
 import { hasLocalStorage } from "../lib/hasLocalStorage"
 
@@ -16,8 +16,8 @@ type Example = SamplesJSON["examples"][0]
 const sortedSectionsDictionary = (locale: SamplesJSON, section: SamplesJSON["sections"][0]) => {
   const sectionDict = {}
   locale.examples.forEach(e => {
-    // Allow switching a "-" to "." so that titles can have
-    // a dot for version numbers, this own works once.
+    // Permite cambiar un "-" a "." para que los títulos puedan tener
+    // un punto para los números de versión, esto funciona una vez.
     if (e.path[0] === section.name.replace(".", "-") || e.path[0] === section.id) {
       if (sectionDict[e.path[1]]) {
         sectionDict[e.path[1]].push(e)
@@ -76,14 +76,14 @@ export type Props = {
   sections: string[]
 
   locale?: string
-  /** DI'd copy of the examples, or fallback to eng */
+  /** DÍ copia de los ejemplos, o recurre a eng */
   examples?: typeof import("../../static/js/examples/en.json")
 }
 
 export const RenderExamples = (props: Props) => {
 
   useEffect(() => {
-    // Update the dots after it's loaded and running in the client instead
+    // Actualiza los puntos después de que se cargue y ejecute en el cliente.
     let seenExamples = {}
 
     if (hasLocalStorage) {

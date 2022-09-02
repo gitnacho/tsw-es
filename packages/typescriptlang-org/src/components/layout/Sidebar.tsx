@@ -17,7 +17,7 @@ export const getTagFromParents = (tag: string, root: { nodeName: string, parentE
   let parent = root.parentElement
   while (parent.nodeName !== tag.toUpperCase()) {
     parent = parent.parentElement
-    if (parent.nodeName === "BODY") throw new Error("Could not find parent LI for toggle ")
+    if (parent.nodeName === "BODY") throw new Error("No se pudo encontrar el LI principal para alternar ")
   }
   return parent as HTMLElement
 }
@@ -56,8 +56,8 @@ export const SidebarToggleButton = () => {
 
 export const Sidebar = (props: Props) => {
   useEffect(() => {
-    // Keep all of the sidebar open at launch, then use JS to close the ones after
-    // because otherwise you can't jump between sections
+    // Mantiene toda la barra lateral abierta en el lanzamiento, luego usa JS para cerrar las que siguen
+    // porque de lo contrario no puedes saltar entre secciones
     document.querySelectorAll(".closed-at-launch").forEach(f => {
       f.classList.remove("closed-at-launch")
       f.classList.remove("open")
@@ -68,7 +68,7 @@ export const Sidebar = (props: Props) => {
   const RenderItem = (props: { item: SidebarNavItem, selectedID: string, openAllSectionsExceptWhatsNew?: boolean }) => {
     const item = props.item
     if (!item.items) {
-      // Is it the leaf in the nav?
+      // ¿Es la hoja en el navegador?
       const isSelected = item.id === props.selectedID
       const aria: any = {}
       if (isSelected) {
@@ -81,7 +81,7 @@ export const Sidebar = (props: Props) => {
         <Link to={href} onKeyDown={onAnchorKeyDown}>{item.title}</Link>
       </li>
     } else {
-      // Has children
+      // Tiene hijos
       const findSelected = (item: SidebarNavItem) => {
         if (item.id === props.selectedID) return true
         if (!item.items) return false

@@ -31,7 +31,7 @@ const getLocaleVersionOfPage = () => {
 
   // /zh/play -> /es/play
   thisPaths[1] = userLang
-  // Drop any preceding /s
+  // Suelta cualquier /s anterior
   if (thisPaths[thisPaths.length - 1] === "") thisPaths.pop()
 
   return thisPaths.join("/")
@@ -39,7 +39,7 @@ const getLocaleVersionOfPage = () => {
 
 export const LanguageRecommendations = (props: Props) => {
   useEffect(() => {
-    // Don't mess with the mobile UI
+    // No te metas con la interfaz de usuario móvil
     const isSmall = window.innerWidth < 800
     if (isSmall) return
 
@@ -51,7 +51,7 @@ export const LanguageRecommendations = (props: Props) => {
       localePath = localePath.slice(3)
     }
 
-    // Heh, ignore dt urls
+    // Hey, ignora urls dt
     if (localePath.startsWith("/dt")) return
 
     if (localePath === "") localePath = "/"
@@ -65,11 +65,11 @@ export const LanguageRecommendations = (props: Props) => {
     const userLang = userLocale.split("-")[0]
     const lang = inYourLanguage[userLang] || inYourLanguage["todo"]
 
-    // Show the top nav anchor for in your language
+    // Muestra el ancla de navegación superior en tu idioma
     const quickJump = document.getElementById("my-lang-quick-jump")!
     const quickJumpA = quickJump.firstElementChild as HTMLAnchorElement
 
-    quickJumpA.textContent = lang.shorthand !== "In xx" ? lang.shorthand : `In ${userLang}`
+    quickJumpA.textContent = lang.shorthand !== "In xx" ? lang.shorthand : `En ${userLang}`
     quickJumpA.href = localePath
     quickJump.title = lang.body
     quickJump.style.display = "inline-block";
@@ -79,7 +79,7 @@ export const LanguageRecommendations = (props: Props) => {
     search.style.position = "relative"
     search.style.top = "-2px"
 
-    // Allow not showing the popout
+    // Permite no mostrar la ventana emergente
     if (suppressed) return
 
     document.getElementById("language-recommendation-p")!.textContent = lang.body
@@ -109,4 +109,4 @@ export const LanguageRecommendations = (props: Props) => {
 }
 
 export const OpenInMyLangQuickJump = () =>
-  <div id="my-lang-quick-jump" style={{ display: "none" }} className="nav-item"><a href=''>in En</a></div>
+  <div id="my-lang-quick-jump" style={{ display: "none" }} className="nav-item"><a href=''>en En</a></div>

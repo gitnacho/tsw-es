@@ -602,7 +602,7 @@ Para obtener más detalles, [consulta la solicitud de extracción aquí](https:/
 
 ### Soporte para `/**@deprecated */`
 
-El soporte de edición de *TypeScript* ahora reconoce cuando una declaración ha sido marcada con un `/ **@deprecated */` Comentario *JSDoc*.
+El soporte de edición de *TypeScript* ahora reconoce cuando una declaración ha sido marcada con un `/ **@deprecated */` de *JSDoc*.
 Esa información aparece en listas de compleción y como un diagnóstico de sugerencia que los editores pueden manejar de manera especial.
 En un editor como *VS Code*, los valores obsoletos se muestran normalmente en un estilo tachado ~~como este~~.
 

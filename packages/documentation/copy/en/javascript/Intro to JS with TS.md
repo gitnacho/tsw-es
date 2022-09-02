@@ -12,7 +12,7 @@ El sistema de tipos en *TypeScript* tiene diferentes niveles de rigor cuando se 
 - Tipado incremental en *JavaScript* [a través de *JSDoc*](/docs/handbook/jsdoc-supported-types.html)
 - Usar `// @ts-check` en un archivo *JavaScript*
 - Código *TypeScript*
-- *TypeScript* con [`strict`](/tsconfig#strict) enabled
+- *TypeScript* con [`strict`](/tsconfig#strict) activado
 
 Cada paso representa un movimiento hacia un sistema de tipos más seguro, pero no todos los proyectos necesitan ese nivel de comprobación.
 
@@ -21,7 +21,7 @@ Cada paso representa un movimiento hacia un sistema de tipos más seguro, pero n
 Esto es cuando usas un editor que usa *TypeScript* para proporcionar herramientas como autocompleción, saltar al símbolo y herramientas de refactorización como `rename`.
 La [página de inicio](/) tiene una lista de editores que tienen complementos de *TypeScript*.
 
-## Proporcionar sugerencias de tipo en *JS* a través de *JSDoc*
+## Proporcionar sugerencias de tipo en*JS*a través de*JSDoc*
 
 En un archivo `.js`, los tipos a menudo se pueden inferir. Cuando no se pueden inferir tipos, se pueden especificar utilizando la sintaxis *JSDoc*.
 
@@ -35,7 +35,7 @@ x = 0; // Bien
 x = false; // Bien?!
 ```
 
-Puedes encontrar la lista completa de patrones *JSDoc* compatibles [en Tipos compatibles con *JSDoc*](/docs/handbook/jsdoc-supported-types.html).
+Puedes encontrar la lista completa de patrones *JSDoc* compatibles en [Tipos compatibles con *JSDoc*](/docs/handbook/jsdoc-supported-types.html).
 
 ## `@ts-check`
 
