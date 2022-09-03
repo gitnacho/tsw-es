@@ -12,7 +12,7 @@ type Props = {}
 
 const Index: React.FC<Props> = props => {
   useEffect(() => {
-    // Don't even bother getting monaco
+    // Ni siquiera te molestes en conseguir monaco
     if (isTouchDevice()) {
       return
     }
@@ -107,24 +107,24 @@ export default async function () {
     <>
       <Layout
         title="Developers - Sandbox"
-        description="The TypeScript sandbox powers the TypeScript Playground. Learn how you can make your experiences like the playground using the sandbox."
-        lang="en"
+        description="La zona de pruebas de TypeScript potencia el TypeScript Playground. Aprende cómo puedes hacer que tus experiencias sean como el playground usando la caja de arena."
+        lang="es"
       >
         <div id="dev">
           <DevNav active="sandbox" />
           <div className="raised content main-content-block">
             <div className="split-fivehundred">
-              <h1 style={{ marginTop: "20px" }}>TypeScript Sandbox</h1>
+              <h1 style={{ marginTop: "20px" }}>Sandbox de TypeScript</h1>
               <p>
-                A DOM library for interacting with TypeScript and JavaScript
-                code, which powers the heart of the{" "}
-                <a href={withPrefix("/play/")}>TypeScript playground</a>
+                Una biblioteca DOM para interactuar con código TypeScript y JavaScript,
+                que alimenta el corazón del{" "}
+                <a href={withPrefix("/play/")}>Playground de TypeScript</a>
               </p>
-              <p>You can use the TypeScript sandbox for:</p>
+              <p>Puedes usar el sandbox de TypeScript para:</p>
               <ul>
                 <li>
-                  Building IDE-like experiences for people to explore your
-                  library's API
+                  Creación de experiencias similares al IDE para que las personas exploren la
+                  API de tu biblioteca
                 </li>
                 <li>
                   Building interactive web tools which use TypeScript, with a

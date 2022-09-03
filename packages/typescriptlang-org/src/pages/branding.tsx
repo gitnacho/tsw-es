@@ -13,25 +13,25 @@ const Row = (props: { children: any, className?: string }) => <div className={[p
 const Index: React.FC<Props> = (props) => {
   return (
     <>
-      <Layout title="Branding" description="Logos and design assets" lang="en" >
+      <Layout title="Branding" description="Logos y activos de diseño" lang="es" >
         <div id="branding">
-          <h1>Branding</h1>
-          <h2 className="subnav">Logos and design assets for TypeScript</h2>
+          <h1>Marca</h1>
+          <h2 className="subnav">Logotipos y elementos de diseño para TypeScript</h2>
 
           <div className="raised content main-content-block headline">
             <a href={withPrefix("/branding/typescript-design-assets.zip")}>
-              <img src={withPrefix("images/branding/logo-grouping.svg")} style={{ maxWidth: "100%" }} alt="Examples of the logos" />
-              <p style={{ textAlign: "center" }}>Click to download the asset pack</p>
+              <img src={withPrefix("images/branding/logo-grouping.svg")} style={{ maxWidth: "100%" }} alt="Logos de ejemplo" />
+              <p style={{ textAlign: "center" }}>Haz clic para descargar el paquete de recursos</p>
             </a>
           </div>
 
-          <h2>Recommendations</h2>
+          <h2>Recomendaciones</h2>
 
           <Row className="main-content-block recommendations">
-            <p style={{ flex: 1 }}>Please use the blue TypeScript mark above as the primary logo for TypeScript.</p>
-            <p style={{ flex: 1 }}>This is the right logo for blog posts, news articles, giveaway stickers and general marketing for yourself.</p>
-            <p style={{ flex: 1 }}>The “TS” in the logo is white, not transparent by default.</p>
-            <p style={{ flex: 1 }}>There is a capital “S” in TypeScript, just like in JavaScript.</p>
+            <p style={{ flex: 1 }}>Por favor, utiliza la marca azul de TypeScript de arriba como logotipo principal de TypeScript.</p>
+            <p style={{ flex: 1 }}>Este es el logotipo adecuado para publicaciones de blog, artículos de noticias, calcomanías de obsequio y marketing general para ti.</p>
+            <p style={{ flex: 1 }}>Las siglas "TS" en el logo, de manera predeterminada, son blancas, no transparentes.</p>
+            <p style={{ flex: 1 }}>Hay una "S" mayúscula en TypeScript, al igual que en JavaScript.</p>
           </Row>
 
           <h2>Alternativas</h2>
@@ -39,43 +39,43 @@ const Index: React.FC<Props> = (props) => {
           <div className="main-content-block">
             <Row>
               <div className="raised content main-content-block subheadline">
-                <a href={withPrefix("/branding/typescript-design-assets.zip")} title="Download the design assets">
-                  <img src={withPrefix("images/branding/two-colors.svg")} style={{ maxWidth: "100%", margin: "2rem 0" }}  alt="Examples of the logos as single colors" />
+                <a href={withPrefix("/branding/typescript-design-assets.zip")} title="Descarga los recursos de diseño">
+                  <img src={withPrefix("images/branding/two-colors.svg")} style={{ maxWidth: "100%", margin: "2rem 0" }} alt="Ejemplos de los logotipos como colores únicos" />
                 </a>
-                <p className="attached-bottom">Single color variant which has the “TS” cut out, useful for when you need a single color design.</p>
+                <p className="attached-bottom">Variante de un solo color que tiene el "TS" recortado, útil cuando necesitas un diseño de un solo color.</p>
               </div>
 
               <div className="raised content main-content-block subheadline">
-                <a href={withPrefix("/branding/typescript-design-assets.zip")} title="Download the design assets">
-                  <img src={withPrefix("images/branding/two-longform.svg")} style={{ maxWidth: "100%", margin: "2rem 0" }} alt="Examples of the logos as long-form. e.g. saying 'TypeScript' and not 'TS'" />
+                <a href={withPrefix("/branding/typescript-design-assets.zip")} title="Descarga los recursos de diseño">
+                  <img src={withPrefix("images/branding/two-longform.svg")} style={{ maxWidth: "100%", margin: "2rem 0" }} alt="Ejemplos de los logos en formato grande. p.ej. diciendo 'TypeScript' y no solo 'TS'"/>
                 </a>
-                <p className="attached-bottom">Full lettermark version of the TypeScript logo. </p>
+                <p className="attached-bottom">Versión completa con letras del logotipo TypeScript. </p>
               </div>
             </Row>
           </div>
 
-          <h2>Palette</h2>
+          <h2>Paleta</h2>
 
           <div className="raised content main-content-block headline">
-            <a href={withPrefix("/branding/typescript-design-assets.zip")} title="Download the design assets">
-              <img src={withPrefix("images/branding/palette.svg")} style={{ maxWidth: "100%" }} alt="Examples of the palette, you can get this in ASCII inside the design assets" />
+            <a href={withPrefix("/branding/typescript-design-assets.zip")} title="Descarga los recursos de diseño">
+              <img src={withPrefix("images/branding/palette.svg")} style={{ maxWidth: "100%" }} alt="Ejemplos de la paleta, puedes obtener esto en ASCII dentro de los activos de diseño" />
             </a>
           </div>
 
           <div className="raised content main-content-block headline">
-            <a href={withPrefix("/branding/typescript-design-assets.zip")} title="Download the design assets">
-              <img src={withPrefix("images/branding/palette-bg.svg")} style={{ maxWidth: "100%" }}  alt="Examples of the palette, you can get this in ASCII inside the design assets" />
+            <a href={withPrefix("/branding/typescript-design-assets.zip")} title="Descarga los recursos de diseño">
+              <img src={withPrefix("images/branding/palette-bg.svg")} style={{ maxWidth: "100%" }} alt="Ejemplos de la paleta, puedes obtener esto en ASCII dentro de los recursos de diseño" />
             </a>
           </div>
 
 
-          <h2>Please Don't</h2>
+          <h2>Por favor, no</h2>
 
           <Row className="main-content-block recommendations">
-            <p style={{ flex: 1 }}>Use the TypeScript logos for your application/product.</p>
-            <p style={{ flex: 1 }}>Modify the shape of the logos when used.</p>
-            <p style={{ flex: 1 }}>Integrate the TypeScript logo into your application's logo.</p>
-            <p style={{ flex: 1 }}>Name a product which implies TypeScript's endorsement of the product.</p>
+            <p style={{ flex: 1 }}>Utilices los logotipos de TypeScript para tu aplicación/producto.</p>
+            <p style={{ flex: 1 }}>Modifiques la forma de los logotipos cuando los uses.</p>
+            <p style={{ flex: 1 }}>Integres el logotipo de TypeScript en el logotipo de tu aplicación.</p>
+            <p style={{ flex: 1 }}>Nombres un producto que implique el respaldo de TypeScript al producto.</p>
           </Row>
         </div>
       </Layout>

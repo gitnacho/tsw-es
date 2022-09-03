@@ -3692,7 +3692,7 @@ interface DOMException {
     readonly NETWORK_ERR: number;
     readonly NOT_FOUND_ERR: number;
     readonly NOT_SUPPORTED_ERR: number;
-    areadonly NO_DATA_ALLOWED_ERR: number;
+    readonly NO_DATA_ALLOWED_ERR: number;
     readonly NO_MODIFICATION_ALLOWED_ERR: number;
     readonly QUOTA_EXCEEDED_ERR: number;
     readonly SECURITY_ERR: number;
@@ -3722,7 +3722,7 @@ declare var DOMException: {
     readonly NETWORK_ERR: number;
     readonly NOT_FOUND_ERR: number;
     readonly NOT_SUPPORTED_ERR: number;
-    areadonly NO_DATA_ALLOWED_ERR: number;
+    readonly NO_DATA_ALLOWED_ERR: number;
     readonly NO_MODIFICATION_ALLOWED_ERR: number;
     readonly QUOTA_EXCEEDED_ERR: number;
     readonly SECURITY_ERR: number;
@@ -5753,37 +5753,37 @@ interface GlobalEventHandlers {
     onmouseenter: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     onmouseleave: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     /**
-     * Fires when the user moves the mouse over the object.
+     * Se dispara cuando el usuario mueve el mouse sobre el objeto.
      * @param ev El evento del mouse.
      */
     onmousemove: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     /**
-     * Fires when the user moves the mouse pointer outside the boundaries of the object.
+     * Se activa cuando el usuario mueve el puntero del mouse fuera de los límites del objeto.
      * @param ev El evento del mouse.
      */
     onmouseout: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     /**
-     * Fires when the user moves the mouse pointer into the object.
+     * Se activa cuando el usuario mueve el puntero del mouse hacia el objeto.
      * @param ev El evento del mouse.
      */
     onmouseover: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     /**
-     * Fires when the user releases a mouse button while the mouse is over the object.
+     * Se activa cuando el usuario suelta un botón del mouse mientras el mouse está sobre el objeto.
      * @param ev El evento del mouse.
      */
     onmouseup: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null;
     /**
-     * Occurs when playback is paused.
+     * Ocurre cuando la reproducción está en pausa.
      * @param ev El evento.
      */
     onpause: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs when the play method is requested.
+     * Ocurre cuando se solicita el método de reproducción.
      * @param ev El evento.
      */
     onplay: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs when the audio or video has started playing.
+     * Ocurre cuando el audio o video se ha comenzado a reproducir.
      * @param ev El evento.
      */
     onplaying: ((this: GlobalEventHandlers, ev: Event) => any) | null;
@@ -5796,56 +5796,56 @@ interface GlobalEventHandlers {
     onpointerover: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null;
     onpointerup: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null;
     /**
-     * Occurs to indicate progress while downloading media data.
+     * Ocurre para indicar el progreso durante la descarga de datos multimedia.
      * @param ev El evento.
      */
     onprogress: ((this: GlobalEventHandlers, ev: ProgressEvent) => any) | null;
     /**
-     * Occurs when the playback rate is increased or decreased.
+     * Ocurre cuando la velocidad de reproducción aumenta o disminuye.
      * @param ev El evento.
      */
     onratechange: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Fires when the user resets a form.
+     * Se activa cuando el usuario restablece un formulario.
      * @param ev El evento.
      */
     onreset: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     onresize: ((this: GlobalEventHandlers, ev: UIEvent) => any) | null;
     /**
-     * Fires when the user repositions the scroll box in the scroll bar on the object.
+     * Se activa cuando el usuario cambia la posición del cuadro de desplazamiento en la barra de desplazamiento del objeto.
      * @param ev El evento.
      */
     onscroll: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs when the seek operation ends.
+     * Se produce cuando finaliza la operación de búsqueda.
      * @param ev El evento.
      */
     onseeked: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs when the current playback position is moved.
+     * Se produce cuando se mueve la posición de reproducción actual.
      * @param ev El evento.
      */
     onseeking: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Fires when the current selection changes.
+     * Se dispara cuando cambia la selección actual.
      * @param ev El evento.
      */
     onselect: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     onselectionchange: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     onselectstart: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs when the download has stopped.
+     * Ocurre cuando la descarga se ha detenido.
      * @param ev El evento.
      */
     onstalled: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     onsubmit: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs if the load operation has been intentionally halted.
+     * Ocurre si la operación de carga se detuvo intencionalmente.
      * @param ev El evento.
      */
     onsuspend: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs to indicate the current playback position.
+     * Se produce para indicar la posición de reproducción actual.
      * @param ev El evento.
      */
     ontimeupdate: ((this: GlobalEventHandlers, ev: Event) => any) | null;
@@ -5859,12 +5859,12 @@ interface GlobalEventHandlers {
     ontransitionrun: ((this: GlobalEventHandlers, ev: TransitionEvent) => any) | null;
     ontransitionstart: ((this: GlobalEventHandlers, ev: TransitionEvent) => any) | null;
     /**
-     * Occurs when the volume is changed, or playback is muted or unmuted.
+     * Ocurre cuando se cambia el volumen o se silencia o activa la reproducción.
      * @param ev El evento.
      */
     onvolumechange: ((this: GlobalEventHandlers, ev: Event) => any) | null;
     /**
-     * Occurs when playback stops because the next frame of a video resource is not available.
+     * Ocurre cuando la reproducción se detiene porque el siguiente cuadro de un recurso de video no está disponible.
      * @param ev El evento.
      */
     onwaiting: ((this: GlobalEventHandlers, ev: Event) => any) | null;
@@ -5881,19 +5881,19 @@ interface GlobalEventHandlers {
 
 interface HTMLAllCollection {
     /**
-     * Returns the number of elements in the collection.
+     * Devuelve el número de elementos de la colección.
      */
     readonly length: number;
     /**
-     * Returns the item with index index from the collection (determined by tree order).
+     * Devuelve el elemento con índice index de la colección (determinado por el orden del árbol).
      */
     item(nameOrIndex?: string): HTMLCollection | Element | null;
     /**
-     * Returns the item with ID or name name from the collection.
+     * Devuelve el elemento con ID o nombre de la colección.
      *
-     * If there are multiple matching items, then an HTMLCollection object containing all those elements is returned.
+     * Si hay varios elementos coincidentes, se devuelve un objeto HTMLCollection que contiene todos esos elementos.
      *
-     * Only button, form, iframe, input, map, meta, object, select, and textarea elements can have a name for the purpose of this method; their name is given by the value of their name attribute.
+     * Solo los elementos button, form, iframe, input, map, meta, object, select y textarea pueden tener un nombre a los efectos de este método; su nombre viene dado por el valor de su atributo name.
      */
     namedItem(name: string): HTMLCollection | Element | null;
     [index: number]: Element;
@@ -5904,51 +5904,51 @@ declare var HTMLAllCollection: {
     new(): HTMLAllCollection;
 };
 
-/** Hyperlink elements and provides special properties and methods (beyond those of the regular HTMLElement object interface that they inherit from) for manipulating the layout and presentation of such elements. */
+/** Elementos de hipervínculo y proporciona propiedades y métodos especiales (más allá de los de la interfaz de objeto HTMLElement normal de la que heredan) para manipular el diseño y la presentación de dichos elementos. */
 interface HTMLAnchorElement extends HTMLElement, HTMLHyperlinkElementUtils {
     /**
-     * Sets or retrieves the character set used to encode the object.
+     * Establece o recupera el conjunto de caracteres utilizado para codificar el objeto.
      */
     /** @deprecated */
     charset: string;
     /**
-     * Sets or retrieves the coordinates of the object.
+     * Establece o recupera las coordenadas del objeto.
      */
     /** @deprecated */
     coords: string;
     download: string;
     /**
-     * Sets or retrieves the language code of the object.
+     * Establece o recupera el código de idioma del objeto.
      */
     hreflang: string;
     /**
-     * Sets or retrieves the shape of the object.
+     * Establece o recupera la forma del objeto.
      */
     /** @deprecated */
     name: string;
     ping: string;
     referrerPolicy: string;
     /**
-     * Sets or retrieves the relationship between the object and the destination of the link.
+     * Establece o recupera la relación entre el objeto y el destino del enlace.
      */
     rel: string;
     readonly relList: DOMTokenList;
     /**
-     * Sets or retrieves the relationship between the object and the destination of the link.
+     * Establece o recupera la relación entre el objeto y el destino del enlace.
      */
     /** @deprecated */
     rev: string;
     /**
-     * Sets or retrieves the shape of the object.
+     * Establece o recupera la forma del objeto.
      */
     /** @deprecated */
     shape: string;
     /**
-     * Sets or retrieves the window or frame at which to target content.
+     * Establece o recupera la ventana o el marco en el que orientar el contenido.
      */
     target: string;
     /**
-     * Retrieves or sets the text of the object as a string.
+     * Recupera o establece el texto del objeto como una cadena.
      */
     text: string;
     type: string;
@@ -5963,19 +5963,19 @@ declare var HTMLAnchorElement: {
     new(): HTMLAnchorElement;
 };
 
-/** Provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of <area> elements. */
+/** Proporciona propiedades y métodos especiales (más allá de los de la interfaz del objeto HTMLElement normal que también tiene disponible por herencia) para manipular el diseño y la presentación de los elementos <area>. */
 interface HTMLAreaElement extends HTMLElement, HTMLHyperlinkElementUtils {
     /**
-     * Sets or retrieves a text alternative to the graphic.
+     * Establece o recupera un texto alternativo al gráfico.
      */
     alt: string;
     /**
-     * Sets or retrieves the coordinates of the object.
+     * Establece o recupera las coordenadas del objeto.
      */
     coords: string;
     download: string;
     /**
-     * Sets or gets whether clicks in this region cause action.
+     * Establece o determina si los clics en esta región provocan una acción.
      */
     /** @deprecated */
     noHref: boolean;
@@ -5984,11 +5984,11 @@ interface HTMLAreaElement extends HTMLElement, HTMLHyperlinkElementUtils {
     rel: string;
     readonly relList: DOMTokenList;
     /**
-     * Sets or retrieves the shape of the object.
+     * Establece o recupera la forma del objeto.
      */
     shape: string;
     /**
-     * Sets or retrieves the window or frame at which to target content.
+     * Establece o recupera la ventana o el marco en el que orientar el contenido.
      */
     target: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLAreaElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -6002,7 +6002,7 @@ declare var HTMLAreaElement: {
     new(): HTMLAreaElement;
 };
 
-/** Provides access to the properties of <audio> elements, as well as methods to manipulate them. It derives from the HTMLMediaElement interface. */
+/** Proporciona acceso a las propiedades de los elementos <audio>, así como a los métodos para manipularlos. Se deriva de la interfaz HTMLMediaElement. */
 interface HTMLAudioElement extends HTMLMediaElement {
     addEventListener<K extends keyof HTMLMediaElementEventMap>(type: K, listener: (this: HTMLAudioElement, ev: HTMLMediaElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -6015,10 +6015,10 @@ declare var HTMLAudioElement: {
     new(): HTMLAudioElement;
 };
 
-/** A HTML line break element (<br>). It inherits from HTMLElement. */
+/** Un elemento HTML de salto de línea (<br>). Hereda de HTMLElement. */
 interface HTMLBRElement extends HTMLElement {
     /**
-     * Sets or retrieves the side on which floating objects are not to be positioned when any IHTMLBlockElement is inserted into the document.
+     * Establece o recupera el lado en el que no se deben colocar los objetos flotantes cuando se inserta cualquier IHTMLBlockElement en el documento.
      */
     /** @deprecated */
     clear: string;
@@ -6033,14 +6033,14 @@ declare var HTMLBRElement: {
     new(): HTMLBRElement;
 };
 
-/** Contains the base URI for a document. This object inherits all of the properties and methods as described in the HTMLElement interface. */
+/** Contiene la URI base de un documento. Este objeto hereda todas las propiedades y métodos como se describe en la interfaz HTMLElement. */
 interface HTMLBaseElement extends HTMLElement {
     /**
-     * Gets or sets the baseline URL on which relative links are based.
+     * Obtiene o establece la dirección URL de referencia en la que se basan los enlaces relativos.
      */
     href: string;
     /**
-     * Sets or retrieves the window or frame at which to target content.
+     * Establece o recupera la ventana o el marco en el que orientar el contenido.
      */
     target: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLBaseElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -6058,7 +6058,7 @@ interface HTMLBodyElementEventMap extends HTMLElementEventMap, WindowEventHandle
     "orientationchange": Event;
 }
 
-/** Provides special properties (beyond those inherited from the regular HTMLElement interface) for manipulating <body> elements. */
+/** Proporciona propiedades especiales (más allá de las heredadas de la interfaz de HTMLElement normal) para manipular elementos <body>. */
 interface HTMLBodyElement extends HTMLElement, WindowEventHandlers {
     /** @deprecated */
     aLink: string;
@@ -6085,66 +6085,66 @@ declare var HTMLBodyElement: {
     new(): HTMLBodyElement;
 };
 
-/** Provides properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <button> elements. */
+/** Proporciona propiedades y métodos (más allá de la interfaz HTMLElement normal que también tiene disponible por herencia) para manipular elementos <button>. */
 interface HTMLButtonElement extends HTMLElement {
     disabled: boolean;
     /**
-     * Retrieves a reference to the form that the object is embedded in.
+     * Recupera una referencia al formulario en el que está incrustado el objeto.
      */
     readonly form: HTMLFormElement | null;
     /**
-     * Overrides the action attribute (where the data on a form is sent) on the parent form element.
+     * Anula el atributo action (donde se envían los datos de un formulario) en el elemento de formulario principal.
      */
     formAction: string;
     /**
-     * Used to override the encoding (formEnctype attribute) specified on the form element.
+     * Se utiliza para anular la codificación (atributo formEnctype) especificada en el elemento de formulario.
      */
     formEnctype: string;
     /**
-     * Overrides the submit method attribute previously specified on a form element.
+     * Anula el atributo del método submit especificado previamente en un elemento de formulario.
      */
     formMethod: string;
     /**
-     * Overrides any validation or required attributes on a form or form elements to allow it to be submitted without validation. This can be used to create a "save draft"-type submit option.
+     * Anula cualquier validación o atributo required en un formulario o elementos de formulario para permitir que se envíe sin validación. Esto se puede usar para crear una opción de envío del tipo "guardar borrador" — "save draft".
      */
     formNoValidate: boolean;
     /**
-     * Overrides the target attribute on a form element.
+     * Anula el atributo target en un elemento de formulario.
      */
     formTarget: string;
     readonly labels: NodeListOf<HTMLLabelElement>;
     /**
-     * Sets or retrieves the name of the object.
+     * Establece o recupera el name del objeto.
      */
     name: string;
     /**
-     * Gets the classification and default behavior of the button.
+     * Obtiene la clasificación y el comportamiento predeterminado del botón.
      */
     type: string;
     /**
-     * Returns the error message that would be displayed if the user submits the form, or an empty string if no error message. It also triggers the standard error message, such as "this is a required field". The result is that the user sees validation messages without actually submitting.
+     * Devuelve el mensaje de error que se mostraría si el usuario envía el formulario, o una cadena vacía si no hay mensaje de error. También activa el mensaje de error estándar, como "este es un campo obligatorio". El resultado es que el usuario ve mensajes de validación sin enviarlos realmente.
      */
     readonly validationMessage: string;
     /**
-     * Returns a  ValidityState object that represents the validity states of an element.
+     * Devuelve un objeto ValidityState que representa los estados de validez de un elemento.
      */
     readonly validity: ValidityState;
     /**
-     * Sets or retrieves the default or selected value of the control.
+     * Establece o recupera el valor predeterminado o seleccionado del control.
      */
     value: string;
     /**
-     * Returns whether an element will successfully validate based on forms validation rules and constraints.
+     * Devuelve si un elemento se validará con éxito en función de las reglas y restricciones de validación de formularios.
      */
     readonly willValidate: boolean;
     /**
-     * Returns whether a form will validate when it is submitted, without having to submit it.
+     * Devuelve si un formulario se validará cuando se envíe, sin tener que enviarlo.
      */
     checkValidity(): boolean;
     reportValidity(): boolean;
     /**
-     * Sets a custom error message that is displayed when a form is submitted.
-     * @param error Sets a custom error message that is displayed when a form is submitted.
+     * Establece un mensaje de error personalizado que se muestra cuando se envía un formulario.
+     * @param error Establece un mensaje de error personalizado que se muestra cuando se envía un formulario.
      */
     setCustomValidity(error: string): void;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -6158,20 +6158,20 @@ declare var HTMLButtonElement: {
     new(): HTMLButtonElement;
 };
 
-/** Provides properties and methods for manipulating the layout and presentation of <canvas> elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface. */
+/** Proporciona propiedades y métodos para manipular el diseño y la presentación de los elementos <canvas>. La interfaz HTMLCanvasElement también hereda las propiedades y métodos de la interfaz HTMLElement. */
 interface HTMLCanvasElement extends HTMLElement {
     /**
-     * Gets or sets the height of a canvas element on a document.
+     * Obtiene o establece el alto de un elemento canvas en un documento.
      */
     height: number;
     /**
-     * Gets or sets the width of a canvas element on a document.
+     * Obtiene o establece el ancho de un elemento canvas en un documento.
      */
     width: number;
     captureStream(frameRequestRate?: number): MediaStream;
     /**
-     * Returns an object that provides methods and properties for drawing and manipulating images and graphics on a canvas element in a document. A context object includes information about colors, line widths, fonts, and other graphic parameters that can be drawn on a canvas.
-     * @param contextId The identifier (ID) of the type of canvas to create. Internet Explorer 9 and Internet Explorer 10 support only a 2-D context using canvas.getContext("2d"); IE11 Preview also supports 3-D or WebGL context using canvas.getContext("experimental-webgl");
+     * Devuelve un objeto que proporciona métodos y propiedades para dibujar y manipular imágenes y gráficos en un elemento canvas en un documento. Un objeto context incluye información sobre colores, anchos de línea, fuentes y otros parámetros gráficos que se pueden dibujar en un lienzo — canvas.
+     * @param contextId El identificador (ID) del tipo canvas a crear. Internet Explorer 9 e Internet Explorer 10 solo admiten un contexto 2D mediante canvas.getContext("2d"); IE11 Preview también es compatible con el contexto 3-D o WebGL mediante canvas.getContext("experimental-webgl");
      */
     getContext(contextId: "2d", options?: CanvasRenderingContext2DSettings): CanvasRenderingContext2D | null;
     getContext(contextId: "bitmaprenderer", options?: ImageBitmapRenderingContextSettings): ImageBitmapRenderingContext | null;
@@ -6180,8 +6180,8 @@ interface HTMLCanvasElement extends HTMLElement {
     getContext(contextId: string, options?: any): RenderingContext | null;
     toBlob(callback: BlobCallback, type?: string, quality?: any): void;
     /**
-     * Returns the content of the current canvas as an image that you can use as a source for another canvas or an HTML element.
-     * @param type The standard MIME type for the image format to return. If you do not specify this parameter, the default value is a PNG format image.
+     * Devuelve el contenido del canvas actual como una imagen que puedes usar como fuente para otro lienzo o elemento HTML.
+     * @param type El tipo MIME estándar para que se devuelva el formato de imagen. Si no especificas este parámetro, el valor predeterminado es una imagen en formato PNG.
      */
     toDataURL(type?: string, quality?: any): string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLCanvasElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -6195,14 +6195,14 @@ declare var HTMLCanvasElement: {
     new(): HTMLCanvasElement;
 };
 
-/** A generic collection (array-like object similar to arguments) of elements (in document order) and offers methods and properties for selecting from the list. */
+/** Una colección genérica (objeto similar a un arreglo similar a los argumentos) de elementos (en el orden del documento) y ofrece métodos y propiedades para seleccionar de la lista. */
 interface HTMLCollectionBase {
     /**
-     * Sets or retrieves the number of objects in a collection.
+     * Establece o recupera el número de objetos en una colección.
      */
     readonly length: number;
     /**
-     * Retrieves an object from various collections.
+     * Recupera un objeto de varias colecciones.
      */
     item(index: number): Element | null;
     [index: number]: Element;
@@ -6210,7 +6210,7 @@ interface HTMLCollectionBase {
 
 interface HTMLCollection extends HTMLCollectionBase {
     /**
-     * Retrieves a select object or an object from an options collection.
+     * Recupera un objeto seleccionado o un objeto de una colección de opciones.
      */
     namedItem(name: string): Element | null;
 }
@@ -6226,7 +6226,7 @@ interface HTMLCollectionOf<T extends Element> extends HTMLCollectionBase {
     [index: number]: T;
 }
 
-/** Provides special properties (beyond those of the regular HTMLElement interface it also has available to it by inheritance) for manipulating definition list (<dl>) elements. */
+/** Proporciona propiedades especiales (más allá de las de la interfaz HTMLElement normal que también tiene disponible por herencia) para manipular elementos de la lista de definiciones (<dl>). */
 interface HTMLDListElement extends HTMLElement {
     /** @deprecated */
     compact: boolean;
@@ -6241,7 +6241,7 @@ declare var HTMLDListElement: {
     new(): HTMLDListElement;
 };
 
-/** Provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <data> elements. */
+/** Proporciona propiedades especiales (más allá de la interfaz HTMLElement normal que también tiene disponible por herencia) para manipular elementos <data>. */
 interface HTMLDataElement extends HTMLElement {
     value: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLDataElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -6255,7 +6255,7 @@ declare var HTMLDataElement: {
     new(): HTMLDataElement;
 };
 
-/** Provides special properties (beyond the HTMLElement object interface it also has available to it by inheritance) to manipulate <datalist> elements and their content. */
+/** Proporciona propiedades especiales (más allá de la interfaz del objeto HTMLElement que también tiene disponible por herencia) para manipular elementos <datalist> y su contenido. */
 interface HTMLDataListElement extends HTMLElement {
     /**
      * Returns an HTMLCollection of the option elements of the datalist element.
@@ -6301,10 +6301,10 @@ declare var HTMLDirectoryElement: {
     new(): HTMLDirectoryElement;
 };
 
-/** Provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <div> elements. */
+/** Proporciona propiedades especiales (más allá de la interfaz HTMLElement normal que también tiene disponible por herencia) para manipular elementos <div>. */
 interface HTMLDivElement extends HTMLElement {
     /**
-     * Sets or retrieves how the object is aligned with adjacent text.
+     * Establece o recupera cómo se alinea el objeto con el texto adyacente.
      */
     /** @deprecated */
     align: string;
@@ -6322,7 +6322,7 @@ declare var HTMLDivElement: {
 interface HTMLElementEventMap extends ElementEventMap, DocumentAndElementEventHandlersEventMap, GlobalEventHandlersEventMap {
 }
 
-/** Any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it. */
+/** Cualquier elemento HTML. Algunos elementos implementan directamente esta interfaz, mientras que otros la implementan a través de una interfaz que hereda. */
 interface HTMLElement extends Element, DocumentAndElementEventHandlers, ElementCSSInlineStyle, ElementCSSInlineStyle, ElementContentEditable, GlobalEventHandlers, HTMLOrSVGElement {
     accessKey: string;
     readonly accessKeyLabel: string;
@@ -6353,26 +6353,26 @@ declare var HTMLElement: {
     new(): HTMLElement;
 };
 
-/** Provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <embed> elements. */
+/** Proporciona propiedades especiales (más allá de la interfaz HTMLElement normal que también tiene disponible por herencia) para manipular elementos <embed>. */
 interface HTMLEmbedElement extends HTMLElement {
     /** @deprecated */
     align: string;
     /**
-     * Sets or retrieves the height of the object.
+     * Establece o recupera la altura del objeto.
      */
     height: string;
     /**
-     * Sets or retrieves the name of the object.
+     * Establece o recupera el name del objeto.
      */
     /** @deprecated */
     name: string;
     /**
-     * Sets or retrieves a URL to be loaded by the object.
+     * Establece o recupera una URL para que la cargue el objeto.
      */
     src: string;
     type: string;
     /**
-     * Sets or retrieves the width of the object.
+     * Establece o recupera el ancho del objeto.
      */
     width: string;
     getSVGDocument(): Document | null;
@@ -6387,7 +6387,7 @@ declare var HTMLEmbedElement: {
     new(): HTMLEmbedElement;
 };
 
-/** Provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of <fieldset> elements. */
+/** Proporciona propiedades y métodos especiales (más allá de la interfaz normal de HTMLElement que también tiene disponible por herencia) para manipular el diseño y la presentación de los elementos <fieldset>. */
 interface HTMLFieldSetElement extends HTMLElement {
     disabled: boolean;
     /**
@@ -6395,7 +6395,7 @@ interface HTMLFieldSetElement extends HTMLElement {
      */
     readonly elements: HTMLCollection;
     /**
-     * Retrieves a reference to the form that the object is embedded in.
+     * Recupera una referencia al formulario en el que está incrustado el objeto.
      */
     readonly form: HTMLFormElement | null;
     name: string;
@@ -6404,25 +6404,25 @@ interface HTMLFieldSetElement extends HTMLElement {
      */
     readonly type: string;
     /**
-     * Returns the error message that would be displayed if the user submits the form, or an empty string if no error message. It also triggers the standard error message, such as "this is a required field". The result is that the user sees validation messages without actually submitting.
+     * Devuelve el mensaje de error que se mostraría si el usuario envía el formulario, o una cadena vacía si no hay mensaje de error. También activa el mensaje de error estándar, como "este es un campo obligatorio". El resultado es que el usuario ve mensajes de validación sin enviarlos realmente.
      */
     readonly validationMessage: string;
     /**
-     * Returns a  ValidityState object that represents the validity states of an element.
+     * Devuelve un objeto ValidityState que representa los estados de validez de un elemento.
      */
     readonly validity: ValidityState;
     /**
-     * Returns whether an element will successfully validate based on forms validation rules and constraints.
+     * Devuelve si un elemento se validará con éxito en función de las reglas y restricciones de validación de formularios.
      */
     readonly willValidate: boolean;
     /**
-     * Returns whether a form will validate when it is submitted, without having to submit it.
+     * Devuelve si un formulario se validará cuando se envíe, sin tener que enviarlo.
      */
     checkValidity(): boolean;
     reportValidity(): boolean;
     /**
-     * Sets a custom error message that is displayed when a form is submitted.
-     * @param error Sets a custom error message that is displayed when a form is submitted.
+     * Establece un mensaje de error personalizado que se muestra cuando se envía un formulario.
+     * @param error Establece un mensaje de error personalizado que se muestra cuando se envía un formulario.
      */
     setCustomValidity(error: string): void;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLFieldSetElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -6463,7 +6463,7 @@ declare var HTMLFontElement: {
 /** A collection of HTML form control elements.  */
 interface HTMLFormControlsCollection extends HTMLCollectionBase {
     /**
-     * Returns the item with ID or name name from the collection.
+     * Devuelve el elemento con ID o nombre de la colección.
      *
      * If there are multiple matching items, then a RadioNodeList object containing all those elements is returned.
      */
@@ -6502,7 +6502,7 @@ interface HTMLFormElement extends HTMLElement {
      */
     enctype: string;
     /**
-     * Sets or retrieves the number of objects in a collection.
+     * Establece o recupera el número de objetos en una colección.
      */
     readonly length: number;
     /**
@@ -6510,7 +6510,7 @@ interface HTMLFormElement extends HTMLElement {
      */
     method: string;
     /**
-     * Sets or retrieves the name of the object.
+     * Establece o recupera el name del objeto.
      */
     name: string;
     /**
@@ -6518,17 +6518,17 @@ interface HTMLFormElement extends HTMLElement {
      */
     noValidate: boolean;
     /**
-     * Sets or retrieves the window or frame at which to target content.
+     * Establece o recupera la ventana o el marco en el que orientar el contenido.
      */
     target: string;
     /**
-     * Returns whether a form will validate when it is submitted, without having to submit it.
+     * Devuelve si un formulario se validará cuando se envíe, sin tener que enviarlo.
      */
     checkValidity(): boolean;
     reportValidity(): boolean;
     requestSubmit(submitter?: HTMLElement | null): void;
     /**
-     * Fires when the user resets a form.
+     * Se activa cuando el usuario restablece un formulario.
      */
     reiniciar(): void;
     /**
@@ -6596,7 +6596,7 @@ interface HTMLFrameElement extends HTMLElement {
     /** @deprecated */
     scrolling: string;
     /**
-     * Sets or retrieves a URL to be loaded by the object.
+     * Establece o recupera una URL para que la cargue el objeto.
      */
     /** @deprecated */
     src: string;
@@ -6643,7 +6643,7 @@ declare var HTMLFrameSetElement: {
 /** Provides special properties (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating <hr> elements. */
 interface HTMLHRElement extends HTMLElement {
     /**
-     * Sets or retrieves how the object is aligned with adjacent text.
+     * Establece o recupera cómo se alinea el objeto con el texto adyacente.
      */
     /** @deprecated */
     align: string;
@@ -6657,7 +6657,7 @@ interface HTMLHRElement extends HTMLElement {
     /** @deprecated */
     size: string;
     /**
-     * Sets or retrieves the width of the object.
+     * Establece o recupera el ancho del objeto.
      */
     /** @deprecated */
     width: string;
@@ -6792,7 +6792,7 @@ interface HTMLHyperlinkElementUtils {
 /** Provides special properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements. */
 interface HTMLIFrameElement extends HTMLElement {
     /**
-     * Sets or retrieves how the object is aligned with adjacent text.
+     * Establece o recupera cómo se alinea el objeto con el texto adyacente.
      */
     /** @deprecated */
     align: string;
@@ -6812,7 +6812,7 @@ interface HTMLIFrameElement extends HTMLElement {
     /** @deprecated */
     frameBorder: string;
     /**
-     * Sets or retrieves the height of the object.
+     * Establece o recupera la altura del objeto.
      */
     height: string;
     /**
@@ -6842,7 +6842,7 @@ interface HTMLIFrameElement extends HTMLElement {
     /** @deprecated */
     scrolling: string;
     /**
-     * Sets or retrieves a URL to be loaded by the object.
+     * Establece o recupera una URL para que la cargue el objeto.
      */
     src: string;
     /**
@@ -6850,7 +6850,7 @@ interface HTMLIFrameElement extends HTMLElement {
      */
     srcdoc: string;
     /**
-     * Sets or retrieves the width of the object.
+     * Establece o recupera el ancho del objeto.
      */
     width: string;
     getSVGDocument(): Document | null;
@@ -6868,12 +6868,12 @@ declare var HTMLIFrameElement: {
 /** Provides special properties and methods for manipulating <img> elements. */
 interface HTMLImageElement extends HTMLElement {
     /**
-     * Sets or retrieves how the object is aligned with adjacent text.
+     * Establece o recupera cómo se alinea el objeto con el texto adyacente.
      */
     /** @deprecated */
     align: string;
     /**
-     * Sets or retrieves a text alternative to the graphic.
+     * Establece o recupera un texto alternativo al gráfico.
      */
     alt: string;
     /**
@@ -6889,7 +6889,7 @@ interface HTMLImageElement extends HTMLElement {
     readonly currentSrc: string;
     decoding: "async" | "sync" | "auto";
     /**
-     * Sets or retrieves the height of the object.
+     * Establece o recupera la altura del objeto.
      */
     height: number;
     /**
@@ -6910,7 +6910,7 @@ interface HTMLImageElement extends HTMLElement {
     /** @deprecated */
     lowsrc: string;
     /**
-     * Sets or retrieves the name of the object.
+     * Establece o recupera el name del objeto.
      */
     /** @deprecated */
     name: string;
@@ -6939,7 +6939,7 @@ interface HTMLImageElement extends HTMLElement {
     /** @deprecated */
     vspace: number;
     /**
-     * Sets or retrieves the width of the object.
+     * Establece o recupera el ancho del objeto.
      */
     width: number;
     readonly x: number;
@@ -6963,12 +6963,12 @@ interface HTMLInputElement extends HTMLElement {
      */
     accept: string;
     /**
-     * Sets or retrieves how the object is aligned with adjacent text.
+     * Establece o recupera cómo se alinea el objeto con el texto adyacente.
      */
     /** @deprecated */
     align: string;
     /**
-     * Sets or retrieves a text alternative to the graphic.
+     * Establece o recupera un texto alternativo al gráfico.
      */
     alt: string;
     /**
@@ -6995,31 +6995,31 @@ interface HTMLInputElement extends HTMLElement {
      */
     files: FileList | null;
     /**
-     * Retrieves a reference to the form that the object is embedded in.
+     * Recupera una referencia al formulario en el que está incrustado el objeto.
      */
     readonly form: HTMLFormElement | null;
     /**
-     * Overrides the action attribute (where the data on a form is sent) on the parent form element.
+     * Anula el atributo action (donde se envían los datos de un formulario) en el elemento de formulario principal.
      */
     formAction: string;
     /**
-     * Used to override the encoding (formEnctype attribute) specified on the form element.
+     * Se utiliza para anular la codificación (atributo formEnctype) especificada en el elemento de formulario.
      */
     formEnctype: string;
     /**
-     * Overrides the submit method attribute previously specified on a form element.
+     * Anula el atributo del método submit especificado previamente en un elemento de formulario.
      */
     formMethod: string;
     /**
-     * Overrides any validation or required attributes on a form or form elements to allow it to be submitted without validation. This can be used to create a "save draft"-type submit option.
+     * Anula cualquier validación o atributo required en un formulario o elementos de formulario para permitir que se envíe sin validación. Esto se puede usar para crear una opción de envío del tipo "guardar borrador" — "save draft".
      */
     formNoValidate: boolean;
     /**
-     * Overrides the target attribute on a form element.
+     * Anula el atributo target en un elemento de formulario.
      */
     formTarget: string;
     /**
-     * Sets or retrieves the height of the object.
+     * Establece o recupera la altura del objeto.
      */
     height: number;
     /**
@@ -7049,7 +7049,7 @@ interface HTMLInputElement extends HTMLElement {
      */
     multiple: boolean;
     /**
-     * Sets or retrieves the name of the object.
+     * Establece o recupera el name del objeto.
      */
     name: string;
     /**
@@ -7093,11 +7093,11 @@ interface HTMLInputElement extends HTMLElement {
     /** @deprecated */
     useMap: string;
     /**
-     * Returns the error message that would be displayed if the user submits the form, or an empty string if no error message. It also triggers the standard error message, such as "this is a required field". The result is that the user sees validation messages without actually submitting.
+     * Devuelve el mensaje de error que se mostraría si el usuario envía el formulario, o una cadena vacía si no hay mensaje de error. También activa el mensaje de error estándar, como "este es un campo obligatorio". El resultado es que el usuario ve mensajes de validación sin enviarlos realmente.
      */
     readonly validationMessage: string;
     /**
-     * Returns a  ValidityState object that represents the validity states of an element.
+     * Devuelve un objeto ValidityState que representa los estados de validez de un elemento.
      */
     readonly validity: ValidityState;
     /**
@@ -7115,15 +7115,15 @@ interface HTMLInputElement extends HTMLElement {
     readonly webkitEntries: ReadonlyArray<FileSystemEntry>;
     webkitdirectory: boolean;
     /**
-     * Sets or retrieves the width of the object.
+     * Establece o recupera el ancho del objeto.
      */
     width: number;
     /**
-     * Returns whether an element will successfully validate based on forms validation rules and constraints.
+     * Devuelve si un elemento se validará con éxito en función de las reglas y restricciones de validación de formularios.
      */
     readonly willValidate: boolean;
     /**
-     * Returns whether a form will validate when it is submitted, without having to submit it.
+     * Devuelve si un formulario se validará cuando se envíe, sin tener que enviarlo.
      */
     checkValidity(): boolean;
     reportValidity(): boolean;
@@ -7132,8 +7132,8 @@ interface HTMLInputElement extends HTMLElement {
      */
     select(): void;
     /**
-     * Sets a custom error message that is displayed when a form is submitted.
-     * @param error Sets a custom error message that is displayed when a form is submitted.
+     * Establece un mensaje de error personalizado que se muestra cuando se envía un formulario.
+     * @param error Establece un mensaje de error personalizado que se muestra cuando se envía un formulario.
      */
     setCustomValidity(error: string): void;
     setRangeText(replacement: string): void;
@@ -7192,7 +7192,7 @@ interface HTMLLabelElement extends HTMLElement {
      */
     readonly control: HTMLElement | null;
     /**
-     * Retrieves a reference to the form that the object is embedded in.
+     * Recupera una referencia al formulario en el que está incrustado el objeto.
      */
     readonly form: HTMLFormElement | null;
     /**
@@ -7215,7 +7215,7 @@ interface HTMLLegendElement extends HTMLElement {
     /** @deprecated */
     align: string;
     /**
-     * Retrieves a reference to the form that the object is embedded in.
+     * Recupera una referencia al formulario en el que está incrustado el objeto.
      */
     readonly form: HTMLFormElement | null;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLLegendElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -7233,7 +7233,7 @@ declare var HTMLLegendElement: {
 interface HTMLLinkElement extends HTMLElement, LinkStyle {
     as: string;
     /**
-     * Sets or retrieves the character set used to encode the object.
+     * Establece o recupera el conjunto de caracteres utilizado para codificar el objeto.
      */
     /** @deprecated */
     charset: string;
@@ -7244,7 +7244,7 @@ interface HTMLLinkElement extends HTMLElement, LinkStyle {
      */
     href: string;
     /**
-     * Sets or retrieves the language code of the object.
+     * Establece o recupera el código de idioma del objeto.
      */
     hreflang: string;
     imageSizes: string;
@@ -7256,18 +7256,18 @@ interface HTMLLinkElement extends HTMLElement, LinkStyle {
     media: string;
     referrerPolicy: string;
     /**
-     * Sets or retrieves the relationship between the object and the destination of the link.
+     * Establece o recupera la relación entre el objeto y el destino del enlace.
      */
     rel: string;
     readonly relList: DOMTokenList;
     /**
-     * Sets or retrieves the relationship between the object and the destination of the link.
+     * Establece o recupera la relación entre el objeto y el destino del enlace.
      */
     /** @deprecated */
     rev: string;
     readonly sizes: DOMTokenList;
     /**
-     * Sets or retrieves the window or frame at which to target content.
+     * Establece o recupera la ventana o el marco en el que orientar el contenido.
      */
     /** @deprecated */
     target: string;
@@ -7293,7 +7293,7 @@ interface HTMLMapElement extends HTMLElement {
      */
     readonly areas: HTMLCollection;
     /**
-     * Sets or retrieves the name of the object.
+     * Establece o recupera el name del objeto.
      */
     name: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLMapElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -7637,17 +7637,17 @@ interface HTMLObjectElement extends HTMLElement {
     /** @deprecated */
     declare: boolean;
     /**
-     * Retrieves a reference to the form that the object is embedded in.
+     * Recupera una referencia al formulario en el que está incrustado el objeto.
      */
     readonly form: HTMLFormElement | null;
     /**
-     * Sets or retrieves the height of the object.
+     * Establece o recupera la altura del objeto.
      */
     height: string;
     /** @deprecated */
     hspace: number;
     /**
-     * Sets or retrieves the name of the object.
+     * Establece o recupera el name del objeto.
      */
     name: string;
     /**
@@ -7664,32 +7664,32 @@ interface HTMLObjectElement extends HTMLElement {
      */
     useMap: string;
     /**
-     * Returns the error message that would be displayed if the user submits the form, or an empty string if no error message. It also triggers the standard error message, such as "this is a required field". The result is that the user sees validation messages without actually submitting.
+     * Devuelve el mensaje de error que se mostraría si el usuario envía el formulario, o una cadena vacía si no hay mensaje de error. También activa el mensaje de error estándar, como "este es un campo obligatorio". El resultado es que el usuario ve mensajes de validación sin enviarlos realmente.
      */
     readonly validationMessage: string;
     /**
-     * Returns a  ValidityState object that represents the validity states of an element.
+     * Devuelve un objeto ValidityState que representa los estados de validez de un elemento.
      */
     readonly validity: ValidityState;
     /** @deprecated */
     vspace: number;
     /**
-     * Sets or retrieves the width of the object.
+     * Establece o recupera el ancho del objeto.
      */
     width: string;
     /**
-     * Returns whether an element will successfully validate based on forms validation rules and constraints.
+     * Devuelve si un elemento se validará con éxito en función de las reglas y restricciones de validación de formularios.
      */
     readonly willValidate: boolean;
     /**
-     * Returns whether a form will validate when it is submitted, without having to submit it.
+     * Devuelve si un formulario se validará cuando se envíe, sin tener que enviarlo.
      */
     checkValidity(): boolean;
     getSVGDocument(): Document | null;
     reportValidity(): boolean;
     /**
-     * Sets a custom error message that is displayed when a form is submitted.
-     * @param error Sets a custom error message that is displayed when a form is submitted.
+     * Establece un mensaje de error personalizado que se muestra cuando se envía un formulario.
+     * @param error Establece un mensaje de error personalizado que se muestra cuando se envía un formulario.
      */
     setCustomValidity(error: string): void;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLObjectElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -7729,7 +7729,7 @@ interface HTMLOptionElement extends HTMLElement {
     defaultSelected: boolean;
     disabled: boolean;
     /**
-     * Retrieves a reference to the form that the object is embedded in.
+     * Recupera una referencia al formulario en el que está incrustado el objeto.
      */
     readonly form: HTMLFormElement | null;
     /**
@@ -7766,7 +7766,7 @@ declare var HTMLOptionElement: {
 /** HTMLOptionsCollection is an interface representing a collection of HTML option elements (in document order) and offers methods and properties for traversing the list as well as optionally altering its items. This type is returned solely by the "options" property of select. */
 interface HTMLOptionsCollection extends HTMLCollectionOf<HTMLOptionElement> {
     /**
-     * Returns the number of elements in the collection.
+     * Devuelve el número de elementos de la colección.
      *
      * When set to a smaller number, truncates the number of option elements in the corresponding container.
      *
@@ -7845,7 +7845,7 @@ declare var HTMLOutputElement: {
 /** Provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating <p> elements. */
 interface HTMLParagraphElement extends HTMLElement {
     /**
-     * Sets or retrieves how the object is aligned with adjacent text.
+     * Establece o recupera cómo se alinea el objeto con el texto adyacente.
      */
     /** @deprecated */
     align: string;
@@ -7969,7 +7969,7 @@ declare var HTMLQuoteElement: {
 interface HTMLScriptElement extends HTMLElement {
     async: boolean;
     /**
-     * Sets or retrieves the character set used to encode the object.
+     * Establece o recupera el conjunto de caracteres utilizado para codificar el objeto.
      */
     /** @deprecated */
     charset: string;
@@ -7996,7 +7996,7 @@ interface HTMLScriptElement extends HTMLElement {
      */
     src: string;
     /**
-     * Retrieves or sets the text of the object as a string.
+     * Recupera o establece el texto del objeto como una cadena.
      */
     text: string;
     /**
@@ -8019,12 +8019,12 @@ interface HTMLSelectElement extends HTMLElement {
     autocomplete: string;
     disabled: boolean;
     /**
-     * Retrieves a reference to the form that the object is embedded in.
+     * Recupera una referencia al formulario en el que está incrustado el objeto.
      */
     readonly form: HTMLFormElement | null;
     readonly labels: NodeListOf<HTMLLabelElement>;
     /**
-     * Sets or retrieves the number of objects in a collection.
+     * Establece o recupera el número de objetos en una colección.
      */
     length: number;
     /**
@@ -8032,7 +8032,7 @@ interface HTMLSelectElement extends HTMLElement {
      */
     multiple: boolean;
     /**
-     * Sets or retrieves the name of the object.
+     * Establece o recupera el name del objeto.
      */
     name: string;
     /**
@@ -8057,11 +8057,11 @@ interface HTMLSelectElement extends HTMLElement {
      */
     readonly type: string;
     /**
-     * Returns the error message that would be displayed if the user submits the form, or an empty string if no error message. It also triggers the standard error message, such as "this is a required field". The result is that the user sees validation messages without actually submitting.
+     * Devuelve el mensaje de error que se mostraría si el usuario envía el formulario, o una cadena vacía si no hay mensaje de error. También activa el mensaje de error estándar, como "este es un campo obligatorio". El resultado es que el usuario ve mensajes de validación sin enviarlos realmente.
      */
     readonly validationMessage: string;
     /**
-     * Returns a  ValidityState object that represents the validity states of an element.
+     * Devuelve un objeto ValidityState que representa los estados de validez de un elemento.
      */
     readonly validity: ValidityState;
     /**
@@ -8069,7 +8069,7 @@ interface HTMLSelectElement extends HTMLElement {
      */
     value: string;
     /**
-     * Returns whether an element will successfully validate based on forms validation rules and constraints.
+     * Devuelve si un elemento se validará con éxito en función de las reglas y restricciones de validación de formularios.
      */
     readonly willValidate: boolean;
     /**
@@ -8079,17 +8079,17 @@ interface HTMLSelectElement extends HTMLElement {
      */
     add(element: HTMLOptionElement | HTMLOptGroupElement, before?: HTMLElement | number | null): void;
     /**
-     * Returns whether a form will validate when it is submitted, without having to submit it.
+     * Devuelve si un formulario se validará cuando se envíe, sin tener que enviarlo.
      */
     checkValidity(): boolean;
     /**
-     * Retrieves a select object or an object from an options collection.
+     * Recupera un objeto seleccionado o un objeto de una colección de opciones.
      * @param name Variant of type Number or String that specifies the object or collection to retrieve. If this parameter is an integer, it is the zero-based index of the object. If this parameter is a string, all objects with matching name or id properties are retrieved, and a collection is returned if more than one match is made.
      * @param index Variant of type Number that specifies the zero-based index of the object to retrieve when a collection is returned.
      */
     item(index: number): Element | null;
     /**
-     * Retrieves a select object or an object from an options collection.
+     * Recupera un objeto seleccionado o un objeto de una colección de opciones.
      * @param namedItem A String that specifies the name or id property of the object to retrieve. A collection is returned if more than one match is made.
      */
     namedItem(name: string): HTMLOptionElement | null;
@@ -8101,8 +8101,8 @@ interface HTMLSelectElement extends HTMLElement {
     remove(index: number): void;
     reportValidity(): boolean;
     /**
-     * Sets a custom error message that is displayed when a form is submitted.
-     * @param error Sets a custom error message that is displayed when a form is submitted.
+     * Establece un mensaje de error personalizado que se muestra cuando se envía un formulario.
+     * @param error Establece un mensaje de error personalizado que se muestra cuando se envía un formulario.
      */
     setCustomValidity(error: string): void;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLSelectElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -8219,7 +8219,7 @@ interface HTMLTableCellElement extends HTMLElement {
      */
     abbr: string;
     /**
-     * Sets or retrieves how the object is aligned with adjacent text.
+     * Establece o recupera cómo se alinea el objeto con el texto adyacente.
      */
     /** @deprecated */
     align: string;
@@ -8247,7 +8247,7 @@ interface HTMLTableCellElement extends HTMLElement {
      */
     headers: string;
     /**
-     * Sets or retrieves the height of the object.
+     * Establece o recupera la altura del objeto.
      */
     /** @deprecated */
     height: string;
@@ -8267,7 +8267,7 @@ interface HTMLTableCellElement extends HTMLElement {
     /** @deprecated */
     vAlign: string;
     /**
-     * Sets or retrieves the width of the object.
+     * Establece o recupera el ancho del objeto.
      */
     /** @deprecated */
     width: string;
@@ -8300,7 +8300,7 @@ interface HTMLTableColElement extends HTMLElement {
     /** @deprecated */
     vAlign: string;
     /**
-     * Sets or retrieves the width of the object.
+     * Establece o recupera el ancho del objeto.
      */
     /** @deprecated */
     width: string;
@@ -8375,7 +8375,7 @@ interface HTMLTableElement extends HTMLElement {
      */
     tHead: HTMLTableSectionElement | null;
     /**
-     * Sets or retrieves the width of the object.
+     * Establece o recupera el ancho del objeto.
      */
     /** @deprecated */
     width: string;
@@ -8431,7 +8431,7 @@ declare var HTMLTableElement: {
 /** Provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table. */
 interface HTMLTableRowElement extends HTMLElement {
     /**
-     * Sets or retrieves how the object is aligned with adjacent text.
+     * Establece o recupera cómo se alinea el objeto con el texto adyacente.
      */
     /** @deprecated */
     align: string;
@@ -8535,7 +8535,7 @@ declare var HTMLTemplateElement: {
 interface HTMLTextAreaElement extends HTMLElement {
     autocomplete: string;
     /**
-     * Sets or retrieves the width of the object.
+     * Establece o recupera el ancho del objeto.
      */
     cols: number;
     /**
@@ -8545,7 +8545,7 @@ interface HTMLTextAreaElement extends HTMLElement {
     dirName: string;
     disabled: boolean;
     /**
-     * Retrieves a reference to the form that the object is embedded in.
+     * Recupera una referencia al formulario en el que está incrustado el objeto.
      */
     readonly form: HTMLFormElement | null;
     readonly labels: NodeListOf<HTMLLabelElement>;
@@ -8555,7 +8555,7 @@ interface HTMLTextAreaElement extends HTMLElement {
     maxLength: number;
     minLength: number;
     /**
-     * Sets or retrieves the name of the object.
+     * Establece o recupera el name del objeto.
      */
     name: string;
     /**
@@ -8589,11 +8589,11 @@ interface HTMLTextAreaElement extends HTMLElement {
      */
     readonly type: string;
     /**
-     * Returns the error message that would be displayed if the user submits the form, or an empty string if no error message. It also triggers the standard error message, such as "this is a required field". The result is that the user sees validation messages without actually submitting.
+     * Devuelve el mensaje de error que se mostraría si el usuario envía el formulario, o una cadena vacía si no hay mensaje de error. También activa el mensaje de error estándar, como "este es un campo obligatorio". El resultado es que el usuario ve mensajes de validación sin enviarlos realmente.
      */
     readonly validationMessage: string;
     /**
-     * Returns a  ValidityState object that represents the validity states of an element.
+     * Devuelve un objeto ValidityState que representa los estados de validez de un elemento.
      */
     readonly validity: ValidityState;
     /**
@@ -8601,7 +8601,7 @@ interface HTMLTextAreaElement extends HTMLElement {
      */
     value: string;
     /**
-     * Returns whether an element will successfully validate based on forms validation rules and constraints.
+     * Devuelve si un elemento se validará con éxito en función de las reglas y restricciones de validación de formularios.
      */
     readonly willValidate: boolean;
     /**
@@ -8609,7 +8609,7 @@ interface HTMLTextAreaElement extends HTMLElement {
      */
     wrap: string;
     /**
-     * Returns whether a form will validate when it is submitted, without having to submit it.
+     * Devuelve si un formulario se validará cuando se envíe, sin tener que enviarlo.
      */
     checkValidity(): boolean;
     reportValidity(): boolean;
@@ -8618,8 +8618,8 @@ interface HTMLTextAreaElement extends HTMLElement {
      */
     select(): void;
     /**
-     * Sets a custom error message that is displayed when a form is submitted.
-     * @param error Sets a custom error message that is displayed when a form is submitted.
+     * Establece un mensaje de error personalizado que se muestra cuando se envía un formulario.
+     * @param error Establece un mensaje de error personalizado que se muestra cuando se envía un formulario.
      */
     setCustomValidity(error: string): void;
     setRangeText(replacement: string): void;
@@ -8659,7 +8659,7 @@ declare var HTMLTimeElement: {
 /** Contains the title for a document. This element inherits all of the properties and methods of the HTMLElement interface. */
 interface HTMLTitleElement extends HTMLElement {
     /**
-     * Retrieves or sets the text of the object as a string.
+     * Recupera o establece el texto del objeto como una cadena.
      */
     text: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTitleElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -18429,37 +18429,37 @@ declare var onmousedown: ((this: Window, ev: MouseEvent) => any) | null;
 declare var onmouseenter: ((this: Window, ev: MouseEvent) => any) | null;
 declare var onmouseleave: ((this: Window, ev: MouseEvent) => any) | null;
 /**
- * Fires when the user moves the mouse over the object.
+ * Se dispara cuando el usuario mueve el mouse sobre el objeto.
  * @param ev El evento del mouse.
  */
 declare var onmousemove: ((this: Window, ev: MouseEvent) => any) | null;
 /**
- * Fires when the user moves the mouse pointer outside the boundaries of the object.
+ * Se activa cuando el usuario mueve el puntero del mouse fuera de los límites del objeto.
  * @param ev El evento del mouse.
  */
 declare var onmouseout: ((this: Window, ev: MouseEvent) => any) | null;
 /**
- * Fires when the user moves the mouse pointer into the object.
+ * Se activa cuando el usuario mueve el puntero del mouse hacia el objeto.
  * @param ev El evento del mouse.
  */
 declare var onmouseover: ((this: Window, ev: MouseEvent) => any) | null;
 /**
- * Fires when the user releases a mouse button while the mouse is over the object.
+ * Se activa cuando el usuario suelta un botón del mouse mientras el mouse está sobre el objeto.
  * @param ev El evento del mouse.
  */
 declare var onmouseup: ((this: Window, ev: MouseEvent) => any) | null;
 /**
- * Occurs when playback is paused.
+ * Ocurre cuando la reproducción está en pausa.
  * @param ev El evento.
  */
 declare var onpause: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs when the play method is requested.
+ * Ocurre cuando se solicita el método de reproducción.
  * @param ev El evento.
  */
 declare var onplay: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs when the audio or video has started playing.
+ * Ocurre cuando el audio o video se ha comenzado a reproducir.
  * @param ev El evento.
  */
 declare var onplaying: ((this: Window, ev: Event) => any) | null;
@@ -18472,56 +18472,56 @@ declare var onpointerout: ((this: Window, ev: PointerEvent) => any) | null;
 declare var onpointerover: ((this: Window, ev: PointerEvent) => any) | null;
 declare var onpointerup: ((this: Window, ev: PointerEvent) => any) | null;
 /**
- * Occurs to indicate progress while downloading media data.
+ * Ocurre para indicar el progreso durante la descarga de datos multimedia.
  * @param ev El evento.
  */
 declare var onprogress: ((this: Window, ev: ProgressEvent) => any) | null;
 /**
- * Occurs when the playback rate is increased or decreased.
+ * Ocurre cuando la velocidad de reproducción aumenta o disminuye.
  * @param ev El evento.
  */
 declare var onratechange: ((this: Window, ev: Event) => any) | null;
 /**
- * Fires when the user resets a form.
+ * Se activa cuando el usuario restablece un formulario.
  * @param ev El evento.
  */
 declare var onreset: ((this: Window, ev: Event) => any) | null;
 declare var onresize: ((this: Window, ev: UIEvent) => any) | null;
 /**
- * Fires when the user repositions the scroll box in the scroll bar on the object.
+ * Se activa cuando el usuario cambia la posición del cuadro de desplazamiento en la barra de desplazamiento del objeto.
  * @param ev El evento.
  */
 declare var onscroll: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs when the seek operation ends.
+ * Se produce cuando finaliza la operación de búsqueda.
  * @param ev El evento.
  */
 declare var onseeked: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs when the current playback position is moved.
+ * Se produce cuando se mueve la posición de reproducción actual.
  * @param ev El evento.
  */
 declare var onseeking: ((this: Window, ev: Event) => any) | null;
 /**
- * Fires when the current selection changes.
+ * Se dispara cuando cambia la selección actual.
  * @param ev El evento.
  */
 declare var onselect: ((this: Window, ev: Event) => any) | null;
 declare var onselectionchange: ((this: Window, ev: Event) => any) | null;
 declare var onselectstart: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs when the download has stopped.
+ * Ocurre cuando la descarga se ha detenido.
  * @param ev El evento.
  */
 declare var onstalled: ((this: Window, ev: Event) => any) | null;
 declare var onsubmit: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs if the load operation has been intentionally halted.
+ * Ocurre si la operación de carga se detuvo intencionalmente.
  * @param ev El evento.
  */
 declare var onsuspend: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs to indicate the current playback position.
+ * Se produce para indicar la posición de reproducción actual.
  * @param ev El evento.
  */
 declare var ontimeupdate: ((this: Window, ev: Event) => any) | null;
@@ -18535,12 +18535,12 @@ declare var ontransitionend: ((this: Window, ev: TransitionEvent) => any) | null
 declare var ontransitionrun: ((this: Window, ev: TransitionEvent) => any) | null;
 declare var ontransitionstart: ((this: Window, ev: TransitionEvent) => any) | null;
 /**
- * Occurs when the volume is changed, or playback is muted or unmuted.
+ * Ocurre cuando se cambia el volumen o se silencia o activa la reproducción.
  * @param ev El evento.
  */
 declare var onvolumechange: ((this: Window, ev: Event) => any) | null;
 /**
- * Occurs when playback stops because the next frame of a video resource is not available.
+ * Ocurre cuando la reproducción se detiene porque el siguiente cuadro de un recurso de video no está disponible.
  * @param ev El evento.
  */
 declare var onwaiting: ((this: Window, ev: Event) => any) | null;

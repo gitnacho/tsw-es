@@ -1,10 +1,10 @@
 import { IntlShape } from "react-intl"
 
 /**
- * This will let you define an area for your localization and have typescript
- * keep the keys in check
+ * Esto te permitirá definir un área para tu localización y hacer que typescript
+ * mantenga las teclas bajo control
  *
- * @param intlUseEffect the result of `useIntl()`
+ * @param intlUseEffect el resultado de `useIntl()`
  */
 export function createInternational<NavSection>(
   intlUseEffect: IntlShape

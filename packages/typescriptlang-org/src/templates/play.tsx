@@ -60,9 +60,9 @@ const Play: React.FC<Props> = (props) => {
     window.playgroundHandbookTOC = props.pageContext.playgroundHandbookTOC
     // @ts-ignore - so the config options can use localized descriptions
     window.optionsSummary = props.pageContext.optionsSummary
-    // @ts-ignore - for React-based plugins
+    // @ts-ignore - para complementos basados ​​en React
     window.react = React
-    // @ts-ignore - for React-based plugins
+    // @ts-ignore - para complementos basados ​​en React
     window.reactDOM = ReactDOM
     // @ts-ignore - so that plugins etc can use i18n
     window.i = i
@@ -74,9 +74,9 @@ const Play: React.FC<Props> = (props) => {
       const params = new URLSearchParams(location.search)
 
       let tsVersionParam = params.get("ts")
-      // handle the nightly lookup 
+      // maneja la búsqueda nocturna 
       if (tsVersionParam && tsVersionParam === "Nightly" || tsVersionParam === "next") {
-        // Avoids the CDN to doubly skip caching
+        // Evita el CDN para omitir el almacenamiento en caché por partida doble
         const nightlyLookup = await fetch("https://tswebinfra.blob.core.windows.net/indexes/next.json", { cache: "no-cache" })
         const nightlyJSON = await nightlyLookup.json()
         tsVersionParam = nightlyJSON.version
@@ -111,7 +111,7 @@ const Play: React.FC<Props> = (props) => {
         return
       }
 
-      // Allow prod/staging builds to set a custom commit prefix to bust caches
+      // Permite compilaciones de prod/staging para establecer un prefijo de confirmación personalizado para romper cachés
       const { sandboxRoot, playgroundRoot, playgroundWorker } = getPlaygroundUrls()
 
       // @ts-ignore
@@ -138,7 +138,7 @@ const Play: React.FC<Props> = (props) => {
       });
 
       re(["vs/editor/editor.main", "vs/language/typescript/tsWorker", "typescript-sandbox/index", "typescript-playground/index"], async (main: typeof import("monaco-editor"), tsWorker: any, sandbox: typeof import("@typescript/sandbox"), playground: typeof import("@typescript/playground")) => {
-        // Importing "vs/language/typescript/tsWorker" will set ts as a global
+        // Importar "vs/language/typescript/tsWorker" configurará ts como global
         const ts = (global as any).ts || tsWorker.typescript
         const isOK = main && ts && sandbox && playground
         if (isOK) {
@@ -150,7 +150,7 @@ const Play: React.FC<Props> = (props) => {
           return
         }
 
-        // Set the height of monaco to be either your window height or 600px - whichever is smallest
+        // Establece la altura de monaco para que sea la altura de tu ventana o 600px - el que sea más pequeño
         const container = document.getElementById("playground-container")!
         container.style.display = "flex"
         const height = Math.max(window.innerHeight, 600)
@@ -159,7 +159,7 @@ const Play: React.FC<Props> = (props) => {
         const extension = (!!params.get("useJavaScript") ? "js" : params.get("filetype") || "ts") as any
         const workerPath = params.get("multiFile") ? `${document.location.origin + playgroundWorker}?filetype=${extension}` : undefined
 
-        // Create the sandbox
+        // Crea la caja de arena — sandbox
         const sandboxEnv = await sandbox.createTypeScriptSandbox({
           text: localStorage.getItem('sandbox-history') || i("play_default_code_sample"),
           compilerOptions: {},
@@ -182,7 +182,7 @@ const Play: React.FC<Props> = (props) => {
 
         playground.setupPlayground(sandboxEnv, main, playgroundConfig, i as any, React)
 
-        // Dark mode faff
+        // Modo oscuro faff
         const darkModeEnabled = document.documentElement.classList.contains("dark-theme")
         if (darkModeEnabled) {
           sandboxEnv.monaco.editor.setTheme("sandbox-dark");
@@ -199,7 +199,7 @@ const Play: React.FC<Props> = (props) => {
 
   return (
     <Layout title={i("head_playground_title")} description={i("head_playground_description")} lang={props.pageContext.lang}>
-      {/** This is the top nav, which is outside of the editor  */}
+      {/** Este es el nav superior, que está fuera del editor */}
       <nav className="navbar-sub">
         <ul className="nav">
           <li className="name hide-small"><span>Playground</span></li>

@@ -34,11 +34,11 @@ const Play: React.FC<Props> = (props) => {
     if ("playgroundLoaded" in window) return
     window["playgroundLoaded"] = true
 
-    // @ts-ignore - for React-based plugins
+    // @ts-ignore - para complementos basados ​​en React
     window.react = React
-    // @ts-ignore - for React-based plugins
+    // @ts-ignore - para complementos basados ​​en React
     window.reactDOM = ReactDOM
-    // @ts-ignore - so that plugins etc can use local functions
+    // @ts-ignore - para que los complementos, etc. puedan usar funciones locales
     window.i = i
 
     const getLoaderScript = document.createElement('script');
@@ -48,14 +48,14 @@ const Play: React.FC<Props> = (props) => {
       const params = new URLSearchParams(location.search)
 
       let tsVersionParam = params.get("ts")
-      // handle the nightly lookup 
+      // maneja la búsqueda nocturna 
       if (!tsVersionParam || tsVersionParam && tsVersionParam === "Nightly" || tsVersionParam === "next") {
-        // Avoids the CDN to doubly skip caching
+        // Evita el CDN para omitir el almacenamiento en caché por partida doble
         const nightlyLookup = await fetch("https://tswebinfra.blob.core.windows.net/indexes/next.json", { cache: "no-cache" })
         const nightlyJSON = await nightlyLookup.json()
         tsVersionParam = nightlyJSON.version
       }
-      // Allow prod/staging builds to set a custom commit prefix to bust caches
+      // Permite compilaciones de prod/staging para establecer un prefijo de confirmación personalizado para romper cachés
       const { sandboxRoot, playgroundRoot, playgroundWorker } = getPlaygroundUrls()
 
       // @ts-ignore
@@ -72,7 +72,7 @@ const Play: React.FC<Props> = (props) => {
       });
 
       re(["vs/editor/editor.main", "vs/language/typescript/tsWorker", "typescript-sandbox/index", "typescript-playground/index"], async (main: typeof import("monaco-editor"), tsWorker: any, sandbox: typeof import("@typescript/sandbox"), playground: typeof import("@typescript/playground")) => {
-        // Importing "vs/language/typescript/tsWorker" will set ts as a global
+        // Importar "vs/language/typescript/tsWorker" configurará ts como global
         const ts = (global as any).ts
         const isOK = main && ts && sandbox && playground
         if (isOK) {
@@ -82,13 +82,13 @@ const Play: React.FC<Props> = (props) => {
           console.error("main", !!main, "ts", !!ts, "sandbox", !!sandbox, "playground", !!playground)
         }
 
-        // Set the height of monaco to be either your window height or 600px - whichever is smallest
+        // Establece la altura de monaco para que sea la altura de tu ventana o 600px - el que sea más pequeño
         const container = document.getElementById("playground-container")!
         container.style.display = "flex"
         const height = Math.max(window.innerHeight, 600)
         container.style.height = `${height - Math.round(container.getClientRects()[0].top) - 18}px`
 
-        // Create the sandbox
+        // Crea la caja de arena — sandbox
         const sandboxEnv = await sandbox.createTypeScriptSandbox({
           text: localStorage.getItem('sandbox-history') || i("play_default_code_sample"),
           compilerOptions: {},
@@ -127,7 +127,7 @@ const Play: React.FC<Props> = (props) => {
           })
         }
 
-        // When the compiler notices a twoslash compiler flag change, this will get triggered and reset the DTS map
+        // Cuando el compilador nota un cambio en el indicador del compilador de twoslash, esto se activará y restablecerá el mapa DTS
         sandboxEnv.setDidUpdateCompilerSettings(updateDTSEnv)
         updateDTSEnv(sandboxEnv.getCompilerOptions())
 
@@ -191,7 +191,7 @@ const Play: React.FC<Props> = (props) => {
           }
         }
 
-        // Dark mode faff
+        // Modo oscuro faff
         const darkModeEnabled = document.documentElement.classList.contains("dark-theme")
         if (darkModeEnabled) {
           sandboxEnv.monaco.editor.setTheme("sandbox-dark");
@@ -210,10 +210,10 @@ const Play: React.FC<Props> = (props) => {
 
   return (
     <Layout title="Bug Workbench" description="Create reproductions of issues with TypeScript" lang="en">
-      {/** This is the top nav, which is outside of the editor  */}
+      {/** Este es el nav superior, que está fuera del editor */}
       <nav className="navbar-sub">
         <ul className="nav">
-          <li className="name hide-small"><span>Bug Workbench</span></li>
+          <li className="name hide-small"><span>Espacio de trabajo para errores</span></li>
         </ul>
 
         <ul className="nav navbar-nav navbar-right hidden-xs"></ul>
@@ -240,7 +240,7 @@ const Play: React.FC<Props> = (props) => {
                 <li><a id="sidebar-toggle" aria-label="Hide Sidebar" href="#">&#x21E5;</a></li>
               </ul>
             </div>
-            { /** This is the div which monaco is added into  **/}
+            { /** Este es el div en el que se agrega monaco **/}
             <div id="monaco-editor-embed" />
           </div>
         </div>
@@ -250,4 +250,4 @@ const Play: React.FC<Props> = (props) => {
 }
 
 
-export default (props: Props) => <Intl locale="en"><Play {...props} /></Intl>
+export default (props: Props) => <Intl locale="es"><Play {...props} /></Intl>

@@ -1,4 +1,4 @@
-/** Based on https://developer.mozilla.org/docs/Web/HTTP/Browser_detection_using_the_user_agent */
+/** Basado en https://developer.mozilla.org/docs/Web/HTTP/Browser_detection_using_the_user_agent */
 export function isTouchDevice() {
   var hasTouchScreen = false
   if ("maxTouchPoints" in navigator) {
@@ -14,9 +14,9 @@ export function isTouchDevice() {
     if (mQ && mQ.media === "(pointer:coarse)") {
       hasTouchScreen = !!mQ.matches
     } else if ("orientation" in window) {
-      hasTouchScreen = true // deprecated, but good fallback
+      hasTouchScreen = true // en desuso, pero buena alternativa
     } else {
-      // Only as a last resort, fall back to user agent sniffing
+      // Solo como último recurso, recurre a indagar por olfato el agente de usuario
       // @ts-ignore
       var UA = navigator.userAgent
       hasTouchScreen =

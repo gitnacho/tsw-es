@@ -1,10 +1,10 @@
 import { withPrefix } from "gatsby"
 
 export const getPlaygroundUrls = () => {
-  // This will get switched out in CI by:
+  // Esto se cambiará en CI por:
   // scripts/cacheBustPlayground.mjs
 
-  // This should always be a single slash string in the codebase: "/"
+  // Esta siempre debe ser una sola cadena de barra diagonal en el código base: "/"
   const commitPrefix = "/"
 
   return {

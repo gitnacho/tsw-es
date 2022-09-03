@@ -32,7 +32,7 @@ const Index: React.FC<Props> = props => {
     getLoaderScript.src = withPrefix("/js/vs.loader.js")
     getLoaderScript.async = true
     getLoaderScript.onload = () => {
-      // Allow prod/staging builds to set a custom commit prefix to bust caches
+      // Permite compilaciones de prod/staging para establecer un prefijo de confirmación personalizado para romper cachés
       const {sandboxRoot} = getPlaygroundUrls()
       
       // @ts-ignore
@@ -223,7 +223,7 @@ const Index: React.FC<Props> = props => {
       <Layout
         title="Developers - Twoslash Code Samples"
         description="Learn about the TypeScript code sample library twoslash. Used for transpiling, providing hover to identifiers and compiler-driven error states."
-        lang="en"
+        lang="es"
       >
         <div id="dev">
           <DevNav active="twoslash" />
