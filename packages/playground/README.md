@@ -25,7 +25,7 @@ La adquisición automática de tipo es una característica que vive en el *sandb
 - `#code/PRA` ⏤ Una versión base64 y comprimida del código que debería estar en el editor
 - `#src/The%20code` ⏤ Manera *URLEncoded* de tener el código para el editor
 - `#example/generic-functions` ⏤ Toma el código de un ejemplo con `id generic-functions`
-- `#gist/92cf0a3...` ⏤ El *ID* de una esencia pública de *GitHub*, el *playground* representará una historia *markdown* y archivos *TS*/*JS* o tomará el contenido de un solo archivo y lo mostrará. Puedes agregar `-2` para acceder al tercer archivo (debido a la indexación 0).
+- `#gist/92cf0a3...` ⏤ El *ID* de una *gist* público de *GitHub*, el *playground* renderizará una historia *markdown* y archivos *TS*/*JS* o tomará el contenido de un solo archivo y lo mostrará. Puedes agregar `-2` para acceder al tercer archivo (debido a la indexación 0).
 
 O para activar alguna acción predeterminada:
 

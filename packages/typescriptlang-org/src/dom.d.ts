@@ -3380,7 +3380,7 @@ interface CanvasRect {
     strokeRect(x: number, y: number, w: number, h: number): void;
 }
 
-/** La interfaz CanvasRenderingContext2D, parte de la API de Canvas, proporciona el contexto de representación 2D para la superficie de dibujo de un elemento <canvas>. Se utiliza para dibujar formas, texto, imágenes y otros objetos. */
+/** La interfaz CanvasRenderingContext2D, parte de la API de Canvas, proporciona el contexto de renderizado 2D para la superficie de dibujo de un elemento <canvas>. Se utiliza para dibujar formas, texto, imágenes y otros objetos. */
 interface CanvasRenderingContext2D extends CanvasCompositing, CanvasDrawImage, CanvasDrawPath, CanvasFillStrokeStyles, CanvasFilters, CanvasImageData, CanvasImageSmoothing, CanvasPath, CanvasPathDrawingStyles, CanvasRect, CanvasShadowStyles, CanvasState, CanvasText, CanvasTextDrawingStyles, CanvasTransform, CanvasUserInterface {
     readonly canvas: HTMLCanvasElement;
 }
@@ -6436,13 +6436,13 @@ declare var HTMLFieldSetElement: {
     new(): HTMLFieldSetElement;
 };
 
-/** Implements the document object model (DOM) representation of the font element. The HTML Font Element <font> defines the font size, font face and color of text. */
+/** Implementa la representación del modelo de objeto de documento (DOM) del elemento de fuente. El elemento de fuente <font> de HTML define el tamaño de la fuente, el tipo de letra y el color del texto. */
 /** @deprecated */
 interface HTMLFontElement extends HTMLElement {
     /** @deprecated */
     color: string;
     /**
-     * Sets or retrieves the current typeface family.
+     * Establece o recupera la familia tipográfica actual.
      */
     /** @deprecated */
     face: string;
@@ -6460,12 +6460,12 @@ declare var HTMLFontElement: {
     new(): HTMLFontElement;
 };
 
-/** A collection of HTML form control elements.  */
+/** Una colección de elementos de control de formulario HTML.  */
 interface HTMLFormControlsCollection extends HTMLCollectionBase {
     /**
      * Devuelve el elemento con ID o nombre de la colección.
      *
-     * If there are multiple matching items, then a RadioNodeList object containing all those elements is returned.
+     * Si hay varios elementos coincidentes, se devuelve un objeto RadioNodeList que contiene todos esos elementos.
      */
     namedItem(name: string): RadioNodeList | Element | null;
 }
@@ -6475,30 +6475,30 @@ declare var HTMLFormControlsCollection: {
     new(): HTMLFormControlsCollection;
 };
 
-/** A <form> element in the DOM; it allows access to and in some cases modification of aspects of the form, as well as access to its component elements. */
+/** Un elemento <form> en el DOM; permite el acceso y en algunos casos la modificación de aspecto del formulario, así como el acceso a sus elementos componentes. */
 interface HTMLFormElement extends HTMLElement {
     /**
-     * Sets or retrieves a list of character encodings for input data that must be accepted by the server processing the form.
+     * Establece o recupera una lista de codificaciones de caracteres para los datos de entrada que debe aceptar el servidor que procesa el formulario.
      */
     acceptCharset: string;
     /**
-     * Sets or retrieves the URL to which the form content is sent for processing.
+     * Establece o recupera la URL a la que se envía el contenido del formulario para su procesamiento.
      */
     accion: string;
     /**
-     * Specifies whether autocomplete is applied to an editable text field.
+     * Especifica si se aplica autocompleción a un campo de texto editable.
      */
     autocomplete: string;
     /**
-     * Retrieves a collection, in source order, of all controls in a given form.
+     * Recupera una colección, en orden de origen, de todos los controles en un formulario determinado.
      */
     readonly elements: HTMLFormControlsCollection;
     /**
-     * Sets or retrieves the MIME encoding for the form.
+     * Establece o recupera la codificación MIME para el formulario.
      */
     encoding: string;
     /**
-     * Sets or retrieves the encoding type for the form.
+     * Establece o recupera el tipo de codificación del formulario.
      */
     enctype: string;
     /**
@@ -6506,7 +6506,7 @@ interface HTMLFormElement extends HTMLElement {
      */
     readonly length: number;
     /**
-     * Sets or retrieves how to send the form data to the server.
+     * Establece o recupera cómo enviar los datos del formulario al servidor.
      */
     method: string;
     /**
@@ -6514,7 +6514,7 @@ interface HTMLFormElement extends HTMLElement {
      */
     name: string;
     /**
-     * Designates a form that is not validated when submitted.
+     * Designa un formulario que no se valida cuando se envía.
      */
     noValidate: boolean;
     /**
@@ -6532,7 +6532,7 @@ interface HTMLFormElement extends HTMLElement {
      */
     reiniciar(): void;
     /**
-     * Fires when a FORM is about to be submitted.
+     * Se dispara cuando un FORM está a punto de ser enviado.
      */
     submit(): void;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLFormElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -6551,47 +6551,47 @@ declare var HTMLFormElement: {
 /** @deprecated */
 interface HTMLFrameElement extends HTMLElement {
     /**
-     * Retrieves the document object of the page or frame.
+     * Recupera el objeto de documento de la página o marco.
      */
     /** @deprecated */
     readonly contentDocument: Document | null;
     /**
-     * Retrieves the object of the specified.
+     * Recupera el objeto del especificado.
      */
     /** @deprecated */
     readonly contentWindow: WindowProxy | null;
     /**
-     * Sets or retrieves whether to display a border for the frame.
+     * Establece o recupera si mostrar un borde para el marco.
      */
     /** @deprecated */
     frameBorder: string;
     /**
-     * Sets or retrieves a URI to a long description of the object.
+     * Establece o recupera un URI para una descripción larga del objeto.
      */
     /** @deprecated */
     longDesc: string;
     /**
-     * Sets or retrieves the top and bottom margin heights before displaying the text in a frame.
+     * Establece o recupera las alturas de los márgenes superior e inferior antes de mostrar el texto en un marco.
      */
     /** @deprecated */
     marginHeight: string;
     /**
-     * Sets or retrieves the left and right margin widths before displaying the text in a frame.
+     * Establece o recupera los anchos de los márgenes izquierdo y derecho antes de mostrar el texto en un marco.
      */
     /** @deprecated */
     marginWidth: string;
     /**
-     * Sets or retrieves the frame name.
+     * Establece o recupera el nombre del marco.
      */
     /** @deprecated */
     name: string;
     /**
-     * Sets or retrieves whether the user can resize the frame.
+     * Establece o recupera si el usuario puede cambiar el tamaño del marco.
      */
     /** @deprecated */
     noResize: boolean;
     /**
-     * Sets or retrieves whether the frame can be scrolled.
+     * Establece o recupera si el marco se puede desplazar.
      */
     /** @deprecated */
     scrolling: string;
@@ -6615,16 +6615,16 @@ declare var HTMLFrameElement: {
 interface HTMLFrameSetElementEventMap extends HTMLElementEventMap, WindowEventHandlersEventMap {
 }
 
-/** Provides special properties (beyond those of the regular HTMLElement interface they also inherit) for manipulating <frameset> elements. */
+/** Proporciona propiedades especiales (más allá de las de la interfaz HTMLElement normal que también heredan) para manipular elementos <frameset>. */
 /** @deprecated */
 interface HTMLFrameSetElement extends HTMLElement, WindowEventHandlers {
     /**
-     * Sets or retrieves the frame widths of the object.
+     * Establece o recupera los anchos de marco del objeto.
      */
     /** @deprecated */
     cols: string;
     /**
-     * Sets or retrieves the frame heights of the object.
+     * Establece o recupera las alturas del marco del objeto.
      */
     /** @deprecated */
     rows: string;
@@ -6640,7 +6640,7 @@ declare var HTMLFrameSetElement: {
     new(): HTMLFrameSetElement;
 };
 
-/** Provides special properties (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating <hr> elements. */
+/** Proporciona propiedades especiales (más allá de las de la interfaz HTMLElement que también tiene disponibles por herencia) para manipular elementos <hr>. */
 interface HTMLHRElement extends HTMLElement {
     /**
      * Establece o recupera cómo se alinea el objeto con el texto adyacente.
@@ -6650,7 +6650,7 @@ interface HTMLHRElement extends HTMLElement {
     /** @deprecated */
     color: string;
     /**
-     * Sets or retrieves whether the horizontal rule is drawn with 3-D shading.
+     * Establece o recupera si la regla horizontal se dibuja con sombreado 3D.
      */
     /** @deprecated */
     noShade: boolean;
@@ -6672,7 +6672,7 @@ declare var HTMLHRElement: {
     new(): HTMLHRElement;
 };
 
-/** Contains the descriptive information, or metadata, for a document. This object inherits all of the properties and methods described in the HTMLElement interface. */
+/** Contiene la información descriptiva, o metadatos, de un documento. Este objeto hereda todas las propiedades y métodos descritos en la interfaz HTMLElement. */
 interface HTMLHeadElement extends HTMLElement {
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLHeadElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -6685,10 +6685,10 @@ declare var HTMLHeadElement: {
     new(): HTMLHeadElement;
 };
 
-/** The different heading elements. It inherits methods and properties from the HTMLElement interface. */
+/** Los diferentes elementos del encabezamiento. Hereda métodos y propiedades de la interfaz HTMLElement. */
 interface HTMLHeadingElement extends HTMLElement {
     /**
-     * Sets or retrieves a value that indicates the table alignment.
+     * Establece o recupera un valor que indica la alineación de la tabla.
      */
     /** @deprecated */
     align: string;
@@ -6703,10 +6703,10 @@ declare var HTMLHeadingElement: {
     new(): HTMLHeadingElement;
 };
 
-/** Serves as the root node for a given HTML document. This object inherits the properties and methods described in the HTMLElement interface. */
+/** Sirve como nodo raíz para un documento HTML determinado. Este objeto hereda las propiedades y métodos descritos en la interfaz HTMLElement. */
 interface HTMLHtmlElement extends HTMLElement {
     /**
-     * Sets or retrieves the DTD version that governs the current document.
+     * Establece o recupera la versión DTD que rige el documento actual.
      */
     /** @deprecated */
     version: string;
@@ -6723,73 +6723,73 @@ declare var HTMLHtmlElement: {
 
 interface HTMLHyperlinkElementUtils {
     /**
-     * Returns the hyperlink's URL's fragment (includes leading "#" if non-empty).
+     * Devuelve el fragmento de URL del hipervínculo (incluye el "#" inicial si no está vacío).
      *
-     * Can be set, to change the URL's fragment (ignores leading "#").
+     * Se puede configurar para cambiar el fragmento de la URL (ignora el "#" inicial).
      */
     hash: string;
     /**
-     * Returns the hyperlink's URL's host and port (if different from the default port for the scheme).
+     * Devuelve el host y el puerto de la URL del hipervínculo (si es diferente del puerto predeterminado para el esquema).
      *
-     * Can be set, to change the URL's host and port.
+     * Se puede configurar para cambiar el host y el puerto de la URL.
      */
     host: string;
     /**
-     * Returns the hyperlink's URL's host.
+     * Devuelve el host de la URL del hipervínculo.
      *
-     * Can be set, to change the URL's host.
+     * Se puede configurar para cambiar el host de la URL.
      */
     hostname: string;
     /**
-     * Returns the hyperlink's URL.
+     * Devuelve la URL del hipervínculo.
      *
-     * Can be set, to change the URL.
+     * Se puede configurar, para cambiar la URL.
      */
     href: string;
     toString(): string;
     /**
-     * Returns the hyperlink's URL's origin.
+     * Devuelve el origen de la URL del hipervínculo.
      */
     readonly origin: string;
     /**
-     * Returns the hyperlink's URL's password.
+     * Devuelve la contraseña de la URL del hipervínculo.
      *
-     * Can be set, to change the URL's password.
+     * Se puede configurar para cambiar la contraseña de la URL.
      */
     password: string;
     /**
-     * Returns the hyperlink's URL's path.
+     * Devuelve la ruta de la URL del hipervínculo.
      *
-     * Can be set, to change the URL's path.
+     * Se puede configurar para cambiar la ruta de la URL.
      */
     pathname: string;
     /**
-     * Returns the hyperlink's URL's port.
+     * Devuelve el puerto de la URL del hipervínculo.
      *
-     * Can be set, to change the URL's port.
+     * Se puede configurar para cambiar el puerto de la URL.
      */
     port: string;
     /**
-     * Returns the hyperlink's URL's scheme.
+     * Devuelve el esquema de URL del hipervínculo.
      *
-     * Can be set, to change the URL's scheme.
+     * Se puede configurar para cambiar el esquema de la URL.
      */
     protocol: string;
     /**
-     * Returns the hyperlink's URL's query (includes leading "?" if non-empty).
+     * Devuelve la consulta de la URL del hipervínculo (incluye el "?" inicial si no está vacío).
      *
-     * Can be set, to change the URL's query (ignores leading "?").
+     * Se puede configurar para cambiar la consulta de la URL (ignora el "?" inicial).
      */
     search: string;
     /**
-     * Returns the hyperlink's URL's username.
+     * Devuelve el nombre de usuario de la URL del hipervínculo.
      *
-     * Can be set, to change the URL's username.
+     * Se puede configurar para cambiar el nombre de usuario de la URL.
      */
     username: string;
 }
 
-/** Provides special properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements. */
+/** Proporciona propiedades y métodos especiales (más allá de los de la interfaz HTMLElement que también tiene disponibles por herencia) para manipular el diseño y la presentación de elementos de marco en línea. */
 interface HTMLIFrameElement extends HTMLElement {
     /**
      * Establece o recupera cómo se alinea el objeto con el texto adyacente.
@@ -6799,15 +6799,15 @@ interface HTMLIFrameElement extends HTMLElement {
     allow: string;
     allowFullscreen: boolean;
     /**
-     * Retrieves the document object of the page or frame.
+     * Recupera el objeto de documento de la página o marco.
      */
     readonly contentDocument: Document | null;
     /**
-     * Retrieves the object of the specified.
+     * Recupera el objeto del especificado.
      */
     readonly contentWindow: WindowProxy | null;
     /**
-     * Sets or retrieves whether to display a border for the frame.
+     * Establece o recupera si mostrar un borde para el marco.
      */
     /** @deprecated */
     frameBorder: string;
@@ -6816,28 +6816,28 @@ interface HTMLIFrameElement extends HTMLElement {
      */
     height: string;
     /**
-     * Sets or retrieves a URI to a long description of the object.
+     * Establece o recupera un URI para una descripción larga del objeto.
      */
     /** @deprecated */
     longDesc: string;
     /**
-     * Sets or retrieves the top and bottom margin heights before displaying the text in a frame.
+     * Establece o recupera las alturas de los márgenes superior e inferior antes de mostrar el texto en un marco.
      */
     /** @deprecated */
     marginHeight: string;
     /**
-     * Sets or retrieves the left and right margin widths before displaying the text in a frame.
+     * Establece o recupera los anchos de los márgenes izquierdo y derecho antes de mostrar el texto en un marco.
      */
     /** @deprecated */
     marginWidth: string;
     /**
-     * Sets or retrieves the frame name.
+     * Establece o recupera el nombre del marco.
      */
     name: string;
     referrerPolicy: ReferrerPolicy;
     readonly sandbox: DOMTokenList;
     /**
-     * Sets or retrieves whether the frame can be scrolled.
+     * Establece o recupera si el marco se puede desplazar.
      */
     /** @deprecated */
     scrolling: string;
@@ -6846,7 +6846,7 @@ interface HTMLIFrameElement extends HTMLElement {
      */
     src: string;
     /**
-     * Sets or retrives the content of the page that is to contain.
+     * Establece o recupera el contenido de la página que se va a contener.
      */
     srcdoc: string;
     /**
@@ -6865,7 +6865,7 @@ declare var HTMLIFrameElement: {
     new(): HTMLIFrameElement;
 };
 
-/** Provides special properties and methods for manipulating <img> elements. */
+/** Proporciona propiedades y métodos especiales para manipular elementos <img>. */
 interface HTMLImageElement extends HTMLElement {
     /**
      * Establece o recupera cómo se alinea el objeto con el texto adyacente.
@@ -6877,12 +6877,12 @@ interface HTMLImageElement extends HTMLElement {
      */
     alt: string;
     /**
-     * Specifies the properties of a border drawn around an object.
+     * Especifica las propiedades de un borde dibujado alrededor de un objeto.
      */
     /** @deprecated */
     border: string;
     /**
-     * Retrieves whether the object is fully loaded.
+     * Determina si el objeto está completamente cargado.
      */
     readonly complete: boolean;
     crossOrigin: string | null;
@@ -6893,17 +6893,17 @@ interface HTMLImageElement extends HTMLElement {
      */
     height: number;
     /**
-     * Sets or retrieves the width of the border to draw around the object.
+     * Establece o recupera el ancho del borde para dibujar alrededor del objeto.
      */
     /** @deprecated */
     hspace: number;
     /**
-     * Sets or retrieves whether the image is a server-side image map.
+     * Establece o recupera si la imagen es un mapa de imagen de lado del servidor.
      */
     isMap: boolean;
     loading: string;
     /**
-     * Sets or retrieves a Uniform Resource Identifier (URI) to a long description of the object.
+     * Establece o recupera un identificador uniforme de recursos (URI) para una descripción larga del objeto.
      */
     /** @deprecated */
     longDesc: string;
@@ -6915,26 +6915,26 @@ interface HTMLImageElement extends HTMLElement {
     /** @deprecated */
     name: string;
     /**
-     * The original height of the image resource before sizing.
+     * La altura original del recurso de imagen antes de ajustarla.
      */
     readonly naturalHeight: number;
     /**
-     * The original width of the image resource before sizing.
+     * El ancho original del recurso de imagen antes de ajustarla.
      */
     readonly naturalWidth: number;
     referrerPolicy: string;
     sizes: string;
     /**
-     * The address or URL of the a media resource that is to be considered.
+     * La dirección o URL de un recurso multimedia que se va a considerar.
      */
     src: string;
     srcset: string;
     /**
-     * Sets or retrieves the URL, often with a bookmark extension (#name), to use as a client-side image map.
+     * Establece o recupera la URL, a menudo con una extensión de marcador (#name), para usarla como un mapa de imagen del lado del cliente.
      */
     useMap: string;
     /**
-     * Sets or retrieves the vertical margin for the object.
+     * Establece o recupera el margen vertical del objeto.
      */
     /** @deprecated */
     vspace: number;
@@ -6956,10 +6956,10 @@ declare var HTMLImageElement: {
     new(): HTMLImageElement;
 };
 
-/** Provides special properties and methods for manipulating the options, layout, and presentation of <input> elements. */
+/** Proporciona propiedades y métodos especiales para manipular las opciones, el diseño y la presentación de los elementos <input>. */
 interface HTMLInputElement extends HTMLElement {
     /**
-     * Sets or retrieves a comma-separated list of content types.
+     * Establece o recupera una lista separada por comas de tipos de contenido.
      */
     accept: string;
     /**
@@ -6972,26 +6972,26 @@ interface HTMLInputElement extends HTMLElement {
      */
     alt: string;
     /**
-     * Specifies whether autocomplete is applied to an editable text field.
+     * Especifica si se aplica autocompleción a un campo de texto editable.
      */
     autocomplete: string;
     capture: string;
     /**
-     * Sets or retrieves the state of the check box or radio button.
+     * Establece o recupera el estado de la casilla de verificación o el botón de radio.
      */
     checked: boolean;
     /**
-     * Sets or retrieves the state of the check box or radio button.
+     * Establece o recupera el estado de la casilla de verificación o el botón de radio.
      */
     defaultChecked: boolean;
     /**
-     * Sets or retrieves the initial contents of the object.
+     * Establece o recupera el contenido inicial del objeto.
      */
     defaultValue: string;
     dirName: string;
     disabled: boolean;
     /**
-     * Returns a FileList object on a file type input object.
+     * Devuelve un objeto FileList en un objeto de entrada de tipo de archivo.
      */
     files: FileList | null;
     /**
@@ -7023,29 +7023,29 @@ interface HTMLInputElement extends HTMLElement {
      */
     height: number;
     /**
-     * When set, overrides the rendering of checkbox controls so that the current value is not visible.
+     * Cuando se establece, anula el renderizado de los controles de casilla de verificación para que el valor actual no sea visible.
      */
     indeterminate: boolean;
     readonly labels: NodeListOf<HTMLLabelElement> | null;
     /**
-     * Specifies the ID of a pre-defined datalist of options for an input element.
+     * Especifica el ID de una lista de datos predefinida de opciones para un elemento input.
      */
     readonly list: HTMLElement | null;
     /**
-     * Defines the maximum acceptable value for an input element with type="number".When used with the min and step attributes, lets you control the range and increment (such as only even numbers) that the user can enter into an input field.
+     * Define el valor máximo aceptable para un elemento input con type="number". Cuando se usa con los atributos min y step, te permite controlar el rango e incremento (como solo números pares) que el usuario puede ingresar en un campo input.
      */
     max: string;
     /**
-     * Sets or retrieves the maximum number of characters that the user can enter in a text control.
+     * Establece o recupera el número máximo de caracteres que el usuario puede ingresar en un control text.
      */
     maxLength: number;
     /**
-     * Defines the minimum acceptable value for an input element with type="number". When used with the max and step attributes, lets you control the range and increment (such as even numbers only) that the user can enter into an input field.
+     * Define el valor mínimo aceptable para un elemento input con type="number". Cuando se usa con los atributos max y step, te permite controlar el rango y el incremento (como solo números pares) que el usuario puede ingresar en un campo input.
      */
     min: string;
     minLength: number;
     /**
-     * Sets or retrieves the Boolean value indicating whether multiple items can be selected from a list.
+     * Establece o recupera el valor booleano que indica si se pueden seleccionar varios elementos de una lista.
      */
     multiple: boolean;
     /**
@@ -7053,42 +7053,42 @@ interface HTMLInputElement extends HTMLElement {
      */
     name: string;
     /**
-     * Gets or sets a string containing a regular expression that the user's input must match.
+     * Obtiene o establece una cadena que contiene una expresión regular que debe coincidir con la entrada del usuario.
      */
     pattern: string;
     /**
-     * Gets or sets a text string that is displayed in an input field as a hint or prompt to users as the format or type of information they need to enter.The text appears in an input field until the user puts focus on the field.
+     * Obtiene o establece una cadena de texto que se muestra en un campo input como una sugerencia o indicación para los usuarios como el formato o el tipo de información que deben ingresar. El texto aparece en un campo input hasta que el usuario se enfoca en el campo.
      */
     placeholder: string;
     readOnly: boolean;
     /**
-     * When present, marks an element that can't be submitted without a value.
+     * Cuando está presente, marca un elemento que no se puede enviar sin un valor.
      */
     required: boolean;
     selectionDirection: "forward" | "backward" | "none" | null;
     /**
-     * Gets or sets the end position or offset of a text selection.
+     * Obtiene o establece la posición final o el desplazamiento de una selección de texto.
      */
     selectionEnd: number | null;
     /**
-     * Gets or sets the starting position or offset of a text selection.
+     * Obtiene o establece la posición inicial o el desplazamiento de una selección de texto.
      */
     selectionStart: number | null;
     size: number;
     /**
-     * The address or URL of the a media resource that is to be considered.
+     * La dirección o URL de un recurso multimedia que se va a considerar.
      */
     src: string;
     /**
-     * Defines an increment or jump between values that you want to allow the user to enter. When used with the max and min attributes, lets you control the range and increment (for example, allow only even numbers) that the user can enter into an input field.
+     * Define un incremento o salto entre los valores que desea permitir que el usuario ingrese. Cuando se usa con los atributos máximo y mínimo, te permite controlar el rango e incremento (por ejemplo, permitir solo números pares) que el usuario puede ingresar en un campo input.
      */
     step: string;
     /**
-     * Returns the content type of the object.
+     * Devuelve el tipo de contenido del objeto.
      */
     type: string;
     /**
-     * Sets or retrieves the URL, often with a bookmark extension (#name), to use as a client-side image map.
+     * Establece o recupera la URL, a menudo con una extensión de marcador (#name), para usarla como un mapa de imagen del lado del cliente.
      */
     /** @deprecated */
     useMap: string;
@@ -7101,15 +7101,15 @@ interface HTMLInputElement extends HTMLElement {
      */
     readonly validity: ValidityState;
     /**
-     * Returns the value of the data at the cursor's current position.
+     * Devuelve el valor de los datos en la posición actual del cursor.
      */
     value: string;
     /**
-     * Returns a Date object representing the form control's value, if applicable; otherwise, returns null. Can be set, to change the value. Throws an "InvalidStateError" DOMException if the control isn't date- or time-based.
+     * Devuelve un objeto Date que representa el valor del control de formulario, si corresponde; de lo contrario, devuelve null. Se puede configurar para cambiar el valor. Lanza una excepción "InvalidStateError" de DOMException si el control no es de fecha o basada en el tiempo.
      */
     valueAsDate: Date | null;
     /**
-     * Returns the input field value as a number.
+     * Devuelve el valor del campo input como un número.
      */
     valueAsNumber: number;
     readonly webkitEntries: ReadonlyArray<FileSystemEntry>;
@@ -7128,7 +7128,7 @@ interface HTMLInputElement extends HTMLElement {
     checkValidity(): boolean;
     reportValidity(): boolean;
     /**
-     * Makes the selection equal to the current object.
+     * Hace que la selección sea igual al objeto actual.
      */
     select(): void;
     /**
@@ -7139,20 +7139,20 @@ interface HTMLInputElement extends HTMLElement {
     setRangeText(replacement: string): void;
     setRangeText(replacement: string, start: number, end: number, selectionMode?: SelectionMode): void;
     /**
-     * Sets the start and end positions of a selection in a text field.
-     * @param start The offset into the text field for the start of the selection.
-     * @param end The offset into the text field for the end of the selection.
-     * @param direction The direction in which the selection is performed.
+     * Establece las posiciones inicial y final de una selección en un campo de texto.
+     * @param start El desplazamiento en el campo de texto para el inicio de la selección.
+     * @param end El desplazamiento en el campo de texto para el final de la selección.
+     * @param direction La dirección en la que se realiza la selección.
      */
     setSelectionRange(start: number | null, end: number | null, direction?: "forward" | "backward" | "none"): void;
     /**
-     * Decrements a range input control's value by the value given by the Step attribute. If the optional parameter is used, it will decrement the input control's step value multiplied by the parameter's value.
-     * @param n Value to decrement the value by.
+     * Disminuye el valor de un control de entrada de rango por el valor dado por el atributo Step. Si se usa el parámetro opcional, disminuirá el valor del paso del control de entrada multiplicado por el valor del parámetro.
+     * @param n Valor para decrementar el value.
      */
     stepDown(n?: number): void;
     /**
-     * Increments a range input control's value by the value given by the Step attribute. If the optional parameter is used, will increment the input control's value by that value.
-     * @param n Value to increment the value by.
+     * Incrementa el valor de un control de entrada de rango por el valor dado por el atributo Step. Si se usa el parámetro opcional, incrementará el valor del control de entrada en ese valor.
+     * @param n Valor para incrementar el valor.
      */
     stepUp(n?: number): void;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLInputElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -7166,12 +7166,12 @@ declare var HTMLInputElement: {
     new(): HTMLInputElement;
 };
 
-/** Exposes specific properties and methods (beyond those defined by regular HTMLElement interface it also has available to it by inheritance) for manipulating list elements. */
+/** Expone propiedades y métodos específicos (más allá de los definidos por la interfaz HTMLElement normal que también tiene disponible por herencia) para manipular elementos de la lista. */
 interface HTMLLIElement extends HTMLElement {
     /** @deprecated */
     type: string;
     /**
-     * Sets or retrieves the value of a list item.
+     * Establece o recupera el valor de un elemento de la lista.
      */
     value: number;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLLIElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -7185,10 +7185,10 @@ declare var HTMLLIElement: {
     new(): HTMLLIElement;
 };
 
-/** Gives access to properties specific to <label> elements. It inherits methods and properties from the base HTMLElement interface. */
+/** Da acceso a las propiedades específicas de los elementos <label>. Hereda métodos y propiedades de la interfaz base HTMLElement. */
 interface HTMLLabelElement extends HTMLElement {
     /**
-     * Returns the form control that is associated with this element.
+     * Devuelve el control de formulario asociado a este elemento.
      */
     readonly control: HTMLElement | null;
     /**
@@ -7196,7 +7196,7 @@ interface HTMLLabelElement extends HTMLElement {
      */
     readonly form: HTMLFormElement | null;
     /**
-     * Sets or retrieves the object to which the given label object is assigned.
+     * Establece o recupera el objeto al que se asigna el objeto label dado.
      */
     htmlFor: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLLabelElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -7210,7 +7210,7 @@ declare var HTMLLabelElement: {
     new(): HTMLLabelElement;
 };
 
-/** The HTMLLegendElement is an interface allowing to access properties of the <legend> elements. It inherits properties and methods from the HTMLElement interface. */
+/** El HTMLLegendElement es una interfaz que permite acceder a las propiedades de los elementos <legend>. Hereda propiedades y métodos de la interfaz HTMLElement. */
 interface HTMLLegendElement extends HTMLElement {
     /** @deprecated */
     align: string;
@@ -7229,7 +7229,7 @@ declare var HTMLLegendElement: {
     new(): HTMLLegendElement;
 };
 
-/** Reference information for external resources and the relationship of those resources to a document and vice-versa. This object inherits all of the properties and methods of the HTMLElement interface. */
+/** Información de referencia para recursos externos y la relación de esos recursos con un documento y viceversa. Este objeto hereda todas las propiedades y métodos de la interfaz HTMLElement. */
 interface HTMLLinkElement extends HTMLElement, LinkStyle {
     as: string;
     /**
@@ -7240,7 +7240,7 @@ interface HTMLLinkElement extends HTMLElement, LinkStyle {
     crossOrigin: string | null;
     disabled: boolean;
     /**
-     * Sets or retrieves a destination URL or an anchor point.
+     * Establece o recupera una URL de destino o un punto de anclaje.
      */
     href: string;
     /**
@@ -7251,7 +7251,7 @@ interface HTMLLinkElement extends HTMLElement, LinkStyle {
     imageSrcset: string;
     integrity: string;
     /**
-     * Sets or retrieves the media type.
+     * Establece o recupera el tipo de medio.
      */
     media: string;
     referrerPolicy: string;
@@ -7272,7 +7272,7 @@ interface HTMLLinkElement extends HTMLElement, LinkStyle {
     /** @deprecated */
     target: string;
     /**
-     * Sets or retrieves the MIME type of the object.
+     * Establece o recupera el tipo MIME del objeto.
      */
     type: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLLinkElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -7286,10 +7286,10 @@ declare var HTMLLinkElement: {
     new(): HTMLLinkElement;
 };
 
-/** Provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of map elements. */
+/** Proporciona propiedades y métodos especiales (más allá de los de la interfaz HTMLElement de objeto normal que también tiene disponible por herencia) para manipular el diseño y la presentación de los elementos map. */
 interface HTMLMapElement extends HTMLElement {
     /**
-     * Retrieves a collection of the area objects defined for the given map object.
+     * Recupera una colección de los objetos de área definidos para el objeto map dado.
      */
     readonly areas: HTMLCollection;
     /**
@@ -7307,7 +7307,7 @@ declare var HTMLMapElement: {
     new(): HTMLMapElement;
 };
 
-/** Provides methods to manipulate <marquee> elements. */
+/** Proporciona métodos para manipular elementos <marquee>. */
 /** @deprecated */
 interface HTMLMarqueeElement extends HTMLElement {
     /** @deprecated */
@@ -7353,114 +7353,114 @@ interface HTMLMediaElementEventMap extends HTMLElementEventMap {
     "waitingforkey": Event;
 }
 
-/** Adds to HTMLElement the properties and methods needed to support basic media-related capabilities that are common to audio and video. */
+/** Agrega a HTMLElement las propiedades y los métodos necesarios para admitir capacidades básicas relacionadas con los medios que son comunes para el audio y el video. */
 interface HTMLMediaElement extends HTMLElement {
     /**
-     * Gets or sets a value that indicates whether to start playing the media automatically.
+     * Obtiene o establece un valor que indica si se debe iniciar la reproducción del medio automáticamente.
      */
     autoplay: boolean;
     /**
-     * Gets a collection of buffered time ranges.
+     * Obtiene una colección de intervalos de tiempo almacenados en búfer.
      */
     readonly buffered: TimeRanges;
     /**
-     * Gets or sets a flag that indicates whether the client provides a set of controls for the media (in case the developer does not include controls for the player).
+     * Obtiene o establece una marca que indica si el cliente proporciona un conjunto de controles para los medios (en caso de que el desarrollador no incluya controles para el reproductor).
      */
     controls: boolean;
     crossOrigin: string | null;
     /**
-     * Gets the address or URL of the current media resource that is selected by IHTMLMediaElement.
+     * Obtiene la dirección o URL del recurso multimedia actual seleccionado por IHTMLMediaElement.
      */
     readonly currentSrc: string;
     /**
-     * Gets or sets the current playback position, in seconds.
+     * Obtiene o establece la posición de reproducción actual, en segundos.
      */
     currentTime: number;
     defaultMuted: boolean;
     /**
-     * Gets or sets the default playback rate when the user is not using fast forward or reverse for a video or audio resource.
+     * Obtiene o establece la velocidad de reproducción predeterminada cuando el usuario no utiliza el avance o retroceso rápido para un recurso de video o audio.
      */
     defaultPlaybackRate: number;
     disableRemotePlayback: boolean;
     /**
-     * Returns the duration in seconds of the current media resource. A NaN value is returned if duration is not available, or Infinity if the media resource is streaming.
+     * Devuelve la duración en segundos del recurso multimedia actual. Se devuelve un valor NaN si la duración no está disponible, o Infinity si el recurso media está transmitiendo.
      */
     readonly duration: number;
     /**
-     * Gets information about whether the playback has ended or not.
+     * Obtiene información sobre si la reproducción ha finalizado o no.
      */
     readonly ended: boolean;
     /**
-     * Returns an object representing the current error state of the audio or video element.
+     * Devuelve un objeto que representa el estado de error actual del elemento de audio o video.
      */
     readonly error: MediaError | null;
     /**
-     * Gets or sets a flag to specify whether playback should restart after it completes.
+     * Obtiene o establece una marca para especificar si la reproducción se debe reiniciar después de completarse.
      */
     loop: boolean;
     readonly mediaKeys: MediaKeys | null;
     /**
-     * Gets or sets a flag that indicates whether the audio (either audio or the audio track on video media) is muted.
+     * Obtiene o establece una marca que indica si el audio (ya sea audio o la pista de audio en medios de video) está silenciado.
      */
     muted: boolean;
     /**
-     * Gets the current network activity for the element.
+     * Obtiene la actividad de red actual para el elemento.
      */
     readonly networkState: number;
     onencrypted: ((this: HTMLMediaElement, ev: MediaEncryptedEvent) => any) | null;
     onwaitingforkey: ((this: HTMLMediaElement, ev: Event) => any) | null;
     /**
-     * Gets a flag that specifies whether playback is paused.
+     * Obtiene una marca que especifica si la reproducción está en pausa.
      */
     readonly paused: boolean;
     /**
-     * Gets or sets the current rate of speed for the media resource to play. This speed is expressed as a multiple of the normal speed of the media resource.
+     * Obtiene o establece la tasa de velocidad actual para que se reproduzca el recurso multimedia. Esta velocidad se expresa como un múltiplo de la velocidad normal del recurso multimedia.
      */
     playbackRate: number;
     /**
-     * Gets TimeRanges for the current media resource that has been played.
+     * Obtiene TimeRanges para el recurso multimedia actual que se ha reproducido.
      */
     readonly played: TimeRanges;
     /**
-     * Gets or sets the current playback position, in seconds.
+     * Obtiene o establece la posición de reproducción actual, en segundos.
      */
     preload: string;
     readonly readyState: number;
     readonly remote: RemotePlayback;
     /**
-     * Returns a TimeRanges object that represents the ranges of the current media resource that can be seeked.
+     * Devuelve un objeto TimeRanges que representa los rangos del recurso multimedia actual que se puede buscar.
      */
     readonly seekable: TimeRanges;
     /**
-     * Gets a flag that indicates whether the client is currently moving to a new playback position in the media resource.
+     * Obtiene una marca que indica si el cliente se está moviendo actualmente a una nueva posición de reproducción en el recurso multimedia.
      */
     readonly seeking: boolean;
     /**
-     * The address or URL of the a media resource that is to be considered.
+     * La dirección o URL de un recurso multimedia que se va a considerar.
      */
     src: string;
     srcObject: MediaProvider | null;
     readonly textTracks: TextTrackList;
     /**
-     * Gets or sets the volume level for audio portions of the media element.
+     * Obtiene o establece el nivel de volumen de las partes de audio del elemento multimedia.
      */
     volume: number;
     addTextTrack(kind: TextTrackKind, label?: string, language?: string): TextTrack;
     /**
-     * Returns a string that specifies whether the client can play a given media resource type.
+     * Devuelve una cadena que especifica si el cliente puede reproducir un determinado tipo de recurso multimedia.
      */
     canPlayType(type: string): CanPlayTypeResult;
     fastSeek(time: number): void;
     /**
-     * Resets the audio or video object and loads a new media resource.
+     * Restablece el objeto de audio o video y carga un nuevo recurso multimedia.
      */
     load(): void;
     /**
-     * Pauses the current playback and sets paused to TRUE. This can be used to test whether the media is playing or paused. You can also use the pause or play events to tell whether the media is playing or not.
+     * Hace una pausa en la reproducción actual y establece la pausa en TRUE. Esto se puede usar para probar si los medios se están reproduciendo o en pausa. También puedes usar los eventos de pausa o reproducción para saber si los medios se están reproduciendo o no.
      */
     pause(): void;
     /**
-     * Loads and starts playback of a media resource.
+     * Carga e inicia la reproducción de un recurso multimedia.
      */
     play(): Promise<void>;
     setMediaKeys(mediaKeys: MediaKeys | null): Promise<void>;
@@ -7507,22 +7507,22 @@ declare var HTMLMenuElement: {
     new(): HTMLMenuElement;
 };
 
-/** Contains descriptive metadata about a document. It inherits all of the properties and methods described in the HTMLElement interface. */
+/** Contiene metadatos descriptivos sobre un documento. Hereda todas las propiedades y métodos descritos en la interfaz HTMLElement. */
 interface HTMLMetaElement extends HTMLElement {
     /**
-     * Gets or sets meta-information to associate with httpEquiv or name.
+     * Obtiene o establece la metainformación para asociarla con httpEquiv o name.
      */
     content: string;
     /**
-     * Gets or sets information used to bind the value of a content attribute of a meta element to an HTTP response header.
+     * Obtiene o establece información que se utiliza para vincular el valor de un atributo de contenido de un metaelemento a un encabezado de respuesta HTTP.
      */
     httpEquiv: string;
     /**
-     * Sets or retrieves the value specified in the content attribute of the meta object.
+     * Establece o recupera el valor especificado en el atributo de contenido del metaobjeto.
      */
     name: string;
     /**
-     * Sets or retrieves a scheme to be used in interpreting the value of a property specified for the object.
+     * Establece o recupera un esquema que se utilizará para interpretar el valor de una propiedad especificada para el objeto.
      */
     /** @deprecated */
     scheme: string;
@@ -7537,7 +7537,7 @@ declare var HTMLMetaElement: {
     new(): HTMLMetaElement;
 };
 
-/** The HTML <meter> elements expose the HTMLMeterElement interface, which provides special properties and methods (beyond the HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of <meter> elements. */
+/** Los elementos <meter> de HTML exponen la interfaz HTMLMeterElement, que proporciona propiedades y métodos especiales (además de la interfaz de objetos HTMLElement, también están disponibles por herencia) para manipular el diseño y la presentación de los elementos <meter>. */
 interface HTMLMeterElement extends HTMLElement {
     high: number;
     readonly labels: NodeListOf<HTMLLabelElement>;
@@ -7557,14 +7557,14 @@ declare var HTMLMeterElement: {
     new(): HTMLMeterElement;
 };
 
-/** Provides special properties (beyond the regular methods and properties available through the HTMLElement interface they also have available to them by inheritance) for manipulating modification elements, that is <del> and <ins>. */
+/** Proporciona propiedades especiales (más allá de los métodos y propiedades regulares disponibles a través de la interfaz HTMLElement que también tienen disponibles por herencia) para manipular elementos de modificación, es decir, <del> e <ins>. */
 interface HTMLModElement extends HTMLElement {
     /**
-     * Sets or retrieves reference information about the object.
+     * Establece o recupera información de referencia sobre el objeto.
      */
     cite: string;
     /**
-     * Sets or retrieves the date and time of a modification to the object.
+     * Establece o recupera la fecha y la hora de una modificación del objeto.
      */
     dateTime: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLModElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -7578,13 +7578,13 @@ declare var HTMLModElement: {
     new(): HTMLModElement;
 };
 
-/** Provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating ordered list elements. */
+/** Proporciona propiedades especiales (además de las definidas en la interfaz normal de HTMLElement que también tiene disponibles por herencia) para manipular elementos de lista ordenados. */
 interface HTMLOListElement extends HTMLElement {
     /** @deprecated */
     compact: boolean;
     reversed: boolean;
     /**
-     * The starting number.
+     * El número inicial.
      */
     start: number;
     type: string;
@@ -7599,39 +7599,39 @@ declare var HTMLOListElement: {
     new(): HTMLOListElement;
 };
 
-/** Provides special properties and methods (beyond those on the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of <object> element, representing external resources. */
+/** Proporciona propiedades y métodos especiales (además de los de la interfaz HTMLElement, también tiene disponibles por herencia) para manipular el diseño y la presentación del elemento <object>, que representa recursos externos. */
 interface HTMLObjectElement extends HTMLElement {
     /** @deprecated */
     align: string;
     /**
-     * Sets or retrieves a character string that can be used to implement your own archive functionality for the object.
+     * Establece o recupera una cadena de caracteres que se puede usar para implementar su propia funcionalidad de archivo para el objeto.
      */
     /** @deprecated */
     archive: string;
     /** @deprecated */
     border: string;
     /**
-     * Sets or retrieves the URL of the file containing the compiled Java class.
+     * Establece o recupera la URL del archivo que contiene la clase Java compilada.
      */
     /** @deprecated */
     code: string;
     /**
-     * Sets or retrieves the URL of the component.
+     * Establece o recupera la URL del componente.
      */
     /** @deprecated */
     codeBase: string;
     /**
-     * Sets or retrieves the Internet media type for the code associated with the object.
+     * Establece o recupera el tipo de medio de Internet para el código asociado con el objeto.
      */
     /** @deprecated */
     codeType: string;
     /**
-     * Retrieves the document object of the page or frame.
+     * Recupera el objeto de documento de la página o marco.
      */
     readonly contentDocument: Document | null;
     readonly contentWindow: WindowProxy | null;
     /**
-     * Sets or retrieves the URL that references the data of the object.
+     * Establece o recupera la URL que hace referencia a los datos del objeto.
      */
     data: string;
     /** @deprecated */
@@ -7651,16 +7651,16 @@ interface HTMLObjectElement extends HTMLElement {
      */
     name: string;
     /**
-     * Sets or retrieves a message to be displayed while an object is loading.
+     * Establece o recupera un mensaje para que se muestre mientras se carga un objeto.
      */
     /** @deprecated */
     standby: string;
     /**
-     * Sets or retrieves the MIME type of the object.
+     * Establece o recupera el tipo MIME del objeto.
      */
     type: string;
     /**
-     * Sets or retrieves the URL, often with a bookmark extension (#name), to use as a client-side image map.
+     * Establece o recupera la URL, a menudo con una extensión de marcador (#name), para usarla como un mapa de imagen del lado del cliente.
      */
     useMap: string;
     /**
@@ -7703,11 +7703,11 @@ declare var HTMLObjectElement: {
     new(): HTMLObjectElement;
 };
 
-/** Provides special properties and methods (beyond the regular HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of <optgroup> elements. */
+/** Proporciona propiedades y métodos especiales (más allá de la interfaz de objeto HTMLElement normal que también tienen disponible por herencia) para manipular el diseño y la presentación de los elementos <optgroup>. */
 interface HTMLOptGroupElement extends HTMLElement {
     disabled: boolean;
     /**
-     * Sets or retrieves a value that you can use to implement your own label functionality for the object.
+     * Establece o recupera un valor que puedes usar para implementar su propia funcionalidad de etiqueta para el objeto.
      */
     label: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLOptGroupElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -7721,10 +7721,10 @@ declare var HTMLOptGroupElement: {
     new(): HTMLOptGroupElement;
 };
 
-/** <option> elements and inherits all classes and methods of the HTMLElement interface. */
+/** elementos <option> y hereda todas las clases y métodos de la interfaz HTMLElement. */
 interface HTMLOptionElement extends HTMLElement {
     /**
-     * Sets or retrieves the status of an option.
+     * Establece o recupera el estado de una opción.
      */
     defaultSelected: boolean;
     disabled: boolean;
@@ -7733,23 +7733,23 @@ interface HTMLOptionElement extends HTMLElement {
      */
     readonly form: HTMLFormElement | null;
     /**
-     * Sets or retrieves the ordinal position of an option in a list box.
+     * Establece o recupera la posición ordinal de una opción en un cuadro de lista.
      */
     readonly index: number;
     /**
-     * Sets or retrieves a value that you can use to implement your own label functionality for the object.
+     * Establece o recupera un valor que puedes usar para implementar su propia funcionalidad de etiqueta para el objeto.
      */
     label: string;
     /**
-     * Sets or retrieves whether the option in the list box is the default item.
+     * Establece o recupera si la opción en el cuadro de lista es el elemento predeterminado.
      */
     selected: boolean;
     /**
-     * Sets or retrieves the text string specified by the option tag.
+     * Establece o recupera la cadena de texto especificada por la etiqueta option.
      */
     text: string;
     /**
-     * Sets or retrieves the value which is returned to the server when the form control is submitted.
+     * Establece o recupera el valor que se devuelve al servidor cuando se envía el control de formulario.
      */
     value: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLOptionElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -7763,34 +7763,34 @@ declare var HTMLOptionElement: {
     new(): HTMLOptionElement;
 };
 
-/** HTMLOptionsCollection is an interface representing a collection of HTML option elements (in document order) and offers methods and properties for traversing the list as well as optionally altering its items. This type is returned solely by the "options" property of select. */
+/** HTMLOptionsCollection es una interfaz que representa una colección de elementos de opciones HTML (en el orden del documento) y ofrece métodos y propiedades para recorrer la lista y, opcionalmente, modificar sus elementos. Este tipo es devuelto únicamente por la propiedad "options" de select. */
 interface HTMLOptionsCollection extends HTMLCollectionOf<HTMLOptionElement> {
     /**
      * Devuelve el número de elementos de la colección.
      *
-     * When set to a smaller number, truncates the number of option elements in the corresponding container.
+     * Cuando se establece en un número menor, trunca el número de elementos option en el contenedor correspondiente.
      *
-     * When set to a greater number, adds new blank option elements to that container.
+     * Cuando se establece en un número mayor, agrega nuevos elementos de opción en blanco a ese contenedor.
      */
     length: number;
     /**
-     * Returns the index of the first selected item, if any, or −1 if there is no selected item.
+     * Devuelve el índice del primer elemento seleccionado, si lo hay, o −1 si no hay ningún elemento seleccionado.
      *
-     * Can be set, to change the selection.
+     * Se puede configurar para cambiar la selección.
      */
     selectedIndex: number;
     /**
-     * Inserts element before the node given by before.
+     * Inserta el elemento antes del nodo dado por before.
      *
-     * The before argument can be a number, in which case element is inserted before the item with that number, or an element from the collection, in which case element is inserted before that element.
+     * El argumento anterior puede ser un número, en cuyo caso el elemento se inserta antes del elemento con ese número, o un elemento de la colección, en cuyo caso el elemento se inserta antes de ese elemento.
      *
-     * If before is omitted, null, or a number out of range, then element will be added at the end of the list.
+     * Si before se omite, es null o un número fuera de rango, el elemento se agregará al final de la lista.
      *
-     * This method will throw a "HierarchyRequestError" DOMException if element is an ancestor of the element into which it is to be inserted.
+     * Este método arrojará una DOMException "HierarchyRequestError" si el elemento es un antepasado del elemento en el que se va a insertar.
      */
     add(element: HTMLOptionElement | HTMLOptGroupElement, before?: HTMLElement | number | null): void;
     /**
-     * Removes the item with index index from the collection.
+     * Elimina el elemento con índice index desde la colección.
      */
     remove(index: number): void;
 }
@@ -7808,7 +7808,7 @@ interface HTMLOrSVGElement {
     focus(options?: FocusOptions): void;
 }
 
-/** Provides properties and methods (beyond those inherited from HTMLElement) for manipulating the layout and presentation of <output> elements. */
+/** Proporciona propiedades y métodos (más allá de los heredados de HTMLElement) para manipular el layout y la presentación de los elementos <output>. */
 interface HTMLOutputElement extends HTMLElement {
     defaultValue: string;
     readonly form: HTMLFormElement | null;
@@ -7824,7 +7824,7 @@ interface HTMLOutputElement extends HTMLElement {
     /**
      * Returns the element's current value.
      *
-     * Can be set, to change the value.
+     * Se puede configurar para cambiar el valor.
      */
     value: string;
     readonly willValidate: boolean;
@@ -7842,7 +7842,7 @@ declare var HTMLOutputElement: {
     new(): HTMLOutputElement;
 };
 
-/** Provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating <p> elements. */
+/** Proporciona propiedades especiales (más allá de las de la interfaz de objeto HTMLElement normal que hereda) para manipular elementos <p>. */
 interface HTMLParagraphElement extends HTMLElement {
     /**
      * Establece o recupera cómo se alinea el objeto con el texto adyacente.
@@ -7860,23 +7860,23 @@ declare var HTMLParagraphElement: {
     new(): HTMLParagraphElement;
 };
 
-/** Provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating <param> elements, representing a pair of a key and a value that acts as a parameter for an <object> element. */
+/** Proporciona propiedades especiales (más allá de las de la interfaz de objeto HTMLElement normal que hereda) para manipular elementos <param>, que representan un par de clave y un valor que actúa como parámetro para un elemento <object>. */
 interface HTMLParamElement extends HTMLElement {
     /**
-     * Sets or retrieves the name of an input parameter for an element.
+     * Establece o recupera el nombre de un parámetro de entrada para un elemento.
      */
     name: string;
     /**
-     * Sets or retrieves the content type of the resource designated by the value attribute.
+     * Establece o recupera el tipo de contenido del recurso designado por el atributo value.
      */
     /** @deprecated */
     type: string;
     /**
-     * Sets or retrieves the value of an input parameter for an element.
+     * Establece o recupera el value de un parámetro de entrada para un elemento.
      */
     value: string;
     /**
-     * Sets or retrieves the data type of the value attribute.
+     * Establece o recupera el tipo de datos del atributo value.
      */
     /** @deprecated */
     valueType: string;
@@ -7891,7 +7891,7 @@ declare var HTMLParamElement: {
     new(): HTMLParamElement;
 };
 
-/** A <picture> HTML element. It doesn't implement specific properties or methods. */
+/** Un elemento HTML <picture>. No implementa propiedades o métodos específicos. */
 interface HTMLPictureElement extends HTMLElement {
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLPictureElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -7904,10 +7904,10 @@ declare var HTMLPictureElement: {
     new(): HTMLPictureElement;
 };
 
-/** Exposes specific properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating a block of preformatted text (<pre>). */
+/** Expone propiedades y métodos específicos (más allá de los de la interfaz HTMLElement que también tiene disponibles por herencia) para manipular un bloque de texto con formato previo (<pre>). */
 interface HTMLPreElement extends HTMLElement {
     /**
-     * Sets or gets a value that you can use to implement your own width functionality for the object.
+     * Establece u obtiene un valor que puedes usar para implementar tu propia funcionalidad de ancho para el objeto.
      */
     /** @deprecated */
     width: number;
@@ -7951,7 +7951,7 @@ declare var HTMLProgressElement: {
 /** Provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating quoting elements, like <blockquote> and <q>, but not the <cite> element. */
 interface HTMLQuoteElement extends HTMLElement {
     /**
-     * Sets or retrieves reference information about the object.
+     * Establece o recupera información de referencia sobre el objeto.
      */
     cite: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLQuoteElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -8028,7 +8028,7 @@ interface HTMLSelectElement extends HTMLElement {
      */
     length: number;
     /**
-     * Sets or retrieves the Boolean value indicating whether multiple items can be selected from a list.
+     * Establece o recupera el valor booleano que indica si se pueden seleccionar varios elementos de una lista.
      */
     multiple: boolean;
     /**
@@ -8040,7 +8040,7 @@ interface HTMLSelectElement extends HTMLElement {
      */
     readonly options: HTMLOptionsCollection;
     /**
-     * When present, marks an element that can't be submitted without a value.
+     * Cuando está presente, marca un elemento que no se puede enviar sin un valor.
      */
     required: boolean;
     /**
@@ -8065,7 +8065,7 @@ interface HTMLSelectElement extends HTMLElement {
      */
     readonly validity: ValidityState;
     /**
-     * Sets or retrieves the value which is returned to the server when the form control is submitted.
+     * Establece o recupera el valor que se devuelve al servidor cuando se envía el control de formulario.
      */
     value: string;
     /**
@@ -8140,7 +8140,7 @@ interface HTMLSourceElement extends HTMLElement {
     media: string;
     sizes: string;
     /**
-     * The address or URL of the a media resource that is to be considered.
+     * La dirección o URL de un recurso multimedia que se va a considerar.
      */
     src: string;
     srcset: string;
@@ -8175,7 +8175,7 @@ declare var HTMLSpanElement: {
 /** A <style> element. It inherits properties and methods from its parent, HTMLElement, and from LinkStyle. */
 interface HTMLStyleElement extends HTMLElement, LinkStyle {
     /**
-     * Sets or retrieves the media type.
+     * Establece o recupera el tipo de medio.
      */
     media: string;
     /**
@@ -8318,14 +8318,14 @@ declare var HTMLTableColElement: {
 /** Provides special properties and methods (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document. */
 interface HTMLTableElement extends HTMLElement {
     /**
-     * Sets or retrieves a value that indicates the table alignment.
+     * Establece o recupera un valor que indica la alineación de la tabla.
      */
     /** @deprecated */
     align: string;
     /** @deprecated */
     bgColor: string;
     /**
-     * Sets or retrieves the width of the border to draw around the object.
+     * Establece o recupera el ancho del borde para dibujar alrededor del objeto.
      */
     /** @deprecated */
     border: string;
@@ -8479,7 +8479,7 @@ declare var HTMLTableRowElement: {
 /** Provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of sections, that is headers, footers and bodies, in an HTML table. */
 interface HTMLTableSectionElement extends HTMLElement {
     /**
-     * Sets or retrieves a value that indicates the table alignment.
+     * Establece o recupera un valor que indica la alineación de la tabla.
      */
     /** @deprecated */
     align: string;
@@ -8539,7 +8539,7 @@ interface HTMLTextAreaElement extends HTMLElement {
      */
     cols: number;
     /**
-     * Sets or retrieves the initial contents of the object.
+     * Establece o recupera el contenido inicial del objeto.
      */
     defaultValue: string;
     dirName: string;
@@ -8550,7 +8550,7 @@ interface HTMLTextAreaElement extends HTMLElement {
     readonly form: HTMLFormElement | null;
     readonly labels: NodeListOf<HTMLLabelElement>;
     /**
-     * Sets or retrieves the maximum number of characters that the user can enter in a text control.
+     * Establece o recupera el número máximo de caracteres que el usuario puede ingresar en un control text.
      */
     maxLength: number;
     minLength: number;
@@ -8559,7 +8559,7 @@ interface HTMLTextAreaElement extends HTMLElement {
      */
     name: string;
     /**
-     * Gets or sets a text string that is displayed in an input field as a hint or prompt to users as the format or type of information they need to enter.The text appears in an input field until the user puts focus on the field.
+     * Obtiene o establece una cadena de texto que se muestra en un campo input como una sugerencia o indicación para los usuarios como el formato o el tipo de información que deben ingresar. El texto aparece en un campo input hasta que el usuario se enfoca en el campo.
      */
     placeholder: string;
     /**
@@ -8567,7 +8567,7 @@ interface HTMLTextAreaElement extends HTMLElement {
      */
     readOnly: boolean;
     /**
-     * When present, marks an element that can't be submitted without a value.
+     * Cuando está presente, marca un elemento que no se puede enviar sin un valor.
      */
     required: boolean;
     /**
@@ -8576,11 +8576,11 @@ interface HTMLTextAreaElement extends HTMLElement {
     rows: number;
     selectionDirection: "forward" | "backward" | "none";
     /**
-     * Gets or sets the end position or offset of a text selection.
+     * Obtiene o establece la posición final o el desplazamiento de una selección de texto.
      */
     selectionEnd: number;
     /**
-     * Gets or sets the starting position or offset of a text selection.
+     * Obtiene o establece la posición inicial o el desplazamiento de una selección de texto.
      */
     selectionStart: number;
     readonly textLength: number;
@@ -8625,10 +8625,10 @@ interface HTMLTextAreaElement extends HTMLElement {
     setRangeText(replacement: string): void;
     setRangeText(replacement: string, start: number, end: number, selectionMode?: SelectionMode): void;
     /**
-     * Sets the start and end positions of a selection in a text field.
-     * @param start The offset into the text field for the start of the selection.
-     * @param end The offset into the text field for the end of the selection.
-     * @param direction The direction in which the selection is performed.
+     * Establece las posiciones inicial y final de una selección en un campo de texto.
+     * @param start El desplazamiento en el campo de texto para el inicio de la selección.
+     * @param end El desplazamiento en el campo de texto para el final de la selección.
+     * @param direction La dirección en la que se realiza la selección.
      */
     setSelectionRange(start: number | null, end: number | null, direction?: "forward" | "backward" | "none"): void;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTextAreaElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;

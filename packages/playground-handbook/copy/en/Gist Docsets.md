@@ -9,7 +9,7 @@ https://www.typescriptlang.org/play#gist/303ebff59a6fc37f88c86e86dbdeb0e8-6
 //                                       ^ gist id                        ^ page
 ```
 
-Esto funciona mediante la utilización de [TypeScript-Playground-Gist-Proxy-API](https://github.com/microsoft/TypeScript-Playground-Gist-Proxy-API) que procesa previamente de forma segura el *markdown* en *HTML* y pasa a través de los archivos *TS*/*JS* al *Playground*.
+Esto funciona mediante la utilización de [TypeScript-Playground-Gist-Proxy-API](https://github.com/microsoft/TypeScript-Playground-Gist-Proxy-API) que prerenderiza de forma segura el *markdown* en *HTML* y pasa a través de los archivos *TS*/*JS* al *Playground*.
 
 ### *Gists* de un solo archivo
 
@@ -46,7 +46,7 @@ Los indicadores del compilador se establecen cuando un usuario hace clic en la p
 
 #### Markdown
 
-*Markdown* se representa en *HTML* a través de la [*API Markdown* de *GitHub*](https://docs.github.com/es/rest/reference/markdown), lo cual significa que cualquier característica que veas en *GitHub* se refleja en el *markdown* en *Playground*.
+*Markdown* se renderiza en *HTML* a través de la [*API Markdown* de *GitHub*](https://docs.github.com/es/rest/reference/markdown), lo cual significa que cualquier característica que veas en *GitHub* se refleja en el *markdown* en *Playground*.
 
 Si deseas vincular páginas, puedes usar la dirección completa de *Playground* de tu esencia ⏤*gist*⏤ con la página y *Playground* redefinirá esos enlaces y lo tratará como si hubieras hecho clic en la barra lateral.
 

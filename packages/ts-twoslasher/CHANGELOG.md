@@ -32,7 +32,7 @@ Todos los errores "esperados" de `Twoslash` son del tipo `TwoslashError` que se 
 
 ## 2.0.0
 
-- Elimina la codificación *HTML* de los resultados generados por el error `Twoslash`. Realmente no es responsabilidad de `Twoslash` hacer eso. Estoy clasificando esto como un `semver` mayor, ya que la gente podría confiar en este comportamiento (todo lo que hace el `shiki-twoslash`, por ejemplo).
+- Elimina la codificación *HTML* de los resultados renderizados por el error `Twoslash`. Realmente no es responsabilidad de `Twoslash` hacer eso. Estoy clasificando esto como un `semver` mayor, ya que la gente podría confiar en este comportamiento (todo lo que hace el `shiki-twoslash`, por ejemplo).
 
 ## 1.1.1
 

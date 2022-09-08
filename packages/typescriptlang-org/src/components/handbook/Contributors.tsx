@@ -47,7 +47,7 @@ export const Contributors = (props: ContributorsProps) => {
     const end = t.domInteractive;
     const loadTime = (end - start) / 1000;
 
-    // No tengo idea de cómo está sucediendo esto, probablemente debido a la re-renderización de React
+    // No tengo idea de cómo está sucediendo esto, probablemente debido a la rerenderización de React
     if (loadTime < 0) return;
 
     if (pageLoadIndicator) {

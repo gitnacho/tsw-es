@@ -132,8 +132,8 @@ export default async function () {
                 </li>
               </ul>
               <p>
-                For example, the sandbox to the side has grabbed the Types for{" "}
-                <a href="https://danger.systems/js/">DangerJS</a> with no
+                Por ejemplo, el entorno aislado, a un lado, ha tomado los Tipos para{" "}
+                <a href="https://danger.systems/js/">DangerJS</a> sin
                 modifications for this code sample. This is because the
                 Playground's Automatic Type Acquisition is enabled by default.
                 It will also look for the same parameters for code, and

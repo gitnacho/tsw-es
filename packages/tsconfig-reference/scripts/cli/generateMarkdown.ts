@@ -50,7 +50,7 @@ languages.forEach((lang) => {
   ) {
     markdownChunks.push(`<h3>${title}</h3>`);
 
-    // Recorta los espacios en blanco iniciales para que no se representen como un bloque de código markdown
+    // Recorta los espacios en blanco iniciales para que no se rendericen como un bloque de código markdown
     const tableHeader = `
 <table class="cli-option" width="100%">
   <thead>

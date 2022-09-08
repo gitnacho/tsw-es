@@ -37,7 +37,7 @@ interface DateProps {
 }
 
 // Luego podemos crear un DateComponent que usa la
-// interfaz DateProps y representa la fecha.
+// interfaz DateProps y renderiza la fecha.
 
 const DateComponent: FauxactFunctionComponent<DateProps> = props => (
   <time dateTime={props.iso8601Date}>{props.message}</time>
@@ -74,7 +74,7 @@ import * as React from "react";
 export interface Props {
   /** El nombre del usuario */
   name: string;
-  /** Se debe mostrar el nombre en negrita */
+  /** El nombre se debe renderizar en negrita */
   priority?: boolean;
 }
 

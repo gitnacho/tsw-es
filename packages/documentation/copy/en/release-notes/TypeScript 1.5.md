@@ -165,7 +165,7 @@ const MAX = 100;
 //        el operador no puede ser una constante.
 ```
 
-#### Bloque de alcance
+#### Alcance de bloque
 
 ```ts
 if (true) {

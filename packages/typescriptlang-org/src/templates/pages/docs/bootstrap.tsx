@@ -65,7 +65,7 @@ const Index: React.FC<Props> = (props) => {
             },
             {
               href: "https://reactjs.org",
-              badge: "Examples below",
+              badge: "Ejemplos a continuación",
               blurb: i("doc_frameworks_react_blurb"),
               title: "React",
             },
@@ -77,14 +77,14 @@ const Index: React.FC<Props> = (props) => {
             {
               href:
                 "https://github.com/rails/webpacker/blob/master/docs/typescript.md",
-              badge: "Plugin",
+              badge: "Complemento",
               blurb: i("doc_frameworks_ror_blurb"),
               title: "Ruby on Rails",
             },
             {
               href:
                 "https://www.typescriptlang.org/docs/handbook/asp-net-core.html",
-              badge: "Guide",
+              badge: "Guía",
               blurb: i("doc_frameworks_asp_blurb"),
               title: "ASP.NET Core",
             },
@@ -98,7 +98,7 @@ const Index: React.FC<Props> = (props) => {
               href:
                 "https://code.visualstudio.com/tutorials/functions-extension/getting-started",
               blurb: i("doc_apis_azure_blurb"),
-              title: "Azure Functions",
+              title: "Funciones Azure",
             },
             {
               href: "https://feathersjs.com",
@@ -119,7 +119,7 @@ const Index: React.FC<Props> = (props) => {
             {
               href: "https://github.com/Microsoft/TypeScript-Node-Starter",
               blurb: i("doc_apis_node_blurb"),
-              title: "Node Reference",
+              title: "Referencia Node",
             },
             {
               href: "https://loopback.io",
@@ -145,11 +145,11 @@ const Index: React.FC<Props> = (props) => {
             {
               href: "https://create-react-app.dev",
               blurb: i("doc_react_create_blurb"),
-              title: "Create React App",
+              title: "Crear aplicación React",
             },
             {
               href: "https://www.gatsbyjs.org",
-              badge: "Plugin",
+              badge: "Complemento",
               blurb: i("doc_react_gatsby_blurb"),
               title: "Gatsby",
             },
@@ -182,7 +182,7 @@ const Index: React.FC<Props> = (props) => {
           buttons={[
             {
               href: "https://www.electronjs.org/",
-              badge: "Plugin",
+              badge: "Complemento",
               blurb: i("doc_apps_electron_blurb"),
               title: "Electron",
             },
@@ -224,7 +224,7 @@ const Index: React.FC<Props> = (props) => {
             },
             {
               href: "https://webpack.js.org/guides/typescript/",
-              badge: "Plugin",
+              badge: "Complemento",
               blurb: i("doc_tooling_webpack_blurb"),
               title: "Webpack",
             },

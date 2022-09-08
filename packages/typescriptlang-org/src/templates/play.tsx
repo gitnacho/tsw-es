@@ -18,14 +18,14 @@ import "reflect-metadata"
 import playgroundReleases from "../../../sandbox/src/releases.json"
 import { getPlaygroundUrls } from "../lib/playgroundURLs"
 
-// This gets set by the playground
+// Esto lo establece el playground
 declare const playground: ReturnType<typeof import("@typescript/playground").setupPlayground>
 
 type Props = {
   pageContext: {
     lang: string
     examplesTOC: typeof import("../../static/js/examples/en.json")
-    optionsSummary: any // this is just passed through to the playground JS library at this point
+    optionsSummary: any // esto solo se pasa a la biblioteca JS del playground en este punto
     playgroundHandbookTOC: { docs: any[] }
   }
 }
@@ -36,11 +36,11 @@ const Play: React.FC<Props> = (props) => {
   useEffect(() => {
     if (!document.getElementById("monaco-editor-embed")) return
     if (document.getElementById("monaco-editor-embed")!.childElementCount > 0) {
-      return console.log("Playground already loaded")
+      return console.log("Playground ya cargado")
     }
 
-    // Detect if you've left the playground and come back via the back button, which will force
-    // a page reload to ensure the playground is full set up
+    // Detecta si has salido del playground y regresas a través del botón Atrás, lo que forzará
+    // una recarga de página para asegurarse de que el playground esté completamente configurado
     let leftPlayground = false
     window.addEventListener('popstate', (event) => {
       const onPlayground = document.location.pathname.endsWith("/play/") || document.location.pathname.endsWith("/play")
@@ -52,19 +52,19 @@ const Play: React.FC<Props> = (props) => {
     });
 
     if (!hasLocalStorage) {
-      document.getElementById("loading-message")!.innerText = "Cannot load the Playground with storage disabled in your browser"
+      document.getElementById("loading-message")!.innerText = "No se puede cargar el Playground con el almacenamiento deshabilitado en tu navegador"
       return
     }
 
-    // @ts-ignore - so the playground handbook can grab this data
+    // @ts-ignore - para que el manual del playground pueda tomar estos datos
     window.playgroundHandbookTOC = props.pageContext.playgroundHandbookTOC
-    // @ts-ignore - so the config options can use localized descriptions
+    // @ts-ignore - por lo tanto las opciones de configuración pueden usar descripciones localizadas
     window.optionsSummary = props.pageContext.optionsSummary
     // @ts-ignore - para complementos basados ​​en React
     window.react = React
     // @ts-ignore - para complementos basados ​​en React
     window.reactDOM = ReactDOM
-    // @ts-ignore - so that plugins etc can use i18n
+    // @ts-ignore - para que los complementos, etc. puedan usar i18n
     window.i = i
 
     const getLoaderScript = document.createElement('script');
@@ -82,7 +82,7 @@ const Play: React.FC<Props> = (props) => {
         tsVersionParam = nightlyJSON.version
       }
 
-      // Somehow people keep trying -insiders urls instead of -dev - maybe some tooling I don't know?
+      // De alguna manera, la gente sigue intentando -insiders urls en lugar de -dev - tal vez alguna herramienta que no conozco?
       if (tsVersionParam && tsVersionParam.includes("-insiders.")) {
         tsVersionParam = tsVersionParam.replace("-insiders.", "-dev.")
       }
@@ -90,15 +90,15 @@ const Play: React.FC<Props> = (props) => {
       const latestRelease = [...playgroundReleases.versions].sort().pop()!
       const tsVersion = tsVersionParam || latestRelease
 
-      // Because we can reach to localhost ports from the site, it's possible for the locally built compiler to 
-      // be hosted and to power the editor with a bit of elbow grease.
+      // Debido a que podemos llegar a los puertos de host local desde el sitio, es posible que el compilador construido localmente 
+      // se aloje y potencie el editor con un poco de esfuerzo.
       const useLocalCompiler = tsVersion === "dev"
       const devIsh = ["pr", "dev"]
       const version = devIsh.find(d => tsVersion.includes(d)) ? "dev" : "min"
       const urlForMonaco = useLocalCompiler ? "http://localhost:5615/dev/vs" : `https://typescript.azureedge.net/cdn/${tsVersion}/monaco/${version}/vs`
 
-      // Make a quick HEAD call for the main monaco editor for this version of TS, if it
-      // bails then give a useful error message and bail.
+      // Hace una llamada HEAD rápida para el editor principal de monaco para esta versión de TS, si es
+      // bails luego da un mensaje de error útil y bail.
       const nightlyLookup = await fetch(urlForMonaco + "/editor/editor.main.js", { method: "HEAD" })
       if (!nightlyLookup.ok) {
         document.querySelectorAll<HTMLDivElement>(".lds-grid div").forEach(div => {
@@ -107,7 +107,7 @@ const Play: React.FC<Props> = (props) => {
           div.style.webkitAnimation = ""
         })
 
-        document.getElementById("loading-message")!.innerHTML = `This version of TypeScript <em>(${tsVersion?.replace("<", "-")})</em><br/>has not been prepared for the Playground<br/><br/>Try <a href='/play?ts=${latestRelease}${document.location.hash}'>${latestRelease}</a> or <a href="/play?ts=next${document.location.hash}">Nightly</a>`
+        document.getElementById("loading-message")!.innerHTML = `Esta versión de TypeScript <em>(${tsVersion?.replace("<", "-")})</em><br/>no preparada para el Playground<br/><br/>Prueba <a href='/play?ts=${latestRelease}${document.location.hash}'>${latestRelease}</a> o <a href ="/play?ts=next${document.location.hash}">Nocturna</a>`
         return
       }
 
@@ -144,9 +144,9 @@ const Play: React.FC<Props> = (props) => {
         if (isOK) {
           document.getElementById("loader")!.parentNode?.removeChild(document.getElementById("loader")!)
         } else {
-          console.error("Error setting up all the 4 key dependencies")
+          console.error("Error al configurar las 4 dependencias clave")
           console.error("main", !!main, "ts", !!ts, "sandbox", !!sandbox, "playground", !!playground)
-          document.getElementById("loading-message")!.innerText = "Cannot load the Playground in this browser, see logs in console."
+          document.getElementById("loading-message")!.innerText = "No se puede cargar Playground en este navegador, ve registros en la consola."
           return
         }
 

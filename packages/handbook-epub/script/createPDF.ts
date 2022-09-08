@@ -157,7 +157,7 @@ const generatePDF = async () => {
   console.log("Loading the html");
   await page.goto("file://" + join(__dirname, "..", "assets", "all.html"));
 
-  console.log("Rendering the PDF");
+  console.log("Renderizando el PDF");
   await page.emulateMedia({ media: "screen" });
   await page.pdf({
     path: join(__dirname, "..", "dist", "handbook.pdf"),

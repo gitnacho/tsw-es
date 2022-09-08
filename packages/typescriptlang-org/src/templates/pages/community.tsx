@@ -101,13 +101,13 @@ export const Comm: React.FC<Props> = props => {
               </div>
             </div>
             <div className="callout">
-              <a aria-labelledby="deftyped-header" className="icon definitelytyped img-circle" href="https://github.com/definitelytyped/definitelytyped/#definitelytyped" target="_blank" title="Definitely Typed, a central location for third party type definitions" />
+              <a aria-labelledby="deftyped-header" className="icon definitelytyped img-circle" href="https://github.com/definitelytyped/definitelytyped/#definitelytyped" target="_blank" title="Definitivamente Tipificada, una ubicación central para definiciones de tipo de terceros" />
               <div className="text">
-                <a href="https://github.com/definitelytyped/definitelytyped/#definitelytyped" id="deftyped-header" target="_blank" title="Definitely Typed, a central location for third party type definitions">
-                  <h3 className="community-callout-headline">Definitely Typed</h3>
+                <a href="https://github.com/definitelytyped/definitelytyped/#definitelytyped" id="deftyped-header" target="_blank" title="Definitivamente tipificado, una ubicación central para definiciones de tipo de terceros">
+                  <h3 className="community-callout-headline">Definitivamente Tipificados</h3>
                 </a>
                 {i("com_online_typed_desc")}{" "}
-                <a href="https://github.com/definitelytyped/definitelytyped/#definitelytyped" target="_blank" title="Definitely Typed, a central location for third party type definitions">{i("com_online_typed_href")}</a>{" "}
+                <a href="https://github.com/definitelytyped/definitelytyped/#definitelytyped" target="_blank" title="Definitivamente tipificado, una ubicación central para definiciones de tipo de terceros">{i("com_online_typed_href")}</a>{" "}
                 {i("com_online_typed_available_for")}
               </div>
             </div>
@@ -119,9 +119,9 @@ export const Comm: React.FC<Props> = props => {
         <h2>{i("com_person")}</h2>
 
         <div className="sub-nav" style={{ display: "none" }}>
-          <button >Conferences</button>
-          <button>Upcoming Events</button>
-          <button>Meetups</button>
+          <button >Conferencias</button>
+          <button>Próximos eventos</button>
+          <button>Reuniones</button>
         </div>
       </div>
 
@@ -133,7 +133,7 @@ export const Comm: React.FC<Props> = props => {
               <div className="row">
                 {conferences.map(conference => (
                   <div key={conference.url} className="callout">
-                    <a href={conference.url} rel="noopener" target="blank" title={`Link to ${conference.title}`}>
+                    <a href={conference.url} rel="noopener" target="blank" title={`Enlace a ${conference.title}`}>
                       <img src={conference.logo} className="icon img-square" alt={`${i("com_conferences_alt_img")} ` + conference.title} />
                     </a>
                     <a href={conference.url}><h4 className="community-callout-headline">{conference.title}</h4></a>
@@ -149,15 +149,15 @@ export const Comm: React.FC<Props> = props => {
           </Col2>
 
           <Col className="sidebar">
-            <h2>Conferences</h2>
-            <p className="banner-text">Hello</p>
+            <h2>Conferencias</h2>
+            <p className="banner-text">Hola</p>
           </Col>
         </Row>
       </div>
 
 
       {/* <div className="raised main-content-block container community" style={{ display: "none" }}>
-        <h3 className="centered-highlight">Upcoming Events</h3>
+        <h3 className="centered-highlight">Próximos eventos</h3>
         <div className="events">
           <Row>
             {meetups
@@ -180,7 +180,7 @@ export const Comm: React.FC<Props> = props => {
         </div> */}
 
       <div className="raised main-content-block container community">
-        <h3 className="centered-highlight">Meetups</h3>
+        <h3 className="centered-highlight">Reuniones</h3>
         <div className="events">
 
           <div className="callouts">
@@ -191,7 +191,7 @@ export const Comm: React.FC<Props> = props => {
                   <h4 className="community-callout-headline">{meetup.title}</h4>
                   <div className="text">{meetup.country}<br />
                     <a rel="noopener" target="blank" href={meetup.url} title={"Website for " + meetup.title}>Website</a>
-                    {" "}{meetup.twitter ? <a rel="noopener" target="blank" href={meetup.twitter} title={"Twitter page for " + meetup.title}>Twitter</a> : null}
+                    {" "}{meetup.twitter ? <a rel="noopener" target="blank" href={meetup.twitter} title={"Página de Twitter para " + meetup.title}>Twitter</a> : null}
                   </div>
                 </div>
               </Col>

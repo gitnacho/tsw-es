@@ -600,7 +600,7 @@ function callbackForLater(e) {
 ### `@deprecated`
 <div id="deprecated-comments"></div>
 
-Cuando una función, método o propiedad está en desuso, puedes informar a los usuarios marcándola con un comentario `/ **@deprecated */` de *JSDoc*. Esa información aparece en listas de compleción y como un diagnóstico de sugerencia que los editores pueden manejar de manera especial. En un editor como *VS Code*, los valores obsoletos se muestran normalmente en un estilo tachado ~~como este~~.
+Cuando una función, método o propiedad está en desuso, puedes informar a los usuarios marcándola con un comentario JSDoc `/** @deprecated */`. Esa información aparece en listas de compleción y como un diagnóstico de sugerencia que los editores pueden manejar de manera especial. En un editor como *VS Code*, los valores obsoletos se muestran normalmente en un estilo tachado ~~como este~~.
 
 ```js twoslash
 // @noErrors

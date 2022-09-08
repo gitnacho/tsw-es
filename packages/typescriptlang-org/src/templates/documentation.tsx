@@ -41,7 +41,7 @@ type Props = {
 const HandbookTemplate: React.FC<Props> = (props) => {
   const post = props.data.markdownRemark
   if (!post) {
-    console.log("Could not render:", JSON.stringify(props))
+    console.log("No puedo renderizar: ", JSON.stringify(props))
     return <div></div>
   }
 

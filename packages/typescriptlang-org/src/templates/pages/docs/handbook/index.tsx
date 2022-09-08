@@ -24,7 +24,7 @@ const HandbookIndex: React.FC<Props> = (props) => {
     <Layout title={i("doc_layout_title")} description={i("doc_layout_description")} lang={props.pageContext.lang}>
 
       <div className="main-content-block headline" style={{ marginTop: "40px" }}>
-        <h1>TypeScript Documentation</h1>
+        <h1>Documentación de TypeScript</h1>
       </div>
 
       <div className="main-content-block container handbook-content" >
@@ -50,7 +50,7 @@ const HandbookIndex: React.FC<Props> = (props) => {
                   })}
                 </ul>
 
-                {showIntro && <p>We also have an <a href='/assets/typescript-handbook.epub'>epub</a> and <a href='/assets/typescript-handbook.pdf'>pdf</a> version of the Handbook.</p>}
+                {showIntro && <p>Además tenemos una versión <a href='/assets/typescript-handbook.epub'>epub</a> y <a href='/assets/typescript-handbook.pdf'>pdf</a> de el manual.</p>}
               </div>
             )
           })}

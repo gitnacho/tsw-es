@@ -414,6 +414,9 @@ export interface TwoSlashOptions {
   /** Se requerirá una copia opcional de la importación de TypeScript, si falta. */
   tsModule?: TS
 
+  /** Absolute path to the directory to look up built-in TypeScript .d.ts files. */
+  tsLibDiretory?: string
+
   /** Una copia opcional de la importación lz-string, si falta, será necesaria. */
   lzstringModule?: LZ
 
@@ -482,7 +485,7 @@ export function twoslasher(code: string, extension: string, options: TwoSlashOpt
   // En un navegador queremos DI todo, en el nodo podemos usar infraestructura local
   const useFS = !!options.fsMap
   const vfs = useFS && options.fsMap ? options.fsMap : new Map<string, string>()
-  const system = useFS ? createSystem(vfs) : createFSBackedSystem(vfs, getRoot(), ts)
+  const system = useFS ? createSystem(vfs) : createFSBackedSystem(vfs, getRoot(), ts, options.tsLibDiretory)
   const fsRoot = useFS ? "/" : getRoot() + "/"
 
   const env = createVirtualTypeScriptEnvironment(system, [], ts, compilerOptions, options.customTransformers)
