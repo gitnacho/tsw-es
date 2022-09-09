@@ -542,7 +542,7 @@ Puedes recibir un error como el siguiente:
 
 ```
   resolve()
-  ~~~~~~~~~
+    ~~~~~~~~~
 error TS2554: Se esperaba 1 argumento, pero obtuve 0.
   No se proporcionó un argumento para 'valor'.
 ```

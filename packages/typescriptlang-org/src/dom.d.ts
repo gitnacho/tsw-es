@@ -3622,7 +3622,7 @@ declare var CredentialsContainer: {
     new(): CredentialsContainer;
 };
 
-/** Funciones básicas de criptografía disponibles en el contexto actual. Permite el acceso a un generador de números aleatorios criptográficamente fuerte y a primitivas criptográficas. */
+/** Funciones básicas de criptografía disponibles en el contexto actual. Permite el acceso a un generador de números aleatorios criptográficamente fuerte y a primitivos criptográficos. */
 interface Crypto {
     readonly subtle: SubtleCrypto;
     getRandomValues<T extends ArrayBufferView | null>(array: T): T;
@@ -7922,19 +7922,19 @@ declare var HTMLPreElement: {
     new(): HTMLPreElement;
 };
 
-/** Provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of <progress> elements. */
+/** Proporciona propiedades y métodos especiales (más allá de la interfaz normal de HTMLElement que también tiene disponible por herencia) para manipular el layout y la presentación de los elementos <progress>. */
 interface HTMLProgressElement extends HTMLElement {
     readonly labels: NodeListOf<HTMLLabelElement>;
     /**
-     * Defines the maximum, or "done" value for a progress element.
+     * Define el valor máximo o "done" para un elemento de progreso.
      */
     max: number;
     /**
-     * Returns the quotient of value/max when the value attribute is set (determinate progress bar), or -1 when the value attribute is missing (indeterminate progress bar).
+     * Devuelve el cociente de value/max cuando se establece el atributo value (barra de progreso determinada), o -1 cuando falta el atributo value (barra de progreso indeterminada).
      */
     readonly position: number;
     /**
-     * Sets or gets the current value of a progress element. The value must be a non-negative number between 0 and the max value.
+     * Establece u obtiene el valor actual de un elemento progress. El value debe ser un número no negativo entre 0 y el valor máximo.
      */
     value: number;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLProgressElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -7948,7 +7948,7 @@ declare var HTMLProgressElement: {
     new(): HTMLProgressElement;
 };
 
-/** Provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating quoting elements, like <blockquote> and <q>, but not the <cite> element. */
+/** Proporciona propiedades y métodos especiales (más allá de la interfaz normal de HTMLElement que también tiene disponible por herencia) para manipular elementos de cita, como <blockquote> y <q>, pero no el elemento <cite>. */
 interface HTMLQuoteElement extends HTMLElement {
     /**
      * Establece o recupera información de referencia sobre el objeto.
@@ -7975,16 +7975,16 @@ interface HTMLScriptElement extends HTMLElement {
     charset: string;
     crossOrigin: string | null;
     /**
-     * Sets or retrieves the status of the script.
+     * Establece o recupera el estado del script.
      */
     defer: boolean;
     /**
-     * Sets or retrieves the event for which the script is written.
+     * Establece o recupera el evento para el que se escribe el script.
      */
     /** @deprecated */
     event: string;
     /**
-     * Sets or retrieves the object that is bound to the event script.
+     * Establece o recupera el objeto que está vinculado al script de eventos.
      */
     /** @deprecated */
     htmlFor: string;
@@ -7992,7 +7992,7 @@ interface HTMLScriptElement extends HTMLElement {
     noModule: boolean;
     referrerPolicy: string;
     /**
-     * Retrieves the URL to an external file that contains the source code or data.
+     * Recupera la URL de un archivo externo que contiene el código fuente o los datos.
      */
     src: string;
     /**
@@ -8000,7 +8000,7 @@ interface HTMLScriptElement extends HTMLElement {
      */
     text: string;
     /**
-     * Sets or retrieves the MIME type for the associated scripting engine.
+     * Establece o recupera el tipo MIME para el motor de scripting asociado.
      */
     type: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLScriptElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -8014,7 +8014,7 @@ declare var HTMLScriptElement: {
     new(): HTMLScriptElement;
 };
 
-/** A <select> HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface. */
+/** Un elemento <select> de HTML. Estos elementos también comparten todas las propiedades y métodos de otros elementos HTML a través de la interfaz HTMLElement. */
 interface HTMLSelectElement extends HTMLElement {
     autocomplete: string;
     disabled: boolean;
@@ -8044,16 +8044,16 @@ interface HTMLSelectElement extends HTMLElement {
      */
     required: boolean;
     /**
-     * Sets or retrieves the index of the selected option in a select object.
+     * Establece o recupera el índice de la opción seleccionada en un objeto select.
      */
     selectedIndex: number;
     readonly selectedOptions: HTMLCollectionOf<HTMLOptionElement>;
     /**
-     * Sets or retrieves the number of rows in the list box.
+     * Establece o recupera el número de filas en el list box.
      */
     size: number;
     /**
-     * Retrieves the type of select control based on the value of the MULTIPLE attribute.
+     * Recupera el tipo de control select en función del valor del atributo MULTIPLE.
      */
     readonly type: string;
     /**
@@ -8073,9 +8073,9 @@ interface HTMLSelectElement extends HTMLElement {
      */
     readonly willValidate: boolean;
     /**
-     * Adds an element to the areas, controlRange, or options collection.
-     * @param element Variant of type Number that specifies the index position in the collection where the element is placed. If no value is given, the method places the element at the end of the collection.
-     * @param before Variant of type Object that specifies an element to insert before, or null to append the object to the collection.
+     * Agrega un elemento a la colección areas, controlRange u options.
+     * @param element Variant de tipo Number que especifica la posición del índice en la colección donde se coloca el elemento. Si no se da ningún valor, el método coloca el elemento al final de la colección.
+     * @param before Variant de tipo Object que especifica un elemento para insertar antes, o null para agregar el objeto a la colección.
      */
     add(element: HTMLOptionElement | HTMLOptGroupElement, before?: HTMLElement | number | null): void;
     /**
@@ -8084,18 +8084,18 @@ interface HTMLSelectElement extends HTMLElement {
     checkValidity(): boolean;
     /**
      * Recupera un objeto seleccionado o un objeto de una colección de opciones.
-     * @param name Variant of type Number or String that specifies the object or collection to retrieve. If this parameter is an integer, it is the zero-based index of the object. If this parameter is a string, all objects with matching name or id properties are retrieved, and a collection is returned if more than one match is made.
-     * @param index Variant of type Number that specifies the zero-based index of the object to retrieve when a collection is returned.
+     * @param name Variant de tipo Number o String que especifica el objeto o colección a recuperar. Si este parámetro es un número entero, es el índice en base cero del objeto. Si este parámetro es una cadena, se recuperan todos los objetos con propiedades de name o id coincidentes y se devuelve una colección si hay más de una coincidencia.
+     * @param index Variant de tipo Number que especifica el índice en base cero del objeto que se recuperará cuando se devuelva una colección.
      */
     item(index: number): Element | null;
     /**
      * Recupera un objeto seleccionado o un objeto de una colección de opciones.
-     * @param namedItem A String that specifies the name or id property of the object to retrieve. A collection is returned if more than one match is made.
+     * @param namedItem Un String que especifica el name o la propiedad id del objeto que se va a recuperar. Se devuelve una colección si hay más de una coincidencia.
      */
     namedItem(name: string): HTMLOptionElement | null;
     /**
-     * Removes an element from the collection.
-     * @param index Number that specifies the zero-based index of the element to remove from the collection.
+     * Elimina un elemento de la colección.
+     * @param index Number que especifica el índice en base cero del elemento que se va a eliminar de la colección.
      */
     remove(): void;
     remove(index: number): void;
@@ -8132,10 +8132,10 @@ declare var HTMLSlotElement: {
     new(): HTMLSlotElement;
 };
 
-/** Provides special properties (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating <source> elements. */
+/** Proporciona propiedades especiales (más allá de la interfaz de objeto HTMLElement normal que también tiene disponible por herencia) para manipular elementos <source>. */
 interface HTMLSourceElement extends HTMLElement {
     /**
-     * Gets or sets the intended media type of the media source.
+     * Obtiene o establece el tipo multimedia deseado de la fuente del medio.
      */
     media: string;
     sizes: string;
@@ -8145,7 +8145,7 @@ interface HTMLSourceElement extends HTMLElement {
     src: string;
     srcset: string;
     /**
-     * Gets or sets the MIME type of a media resource.
+     * Obtiene o establece el tipo MIME de un recurso multimedia.
      */
     type: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLSourceElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -8159,7 +8159,7 @@ declare var HTMLSourceElement: {
     new(): HTMLSourceElement;
 };
 
-/** A <span> element and derives from the HTMLElement interface, but without implementing any additional properties or methods. */
+/** Un elemento <span> y se deriva de la interfaz HTMLElement, pero sin implementar ninguna propiedad o método adicional. */
 interface HTMLSpanElement extends HTMLElement {
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLSpanElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -8172,14 +8172,14 @@ declare var HTMLSpanElement: {
     new(): HTMLSpanElement;
 };
 
-/** A <style> element. It inherits properties and methods from its parent, HTMLElement, and from LinkStyle. */
+/** Un elemento <style>. Hereda propiedades y métodos de su padre, HTMLElement, y de LinkStyle. */
 interface HTMLStyleElement extends HTMLElement, LinkStyle {
     /**
      * Establece o recupera el tipo de medio.
      */
     media: string;
     /**
-     * Retrieves the CSS language in which the style sheet is written.
+     * Recupera el lenguaje CSS en el que está escrita la hoja de estilos.
      */
     /** @deprecated */
     type: string;
@@ -8194,10 +8194,10 @@ declare var HTMLStyleElement: {
     new(): HTMLStyleElement;
 };
 
-/** Special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating table caption elements. */
+/** Propiedades especiales (más allá de la interfaz HTMLElement normal que también tiene disponible por herencia) para manipular elementos de título de tabla. */
 interface HTMLTableCaptionElement extends HTMLElement {
     /**
-     * Sets or retrieves the alignment of the caption or legend.
+     * Establece o recupera la alineación del título o leyenda.
      */
     /** @deprecated */
     align: string;
@@ -8212,10 +8212,10 @@ declare var HTMLTableCaptionElement: {
     new(): HTMLTableCaptionElement;
 };
 
-/** Provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of table cells, either header or data cells, in an HTML document. */
+/** Proporciona propiedades y métodos especiales (más allá de la interfaz normal de HTMLElement que también tiene disponible por herencia) para manipular el diseño y la presentación de las celdas de la tabla, ya sea de encabezado o de datos, en un documento HTML. */
 interface HTMLTableCellElement extends HTMLElement {
     /**
-     * Sets or retrieves abbreviated text for the object.
+     * Establece o recupera texto abreviado para el objeto.
      */
     abbr: string;
     /**
@@ -8224,14 +8224,14 @@ interface HTMLTableCellElement extends HTMLElement {
     /** @deprecated */
     align: string;
     /**
-     * Sets or retrieves a comma-delimited list of conceptual categories associated with the object.
+     * Establece o recupera una lista delimitada por comas de categorías conceptuales asociadas con el objeto.
      */
     /** @deprecated */
     axis: string;
     /** @deprecated */
     bgColor: string;
     /**
-     * Retrieves the position of the object in the cells collection of a row.
+     * Recupera la posición del objeto en la colección de celdas de una fila.
      */
     readonly cellIndex: number;
     /** @deprecated */
@@ -8239,11 +8239,11 @@ interface HTMLTableCellElement extends HTMLElement {
     /** @deprecated */
     chOff: string;
     /**
-     * Sets or retrieves the number columns in the table that the object should span.
+     * Establece o recupera las columnas numéricas de la tabla que debe abarcar el objeto.
      */
     colSpan: number;
     /**
-     * Sets or retrieves a list of header cells that provide information for the object.
+     * Establece o recupera una lista de celdas de encabezado que proporcionan información para el objeto.
      */
     headers: string;
     /**
@@ -8252,16 +8252,16 @@ interface HTMLTableCellElement extends HTMLElement {
     /** @deprecated */
     height: string;
     /**
-     * Sets or retrieves whether the browser automatically performs wordwrap.
+     * Establece o recupera si el navegador realiza automáticamente el ajuste de línea.
      */
     /** @deprecated */
     noWrap: boolean;
     /**
-     * Sets or retrieves how many rows in a table the cell should span.
+     * Establece o recupera cuántas filas en una tabla debe abarcar la celda.
      */
     rowSpan: number;
     /**
-     * Sets or retrieves the group of cells in a table to which the object's information applies.
+     * Establece o recupera el grupo de celdas de una tabla a las que se aplica la información del objeto.
      */
     scope: string;
     /** @deprecated */
@@ -8282,10 +8282,10 @@ declare var HTMLTableCellElement: {
     new(): HTMLTableCellElement;
 };
 
-/** Provides special properties (beyond the HTMLElement interface it also has available to it inheritance) for manipulating single or grouped table column elements. */
+/** Proporciona propiedades especiales (más allá de la interfaz HTMLElement, también tiene herencia disponible) para manipular elementos de columna de tabla individuales o agrupados. */
 interface HTMLTableColElement extends HTMLElement {
     /**
-     * Sets or retrieves the alignment of the object relative to the display or table.
+     * Establece o recupera la alineación del objeto en relación con la pantalla o la tabla.
      */
     /** @deprecated */
     align: string;
@@ -8294,7 +8294,7 @@ interface HTMLTableColElement extends HTMLElement {
     /** @deprecated */
     chOff: string;
     /**
-     * Sets or retrieves the number of columns in the group.
+     * Establece o recupera el número de columnas del grupo.
      */
     span: number;
     /** @deprecated */
@@ -8315,7 +8315,7 @@ declare var HTMLTableColElement: {
     new(): HTMLTableColElement;
 };
 
-/** Provides special properties and methods (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document. */
+/** Proporciona propiedades y métodos especiales (más allá de la interfaz de objeto HTMLElement normal que también tiene disponible por herencia) para manipular el diseño y la presentación de las tablas en un documento HTML. */
 interface HTMLTableElement extends HTMLElement {
     /**
      * Establece o recupera un valor que indica la alineación de la tabla.
@@ -8330,30 +8330,30 @@ interface HTMLTableElement extends HTMLElement {
     /** @deprecated */
     border: string;
     /**
-     * Retrieves the caption object of a table.
+     * Recupera el objeto caption de una tabla.
      */
     caption: HTMLTableCaptionElement | null;
     /**
-     * Sets or retrieves the amount of space between the border of the cell and the content of the cell.
+     * Establece o recupera la cantidad de espacio entre el borde de la celda y el contenido de la celda.
      */
     /** @deprecated */
     cellPadding: string;
     /**
-     * Sets or retrieves the amount of space between cells in a table.
+     * Establece o recupera la cantidad de espacio entre las celdas de una tabla.
      */
     /** @deprecated */
     cellSpacing: string;
     /**
-     * Sets or retrieves the way the border frame around the table is displayed.
+     * Establece o recupera la forma en que se muestra el marco del borde alrededor de la tabla.
      */
     /** @deprecated */
     frame: string;
     /**
-     * Sets or retrieves the number of horizontal rows contained in the object.
+     * Establece o recupera el número de filas horizontales contenidas en el objeto.
      */
     readonly rows: HTMLCollectionOf<HTMLTableRowElement>;
     /**
-     * Sets or retrieves which dividing lines (inner borders) are displayed.
+     * Establece o recupera qué líneas divisorias (bordes interiores) se muestran.
      */
     /** @deprecated */
     rules: string;
@@ -8488,7 +8488,7 @@ interface HTMLTableSectionElement extends HTMLElement {
     /** @deprecated */
     chOff: string;
     /**
-     * Sets or retrieves the number of horizontal rows contained in the object.
+     * Establece o recupera el número de filas horizontales contenidas en el objeto.
      */
     readonly rows: HTMLCollectionOf<HTMLTableRowElement>;
     /** @deprecated */
@@ -8571,7 +8571,7 @@ interface HTMLTextAreaElement extends HTMLElement {
      */
     required: boolean;
     /**
-     * Sets or retrieves the number of horizontal rows contained in the object.
+     * Establece o recupera el número de filas horizontales contenidas en el objeto.
      */
     rows: number;
     selectionDirection: "forward" | "backward" | "none";

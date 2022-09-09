@@ -346,7 +346,7 @@ define(["require", "exports", "legacy/moduleA"], function (
 ## Soporte de proyectos a través de `tsconfig.json`
 
 Agrega un archivo `tsconfig.json` en un directorio indica que el directorio es la raíz de un proyecto *TypeScript*.
-El archivo `tsconfig.json` especifica los archivos raíz y las opciones de compilación requeridas para compilar el proyecto. Un proyecto se compila de una de las siguientes maneras:
+El archivo `tsconfig.json` especifica los archivos raíz y las opciones de construcción requeridas para compilar el proyecto. Un proyecto se compila de una de las siguientes maneras:
 
 - Invocar a `tsc` sin archivos de entrada, en cuyo caso el compilador busca el archivo `tsconfig.json` comenzando en el directorio actual y continuando hacia arriba en la cadena del directorio principal.
 - Invocar `tsc` sin archivos de entrada y una opción de línea de comandos `-project` (o simplemente `-p`) que especifica la ruta de un directorio que contiene un archivo `tsconfig.json`.

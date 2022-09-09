@@ -6,7 +6,7 @@ Los ejemplos de *Playground* son un conjunto interactivo de tutoriales y descrip
 
 Hablando como autor, yo, *Orta*, creo que hay muchas formas de que la gente aprenda un tema complejo. No creo que sea posible tomar un solo libro y *":tada: Entiendo X "*. No estamos aprendiendo kung-fu en un segundo, algo como aprender *TypeScript* toma un tiempo.
 
-Creo que estudiar algo complejo gira en torno a crear una malla de comprensión mezclando el aprendizaje y la práctica. El manual de *TypeScript* hace un gran trabajo al cubrir todas las primitivas de *TypeScript*, y lo puedes estudiar, pero con *Playground* tenemos un espacio para una segunda explicación sobre los mismos temas con un entorno estructurado seguro para jugar y fallar. Los ejemplos en el *PlayGround* están diseñados para fomentar la exploración de ideas.
+Creo que estudiar algo complejo gira en torno a crear una malla de comprensión mezclando el aprendizaje y la práctica. El manual de *TypeScript* hace un gran trabajo al cubrir todos los primitivos de *TypeScript*, y lo puedes estudiar, pero con *Playground* tenemos un espacio para una segunda explicación sobre los mismos temas con un entorno estructurado seguro para jugar y fallar. Los ejemplos en el *PlayGround* están diseñados para fomentar la exploración de ideas.
 
 </details>
 

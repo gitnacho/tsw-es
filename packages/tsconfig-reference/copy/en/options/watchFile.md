@@ -1,9 +1,9 @@
 ---
 display: "watchFile"
-oneline: "Especifica cómo funciona el modo de observación de TypeScript."
+oneline: "Especifica cómo funciona el modo watch de TypeScript."
 ---
 
-La estrategia de cómo se observan archivos individuales.
+La estrategia de cómo se vigilan archivos individuales.
 
 - `fixedPollingInterval` ⏤ Comprueba cada archivo para ver si hay cambios varias veces por segundo en un intervalo fijo.
 - `priorityPollingInterval` ⏤ Verifica cada archivo en busca de cambios varias veces por segundo, pero usa la heurística para revisar ciertos tipos de archivos con menos frecuencia que otros.

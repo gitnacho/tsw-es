@@ -26,7 +26,7 @@ type FauxactFunctionComponent<Props extends {}> = (
 //
 // FauxactFunctionComponent es una función genérica que se basa en
 // otro tipo, Props. Props tiene que ser un objeto (para asegurarte
-// que no pasas una primitiva) y el tipo Props será
+// que no pasas un primitivo) y el tipo Props será
 // reutilizado como el primer argumento en la función.
 
 // Para usarlo, necesitas un tipo props:

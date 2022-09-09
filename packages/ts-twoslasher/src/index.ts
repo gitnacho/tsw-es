@@ -414,7 +414,7 @@ export interface TwoSlashOptions {
   /** Se requerirá una copia opcional de la importación de TypeScript, si falta. */
   tsModule?: TS
 
-  /** Absolute path to the directory to look up built-in TypeScript .d.ts files. */
+  /** Ruta absoluta al directorio para buscar archivos .d.ts integrados de TypeScript. */
   tsLibDiretory?: string
 
   /** Una copia opcional de la importación lz-string, si falta, será necesaria. */

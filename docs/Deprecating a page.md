@@ -58,4 +58,4 @@ Si cargas la página anterior en tu navegador y ejecutas este JS en el inspector
 document.querySelectorAll(".markdown h2, .markdown h3").forEach(h => console.log(h.id))
 ```
 
-Imprimirá todos los anclajes del encabezado, y ese es el lado izquierdo de tus pareados de arreglo. El sitio tiene un código del lado del cliente para anular la URL `deprecated_by` en tiempo de ejecución si detecta que un usuario tiene un hash coincidente en la *URL*.
+Imprimirá todos los anclajes del encabezado, y ese es el lado izquierdo de tus pareados de arreglo. El sitio tiene un código del lado del cliente para anular la URL `deprecated_by` en el entorno de ejecución si detecta que un usuario tiene un hash coincidente en la *URL*.

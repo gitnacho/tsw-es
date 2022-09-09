@@ -541,14 +541,14 @@ export function createVirtualLanguageServiceHost(
     getProjectVersion: () => projectVersion.toString(),
     getCompilationSettings: () => compilerOptions,
     getCustomTransformers: () => customTransformers,
-    // A couple weeks of 4.8 TypeScript nightlies had a bug where the Program's
-    // list of files was just a reference to the array returned by this host method,
-    // which means mutations by the host that ought to result in a new Program being
-    // created were not detected, since the old list of files and the new list of files
-    // were in fact a reference to the same underlying array. That was fixed in
-    // https://github.com/microsoft/TypeScript/pull/49813, but since the twoslash runner
-    // is used in bisecting for changes, it needs to guard against being busted in that
-    // couple-week period, so we defensively make a slice here.
+    // Un par  de semanas de 4.8  Nightlies de TypeScript  tenía un error  en el que la  lista de
+    // archivos del programa era solo una referencia al arreglo devuelto por este método host, lo
+    // que significa  que no se detectaron  las mutaciones del host  que deberían dar lugar  a la
+    // creación de un nuevo programa, ya que la lista de archivos anterior y la lista de archivos
+    // nueva eran,  de hecho,  una referencia  al mismo  arreglo subyacente. Eso se  arregló en
+    // https://github.com/microsoft/TypeScript/pull/49813, pero dado que  el corredor de twoslash
+    // se usa  para dividir en  dos para cambios,  se debe proteger  contra ser arrestado  en ese
+    // período de un par de semanas, por lo que defensivamente hacemos un corte aquí.
     getScriptFileNames: () => fileNames.slice(),
     getScriptSnapshot: fileName => {
       const contents = sys.readFile(fileName)

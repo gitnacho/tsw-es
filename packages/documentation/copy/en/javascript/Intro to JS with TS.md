@@ -16,12 +16,12 @@ El sistema de tipos en *TypeScript* tiene diferentes niveles de rigor cuando se 
 
 Cada paso representa un movimiento hacia un sistema de tipos más seguro, pero no todos los proyectos necesitan ese nivel de comprobación.
 
-## *TypeScript* con *JavaScript*
+## *TypeScript*&nbsp;con&nbsp;*JavaScript*
 
 Esto es cuando usas un editor que usa *TypeScript* para proporcionar herramientas como autocompleción, saltar al símbolo y herramientas de refactorización como `rename`.
 La [página de inicio](/) tiene una lista de editores que tienen complementos de *TypeScript*.
 
-## Proporcionar sugerencias de tipo en*JS*a través de*JSDoc*
+## Proporcionar sugerencias de tipo en&nbsp;*JS*&nbsp;a través de&nbsp;*JSDoc*
 
 En un archivo `.js`, los tipos a menudo se pueden inferir. Cuando no se pueden inferir tipos, se pueden especificar utilizando la sintaxis *JSDoc*.
 
@@ -53,9 +53,9 @@ x = false; // No está bien
 ```
 
 Si tienes muchos archivos *JavaScript* a los que deseas agregar errores, puedes cambiar a usar un [`jsconfig.json`](/docs/handbook/tsconfig-json.html).
-Puedes omitir la comprobación de algunos archivos agregando un comentario ``/@ts-nocheck` a los archivos.
+Puedes omitir la comprobación de algunos archivos agregando un comentario `/@ts-nocheck` a los archivos.
 
-*TypeScript* te puede ofrecer errores con los que no estás de acuerdo; en esos casos, puedes ignorar errores en líneas específicas agregando ``/@ts-ignore` o  `//(@ts-expect-error` en la línea anterior.
+*TypeScript* te puede ofrecer errores con los que no estás de acuerdo; en esos casos, puedes ignorar errores en líneas específicas agregando `// @ts-ignore` o `// @ts-expect-error` en la línea anterior.
 
 ```js twoslash
 // @ts-check

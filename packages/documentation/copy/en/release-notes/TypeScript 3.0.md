@@ -246,7 +246,7 @@ function f23<T extends unknown>(x: T) {
   let y: object = x; // Error
 }
 
-// Cualquier cosa menos primitiva asignable a {[x: string]: unknown }
+// Cualquier cosa menos un primitivo asignable a {[x: string]: unknown }
 
 function f24(x: { [x: string]: unknown }) {
   x = {};

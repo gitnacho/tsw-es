@@ -169,7 +169,7 @@ Al mirar el código de una biblioteca global, generalmente verás:
 
 - Declaraciones `var` de nivel superior o declaraciones `function`
 - Una o más asignaciones a `window.someName`
-- Supuestos de que existen *DOM* primitivas como `document` o `window`
+- Supuestos de que existen *DOM* primitivos como `document` o `window`
 
 *No* verás:
 

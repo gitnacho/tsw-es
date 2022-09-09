@@ -7,7 +7,7 @@ const innerHTML = `
   <svg style='transform: translateX(5px) translateY(-2px) rotate(40deg);' width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M1 39C1.5 32.7511 6.1 17.5173 20.5 6.57333M11.5 4.04L27 0.999998C24.8333 4.88444 20.5 13.16 20.5 15.1867" stroke="black" />
 </svg>
-  <p class='twoslash-annotation-text' style="transform: rotate(3deg)">No hay advertencias del editor en archivos JavaScript<br/><br/>¡Este código falla en tiempo de ejecución!</p>
+  <p class='twoslash-annotation-text' style="transform: rotate(3deg)">No hay advertencias del editor en archivos JavaScript<br/><br/>¡Este código falla en el entorno de ejecución!</p>
 </div></div>
 `
 

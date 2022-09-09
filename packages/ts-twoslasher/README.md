@@ -921,7 +921,7 @@ A continuación se muestra una lista de comandos que probablemente te resulten �
 
 ### `npm start` o `yarn start`
 
-Ejecuta el proyecto en modo de desarrollo/observador. Tu proyecto se reconstruirá con los cambios. La biblioteca se reconstruirá si realizas modificaciones.
+Ejecuta el proyecto en modo de desarrollo/`watch`. Tu proyecto se reconstruirá con los cambios. La biblioteca se reconstruirá si realizas modificaciones.
 
 ### `npm run build` o `yarn build`
 

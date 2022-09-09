@@ -865,7 +865,7 @@ function get<T, K extends keyof T>(obj: T, key: K) {
 *TypeScript* ahora emitirá el siguiente error:
 
 ```
-La conversión implícita de un 'symbol' a una 'string' fallará en tiempo de ejecución. Considera envolver esta expresión en 'String(...)'.
+La conversión implícita de un 'symbol' a una 'string' fallará en el entorno de ejecución. Considera envolver esta expresión en 'String(...)'.
 ```
 
 En algunos casos, puedes evitar esto envolviendo la expresión en una llamada a `String`, tal como sugiere el mensaje de error.

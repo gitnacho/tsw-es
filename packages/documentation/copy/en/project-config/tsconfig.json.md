@@ -9,7 +9,7 @@ translatable: true
 ## Descripción general
 
 La presencia de un archivo `tsconfig.json` en un directorio indica que el directorio es la raíz de un proyecto *TypeScript*.
-El archivo `tsconfig.json` especifica los archivos raíz y las opciones de compilación requeridas para compilar el proyecto.
+El archivo `tsconfig.json` especifica los archivos raíz y las opciones de construcción requeridas para compilar el proyecto.
 
 Los proyectos *JavaScript* pueden usar un archivo `jsconfig.json` en su lugar, que actúa casi de la misma manera pero tiene algunos indicadores de compilador relacionados con *JavaScript* habilitados de forma predeterminada.
 

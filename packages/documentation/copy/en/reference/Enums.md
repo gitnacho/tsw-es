@@ -375,8 +375,8 @@ Estas implicaciones pertenecen solo a las enumeraciones de constantes _ambient_ 
 2. Puedes insertar fácilmente valores de la versión A de una dependencia en tiempo de compilación e importar la versión B en el entorno de ejecución.
    Las enumeraciones de las versiones A y B pueden tener valores diferentes, si no tienes mucho cuidado, lo que resulta en [errores sorprendentes](https://github.com/microsoft/TypeScript/issues/5219#issue-110947903), como tomar las ramas equivocadas de instrucciones `if`.
    Estos errores son especialmente perniciosos porque es común ejecutar pruebas automatizadas aproximadamente al mismo tiempo que se construyen los proyectos, con las mismas versiones de dependencia, lo que pasa por alto estos errores por completo.
-3. [`importsNotUsedAsValues: "preserve"`](/tsconfig#importsNotUsedAsValues) no eliminará las importaciones de enumeraciones constantes utilizadas como valores, pero las enumeraciones constantes ambientales no garantizan que existan archivos `.js` en tiempo de ejecución.
-   Las importaciones irresolubles provocan errores en tiempo de ejecución.
+3. [`importsNotUsedAsValues: "preserve"`](/tsconfig#importsNotUsedAsValues) no eliminará las importaciones de enumeraciones constantes utilizadas como valores, pero las enumeraciones constantes ambientales no garantizan que existan archivos `.js` en el entorno de ejecución.
+   Las importaciones irresolubles provocan errores en el entorno de ejecución.
    La forma habitual de eludir `imports` sin ambigüedades, [solo importar tipos](/docs/handbook/modules.html#importing-types), [no permite valores de enumeración constantes](https://github.com/microsoft/TypeScript/issues/40344), actualmente.
 
 Aquí hay dos enfoques para evitar estas trampas:

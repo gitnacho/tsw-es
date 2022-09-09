@@ -23,7 +23,7 @@ El manual se divide en dos secciones:
 
   *El Manual de TypeScript* está destinado a ser un documento completo que explica *TypeScript* a los programadores cotidianos. Puedes leer el manual yendo de arriba a abajo en la barra de navegación de la izquierda.
 
-  Debes esperar que cada capítulo o página te proporcione una sólida comprensión de los conceptos dados. *El Manual de TypeScript* no es una especificación completa del lenguaje, pero está destinado a ser una guía completa de todas las características y comportamientos del lenguaje.
+  Debes esperar que cada capítulo o página te proporcione una sólida comprensión de los conceptos dados. *El Manual de TypeScript* no es una especificación completa del lenguaje, pero está destinado a ser una guía completa de todas las características y comportamiento del lenguaje.
 
   Un lector que completa el tutorial debería poder:
 

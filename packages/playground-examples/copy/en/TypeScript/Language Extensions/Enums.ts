@@ -38,7 +38,7 @@ const stringBadRequest = StatusCodes[400];
 
 // Las enumeraciones pueden ser de diferentes tipos, un tipo string es común.
 // El uso de una cadena puede facilitar la depuración, porque el
-// valor en tiempo de ejecución no requiere que busques el número.
+// valor en el entorno de ejecución no requiere que busques el número.
 
 enum GamePadInput {
   Up = "UP",

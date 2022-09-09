@@ -24,7 +24,7 @@ tsc src/*.ts
 # Emite archivos a los que se hace referencia con la configuración del compilador de tsconfig.production.json
 tsc --project tsconfig.production.json
 
-# Emitir archivos d.ts para un archivo js mostrando las opciones del compilador que son booleanas
+# Emite archivos d.ts para un archivo js mostrando las opciones del compilador que son booleanas
 tsc index.js --declaration --emitDeclarationOnly
 
 # Emite un solo archivo .js desde dos archivos a través de las opciones del compilador que toman argumentos de cadena
@@ -198,7 +198,7 @@ tsc app.ts util.ts --target esnext --outfile index.js
 </td>
 </tr>
 <tr class="option-description odd"><td colspan="3">
-<p>Elimina una lista de directorios del proceso de observación.</p>
+<p>Elimina una lista de directorios del proceso de vigilancia.</p>
 </td></tr>
 
 <tr class='even' name='excludeFiles'>
@@ -207,7 +207,7 @@ tsc app.ts util.ts --target esnext --outfile index.js
 </td>
 </tr>
 <tr class="option-description even"><td colspan="3">
-<p>Elimina una lista de archivos del procesamiento del modo de vigilancia.</p>
+<p>Elimina una lista de archivos del procesamiento del modo <code>watch</code>.</p>
 </td></tr>
 
 <tr class='odd' name='fallbackPolling'>
@@ -216,7 +216,7 @@ tsc app.ts util.ts --target esnext --outfile index.js
 </td>
 </tr>
 <tr class="option-description odd"><td colspan="3">
-<p>Especifica qué enfoque debe utilizar el observador si el sistema se queda sin observadores de archivos nativos.</p>
+<p>Especifica qué enfoque debe utilizar el vigilante si el sistema se queda sin vigías nativos de archivos.</p>
 </td></tr>
 
 <tr class='even' name='synchronousWatchDirectory'>
@@ -225,7 +225,7 @@ tsc app.ts util.ts --target esnext --outfile index.js
 </td>
 </tr>
 <tr class="option-description even"><td colspan="3">
-<p>Llama de forma sincrónica a devoluciones de llamada y actualiza el estado de los observadores de directorios en plataformas que no admiten la visualización recursiva de forma nativa.</p>
+<p>Llama de forma sincrónica a devoluciones de llamada y actualiza el estado de los vigías de directorios en plataformas que nativamente no admiten la vigilancia recursiva.</p>
 </td></tr>
 
 <tr class='odd' name='watch'>
@@ -243,7 +243,7 @@ tsc app.ts util.ts --target esnext --outfile index.js
 </td>
 </tr>
 <tr class="option-description even"><td colspan="3">
-<p>Especifica cómo se ven los directorios en los sistemas que carecen de la funcionalidad de observación de archivos recursiva.</p>
+<p>Especifica cómo se ven los directorios en los sistemas que carecen de la funcionalidad de vigilancia recursiva de archivos.</p>
 </td></tr>
 
 <tr class='odd' name='watchFile'>
@@ -252,7 +252,7 @@ tsc app.ts util.ts --target esnext --outfile index.js
 </td>
 </tr>
 <tr class="option-description odd"><td colspan="3">
-<p>Especifica cómo funciona el modo de visualización de TypeScript.</p>
+<p>Especifica cómo funciona el modo <code>watch</code> de TypeScript.</p>
 </td></tr>
 
 </tbody></table>
@@ -1121,7 +1121,7 @@ tsc app.ts util.ts --target esnext --outfile index.js
 </td>
 </tr>
 <tr class="option-description odd"><td colspan="3">
-<p>Desactiva la limpieza de la consola en modo observador.</p>
+<p>Desactiva la limpieza de la consola en modo <code>watch</code>.</p>
 </td></tr>
 
 <tr class='even' name='pretty'>

@@ -4,7 +4,7 @@ layout: docs
 permalink: /docs/handbook/2/basic-types.html
 oneline: "Paso uno para aprender TypeScript: Tipos básicos."
 preamble: >
-  <p>Bienvenido a la primera página del manual. Si esta es tu primera experiencia con TypeScript ⏤ es posible que desees comenzar en una de las guías de '<a href='https://www.typescriptlang.org/docs/handbook/intro.html#get-started'>primeros pasos</a>'</p>
+  <p>Bienvenido a la primera página del manual. Si esta es tu primera experiencia con TypeScript ⏤ es posible que desees comenzar en una de las guías de '<a href='/docs/handbook/intro.html#get-started'>primeros pasos</a>'</p>
 ---
 
 Todos y cada uno de los valores en *JavaScript* tienen un conjunto de comportamientos que puedes observar al ejecutar diferentes operaciones.

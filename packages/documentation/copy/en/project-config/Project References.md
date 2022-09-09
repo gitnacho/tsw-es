@@ -164,7 +164,7 @@ También hay algunos indicadores específicos para `tsc -b`:
 - `--dry`: Muestra lo que se haría pero en realidad no construye nada.
 - `--clean`: Elimina los resultados de los proyectos especificados (se puede combinar con `--dry`)
 - [`--force`](/tsconfig#force): Actúa como si todos los proyectos estuvieran desactualizados
-- `--watch`: Modo observador (no se puede combinar con ninguna bandera excepto [`--verbose`](/tsconfig#verbose))
+- `--watch`: El modo `watch` (no se puede combinar con ninguna bandera excepto [`--verbose`](/tsconfig#verbose))
 
 ## Advertencias
 

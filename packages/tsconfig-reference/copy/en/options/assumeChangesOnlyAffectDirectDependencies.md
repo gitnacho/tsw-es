@@ -5,4 +5,4 @@ oneline: "Tener recompilaciones en proyectos que usan [`incremental`](#increment
 
 Cuando esta opción está habilitada, *TypeScript* evitará volver a verificar/reconstruir todos los archivos posiblemente afectados realmente, y solo volverá a verificar/reconstruir los archivos que hayan cambiado, así como los archivos que los importen directamente.
 
-Esto se puede considerar una implementación 'rápida y flexible' del algoritmo de observación, que puede reducir drásticamente los tiempos de reconstrucción incremental a expensas de tener que ejecutar la compilación completa ocasionalmente para obtener todos los mensajes de error del compilador.
+Esto se puede considerar una implementación 'rápida y flexible' del algoritmo de vigilancia, que puede reducir drásticamente los tiempos de reconstrucción incremental a expensas de tener que ejecutar la compilación completa ocasionalmente para obtener todos los mensajes de error del compilador.

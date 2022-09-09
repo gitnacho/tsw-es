@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { isTouchDevice } from "../lib/isTouchDevice"
 
 /**
- * Un componente de React que eliminará sus elementos secundarios (¡en tiempo de ejecución!)
+ * Un componente de React que eliminará sus elementos secundarios (¡en el entorno de ejecución!)
  * de la jerarquía si estamos en un dispositivo táctil
  */
 export const SuppressWhenTouch = ({ children, hideOnTouch }: any) => {

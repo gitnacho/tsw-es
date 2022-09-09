@@ -1028,7 +1028,7 @@ console.log(g());
 
 Esto tiene algunas ventajas y desventajas:
 
-- Se garantiza que el valor de `this` sea correcto en tiempo de ejecución, incluso para el código no verificado con *TypeScript*
+- Se garantiza que el valor de `this` sea correcto en el entorno de ejecución, incluso para el código no verificado con *TypeScript*
 - Esto usará más memoria, porque cada instancia de clase tendrá su propia copia de cada función definida de esta manera
 - No puedes usar `super.getName` en una clase derivada, porque no hay una entrada en la cadena del prototipo para obtener el método de la clase base.
 

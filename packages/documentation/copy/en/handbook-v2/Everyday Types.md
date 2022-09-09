@@ -676,14 +676,14 @@ Al igual que otras aserciones de tipo, esto no cambia el comportamiento en el en
 
 Las enumeraciones son una característica agregada a *JavaScript* por *TypeScript* que permite describir un valor que podría ser uno de un conjunto de posibles constantes nombradas. A diferencia de la mayoría de las funciones de *TypeScript*, esto *no* es una adición de nivel de tipo a *JavaScript*, sino algo que se agrega al lenguaje y al entorno de ejecución. Debido a esto, es una característica que debes saber que existe, pero tal vez dejes de usarla a menos que estés seguro. Puedes leer más sobre enumeraciones en la [página de referencia de Enum](/docs/handbook/enums.html).
 
-## Primitivas menos comunes
+## Primitivos menos comunes
 
 Vale la pena mencionar el resto de los primitivos en *JavaScript* que están representados en el sistema de tipos.
 Aunque no profundizaremos aquí.
 
 #### `bigint`
 
-Desde *ES2020* en adelante, hay una primitiva en *JavaScript* usada para enteros muy grandes, `BigInt`:
+Desde *ES2020* en adelante, hay un primitivo en *JavaScript* usado para enteros muy grandes, `BigInt`:
 
 ```ts twoslash
 // @target: es2020
@@ -699,7 +699,7 @@ Puedes obtener más información sobre `BigInt` en [las notas de la versión de 
 
 #### `symbol`
 
-Hay una primitiva en *JavaScript* que se usa para crear una referencia global única a través de la función `Symbol()`:
+Hay un primitivo en *JavaScript* que se usa para crear una referencia global única a través de la función `Symbol()`:
 
 ```ts twoslash
 // @errors: 2367

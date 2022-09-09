@@ -98,7 +98,7 @@ catOrDogArray.forEach((animal: Dog | Cat) => {
 });
 ```
 
-## Observación incremental de archivos para proyectos compuestos en `--build --watch`
+## Vigilancia incremental de archivos para proyectos compuestos en `--build --watch`
 
 *TypeScript 3.0* introdujo una nueva característica para estructurar compilaciones llamadas "proyectos compuestos".
 Parte del objetivo aquí era garantizar que los usuarios pudieran dividir proyectos grandes en partes más pequeñas que se construyen rápidamente y preserva la estructura del proyecto, sin comprometer la experiencia existente de *TypeScript*.
@@ -109,10 +109,10 @@ Puedes pensar en esto como optimizar las compilaciones entre proyectos.
 En una línea similar, la idea completa es que este modo solo vuelve a verificar y vuelve a emitir archivos modificados o archivos cuyas dependencias podrían afectar la verificación de tipos.
 Puedes pensar en esto como optimizar las compilaciones de *inter*-proyectos.
 
-Antes de 3.3, la construcción de proyectos compuestos usando `--build --watch` en realidad no usaba esta infraestructura de observación incremental de archivos.
+Antes de 3.3, la construcción de proyectos compuestos usando `--build --watch` en realidad no usaba esta infraestructura de vigilancia incremental de archivos.
 Una actualización en un proyecto en el modo `--build --watch` forzaría una compilación completa de ese proyecto, en lugar de determinar qué archivos dentro de ese proyecto se vieron afectados.
 
-En *TypeScript 3.3*, la bandera `--build` del modo `--watch` también aprovecha la observación incremental de archivos.
+En *TypeScript 3.3*, la bandera `--build` del modo `--watch` también aprovecha la vigilancia incremental de archivos.
 Eso puede significar compilaciones significativamente más rápidas en `--build --watch`.
 En nuestras pruebas, esta funcionalidad resultó en **una reducción del 50% al 75% en los tiempos de construcción** de los tiempos originales de `--build --watch`.
 [Puedes leer más sobre la solicitud de extracción original para el cambio](https://github.com/Microsoft/TypeScript/pull/29161) para ver números específicos, pero creemos que la mayoría de los usuarios de proyectos compuestos verán ganancias significativas aquí.

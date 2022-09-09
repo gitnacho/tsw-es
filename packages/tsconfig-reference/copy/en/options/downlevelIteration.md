@@ -6,8 +6,8 @@ oneline: "Emite JavaScript más compatible, pero detallado y con menos rendimien
 *Degradar el nivel* es el término de *TypeScript* para transpilar a una versión anterior de *JavaScript*.
 Esta marca es para permitir el soporte para una implementación más precisa de cómo *JavaScript* moderno itera a través de nuevos conceptos en entornos de ejecución de *JavaScript* más antiguos.
 
-*ECMAScript 6* agregó varias primitivas de iteración nuevas: el bucle `for / of` (`for (el of arr)`), Array spread (`[a, ... b]`), argumento spread (`fn(...args)`) y `Symbol.iterator`.
-`downlevelIteration` permite que estas primitivas de iteración se utilicen con mayor precisión en entornos *ES5* si existe una implementación de `Symbol.iterator`.
+*ECMAScript 6* agregó varios primitivos de iteración nuevos: el bucle `for / of` (`for (el of arr)`), Array spread (`[a, ... b]`), argumento spread (`fn(...args)`) y `Symbol.iterator`.
+`downlevelIteration` permite que estos primitivos de iteración se utilicen con mayor precisión en entornos *ES5* si existe una implementación de `Symbol.iterator`.
 
 #### Ejemplo: Efectos sobre `for / of`
 

@@ -1953,14 +1953,14 @@ interface ButtonProps {
 }
 
 class Button extends Component<ButtonProps> {
-  //               ~~~~~~~~~
-  // ¡error! 'Componente' solo se refiere a un tipo, pero aquí se utiliza como valor.
+  //                 ~~~~~~~~~
+  // ¡error! 'Component' solo se refiere a un tipo, pero aquí se utiliza como valor.
   // ...
 }
 ```
 
 Si has utilizado `Flow` antes, la sintaxis es bastante similar.
-Una diferencia es que hemos agregado algunas restricciones para evitar códigos que pueden parecer ambiguos.
+Una diferencia es que hemos agregado algunas restricciones para evitar código que puede parecer ambiguo.
 
 ```ts
 // ¿'Foo'  es solo un tipo? ¿O cada declaración en la import?
@@ -2297,17 +2297,17 @@ new Foo().stuff++;
 // No se puede asignar a 'stuff' porque es una propiedad de solo lectura.
 ```
 
-## Mejor visualización de directorios en *Linux* y `watchOptions`
+## Mejor vigilancia de directorios en&nbsp;*Linux*&nbsp;y `watchOptions`
 
-*TypeScript 3.8* incluye una nueva estrategia para ver directorios, que es crucial para recoger de manera eficiente los cambios en `node_modules`.
+*TypeScript 3.8* incluye una nueva estrategia para vigilar directorios, que es crucial para recoger de manera eficiente los cambios en `node_modules`.
 
-Para algún contexto, en sistemas operativos como *Linux*, *TypeScript* instala observadores de directorios (a diferencia de los observadores de archivos) en `node_modules` y muchos de sus subdirectorios para detectar cambios en las dependencias.
-Esto se debe a que la cantidad disponible de observadores de archivo a menudo se ve eclipsada por la cantidad de archivos en `node_modules`, mientras que hay mucho menos directorios para rastrear.
+Para algún contexto, en sistemas operativos como *Linux*, *TypeScript* instala vigías de directorios (a diferencia de los vigías de archivos) en `node_modules` y muchos de sus subdirectorios para detectar cambios en las dependencias.
+Esto se debe a que la cantidad disponible de vigías de archivo a menudo se ve eclipsada por la cantidad de archivos en `node_modules`, mientras que hay mucho menos directorios para rastrear.
 
-Las versiones anteriores de *TypeScript* instalarían *inmediatamente* los observadores de directorios en los directorios, y al inicio eso estaría bien; sin embargo, durante una instalación de `npm`, se llevará a cabo una gran cantidad de actividad dentro de `node_modules` y eso puede abrumar a *TypeScript*, a menudo ralentizando las sesiones del editor.
-Para evitar esto, *TypeScript 3.8* espera un poco antes de instalar los observadores de directorios para dar tiempo a que estos directorios altamente volátiles se estabilicen.
+Las versiones anteriores de *TypeScript* instalarían *inmediatamente* los vigías de directorios en los directorios, y al inicio eso estaría bien; sin embargo, durante una instalación de `npm`, se llevará a cabo una gran cantidad de actividad dentro de `node_modules` y eso puede abrumar a *TypeScript*, a menudo ralentizando las sesiones del editor.
+Para evitar esto, *TypeScript 3.8* espera un poco antes de instalar los vigías de directorios para dar tiempo a que estos directorios altamente volátiles se estabilicen.
 
-Debido a que cada proyecto podría funcionar mejor bajo diferentes estrategias, y este nuevo enfoque podría no funcionar bien para tus flujos de trabajo, *TypeScript 3.8* introduce un nuevo campo `watchOptions` en `tsconfig.json` y `jsconfig.json` que permite a los usuarios decirle al compilador/servicio del lenguaje qué estrategias de observación se deben utilizar para realizar un seguimiento de los archivos y directorios.
+Debido a que cada proyecto podría funcionar mejor bajo diferentes estrategias, y este nuevo enfoque podría no funcionar bien para tus flujos de trabajo, *TypeScript 3.8* introduce un nuevo campo `watchOptions` en `tsconfig.json` y `jsconfig.json` que permite a los usuarios decirle al compilador/servicio del lenguaje qué estrategias de vigilancia se debes utilizar para realizar un seguimiento de los archivos y directorios.
 
 ```json tsconfig
 {
@@ -2318,7 +2318,7 @@ Debido a que cada proyecto podría funcionar mejor bajo diferentes estrategias, 
     // ...
   },
 
-  // NUEVO: Opciones para ver archivos/directorios
+  // NUEVO: Opciones para vigilar archivos/directorios
   "watchOptions": {
     // Usa eventos del sistema de archivos nativo para archivos y directorios
     "watchFile": "useFsEvents",
@@ -4283,7 +4283,7 @@ catOrDogArray.forEach((animal: Dog | Cat) => {
 });
 ```
 
-## Observación incremental de archivos para proyectos compuestos en `--build --watch`
+## Vigilancia incremental de archivos para proyectos compuestos en `--build --watch`
 
 *TypeScript 3.0* introdujo una nueva característica para estructurar compilaciones llamadas "proyectos compuestos".
 Parte del objetivo aquí era garantizar que los usuarios pudieran dividir proyectos grandes en partes más pequeñas que se construyen rápidamente y preserva la estructura del proyecto, sin comprometer la experiencia existente de *TypeScript*.
@@ -4294,10 +4294,10 @@ Puedes pensar en esto como optimizar las compilaciones entre proyectos.
 En una línea similar, la idea completa es que este modo solo vuelve a verificar y vuelve a emitir archivos modificados o archivos cuyas dependencias podrían afectar la verificación de tipos.
 Puedes pensar en esto como optimizar las compilaciones de *inter*-proyectos.
 
-Antes de 3.3, la construcción de proyectos compuestos usando `--build --watch` en realidad no usaba esta infraestructura de observación incremental de archivos.
+Antes de 3.3, la construcción de proyectos compuestos usando `--build --watch` en realidad no usaba esta infraestructura de vigilancia incremental de archivos.
 Una actualización en un proyecto en el modo `--build --watch` forzaría una compilación completa de ese proyecto, en lugar de determinar qué archivos dentro de ese proyecto se vieron afectados.
 
-En *TypeScript 3.3*, la bandera `--build` del modo `--watch` también aprovecha la observación incremental de archivos.
+En *TypeScript 3.3*, la bandera `--build` del modo `--watch` también aprovecha la vigilancia incremental de archivos.
 Eso puede significar compilaciones significativamente más rápidas en `--build --watch`.
 En nuestras pruebas, esta funcionalidad resultó en **una reducción del 50% al 75% en los tiempos de construcción** de los tiempos originales de `--build --watch`.
 [Puedes leer más sobre la solicitud de extracción original para el cambio](https://github.com/Microsoft/TypeScript/pull/29161) para ver números específicos, pero creemos que la mayoría de los usuarios de proyectos compuestos verán ganancias significativas aquí.
@@ -4887,7 +4887,7 @@ function f23<T extends unknown>(x: T) {
   let y: object = x; // Error
 }
 
-// Cualquier cosa menos primitiva asignable a {[x: string]: unknown }
+// Cualquier cosa menos un primitivo asignable a {[x: string]: unknown }
 
 function f24(x: { [x: string]: unknown }) {
   x = {};
@@ -6068,7 +6068,7 @@ El cambio acerca la salida generada de *TypeScript* a la generada por *Babel*.
 Anteriormente, los módulos *CommonJS*/*AMD*/*UMD* se trataban de la misma manera que los módulos *ES6*, lo que generaba un par de problemas. A saber:
 
 - *TypeScript* trata una importación de espacio de nombres (es decir, `import * as foo from "foo"`) para un módulo *CommonJS*/*AMD*/*UMD* como equivalente a `const foo = require("foo")`.
-  Las cosas son simples aquí, pero no funcionan si el objeto principal que se está importando es una primitiva, una clase o una función.
+  Las cosas son simples aquí, pero no funcionan si el objeto principal que se está importando es un primitivo, una clase o una función.
   La especificación *ECMAScript* estipula que un registro de espacio de nombres es un objeto simple y que una importación de espacio de nombres (`foo` en el ejemplo anterior) no es invocable, aunque *TypeScript* lo permite
 
 - De manera similar, una importación predeterminada (es decir, `import d from "foo"`) para un módulo *CommonJS*/*AMD*/*UMD* como equivalente a `const d = require("foo").default`.
@@ -10052,7 +10052,7 @@ define(["require", "exports", "legacy/moduleA"], function (
 
 ## Soporte de proyectos a través de `tsconfig.json`
 
-Agrega un archivo `tsconfig.json` en un directorio indica que el directorio es la raíz de un proyecto *TypeScript*. El archivo `tsconfig.json` especifica los archivos raíz y las opciones de compilación requeridas para compilar el proyecto. Un proyecto se compila de una de las siguientes maneras:
+Agrega un archivo `tsconfig.json` en un directorio indica que el directorio es la raíz de un proyecto *TypeScript*. El archivo `tsconfig.json` especifica los archivos raíz y las opciones de construcción requeridas para compilar el proyecto. Un proyecto se compila de una de las siguientes maneras:
 
 - Invocar a `tsc` sin archivos de entrada, en cuyo caso el compilador busca el archivo `tsconfig.json` comenzando en el directorio actual y continuando hacia arriba en la cadena del directorio principal.
 - Invocar `tsc` sin archivos de entrada y una opción de línea de comandos `-project` (o simplemente `-p`) que especifica la ruta de un directorio que contiene un archivo `tsconfig.json`.

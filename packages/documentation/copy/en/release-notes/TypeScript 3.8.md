@@ -32,14 +32,14 @@ interface ButtonProps {
 }
 
 class Button extends Component<ButtonProps> {
-  //               ~~~~~~~~~
-  // ¡error! 'Componente' solo se refiere a un tipo, pero aquí se utiliza como valor.
+  //                 ~~~~~~~~~
+  // ¡error! 'Component' solo se refiere a un tipo, pero aquí se utiliza como valor.
   // ...
 }
 ```
 
 Si has utilizado `Flow` antes, la sintaxis es bastante similar.
-Una diferencia es que hemos agregado algunas restricciones para evitar códigos que pueden parecer ambiguos.
+Una diferencia es que hemos agregado algunas restricciones para evitar código que puede parecer ambiguo.
 
 ```ts
 // ¿'Foo'  es solo un tipo? ¿O cada declaración en la import?
@@ -376,17 +376,17 @@ new Foo().stuff++;
 // No se puede asignar a 'stuff' porque es una propiedad de solo lectura.
 ```
 
-## Mejor visualización de directorios en *Linux* y `watchOptions`
+## Mejor vigilancia de directorios en&nbsp;*Linux*&nbsp;y `watchOptions`
 
-*TypeScript 3.8* incluye una nueva estrategia para ver directorios, que es crucial para recoger de manera eficiente los cambios en `node_modules`.
+*TypeScript 3.8* incluye una nueva estrategia para vigilar directorios, que es crucial para recoger de manera eficiente los cambios en `node_modules`.
 
-Para algún contexto, en sistemas operativos como *Linux*, *TypeScript* instala observadores de directorios (a diferencia de los observadores de archivos) en `node_modules` y muchos de sus subdirectorios para detectar cambios en las dependencias.
-Esto se debe a que la cantidad disponible de observadores de archivo a menudo se ve eclipsada por la cantidad de archivos en `node_modules`, mientras que hay mucho menos directorios para rastrear.
+Para algún contexto, en sistemas operativos como *Linux*, *TypeScript* instala vigías de directorios (a diferencia de los vigías de archivos) en `node_modules` y muchos de sus subdirectorios para detectar cambios en las dependencias.
+Esto se debe a que la cantidad disponible de vigías de archivo a menudo se ve eclipsada por la cantidad de archivos en `node_modules`, mientras que hay mucho menos directorios para rastrear.
 
-Las versiones anteriores de *TypeScript* instalarían *inmediatamente* los observadores de directorios en los directorios, y al inicio eso estaría bien; sin embargo, durante una instalación de `npm`, se llevará a cabo una gran cantidad de actividad dentro de `node_modules` y eso puede abrumar a *TypeScript*, a menudo ralentizando las sesiones del editor.
-Para evitar esto, *TypeScript 3.8* espera un poco antes de instalar los observadores de directorios para dar tiempo a que estos directorios altamente volátiles se estabilicen.
+Las versiones anteriores de *TypeScript* instalarían *inmediatamente* los vigías de directorios en los directorios, y al inicio eso estaría bien; sin embargo, durante una instalación de `npm`, se llevará a cabo una gran cantidad de actividad dentro de `node_modules` y eso puede abrumar a *TypeScript*, a menudo ralentizando las sesiones del editor.
+Para evitar esto, *TypeScript 3.8* espera un poco antes de instalar los vigías de directorios para dar tiempo a que estos directorios altamente volátiles se estabilicen.
 
-Debido a que cada proyecto podría funcionar mejor bajo diferentes estrategias, y este nuevo enfoque podría no funcionar bien para tus flujos de trabajo, *TypeScript 3.8* introduce un nuevo campo `watchOptions` en `tsconfig.json` y `jsconfig.json` que permite a los usuarios decirle al compilador/servicio del lenguaje qué estrategias de observación se deben utilizar para realizar un seguimiento de los archivos y directorios.
+Debido a que cada proyecto podría funcionar mejor bajo diferentes estrategias, y este nuevo enfoque podría no funcionar bien para tus flujos de trabajo, *TypeScript 3.8* introduce un nuevo campo `watchOptions` en `tsconfig.json` y `jsconfig.json` que permite a los usuarios decirle al compilador/servicio del lenguaje qué estrategias de vigilancia se debes utilizar para realizar un seguimiento de los archivos y directorios.
 
 ```jsonc tsconfig
 {
@@ -397,7 +397,7 @@ Debido a que cada proyecto podría funcionar mejor bajo diferentes estrategias, 
     // ...
   },
 
-  // NUEVO: Opciones para ver archivos/directorios
+  // NUEVO: Opciones para vigilar archivos/directorios
   "watchOptions": {
     // Usa eventos del sistema de archivos nativo para archivos y directorios
     "watchFile": "useFsEvents",
@@ -418,15 +418,15 @@ Debido a que cada proyecto podría funcionar mejor bajo diferentes estrategias, 
   - `priorityPollingInterval` ⏤ Verifica cada archivo en busca de cambios varias veces por segundo, pero usa la heurística para revisar ciertos tipos de archivos con menos frecuencia que otros.
   - `dynamicPriorityPolling` ⏤ Utiliza una cola dinámica en la que los archivos modificados con menos frecuencia se verifican con menos frecuencia.
   - `useFsEvents` (la predeterminada) ⏤ Intenta utilizar los eventos nativos del sistema operativo/sistema de archivos para realizar cambios en los archivos.
-  - `useFsEventsOnParentDirectory` ⏤ Intenta utilizar los eventos nativos del sistema operativo/sistema de archivos para escuchar los cambios en los directorios que contienen un archivo. Esto puede usar menos observadores de archivos, pero puede ser menos preciso.
+  - `useFsEventsOnParentDirectory` ⏤ Intenta utilizar los eventos nativos del sistema operativo/sistema de archivos para escuchar los cambios en los directorios que contienen un archivo. Esto puede usar menos vigías de archivo, pero puede ser menos preciso.
 
-- [`watchDirectory`](/tsconfig#watchDirectory) ⏤ la estrategia de cómo se observan árboles de directorios completos en sistemas que carecen de la funcionalidad de observación recursiva de archivos. Esto se puede configurar en:
+- [`watchDirectory`](/tsconfig#watchDirectory) ⏤ la estrategia de cómo se vigilan árboles de directorios completos en sistemas que carecen de la funcionalidad de vigilancia recursiva de archivos. Esto se puede configurar en:
 
-  - `fixedPollingInterval` ⏤ Compruebe cada directorio para ver si hay cambios varias veces por segundo en un intervalo fijo.
+  - `fixedPollingInterval` ⏤ Comprueba (varias veces por segundo, en un intervalo fijo) cada directorio para ver si hay cambios.
   - `dynamicPriorityPolling` ⏤ Utiliza una cola dinámica en la que los directorios modificados con menos frecuencia se verifican en intervalos más largos.
   - `useFsEvents` (la predeterminada) ⏤ Intenta utilizar los eventos nativos del sistema operativo/sistema de archivos para cambios de directorio.
 
-- [`fallbackPolling`](/tsconfig#fallbackPolling) ⏤ cuando se usan eventos del sistema de archivos, esta opción especifica la estrategia de sondeo que se usa cuando el sistema se queda sin observadores de archivos nativos y/o no admite observadores de archivos nativos. Esto se puede configurar a
+- [`fallbackPolling`](/tsconfig#fallbackPolling) ⏤ cuando se usan eventos del sistema de archivos, esta opción especifica la estrategia de sondeo que se usa cuando el sistema se queda sin vigías de archivo nativos y/o no admite vigías de archivo nativos. Esto se puede configurar a
   - `fixedPollingInterval` ⏤ (*Ve más arriba*).
   - `priorityPollingInterval` ⏤ (*Ve más arriba*).
   - `dynamicPriorityPolling` ⏤ (*Ve más arriba*).

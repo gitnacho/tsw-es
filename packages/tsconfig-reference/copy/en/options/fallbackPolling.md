@@ -1,9 +1,9 @@
 ---
 display: "fallbackPolling"
-oneline: "Especifica qué enfoque debe utilizar el observador si el sistema se queda sin observadores de archivos nativos."
+oneline: "Especifica qué enfoque debe utilizar el vigilante si el sistema se queda sin vigías de archivo nativos."
 ---
 
-Cuando se usan eventos del sistema de archivos, esta opción especifica la estrategia de sondeo que se usa cuando el sistema se queda sin observadores de archivos nativos y/o no admite observadores de archivos nativos.
+Cuando se usan eventos del sistema de archivos, esta opción especifica la estrategia de sondeo que se usa cuando el sistema se queda sin vigías de archivo nativos y/o no admite vigías de archivo nativos.
 
 - `fixedPollingInterval` ⏤ Comprueba cada archivo para ver si hay cambios varias veces por segundo en un intervalo fijo.
 - `priorityPollingInterval` ⏤ Verifica cada archivo en busca de cambios varias veces por segundo, pero usa la heurística para revisar ciertos tipos de archivos con menos frecuencia que otros.
