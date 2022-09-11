@@ -13,17 +13,17 @@ import { isTouchDevice } from "../../lib/isTouchDevice"
 import { SuppressWhenTouch } from "../../components/SuppressWhenTouch"
 import { getPlaygroundUrls } from "../../lib/playgroundURLs"
 
-/** Nota: to run all the web infra in debug, run:
+/** Nota: para ejecutar toda la infraestructura web en depuración, ejecuta:
   localStorage.debug = '*'
 
-  to remove logging: localStorage.debug = undefined
+  para eliminar el registro: localStorage.debug = undefined
  */
 
 type Props = {}
 
 const Index: React.FC<Props> = props => {
   useEffect(() => {
-    // No monaco for touch
+    // No monaco para tocar
     if (isTouchDevice()) {
       return
     }
@@ -57,7 +57,7 @@ const Index: React.FC<Props> = props => {
           ts: typeof import("typescript"),
           sandboxEnv: typeof import("@typescript/sandbox")
         ) => {
-          // This triggers making "ts" available in the global scope
+          // Esto activa la disponibilidad de "ts" en el alcance global
           re(["vs/language/typescript/lib/typescriptServices"], async _ts => {
             const ts = (global as any).ts
             const isOK = main && ts && sandboxEnv
@@ -118,7 +118,7 @@ const Index: React.FC<Props> = props => {
                 const html = renderers.twoslashRenderer(
                   codeAsFakeShikiTokens,
                   {},
-                  // This is a hack because @typescript/twoslash gets released separately from remark-shiki-twoslash
+                  // Este es un truco porque @typescript/twoslash se publica por separado de remark-shiki-twoslash
                   newResults as any,
                   {}
                 )
@@ -129,7 +129,7 @@ const Index: React.FC<Props> = props => {
                   "none"
                 document.getElementById("twoslash-results")!.innerHTML = html
 
-                // Remove all the kids
+                // Quitar a todos los hijos
                 while (results.firstChild) {
                   results.removeChild(results.firstChild)
                 }
@@ -221,8 +221,8 @@ const Index: React.FC<Props> = props => {
   return (
     <>
       <Layout
-        title="Developers - Twoslash Code Samples"
-        description="Learn about the TypeScript code sample library twoslash. Used for transpiling, providing hover to identifiers and compiler-driven error states."
+        title="Desarrolladores - Ejemplos de código Twoslash"
+        description="Más información sobre la biblioteca de código de ejemplo TypeScript twoslash. Se utiliza para transpilar, proporcionando desplazamiento a los identificadores y estados de error controlados por el compilador."
         lang="es"
       >
         <div id="dev">
@@ -232,37 +232,37 @@ const Index: React.FC<Props> = props => {
               <div>
                 <h1 style={{ marginTop: "20px" }}>TypeScript Twoslash</h1>
                 <p>
-                  A markup format for TypeScript code, ideal for creating
-                  self-contained code samples which let the TypeScript compiler
-                  do the extra leg-work.
+                  Un formato de marcado para código TypeScript, ideal para crear
+                  ejemplos de código independientes que permiten al compilador de TypeScript
+                  hacer trabajo de piernas extra.
                 </p>
-                <p>If you know TypeScript, you basically know twoslash.</p>
+                <p>Si conoces TypeScript, básicamente sabes twoslash.</p>
                 <p>
-                  Twoslash adds the ability to declare tsconfig options inline,
-                  split a sample into multiple files and a few other useful
-                  commands. You can see the full API{" "}
+                  Twoslash agrega la capacidad de declarar las opciones de tsconfig en línea,
+                  dividir un ejemplo en varios archivos y algunos otros útiles
+                  comandos. Puedes ver la API completa{" "}
                   <a href="https://github.com/microsoft/TypeScript-Website/tree/v2/packages/ts-twoslasher">
-                    inside the README
+                    dentro del README
                   </a>
                 </p>
               </div>
               <div style={{ paddingTop: "4.5rem" }}>
-                <p>The Twoslash markup language helps with:</p>
+                <p>El lenguaje de marcado Twoslash ayuda a:</p>
                 <ul>
                   <li>
-                    Enforcing accurate errors from a TypeScript code sample, and
-                    leaving the messaging to the compiler
+                    Hacer cumplir errores precisos de un ejemplo de código TypeScript, y
+                    dejar la mensajería al compilador
                   </li>
-                  <li>Splitting a code sample to hide distracting code</li>
+                  <li>Dividir un ejemplo de código para ocultar el código que distrae</li>
                   <li>
                     Resaltar símbolos declarativamente en tu código de ejemplo
                   </li>
                   <li>
-                    Replacing code with the results of transpilation to
-                    different files, or ancillary files like .d.ts or .map files
+                    Reemplazar código con los resultados de la transpilación a
+                    diferentes archivos o archivos auxiliares, tal como archivos .d.ts o .map
                   </li>
-                  <li>Handle multi-file imports in a single code sample</li>
-                  <li>Creating a playground link for the code</li>
+                  <li>Manejar importaciones de múltiples archivos en un solo ejemplo de código</li>
+                  <li>Crear un enlace a playground para el código</li>
                 </ul>
               </div>
             </div>
@@ -274,7 +274,7 @@ const Index: React.FC<Props> = props => {
           >
             <div className="fivehundred" style={{ flex: 1 }}>
               <SuppressWhenTouch>
-                <h3 style={{ marginTop: "0" }}>Markup</h3>
+                <h3 style={{ marginTop: "0" }}>Marcado</h3>
                 <p id="exampleBlurb">{codeSamples[0].blurb}</p>
                 <div id="loader">
                   <div className="lds-grid">
@@ -289,7 +289,7 @@ const Index: React.FC<Props> = props => {
                     <div></div>
                   </div>
                   <p id="loading-message" role="status">
-                    Downloading Sandbox...
+                    Descargando Sandbox...
                   </p>
                 </div>
                 <div
@@ -326,7 +326,7 @@ const Index: React.FC<Props> = props => {
               }}
             >
               <SuppressWhenTouch>
-                <h3 style={{ marginTop: "0" }}>Results</h3>
+                <h3 style={{ marginTop: "0" }}>Resultado</h3>
 
                 <div id="twoslash-results" />
                 <div id="twoslash-failure" />
@@ -335,9 +335,9 @@ const Index: React.FC<Props> = props => {
           </div>
 
           <div className="raised main-content-block">
-            <h2>Usage</h2>
+            <h2>Uso</h2>
             <p>
-              Twoslash's usage guide is available on the npm README at{" "}
+              La guía de uso de Twoslash está disponible en npm README en{" "}
               <a href="https://www.npmjs.com/package/@typescript/twoslash">
                 <code>@typescript/twoslash</code>
               </a>
@@ -351,7 +351,7 @@ const Index: React.FC<Props> = props => {
 }
 
 export default (props: Props) => (
-  <Intl locale="en">
+  <Intl locale="es">
     <Index {...props} />
   </Intl>
 )
@@ -360,23 +360,23 @@ export default (props: Props) => (
 const codeSamples = [
   {
     name: "Highlights runtime types",
-    blurb: "See how TS Twoslash will grab the highlight information for identifiers in your code",
+    blurb: "Ve cómo TS Twoslash tomará la información destacada para los identificadores en tu código",
     code: `// @errors: 2532
 declare const quantumString: string | undefined;
 
-// Right now this string is in two states, hover below to see
+// En este momento, esta cadena se encuentra en dos estados, pasa el cursor por debajo para ver
 quantumString
   
 if (quantumString) {
-  // However, in here we now have a different type
-  // you can verify by hovering below
+  // Sin embargo, aquí ahora tenemos un tipo diferente
+  // puedes verificar pasando el cursor debajo
   quantumString.length;
 }
     `
   },
   {
     name: "Show Errors",
-    blurb: "Twoslash will help highlight compiler error messages",
+    blurb: "Twoslash ayudará a resaltar los mensajes de error del compilador",
     code: `// @errors: 7006
 function fn(s) {
   console.log(s.subtr(3))
@@ -385,7 +385,7 @@ function fn(s) {
 fn(42)`
   }, {
     name: "Set Compiler Flags",
-    blurb: "You can define compiler flags inline in a code sample which are removed from the output",
+    blurb: "Puedes definir indicadores del compilador en línea en un código de ejemplo que se elimina de la salida",
     code: `// @noImplicitAny: false
 // Esto no lanzará debido al noImplicitAny
 function fn(s) {
@@ -395,7 +395,7 @@ function fn(s) {
 fn(42);`
   }, {
     name: "Trims code",
-    blurb: "You can write code to help it compile in the sample which is hidden in the output",
+    blurb: "Puedes escribir código para ayudarlo a compilar en el ejemplo que está oculto en la salida",
     code: `interface IdLabel {id: number, /* algunos campos */ }
 interface NameLabel {name: string, /* otros campos */
 type NameOrId<T extends number | string> = T extends number ? IdLabel : NameLabel;
@@ -410,7 +410,7 @@ let a = createLabel("typescript");`
   },
   {
     name: "Show the JS",
-    blurb: "Use @showEmit to show the JS files",
+    blurb: "Usa @showEmit para mostrar los archivos JS",
     code: `// @showEmit
 export function getStringLength(value: string) {
   return value
@@ -418,7 +418,7 @@ export function getStringLength(value: string) {
 `},
   {
     name: "Show the DTS",
-    blurb: "Use @showEmittedFile to set the d.ts file to be the result code",
+    blurb: "Usa @showEmittedFile para configurar el archivo d.ts para que sea el código de resultado",
     code: `// @declaration: true
 // @showEmit
 // @showEmittedFile: index.d.ts
@@ -432,9 +432,9 @@ export function getStringLength(value: string) {
 `},
   {
     name: "Highlights",
-    blurb: "Highlight some code in the editor",
+    blurb: "Resaltar algún código en el editor",
     code: `function greet(person: string, date: Date) {
-  console.log(\`Hello \${person}, today is \${date.toDateString()}!\`);
+  console.log(\`Hola \${person}, hoy es \${date.toDateString()}!\`);
 }
 
 greet("Maddison", new Date());

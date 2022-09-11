@@ -5,7 +5,7 @@ permalink: /docs/handbook/declaration-files/introduction.html
 oneline: "Cómo escribir un archivo de declaración TypeScript (d.ts) de alta calidad"
 ---
 
-La sección Archivos de la declaración está diseñada para enseñarte cómo escribir un archivo de declaración *TypeScript* de alta calidad. Necesitamos asumir una familiaridad básica con el lenguaje *TypeScript* para empezar.
+La sección Archivos de declaración está diseñada para enseñarte cómo escribir un archivo de declaración *TypeScript* de alta calidad. Necesitamos asumir una familiaridad básica con el lenguaje *TypeScript* para empezar.
 
 Si aún no lo has hecho, deberías leer el [Manual de *TypeScript*](/docs/handbook/2/basic-types.html)
 para familiarizarte con los conceptos básicos, especialmente los tipos y los módulos.
@@ -13,7 +13,7 @@ para familiarizarte con los conceptos básicos, especialmente los tipos y los m�
 El caso más común para aprender cómo funcionan los archivos `.d.ts` es que estás escribiendo un paquete `npm` sin tipos. 
 En ese caso, puedes ir directamente a [Módulos `.d.ts`](/docs/handbook/statement-files/templates/module-d-ts.html).
 
-La sección Archivos de la declaración se divide en las siguientes secciones.
+La sección Archivos de declaración se divide en las siguientes secciones.
 
 ## [Referencia de declaración](/docs/handbook/statement-files/by-example.html)
 

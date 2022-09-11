@@ -106,7 +106,7 @@ export default async function () {
   return (
     <>
       <Layout
-        title="Developers - Sandbox"
+        title="Desarrolladores - Sandbox"
         description="La zona de pruebas de TypeScript potencia el TypeScript Playground. Aprende cómo puedes hacer que tus experiencias sean como el playground usando la caja de arena."
         lang="es"
       >
@@ -181,7 +181,7 @@ export default async function () {
                     <div></div>
                   </div>
                   <p id="loading-message" role="status">
-                    Downloading Sandbox...
+                    Descargando Sandbox...
                   </p>
                 </div>
                 <div
@@ -193,7 +193,7 @@ export default async function () {
           </div>
 
           <div className="raised main-content-block">
-            <h2>Usage</h2>
+            <h2>Uso</h2>
             <p>
               A sandbox uses the same tools as monaco-editor, meaning this
               library is shipped as an AMD bundle which you can use the{" "}
@@ -327,7 +327,7 @@ export default async function () {
 }
 
 export default (props: Props) => (
-  <Intl locale="en">
+  <Intl locale="es">
     <Index {...props} />
   </Intl>
 )
@@ -359,24 +359,24 @@ const definitions =  await client.getDefinitionAtPosition(model.uri.toString(), 
   `,
   },
   {
-    blurb: "Change compiler flags using a few different APIs",
+    blurb: "Cambiar las banderas del compilador usando algunas APIs diferentes",
     code: `const sandbox = createTypeScriptSandbox(sandboxConfig, main, ts)
 
-// Hook in to all changes to the compiler
+// Engánchese a todos los cambios en el compilador
 sandbox.setDidUpdateCompilerSettings((newOptions) => {
   console.log("Compiler settings changed: ", newOptions)
 })
 
-// Update via key value
+// Actualizar mediante valor clave
 sandbox.updateCompilerSetting("allowJs", true)
-// Update via an object
+// Actualizar a través de un objeto
 sandbox.updateCompilerSettings({ jsx: 0 })
-// Replace the compiler settings
+// Reemplazar la configuración del compilador
 sandbox.setCompilerSettings({})
 `,
   },
   {
-    blurb: "Highlight some code in the editor",
+    blurb: "Resaltar algún código en el editor",
     code: `const sandbox = createTypeScriptSandbox(sandboxConfig, main, ts)
 
 const start = {
@@ -398,16 +398,16 @@ const decorations = sandbox.editor.deltaDecorations([], [
 `,
   },
   {
-    blurb: "Create your own playground.",
+    blurb: "Crea tu propio playground.",
     code: `const sandbox = createTypeScriptSandbox(sandboxConfig, main, ts)
 
-// Use a script to make a JSON file like:
+// Use un script para crear un archivo JSON como:
 // { 
 //   "file:///node_modules/types/keyboard/index.d.ts": "export const enterKey: string"
 // }
 //
-// Where the keys are the paths, and the values are the source-code. The sandbox
-// will use the node resolution lookup strategy by default.
+// Donde las claves son las rutas y los valores son el código fuente. El sandbox
+// utilizará la estrategia de búsqueda de resolución de nodos de forma predeterminada.
 
 const dtsFiles = {} 
 

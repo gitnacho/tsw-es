@@ -64,10 +64,10 @@ Al mirar el código de una biblioteca global, generalmente verás:
 
 *No* verás:
 
-- Comprueba o utiliza cargadores de módulos como `require` o `define`
+- Comprobaciones para o uso de cargadores de módulos como `require` o `define`
 - Importaciones al estilo *CommonJS*/*Node.js* de la forma `var fs = require ("fs");`
 - Llamadas a `define(...)`
-- Documentación que describe cómo `require` o importar la biblioteca
+- Documentación describiendo cómo `require` o `import`ar la biblioteca
 
 ## Ejemplos de bibliotecas globales
 

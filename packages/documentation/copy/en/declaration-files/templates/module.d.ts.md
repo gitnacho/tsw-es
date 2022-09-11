@@ -4,9 +4,9 @@ layout: docs
 permalink: /docs/handbook/declaration-files/templates/module-d-ts.html
 ---
 
-## Comparación de *JavaScript* con un *DTS* de ejemplo
+## Comparación de&nbsp;*JavaScript*&nbsp;con un&nbsp;*DTS*&nbsp;de ejemplo
 
-## Patrones *CommonJS* comunes
+## Patrones&nbsp;*CommonJS*&nbsp;comunes
 
 Un módulo que usa patrones *CommonJS* usa `module.exports` para describir los valores exportados. Por ejemplo, aquí hay un módulo que exporta una función y una constante numérica:
 
@@ -33,7 +33,7 @@ export const maxInterval: 12;
 El *playground* de *TypeScript* te puede mostrar el `.d.ts` equivalente para el código *JavaScript*. Puedes [probarlo tú mismo aquí](/play?useJavaScript=true#code/GYVwdgxgLglg9mABAcwKZQIICcsEMCeAMqmMlABYAUuOAlIgN6IBQiiW6IWSNWAdABsSZcswC+zCAgDOURAFtcADwAq5GKUQBeRAEYATM2by4AExBC+qJQAc4WKNO2NWKdNjxFhFADSvFquqk4sxAA).
 
 La sintaxis `.d.ts` se parece intencionalmente a la sintaxis de [Módulos ES](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import).
-Los módulos *ES* fueron ratificados por *TC39* en 2019, mientras que han estado disponibles a través de transpiladores durante mucho tiempo, sin embargo, si tienes una base de código *JavaScript* utilizando módulos *ES*:
+Los módulos *ES* fueron ratificados por *TC39* en 2019, mientras que han estado disponibles a través de transpiladores durante mucho tiempo, sin embargo, si tienes un código base *JavaScript* utilizando módulos *ES*:
 
 ```js
 export function getArrayLength(arr) {
@@ -299,9 +299,9 @@ Por lo tanto, tus archivos de declaración deben ser
 
 Si planeas enviar estos cambios a `DefinitelyTyped` para que todos los usen también, te recomendamos:
 
-> 1. Crea una nuevo directorio en `node_modules/@types/[libname]`
-> 2. Crea un `index.d.ts` en ese directorio y copia el ejemplo en él
-> 3. Ve dónde se interrumpe tu uso del módulo y comienza a completar el `index.ts`.
+> 1. Crear una nuevo directorio en `node_modules/@types/[libname]`
+> 2. Crear un `index.d.ts` en ese directorio y copiar el ejemplo en él
+> 3. Ver dónde se interrumpe tu uso del módulo y comenzar a completar el `index.ts`.
 > 4. Cuando estés satisfecho, clona [`DefinitelyTyped`/`DefinitelyTyped`](https://github.com/DefinitelyTyped) y sigue las instrucciones del archivo `README`. 
 
 De otra manera

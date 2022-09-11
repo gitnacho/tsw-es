@@ -317,14 +317,14 @@ watchedBrowserify.on("log", fancy_log);
 Básicamente, hay tres cambios aquí, pero requieren que refactorices un poco tu código.
 
 1. Envolvimos nuestra instancia de `browserify` en una llamada a `watchify`, y luego mantuvimos el resultado.
-2. Llamamos a `seenBrowserify.on('update', bundle);` para que `Browserify` ejecute la función `bundle` cada vez que cambie uno de tus archivos *TypeScript*.
-3. Llamamos a `seenBrowserify.on('log', fancy_log);` para iniciar sesión en la consola.
+2. Llamamos a `watchedBrowserify.on('update', bundle);` para que `Browserify` ejecute la función `bundle` cada vez que cambie uno de tus archivos *TypeScript*.
+3. Llamamos a `watchedBrowserify.on('log', fancy_log);` para iniciar sesión en la consola.
 
 Juntos (1) y (2) significa que tenemos que mover nuestra llamada a `browserify` fuera de la tarea `default`.
 Y tenemos que darle un nombre a la función `default` ya que tanto `Watchify` como `Gulp` necesitan llamarla.
 Agregar registro con (3) es opcional pero muy útil para depurar tu configuración.
 
-Ahora, cuando ejecutes `Gulp`, debería comenzar y seguir funcionando.
+Ahora, cuando ejecutes `Gulp`, debería arrancar y permanecer funcionando.
 Intenta cambiar el código de `showHello` en `main.ts` y guárdalo.
 Deberías ver una salida que se ve así:
 
@@ -343,7 +343,7 @@ proj$ gulp
 ## Terser
 
 Primero instala `Terser`.
-Dado que el objetivo de `Terser` es destrozar tu código, también necesitamos instalar `gulp-sourcemaps` y `vinyl-buffer` para mantener en funcionamiento los mapas fuente.
+Dado que el objetivo de `Terser` es comprimir tu código, también necesitamos instalar `gulp-sourcemaps` y `vinyl-buffer` para mantener en funcionamiento los mapas fuente.
 
 ```shell
 npm install --save-dev gulp-terser vinyl-buffer gulp-sourcemaps
@@ -381,7 +381,7 @@ gulp.task(
       .bundle()
       .pipe(source("bundle.js"))
       .pipe(buffer())
-      .pipe(sourcemaps.init({ loadMaps: true });
+      .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(terser())
       .pipe(sourcemaps.write("./"))
       .pipe(gulp.dest("dist"));
@@ -443,7 +443,7 @@ gulp.task(
       .bundle()
       .pipe(source("bundle.js"))
       .pipe(buffer())
-      .pipe(sourcemaps.init({ loadMaps: true });
+      .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(sourcemaps.write("./"))
       .pipe(gulp.dest("dist"));
   })

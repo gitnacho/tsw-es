@@ -224,7 +224,7 @@ Algunos complementos agregan o modifican las exportaciones de alto nivel en mód
 Aunque esto es legal en `CommonJS` y otros cargadores, los módulos *ES6* se consideran inmutables y el patrón no será posible.
 Debido a que *TypeScript* es independiente del cargador, no existe una aplicación en tiempo de compilación de esta política, pero los desarrolladores que tengan la intención de realizar una transición a un cargador de módulos *ES6* deben tenerlo en cuenta.
 
-## El impacto de *ES6* en las firmas de llamadas al módulo
+## El impacto de&nbsp;*ES6*&nbsp;en las firmas de llamadas al módulo
 
 Muchas bibliotecas populares, como `Express`, se exponen a sí mismas como una función invocable cuando se importan.
 Por ejemplo, el uso típico de `Express` se ve así:

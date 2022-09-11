@@ -69,7 +69,7 @@ define(..., ['someLib'], function(someLib) {
 });
 ```
 
-Al igual que con los módulos globales, es posible que veas estos ejemplos en la documentación del módulo [a *UMD*](#umd), así que asegúrate de consultar el código o la documentación.
+Al igual que con los módulos globales, es posible que veas estos ejemplos en la documentación de un módulo [*UMD*](#umd), así que asegúrate de consultar el código o la documentación.
 
 ### Identificar un módulo de biblioteca a partir del código
 
@@ -173,10 +173,10 @@ Al mirar el código de una biblioteca global, generalmente verás:
 
 *No* verás:
 
-- Comprueba o utiliza cargadores de módulos como `require` o `define`
+- Comprobaciones para o uso de cargadores de módulos como `require` o `define`
 - Importaciones al estilo *CommonJS*/*Node.js* de la forma `var fs = require ("fs");`
 - Llamadas a `define(...)`
-- Documentación que describe cómo `require` o importar la biblioteca
+- Documentación describiendo cómo `require` o `import`ar la biblioteca
 
 ### Ejemplos de bibliotecas globales
 
@@ -308,7 +308,7 @@ interface CatsKittySettings {}
 
 Esta guía además asegura que una biblioteca se puede transferir a *UMD* sin romper los usuarios de archivos de declaración.
 
-## El impacto de *ES6* en las firmas de llamadas al módulo
+## El impacto de&nbsp;*ES6*&nbsp;en las firmas de llamadas al módulo
 
 Muchas bibliotecas populares, como `Express`, se exponen a sí mismas como una función invocable cuando se importan.
 Por ejemplo, el uso típico de `Express` se ve así:

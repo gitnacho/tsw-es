@@ -1,5 +1,5 @@
 ---
-title: Declaración de referencia
+title: Referencia de declaración
 layout: docs
 permalink: /docs/handbook/declaration-files/by-example.html
 oneline: "Cómo crear un archivo d.ts para un módulo"
