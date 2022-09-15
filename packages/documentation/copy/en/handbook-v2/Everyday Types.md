@@ -100,7 +100,7 @@ Las anotaciones de tipo de parámetro van después del nombre del parámetro:
 // Anotación de tipo de parámetro
 function greet(name: string) {
   //                 ^^^^^^^^
-  console.log("Hello, " + name.toUpperCase() + "!!");
+  console.log("Hola, " + name.toUpperCase() + "!!");
 }
 ```
 
@@ -282,7 +282,7 @@ Otro ejemplo es usar una función como `Array.isArray`:
 function welcomePeople(x: string[] | string) {
   if (Array.isArray(x)) {
     // Aquí: 'x' is 'string[]'
-    console.log("Hello, " + x.join(" and "));
+    console.log("Hola, " + x.join(" and "));
   } else {
     // Aquí: 'x' is 'string'
     console.log("Welcome lone traveler " + x);
@@ -653,7 +653,7 @@ function doSomething(x: string | null) {
   if (x === null) {
     // hace nada
   } else {
-    console.log("Hello, " + x.toUpperCase());
+    console.log("Hola, " + x.toUpperCase());
   }
 }
 ```

@@ -626,7 +626,7 @@ Los miembros `protected` solo son visibles para las subclases de la clase en la 
 // @errors: 2445
 class Greeter {
   public greet() {
-    console.log("Hello, " + this.getName());
+    console.log("Hola, " + this.getName());
   }
   protected getName() {
     return "hi";
@@ -1286,7 +1286,7 @@ abstract class Base {
   abstract getName(): string;
 
   printName() {
-    console.log("Hello, " + this.getName());
+    console.log("Hola, " + this.getName());
   }
 }
 

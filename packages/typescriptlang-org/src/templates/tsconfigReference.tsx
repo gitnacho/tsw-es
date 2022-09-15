@@ -192,7 +192,7 @@ const TSConfigReferenceTemplateComponent = (props: Props) => {
       </div>
 
       <div className="tsconfig main-content-block">
-        <h2>Compiler Options</h2>
+        <h2>Opciones del compilador</h2>
         {showCategories(root)}
         {showCategories(compilerOpts, "compilerOptions")}
         {showCategories(watch, "watchOptions")}

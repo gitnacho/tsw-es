@@ -62,7 +62,7 @@ interface Pet {
 let dog = { name: "Lassie", owner: "Rudd Weatherwax" };
 
 function greet(pet: Pet) {
-  console.log("Hello, " + pet.name);
+  console.log("Hola, " + pet.name);
 }
 greet(dog); // Bien
 ```

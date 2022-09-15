@@ -22,16 +22,16 @@ type Props = {
 const Play = (props: Props) => {
   const i = createInternational<typeof headCopy>(useIntl())
   useEffect(() => {
-    // Keep this page around so it is indexed on search engines
+    // Mantén esta página disponible para que esté indexada en los motores de búsqueda.
     const isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent)
     if (!isBot) {
-      // @ts-ignore - this is allowed in the DOM
+      // @ts-ignore - esto está permitido en el DOM
       document.location = withPrefix(props.pageContext.redirectHref)
     }
   }, [])
 
   return (
-    <Layout title={"TSConfig Option: " + props.pageContext.title} description="How this setting affects your build." lang={props.pageContext.lang}>
+    <Layout title={"TSConfig Option: " + props.pageContext.title} description="Cómo afecta esta configuración a tu compilación." lang={props.pageContext.lang}>
       <div className="raised main-content-block markdown">
         <h1 style={{ display: "none" }}>TSConfig</h1>
         <h2>{props.pageContext.title}</h2>

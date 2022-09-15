@@ -5,7 +5,7 @@ import { Sidebar, SidebarToggleButton } from "../components/layout/Sidebar"
 import { getDocumentationNavForLanguage } from "../lib/documentationNavigation"
 import { Intl } from "../components/Intl"
 
-// This dependency is used in gatsby-remark-autolink-headers to generate the slugs
+// Esta dependencia se usa en gatsby-remark-autolink-headers para generar los slugs
 import slugger from "github-slugger"
 
 import "./documentation.scss"
@@ -25,7 +25,7 @@ import Helmet from "react-helmet"
 
 type Props = {
   pageContext: {
-    // This is only set up if it's in the handbook nav
+    // Esto solo se configura si está en el manual de navegación.
     id: string | undefined
     nextID: string
     previousID: string
@@ -45,7 +45,7 @@ const HandbookTemplate: React.FC<Props> = (props) => {
     return <div></div>
   }
 
-  // Nota: This can, and does, change triggering re-renders
+  // Nota: Esto puede, y lo hace, cambiar la activación de rerenderizaciones
   const showPopup = useQuickInfoPopup(props.pageContext.lang)
 
   const [deprecationURL, setDeprecationURL] = useState(post.frontmatter!.deprecated_by)
@@ -66,7 +66,7 @@ const HandbookTemplate: React.FC<Props> = (props) => {
 
     // Maneja el ajuste del desplazamiento 
     window.addEventListener("scroll", updateSidebarOnScroll, { passive: true, capture: true });
-    // Sets current selection
+    // Establece la selección actual
     updateSidebarOnScroll()
 
     setupLikeDislikeButtons(props.pageContext.slug, i)
@@ -97,15 +97,15 @@ const HandbookTemplate: React.FC<Props> = (props) => {
         <SidebarToggleButton />
 
         <div className="page-popup" id="page-helpful-popup" style={{ opacity: 0, display: "none" }}>
-          <p>Was this page helpful?</p>
+          <p>¿Fue útil esta página?</p>
           <div>
-            <button className="first" id="like-button-popup" title="Like this page"><LikeUnfilledSVG /></button>
-            <button id="dislike-button-popup" title="Dislike this page"><DislikeUnfilledSVG /></button>
+            <button className="first" id="like-button-popup" title="Me gusta esta página"><LikeUnfilledSVG /></button>
+            <button id="dislike-button-popup" title="No me gusta esta página"><DislikeUnfilledSVG/></button>
           </div>
         </div>
 
         <noscript>
-          {/* Open by default so that folks without JS get a fully open sidebar */}
+          {/* Abre de forma predeterminada para que las personas sin JS obtengan una barra lateral completamente abierta */}
           <style dangerouslySetInnerHTML={{
             __html: `
           nav#sidebar > ul > li.closed ul {

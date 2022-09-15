@@ -1,4 +1,4 @@
-// These are redirects from a very long time ago
+// Estas son redirecciones de hace mucho tiempo.
 export const veryOldRedirects = {
   Playground: "/play/",
   Tutorial: "/docs",
@@ -9,7 +9,7 @@ export const veryOldRedirects = {
   "/docs/home": "/docs",
 }
 
-// These were .html files in the handbook with some redirection work
+// Estos eran archivos .html en el manual con algunos trabajos de redirección
 // prettier-ignore
 export const handbookRedirects = {
   "/docs/handbook/writing-declaration-files": "/docs/handbook/declaration-files/introduction.html",

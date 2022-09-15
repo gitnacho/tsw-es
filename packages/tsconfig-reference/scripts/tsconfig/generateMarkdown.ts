@@ -13,7 +13,7 @@
  *     - Secciones
  *       - Campos de nivel superior
  *       - Opciones del compilador
- *       - Opciones de observador
+ *       - Opciones del vigilante — `watch`
  *
  */
 

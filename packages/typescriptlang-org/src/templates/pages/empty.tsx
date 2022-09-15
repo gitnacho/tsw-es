@@ -7,9 +7,9 @@ type Props = {
 }
 
 const Index: React.FC<Props> = (props) =>
-  <Layout title="NO-OP" description="This page is intentionally left empty" lang={props.pageContext.lang}>
+  <Layout title="NO-OP" description="Esta página se dejó vacía intencionalmente" lang={props.pageContext.lang}>
     <div className="raised main-content-block">
-      <p>This page is intentionally left blank</p>
+      <p>Esta página se dejó vacía intencionalmente</p>
     </div>
   </Layout>
 

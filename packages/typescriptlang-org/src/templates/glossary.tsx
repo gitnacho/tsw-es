@@ -26,7 +26,7 @@ const GlossaryTemplateComponent = (props) => {
   return (
     <Layout title={i("tsconfig_title")} description={i("tsconfig_description")} lang={props.pageContext.locale}>
       <div id="glossary">
-        <div className="whitespace raised content main-content-block subheadline" style={{ padding: "1rem", textAlign: "center" }}>This page is a work in progress, congrats on finding it!</div>
+        <div className="whitespace raised content main-content-block subheadline" style={{ padding: "1rem", textAlign: "center" }}>Esta página es un trabajo en progreso, ¡felicidades por encontrarla!</div>
 
         <ul className="filterable-quicklinks main-content-block">
           {

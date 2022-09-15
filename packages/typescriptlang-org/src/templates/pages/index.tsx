@@ -215,10 +215,10 @@ const Index: React.FC<Props> = (props) => {
             <Col key='you'>
               <Row>
                 <div style={{  width: "160px", textAlign: "center" }}>
-                  <img src={withPrefix("/images/index/state-of-js.svg")} alt="Logo of the State of JS survey"/>
+                  <img src={withPrefix("/images/index/state-of-js.svg")} alt="Logotipo de la encuesta del estado de JS"/>
                 </div>
                 <div style={{ flex: 1 }}>
-                  <p>{i("index_2_loved_state_js", { strong: (...chunk) => <strong>{chunk}</strong>, js: (...chunk) => <a href="https://2020.stateofjs.com/en-US/technologies/javascript-flavors/" target="_blank">{chunk}</a>  })}</p>
+                  <p>{i("index_2_loved_state_js", { strong: (...chunk) => <strong>{chunk}</strong>, js: (...chunk) => <a href="https://2020.stateofjs.com/es-ES/technologies/javascript-flavors/" target="_blank">{chunk}</a>  })}</p>
                   <p>{i("index_2_loved_state_js2", { strong: (...chunk) => <strong>{chunk}</strong> })}</p>
                 </div>
               </Row>
@@ -250,7 +250,7 @@ const Index: React.FC<Props> = (props) => {
 
 export default (props: Props) => <Intl locale={props.pageContext.lang}><Index {...props} /></Intl>
 
-// Recurses up to get the y pos of a node
+// Recurre hacia arriba para obtener la posición 'y' de un nodo
 // https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element-relative-to-the-browser-window
 function getOffset( el ) {
   var _x = 0;

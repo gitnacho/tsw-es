@@ -128,10 +128,10 @@ const Play: React.FC<Props> = (props) => {
         catchError: true,
         onError: function (err) {
           if (document.getElementById("loading-message")) {
-            document.getElementById("loading-message")!.innerText = "Cannot load the Playground in this browser"
-            console.error("Error setting up monaco/sandbox/playground from the JS, this is likely that you're using a browser which monaco doesn't support.")
+            document.getElementById("loading-message")!.innerText = "No se puede cargar el Playground en este navegador"
+            console.error("Error al configurar monaco/sandbox/playground desde el JS, es probable que estés usando un navegador que monaco no admite.")
           } else {
-            console.error("Caught an error which is likely happening during initializing a playground plugin:")
+            console.error("Se detectó un error que probablemente ocurra durante la inicialización de un complemento del playground:")
           }
           console.error(err)
         }
@@ -216,7 +216,7 @@ const Play: React.FC<Props> = (props) => {
                     <span className="select-label">Lang</span>
                     <select id="language-selector">
                       <option>TypeScript</option>
-                      <option>TypeScript Definitions</option>
+                      <option>Definiciones TypeScript</option>
                       <option>JavaScript</option>
                     </select>
                     <span className="compiler-flag-blurb">{i("play_config_language_blurb")}</span>
@@ -249,7 +249,7 @@ const Play: React.FC<Props> = (props) => {
         </ul>
 
         <ul className="nav navbar-nav navbar-right hidden-xs">
-          <li><a href="#" id="playground-settings" role="button">Settings</a></li>
+          <li><a href="#" id="playground-settings" role="button">Ajustes</a></li>
         </ul>
       </nav>
 
@@ -294,7 +294,7 @@ const Play: React.FC<Props> = (props) => {
                 <li><a id="sidebar-toggle" aria-label="Hide Sidebar" href="#">&#x21E5;</a></li>
               </ul>
             </div>
-            { /** This is the div which monaco is added into - careful, lots of changes happen here at runtime **/}
+            { /** Este es el div al que se agrega monaco: cuidado, muchos cambios ocurren aquí en el entorno de ejecución **/}
             <div id="monaco-editor-embed" />
           </div>
         </div>

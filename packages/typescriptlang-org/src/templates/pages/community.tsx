@@ -20,7 +20,7 @@ const conferences =
       country: "Austria",
       logo: require("../../assets/community/conferences/tsconf-eu-2020-logo.png"),
       headline: require("../../assets/community/conferences/tsconf-eu-2020-logo.png"),
-      bio: "TSConf:EU 2020 is the first conference for the TypeScript community. Join us for an unforgettable day in the heart of Europe!",
+      bio: "TSConf:EU 2020 es la primera conferencia para la comunidad de TypeScript. ¡Únete a nosotros para un día inolvidable en el corazón de Europa!",
     }
   ]
 
@@ -77,27 +77,27 @@ export const Comm: React.FC<Props> = props => {
                   <h3 className="community-callout-headline">GitHub</h3>
                 </a>
                 {i("com_online_github_desc")}{" "}
-                <a href="https://github.com/microsoft/TypeScript/issues/new/choose" title="Create a new GitHub Issue on the TypeScript repo">{i("com_online_github_href")}</a>
+                <a href="https://github.com/microsoft/TypeScript/issues/new/choose" title="Crea un nuevo problema de GitHub en el repositorio de TypeScript">{i("com_online_github_href")}</a>
               </div>
             </div>
             <div className="callout">
-              <a aria-labelledby="twitter-header" className="icon twitter img-circle" href="https://twitter.com/typescript" target="_blank" title="The TypeScript team on Twitter" />
+              <a aria-labelledby="twitter-header" className="icon twitter img-circle" href="https://twitter.com/typescript" target="_blank" title="El equipo de TypeScript en Twitter" />
               <div className="text">
                 <a href="https://twitter.com/typescript" id="twitter-header" target="_blank" title="The TypeScript team on Twitter">
                   <h3 className="community-callout-headline">Twitter</h3>
                 </a>
                 {i("com_online_twitter_desc") + " "}
-                <a href="https://twitter.com/typescript" title="The TypeScript team on Twitter" target="_blank">@typescript</a>!
+                <a href="https://twitter.com/typescript" title="El equipo de TypeScript en Twitter" target="_blank">@typescript</a>!
               </div>
             </div>
             <div className="callout">
-              <a aria-labelledby="blog-header" className="icon blog img-circle" href="https://devblogs.microsoft.com/typescript/" target="_blank" title="The official TypeScript blog" />
+              <a aria-labelledby="blog-header" className="icon blog img-circle" href="https://devblogs.microsoft.com/typescript/" target="_blank" title="El blog oficial de TypeScript" />
               <div className="text">
                 <a href="https://devblogs.microsoft.com/typescript/" id="blog-header" target="_blank" title="The official TypeScript blog">
                   <h3 className="community-callout-headline">Blog</h3>
                 </a>
                 {i("com_online_blog_desc") + " "}
-                <a href="https://devblogs.microsoft.com/typescript/" target="_blank" title="The official TypeScript blog">blog</a>!
+                <a href="https://devblogs.microsoft.com/typescript/" target="_blank" title="El blog oficial de TypeScript">blog</a>!
               </div>
             </div>
             <div className="callout">

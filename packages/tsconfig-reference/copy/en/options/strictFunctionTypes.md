@@ -10,7 +10,7 @@ Aquí hay un ejemplo básico con `strictFunctionTypes` desactivado:
 ```ts twoslash
 // @strictFunctionTypes: false
 function fn(x: string) {
-  console.log("Hello, " + x.toLowerCase());
+  console.log("Hola, " + x.toLowerCase());
 }
 
 type StringOrNumberFunc = (ns: string | number) => void;
@@ -26,7 +26,7 @@ Con `StrictFunctionTypes` *on*, el error se detecta correctamente:
 ```ts twoslash
 // @errors: 2322
 function fn(x: string) {
-  console.log("Hello, " + x.toLowerCase());
+  console.log("Hola, " + x.toLowerCase());
 }
 
 type StringOrNumberFunc = (ns: string | number) => void;
@@ -44,7 +44,7 @@ type Methodish = {
 };
 
 function fn(x: string) {
-  console.log("Hello, " + x.toLowerCase());
+  console.log("Hola, " + x.toLowerCase());
 }
 
 // En última instancia, una asignación insegura, pero no detectada

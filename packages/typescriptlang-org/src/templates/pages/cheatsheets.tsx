@@ -20,7 +20,7 @@ const Index: React.FC<Props> = (props) => {
         <ul className="nav">
           <li className="name hide-small"><span>{i("cht_layout_title")}</span></li>
           <li className="nav-item">
-            <a style={{padding: "0.95rem 0.5em 0.7em"}} href="/assets/typescript-cheat-sheets.zip" title="Download the zip file">{i("cht_download")}</a>
+            <a style={{padding: "0.95rem 0.5em 0.7em"}} href="/assets/typescript-cheat-sheets.zip" title="Descargar el archivo zip">{i("cht_download")}</a>
           </li>
           </ul>
       </nav>

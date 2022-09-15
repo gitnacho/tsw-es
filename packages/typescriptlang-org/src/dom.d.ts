@@ -4844,7 +4844,7 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
     readonly ownerDocument: Document;
     readonly part: DOMTokenList;
     /**
-     * Returns the namespace prefix.
+     * Devuelve el prefijo del espacio de nombres.
      */
     readonly prefix: string | null;
     readonly scrollHeight: number;
@@ -4900,15 +4900,15 @@ interface Element extends Node, ARIAMixin, Animatable, ChildNode, InnerHTML, Non
     getElementsByTagNameNS(namespaceURI: "http://www.w3.org/2000/svg", localName: string): HTMLCollectionOf<SVGElement>;
     getElementsByTagNameNS(namespace: string | null, localName: string): HTMLCollectionOf<Element>;
     /**
-     * Returns true if element has an attribute whose qualified name is qualifiedName, and false otherwise.
+     * Devuelve true si el elemento tiene un atributo cuyo nombre calificado es qualifiedName y false en caso contrario.
      */
     hasAttribute(qualifiedName: string): boolean;
     /**
-     * Returns true if element has an attribute whose namespace is namespace and local name is localName.
+     * Devuelve true si el elemento tiene un atributo cuyo espacio de nombres es namespace y el nombre local es localName.
      */
     hasAttributeNS(namespace: string | null, localName: string): boolean;
     /**
-     * Returns true if element has attributes, and false otherwise.
+     * Devuelve true si el elemento tiene atributos y false en caso contrario.
      */
     hasAttributes(): boolean;
     hasPointerCapture(pointerId: number): boolean;
@@ -5034,19 +5034,19 @@ interface Event {
     /** @deprecated */
     readonly srcElement: EventTarget | null;
     /**
-     * Returns the object to which event is dispatched (its target).
+     * Devuelve el objeto al que se envía el evento (su destino).
      */
     readonly target: EventTarget | null;
     /**
-     * Returns the event's timestamp as the number of milliseconds measured relative to the time origin.
+     * Devuelve la marca de tiempo del evento como el número de milisegundos medidos en relación con la hora origen.
      */
     readonly timeStamp: DOMHighResTimeStamp;
     /**
-     * Returns the type of event, e.g. "click", "hashchange", or "submit".
+     * Devuelve el tipo de evento, p. "click", "hashchange" o "submit".
      */
     readonly type: string;
     /**
-     * Returns the invocation target objects of event's path (objects on which listeners will be invoked), except for any nodes in shadow trees of which the shadow root's mode is "closed" that are not reachable from event's currentTarget.
+     * Devuelve los objetos destino de invocación de la ruta del evento (objetos en los que se invocarán los escuchas), excepto los nodos en los árboles de sombra cuyo modo raíz de sombra está "closed" y que no son accesibles desde el currentTarget del evento.
      */
     composedPath(): EventTarget[];
     /** @deprecated */
@@ -6258,7 +6258,7 @@ declare var HTMLDataElement: {
 /** Proporciona propiedades especiales (más allá de la interfaz del objeto HTMLElement que también tiene disponible por herencia) para manipular elementos <datalist> y su contenido. */
 interface HTMLDataListElement extends HTMLElement {
     /**
-     * Returns an HTMLCollection of the option elements of the datalist element.
+     * Devuelve una HTMLCollection de los elementos de opción del elemento de lista de datos.
      */
     readonly options: HTMLCollectionOf<HTMLOptionElement>;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLDataListElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -6391,7 +6391,7 @@ declare var HTMLEmbedElement: {
 interface HTMLFieldSetElement extends HTMLElement {
     disabled: boolean;
     /**
-     * Returns an HTMLCollection of the form controls in the element.
+     * Devuelve una HTMLCollection de los controles de formulario en el elemento.
      */
     readonly elements: HTMLCollection;
     /**
@@ -8358,20 +8358,20 @@ interface HTMLTableElement extends HTMLElement {
     /** @deprecated */
     rules: string;
     /**
-     * Sets or retrieves a description and/or structure of the object.
+     * Establece o recupera una descripción y/o estructura del objeto.
      */
     /** @deprecated */
     summary: string;
     /**
-     * Retrieves a collection of all tBody objects in the table. Objects in this collection are in source order.
+     * Recupera una colección de todos los objetos tBody de la tabla. Los objetos de esta colección están en orden de origen.
      */
     readonly tBodies: HTMLCollectionOf<HTMLTableSectionElement>;
     /**
-     * Retrieves the tFoot object of the table.
+     * Recupera el objeto tFoot de la tabla.
      */
     tFoot: HTMLTableSectionElement | null;
     /**
-     * Retrieves the tHead object of the table.
+     * Recupera el objeto tHead de la tabla.
      */
     tHead: HTMLTableSectionElement | null;
     /**
@@ -8380,15 +8380,15 @@ interface HTMLTableElement extends HTMLElement {
     /** @deprecated */
     width: string;
     /**
-     * Creates an empty caption element in the table.
+     * Crea un elemento caption vacío en la tabla.
      */
     createCaption(): HTMLTableCaptionElement;
     /**
-     * Creates an empty tBody element in the table.
+     * Crea un elemento tBody vacío en la tabla.
      */
     createTBody(): HTMLTableSectionElement;
     /**
-     * Creates an empty tFoot element in the table.
+     * Crea un elemento tFoot vacío en la tabla.
      */
     createTFoot(): HTMLTableSectionElement;
     /**
@@ -8396,25 +8396,25 @@ interface HTMLTableElement extends HTMLElement {
      */
     createTHead(): HTMLTableSectionElement;
     /**
-     * Deletes the caption element and its contents from the table.
+     * Elimina el elemento caption y su contenido de la tabla.
      */
     deleteCaption(): void;
     /**
-     * Removes the specified row (tr) from the element and from the rows collection.
-     * @param index Number that specifies the zero-based position in the rows collection of the row to remove.
+     * Elimina la fila especificada (tr) del elemento y de la colección de filas.
+     * @param index Número que especifica la posición en base cero en la colección de filas de la fila que se va a eliminar.
      */
     deleteRow(index: number): void;
     /**
-     * Deletes the tFoot element and its contents from the table.
+     * Elimina el elemento tFoot y su contenido de la tabla.
      */
     deleteTFoot(): void;
     /**
-     * Deletes the tHead element and its contents from the table.
+     * Elimina el elemento tHead y su contenido de la tabla.
      */
     deleteTHead(): void;
     /**
-     * Creates a new row (tr) in the table, and adds the row to the rows collection.
-     * @param index Number that specifies where to insert the row in the rows collection. The default value is -1, which appends the new row to the end of the rows collection.
+     * Crea una nueva fila (tr) en la tabla y agrega la fila a la colección de filas.
+     * @param index Número que especifica dónde insertar la fila en la colección de filas. El valor predeterminado es -1, que agrega la nueva fila al final de la colección de filas.
      */
     insertRow(index?: number): HTMLTableRowElement;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTableElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -8428,7 +8428,7 @@ declare var HTMLTableElement: {
     new(): HTMLTableElement;
 };
 
-/** Provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table. */
+/** Proporciona propiedades y métodos especiales (más allá de la interfaz HTMLElement, también está disponible por herencia) para manipular el layout y la presentación de filas en una tabla HTML. */
 interface HTMLTableRowElement extends HTMLElement {
     /**
      * Establece o recupera cómo se alinea el objeto con el texto adyacente.
@@ -8438,7 +8438,7 @@ interface HTMLTableRowElement extends HTMLElement {
     /** @deprecated */
     bgColor: string;
     /**
-     * Retrieves a collection of all cells in the table row.
+     * Recupera una colección de todas las celdas en la fila de la tabla.
      */
     readonly cells: HTMLCollectionOf<HTMLTableCellElement>;
     /** @deprecated */
@@ -8446,23 +8446,23 @@ interface HTMLTableRowElement extends HTMLElement {
     /** @deprecated */
     chOff: string;
     /**
-     * Retrieves the position of the object in the rows collection for the table.
+     * Recupera la posición del objeto en la colección de filas de la tabla.
      */
     readonly rowIndex: number;
     /**
-     * Retrieves the position of the object in the collection.
+     * Recupera la posición del objeto en la colección.
      */
     readonly sectionRowIndex: number;
     /** @deprecated */
     vAlign: string;
     /**
-     * Removes the specified cell from the table row, as well as from the cells collection.
-     * @param index Number that specifies the zero-based position of the cell to remove from the table row. If no value is provided, the last cell in the cells collection is deleted.
+     * Elimina la celda especificada de la fila de la tabla, así como de la colección de celdas.
+     * @param index Número que especifica la posición en base cero de la celda que se va a eliminar de la fila de la tabla. Si no se proporciona ningún valor, se elimina la última celda de la colección de celdas.
      */
     deleteCell(index: number): void;
     /**
-     * Creates a new cell in the table row, and adds the cell to the cells collection.
-     * @param index Number that specifies where to insert the cell in the tr. The default value is -1, which appends the new cell to the end of the cells collection.
+     * Crea una nueva celda en la fila de la tabla y agrega la celda a la colección de celdas.
+     * @param index Número que especifica dónde insertar la celda en el tr. El valor predeterminado es -1, que agrega la nueva celda al final de la colección de celdas.
      */
     insertCell(index?: number): HTMLTableCellElement;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTableRowElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -8476,7 +8476,7 @@ declare var HTMLTableRowElement: {
     new(): HTMLTableRowElement;
 };
 
-/** Provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of sections, that is headers, footers and bodies, in an HTML table. */
+/** Proporciona propiedades y métodos especiales (más allá de la interfaz HTMLElement, también está disponible por herencia) para manipular el layout y presentación de las secciones, es decir, encabezados, pies de página y cuerpo, en una tabla HTML. */
 interface HTMLTableSectionElement extends HTMLElement {
     /**
      * Establece o recupera un valor que indica la alineación de la tabla.
@@ -8494,13 +8494,13 @@ interface HTMLTableSectionElement extends HTMLElement {
     /** @deprecated */
     vAlign: string;
     /**
-     * Removes the specified row (tr) from the element and from the rows collection.
-     * @param index Number that specifies the zero-based position in the rows collection of the row to remove.
+     * Elimina la fila especificada (tr) del elemento y de la colección de filas.
+     * @param index Número que especifica la posición en base cero en la colección de filas de la fila que se va a eliminar.
      */
     deleteRow(index: number): void;
     /**
-     * Creates a new row (tr) in the table, and adds the row to the rows collection.
-     * @param index Number that specifies where to insert the row in the rows collection. The default value is -1, which appends the new row to the end of the rows collection.
+     * Crea una nueva fila (tr) en la tabla y agrega la fila a la colección de filas.
+     * @param index Número que especifica dónde insertar la fila en la colección de filas. El valor predeterminado es -1, que agrega la nueva fila al final de la colección de filas.
      */
     insertRow(index?: number): HTMLTableRowElement;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTableSectionElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -8514,7 +8514,7 @@ declare var HTMLTableSectionElement: {
     new(): HTMLTableSectionElement;
 };
 
-/** Enables access to the contents of an HTML <template> element. */
+/** Habilita el acceso al contenido de un elemento <template> de HTML. */
 interface HTMLTemplateElement extends HTMLElement {
     /**
      * Returns the template contents (a DocumentFragment).
@@ -8531,7 +8531,7 @@ declare var HTMLTemplateElement: {
     new(): HTMLTemplateElement;
 };
 
-/** Provides special properties and methods for manipulating the layout and presentation of <textarea> elements. */
+/** Proporciona propiedades y métodos especiales para manipular el layout y presentación de los elementos <textarea>. */
 interface HTMLTextAreaElement extends HTMLElement {
     autocomplete: string;
     /**
@@ -8563,7 +8563,7 @@ interface HTMLTextAreaElement extends HTMLElement {
      */
     placeholder: string;
     /**
-     * Sets or retrieves the value indicated whether the content of the object is read-only.
+     * Establece o recupera el valor indicado si el contenido del objeto es de solo lectura.
      */
     readOnly: boolean;
     /**
@@ -8585,7 +8585,7 @@ interface HTMLTextAreaElement extends HTMLElement {
     selectionStart: number;
     readonly textLength: number;
     /**
-     * Retrieves the type of control.
+     * Recupera el tipo de control.
      */
     readonly type: string;
     /**
@@ -8597,7 +8597,7 @@ interface HTMLTextAreaElement extends HTMLElement {
      */
     readonly validity: ValidityState;
     /**
-     * Retrieves or sets the text in the entry field of the textArea element.
+     * Recupera o establece el texto en el campo de entrada del elemento textArea.
      */
     value: string;
     /**
@@ -8605,7 +8605,7 @@ interface HTMLTextAreaElement extends HTMLElement {
      */
     readonly willValidate: boolean;
     /**
-     * Sets or retrieves how to handle wordwrapping in the object.
+     * Establece o recupera cómo manejar el ajuste de palabras en el objeto.
      */
     wrap: string;
     /**
@@ -8614,7 +8614,7 @@ interface HTMLTextAreaElement extends HTMLElement {
     checkValidity(): boolean;
     reportValidity(): boolean;
     /**
-     * Highlights the input area of a form element.
+     * Resalta el área de entrada de un elemento form.
      */
     select(): void;
     /**
@@ -8642,7 +8642,7 @@ declare var HTMLTextAreaElement: {
     new(): HTMLTextAreaElement;
 };
 
-/** Provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <time> elements. */
+/** Proporciona propiedades especiales (más allá de la interfaz HTMLElement normal que también tiene disponible por herencia) para manipular elementos <time>. */
 interface HTMLTimeElement extends HTMLElement {
     dateTime: string;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTimeElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -8656,7 +8656,7 @@ declare var HTMLTimeElement: {
     new(): HTMLTimeElement;
 };
 
-/** Contains the title for a document. This element inherits all of the properties and methods of the HTMLElement interface. */
+/** Contiene el título de un documento. Este elemento hereda todas las propiedades y métodos de la interfaz HTMLElement. */
 interface HTMLTitleElement extends HTMLElement {
     /**
      * Recupera o establece el texto del objeto como una cadena.
@@ -8673,7 +8673,7 @@ declare var HTMLTitleElement: {
     new(): HTMLTitleElement;
 };
 
-/** The HTMLTrackElement */
+/** El HTMLTrackElement */
 interface HTMLTrackElement extends HTMLElement {
     default: boolean;
     kind: string;
@@ -8704,7 +8704,7 @@ declare var HTMLTrackElement: {
     readonly NONE: number;
 };
 
-/** Provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating unordered list elements. */
+/** Proporciona propiedades especiales (además de las definidas en la interfaz normal de HTMLElement que también tiene disponibles por herencia) para manipular elementos de lista no ordenada. */
 interface HTMLUListElement extends HTMLElement {
     /** @deprecated */
     compact: boolean;
@@ -8721,7 +8721,7 @@ declare var HTMLUListElement: {
     new(): HTMLUListElement;
 };
 
-/** An invalid HTML element and derives from the HTMLElement interface, but without implementing any additional properties or methods. */
+/** Un elemento HTML no válido y se deriva de la interfaz HTMLElement, pero sin implementar ninguna propiedad o método adicional. */
 interface HTMLUnknownElement extends HTMLElement {
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLUnknownElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -8739,33 +8739,33 @@ interface HTMLVideoElementEventMap extends HTMLMediaElementEventMap {
     "leavepictureinpicture": Event;
 }
 
-/** Provides special properties and methods for manipulating video objects. It also inherits properties and methods of HTMLMediaElement and HTMLElement. */
+/** Proporciona propiedades y métodos especiales para manipular objetos de video. También hereda propiedades y métodos de HTMLMediaElement y HTMLElement. */
 interface HTMLVideoElement extends HTMLMediaElement {
     disablePictureInPicture: boolean;
     /**
-     * Gets or sets the height of the video element.
+     * Obtiene o establece la altura del elemento de vídeo.
      */
     height: number;
     onenterpictureinpicture: ((this: HTMLVideoElement, ev: Event) => any) | null;
     onleavepictureinpicture: ((this: HTMLVideoElement, ev: Event) => any) | null;
     /**
-     * Gets or sets the playsinline of the video element. for example, On iPhone, video elements will now be allowed to play inline, and will not automatically enter fullscreen mode when playback begins.
+     * Obtiene o establece las reproducciones en línea del elemento de video. por ejemplo, en iPhone, los elementos de video ahora se podrán reproducir en línea y no ingresarán automáticamente al modo de pantalla completa cuando comience la reproducción.
      */
     playsInline: boolean;
     /**
-     * Gets or sets a URL of an image to display, for example, like a movie poster. This can be a still frame from the video, or another image if no video data is available.
+     * Obtiene o establece una URL de una imagen para mostrar, por ejemplo, como un cartel de película. Puede ser un cuadro fijo del video u otra imagen si no hay datos de video disponibles.
      */
     poster: string;
     /**
-     * Gets the intrinsic height of a video in CSS pixels, or zero if the dimensions are not known.
+     * Obtiene la altura intrínseca de un video en píxeles CSS, o cero si no se conocen las dimensiones.
      */
     readonly videoHeight: number;
     /**
-     * Gets the intrinsic width of a video in CSS pixels, or zero if the dimensions are not known.
+     * Obtiene el ancho intrínseco de un video en píxeles CSS, o cero si no se conocen las dimensiones.
      */
     readonly videoWidth: number;
     /**
-     * Gets or sets the width of the video element.
+     * Obtiene o establece el ancho del elemento de video.
      */
     width: number;
     getVideoPlaybackQuality(): VideoPlaybackQuality;
@@ -8781,14 +8781,14 @@ declare var HTMLVideoElement: {
     new(): HTMLVideoElement;
 };
 
-/** Events that fire when the fragment identifier of the URL has changed. */
+/** Eventos que se activan cuando el identificador de fragmento de la URL ha cambiado. */
 interface HashChangeEvent extends Event {
     /**
-     * Returns the URL of the session history entry that is now current.
+     * Devuelve la URL de la entrada del historial de la sesión que ahora es actual.
      */
     readonly newURL: string;
     /**
-     * Returns the URL of the session history entry that was previously current.
+     * Devuelve la URL de la entrada del historial de la sesión que era actual anteriormente.
      */
     readonly oldURL: string;
 }
@@ -8798,7 +8798,7 @@ declare var HashChangeEvent: {
     new(type: string, eventInitDict?: HashChangeEventInit): HashChangeEvent;
 };
 
-/** This Fetch API interface allows you to perform various actions on HTTP request and response headers. These actions include retrieving, setting, adding to, and removing. A Headers object has an associated header list, which is initially empty and consists of zero or more name and value pairs.  You can add to this using methods like append() (see Examples.) In all methods of this interface, header names are matched by case-insensitive byte sequence. */
+/** Esta interfaz Fetch de la API te permite realizar varias acciones en los encabezados de respuesta y solicitud HTTP. Estas acciones incluyen recuperar, configurar, agregar y eliminar. Un objeto Headers tiene una lista de encabezados asociada, que inicialmente está vacía y consta de cero o más pares de nombre y valor. Puedes agregar a esto usando métodos como append() (ve Ejemplos). En todos los métodos de esta interfaz, los nombres de los encabezados coinciden con una secuencia de bytes que no distingue entre mayúsculas y minúsculas. */
 interface Headers {
     append(name: string, value: string): void;
     delete(name: string): void;
@@ -8813,7 +8813,7 @@ declare var Headers: {
     new(init?: HeadersInit): Headers;
 };
 
-/** Allows manipulation of the browser session history, that is the pages visited in the tab or frame that the current page is loaded in. */
+/** Permite la manipulación del historial de la sesión del navegador, es decir, las páginas visitadas en la pestaña o marco en el que se carga la página actual. */
 interface History {
     readonly length: number;
     scrollRestoration: ScrollRestoration;
@@ -8830,18 +8830,18 @@ declare var History: {
     new(): History;
 };
 
-/** This IndexedDB API interface represents a cursor for traversing or iterating over multiple records in a database. */
+/** Esta interfaz IndexedDB de la API representa un cursor para atravesar o iterar sobre múltiples registros en una base de datos. */
 interface IDBCursor {
     /**
-     * Returns the direction ("next", "nextunique", "prev" or "prevunique") of the cursor.
+     * Devuelve la dirección ("next", "nextunique", "prev" o "prevunique") del cursor.
      */
     readonly direction: IDBCursorDirection;
     /**
-     * Returns the key of the cursor. Throws a "InvalidStateError" DOMException if the cursor is advancing or is finished.
+     * Devuelve la clave del cursor. Lanza una DOMException "InvalidStateError" si el cursor está avanzando o ha terminado.
      */
     readonly key: IDBValidKey;
     /**
-     * Returns the effective key of the cursor. Throws a "InvalidStateError" DOMException if the cursor is advancing or is finished.
+     * Devuelve la clave efectiva del cursor. Lanza una DOMException "InvalidStateError" si el cursor está avanzando o ha terminado.
      */
     readonly primaryKey: IDBValidKey;
     readonly request: IDBRequest;
@@ -8850,29 +8850,29 @@ interface IDBCursor {
      */
     readonly source: IDBObjectStore | IDBIndex;
     /**
-     * Advances the cursor through the next count records in range.
+     * Avanza el cursor a través de los siguientes registros de conteo en el rango.
      */
     advance(count: number): void;
     /**
-     * Advances the cursor to the next record in range.
+     * Avanza el cursor al siguiente registro en el rango.
      */
     continue(key?: IDBValidKey): void;
     /**
-     * Advances the cursor to the next record in range matching or after key and primaryKey. Throws an "InvalidAccessError" DOMException if the source is not an index.
+     * Avanza el cursor al siguiente registro en la coincidencia de rango o después de la clave y la clave principal. Lanza una DOMException "InvalidAccessError" si la fuente no es un índice.
      */
     continuePrimaryKey(key: IDBValidKey, primaryKey: IDBValidKey): void;
     /**
-     * Delete the record pointed at by the cursor with a new value.
+     * Borra el registro señalado por el cursor con un nuevo valor.
      *
-     * If successful, request's result will be undefined.
+     * Si tiene éxito, el resultado de la solicitud será indefinido.
      */
     delete(): IDBRequest<undefined>;
     /**
-     * Updated the record pointed at by the cursor with a new value.
+     * Se actualizó el registro al que apunta el cursor con un nuevo valor.
      *
-     * Throws a "DataError" DOMException if the effective object store uses in-line keys and the key would have changed.
+     * Lanza una DOMException "DataError" si el almacén de objetos efectivo usa claves en línea y la clave hubiera cambiado.
      *
-     * If successful, request's result will be the record's key.
+     * Si tiene éxito, el resultado de la solicitud será la clave del registro.
      */
     update(value: any): IDBRequest<IDBValidKey>;
 }
@@ -8882,10 +8882,10 @@ declare var IDBCursor: {
     new(): IDBCursor;
 };
 
-/** This IndexedDB API interface represents a cursor for traversing or iterating over multiple records in a database. It is the same as the IDBCursor, except that it includes the value property. */
+/** Esta interfaz IndexedDB de la API representa un cursor para atravesar o iterar sobre múltiples registros en una base de datos. Es lo mismo que IDBCursor, excepto que incluye la propiedad de valor. */
 interface IDBCursorWithValue extends IDBCursor {
     /**
-     * Returns the cursor's current value.
+     * Devuelve el valor actual del cursor.
      */
     readonly value: any;
 }
@@ -8902,14 +8902,14 @@ interface IDBDatabaseEventMap {
     "versionchange": IDBVersionChangeEvent;
 }
 
-/** This IndexedDB API interface provides a connection to a database; you can use an IDBDatabase object to open a transaction on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database. */
+/** Esta API de la interfaz de IndexedDB proporciona una conexión a una base de datos; puedes usar un objeto IDBDatabase para abrir una transacción en tu base de datos y luego crear, manipular y eliminar objetos (datos) en esa base de datos. La interfaz proporciona la única forma de obtener y administrar versiones de la base de datos. */
 interface IDBDatabase extends EventTarget {
     /**
-     * Returns the name of the database.
+     * Devuelve el nombre de la base de datos.
      */
     readonly name: string;
     /**
-     * Returns a list of the names of object stores in the database.
+     * Devuelve una lista de los nombres de los almacenes de objetos en la base de datos.
      */
     readonly objectStoreNames: DOMStringList;
     onabort: ((this: IDBDatabase, ev: Event) => any) | null;
@@ -8921,19 +8921,19 @@ interface IDBDatabase extends EventTarget {
      */
     readonly version: number;
     /**
-     * Closes the connection once all running transactions have finished.
+     * Cierra la conexión una vez que todas las transacciones en ejecución han finalizado.
      */
     close(): void;
     /**
-     * Creates a new object store with the given name and options and returns a new IDBObjectStore.
+     * Crea un nuevo almacén de objetos con el nombre y las opciones proporcionados y devuelve un IDBObjectStore nuevo.
      *
-     * Throws a "InvalidStateError" DOMException if not called within an upgrade transaction.
+     * Lanza una DOMException "InvalidStateError" si no se llama dentro de una transacción de actualización.
      */
     createObjectStore(name: string, options?: IDBObjectStoreParameters): IDBObjectStore;
     /**
-     * Deletes the object store with the given name.
+     * Elimina el almacén de objetos con el nombre dado.
      *
-     * Throws a "InvalidStateError" DOMException if not called within an upgrade transaction.
+     * Lanza una DOMException "InvalidStateError" si no se llama dentro de una transacción de actualización.
      */
     deleteObjectStore(name: string): void;
     /**
@@ -8951,21 +8951,21 @@ declare var IDBDatabase: {
     new(): IDBDatabase;
 };
 
-/** In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. For a full working example, see our To-do Notifications app (view example live.) */
+/** En el siguiente fragmento de código, hacemos una solicitud para abrir una base de datos e incluimos controladores para los casos de éxito y error. Para ver un ejemplo completo funcionando, consulta nuestra aplicación de notificaciones de tareas pendientes (ve el ejemplo en vivo). */
 interface IDBFactory {
     /**
-     * Compares two values as keys. Returns -1 if key1 precedes key2, 1 if key2 precedes key1, and 0 if the keys are equal.
+     * Compara dos valores como claves. Devuelve -1 si key1 precede a key2, 1 si key2 precede a key1 y 0 si las claves son iguales.
      *
-     * Throws a "DataError" DOMException if either input is not a valid key.
+     * Lanza una DOMException "DataError" si cualquiera de las entradas no es una clave válida.
      */
     cmp(first: any, second: any): number;
     databases(): Promise<IDBDatabaseInfo[]>;
     /**
-     * Attempts to delete the named database. If the database already exists and there are open connections that don't close in response to a versionchange event, the request will be blocked until all they close. If the request is successful request's result will be null.
+     * Intenta eliminar la base de datos nombrada. Si la base de datos ya existe y hay conexiones abiertas que no se cierran en respuesta a un evento de cambio de versión, la solicitud se bloqueará hasta que se cierren todas. Si la solicitud tiene éxito, el resultado de la solicitud será null.
      */
     deleteDatabase(name: string): IDBOpenDBRequest;
     /**
-     * Attempts to open a connection to the named database with the current version, or 1 if it does not already exist. If the request is successful request's result will be the connection.
+     * Intenta abrir una conexión a la base de datos nombrada con la versión actual, o 1 si aún no existe. Si la solicitud tiene éxito, el resultado de la solicitud será la conexión.
      */
     open(name: string, version?: number): IDBOpenDBRequest;
 }
@@ -8975,7 +8975,7 @@ declare var IDBFactory: {
     new(): IDBFactory;
 };
 
-/** IDBIndex interface of the IndexedDB API provides asynchronous access to an index in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data. */
+/** La interfaz IDBIndex de la API IndexedDB proporciona acceso asíncrono a un índice en una base de datos. Un índice es una especie de almacén de objetos para buscar registros en otro almacén de objetos, denominado almacén de objetos referido. Utiliza esta interfaz para recuperar datos. */
 interface IDBIndex {
     readonly keyPath: string | string[];
     readonly multiEntry: boolean;
@@ -8989,45 +8989,45 @@ interface IDBIndex {
     readonly objectStore: IDBObjectStore;
     readonly unique: boolean;
     /**
-     * Retrieves the number of records matching the given key or key range in query.
+     * Recupera el número de registros que coinciden con la clave dada o el rango de claves en la consulta.
      *
-     * If successful, request's result will be the count.
+     * Si tiene éxito, el resultado de la solicitud será el conteo.
      */
     count(query?: IDBValidKey | IDBKeyRange): IDBRequest<number>;
     /**
-     * Retrieves the value of the first record matching the given key or key range in query.
+     * Recupera el valor del primer registro que coincide con la clave dada o el rango de claves en la consulta.
      *
-     * If successful, request's result will be the value, or undefined if there was no matching record.
+     * Si tiene éxito, el resultado de la solicitud será el valor, o undefined si no hubo un registro coincidente.
      */
     get(query: IDBValidKey | IDBKeyRange): IDBRequest<any>;
     /**
-     * Retrieves the values of the records matching the given key or key range in query (up to count if given).
+     * Recupera los valores de los registros que coinciden con la clave dada o el rango de claves en la consulta (hasta contar si se da).
      *
-     * If successful, request's result will be an Array of the values.
+     * Si tiene éxito, el resultado de la solicitud será un arreglo de valores.
      */
     getAll(query?: IDBValidKey | IDBKeyRange | null, count?: number): IDBRequest<any[]>;
     /**
-     * Retrieves the keys of records matching the given key or key range in query (up to count if given).
+     * Recupera las claves de los registros que coinciden con la clave dada o el rango de claves en la consulta (hasta contar si se da).
      *
-     * If successful, request's result will be an Array of the keys.
+     * Si tiene éxito, el resultado de la solicitud será un arreglo de claves.
      */
     getAllKeys(query?: IDBValidKey | IDBKeyRange | null, count?: number): IDBRequest<IDBValidKey[]>;
     /**
-     * Retrieves the key of the first record matching the given key or key range in query.
+     * Recupera la clave del primer registro que coincide con la clave dada o el rango de claves en la consulta.
      *
-     * If successful, request's result will be the key, or undefined if there was no matching record.
+     * Si tiene éxito, el resultado de la solicitud será la clave, o undefined si no hubo un registro coincidente.
      */
     getKey(query: IDBValidKey | IDBKeyRange): IDBRequest<IDBValidKey | undefined>;
     /**
-     * Opens a cursor over the records matching query, ordered by direction. If query is null, all records in index are matched.
+     * Abre un cursor sobre la consulta coincidente de registros, ordenados por dirección. Si la consulta es null, todos los registros del índice coinciden.
      *
-     * If successful, request's result will be an IDBCursorWithValue, or null if there were no matching records.
+     * Si tiene éxito, el resultado de la solicitud será un IDBCursorWithValue o null si no hubo registros coincidentes.
      */
     openCursor(query?: IDBValidKey | IDBKeyRange | null, direction?: IDBCursorDirection): IDBRequest<IDBCursorWithValue | null>;
     /**
-     * Opens a cursor with key only flag set over the records matching query, ordered by direction. If query is null, all records in index are matched.
+     * Abre un cursor con el indicador de solo clave establecido sobre la consulta coincidente de registros, ordenados por dirección. Si la consulta es null, todos los registros del índice coinciden.
      *
-     * If successful, request's result will be an IDBCursor, or null if there were no matching records.
+     * Si tiene éxito, el resultado de la solicitud será un IDBCursor o null si no hubo registros coincidentes.
      */
     openKeyCursor(query?: IDBValidKey | IDBKeyRange | null, direction?: IDBCursorDirection): IDBRequest<IDBCursor | null>;
 }
@@ -9037,26 +9037,26 @@ declare var IDBIndex: {
     new(): IDBIndex;
 };
 
-/** A key range can be a single value or a range with upper and lower bounds or endpoints. If the key range has both upper and lower bounds, then it is bounded; if it has no bounds, it is unbounded. A bounded key range can either be open (the endpoints are excluded) or closed (the endpoints are included). To retrieve all keys within a certain range, you can use the following code constructs: */
+/** Un rango de clave puede ser un valor único o un rango con límites superior e inferior o puntos finales. Si el rango de claves tiene límites superior e inferior, entonces está limitado; si no tiene límites, es ilimitado. Un rango de clave delimitado puede ser abierto (se excluyen los puntos finales) o cerrado (se incluyen los puntos finales). Para recuperar todas las claves dentro de un cierto rango, puedes usar las siguientes construcciones de código: */
 interface IDBKeyRange {
     /**
-     * Returns lower bound, or undefined if none.
+     * Devuelve el límite inferior o undefined si no hay ninguno.
      */
     readonly lower: any;
     /**
-     * Returns true if the lower open flag is set, and false otherwise.
+     * Devuelve true si se establece el indicador de apertura inferior y false en caso contrario.
      */
     readonly lowerOpen: boolean;
     /**
-     * Returns upper bound, or undefined if none.
+     * Devuelve el límite superior o undefined si no hay ninguno.
      */
     readonly upper: any;
     /**
-     * Returns true if the upper open flag is set, and false otherwise.
+     * Devuelve true si el indicador de apertura superior está establecido y false en caso contrario.
      */
     readonly upperOpen: boolean;
     /**
-     * Returns true if key is included in the range, and false otherwise.
+     * Devuelve true si la clave está incluida en el rango y false en caso contrario.
      */
     includes(key: any): boolean;
 }
@@ -9065,130 +9065,130 @@ declare var IDBKeyRange: {
     readonly prototype: IDBKeyRange;
     new(): IDBKeyRange;
     /**
-     * Returns a new IDBKeyRange spanning from lower to upper. If lowerOpen is true, lower is not included in the range. If upperOpen is true, upper is not included in the range.
+     * Devuelve un nuevo IDBKeyRange que se extiende de menor a mayor. Si lowerOpen es true, lower no se incluye en el rango. Si upperOpen es true, superior no se incluye en el rango.
      */
     bound(lower: any, upper: any, lowerOpen?: boolean, upperOpen?: boolean): IDBKeyRange;
     /**
-     * Returns a new IDBKeyRange starting at key with no upper bound. If open is true, key is not included in the range.
+     * Devuelve un nuevo IDBKeyRange que comienza en la clave sin límite superior. Si open es true, la clave no está incluida en el rango.
      */
     lowerBound(lower: any, open?: boolean): IDBKeyRange;
     /**
-     * Returns a new IDBKeyRange spanning only key.
+     * Devuelve una nueva IDBKeyRange que solo abarca la clave.
      */
     only(value: any): IDBKeyRange;
     /**
-     * Returns a new IDBKeyRange with no lower bound and ending at key. If open is true, key is not included in the range.
+     * Devuelve un nuevo IDBKeyRange sin límite inferior y que termina en clave. Si open es true, la clave no está incluida en el rango.
      */
     upperBound(upper: any, open?: boolean): IDBKeyRange;
 };
 
-/** This example shows a variety of different uses of object stores, from updating the data structure with IDBObjectStore.createIndex inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our To-do Notifications app (view example live.) */
+/** Este ejemplo muestra una variedad de diferentes usos de los almacenes de objetos, desde actualizar la estructura de datos con IDBObjectStore.createIndex dentro de una función onupgradeneeded, hasta agregar un nuevo elemento a nuestro almacén de objetos con IDBObjectStore.add. Para ver un ejemplo completo trabajando, ve nuestra aplicación Notificación de tareas (ve el ejemplo en vivo). */
 interface IDBObjectStore {
     /**
-     * Returns true if the store has a key generator, and false otherwise.
+     * Devuelve true si el almacén tiene un generador de claves y false en caso contrario.
      */
     readonly autoIncrement: boolean;
     /**
-     * Returns a list of the names of indexes in the store.
+     * Devuelve una lista de los nombres de los índices del almacén.
      */
     readonly indexNames: DOMStringList;
     /**
-     * Returns the key path of the store, or null if none.
+     * Devuelve la ruta de la clave del almacén, o null si no hay ninguno.
      */
     readonly keyPath: string | string[];
     /**
-     * Returns the name of the store.
+     * Devuelve el nombre del almacén.
      */
     name: string;
     /**
-     * Returns the associated transaction.
+     * Devuelve la transacción asociada.
      */
     readonly transaction: IDBTransaction;
     /**
-     * Adds or updates a record in store with the given value and key.
+     * Agrega o actualiza un registro almacenado con el valor y la clave proporcionados.
      *
-     * If the store uses in-line keys and key is specified a "DataError" DOMException will be thrown.
+     * Si el almacén usa claves en línea y se especifica la clave, se lanzará una DOMException "DataError".
      *
-     * If put() is used, any existing record with the key will be replaced. If add() is used, and if a record with the key already exists the request will fail, with request's error set to a "ConstraintError" DOMException.
+     * Si se usa put(), se reemplazará cualquier registro existente con la clave. Si se usa add(), y si ya existe un registro con la clave, la solicitud fallará y el error de la solicitud se establecerá en una "ConstraintError" de DOMException.
      *
-     * If successful, request's result will be the record's key.
+     * Si tiene éxito, el resultado de la solicitud será la clave del registro.
      */
     add(value: any, key?: IDBValidKey): IDBRequest<IDBValidKey>;
     /**
-     * Deletes all records in store.
+     * Elimina todos los registros en el almacén.
      *
-     * If successful, request's result will be undefined.
+     * Si tiene éxito, el resultado de la solicitud será indefinido.
      */
     clear(): IDBRequest<undefined>;
     /**
-     * Retrieves the number of records matching the given key or key range in query.
+     * Recupera el número de registros que coinciden con la clave dada o el rango de claves en la consulta.
      *
-     * If successful, request's result will be the count.
+     * Si tiene éxito, el resultado de la solicitud será el conteo.
      */
     count(query?: IDBValidKey | IDBKeyRange): IDBRequest<number>;
     /**
-     * Creates a new index in store with the given name, keyPath and options and returns a new IDBIndex. If the keyPath and options define constraints that cannot be satisfied with the data already in store the upgrade transaction will abort with a "ConstraintError" DOMException.
+     * Crea un nuevo índice en el almacén con el nombre dado, keyPath y opciones y devuelve un nuevo IDBIndex. Si keyPath y las opciones definen restricciones que no se pueden satisfacer con los datos que ya están almacenados, la transacción de actualización se cancelará con una DOMException "ConstraintError".
      *
-     * Throws an "InvalidStateError" DOMException if not called within an upgrade transaction.
+     * Lanza una DOMException "InvalidStateError" si no se llama dentro de una transacción de actualización.
      */
     createIndex(name: string, keyPath: string | string[], options?: IDBIndexParameters): IDBIndex;
     /**
-     * Deletes records in store with the given key or in the given key range in query.
+     * Elimina registros almacenados con la clave dada o en el rango de clave dado en la consulta.
      *
-     * If successful, request's result will be undefined.
+     * Si tiene éxito, el resultado de la solicitud será indefinido.
      */
     delete(query: IDBValidKey | IDBKeyRange): IDBRequest<undefined>;
     /**
-     * Deletes the index in store with the given name.
+     * Elimina el índice almacenado con el nombre dado.
      *
-     * Throws an "InvalidStateError" DOMException if not called within an upgrade transaction.
+     * Lanza una DOMException "InvalidStateError" si no se llama dentro de una transacción de actualización.
      */
     deleteIndex(name: string): void;
     /**
-     * Retrieves the value of the first record matching the given key or key range in query.
+     * Recupera el valor del primer registro que coincide con la clave dada o el rango de claves en la consulta.
      *
-     * If successful, request's result will be the value, or undefined if there was no matching record.
+     * Si tiene éxito, el resultado de la solicitud será el valor, o undefined si no hubo un registro coincidente.
      */
     get(query: IDBValidKey | IDBKeyRange): IDBRequest<any>;
     /**
-     * Retrieves the values of the records matching the given key or key range in query (up to count if given).
+     * Recupera los valores de los registros que coinciden con la clave dada o el rango de claves en la consulta (hasta contar si se da).
      *
-     * If successful, request's result will be an Array of the values.
+     * Si tiene éxito, el resultado de la solicitud será un arreglo de valores.
      */
     getAll(query?: IDBValidKey | IDBKeyRange | null, count?: number): IDBRequest<any[]>;
     /**
-     * Retrieves the keys of records matching the given key or key range in query (up to count if given).
+     * Recupera las claves de los registros que coinciden con la clave dada o el rango de claves en la consulta (hasta contar si se da).
      *
-     * If successful, request's result will be an Array of the keys.
+     * Si tiene éxito, el resultado de la solicitud será un arreglo de claves.
      */
     getAllKeys(query?: IDBValidKey | IDBKeyRange | null, count?: number): IDBRequest<IDBValidKey[]>;
     /**
-     * Retrieves the key of the first record matching the given key or key range in query.
+     * Recupera la clave del primer registro que coincide con la clave dada o el rango de claves en la consulta.
      *
-     * If successful, request's result will be the key, or undefined if there was no matching record.
+     * Si tiene éxito, el resultado de la solicitud será la clave, o undefined si no hubo un registro coincidente.
      */
     getKey(query: IDBValidKey | IDBKeyRange): IDBRequest<IDBValidKey | undefined>;
     index(name: string): IDBIndex;
     /**
-     * Opens a cursor over the records matching query, ordered by direction. If query is null, all records in store are matched.
+     * Abre un cursor sobre la consulta coincidente de registros, ordenados por dirección. Si la consulta es null, se comparan todos los registros almacenados.
      *
-     * If successful, request's result will be an IDBCursorWithValue pointing at the first matching record, or null if there were no matching records.
+     * Si tiene éxito, el resultado de la solicitud será un IDBCursorWithValue que apunta al primer registro coincidente, o null si no hubo registros coincidentes.
      */
     openCursor(query?: IDBValidKey | IDBKeyRange | null, direction?: IDBCursorDirection): IDBRequest<IDBCursorWithValue | null>;
     /**
-     * Opens a cursor with key only flag set over the records matching query, ordered by direction. If query is null, all records in store are matched.
+     * Abre un cursor con el indicador de solo clave establecido sobre la consulta coincidente de registros, ordenados por dirección. Si la consulta es null, se comparan todos los registros almacenados.
      *
-     * If successful, request's result will be an IDBCursor pointing at the first matching record, or null if there were no matching records.
+     * Si tiene éxito, el resultado de la solicitud será un IDBCursor que apunta al primer registro coincidente, o null si no hubo registros coincidentes.
      */
     openKeyCursor(query?: IDBValidKey | IDBKeyRange | null, direction?: IDBCursorDirection): IDBRequest<IDBCursor | null>;
     /**
-     * Adds or updates a record in store with the given value and key.
+     * Agrega o actualiza un registro almacenado con el valor y la clave proporcionados.
      *
-     * If the store uses in-line keys and key is specified a "DataError" DOMException will be thrown.
+     * Si el almacén usa claves en línea y se especifica la clave, se lanzará una DOMException "DataError".
      *
-     * If put() is used, any existing record with the key will be replaced. If add() is used, and if a record with the key already exists the request will fail, with request's error set to a "ConstraintError" DOMException.
+     * Si se usa put(), se reemplazará cualquier registro existente con la clave. Si se usa add(), y si ya existe un registro con la clave, la solicitud fallará y el error de la solicitud se establecerá en una "ConstraintError" de DOMException.
      *
-     * If successful, request's result will be the record's key.
+     * Si tiene éxito, el resultado de la solicitud será la clave del registro.
      */
     put(value: any, key?: IDBValidKey): IDBRequest<IDBValidKey>;
 }
@@ -9203,7 +9203,7 @@ interface IDBOpenDBRequestEventMap extends IDBRequestEventMap {
     "upgradeneeded": IDBVersionChangeEvent;
 }
 
-/** Also inherits methods from its parents IDBRequest and EventTarget. */
+/** También hereda métodos de sus padres IDBRequest y EventTarget. */
 interface IDBOpenDBRequest extends IDBRequest<IDBDatabase> {
     onblocked: ((this: IDBOpenDBRequest, ev: Event) => any) | null;
     onupgradeneeded: ((this: IDBOpenDBRequest, ev: IDBVersionChangeEvent) => any) | null;
@@ -9223,10 +9223,10 @@ interface IDBRequestEventMap {
     "success": Event;
 }
 
-/** The request object does not initially contain any information about the result of the operation, but once information becomes available, an event is fired on the request, and the information becomes available through the properties of the IDBRequest instance. */
+/** El objeto request inicialmente no contiene ninguna información sobre el resultado de la operación, pero una vez que la información está disponible, se activa un evento en la solicitud y la información está disponible a través de las propiedades de la instancia de IDBRequest. */
 interface IDBRequest<T = any> extends EventTarget {
     /**
-     * When a request is completed, returns the error (a DOMException), or null if the request succeeded. Throws a "InvalidStateError" DOMException if the request is still pending.
+     * Cuando se completa una solicitud, devuelve el error (una DOMException) o null si la solicitud se realizó correctamente. Lanza una DOMException "InvalidStateError" si la solicitud aún está pendiente.
      */
     readonly error: DOMException | null;
     onerror: ((this: IDBRequest<T>, ev: Event) => any) | null;
@@ -9236,15 +9236,15 @@ interface IDBRequest<T = any> extends EventTarget {
      */
     readonly readyState: IDBRequestReadyState;
     /**
-     * When a request is completed, returns the result, or undefined if the request failed. Throws a "InvalidStateError" DOMException if the request is still pending.
+     * Cuando se completa una solicitud, devuelve el resultado o undefined si la solicitud falló. Lanza una DOMException "InvalidStateError" si la solicitud aún está pendiente.
      */
     readonly result: T;
     /**
-     * Returns the IDBObjectStore, IDBIndex, or IDBCursor the request was made against, or null if is was an open request.
+     * Devuelve el IDBObjectStore, IDBIndex o IDBCursor contra el que se realizó la solicitud, o null si se trataba de una solicitud abierta.
      */
     readonly source: IDBObjectStore | IDBIndex | IDBCursor;
     /**
-     * Returns the IDBTransaction the request was made within. If this as an open request, then it returns an upgrade transaction while it is running, or null otherwise.
+     * Devuelve la IDBTransaction en la que se realizó la solicitud. Si se trata de una solicitud abierta, devuelve una transacción de actualización mientras se está ejecutando, o null de lo contrario.
      */
     readonly transaction: IDBTransaction | null;
     addEventListener<K extends keyof IDBRequestEventMap>(type: K, listener: (this: IDBRequest<T>, ev: IDBRequestEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -9270,22 +9270,22 @@ interface IDBTransaction extends EventTarget {
      */
     readonly db: IDBDatabase;
     /**
-     * If the transaction was aborted, returns the error (a DOMException) providing the reason.
+     * Si la transacción fue abortada, devuelve el error (una DOMException) proporcionando el motivo.
      */
     readonly error: DOMException | null;
     /**
-     * Returns the mode the transaction was created with ("readonly" or "readwrite"), or "versionchange" for an upgrade transaction.
+     * Devuelve el modo con el que se creó la transacción ("solo lectura" o "lectura y escritura") o "cambio de versión" para una transacción de actualización.
      */
     readonly mode: IDBTransactionMode;
     /**
-     * Returns a list of the names of object stores in the transaction's scope. For an upgrade transaction this is all object stores in the database.
+     * Devuelve una lista de los nombres de los almacenes de objetos en el ámbito de la transacción. Para una transacción de actualización, se trata de todos los almacenes de objetos en la base de datos.
      */
     readonly objectStoreNames: DOMStringList;
     onabort: ((this: IDBTransaction, ev: Event) => any) | null;
     oncomplete: ((this: IDBTransaction, ev: Event) => any) | null;
     onerror: ((this: IDBTransaction, ev: Event) => any) | null;
     /**
-     * Aborts the transaction. All pending requests will fail with a "AbortError" DOMException and all changes made to the database will be reverted.
+     * Anula la transacción. Todas las solicitudes pendientes fallarán con una DOMException "AbortError" y se revertirán todos los cambios realizados en la base de datos.
      */
     abort(): void;
     commit(): void;
@@ -9304,7 +9304,7 @@ declare var IDBTransaction: {
     new(): IDBTransaction;
 };
 
-/** This IndexedDB API interface indicates that the version of the database has changed, as the result of an IDBOpenDBRequest.onupgradeneeded event handler function. */
+/** Esta interfaz API de IndexedDB indica que la versión de la base de datos ha cambiado, como resultado de una función de controlador de eventos IDBOpenDBRequest.onupgradeneeded. */
 interface IDBVersionChangeEvent extends Event {
     readonly newVersion: number | null;
     readonly oldVersion: number;
@@ -9315,7 +9315,7 @@ declare var IDBVersionChangeEvent: {
     new(type: string, eventInitDict?: IDBVersionChangeEventInit): IDBVersionChangeEvent;
 };
 
-/** The IIRFilterNode interface of the Web Audio API is a AudioNode processor which implements a general infinite impulse response (IIR)  filter; this type of filter can be used to implement tone control devices and graphic equalizers as well. It lets the parameters of the filter response be specified, so that it can be tuned as needed. */
+/** La interfaz IIRFilterNode de Web Audio API es un procesador AudioNode que implementa un filtro general de respuesta de impulso infinito (IIR); este tipo de filtro se puede utilizar para implementar dispositivos de control de tono y también ecualizadores gráficos. Permite especificar los parámetros de la respuesta del filtro, para que se pueda ajustar según sea necesario. */
 interface IIRFilterNode extends AudioNode {
     getFrequencyResponse(frequencyHz: Float32Array, magResponse: Float32Array, phaseResponse: Float32Array): void;
 }
@@ -9337,15 +9337,15 @@ declare var IdleDeadline: {
 
 interface ImageBitmap {
     /**
-     * Returns the intrinsic height of the image, in CSS pixels.
+     * Devuelve la altura intrínseca de la imagen, en píxeles CSS.
      */
     readonly height: number;
     /**
-     * Returns the intrinsic width of the image, in CSS pixels.
+     * Devuelve el ancho intrínseco de la imagen, en píxeles CSS.
      */
     readonly width: number;
     /**
-     * Releases imageBitmap's underlying bitmap data.
+     * Libera los datos de mapa de bits subyacentes de imageBitmap.
      */
     close(): void;
 }
@@ -9357,11 +9357,11 @@ declare var ImageBitmap: {
 
 interface ImageBitmapRenderingContext {
     /**
-     * Returns the canvas element that the context is bound to.
+     * Devuelve el elemento del lienzo al que está vinculado el contexto.
      */
     readonly canvas: HTMLCanvasElement;
     /**
-     * Transfers the underlying bitmap data from imageBitmap to context, and the bitmap becomes the contents of the canvas element to which context is bound.
+     * Transfiere los datos de mapa de bits subyacentes de imageBitmap al contexto, y el mapa de bits se convierte en el contenido del elemento de lienzo al que está vinculado el contexto.
      */
     transferFromImageBitmap(bitmap: ImageBitmap | null): void;
 }
@@ -9371,18 +9371,18 @@ declare var ImageBitmapRenderingContext: {
     new(): ImageBitmapRenderingContext;
 };
 
-/** The underlying pixel data of an area of a <canvas> element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData(). */
+/** Los datos de píxeles subyacentes de un área de un elemento <canvas>. Se crea utilizando el constructor ImageData() o métodos creadores en el objeto CanvasRenderingContext2D asociado con un lienzo: createImageData() y getImageData(). También se puede usar para configurar una parte del lienzo usando putImageData(). */
 interface ImageData {
     /**
-     * Returns the one-dimensional array containing the data in RGBA order, as integers in the range 0 to 255.
+     * Devuelve el arreglo unidimensional que contiene los datos en orden RGBA, como números enteros en el rango de 0 a 255.
      */
     readonly data: Uint8ClampedArray;
     /**
-     * Returns the actual dimensions of the data in the ImageData object, in pixels.
+     * Devuelve las dimensiones reales de los datos en el objeto ImageData, en píxeles.
      */
     readonly height: number;
     /**
-     * Returns the actual dimensions of the data in the ImageData object, in pixels.
+     * Devuelve las dimensiones reales de los datos en el objeto ImageData, en píxeles.
      */
     readonly width: number;
 }
@@ -9410,7 +9410,7 @@ declare var InputEvent: {
     new(type: string, eventInitDict?: InputEventInit): InputEvent;
 };
 
-/** provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's viewport. */
+/** proporciona una forma de observar de forma asincrónica los cambios en la intersección de un elemento de destino con un elemento antecesor o con la ventana gráfica de un documento de nivel superior. */
 interface IntersectionObserver {
     readonly root: Element | Document | null;
     readonly rootMargin: string;
@@ -9426,7 +9426,7 @@ declare var IntersectionObserver: {
     new(callback: IntersectionObserverCallback, options?: IntersectionObserverInit): IntersectionObserver;
 };
 
-/** This Intersection Observer API interface describes the intersection between the target element and its root container at a specific moment of transition. */
+/** Esta API de interfaz Intersection Observer describe la intersección entre el elemento destino y su contenedor raíz en un momento específico de transición. */
 interface IntersectionObserverEntry {
     readonly boundingClientRect: DOMRectReadOnly;
     readonly intersectionRatio: number;
@@ -9446,7 +9446,7 @@ interface KHR_parallel_shader_compile {
     readonly COMPLETION_STATUS_KHR: GLenum;
 }
 
-/** KeyboardEvent objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. */
+/** Los objetos KeyboardEvent describen una interacción del usuario con el teclado; cada evento describe una sola interacción entre el usuario y una tecla (o combinación de una tecla con teclas modificadoras) en el teclado. */
 interface KeyboardEvent extends UIEvent {
     readonly altKey: boolean;
     /** @deprecated */
@@ -9496,75 +9496,75 @@ interface LinkStyle {
     readonly sheet: CSSStyleSheet | null;
 }
 
-/** The location (URL) of the object it is linked to. Changes done on it are reflected on the object it relates to. Both the Document and Window interface have such a linked Location, accessible via Document.location and Window.location respectively. */
+/** La ubicación (URL) del objeto al que está vinculado. Los cambios realizados en él se reflejan en el objeto con el que se relaciona. Tanto la interfaz Document como la Window tienen una Ubicación vinculada, accesible a través de Document.location y Window.location respectivamente. */
 interface Location {
     /**
-     * Returns a DOMStringList object listing the origins of the ancestor browsing contexts, from the parent browsing context to the top-level browsing context.
+     * Devuelve un objeto DOMStringList que enumera los orígenes de los contextos de exploración de antepasados, desde el contexto de exploración principal hasta el contexto de exploración de nivel superior.
      */
     readonly ancestorOrigins: DOMStringList;
     /**
-     * Returns the Location object's URL's fragment (includes leading "#" if non-empty).
+     * Devuelve el fragmento de URL del objeto Location (incluye "#" inicial si no está vacío).
      *
-     * Can be set, to navigate to the same URL with a changed fragment (ignores leading "#").
+     * Se puede configurar para navegar a la misma URL con un fragmento modificado (ignora el "#" inicial).
      */
     hash: string;
     /**
-     * Returns the Location object's URL's host and port (if different from the default port for the scheme).
+     * Devuelve el host y el puerto de la URL del objeto Location (si es diferente del puerto predeterminado para el esquema).
      *
-     * Can be set, to navigate to the same URL with a changed host and port.
+     * Se puede configurar para navegar a la misma URL con un host y puerto cambiados.
      */
     host: string;
     /**
-     * Returns the Location object's URL's host.
+     * Devuelve el host de URL del objeto de ubicación.
      *
-     * Can be set, to navigate to the same URL with a changed host.
+     * Se puede configurar para navegar a la misma URL con un host cambiado.
      */
     hostname: string;
     /**
-     * Returns the Location object's URL.
+     * Devuelve la URL del objeto Location.
      *
-     * Can be set, to navigate to the given URL.
+     * Se puede configurar para navegar a la URL dada.
      */
     href: string;
     toString(): string;
     /**
-     * Returns the Location object's URL's origin.
+     * Devuelve el origen de la URL del objeto Location.
      */
     readonly origin: string;
     /**
-     * Returns the Location object's URL's path.
+     * Devuelve la ruta de la URL del objeto Location.
      *
-     * Can be set, to navigate to the same URL with a changed path.
+     * Se puede configurar para navegar a la misma URL con una ruta modificada.
      */
     pathname: string;
     /**
-     * Returns the Location object's URL's port.
+     * Devuelve el puerto de la URL del objeto Location.
      *
-     * Can be set, to navigate to the same URL with a changed port.
+     * Se puede configurar para navegar a la misma URL con un puerto cambiado.
      */
     port: string;
     /**
-     * Returns the Location object's URL's scheme.
+     * Devuelve el esquema de URL del objeto Location.
      *
-     * Can be set, to navigate to the same URL with a changed scheme.
+     * Se puede configurar para navegar a la misma URL con un esquema modificado.
      */
     protocol: string;
     /**
-     * Returns the Location object's URL's query (includes leading "?" if non-empty).
+     * Devuelve la consulta de URL del objeto Location (incluye "?" inicial si no está vacío).
      *
-     * Can be set, to navigate to the same URL with a changed query (ignores leading "?").
+     * Se puede configurar para navegar a la misma URL con una consulta modificada (ignora el "?" inicial).
      */
     search: string;
     /**
-     * Navigates to the given URL.
+     * Navega a la URL dada.
      */
     assign(url: string | URL): void;
     /**
-     * Reloads the current page.
+     * Recarga la página actual.
      */
     reload(): void;
     /**
-     * Removes the current page from the session history and navigates to the given URL.
+     * Elimina la página actual del historial de la sesión y navega a la URL dada.
      */
     replace(url: string | URL): void;
 }
@@ -9599,7 +9599,7 @@ declare var MediaCapabilities: {
     new(): MediaCapabilities;
 };
 
-/** The MediaDevicesInfo interface contains information that describes a single media input or output device. */
+/** La interfaz MediaDevicesInfo contiene información que describe un solo dispositivo de entrada o salida de medios. */
 interface MediaDeviceInfo {
     readonly deviceId: string;
     readonly groupId: string;
@@ -9617,7 +9617,7 @@ interface MediaDevicesEventMap {
     "devicechange": Event;
 }
 
-/** Provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data. */
+/** Brinda acceso a dispositivos de entrada de medios conectados, como cámaras y micrófonos, así como compartir pantalla. En esencia, te permite obtener acceso a cualquier fuente de hardware de datos multimedia. */
 interface MediaDevices extends EventTarget {
     ondevicechange: ((this: MediaDevices, ev: Event) => any) | null;
     enumerateDevices(): Promise<MediaDeviceInfo[]>;
@@ -9635,7 +9635,7 @@ declare var MediaDevices: {
     new(): MediaDevices;
 };
 
-/** A MediaElementSourceNode has no inputs and exactly one output, and is created using the AudioContext.createMediaElementSource method. The amount of channels in the output equals the number of channels of the audio referenced by the HTMLMediaElement used in the creation of the node, or is 1 if the HTMLMediaElement has no audio. */
+/** Un MediaElementSourceNode no tiene entradas y tiene exactamente una salida, y se crea mediante el método AudioContext.createMediaElementSource. La cantidad de canales en la salida es igual a la cantidad de canales del audio al que hace referencia HTMLMediaElement utilizado en la creación del nodo, o es 1 si HTMLMediaElement no tiene audio. */
 interface MediaElementAudioSourceNode extends AudioNode {
     readonly mediaElement: HTMLMediaElement;
 }
@@ -9655,7 +9655,7 @@ declare var MediaEncryptedEvent: {
     new(type: string, eventInitDict?: MediaEncryptedEventInit): MediaEncryptedEvent;
 };
 
-/** An error which occurred while handling media in an HTML media element based on HTMLMediaElement, such as <audio> or <video>. */
+/** Un error que ocurrió al manejar medios en un elemento de medios HTML basado en HTMLMediaElement, como <audio> o <video>. */
 interface MediaError {
     readonly code: number;
     readonly message: string;
@@ -9674,7 +9674,7 @@ declare var MediaError: {
     readonly MEDIA_ERR_SRC_NOT_SUPPORTED: number;
 };
 
-/** This EncryptedMediaExtensions API interface contains the content and related data when the content decryption module generates a message for the session. */
+/** Esta interfaz API de EncryptedMediaExtensions mantiene el contenido y los datos relacionados cuando el módulo de descifrado de contenido genera un mensaje para la sesión. */
 interface MediaKeyMessageEvent extends Event {
     readonly message: ArrayBuffer;
     readonly messageType: MediaKeyMessageType;
@@ -9690,7 +9690,7 @@ interface MediaKeySessionEventMap {
     "message": MediaKeyMessageEvent;
 }
 
-/** This EncryptedMediaExtensions API interface represents a context for message exchange with a content decryption module (CDM). */
+/** Esta interfaz API de EncryptedMediaExtensions representa un contexto para el intercambio de mensajes con un módulo de descifrado de contenido (CDM). */
 interface MediaKeySession extends EventTarget {
     readonly closed: Promise<undefined>;
     readonly expiration: number;
@@ -9714,7 +9714,7 @@ declare var MediaKeySession: {
     new(): MediaKeySession;
 };
 
-/** This EncryptedMediaExtensions API interface is a read-only map of media key statuses by key IDs. */
+/** Esta interfaz API de EncryptedMediaExtensions es un mapa de solo lectura de los estados de las claves multimedia por ID de clave. */
 interface MediaKeyStatusMap {
     readonly size: number;
     get(keyId: BufferSource): MediaKeyStatus | undefined;
@@ -9727,7 +9727,7 @@ declare var MediaKeyStatusMap: {
     new(): MediaKeyStatusMap;
 };
 
-/** This EncryptedMediaExtensions API interface provides access to a Key System for decryption and/or a content protection provider. You can request an instance of this object using the Navigator.requestMediaKeySystemAccess method. */
+/** Esta interfaz API de EncryptedMediaExtensions brinda acceso a un sistema de claves para el descifrado y/o un proveedor de protección de contenido. Puedes solicitar una instancia de este objeto mediante el método Navigator.requestMediaKeySystemAccess. */
 interface MediaKeySystemAccess {
     readonly keySystem: string;
     createMediaKeys(): Promise<MediaKeys>;
@@ -9739,7 +9739,7 @@ declare var MediaKeySystemAccess: {
     new(): MediaKeySystemAccess;
 };
 
-/** This EncryptedMediaExtensions API interface the represents a set of keys that an associated HTMLMediaElement can use for decryption of media data during playback. */
+/** Esta interfaz API de EncryptedMediaExtensions representa un conjunto de claves que un HTMLMediaElement asociado puede usar para descifrar los datos multimedia durante la reproducción. */
 interface MediaKeys {
     createSession(sessionType?: MediaKeySessionType): MediaKeySession;
     setServerCertificate(serverCertificate: BufferSource): Promise<boolean>;
@@ -9781,7 +9781,7 @@ interface MediaQueryListEventMap {
     "change": MediaQueryListEvent;
 }
 
-/** Stores information on a media query applied to a document, and handles sending notifications to listeners when the media query state change (i.e. when the media query test starts or stops evaluating to true). */
+/** Almacena información sobre una consulta de medios aplicada a un documento y maneja el envío de notificaciones a los escuchas cuando cambia el estado de la consulta de medios (es decir, cuando la prueba de consulta de medios comienza o deja de evaluarse como true). */
 interface MediaQueryList extends EventTarget {
     readonly matches: boolean;
     readonly media: string;
@@ -9876,7 +9876,7 @@ interface MediaSourceEventMap {
     "sourceopen": Event;
 }
 
-/** This Media Source Extensions API interface represents a source of media data for an HTMLMediaElement object. A MediaSource object can be attached to a HTMLMediaElement to be played in the user agent. */
+/** Esta API de la interfaz Media Source Extensions representa una fuente de datos multimedia para un objeto HTMLMediaElement. Un objeto MediaSource se puede adjuntar a un HTMLMediaElement para que se reproduzca en el agente de usuario. */
 interface MediaSource extends EventTarget {
     readonly activeSourceBuffers: SourceBufferList;
     duration: number;
@@ -9907,7 +9907,7 @@ interface MediaStreamEventMap {
     "removetrack": MediaStreamTrackEvent;
 }
 
-/** A stream of media content. A stream consists of several tracks such as video or audio tracks. Each track is specified as an instance of MediaStreamTrack. */
+/** Un flujo de contenido multimedia. Una transmisión consta de varias pistas, como pistas de vídeo o de audio. Cada pista se especifica como una instancia de MediaStreamTrack. */
 interface MediaStream extends EventTarget {
     readonly active: boolean;
     readonly id: string;
@@ -9942,7 +9942,7 @@ declare var MediaStreamAudioDestinationNode: {
     new(context: AudioContext, options?: AudioNodeOptions): MediaStreamAudioDestinationNode;
 };
 
-/** A type of AudioNode which operates as an audio source whose media is received from a MediaStream obtained using the WebRTC or Media Capture and Streams APIs. */
+/** Un tipo de AudioNode que funciona como una fuente de audio cuyos medios se reciben de un MediaStream obtenido mediante WebRTC o las APIs de captura y transmisión de medios. */
 interface MediaStreamAudioSourceNode extends AudioNode {
     readonly mediaStream: MediaStream;
 }
@@ -9958,7 +9958,7 @@ interface MediaStreamTrackEventMap {
     "unmute": Event;
 }
 
-/** A single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well. */
+/** Una sola pista de medios dentro de una secuencia; por lo general, se trata de pistas de audio o vídeo, pero también pueden existir otros tipos de pistas. */
 interface MediaStreamTrack extends EventTarget {
     contentHint: string;
     enabled: boolean;
@@ -9987,7 +9987,7 @@ declare var MediaStreamTrack: {
     new(): MediaStreamTrack;
 };
 
-/** Events which indicate that a MediaStream has had tracks added to or removed from the stream through calls to Media Stream API methods. These events are sent to the stream when these changes occur. */
+/** Eventos que indican que se han agregado o eliminado pistas de MediaStream a través de llamadas a los métodos de la API de Media Stream. Estos eventos se envían a la secuencia cuando se producen estos cambios. */
 interface MediaStreamTrackEvent extends Event {
     readonly track: MediaStreamTrack;
 }
@@ -9997,14 +9997,14 @@ declare var MediaStreamTrackEvent: {
     new(type: string, eventInitDict: MediaStreamTrackEventInit): MediaStreamTrackEvent;
 };
 
-/** This Channel Messaging API interface allows us to create a new message channel and send data through it via its two MessagePort properties. */
+/** Esta interfaz API de Channel Messaging nos permite crear un nuevo canal de mensajes y enviar datos a través de él a través de sus dos propiedades MessagePort. */
 interface MessageChannel {
     /**
-     * Returns the first MessagePort object.
+     * Devuelve el primer objeto MessagePort.
      */
     readonly port1: MessagePort;
     /**
-     * Returns the second MessagePort object.
+     * Devuelve el segundo objeto MessagePort.
      */
     readonly port2: MessagePort;
 }
@@ -10014,26 +10014,26 @@ declare var MessageChannel: {
     new(): MessageChannel;
 };
 
-/** A message received by a target object. */
+/** Un mensaje recibido por un objeto destino. */
 interface MessageEvent<T = any> extends Event {
     /**
-     * Returns the data of the message.
+     * Devuelve los datos del mensaje.
      */
     readonly data: T;
     /**
-     * Returns the last event ID string, for server-sent events.
+     * Devuelve la cadena del ID del último evento, para eventos enviados por el servidor.
      */
     readonly lastEventId: string;
     /**
-     * Returns the origin of the message, for server-sent events and cross-document messaging.
+     * Devuelve el origen del mensaje, para eventos enviados por el servidor y mensajería entre documentos.
      */
     readonly origin: string;
     /**
-     * Returns the MessagePort array sent with the message, for cross-document messaging and channel messaging.
+     * Devuelve el arreglo MessagePort enviada con el mensaje, para mensajería entre documentos y mensajería de canal.
      */
     readonly ports: ReadonlyArray<MessagePort>;
     /**
-     * Returns the WindowProxy of the source window, for cross-document messaging, and the MessagePort being attached, in the connect event fired at SharedWorkerGlobalScope objects.
+     * Devuelve el WindowProxy de la ventana origen, para la mensajería entre documentos, y el MessagePort que se adjunta, en el evento de conexión activado en los objetos SharedWorkerGlobalScope.
      */
     readonly source: MessageEventSource | null;
     /** @deprecated */
@@ -10050,23 +10050,23 @@ interface MessagePortEventMap {
     "messageerror": MessageEvent;
 }
 
-/** This Channel Messaging API interface represents one of the two ports of a MessageChannel, allowing messages to be sent from one port and listening out for them arriving at the other. */
+/** Esta API de la interfaz Channel Messaging representa uno de los dos puertos de un MessageChannel, lo que permite que los mensajes se envíen desde un puerto y escucha si llegan al otro. */
 interface MessagePort extends EventTarget {
     onmessage: ((this: MessagePort, ev: MessageEvent) => any) | null;
     onmessageerror: ((this: MessagePort, ev: MessageEvent) => any) | null;
     /**
-     * Disconnects the port, so that it is no longer active.
+     * Desconecta el puerto, para que ya no esté activo.
      */
     close(): void;
     /**
-     * Posts a message through the channel. Objects listed in transfer are transferred, not just cloned, meaning that they are no longer usable on the sending side.
+     * Publica un mensaje a través del canal. Los objetos enumerados en la transferencia se transfieren, no solo se clonan, lo que significa que ya no se pueden utilizar en el lado de envío.
      *
-     * Throws a "DataCloneError" DOMException if transfer contains duplicate objects or port, or if message could not be cloned.
+     * Lanza una DOMException "DataCloneError" si la transferencia contiene objetos o puertos duplicados, o si el mensaje no se pudo clonar.
      */
     postMessage(message: any, transfer: Transferable[]): void;
     postMessage(message: any, options?: PostMessageOptions): void;
     /**
-     * Begins dispatching messages received on the port.
+     * Comienza a enviar mensajes recibidos en el puerto.
      */
     start(): void;
     addEventListener<K extends keyof MessagePortEventMap>(type: K, listener: (this: MessagePort, ev: MessagePortEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -10111,7 +10111,7 @@ declare var MimeType: {
     new(): MimeType;
 };
 
-/** Returns an array of MimeType instances, each of which contains information about a supported browser plugins. This object is returned by NavigatorPlugins.mimeTypes. */
+/** Devuelve un arreglo de instancias de MimeType, cada una de las cuales contiene información sobre complementos de navegador compatibles. Este objeto lo devuelve NavigatorPlugins.mimeTypes. */
 /** @deprecated */
 interface MimeTypeArray {
     /** @deprecated */
@@ -10129,7 +10129,7 @@ declare var MimeTypeArray: {
     new(): MimeTypeArray;
 };
 
-/** Events that occur due to the user interacting with a pointing device (such as a mouse). Common events using this interface include click, dblclick, mouseup, mousedown. */
+/** Eventos que ocurren debido a que el usuario interactúa con un dispositivo señalador (como un mouse). Los eventos comunes que usan esta interfaz incluyen clic, doble clic, mouseup, mousedown. */
 interface MouseEvent extends UIEvent {
     readonly altKey: boolean;
     readonly button: number;
@@ -10160,8 +10160,8 @@ declare var MouseEvent: {
     new(type: string, eventInitDict?: MouseEventInit): MouseEvent;
 };
 
-/** Provides event properties that are specific to modifications to the Document Object Model (DOM) hierarchy and nodes.
- * @deprecated DOM4 [DOM] provides a new mechanism using a MutationObserver interface which addresses the use cases that mutation events solve, but in a more performant manner. Thus, this specification describes mutation events for reference and completeness of legacy behavior, but deprecates the use of the MutationEvent interface. */
+/** Proporciona propiedades de eventos que son específicas de las modificaciones en la jerarquía y los nodos del Modelo de objetos de documento (DOM).
+ * @deprecated DOM4 [DOM] proporciona un nuevo mecanismo que utiliza una interfaz MutationObserver que aborda los casos de uso que resuelven los eventos de mutación, pero de una manera más eficaz. Por lo tanto, esta especificación describe eventos de mutación como referencia y compleción del comportamiento heredado, pero desaprueba el uso de la interfaz MutationEvent. */
 interface MutationEvent extends Event {
     readonly attrChange: number;
     readonly attrName: string;
@@ -10182,20 +10182,20 @@ declare var MutationEvent: {
     readonly REMOVAL: number;
 };
 
-/** Provides the ability to watch for changes being made to the DOM tree. It is designed as a replacement for the older Mutation Events feature which was part of the DOM3 Events specification. */
+/** Brinda la capacidad de observar los cambios que se realizan en el árbol DOM. Está diseñado como un reemplazo para la función anterior de eventos de mutación que formaba parte de la especificación de eventos DOM3. */
 interface MutationObserver {
     /**
-     * Stops observer from observing any mutations. Until the observe() method is used again, observer's callback will not be invoked.
+     * Evita que el vigía observe cualquier mutación. Hasta que se vuelva a utilizar el método observe(), no se invocará la devolución de llamada del observador.
      */
     disconnect(): void;
     /**
-     * Instructs the user agent to observe a given target (a node) and report any mutations based on the criteria given by options (an object).
+     * Indica al agente de usuario que observe un objetivo dado (un nodo) e informe cualquier mutación según los criterios proporcionados por las opciones (un objeto).
      *
-     * The options argument allows for setting mutation observation options via object members.
+     * El argumento de opciones permite establecer opciones de observación de mutaciones a través de miembros de objetos.
      */
     observe(target: Node, options?: MutationObserverInit): void;
     /**
-     * Empties the record queue and returns what was in there.
+     * Vacía la cola de registros y devuelve lo que había allí.
      */
     takeRecords(): MutationRecord[];
 }
@@ -10205,42 +10205,42 @@ declare var MutationObserver: {
     new(callback: MutationCallback): MutationObserver;
 };
 
-/** A MutationRecord represents an individual DOM mutation. It is the object that is passed to MutationObserver's callback. */
+/** Un MutationRecord representa una mutación DOM individual. Es el objeto que se pasa a la devolución de llamada de MutationObserver. */
 interface MutationRecord {
     /**
-     * Return the nodes added and removed respectively.
+     * Devuelve los nodos agregados y eliminados respectivamente.
      */
     readonly addedNodes: NodeList;
     /**
-     * Returns the local name of the changed attribute, and null otherwise.
+     * Devuelve el nombre local del atributo modificado y nulo en caso contrario.
      */
     readonly attributeName: string | null;
     /**
-     * Returns the namespace of the changed attribute, and null otherwise.
+     * Devuelve el espacio de nombres del atributo modificado y nulo en caso contrario.
      */
     readonly attributeNamespace: string | null;
     /**
-     * Return the previous and next sibling respectively of the added or removed nodes, and null otherwise.
+     * Devuelve el hermano anterior y siguiente, respectivamente, de los nodos agregados o eliminados, y null en caso contrario.
      */
     readonly nextSibling: Node | null;
     /**
-     * The return value depends on type. For "attributes", it is the value of the changed attribute before the change. For "characterData", it is the data of the changed node before the change. For "childList", it is null.
+     * El valor devuelto depende del tipo. Para "atributos", es el valor del atributo cambiado antes del cambio. Para "characterData", son los datos del nodo cambiado antes del cambio. Para "childList", es null.
      */
     readonly oldValue: string | null;
     /**
-     * Return the previous and next sibling respectively of the added or removed nodes, and null otherwise.
+     * Devuelve el hermano anterior y siguiente, respectivamente, de los nodos agregados o eliminados, y null en caso contrario.
      */
     readonly previousSibling: Node | null;
     /**
-     * Return the nodes added and removed respectively.
+     * Devuelve los nodos agregados y eliminados respectivamente.
      */
     readonly removedNodes: NodeList;
     /**
-     * Returns the node the mutation affected, depending on the type. For "attributes", it is the element whose attribute changed. For "characterData", it is the CharacterData node. For "childList", it is the node whose children changed.
+     * Devuelve el nodo afectado por la mutación, según el tipo. Para "atributos", es el elemento cuyo atributo cambió. Para "characterData", es el nodo CharacterData. Para "childList", es el nodo cuyos hijos cambiaron.
      */
     readonly target: Node;
     /**
-     * Returns "attributes" if it was an attribute mutation. "characterData" if it was a mutation to a CharacterData node. And "childList" if it was a mutation to the tree of nodes.
+     * Devuelve "atributos" si se trata de una mutación de atributo. "characterData" si fue una mutación a un nodo CharacterData. Y "childList" si fuera una mutación al árbol de nodos.
      */
     readonly type: MutationRecordType;
 }
@@ -10250,7 +10250,7 @@ declare var MutationRecord: {
     new(): MutationRecord;
 };
 
-/** A collection of Attr objects. Objects inside a NamedNodeMap are not in any particular order, unlike NodeList, although they may be accessed by an index as in an array. */
+/** Una colección de objetos Attr. Los objetos dentro de NamedNodeMap no están en ningún orden en particular, a diferencia de NodeList, aunque se puede acceder a ellos mediante un índice como en un arreglo. */
 interface NamedNodeMap {
     readonly length: number;
     getNamedItem(qualifiedName: string): Attr | null;
@@ -10268,7 +10268,7 @@ declare var NamedNodeMap: {
     new(): NamedNodeMap;
 };
 
-/** The state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities. */
+/** El estado y la identidad del agente de usuario. Permite que los scripts lo consulten y se registren para realizar algunas actividades. */
 interface Navigator extends NavigatorAutomationInformation, NavigatorConcurrentHardware, NavigatorContentUtils, NavigatorCookies, NavigatorID, NavigatorLanguage, NavigatorNetworkInformation, NavigatorOnLine, NavigatorPlugins, NavigatorStorage {
     readonly clipboard: Clipboard;
     readonly credentials: CredentialsContainer;
@@ -10364,38 +10364,38 @@ declare var NetworkInformation: {
     new(): NetworkInformation;
 };
 
-/** Node is an interface from which a number of DOM API object types inherit. It allows those types to be treated similarly; for example, inheriting the same set of methods, or being tested in the same way. */
+/** El nodo es una interfaz de la que heredan una serie de tipos de objetos API DOM. Permite que esos tipos sean tratados de manera similar; por ejemplo, heredar el mismo conjunto de métodos o probarse de la misma manera. */
 interface Node extends EventTarget {
     /**
-     * Returns node's node document's document base URL.
+     * Devuelve la URL base del documento del document de nodo del nodo.
      */
     readonly baseURI: string;
     /**
-     * Returns the children.
+     * Devuelve a los hijos.
      */
     readonly childNodes: NodeListOf<ChildNode & Node>;
     /**
-     * Returns the first child.
+     * Devuelve el primer hijo.
      */
     readonly firstChild: (ChildNode & Node) | null;
     /**
-     * Returns true if node is connected and false otherwise.
+     * Devuelve true si el nodo está conectado y false en caso contrario.
      */
     readonly isConnected: boolean;
     /**
-     * Returns the last child.
+     * Devuelve el último hijo.
      */
     readonly lastChild: (ChildNode & Node) | null;
     /**
-     * Returns the next sibling.
+     * Devuelve el siguiente hermano.
      */
     readonly nextSibling: (ChildNode & Node) | null;
     /**
-     * Returns a string appropriate for the type of node.
+     * Devuelve una cadena apropiada para el tipo de nodo.
      */
     readonly nodeName: string;
     /**
-     * Returns the type of node.
+     * Devuelve el tipo de nodo.
      */
     readonly nodeType: number;
     nodeValue: string | null;
@@ -10422,19 +10422,19 @@ interface Node extends EventTarget {
      */
     cloneNode(deep?: boolean): Node;
     /**
-     * Returns a bitmask indicating the position of other relative to node.
+     * Devuelve una máscara de bits que indica la posición de otro en relación con el nodo.
      */
     compareDocumentPosition(other: Node): number;
     /**
-     * Returns true if other is an inclusive descendant of node, and false otherwise.
+     * Devuelve true si otro es un descendiente inclusivo de nodo y false en caso contrario.
      */
     contains(other: Node | null): boolean;
     /**
-     * Returns node's root.
+     * Devuelve la raíz del nodo.
      */
     getRootNode(options?: GetRootNodeOptions): Node;
     /**
-     * Returns whether node has children.
+     * Devuelve si el nodo tiene hijos.
      */
     hasChildNodes(): boolean;
     insertBefore<T extends Node>(node: T, child: Node | null): T;
@@ -10447,7 +10447,7 @@ interface Node extends EventTarget {
     lookupNamespaceURI(prefix: string | null): string | null;
     lookupPrefix(namespace: string | null): string | null;
     /**
-     * Removes empty exclusive Text nodes and concatenates the data of remaining contiguous exclusive Text nodes into the first of their nodes.
+     * Elimina los nodos de texto exclusivos vacíos y concatena los datos de los nodos de texto exclusivos contiguos restantes en el primero de sus nodos.
      */
     normalize(): void;
     removeChild<T extends Node>(child: T): T;
@@ -10466,7 +10466,7 @@ interface Node extends EventTarget {
      */
     readonly DOCUMENT_FRAGMENT_NODE: number;
     /**
-     * node is a document.
+     * nodo es un document.
      */
     readonly DOCUMENT_NODE: number;
     /**
@@ -10506,7 +10506,7 @@ interface Node extends EventTarget {
      */
     readonly PROCESSING_INSTRUCTION_NODE: number;
     /**
-     * node is a Text node.
+     * node es un nodo Text.
      */
     readonly TEXT_NODE: number;
 }
@@ -10528,7 +10528,7 @@ declare var Node: {
      */
     readonly DOCUMENT_FRAGMENT_NODE: number;
     /**
-     * node is a document.
+     * nodo es un document.
      */
     readonly DOCUMENT_NODE: number;
     /**
@@ -10568,12 +10568,12 @@ declare var Node: {
      */
     readonly PROCESSING_INSTRUCTION_NODE: number;
     /**
-     * node is a Text node.
+     * node es un nodo Text.
      */
     readonly TEXT_NODE: number;
 };
 
-/** An iterator over the members of a list of the nodes in a subtree of the DOM. The nodes will be returned in document order. */
+/** Un iterador sobre los miembros de una lista de nodos en un subárbol del DOM. Los nodos se devolverán en el orden del documento. */
 interface NodeIterator {
     readonly filter: NodeFilter | null;
     readonly pointerBeforeReferenceNode: boolean;
@@ -10591,20 +10591,20 @@ declare var NodeIterator: {
     new(): NodeIterator;
 };
 
-/** NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll(). */
+/** Los objetos NodeList son colecciones de nodos, generalmente devueltos por propiedades como Node.childNodes y métodos como document.querySelectorAll(). */
 interface NodeList {
     /**
-     * Returns the number of nodes in the collection.
+     * Devuelve el número de nodos de la colección.
      */
     readonly length: number;
     /**
-     * Returns the node with index index from the collection. The nodes are sorted in tree order.
+     * Devuelve el nodo con índice index de la colección. Los nodos se ordenan en orden de árbol.
      */
     item(index: number): Node | null;
     /**
-     * Performs the specified action for each node in an list.
-     * @param callbackfn  A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the list.
-     * @param thisArg  An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+     * Realiza la acción especificada para cada nodo en una lista.
+     * @param callbackfn Una función que acepta hasta tres argumentos. forEach llama a la función callbackfn una vez para cada elemento de la lista.
+     * @param thisArg Un objeto al que se puede referir esta palabra clave en la función callbackfn. Si se omite thisArg, se utiliza undefined como este valor.
      */
     forEach(callbackfn: (value: Node, key: number, parent: NodeList) => void, thisArg?: any): void;
     [index: number]: Node;
@@ -10618,9 +10618,9 @@ declare var NodeList: {
 interface NodeListOf<TNode extends Node> extends NodeList {
     item(index: number): TNode;
     /**
-     * Performs the specified action for each node in an list.
-     * @param callbackfn  A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the list.
-     * @param thisArg  An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+     * Realiza la acción especificada para cada nodo en una lista.
+     * @param callbackfn Una función que acepta hasta tres argumentos. forEach llama a la función callbackfn una vez para cada elemento de la lista.
+     * @param thisArg Un objeto al que se puede referir esta palabra clave en la función callbackfn. Si se omite thisArg, se utiliza undefined como este valor.
      */
     forEach(callbackfn: (value: TNode, key: number, parent: NodeListOf<TNode>) => void, thisArg?: any): void;
     [index: number]: TNode;
@@ -10651,7 +10651,7 @@ interface NotificationEventMap {
     "show": Event;
 }
 
-/** This Notifications API interface is used to configure and display desktop notifications to the user. */
+/** Esta API de la interfaz Notifications se utiliza para configurar y mostrar notificaciones de escritorio al usuario. */
 interface Notification extends EventTarget {
     readonly body: string;
     readonly data: any;
@@ -10678,32 +10678,32 @@ declare var Notification: {
     requestPermission(deprecatedCallback?: NotificationPermissionCallback): Promise<NotificationPermission>;
 };
 
-/** The OES_element_index_uint extension is part of the WebGL API and adds support for gl.UNSIGNED_INT types to WebGLRenderingContext.drawElements(). */
+/** La extensión OES_element_index_uint es parte de la API de WebGL y agrega soporte para los tipos gl.UNSIGNED_INT a WebGLRenderingContext.drawElements(). */
 interface OES_element_index_uint {
 }
 
 interface OES_fbo_render_mipmap {
 }
 
-/** The OES_standard_derivatives extension is part of the WebGL API and adds the GLSL derivative functions dFdx, dFdy, and fwidth. */
+/** La extensión OES_standard_derivatives es parte de la API de WebGL y agrega las funciones derivadas de GLSL dFdx, dFdy y fwidth. */
 interface OES_standard_derivatives {
     readonly FRAGMENT_SHADER_DERIVATIVE_HINT_OES: GLenum;
 }
 
-/** The OES_texture_float extension is part of the WebGL API and exposes floating-point pixel types for textures. */
+/** La extensión OES_texture_float es parte de la API de WebGL y expone tipos de píxeles de coma flotante para texturas. */
 interface OES_texture_float {
 }
 
-/** The OES_texture_float_linear extension is part of the WebGL API and allows linear filtering with floating-point pixel types for textures. */
+/** La extensión OES_texture_float_linear es parte de la API de WebGL y permite el filtrado lineal con tipos de píxeles de coma flotante para texturas. */
 interface OES_texture_float_linear {
 }
 
-/** The OES_texture_half_float extension is part of the WebGL API and adds texture formats with 16- (aka half float) and 32-bit floating-point components. */
+/** La extensión OES_texture_half_float es parte de la API WebGL y agrega formatos de textura con 16- (también conocido como medio flotante) y componentes de coma flotante de 32 bits. */
 interface OES_texture_half_float {
     readonly HALF_FLOAT_OES: GLenum;
 }
 
-/** The OES_texture_half_float_linear extension is part of the WebGL API and allows linear filtering with half floating-point pixel types for textures. */
+/** La extensión OES_texture_half_float_linear es parte de la API de WebGL y permite el filtrado lineal con tipos de píxeles de medio punto flotante para texturas. */
 interface OES_texture_half_float_linear {
 }
 
@@ -10723,7 +10723,7 @@ interface OVR_multiview2 {
     readonly MAX_VIEWS_OVR: GLenum;
 }
 
-/** The Web Audio API OfflineAudioCompletionEvent interface represents events that occur when the processing of an OfflineAudioContext is terminated. The complete event implements this interface. */
+/** La interfaz OfflineAudioCompletionEvent de Web Audio API representa eventos que ocurren cuando finaliza el procesamiento de un OfflineAudioContext. El evento completo implementa esta interfaz. */
 interface OfflineAudioCompletionEvent extends Event {
     readonly renderedBuffer: AudioBuffer;
 }
@@ -10737,7 +10737,7 @@ interface OfflineAudioContextEventMap extends BaseAudioContextEventMap {
     "complete": OfflineAudioCompletionEvent;
 }
 
-/** An AudioContext interface representing an audio-processing graph built from linked together AudioNodes. In contrast with a standard AudioContext, an OfflineAudioContext doesn't render the audio to the device hardware; instead, it generates it, as fast as it can, and outputs the result to an AudioBuffer. */
+/** Una interfaz de AudioContext que representa un gráfico de procesamiento de audio creado a partir de AudioNodes vinculados. A diferencia de un AudioContext estándar, un OfflineAudioContext no representa el audio en el hardware del dispositivo; en cambio, lo genera, tan rápido como puede, y envía el resultado a un AudioBuffer. */
 interface OfflineAudioContext extends BaseAudioContext {
     readonly length: number;
     oncomplete: ((this: OfflineAudioContext, ev: OfflineAudioCompletionEvent) => any) | null;
@@ -10756,7 +10756,7 @@ declare var OfflineAudioContext: {
     new(numberOfChannels: number, length: number, sampleRate: number): OfflineAudioContext;
 };
 
-/** The OscillatorNode interface represents a periodic waveform, such as a sine wave. It is an AudioScheduledSourceNode audio-processing module that causes a specified frequency of a given wave to be created—in effect, a constant tone. */
+/** La interfaz OscillatorNode representa una forma de onda periódica, como una onda sinusoidal. Es un módulo de procesamiento de audio AudioScheduledSourceNode que hace que se cree una frecuencia específica de una onda dada; en efecto, un tono constante. */
 interface OscillatorNode extends AudioScheduledSourceNode {
     readonly detune: AudioParam;
     readonly frequency: AudioParam;
@@ -10782,19 +10782,19 @@ declare var OverconstrainedError: {
     new(constraint: string, message?: string): OverconstrainedError;
 };
 
-/** The PageTransitionEvent is fired when a document is being loaded or unloaded. */
+/** PageTransitionEvent se activa cuando se carga o descarga un documento. */
 interface PageTransitionEvent extends Event {
     /**
-     * For the pageshow event, returns false if the page is newly being loaded (and the load event will fire). Otherwise, returns true.
+     * Para el evento pageshow, devuelve false si la página se está cargando recientemente (y se activará el evento de carga). De lo contrario, devuelve true.
      *
-     * For the pagehide event, returns false if the page is going away for the last time. Otherwise, returns true, meaning that (if nothing conspires to make the page unsalvageable) the page might be reused if the user navigates back to this page.
+     * Para el evento pagehide, devuelve false si la página desaparece por última vez. De lo contrario, devuelve true, lo que significa que (si nada conspira para que la página sea insalvable) la página se podría reutilizar si el usuario vuelve a navegar a esta página.
      *
-     * Things that can cause the page to be unsalvageable include:
+     * Las cosas que pueden hacer que la página sea insalvable incluyen:
      *
-     * The user agent decided to not keep the Document alive in a session history entry after unload
-     * Having iframes that are not salvageable
-     * Active WebSocket objects
-     * Aborting a Document
+     * El agente de usuario decidió no mantener vivo el documento en una entrada del historial de sesión después de la descarga.
+     * Tener iframes que no son recuperables
+     * Objetos WebSocket activos
+     * Abortar un Documento
      */
     readonly persisted: boolean;
 }
@@ -10804,7 +10804,7 @@ declare var PageTransitionEvent: {
     new(type: string, eventInitDict?: PageTransitionEventInit): PageTransitionEvent;
 };
 
-/** A PannerNode always has exactly one input and one output: the input can be mono or stereo but the output is always stereo (2 channels); you can't have panning effects without at least two audio channels! */
+/** Un PannerNode siempre tiene exactamente una entrada y una salida: la entrada puede ser mono o estéreo pero la salida siempre es estéreo (2 canales); ¡no puede tener efectos panorámicos sin al menos dos canales de audio! */
 interface PannerNode extends AudioNode {
     coneInnerAngle: number;
     coneOuterAngle: number;
@@ -10834,25 +10834,25 @@ declare var PannerNode: {
 interface ParentNode {
     readonly childElementCount: number;
     /**
-     * Returns the child elements.
+     * Devuelve los elementos secundarios.
      */
     readonly children: HTMLCollection;
     /**
-     * Returns the first child that is an element, and null otherwise.
+     * Devuelve el primer hijo que es un elemento y null en caso contrario.
      */
     readonly firstElementChild: Element | null;
     /**
-     * Returns the last child that is an element, and null otherwise.
+     * Devuelve el último hijo que es un elemento y null en caso contrario.
      */
     readonly lastElementChild: Element | null;
     /**
-     * Inserts nodes after the last child of node, while replacing strings in nodes with equivalent Text nodes.
+     * Inserta nodos después del último hijo del nodo, mientras reemplaza cadenas en nodos con nodos de texto equivalentes.
      *
      * Lanza una DOMException "HierarchyRequestError" si se violan las restricciones del árbol de nodos.
      */
     append(...nodes: (Node | string)[]): void;
     /**
-     * Inserts nodes before the first child of node, while replacing strings in nodes with equivalent Text nodes.
+     * Inserta nodos antes del primer hijo del nodo, mientras reemplaza cadenas en nodos con nodos de texto equivalentes.
      *
      * Lanza una DOMException "HierarchyRequestError" si se violan las restricciones del árbol de nodos.
      */
@@ -10872,17 +10872,17 @@ interface ParentNode {
     querySelectorAll<K extends keyof SVGElementTagNameMap>(selectors: K): NodeListOf<SVGElementTagNameMap[K]>;
     querySelectorAll<E extends Element = Element>(selectors: string): NodeListOf<E>;
     /**
-     * Replace all children of node with nodes, while replacing strings in nodes with equivalent Text nodes.
+     * Reemplaza todos los elementos secundarios del nodo con nodos, mientras reemplaza las cadenas en los nodos con nodos de texto equivalentes.
      *
      * Lanza una DOMException "HierarchyRequestError" si se violan las restricciones del árbol de nodos.
      */
     replaceChildren(...nodes: (Node | string)[]): void;
 }
 
-/** This Canvas 2D API interface is used to declare a path that can then be used on a CanvasRenderingContext2D object. The path methods of the CanvasRenderingContext2D interface are also present on this interface, which gives you the convenience of being able to retain and replay your path whenever desired. */
+/** Esta API de la interfaz Canvas 2D se usa para declarar una ruta que luego se puede usar en un objeto CanvasRenderingContext2D. Los métodos de ruta de la interfaz CanvasRenderingContext2D también están presentes en esta interfaz, lo que te brinda la comodidad de poder retener y reproducir tu ruta cuando lo desees. */
 interface Path2D extends CanvasPath {
     /**
-     * Adds to the path the path given by the argument.
+     * Agrega al path la ruta dada por el argumento.
      */
     addPath(path: Path2D, transform?: DOMMatrix2DInit): void;
 }
@@ -10892,7 +10892,7 @@ declare var Path2D: {
     new(path?: Path2D | string): Path2D;
 };
 
-/** This Payment Request API interface is used to store shipping or payment address information. */
+/** Esta API de la interfaz de Payment Request se utiliza para almacenar información de dirección de envío o pago. */
 /** @deprecated */
 interface PaymentAddress {
     /** @deprecated */
@@ -10939,7 +10939,7 @@ interface PaymentRequestEventMap {
     "paymentmethodchange": Event;
 }
 
-/** This Payment Request API interface is the primary access point into the API, and lets web content and apps accept payments from the end user. */
+/** Esta API de la interfaz Payment Request es el punto de acceso principal a la API y permite que el contenido web y las aplicaciones acepten pagos del usuario final. */
 interface PaymentRequest extends EventTarget {
     readonly id: string;
     onpaymentmethodchange: ((this: PaymentRequest, ev: Event) => any) | null;
@@ -10957,7 +10957,7 @@ declare var PaymentRequest: {
     new(methodData: PaymentMethodData[], details: PaymentDetailsInit): PaymentRequest;
 };
 
-/** This Payment Request API interface enables a web page to update the details of a PaymentRequest in response to a user action. */
+/** Esta API de la interfaz de Payment Request permite que una página web actualice los detalles de una PaymentRequest en respuesta a una acción del usuario. */
 interface PaymentRequestUpdateEvent extends Event {
     updateWith(detailsPromise: PaymentDetailsUpdate | PromiseLike<PaymentDetailsUpdate>): void;
 }
@@ -10967,7 +10967,7 @@ declare var PaymentRequestUpdateEvent: {
     new(type: string, eventInitDict?: PaymentRequestUpdateEventInit): PaymentRequestUpdateEvent;
 };
 
-/** This Payment Request API interface is returned after a user selects a payment method and approves a payment request. */
+/** Esta API de la interfaz Payment Request se devuelve después de que un usuario selecciona un método de pago y aprueba una solicitud de pago. */
 interface PaymentResponse extends EventTarget {
     readonly details: any;
     readonly methodName: string;
@@ -10986,7 +10986,7 @@ interface PerformanceEventMap {
     "resourcetimingbufferfull": Event;
 }
 
-/** Provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API. */
+/** Proporciona acceso a información relacionada con el rendimiento de la página actual. Es parte de la API de High Resolution Time, pero está mejorada por la API  de rendimiento de la línea de tiempo, la API de Navigation Timing, la API de User Timing y la API de Resource Timing. */
 interface Performance extends EventTarget {
     /** @deprecated */
     readonly navigation: PerformanceNavigation;
@@ -11016,7 +11016,7 @@ declare var Performance: {
     new(): Performance;
 };
 
-/** Encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image). */
+/** Encapsula una única métrica de rendimiento que forma parte del cronograma de rendimiento. Una entrada de rendimiento se puede crear directamente haciendo una marca o medida de rendimiento (por ejemplo, llamando al método mark()) en un punto explícito de una aplicación. Las entradas de rendimiento también se crean de forma indirecta, como cargar un recurso (como una imagen). */
 interface PerformanceEntry {
     readonly duration: DOMHighResTimeStamp;
     readonly entryType: string;
@@ -11042,7 +11042,7 @@ declare var PerformanceEventTiming: {
     new(): PerformanceEventTiming;
 };
 
-/** PerformanceMark is an abstract interface for PerformanceEntry objects with an entryType of "mark". Entries of this type are created by calling performance.mark() to add a named DOMHighResTimeStamp (the mark) to the browser's performance timeline. */
+/** PerformanceMark es una interfaz abstracta para objetos PerformanceEntry con un tipo de entrada "mark". Las entradas de este tipo se crean llamando a performance.mark() para agregar un DOMHighResTimeStamp (la marca) con nombre a la línea de tiempo de rendimiento del navegador. */
 interface PerformanceMark extends PerformanceEntry {
     readonly detail: any;
 }
@@ -11052,7 +11052,7 @@ declare var PerformanceMark: {
     new(markName: string, markOptions?: PerformanceMarkOptions): PerformanceMark;
 };
 
-/** PerformanceMeasure is an abstract interface for PerformanceEntry objects with an entryType of "measure". Entries of this type are created by calling performance.measure() to add a named DOMHighResTimeStamp (the measure) between two marks to the browser's performance timeline. */
+/** PerformanceMeasure es una interfaz abstracta para objetos PerformanceEntry con un tipo de entrada de "measure". Las entradas de este tipo se crean llamando a performance.measure() para agregar un DOMHighResTimeStamp (la medida) con nombre entre dos marcas en la línea de tiempo de rendimiento del navegador. */
 interface PerformanceMeasure extends PerformanceEntry {
     readonly detail: any;
 }
@@ -11062,8 +11062,8 @@ declare var PerformanceMeasure: {
     new(): PerformanceMeasure;
 };
 
-/** The legacy PerformanceNavigation interface represents information about how the navigation to the current document was done.
- * @deprecated This interface is deprecated in the Navigation Timing Level 2 specification. Please use the PerformanceNavigationTiming interface instead. */
+/** La interfaz heredada de PerformanceNavigation representa información sobre cómo se realizó la navegación al documento actual.
+ * @deprecated Esta interfaz está en desuso en la especificación de nivel 2 de Navigation Timing. Utilice la interfaz PerformanceNavigationTiming en su lugar. */
 interface PerformanceNavigation {
     /** @deprecated */
     readonly redirectCount: number;
@@ -11087,7 +11087,7 @@ declare var PerformanceNavigation: {
     readonly TYPE_RESERVED: number;
 };
 
-/** Provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document. */
+/** Proporciona métodos y propiedades para almacenar y recuperar métricas relacionadas con los eventos de navegación de documentos del navegador. Por ejemplo, esta interfaz se puede utilizar para determinar cuánto tiempo lleva cargar o descargar un documento. */
 interface PerformanceNavigationTiming extends PerformanceResourceTiming {
     readonly domComplete: DOMHighResTimeStamp;
     readonly domContentLoadedEventEnd: DOMHighResTimeStamp;
@@ -11138,7 +11138,7 @@ declare var PerformancePaintTiming: {
     new(): PerformancePaintTiming;
 };
 
-/** Enables retrieval and analysis of detailed network timing data regarding the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource, such as an XMLHttpRequest, <SVG>, image, or script. */
+/** Permite la recuperación y el análisis de datos detallados de temporización de la red con respecto a la carga de los recursos de una aplicación. Una aplicación puede usar las métricas de tiempo para determinar, por ejemplo, el tiempo que se tarda en obtener un recurso específico, como XMLHttpRequest, <SVG>, imagen o script. */
 interface PerformanceResourceTiming extends PerformanceEntry {
     readonly connectEnd: DOMHighResTimeStamp;
     readonly connectStart: DOMHighResTimeStamp;
@@ -11178,8 +11178,8 @@ declare var PerformanceServerTiming: {
     new(): PerformanceServerTiming;
 };
 
-/** A legacy interface kept for backwards compatibility and contains properties that offer performance timing information for various events which occur during the loading and use of the current page. You get a PerformanceTiming object describing your page using the window.performance.timing property.
- * @deprecated This interface is deprecated in the Navigation Timing Level 2 specification. Please use the PerformanceNavigationTiming interface instead. */
+/** Una interfaz heredada que se mantiene para la compatibilidad con versiones anteriores y contiene propiedades que ofrecen información de tiempo de rendimiento para varios eventos que ocurren durante la carga y el uso de la página actual. Obtiene un objeto PerformanceTiming que describe su página usando la propiedad window.performance.timing.
+ * @deprecated Esta interfaz está en desuso en la especificación de nivel 2 de Navigation Timing. Utilice la interfaz PerformanceNavigationTiming en su lugar. */
 interface PerformanceTiming {
     /** @deprecated */
     readonly connectEnd: number;
@@ -11233,7 +11233,7 @@ declare var PerformanceTiming: {
     new(): PerformanceTiming;
 };
 
-/** PeriodicWave has no inputs or outputs; it is used to define custom oscillators when calling OscillatorNode.setPeriodicWave(). The PeriodicWave itself is created/returned by AudioContext.createPeriodicWave(). */
+/** PeriodicWave no tiene entradas ni salidas; se utiliza para definir osciladores personalizados al llamar a OscillatorNode.setPeriodicWave(). El PeriodicWave en sí mismo es creado/devuelto por AudioContext.createPeriodicWave(). */
 interface PeriodicWave {
 }
 
@@ -11288,11 +11288,11 @@ declare var PictureInPictureWindow: {
     new(): PictureInPictureWindow;
 };
 
-/** Provides information about a browser plugin. */
+/** Proporciona información sobre un complemento del navegador. */
 /** @deprecated */
 interface Plugin {
     /**
-     * Returns the plugin's description.
+     * Devuelve la descripción del complemento.
      */
     /** @deprecated */
     readonly description: undefined;
@@ -11327,7 +11327,7 @@ declare var Plugin: {
     new(): Plugin;
 };
 
-/** Used to store a list of Plugin objects describing the available plugins; it's returned by the window.navigator.plugins property. The PluginArray is not a JavaScript array, but has the length property and supports accessing individual items using bracket notation (plugins[2]), as well as via item(index) and namedItem("name") methods. */
+/** Se utiliza para almacenar una lista de complementos que describen los complementos disponibles; lo devuelve la propiedad window.navigator.plugins. PluginArray no es un arreglo de JavaScript, pero tiene la propiedad de length y admite el acceso a elementos individuales mediante la notación de corchetes (plugins[2]), así como a través de los métodos item(index) y namedItem("name"). */
 /** @deprecated */
 interface PluginArray {
     /** @deprecated */
@@ -11347,7 +11347,7 @@ declare var PluginArray: {
     new(): PluginArray;
 };
 
-/** The state of a DOM event produced by a pointer such as the geometry of the contact point, the device type that generated the event, the amount of pressure that was applied on the contact surface, etc. */
+/** El estado de un evento DOM producido por un puntero, como la geometría del punto de contacto, el tipo de dispositivo que generó el evento, la cantidad de presión que se aplicó en la superficie de contacto, etc. */
 interface PointerEvent extends MouseEvent {
     readonly height: number;
     readonly isPrimary: boolean;
@@ -11367,10 +11367,10 @@ declare var PointerEvent: {
     new(type: string, eventInitDict?: PointerEventInit): PointerEvent;
 };
 
-/** PopStateEvent is an event handler for the popstate event on the window. */
+/** PopStateEvent es un controlador de eventos para el evento popstate en la ventana. */
 interface PopStateEvent extends Event {
     /**
-     * Returns a copy of the information that was provided to pushState() or replaceState().
+     * Devuelve una copia de la información proporcionada a pushState() o replaceState().
      */
     readonly state: any;
 }
@@ -11380,7 +11380,7 @@ declare var PopStateEvent: {
     new(type: string, eventInitDict?: PopStateEventInit): PopStateEvent;
 };
 
-/** A processing instruction embeds application-specific instructions in XML which can be ignored by other applications that don't recognize them. */
+/** Una instrucción de procesamiento incorpora instrucciones específicas de la aplicación en XML que pueden ser ignoradas por otras aplicaciones que no las reconocen. */
 interface ProcessingInstruction extends CharacterData, LinkStyle {
     readonly ownerDocument: Document;
     readonly target: string;
@@ -11391,7 +11391,7 @@ declare var ProcessingInstruction: {
     new(): ProcessingInstruction;
 };
 
-/** Events measuring progress of an underlying process, like an HTTP request (for an XMLHttpRequest, or the loading of the underlying resource of an <img>, <audio>, <video>, <style> or <link>). */
+/** Eventos que miden el progreso de un proceso subyacente, como una solicitud HTTP (para un XMLHttpRequest, o la carga del recurso subyacente de un <img>, <audio>, <video>, <style> o <link>). */
 interface ProgressEvent<T extends EventTarget = EventTarget> extends Event {
     readonly lengthComputable: boolean;
     readonly loaded: number;
@@ -11426,7 +11426,7 @@ declare var PublicKeyCredential: {
     isUserVerifyingPlatformAuthenticatorAvailable(): Promise<boolean>;
 };
 
-/** This Push API interface provides a way to receive notifications from third-party servers as well as request URLs for push notifications. */
+/** Esta API de la interfaz de Push proporciona una forma de recibir notificaciones de servidores de terceros, así como de solicitudes de URL para notificaciones push. */
 interface PushManager {
     getSubscription(): Promise<PushSubscription | null>;
     permissionState(options?: PushSubscriptionOptionsInit): Promise<PushPermissionState>;
@@ -11439,7 +11439,7 @@ declare var PushManager: {
     readonly supportedContentEncodings: ReadonlyArray<string>;
 };
 
-/** This Push API interface provides a subcription's URL endpoint and allows unsubscription from a push service. */
+/** Esta API de la interfaz de Push proporciona un punto final de URL de suscripción y permite cancelar la suscripción de un servicio push. */
 interface PushSubscription {
     readonly endpoint: string;
     readonly options: PushSubscriptionOptions;
@@ -11492,7 +11492,7 @@ declare var RTCDTMFSender: {
     new(): RTCDTMFSender;
 };
 
-/** Events sent to indicate that DTMF tones have started or finished playing. This interface is used by the tonechange event. */
+/** Eventos enviados para indicar que los tonos DTMF comenzaron o se terminaron de reproducir. Esta interfaz la utiliza el evento de tonechange. */
 interface RTCDTMFToneChangeEvent extends Event {
     readonly tone: string;
 }
@@ -11570,7 +11570,7 @@ declare var RTCDtlsTransport: {
     new(): RTCDtlsTransport;
 };
 
-/** The RTCIceCandidate interface—part of the WebRTC API—represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection. */
+/** La interfaz RTCIceCandidate, parte de la API de WebRTC, representa una configuración de establecimiento de conectividad a Internet (ICE) candidata que se puede usar para establecer una RTCPeerConnection. */
 interface RTCIceCandidate {
     readonly address: string | null;
     readonly candidate: string;
@@ -11594,7 +11594,7 @@ declare var RTCIceCandidate: {
     new(candidateInitDict?: RTCIceCandidateInit): RTCIceCandidate;
 };
 
-/** Provides access to information about the ICE transport layer over which the data is being sent and received. */
+/** Proporciona acceso a la información sobre la capa de transporte ICE a través de la cual se envían y reciben los datos. */
 interface RTCIceTransport extends EventTarget {
     readonly gatheringState: RTCIceGathererState;
     readonly state: RTCIceTransportState;
@@ -11616,7 +11616,7 @@ interface RTCPeerConnectionEventMap {
     "track": RTCTrackEvent;
 }
 
-/** A WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed. */
+/** Una conexión WebRTC entre la computadora local y un par remoto. Proporciona métodos para conectarse a un par remoto, mantener y monitorear la conexión y cerrar la conexión una vez que ya no se necesita. */
 interface RTCPeerConnection extends EventTarget {
     readonly canTrickleIceCandidates: boolean | null;
     readonly connectionState: RTCPeerConnectionState;
@@ -11687,7 +11687,7 @@ declare var RTCPeerConnectionIceErrorEvent: {
     new(type: string, eventInitDict: RTCPeerConnectionIceErrorEventInit): RTCPeerConnectionIceErrorEvent;
 };
 
-/** Events that occurs in relation to ICE candidates with the target, usually an RTCPeerConnection. Only one event is of this type: icecandidate. */
+/** Eventos que ocurren en relación con los candidatos ICE con el destino, generalmente una RTCPeerConnection. Solo un evento es de este tipo: icecandidate. */
 interface RTCPeerConnectionIceEvent extends Event {
     readonly candidate: RTCIceCandidate | null;
 }
@@ -11697,7 +11697,7 @@ declare var RTCPeerConnectionIceEvent: {
     new(type: string, eventInitDict?: RTCPeerConnectionIceEventInit): RTCPeerConnectionIceEvent;
 };
 
-/** This WebRTC API interface manages the reception and decoding of data for a MediaStreamTrack on an RTCPeerConnection. */
+/** Esta interfaz API de WebRTC gestiona la recepción y decodificación de datos para MediaStreamTrack en RTCPeerConnection. */
 interface RTCRtpReceiver {
     readonly track: MediaStreamTrack;
     readonly transport: RTCDtlsTransport | null;
@@ -11713,7 +11713,7 @@ declare var RTCRtpReceiver: {
     getCapabilities(kind: string): RTCRtpCapabilities | null;
 };
 
-/** Provides the ability to control and obtain details about how a particular MediaStreamTrack is encoded and sent to a remote peer. */
+/** Brinda la capacidad de controlar y obtener detalles sobre cómo se codifica y envía un MediaStreamTrack en particular a un par remoto. */
 interface RTCRtpSender {
     readonly dtmf: RTCDTMFSender | null;
     readonly track: MediaStreamTrack | null;
@@ -11745,7 +11745,7 @@ declare var RTCRtpTransceiver: {
     new(): RTCRtpTransceiver;
 };
 
-/** One end of a connection—or potential connection—and how it's configured. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session. */
+/** Un extremo de una conexión, o conexión potencial, y cómo está configurado. Cada RTCSessionDescription consta de un tipo de descripción que indica qué parte del proceso de negociación de oferta/respuesta describe y del descriptor SDP de la sesión. */
 interface RTCSessionDescription {
     readonly sdp: string;
     readonly type: RTCSdpType;
@@ -11787,10 +11787,10 @@ declare var RadioNodeList: {
     new(): RadioNodeList;
 };
 
-/** A fragment of a document that can contain nodes and parts of text nodes. */
+/** Fragmento de un documento que puede contener nodos y partes de nodos de texto. */
 interface Range extends AbstractRange {
     /**
-     * Returns the node, furthest away from the document, that is an ancestor of both range's start node and end node.
+     * Devuelve el nodo, más alejado del documento, que es un ancestro del nodo inicial y final del rango.
      */
     readonly commonAncestorContainer: Node;
     cloneContents(): DocumentFragment;
@@ -11839,7 +11839,7 @@ declare var Range: {
     toString(): string;
 };
 
-/** This Streams API interface represents a readable stream of byte data. The Fetch API offers a concrete instance of a ReadableStream through the body property of a Response object. */
+/** Esta API de la interfaz de Streams representa un flujo legible de datos de bytes. La API de Fetch ofrece una instancia concreta de un ReadableStream a través de la propiedad del cuerpo de un objeto Response. */
 interface ReadableStream<R = any> {
     readonly locked: boolean;
     cancel(reason?: any): Promise<void>;
@@ -11907,58 +11907,58 @@ declare var RemotePlayback: {
     new(): RemotePlayback;
 };
 
-/** This Fetch API interface represents a resource request. */
+/** Esta API de la interfaz Fetch representa una solicitud de recursos. */
 interface Request extends Body {
     /**
-     * Returns the cache mode associated with request, which is a string indicating how the request will interact with the browser's cache when fetching.
+     * Devuelve el modo caché asociado con la solicitud, que es una cadena que indica cómo interactuará la solicitud con la memoria caché del navegador al buscar.
      */
     readonly cache: RequestCache;
     /**
-     * Returns the credentials mode associated with request, which is a string indicating whether credentials will be sent with the request always, never, or only when sent to a same-origin URL.
+     * Devuelve el modo credentials asociado con la solicitud, que es una cadena que indica si las credenciales se enviarán con la solicitud siempre, nunca o solo cuando se envíen a una URL del mismo origen.
      */
     readonly credentials: RequestCredentials;
     /**
-     * Returns the kind of resource requested by request, e.g., "document" or "script".
+     * Devuelve el tipo de recurso solicitado por petición, por ejemplo, "document" o "script".
      */
     readonly destination: RequestDestination;
     /**
-     * Returns a Headers object consisting of the headers associated with request. Note that headers added in the network layer by the user agent will not be accounted for in this object, e.g., the "Host" header.
+     * Devuelve un objeto Headers que consta de los encabezados asociados con la solicitud. Ten en cuenta que los encabezados agregados en la capa de red por el agente de usuario no se tendrán en cuenta en este objeto, por ejemplo, el encabezado "Host".
      */
     readonly headers: Headers;
     /**
-     * Returns request's subresource integrity metadata, which is a cryptographic hash of the resource being fetched. Its value consists of multiple hashes separated by whitespace. [SRI]
+     * Devuelve los metadatos de integridad del subrecurso de la solicitud, que es un hash criptográfico del recurso que se está recuperando. Su valor consiste en múltiples hashes separados por espacios en blanco. [SRI]
      */
     readonly integrity: string;
     /**
-     * Returns a boolean indicating whether or not request can outlive the global in which it was created.
+     * Devuelve un valor booleano que indica si la solicitud puede o no sobrevivir al global en el que se creó.
      */
     readonly keepalive: boolean;
     /**
-     * Returns request's HTTP method, which is "GET" by default.
+     * Devuelve el método HTTP de la solicitud, que es "GET" de forma predeterminada.
      */
     readonly method: string;
     /**
-     * Returns the mode associated with request, which is a string indicating whether the request will use CORS, or will be restricted to same-origin URLs.
+     * Devuelve el modo asociado con la solicitud, que es una cadena que indica si la solicitud utilizará CORS o estará restringida a URL del mismo origen.
      */
     readonly mode: RequestMode;
     /**
-     * Returns the redirect mode associated with request, which is a string indicating how redirects for the request will be handled during fetching. A request will follow redirects by default.
+     * Devuelve el modo de redirección asociado con la solicitud, que es una cadena que indica cómo se manejarán las redirecciones para la solicitud durante la recuperación. Una solicitud seguirá a los redireccionamientos de forma predeterminada.
      */
     readonly redirect: RequestRedirect;
     /**
-     * Returns the referrer of request. Its value can be a same-origin URL if explicitly set in init, the empty string to indicate no referrer, and "about:client" when defaulting to the global's default. This is used during fetching to determine the value of the `Referer` header of the request being made.
+     * Devuelve el referente de la solicitud. Su valor puede ser una URL del mismo origen si se establece explícitamente en init, la cadena vacía para indicar que no hay referente y "about:client" cuando se establece de manera predeterminada en el valor predeterminado global. Esto se usa durante la obtención para determinar el valor del encabezado `Referer` de la solicitud que se está realizando.
      */
     readonly referrer: string;
     /**
-     * Returns the referrer policy associated with request. This is used during fetching to compute the value of the request's referrer.
+     * Devuelve la política de referencia asociada con la solicitud. Esto se usa durante la obtención para calcular el valor del referente de la solicitud.
      */
     readonly referrerPolicy: ReferrerPolicy;
     /**
-     * Returns the signal associated with request, which is an AbortSignal object indicating whether or not request has been aborted, and its abort event handler.
+     * Devuelve la señal asociada con la solicitud, que es un objeto AbortSignal que indica si la solicitud se canceló o no, y su controlador de eventos abort.
      */
     readonly signal: AbortSignal;
     /**
-     * Returns the URL of request as a string.
+     * Devuelve la URL de la solicitud como una cadena.
      */
     readonly url: string;
     clone(): Request;
@@ -12002,7 +12002,7 @@ declare var ResizeObserverSize: {
     new(): ResizeObserverSize;
 };
 
-/** This Fetch API interface represents the response to a request. */
+/** Esta API de la interfaz Fetch representa la respuesta a una solicitud. */
 interface Response extends Body {
     readonly headers: Headers;
     readonly ok: boolean;
@@ -12021,7 +12021,7 @@ declare var Response: {
     redirect(url: string | URL, status?: number): Response;
 };
 
-/** Provides access to the properties of <a> element, as well as methods to manipulate them. */
+/** Proporciona acceso a las propiedades del elemento <a>, así como métodos para manipularlos. */
 interface SVGAElement extends SVGGraphicsElement, SVGURIReference {
     rel: string;
     readonly relList: DOMTokenList;
@@ -12037,7 +12037,7 @@ declare var SVGAElement: {
     new(): SVGAElement;
 };
 
-/** Used to represent a value that can be an <angle> or <number> value. An SVGAngle reflected through the animVal attribute is always read only. */
+/** Se utiliza para representar un valor que puede ser un valor de <angle> o <number>. Un SVGAngle reflejado a través del atributo animVal siempre es de solo lectura. */
 interface SVGAngle {
     readonly unitType: number;
     value: number;
@@ -12098,7 +12098,7 @@ declare var SVGAnimateTransformElement: {
     new(): SVGAnimateTransformElement;
 };
 
-/** Used for attributes of basic type <angle> which can be animated. */
+/** Se utiliza para atributos de tipo básico <angle> que se pueden animar. */
 interface SVGAnimatedAngle {
     readonly animVal: SVGAngle;
     readonly baseVal: SVGAngle;
@@ -12109,7 +12109,7 @@ declare var SVGAnimatedAngle: {
     new(): SVGAnimatedAngle;
 };
 
-/** Used for attributes of type boolean which can be animated. */
+/** Se utiliza para atributos de tipo booleano que se pueden animar. */
 interface SVGAnimatedBoolean {
     readonly animVal: boolean;
     baseVal: boolean;
@@ -12120,7 +12120,7 @@ declare var SVGAnimatedBoolean: {
     new(): SVGAnimatedBoolean;
 };
 
-/** Used for attributes whose value must be a constant from a particular enumeration and which can be animated. */
+/** Se utiliza para atributos cuyo valor debe ser una constante de una enumeración particular y que se puede animar. */
 interface SVGAnimatedEnumeration {
     readonly animVal: number;
     baseVal: number;
@@ -12131,7 +12131,7 @@ declare var SVGAnimatedEnumeration: {
     new(): SVGAnimatedEnumeration;
 };
 
-/** Used for attributes of basic type <integer> which can be animated. */
+/** Se utiliza para atributos de tipo básico <integer> que se pueden animar. */
 interface SVGAnimatedInteger {
     readonly animVal: number;
     baseVal: number;
@@ -12142,7 +12142,7 @@ declare var SVGAnimatedInteger: {
     new(): SVGAnimatedInteger;
 };
 
-/** Used for attributes of basic type <length> which can be animated. */
+/** Se utiliza para atributos de tipo básico <length> que se pueden animar. */
 interface SVGAnimatedLength {
     readonly animVal: SVGLength;
     readonly baseVal: SVGLength;
@@ -12153,7 +12153,7 @@ declare var SVGAnimatedLength: {
     new(): SVGAnimatedLength;
 };
 
-/** Used for attributes of type SVGLengthList which can be animated. */
+/** Se utiliza para atributos de tipo SVGLengthList que se pueden animar. */
 interface SVGAnimatedLengthList {
     readonly animVal: SVGLengthList;
     readonly baseVal: SVGLengthList;
@@ -12164,7 +12164,7 @@ declare var SVGAnimatedLengthList: {
     new(): SVGAnimatedLengthList;
 };
 
-/** Used for attributes of basic type <Number> which can be animated. */
+/** Se utiliza para atributos de tipo básico <Number> que se pueden animar. */
 interface SVGAnimatedNumber {
     readonly animVal: number;
     baseVal: number;
@@ -12175,7 +12175,7 @@ declare var SVGAnimatedNumber: {
     new(): SVGAnimatedNumber;
 };
 
-/** The SVGAnimatedNumber interface is used for attributes which take a list of numbers and which can be animated. */
+/** La interfaz SVGAnimatedNumber se utiliza para atributos que toman una lista de números y que se pueden animar. */
 interface SVGAnimatedNumberList {
     readonly animVal: SVGNumberList;
     readonly baseVal: SVGNumberList;
@@ -12191,7 +12191,7 @@ interface SVGAnimatedPoints {
     readonly points: SVGPointList;
 }
 
-/** Used for attributes of type SVGPreserveAspectRatio which can be animated. */
+/** Se utiliza para atributos de tipo SVGPreserveAspectRatio que se pueden animar. */
 interface SVGAnimatedPreserveAspectRatio {
     readonly animVal: SVGPreserveAspectRatio;
     readonly baseVal: SVGPreserveAspectRatio;
@@ -12202,7 +12202,7 @@ declare var SVGAnimatedPreserveAspectRatio: {
     new(): SVGAnimatedPreserveAspectRatio;
 };
 
-/** Used for attributes of basic SVGRect which can be animated. */
+/** Se utiliza para los atributos de SVGRect básico que se pueden animar. */
 interface SVGAnimatedRect {
     readonly animVal: DOMRectReadOnly;
     readonly baseVal: DOMRect;
@@ -12213,7 +12213,7 @@ declare var SVGAnimatedRect: {
     new(): SVGAnimatedRect;
 };
 
-/** The SVGAnimatedString interface represents string attributes which can be animated from each SVG declaration. You need to create SVG attribute before doing anything else, everything should be declared inside this. */
+/** La interfaz SVGAnimatedString representa atributos de cadena que se pueden animar a partir de cada declaración SVG. Debes crear un atributo SVG antes de hacer cualquier otra cosa, todo se debe declarar dentro de esto. */
 interface SVGAnimatedString {
     readonly animVal: string;
     baseVal: string;
@@ -12224,7 +12224,7 @@ declare var SVGAnimatedString: {
     new(): SVGAnimatedString;
 };
 
-/** Used for attributes which take a list of numbers and which can be animated. */
+/** Se utiliza para atributos que toman una lista de números y que se pueden animar. */
 interface SVGAnimatedTransformList {
     readonly animVal: SVGTransformList;
     readonly baseVal: SVGTransformList;
@@ -12255,7 +12255,7 @@ declare var SVGAnimationElement: {
     new(): SVGAnimationElement;
 };
 
-/** An interface for the <circle> element. The circle element is defined by the cx and cy attributes that denote the coordinates of the centre of the circle. */
+/** Una interfaz para el elemento <circle>. El elemento del círculo está definido por los atributos cx y cy que denotan las coordenadas del centro del círculo. */
 interface SVGCircleElement extends SVGGeometryElement {
     readonly cx: SVGAnimatedLength;
     readonly cy: SVGAnimatedLength;
@@ -12271,7 +12271,7 @@ declare var SVGCircleElement: {
     new(): SVGCircleElement;
 };
 
-/** Provides access to the properties of <clipPath> elements, as well as methods to manipulate them. */
+/** Proporciona acceso a las propiedades de los elementos <clipPath>, así como métodos para manipularlos. */
 interface SVGClipPathElement extends SVGElement {
     readonly clipPathUnits: SVGAnimatedEnumeration;
     readonly transform: SVGAnimatedTransformList;

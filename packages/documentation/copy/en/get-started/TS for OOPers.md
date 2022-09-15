@@ -96,7 +96,7 @@ function logPoint(point: Pointlike) {
 }
 
 function logName(x: Named) {
-  console.log("Hello, " + x.name);
+  console.log("Hola, " + x.name);
 }
 
 const obj = {

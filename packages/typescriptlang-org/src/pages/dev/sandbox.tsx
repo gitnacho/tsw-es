@@ -127,35 +127,35 @@ export default async function () {
                   API de tu biblioteca
                 </li>
                 <li>
-                  Building interactive web tools which use TypeScript, with a
-                  lot of the Playgrounds developer experience for free
+                  Creación de herramientas web interactivas que utilizan <em>TypeScript</em>, con un
+                  gran parte de la experiencia de desarrollador de Playgrounds gratis
                 </li>
               </ul>
               <p>
                 Por ejemplo, el entorno aislado, a un lado, ha tomado los Tipos para{" "}
                 <a href="https://danger.systems/js/">DangerJS</a> sin
-                modifications for this code sample. This is because the
-                Playground's Automatic Type Acquisition is enabled by default.
-                It will also look for the same parameters for code, and
-                selection indexes inside the URL.
+                modificaciones para este ejemplo de código. Esto se debe a que la
+                adquisición automática de tipos de Playground está habilitada de forma predeterminada.
+                También buscará los mismos parámetros para el código, y
+                selección de índices dentro de la URL.
               </p>
               <p>
-                Try clicking{" "}
+                Intenta hacer clic en{" "}
                 <a href="?q=1#code/PTAEBUAsFMGdtAYwPYFtXQHYBdagO7QBOCiJAhttACagCWmo2MEAngA7QDKZd72oAAoAbcqwDmRZAFdM1AFAhQ5OUxiNmCAKoAlADKhI5WJALGkydnRqhkAN2JNkahJmj5QuvfMVgodPAwVPBVWUHYpACtoRAFpWAZxNk4eIj4BWBVqACNkAA84JBVfUGhjOmEw+FUUagRyKVlabGcyxFNkTSJQHxRMWAEYYWFnAF5QACIACWhh5wB1ZCJhagn5PthkYWgAOhHxAAohkYBKIA">
-                  this URL
+                  esta URL
                 </a>{" "}
-                to see that in action.{" "}
+                para verlo en acción.{" "}
               </p>
               <p>
-                This library builds on top of the{" "}
+                Esta biblioteca se basa en{" "}
                 <a href="https://microsoft.github.io/monaco-editor/index.html">
-                  Monaco Editor
+                  el Editor monaco
                 </a>
-                , providing a higher level API but offering access to all the
-                lower-level APIs via a single <code>sandbox</code> object.
+                , proporcionando una API de mayor nivel pero ofreciendo acceso a todos los
+                nivel inferiores de la API a través de un solo objeto <code>sandbox</code>.
               </p>
               <p>
-                You can find the code for the TypeScript Sandbox inside the{" "}
+                Puedes encontrar el código para <em>TypeScript Sandbox</em> dentro de{" "}
                 <a href="https://github.com/microsoft/TypeScript-Website/tree/v2/packages/sandbox#@typescript/sandbox">
                   microsoft/TypeScript-Website
                 </a>{" "}
@@ -195,28 +195,28 @@ export default async function () {
           <div className="raised main-content-block">
             <h2>Uso</h2>
             <p>
-              A sandbox uses the same tools as monaco-editor, meaning this
-              library is shipped as an AMD bundle which you can use the{" "}
+              Un sandbox usa las mismas herramientas que monaco-editor, lo cual significa que esta
+              biblioteca se envía como un paquete AMD que puedes utilizar en{" "}
               <a href="https://github.com/microsoft/vscode-loader/">
-                VSCode Loader
+                el cargador de VSCode
               </a>{" "}
-              to <code>require</code>.
+              para <code>require</code>.
             </p>
             <p>
-              Because we need it for the TypeScript website, you can use our
-              hosted copy{" "}
+              Debido a que lo necesitamos para el sitio web de <em>TypeScript</em>, puedes usar nuestra
+              copia alojada{" "}
               <a
                 href="https://typescriptlang.org/js/vs.loader.js"
-                title="Link to the JS for the visual studio require loader"
+                title="Enlace al JS para el cargador de Visual Studio require"
               >
-                here.
+                aquí.
               </a>
             </p>
 
-            <h3>Get Started</h3>
+            <h3>Comenzar</h3>
             <p>
-              Create a new file: <code>index.html</code> and paste this code
-              into that file.
+              Crear un nuevo archivo: <code>index.html</code> y pega este código
+              en ese archivo.
             </p>
             <pre>
               <code className="html-code">
@@ -236,7 +236,7 @@ export default async function () {
       // Ahora que el cargador está listo, dile a require dónde puede obtener la versión de monaco y sandbox
       // Esta versión utiliza la última versión del sandbox, que se utiliza en el sitio web de TypeScript.
 
-      // For the monaco version you can use unpkg or the TypeSCript web infra CDN
+      // Para la versión de monaco, puedes usar unpkg o TypeSCript web infra CDN
       // Puedes ver las versiones disponibles para TypeScript aquí:
       // https://typescript.azureedge.net/indexes/releases.json
       //
@@ -273,7 +273,7 @@ export default async function () {
         if (isOK) {
           document.getElementById('loader').parentNode.removeChild(document.getElementById('loader'))
         } else {
-          console.error('Could not get all the dependencies of sandbox set up!')
+          console.error('¡No se pudieron configurar todas las dependencias de sandbox!')
           console.error('main', !!main, 'ts', !!window.ts, 'sandbox', !!sandbox)
           return
         }
@@ -296,10 +296,10 @@ export default async function () {
               </code>
             </pre>
             <p>
-              Opening the file <code>index.html</code> in a web browser will
-              load up the same sandbox up at the top of the page.
+              Al abrir el archivo <code>index.html</code> en un navegador web,
+              carga el mismo sandbox en la parte superior de la página.
             </p>
-            <h3>Some examples of the API</h3>
+            <h3>Algunos ejemplos de la API</h3>
             {codeSamples.map(code => (
               <div className="split-code" key={code.blurb}>
                 <p>{code.blurb}</p>
@@ -309,13 +309,13 @@ export default async function () {
               </div>
             ))}
             <p>
-              The API is mainly a light shim over the{" "}
+              La API principalmente es una ligera corrección sobre la{" "}
               <a href="https://microsoft.github.io/monaco-editor/api/index.html">
-                monaco-editor API
+                API de monaco-editor
               </a>{" "}
-              with the{" "}
+              con la{" "}
               <a href="https://github.com/microsoft/monaco-typescript">
-                monaco-typescript API
+                API de monaco-typescript
               </a>
               .
             </p>
@@ -334,26 +334,26 @@ export default (props: Props) => (
 
 const codeSamples = [
   {
-    blurb: "Converting the user's TypeScript into JavaScript",
+    blurb: "Convirtiendo el TypeScript del usuario en JavaScript",
     code: `const sandbox = createTypeScriptSandbox(sandboxConfig, main, ts)
 
-// Async because it needs to go  
+// Async porque necesita  
 const js = await sandbox.getRunnableJS()
 console.log(js)`,
   },
   {
-    blurb: "Get the DTS for the user's editor",
+    blurb: "Obtener el DTS para el editor del usuario",
     code: `const sandbox = createTypeScriptSandbox(sandboxConfig, main, ts)
 
 const dts = await sandbox.getDTSForCode()
 console.log(dts)`,
   },
   {
-    blurb: "Make a request for an LSP response",
+    blurb: "Hace una solicitud de respuesta LSP",
     code: `const sandbox = createTypeScriptSandbox(sandboxConfig, main, ts)
 
-// A worker here is a web-worker, set up by monaco-typescript
-// which does the computation in the background 
+// Un trabajador aquí es un trabajador web, creado por monaco-typescript
+// que hace el cálculo en segundo plano 
 const worker = await sandbox.getWorkerProcess()
 const definitions =  await client.getDefinitionAtPosition(model.uri.toString(), 6)
   `,

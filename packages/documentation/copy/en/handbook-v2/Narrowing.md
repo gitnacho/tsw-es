@@ -102,7 +102,7 @@ En la función `printAll`, intentamos comprobar si `strs` es un objeto para ver 
 ¡Pero resulta que en *JavaScript*, `typeof null` en realidad es `"object"`!
 Este es uno de esos lamentables accidentes de la historia.
 
-Es posible que los usuarios con suficiente experiencia no se sorprendan, pero no todos se han encontrado con esto en *JavaScript*; afortunadamente, *TypeScript* nos permite saber que `strs` solo se redujo a `string[] | null` en lugar de solo `string[]`.
+Es posible que los usuarios con suficiente experiencia no se sorprendan, pero no todos se han encontrado con esto en *JavaScript*; afortunadamente, *TypeScript* nos permite saber que `strs` solo se redujo a `string[] | null` en lugar de solo a `string[]`.
 
 Esta podría ser una buena transición a lo que llamaremos comprobación de "verdad".
 
@@ -163,7 +163,7 @@ Esto al menos, nos evita los temidos errores cuando ejecutamos nuestro código c
 TypeError: null is not iterable
 ```
 
-Sin embargo, ten en cuenta que la comprobación de verdad en primitivos a menudo puede ser propenso a errores.
+Sin embargo, ten en cuenta que la comprobación de verdad en primitivos a menudo puede ser propensa a errores.
 Como ejemplo, considera un intento diferente de escribir `printAll`
 
 ```ts twoslash {class: "do-not-do-this"}

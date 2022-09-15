@@ -304,7 +304,7 @@ A veces olvidamos que es posible que una función no necesite ser genérica:
 
 ```ts twoslash
 function greet<Str extends string>(s: Str) {
-  console.log("Hello, " + s);
+  console.log("Hola, " + s);
 }
 
 greet("world");
@@ -314,7 +314,7 @@ Con la misma facilidad podríamos haber escrito una versión más simple:
 
 ```ts twoslash
 function greet(s: string) {
-  console.log("Hello, " + s);
+  console.log("Hola, " + s);
 }
 ```
 

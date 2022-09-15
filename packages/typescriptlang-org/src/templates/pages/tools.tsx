@@ -17,39 +17,39 @@ const Col = (props: { children: any, className?: string }) => <div className={[p
 const Index: React.FC<Props> = (props) => {
   const Link = createIntlLink(props.pageContext.lang)
 
-  return <Layout title="Reference Tools" description="Online tooling to help you understand TypeScript" lang={props.pageContext.lang}>
+  return <Layout title="Herramientas de referencia" description="Herramientas en línea para ayudarte a comprender TypeScript" lang={props.pageContext.lang}>
     <div className="raised main-content-block">
       <Row>
         <Col>
           <a className="cropper" href="/play">
-            <img src={require("../../../static/images/tools/play.png").default} alt="Preview of the TypeScript Playground screenshot" />
+            <img src={require("../../../static/images/tools/play.png").default} alt="Vista previa del  Playground de TypeScript" />
             <p>Playground</p>
           </a>
-          <p>A live environment for exploring, learning and sharing TypeScript code. Try different compiler flags, run through extensive code samples to learn specifics about how TypeScript works.</p>
+          <p>Un entorno en vivo para explorar, aprender y compartir código TypeScript. Prueba diferentes banderas del compilador, ejecuta extensos ejemplos de código para obtener información específica sobre cómo funciona TypeScript.</p>
         </Col>
         <Col>
           <Link className="cropper" to="/tsconfig">
-            <img src={require("../../../static/images/tools/tsconfig-ref.png").default} alt="Preview of the TypeScript TSConfig Reference screenshot" />
-            <p>TSConfig Reference</p>
+            <img src={require("../../../static/images/tools/tsconfig-ref.png").default} alt="Vista previa de la captura de pantalla de referencia de TypeScript TSConfig" />
+            <p>Referencia de TSConfig</p>
           </Link>
-          <p>An annotated reference to more than a hundred compiler options available in a <code>tsconfig.json</code> or <code>jsconfig.json</code>.</p>
+          <p>Una referencia comentada a más de cien opciones del compilador disponibles en un <code>tsconfig.json</code> o <code>jsconfig.json</code>.</p>
         </Col>
       </Row>
       <Row>
       <Col>
           <a className="cropper" href="/cheatsheets">
-            <img src={require("../../../static/images/tools/cheat-sheets.png").default} alt="Preview of the cheat sheets page" />
-            <p>Cheat Sheets</p>
+            <img src={require("../../../static/images/tools/cheat-sheets.png").default} alt="Vista previa de la página de hojas de referencia" />
+            <p>Hojas de referencia</p>
           </a>
-          <p>Quickly look up the syntax for common TypeScript code.</p>
+          <p>Encuentra rápidamente la sintaxis del código TypeScript común.</p>
         </Col>
 
         <Col>
           <a className="cropper" href="/dt/search">
-            <img src={require("../../../static/images/tools/dt-search.png").default} alt="Preview of the Definitely Typed search" />
-            <p>Type Search</p>
+            <img src={require("../../../static/images/tools/dt-search.png").default} alt="Vista previa de la búsqueda Definitely Typed" />
+            <p>Buscar Type</p>
           </a>
-          <p>Search for npm modules with types from DefinitelyTyped or embedded in the module.</p>
+          <p>Busca módulos npm con tipos de DefinitelyTyped o incrustados en el módulo.</p>
         </Col>
       </Row>
     </div>
