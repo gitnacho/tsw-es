@@ -170,7 +170,7 @@ function draw({ shape: Shape, xPos: number = 100 /*...*/ }) {
 }
 ```
 
-En un patrón de desestructuración de objetos, `forma: Forma` significa "toma la propiedad `shape` y redefinirla localmente como una variable llamada `Shape`.
+En un patrón de desestructuración de objetos, `shape: Shape` significa "toma la propiedad `shape` y redefínela localmente como una variable llamada `Shape`.
 Asimismo, `xPos: number` crea una variable llamada `number` cuyo valor se basa en `xPos` del parámetro.
 
 Con [modificadores de mapeo](/docs/handbook/2/mapped-types.html#modificadores-de-mapeo), puedes eliminar los atributos `optional`.

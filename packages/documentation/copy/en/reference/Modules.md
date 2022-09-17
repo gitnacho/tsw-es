@@ -9,7 +9,7 @@ translatable: true
 A partir de *ECMAScript 2015*, *JavaScript* tiene un concepto de módulos. *TypeScript* comparte este concepto.
 
 Los módulos se ejecutan dentro de su propio ámbito, no en el ámbito global; esto significa que las variables, funciones, clases, etc. declaradas en un módulo no son visibles fuera del módulo a menos que se exporten explícitamente usando una de las [formas `export`](#export).
-Por el contrario, para consumir una variable, función, clase, interfaz, etc. exportada desde un módulo diferente, se debe importar utilizando una de las formas [`import`](#import).
+Por el contrario, para consumir una variable, función, clase, interfaz, etc. exportada desde un módulo diferente, se debe importar utilizando una de las [formas `import`](#import).
 
 Los módulos son declarativos; las relaciones entre los módulos se especifican en términos de importaciones y exportaciones a nivel de archivo.
 

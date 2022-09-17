@@ -84,7 +84,7 @@ export default stickerGenerator;
 // El nombre depende del consumidor del módulo.
 
 // Estos no son los únicos tipos de importaciones, solo los más comunes
-// en código moderno. Cubriendo todas las formas en que el código se pueden cruzar
+// en código moderno. Cubriendo todas las formas en que el código se puede cruzar
 // los límites del módulo es un tema muy extenso en el manual:
 //
 // https://www.typescriptlang.org/docs/handbook/modules.html

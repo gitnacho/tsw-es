@@ -6400,7 +6400,7 @@ interface HTMLFieldSetElement extends HTMLElement {
     readonly form: HTMLFormElement | null;
     name: string;
     /**
-     * Returns the string "fieldset".
+     * Devuelve la cadena "fieldset".
      */
     readonly type: string;
     /**
@@ -7816,13 +7816,13 @@ interface HTMLOutputElement extends HTMLElement {
     readonly labels: NodeListOf<HTMLLabelElement>;
     name: string;
     /**
-     * Returns the string "output".
+     * Devuelve la cadena "output".
      */
     readonly type: string;
     readonly validationMessage: string;
     readonly validity: ValidityState;
     /**
-     * Returns the element's current value.
+     * Devuelve el valor actual del elemento.
      *
      * Se puede configurar para cambiar el valor.
      */
@@ -8036,7 +8036,7 @@ interface HTMLSelectElement extends HTMLElement {
      */
     name: string;
     /**
-     * Returns an HTMLOptionsCollection of the list of options.
+     * Devuelve una HTMLOptionsCollection de la lista de opciones.
      */
     readonly options: HTMLOptionsCollection;
     /**
@@ -8392,7 +8392,7 @@ interface HTMLTableElement extends HTMLElement {
      */
     createTFoot(): HTMLTableSectionElement;
     /**
-     * Returns the tHead element object if successful, or null otherwise.
+     * Devuelve el objeto del elemento tHead si tiene éxito, o null en caso contrario.
      */
     createTHead(): HTMLTableSectionElement;
     /**
@@ -8517,7 +8517,7 @@ declare var HTMLTableSectionElement: {
 /** Habilita el acceso al contenido de un elemento <template> de HTML. */
 interface HTMLTemplateElement extends HTMLElement {
     /**
-     * Returns the template contents (a DocumentFragment).
+     * Devuelve el contenido de la plantilla (un DocumentFragment).
      */
     readonly content: DocumentFragment;
     addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTemplateElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -8682,7 +8682,7 @@ interface HTMLTrackElement extends HTMLElement {
     src: string;
     srclang: string;
     /**
-     * Returns the TextTrack object corresponding to the text track of the track element.
+     * Devuelve el objeto TextTrack correspondiente a la pista de texto del elemento de pista.
      */
     readonly track: TextTrack;
     readonly ERROR: number;
@@ -8846,7 +8846,7 @@ interface IDBCursor {
     readonly primaryKey: IDBValidKey;
     readonly request: IDBRequest;
     /**
-     * Returns the IDBObjectStore or IDBIndex the cursor was opened from.
+     * Devuelve el IDBObjectStore o IDBIndex desde el que se abrió el cursor.
      */
     readonly source: IDBObjectStore | IDBIndex;
     /**
@@ -8917,7 +8917,7 @@ interface IDBDatabase extends EventTarget {
     onerror: ((this: IDBDatabase, ev: Event) => any) | null;
     onversionchange: ((this: IDBDatabase, ev: IDBVersionChangeEvent) => any) | null;
     /**
-     * Returns the version of the database.
+     * Devuelve la versión de la base de datos.
      */
     readonly version: number;
     /**
@@ -8937,7 +8937,7 @@ interface IDBDatabase extends EventTarget {
      */
     deleteObjectStore(name: string): void;
     /**
-     * Returns a new transaction with the given mode ("readonly" or "readwrite") and scope which can be a single object store name or an array of names.
+     * Devuelve una nueva transacción con el modo dado ("readonly" o "readwrite") y el alcance que puede ser un nombre de almacén de un solo objeto o un arreglo de nombres.
      */
     transaction(storeNames: string | string[], mode?: IDBTransactionMode): IDBTransaction;
     addEventListener<K extends keyof IDBDatabaseEventMap>(type: K, listener: (this: IDBDatabase, ev: IDBDatabaseEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -8980,11 +8980,11 @@ interface IDBIndex {
     readonly keyPath: string | string[];
     readonly multiEntry: boolean;
     /**
-     * Returns the name of the index.
+     * Devuelve el nombre del índice.
      */
     name: string;
     /**
-     * Returns the IDBObjectStore the index belongs to.
+     * Devuelve el IDBObjectStore al que pertenece el índice.
      */
     readonly objectStore: IDBObjectStore;
     readonly unique: boolean;
@@ -9232,7 +9232,7 @@ interface IDBRequest<T = any> extends EventTarget {
     onerror: ((this: IDBRequest<T>, ev: Event) => any) | null;
     onsuccess: ((this: IDBRequest<T>, ev: Event) => any) | null;
     /**
-     * Returns "pending" until a request is complete, then returns "done".
+     * Devuelve "pending" hasta que se completa una solicitud, luego devuelve "done".
      */
     readonly readyState: IDBRequestReadyState;
     /**
@@ -9266,7 +9266,7 @@ interface IDBTransactionEventMap {
 
 interface IDBTransaction extends EventTarget {
     /**
-     * Returns the transaction's connection.
+     * Devuelve la conexión de la transacción.
      */
     readonly db: IDBDatabase;
     /**
@@ -9290,7 +9290,7 @@ interface IDBTransaction extends EventTarget {
     abort(): void;
     commit(): void;
     /**
-     * Returns an IDBObjectStore in the transaction's scope.
+     * Devuelve un IDBObjectStore en el ámbito de la transacción.
      */
     objectStore(name: string): IDBObjectStore;
     addEventListener<K extends keyof IDBTransactionEventMap>(type: K, listener: (this: IDBTransaction, ev: IDBTransactionEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -10084,22 +10084,22 @@ declare var MessagePort: {
 /** @deprecated */
 interface MimeType {
     /**
-     * Returns the MIME type's description.
+     * Devuelve la descripción del tipo MIME.
      */
     /** @deprecated */
     readonly description: undefined;
     /**
-     * Returns the Plugin object that implements this MIME type.
+     * Devuelve el objeto Plugin que implementa este tipo MIME.
      */
     /** @deprecated */
     readonly enabledPlugin: undefined;
     /**
-     * Returns the MIME type's typical file extensions, in a comma-separated list.
+     * Devuelve las extensiones de archivo típicas del tipo MIME, en una lista separada por comas.
      */
     /** @deprecated */
     readonly suffixes: undefined;
     /**
-     * Returns the MIME type.
+     * Devuelve el tipo MIME.
      */
     /** @deprecated */
     readonly type: undefined;
@@ -10400,19 +10400,19 @@ interface Node extends EventTarget {
     readonly nodeType: number;
     nodeValue: string | null;
     /**
-     * Returns the node document. Returns null for documents.
+     * Devuelve el nodo document. Devuelve null para documentos.
      */
     readonly ownerDocument: Document | null;
     /**
-     * Returns the parent element.
+     * Devuelve el elemento padre.
      */
     readonly parentElement: HTMLElement | null;
     /**
-     * Returns the parent.
+     * Devuelve el padre.
      */
     readonly parentNode: (Node & ParentNode) | null;
     /**
-     * Returns the previous sibling.
+     * Devuelve el hermano anterior.
      */
     readonly previousSibling: (ChildNode & Node) | null;
     textContent: string | null;
@@ -10440,7 +10440,7 @@ interface Node extends EventTarget {
     insertBefore<T extends Node>(node: T, child: Node | null): T;
     isDefaultNamespace(namespace: string | null): boolean;
     /**
-     * Returns whether node and otherNode have the same properties.
+     * Devuelve si node y otherNode tienen las mismas propiedades.
      */
     isEqualNode(otherNode: Node | null): boolean;
     isSameNode(otherNode: Node | null): boolean;
@@ -10628,18 +10628,18 @@ interface NodeListOf<TNode extends Node> extends NodeList {
 
 interface NonDocumentTypeChildNode {
     /**
-     * Returns the first following sibling that is an element, and null otherwise.
+     * Devuelve el primer hermano siguiente que es un elemento y null en caso contrario.
      */
     readonly nextElementSibling: Element | null;
     /**
-     * Returns the first preceding sibling that is an element, and null otherwise.
+     * Devuelve el primer hermano anterior que es un elemento y null en caso contrario.
      */
     readonly previousElementSibling: Element | null;
 }
 
 interface NonElementParentNode {
     /**
-     * Returns the first element within node's descendants whose ID is elementId.
+     * Devuelve el primer elemento dentro de los descendientes del nodo cuyo ID es elementId.
      */
     getElementById(elementId: string): Element | null;
 }
@@ -11297,22 +11297,22 @@ interface Plugin {
     /** @deprecated */
     readonly description: undefined;
     /**
-     * Returns the plugin library's filename, if applicable on the current platform.
+     * Devuelve el nombre de archivo de la biblioteca de complementos, si corresponde en la plataforma actual.
      */
     /** @deprecated */
     readonly filename: undefined;
     /**
-     * Returns the number of MIME types, represented by MimeType objects, supported by the plugin.
+     * Devuelve la cantidad de tipos MIME, representados por objetos MimeType, admitidos por el complemento.
      */
     /** @deprecated */
     readonly length: undefined;
     /**
-     * Returns the plugin's name.
+     * Devuelve el nombre del complemento.
      */
     /** @deprecated */
     readonly name: undefined;
     /**
-     * Returns the specified MimeType object.
+     * Devuelve el objeto MimeType especificado.
      */
     /** @deprecated */
     item(index: number): void;
@@ -11798,7 +11798,7 @@ interface Range extends AbstractRange {
     collapse(toStart?: boolean): void;
     compareBoundaryPoints(how: number, sourceRange: Range): number;
     /**
-     * Returns −1 if the point is before the range, 0 if the point is in the range, and 1 if the point is after the range.
+     * Devuelve −1 si el punto está antes del rango, 0 si el punto está en el rango y 1 si el punto está después del rango.
      */
     comparePoint(node: Node, offset: number): number;
     createContextualFragment(fragment: string): DocumentFragment;
@@ -11809,7 +11809,7 @@ interface Range extends AbstractRange {
     getClientRects(): DOMRectList;
     insertNode(node: Node): void;
     /**
-     * Returns whether range intersects node.
+     * Devuelve si el rango se cruza con el nodo.
      */
     intersectsNode(node: Node): boolean;
     isPointInRange(node: Node, offset: number): boolean;
@@ -12286,7 +12286,7 @@ declare var SVGClipPathElement: {
     new(): SVGClipPathElement;
 };
 
-/** A base interface used by the component transfer function interfaces. */
+/** Una interfaz base utilizada por las interfaces de la función de transferencia de componentes. */
 interface SVGComponentTransferFunctionElement extends SVGElement {
     readonly amplitude: SVGAnimatedNumber;
     readonly exponent: SVGAnimatedNumber;
@@ -12332,7 +12332,7 @@ declare var SVGCursorElement: {
     new(): SVGCursorElement;
 };
 
-/** Corresponds to the <defs> element. */
+/** Corresponde al elemento <defs>. */
 interface SVGDefsElement extends SVGGraphicsElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGDefsElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -12345,7 +12345,7 @@ declare var SVGDefsElement: {
     new(): SVGDefsElement;
 };
 
-/** Corresponds to the <desc> element. */
+/** Corresponde al elemento <desc>. */
 interface SVGDescElement extends SVGElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGDescElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -12361,7 +12361,7 @@ declare var SVGDescElement: {
 interface SVGElementEventMap extends ElementEventMap, DocumentAndElementEventHandlersEventMap, GlobalEventHandlersEventMap {
 }
 
-/** All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the SVGElement interface. */
+/** Todas las interfaces SVG DOM que corresponden directamente a elementos en el lenguaje SVG se derivan de la interfaz SVGElement. */
 interface SVGElement extends Element, DocumentAndElementEventHandlers, DocumentAndElementEventHandlers, ElementCSSInlineStyle, GlobalEventHandlers, GlobalEventHandlers, HTMLOrSVGElement {
     /** @deprecated */
     readonly className: any;
@@ -12378,7 +12378,7 @@ declare var SVGElement: {
     new(): SVGElement;
 };
 
-/** Provides access to the properties of <ellipse> elements. */
+/** Proporciona acceso a las propiedades de los elementos <ellipse>. */
 interface SVGEllipseElement extends SVGGeometryElement {
     readonly cx: SVGAnimatedLength;
     readonly cy: SVGAnimatedLength;
@@ -12395,7 +12395,7 @@ declare var SVGEllipseElement: {
     new(): SVGEllipseElement;
 };
 
-/** Corresponds to the <feBlend> element. */
+/** Corresponde al elemento <feBlend>. */
 interface SVGFEBlendElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly in1: SVGAnimatedString;
     readonly in2: SVGAnimatedString;
@@ -12445,7 +12445,7 @@ declare var SVGFEBlendElement: {
     readonly SVG_FEBLEND_MODE_UNKNOWN: number;
 };
 
-/** Corresponds to the <feColorMatrix> element. */
+/** Corresponde al elemento <feColorMatrix>. */
 interface SVGFEColorMatrixElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly in1: SVGAnimatedString;
     readonly type: SVGAnimatedEnumeration;
@@ -12471,7 +12471,7 @@ declare var SVGFEColorMatrixElement: {
     readonly SVG_FECOLORMATRIX_TYPE_UNKNOWN: number;
 };
 
-/** Corresponds to the <feComponentTransfer> element. */
+/** Corresponde al elemento <feComponentTransfer>. */
 interface SVGFEComponentTransferElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly in1: SVGAnimatedString;
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEComponentTransferElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -12485,7 +12485,7 @@ declare var SVGFEComponentTransferElement: {
     new(): SVGFEComponentTransferElement;
 };
 
-/** Corresponds to the <feComposite> element. */
+/** Corresponde al elemento <feComposite>. */
 interface SVGFECompositeElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly in1: SVGAnimatedString;
     readonly in2: SVGAnimatedString;
@@ -12519,7 +12519,7 @@ declare var SVGFECompositeElement: {
     readonly SVG_FECOMPOSITE_OPERATOR_XOR: number;
 };
 
-/** Corresponds to the <feConvolveMatrix> element. */
+/** Corresponde al elemento <feConvolveMatrix>. */
 interface SVGFEConvolveMatrixElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly bias: SVGAnimatedNumber;
     readonly divisor: SVGAnimatedNumber;
@@ -12552,7 +12552,7 @@ declare var SVGFEConvolveMatrixElement: {
     readonly SVG_EDGEMODE_WRAP: number;
 };
 
-/** Corresponds to the <feDiffuseLighting> element. */
+/** Corresponde al elemento <feDiffuseLighting>. */
 interface SVGFEDiffuseLightingElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly diffuseConstant: SVGAnimatedNumber;
     readonly in1: SVGAnimatedString;
@@ -12570,7 +12570,7 @@ declare var SVGFEDiffuseLightingElement: {
     new(): SVGFEDiffuseLightingElement;
 };
 
-/** Corresponds to the <feDisplacementMap> element. */
+/** Corresponde al elemento <feDisplacementMap>. */
 interface SVGFEDisplacementMapElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly in1: SVGAnimatedString;
     readonly in2: SVGAnimatedString;
@@ -12598,7 +12598,7 @@ declare var SVGFEDisplacementMapElement: {
     readonly SVG_CHANNEL_UNKNOWN: number;
 };
 
-/** Corresponds to the <feDistantLight> element. */
+/** Corresponde al elemento <feDistantLight>. */
 interface SVGFEDistantLightElement extends SVGElement {
     readonly azimuth: SVGAnimatedNumber;
     readonly elevation: SVGAnimatedNumber;
@@ -12631,7 +12631,7 @@ declare var SVGFEDropShadowElement: {
     new(): SVGFEDropShadowElement;
 };
 
-/** Corresponds to the <feFlood> element. */
+/** Corresponde al elemento <feFlood>. */
 interface SVGFEFloodElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEFloodElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -12644,7 +12644,7 @@ declare var SVGFEFloodElement: {
     new(): SVGFEFloodElement;
 };
 
-/** Corresponds to the <feFuncA> element. */
+/** Corresponde al elemento <feFuncA>. */
 interface SVGFEFuncAElement extends SVGComponentTransferFunctionElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEFuncAElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -12657,7 +12657,7 @@ declare var SVGFEFuncAElement: {
     new(): SVGFEFuncAElement;
 };
 
-/** Corresponds to the <feFuncB> element. */
+/** Corresponde al elemento <feFuncB>. */
 interface SVGFEFuncBElement extends SVGComponentTransferFunctionElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEFuncBElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -12670,7 +12670,7 @@ declare var SVGFEFuncBElement: {
     new(): SVGFEFuncBElement;
 };
 
-/** Corresponds to the <feFuncG> element. */
+/** Corresponde al elemento <feFuncG>. */
 interface SVGFEFuncGElement extends SVGComponentTransferFunctionElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEFuncGElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -12683,7 +12683,7 @@ declare var SVGFEFuncGElement: {
     new(): SVGFEFuncGElement;
 };
 
-/** Corresponds to the <feFuncR> element. */
+/** Corresponde al elemento <feFuncR>. */
 interface SVGFEFuncRElement extends SVGComponentTransferFunctionElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEFuncRElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -12696,7 +12696,7 @@ declare var SVGFEFuncRElement: {
     new(): SVGFEFuncRElement;
 };
 
-/** Corresponds to the <feGaussianBlur> element. */
+/** Corresponde al elemento <feGaussianBlur>. */
 interface SVGFEGaussianBlurElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly in1: SVGAnimatedString;
     readonly stdDeviationX: SVGAnimatedNumber;
@@ -12713,7 +12713,7 @@ declare var SVGFEGaussianBlurElement: {
     new(): SVGFEGaussianBlurElement;
 };
 
-/** Corresponds to the <feImage> element. */
+/** Corresponde al elemento <feImage>. */
 interface SVGFEImageElement extends SVGElement, SVGFilterPrimitiveStandardAttributes, SVGURIReference {
     readonly preserveAspectRatio: SVGAnimatedPreserveAspectRatio;
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEImageElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -12727,7 +12727,7 @@ declare var SVGFEImageElement: {
     new(): SVGFEImageElement;
 };
 
-/** Corresponds to the <feMerge> element. */
+/** Corresponde al elemento <feMerge>. */
 interface SVGFEMergeElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEMergeElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -12740,7 +12740,7 @@ declare var SVGFEMergeElement: {
     new(): SVGFEMergeElement;
 };
 
-/** Corresponds to the <feMergeNode> element. */
+/** Corresponde al elemento <feMergeNode>. */
 interface SVGFEMergeNodeElement extends SVGElement {
     readonly in1: SVGAnimatedString;
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEMergeNodeElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -12754,7 +12754,7 @@ declare var SVGFEMergeNodeElement: {
     new(): SVGFEMergeNodeElement;
 };
 
-/** Corresponds to the <feMorphology> element. */
+/** Corresponde al elemento <feMorphology>. */
 interface SVGFEMorphologyElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly in1: SVGAnimatedString;
     readonly operator: SVGAnimatedEnumeration;
@@ -12777,7 +12777,7 @@ declare var SVGFEMorphologyElement: {
     readonly SVG_MORPHOLOGY_OPERATOR_UNKNOWN: number;
 };
 
-/** Corresponds to the <feOffset> element. */
+/** Corresponde al elemento <feOffset>. */
 interface SVGFEOffsetElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly dx: SVGAnimatedNumber;
     readonly dy: SVGAnimatedNumber;
@@ -12793,7 +12793,7 @@ declare var SVGFEOffsetElement: {
     new(): SVGFEOffsetElement;
 };
 
-/** Corresponds to the <fePointLight> element. */
+/** Corresponde al elemento <fePointLight>. */
 interface SVGFEPointLightElement extends SVGElement {
     readonly x: SVGAnimatedNumber;
     readonly y: SVGAnimatedNumber;
@@ -12809,7 +12809,7 @@ declare var SVGFEPointLightElement: {
     new(): SVGFEPointLightElement;
 };
 
-/** Corresponds to the <feSpecularLighting> element. */
+/** Corresponde al elemento <feSpecularLighting>. */
 interface SVGFESpecularLightingElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly in1: SVGAnimatedString;
     readonly kernelUnitLengthX: SVGAnimatedNumber;
@@ -12828,7 +12828,7 @@ declare var SVGFESpecularLightingElement: {
     new(): SVGFESpecularLightingElement;
 };
 
-/** Corresponds to the <feSpotLight> element. */
+/** Corresponde al elemento <feSpotLight>. */
 interface SVGFESpotLightElement extends SVGElement {
     readonly limitingConeAngle: SVGAnimatedNumber;
     readonly pointsAtX: SVGAnimatedNumber;
@@ -12849,7 +12849,7 @@ declare var SVGFESpotLightElement: {
     new(): SVGFESpotLightElement;
 };
 
-/** Corresponds to the <feTile> element. */
+/** Corresponde al elemento <feTile>. */
 interface SVGFETileElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly in1: SVGAnimatedString;
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFETileElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -12863,7 +12863,7 @@ declare var SVGFETileElement: {
     new(): SVGFETileElement;
 };
 
-/** Corresponds to the <feTurbulence> element. */
+/** Corresponde al elemento <feTurbulence>. */
 interface SVGFETurbulenceElement extends SVGElement, SVGFilterPrimitiveStandardAttributes {
     readonly baseFrequencyX: SVGAnimatedNumber;
     readonly baseFrequencyY: SVGAnimatedNumber;
@@ -12894,7 +12894,7 @@ declare var SVGFETurbulenceElement: {
     readonly SVG_TURBULENCE_TYPE_UNKNOWN: number;
 };
 
-/** Provides access to the properties of <filter> elements, as well as methods to manipulate them. */
+/** Proporciona acceso a las propiedades de los elementos <filter>, así como métodos para manipularlos. */
 interface SVGFilterElement extends SVGElement, SVGURIReference {
     readonly filterUnits: SVGAnimatedEnumeration;
     readonly height: SVGAnimatedLength;
@@ -12926,7 +12926,7 @@ interface SVGFitToViewBox {
     readonly viewBox: SVGAnimatedRect;
 }
 
-/** Provides access to the properties of <foreignObject> elements, as well as methods to manipulate them. */
+/** Proporciona acceso a las propiedades de los elementos <foreignObject>, así como métodos para manipularlos. */
 interface SVGForeignObjectElement extends SVGGraphicsElement {
     readonly height: SVGAnimatedLength;
     readonly width: SVGAnimatedLength;
@@ -12943,7 +12943,7 @@ declare var SVGForeignObjectElement: {
     new(): SVGForeignObjectElement;
 };
 
-/** Corresponds to the <g> element. */
+/** Corresponde al elemento <g>. */
 interface SVGGElement extends SVGGraphicsElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGGElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -12973,7 +12973,7 @@ declare var SVGGeometryElement: {
     new(): SVGGeometryElement;
 };
 
-/** The SVGGradient interface is a base interface used by SVGLinearGradientElement and SVGRadialGradientElement. */
+/** La interfaz SVGGradient es una interfaz base utilizada por SVGLinearGradientElement y SVGRadialGradientElement. */
 interface SVGGradientElement extends SVGElement, SVGURIReference {
     readonly gradientTransform: SVGAnimatedTransformList;
     readonly gradientUnits: SVGAnimatedEnumeration;
@@ -12997,7 +12997,7 @@ declare var SVGGradientElement: {
     readonly SVG_SPREADMETHOD_UNKNOWN: number;
 };
 
-/** SVG elements whose primary purpose is to directly render graphics into a group. */
+/** Elementos SVG cuyo objetivo principal es representar gráficos directamente en un grupo. */
 interface SVGGraphicsElement extends SVGElement, SVGTests {
     readonly transform: SVGAnimatedTransformList;
     getBBox(options?: SVGBoundingBoxOptions): DOMRect;
@@ -13014,7 +13014,7 @@ declare var SVGGraphicsElement: {
     new(): SVGGraphicsElement;
 };
 
-/** Corresponds to the <image> element. */
+/** Corresponde al elemento <image>. */
 interface SVGImageElement extends SVGGraphicsElement, SVGURIReference {
     readonly height: SVGAnimatedLength;
     readonly preserveAspectRatio: SVGAnimatedPreserveAspectRatio;
@@ -13032,7 +13032,7 @@ declare var SVGImageElement: {
     new(): SVGImageElement;
 };
 
-/** Correspond to the <length> basic data type. */
+/** Corresponde al tipo de datos básico <length>. */
 interface SVGLength {
     readonly unitType: number;
     value: number;
@@ -13069,7 +13069,7 @@ declare var SVGLength: {
     readonly SVG_LENGTHTYPE_UNKNOWN: number;
 };
 
-/** The SVGLengthList defines a list of SVGLength objects. */
+/** SVGLengthList define una lista de objetos SVGLength. */
 interface SVGLengthList {
     readonly length: number;
     readonly numberOfItems: number;
@@ -13088,7 +13088,7 @@ declare var SVGLengthList: {
     new(): SVGLengthList;
 };
 
-/** Provides access to the properties of <line> elements, as well as methods to manipulate them. */
+/** Proporciona acceso a las propiedades de los elementos <line>, así como métodos para manipularlos. */
 interface SVGLineElement extends SVGGeometryElement {
     readonly x1: SVGAnimatedLength;
     readonly x2: SVGAnimatedLength;
@@ -13105,7 +13105,7 @@ declare var SVGLineElement: {
     new(): SVGLineElement;
 };
 
-/** Corresponds to the <linearGradient> element. */
+/** Corresponde al elemento <linearGradient>. */
 interface SVGLinearGradientElement extends SVGGradientElement {
     readonly x1: SVGAnimatedLength;
     readonly x2: SVGAnimatedLength;
@@ -13167,7 +13167,7 @@ declare var SVGMarkerElement: {
     readonly SVG_MARKER_ORIENT_UNKNOWN: number;
 };
 
-/** Provides access to the properties of <mask> elements, as well as methods to manipulate them. */
+/** Proporciona acceso a las propiedades de los elementos <mask>, así como métodos para manipularlos. */
 interface SVGMaskElement extends SVGElement {
     readonly height: SVGAnimatedLength;
     readonly maskContentUnits: SVGAnimatedEnumeration;
@@ -13186,7 +13186,7 @@ declare var SVGMaskElement: {
     new(): SVGMaskElement;
 };
 
-/** Corresponds to the <metadata> element. */
+/** Corresponde al elemento <metadata>. */
 interface SVGMetadataElement extends SVGElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGMetadataElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -13199,7 +13199,7 @@ declare var SVGMetadataElement: {
     new(): SVGMetadataElement;
 };
 
-/** Corresponds to the <number> basic data type. */
+/** Corresponde al tipo de datos básico <number>. */
 interface SVGNumber {
     value: number;
 }
@@ -13209,7 +13209,7 @@ declare var SVGNumber: {
     new(): SVGNumber;
 };
 
-/** The SVGNumberList defines a list of SVGNumber objects. */
+/** SVGNumberList define una lista de objetos SVGNumber. */
 interface SVGNumberList {
     readonly length: number;
     readonly numberOfItems: number;
@@ -13228,7 +13228,7 @@ declare var SVGNumberList: {
     new(): SVGNumberList;
 };
 
-/** Corresponds to the <path> element. */
+/** Corresponde al elemento <path>. */
 interface SVGPathElement extends SVGGeometryElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGPathElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -13241,7 +13241,7 @@ declare var SVGPathElement: {
     new(): SVGPathElement;
 };
 
-/** Corresponds to the <pattern> element. */
+/** Corresponde al elemento <pattern>. */
 interface SVGPatternElement extends SVGElement, SVGFitToViewBox, SVGURIReference {
     readonly height: SVGAnimatedLength;
     readonly patternContentUnits: SVGAnimatedEnumeration;
@@ -13279,7 +13279,7 @@ declare var SVGPointList: {
     new(): SVGPointList;
 };
 
-/** Provides access to the properties of <polygon> elements, as well as methods to manipulate them. */
+/** Proporciona acceso a las propiedades de los elementos <polygon>, así como a los métodos para manipularlos. */
 interface SVGPolygonElement extends SVGGeometryElement, SVGAnimatedPoints {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGPolygonElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -13292,7 +13292,7 @@ declare var SVGPolygonElement: {
     new(): SVGPolygonElement;
 };
 
-/** Provides access to the properties of <polyline> elements, as well as methods to manipulate them. */
+/** Proporciona acceso a las propiedades de los elementos <polyline>, así como métodos para manipularlos. */
 interface SVGPolylineElement extends SVGGeometryElement, SVGAnimatedPoints {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGPolylineElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -13305,7 +13305,7 @@ declare var SVGPolylineElement: {
     new(): SVGPolylineElement;
 };
 
-/** Corresponds to the preserveAspectRatio attribute, which is available for some of SVG's elements. */
+/** Corresponde al atributo preserveAspectRatio, que está disponible para algunos de los elementos SVG. */
 interface SVGPreserveAspectRatio {
     align: number;
     meetOrSlice: number;
@@ -13344,7 +13344,7 @@ declare var SVGPreserveAspectRatio: {
     readonly SVG_PRESERVEASPECTRATIO_XMINYMIN: number;
 };
 
-/** Corresponds to the <RadialGradient> element. */
+/** Corresponde al elemento <RadialGradient>. */
 interface SVGRadialGradientElement extends SVGGradientElement {
     readonly cx: SVGAnimatedLength;
     readonly cy: SVGAnimatedLength;
@@ -13363,7 +13363,7 @@ declare var SVGRadialGradientElement: {
     new(): SVGRadialGradientElement;
 };
 
-/** Provides access to the properties of <rect> elements, as well as methods to manipulate them. */
+/** Proporciona acceso a las propiedades de los elementos <rect>, así como métodos para manipularlos. */
 interface SVGRectElement extends SVGGeometryElement {
     readonly height: SVGAnimatedLength;
     readonly rx: SVGAnimatedLength;
@@ -13385,7 +13385,7 @@ declare var SVGRectElement: {
 interface SVGSVGElementEventMap extends SVGElementEventMap, WindowEventHandlersEventMap {
 }
 
-/** Provides access to the properties of <svg> elements, as well as methods to manipulate them. This interface contains also various miscellaneous commonly-used utility methods, such as matrix operations and the ability to control the time of redraw on visual rendering devices. */
+/** Proporciona acceso a las propiedades de los elementos <svg>, así como métodos para manipularlos. Esta interfaz también contiene varios útiles métodos misceláneos de uso común, como operaciones matriciales y la capacidad de controlar el tiempo de redibujado en dispositivos de renderizado visual. */
 interface SVGSVGElement extends SVGGraphicsElement, SVGFitToViewBox, WindowEventHandlers {
     currentScale: number;
     readonly currentTranslate: DOMPointReadOnly;
@@ -13431,7 +13431,7 @@ declare var SVGSVGElement: {
     new(): SVGSVGElement;
 };
 
-/** Corresponds to the SVG <script> element. */
+/** Corresponde al elemento SVG <script>. */
 interface SVGScriptElement extends SVGElement, SVGURIReference {
     type: string;
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGScriptElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -13457,7 +13457,7 @@ declare var SVGSetElement: {
     new(): SVGSetElement;
 };
 
-/** Corresponds to the <stop> element. */
+/** Corresponde al elemento <stop>. */
 interface SVGStopElement extends SVGElement {
     readonly offset: SVGAnimatedNumber;
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGStopElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -13471,7 +13471,7 @@ declare var SVGStopElement: {
     new(): SVGStopElement;
 };
 
-/** The SVGStringList defines a list of DOMString objects. */
+/** SVGStringList define una lista de objetos DOMString. */
 interface SVGStringList {
     readonly length: number;
     readonly numberOfItems: number;
@@ -13490,7 +13490,7 @@ declare var SVGStringList: {
     new(): SVGStringList;
 };
 
-/** Corresponds to the SVG <style> element. */
+/** Corresponde al elemento SVG <style>. */
 interface SVGStyleElement extends SVGElement, LinkStyle {
     disabled: boolean;
     media: string;
@@ -13507,7 +13507,7 @@ declare var SVGStyleElement: {
     new(): SVGStyleElement;
 };
 
-/** Corresponds to the <switch> element. */
+/** Corresponde al elemento <switch>. */
 interface SVGSwitchElement extends SVGGraphicsElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGSwitchElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -13520,7 +13520,7 @@ declare var SVGSwitchElement: {
     new(): SVGSwitchElement;
 };
 
-/** Corresponds to the <symbol> element. */
+/** Corresponde al elemento <symbol>. */
 interface SVGSymbolElement extends SVGElement, SVGFitToViewBox {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGSymbolElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -13533,7 +13533,7 @@ declare var SVGSymbolElement: {
     new(): SVGSymbolElement;
 };
 
-/** A <tspan> element. */
+/** Un elemento <tspan>. */
 interface SVGTSpanElement extends SVGTextPositioningElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGTSpanElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -13551,7 +13551,7 @@ interface SVGTests {
     readonly systemLanguage: SVGStringList;
 }
 
-/** Implemented by elements that support rendering child text content. It is inherited by various text-related interfaces, such as SVGTextElement, SVGTSpanElement, SVGTRefElement, SVGAltGlyphElement and SVGTextPathElement. */
+/** Implementado por elementos que admiten el renderizado de contenido de texto secundario. Lo heredan varias interfaces relacionadas con texto, como SVGTextElement, SVGTSpanElement, SVGTRefElement, SVGAltGlyphElement y SVGTextPathElement. */
 interface SVGTextContentElement extends SVGGraphicsElement {
     readonly lengthAdjust: SVGAnimatedEnumeration;
     readonly textLength: SVGAnimatedLength;
@@ -13582,7 +13582,7 @@ declare var SVGTextContentElement: {
     readonly LENGTHADJUST_UNKNOWN: number;
 };
 
-/** Corresponds to the <text> elements. */
+/** Corresponde a los elementos <text>. */
 interface SVGTextElement extends SVGTextPositioningElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGTextElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -13595,7 +13595,7 @@ declare var SVGTextElement: {
     new(): SVGTextElement;
 };
 
-/** Corresponds to the <textPath> element. */
+/** Corresponde al elemento <textPath>. */
 interface SVGTextPathElement extends SVGTextContentElement, SVGURIReference {
     readonly method: SVGAnimatedEnumeration;
     readonly spacing: SVGAnimatedEnumeration;
@@ -13623,7 +13623,7 @@ declare var SVGTextPathElement: {
     readonly TEXTPATH_SPACINGTYPE_UNKNOWN: number;
 };
 
-/** Implemented by elements that support attributes that position individual text glyphs. It is inherited by SVGTextElement, SVGTSpanElement, SVGTRefElement and SVGAltGlyphElement. */
+/** Implementado por elementos que admiten atributos que posicionan glifos de texto individuales. Lo heredan SVGTextElement, SVGTSpanElement, SVGTRefElement y SVGAltGlyphElement. */
 interface SVGTextPositioningElement extends SVGTextContentElement {
     readonly dx: SVGAnimatedLengthList;
     readonly dy: SVGAnimatedLengthList;
@@ -13641,7 +13641,7 @@ declare var SVGTextPositioningElement: {
     new(): SVGTextPositioningElement;
 };
 
-/** Corresponds to the <title> element. */
+/** Corresponde al elemento <title>. */
 interface SVGTitleElement extends SVGElement {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGTitleElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -13654,7 +13654,7 @@ declare var SVGTitleElement: {
     new(): SVGTitleElement;
 };
 
-/** SVGTransform is the interface for one of the component transformations within an SVGTransformList; thus, an SVGTransform object corresponds to a single component (e.g., scale(…) or matrix(…)) within a transform attribute. */
+/** SVGTransform es la interfaz para una de las transformaciones de componentes dentro de una SVGTransformList; por lo tanto, un objeto SVGTransform corresponde a un solo componente (p. ej., scale (...) o matrix(...)) dentro de un atributo de transformación. */
 interface SVGTransform {
     readonly angle: number;
     readonly matrix: DOMMatrix;
@@ -13686,7 +13686,7 @@ declare var SVGTransform: {
     readonly SVG_TRANSFORM_UNKNOWN: number;
 };
 
-/** The SVGTransformList defines a list of SVGTransform objects. */
+/** SVGTransformList define una lista de objetos SVGTransform. */
 interface SVGTransformList {
     readonly length: number;
     readonly numberOfItems: number;
@@ -13711,7 +13711,7 @@ interface SVGURIReference {
     readonly href: SVGAnimatedString;
 }
 
-/** A commonly used set of constants used for reflecting gradientUnits, patternContentUnits and other similar attributes. */
+/** Un conjunto de constantes de uso común para reflejar unidades de gradiente, unidades de contenido de patrón y otros atributos similares. */
 interface SVGUnitTypes {
     readonly SVG_UNIT_TYPE_OBJECTBOUNDINGBOX: number;
     readonly SVG_UNIT_TYPE_UNKNOWN: number;
@@ -13726,7 +13726,7 @@ declare var SVGUnitTypes: {
     readonly SVG_UNIT_TYPE_USERSPACEONUSE: number;
 };
 
-/** Corresponds to the <use> element. */
+/** Corresponde al elemento <use>. */
 interface SVGUseElement extends SVGGraphicsElement, SVGURIReference {
     readonly height: SVGAnimatedLength;
     readonly width: SVGAnimatedLength;
@@ -13743,7 +13743,7 @@ declare var SVGUseElement: {
     new(): SVGUseElement;
 };
 
-/** Provides access to the properties of <view> elements, as well as methods to manipulate them. */
+/** Proporciona acceso a las propiedades de los elementos <view>, así como métodos para manipularlos. */
 interface SVGViewElement extends SVGElement, SVGFitToViewBox {
     addEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGViewElement, ev: SVGElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -13756,7 +13756,7 @@ declare var SVGViewElement: {
     new(): SVGViewElement;
 };
 
-/** A screen, usually the one on which the current window is being rendered, and is obtained using window.screen. */
+/** Una pantalla, generalmente aquella en la que se renderiza la ventana actual, y se obtiene mediante window.screen. */
 interface Screen {
     readonly availHeight: number;
     readonly availWidth: number;
@@ -13797,8 +13797,8 @@ interface ScriptProcessorNodeEventMap {
     "audioprocess": AudioProcessingEvent;
 }
 
-/** Allows the generation, processing, or analyzing of audio using JavaScript.
- * @deprecated As of the August 29 2014 Web Audio API spec publication, this feature has been marked as deprecated, and was replaced by AudioWorklet (see AudioWorkletNode). */
+/** Permite la generación, procesamiento o análisis de audio usando JavaScript.
+ * @deprecated A partir de la publicación de especificaciones de la API de audio Web del 29 de agosto de 2014, esta función se marcó como obsoleta y se reemplazó por AudioWorklet (consulta AudioWorkletNode). */
 interface ScriptProcessorNode extends AudioNode {
     /** @deprecated */
     readonly bufferSize: number;
@@ -13816,7 +13816,7 @@ declare var ScriptProcessorNode: {
     new(): ScriptProcessorNode;
 };
 
-/** Inherits from Event, and represents the event object of an event sent on a document or worker when its content security policy is violated. */
+/** Hereda de Event y representa el objeto event de un evento enviado en un documento o trabajador cuando se infringe su política de seguridad de contenido. */
 interface SecurityPolicyViolationEvent extends Event {
     readonly blockedURI: string;
     readonly columnNumber: number;
@@ -13837,7 +13837,7 @@ declare var SecurityPolicyViolationEvent: {
     new(type: string, eventInitDict?: SecurityPolicyViolationEventInit): SecurityPolicyViolationEvent;
 };
 
-/** A Selection object represents the range of text selected by the user or the current position of the caret. To obtain a Selection object for examination or modification, call Window.getSelection(). */
+/** Un objeto de selección representa el rango de texto seleccionado por el usuario o la posición actual del signo de intercalación. Para obtener un objeto de selección para examinarlo o modificarlo, llama a Window.getSelection(). */
 interface Selection {
     readonly anchorNode: Node | null;
     readonly anchorOffset: number;
@@ -13873,7 +13873,7 @@ interface ServiceWorkerEventMap extends AbstractWorkerEventMap {
     "statechange": Event;
 }
 
-/** This ServiceWorker API interface provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object. */
+/** Esta API de la interfaz de ServiceWorker proporciona una referencia a un servicio worker. Se pueden asociar varios contextos de navegación (por ejemplo, páginas, trabajadores, etc.) con el mismo servicio worker, cada uno a través de un objeto ServiceWorker único. */
 interface ServiceWorker extends EventTarget, AbstractWorker {
     onstatechange: ((this: ServiceWorker, ev: Event) => any) | null;
     readonly scriptURL: string;
@@ -13897,7 +13897,7 @@ interface ServiceWorkerContainerEventMap {
     "messageerror": MessageEvent;
 }
 
-/** The ServiceWorkerContainer interface of the ServiceWorker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations. */
+/** La interfaz ServiceWorkerContainer de la API ServiceWorker  proporciona un objeto que representa al trabajador del servicio como una unidad general en el ecosistema de la red, incluidas las funciones para registrar, cancelar el registro y actualizar los trabajadores del servicio, y acceder al estado de los trabajadores del servicio y sus registros. */
 interface ServiceWorkerContainer extends EventTarget {
     readonly controller: ServiceWorker | null;
     oncontrollerchange: ((this: ServiceWorkerContainer, ev: Event) => any) | null;
@@ -13923,7 +13923,7 @@ interface ServiceWorkerRegistrationEventMap {
     "updatefound": Event;
 }
 
-/** This ServiceWorker API interface represents the service worker registration. You register a service worker to control one or more pages that share the same origin. */
+/** Esta API de la interfaz de ServiceWorker representa el registro del trabajador del servicio. Registra un trabajador de servicio para controlar una o más páginas que comparten el mismo origen. */
 interface ServiceWorkerRegistration extends EventTarget {
     readonly active: ServiceWorker | null;
     readonly installing: ServiceWorker | null;
@@ -13951,7 +13951,7 @@ interface ShadowRoot extends DocumentFragment, DocumentOrShadowRoot, InnerHTML {
     readonly host: Element;
     readonly mode: ShadowRootMode;
     /**
-     * Throws a "NotSupportedError" DOMException if context object is a shadow root.
+     * Lanza una excepción DOMException "NotSupportedError" si el objeto context es una raíz oculta.
      */
 }
 
@@ -13962,7 +13962,7 @@ declare var ShadowRoot: {
 
 interface SharedWorker extends EventTarget, AbstractWorker {
     /**
-     * Returns sharedWorker's MessagePort object which can be used to communicate with the global environment.
+     * Devuelve el objeto MessagePort de sharedWorker que se puede utilizar para comunicarse con el entorno global.
      */
     readonly port: MessagePort;
     addEventListener<K extends keyof AbstractWorkerEventMap>(type: K, listener: (this: SharedWorker, ev: AbstractWorkerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -13988,7 +13988,7 @@ interface SourceBufferEventMap {
     "updatestart": Event;
 }
 
-/** A chunk of media to be passed into an HTMLMediaElement and played, via a MediaSource object. This can be made up of one or several media segments. */
+/** Una parte de los medios que se pasan a un elemento HTMLMediaElement y se reproducen a través de un objeto MediaSource. Este puede estar compuesto por uno o varios segmentos de medios. */
 interface SourceBuffer extends EventTarget {
     appendWindowEnd: number;
     appendWindowStart: number;
@@ -14021,7 +14021,7 @@ interface SourceBufferListEventMap {
     "removesourcebuffer": Event;
 }
 
-/** A simple container list for multiple SourceBuffer objects. */
+/** Una lista de contenedores simple para varios objetos SourceBuffer. */
 interface SourceBufferList extends EventTarget {
     readonly length: number;
     onaddsourcebuffer: ((this: SourceBufferList, ev: Event) => any) | null;
@@ -14085,7 +14085,7 @@ interface SpeechSynthesisEventMap {
     "voiceschanged": Event;
 }
 
-/** This Web Speech API interface is the controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands besides. */
+/** Esta API de interfaz de Web Speech es la interfaz del controlador para el servicio de voz; esto se puede usar para recuperar información sobre las voces de síntesis disponibles en el dispositivo, iniciar y pausar el habla además de otros comandos. */
 interface SpeechSynthesis extends EventTarget {
     onvoiceschanged: ((this: SpeechSynthesis, ev: Event) => any) | null;
     readonly paused: boolean;
@@ -14116,7 +14116,7 @@ declare var SpeechSynthesisErrorEvent: {
     new(type: string, eventInitDict: SpeechSynthesisErrorEventInit): SpeechSynthesisErrorEvent;
 };
 
-/** This Web Speech API interface contains information about the current state of SpeechSynthesisUtterance objects that have been processed in the speech service. */
+/** Esta API de la interfaz Web Speech contiene información sobre el estado actual de los objetos SpeechSynthesisUtterance que se han procesado en el servicio de voz. */
 interface SpeechSynthesisEvent extends Event {
     readonly charIndex: number;
     readonly charLength: number;
@@ -14140,7 +14140,7 @@ interface SpeechSynthesisUtteranceEventMap {
     "start": SpeechSynthesisEvent;
 }
 
-/** This Web Speech API interface represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.) */
+/** Esta API de la interfaz de Web Speech representa una solicitud de voz. Es el contenido que debe leer el servicio de voz e información sobre cómo leerlo (por ejemplo, idioma, tono y volumen). */
 interface SpeechSynthesisUtterance extends EventTarget {
     lang: string;
     onboundary: ((this: SpeechSynthesisUtterance, ev: SpeechSynthesisEvent) => any) | null;
@@ -14166,7 +14166,7 @@ declare var SpeechSynthesisUtterance: {
     new(text?: string): SpeechSynthesisUtterance;
 };
 
-/** This Web Speech API interface represents a voice that the system supports. Every SpeechSynthesisVoice has its own relative speech service including information about language, name and URI. */
+/** Esta API de  la interfaz Web Speech representa una voz que admite el sistema. Cada SpeechSynthesisVoice tiene su propio servicio de voz relativo que incluye información sobre el idioma, nombre y URI. */
 interface SpeechSynthesisVoice {
     readonly default: boolean;
     readonly lang: string;
@@ -14188,7 +14188,7 @@ declare var StaticRange: {
     new(init: StaticRangeInit): StaticRange;
 };
 
-/** The pan property takes a unitless value between -1 (full left pan) and 1 (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full PannerNode. */
+/** La propiedad pan toma un valor sin unidades entre -1 (panorámica izquierda completa) y 1 (panorámica derecha completa). Esta interfaz se introdujo como una forma mucho más sencilla de aplicar un efecto panorámico simple que tener que usar un PannerNode completo. */
 interface StereoPannerNode extends AudioNode {
     readonly pan: AudioParam;
 }
@@ -14198,28 +14198,28 @@ declare var StereoPannerNode: {
     new(context: BaseAudioContext, options?: StereoPannerOptions): StereoPannerNode;
 };
 
-/** This Web Storage API interface provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items. */
+/** Esta API de la interfaz de Storage Web brinda acceso a la sesión de un dominio en particular o al almacenamiento local. Permite, por ejemplo, la adición, modificación o eliminación de elementos de datos almacenados. */
 interface Storage {
     /**
-     * Returns the number of key/value pairs.
+     * Devuelve el número de pares clave/valor.
      */
     readonly length: number;
     /**
-     * Removes all key/value pairs, if there are any.
+     * Elimina todos los pares clave/valor, si los hay.
      *
      * Envía un evento de almacenamiento en los objetos Window que contienen un objeto de almacenamiento equivalente.
      */
     clear(): void;
     /**
-     * Returns the current value associated with the given key, or null if the given key does not exist.
+     * Devuelve el valor actual asociado con la clave dada, o null si la clave dada no existe.
      */
     getItem(key: string): string | null;
     /**
-     * Returns the name of the nth key, or null if n is greater than or equal to the number of key/value pairs.
+     * Devuelve el nombre de la e-n-ésima clave, o null si n es mayor o igual que el número de pares clave/valor.
      */
     key(index: number): string | null;
     /**
-     * Removes the key/value pair with the given key, if a key/value pair with the given key exists.
+     * Elimina el par clave/valor con la clave dada, si existe un par clave/valor con la clave dada.
      *
      * Envía un evento de almacenamiento en los objetos Window que contienen un objeto de almacenamiento equivalente.
      */
@@ -14240,26 +14240,26 @@ declare var Storage: {
     new(): Storage;
 };
 
-/** A StorageEvent is sent to a window when a storage area it has access to is changed within the context of another document. */
+/** Un StorageEvent se envía a una ventana cuando un área de almacenamiento a la que tiene acceso cambia dentro del contexto de otro documento. */
 interface StorageEvent extends Event {
     /**
-     * Returns the key of the storage item being changed.
+     * Devuelve la clave del elemento de almacenamiento que se está modificando.
      */
     readonly key: string | null;
     /**
-     * Returns the new value of the key of the storage item whose value is being changed.
+     * Devuelve el nuevo valor de la clave del elemento de almacenamiento cuyo valor se está modificando.
      */
     readonly newValue: string | null;
     /**
-     * Returns the old value of the key of the storage item whose value is being changed.
+     * Devuelve el valor antiguo de la clave del elemento de almacenamiento cuyo valor se está modificando.
      */
     readonly oldValue: string | null;
     /**
-     * Returns the Storage object that was affected.
+     * Devuelve el objeto Storage que se vio afectado.
      */
     readonly storageArea: Storage | null;
     /**
-     * Returns the URL of the document whose storage item changed.
+     * Devuelve la URL del documento cuyo elemento de almacenamiento cambió.
      */
     readonly url: string;
     initStorageEvent(type: string, bubbles?: boolean, cancelable?: boolean, key?: string | null, oldValue?: string | null, newValue?: string | null, url?: string | URL, storageArea?: Storage | null): void;
@@ -14281,7 +14281,7 @@ declare var StorageManager: {
     new(): StorageManager;
 };
 
-/** A single style sheet. CSS style sheets will further implement the more specialized CSSStyleSheet interface. */
+/** Una sola hoja de estilo. Las hojas de estilo CSS implementarán aún más la interfaz CSSStyleSheet más especializada. */
 interface StyleSheet {
     disabled: boolean;
     readonly href: string | null;
@@ -14297,7 +14297,7 @@ declare var StyleSheet: {
     new(): StyleSheet;
 };
 
-/** A list of StyleSheet. */
+/** Una lista de StyleSheet. */
 interface StyleSheetList {
     readonly length: number;
     item(index: number): CSSStyleSheet | null;
@@ -14311,7 +14311,7 @@ declare var StyleSheetList: {
 
 interface SubmitEvent extends Event {
     /**
-     * Returns the element representing the submit button that triggered the form submission, or null if the submission was not triggered by a button.
+     * Devuelve el elemento que representa el botón de envío que activó el envío del formulario, o null si el envío no fue activado por un botón.
      */
     readonly submitter: HTMLElement | null;
 }
@@ -14321,7 +14321,7 @@ declare var SubmitEvent: {
     new(type: string, eventInitDict?: SubmitEventInit): SubmitEvent;
 };
 
-/** This Web Crypto API interface provides a number of low-level cryptographic functions. It is accessed via the Crypto.subtle properties available in a window context (via Window.crypto). */
+/** Esta API de la interfaz Web Crypto proporciona una serie de funciones criptográficas de bajo nivel. Se accede a través de las propiedades Crypto.subtle disponibles en un contexto window (a través de Window.crypto). */
 interface SubtleCrypto {
     decrypt(algorithm: AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams, key: CryptoKey, data: BufferSource): Promise<any>;
     deriveBits(algorithm: AlgorithmIdentifier | EcdhKeyDeriveParams | HkdfParams | Pbkdf2Params, baseKey: CryptoKey, length: number): Promise<ArrayBuffer>;
@@ -14346,15 +14346,15 @@ declare var SubtleCrypto: {
     new(): SubtleCrypto;
 };
 
-/** The textual content of Element or Attr. If an element has no markup within its content, it has a single child implementing Text that contains the element's text. However, if the element contains markup, it is parsed into information items and Text nodes that form its children. */
+/** El contenido textual de Element o Attr. Si un elemento no tiene marcado dentro de su contenido, tiene un solo hijo que implementa Text que contiene el texto del elemento. Sin embargo, si el elemento contiene marcado, se analiza en elementos de información y nodos de texto que forman sus elementos secundarios. */
 interface Text extends CharacterData, Slottable {
     readonly assignedSlot: HTMLSlotElement | null;
     /**
-     * Returns the combined data of all direct Text node siblings.
+     * Devuelve los datos combinados de todos los hermanos directos de nodos Text.
      */
     readonly wholeText: string;
     /**
-     * Splits data at the given offset and returns the remainder as Text node.
+     * Divide los datos en el desplazamiento dado y devuelve el resto como nodo Text.
      */
     splitText(offset: number): Text;
 }
@@ -14364,10 +14364,10 @@ declare var Text: {
     new(data?: string): Text;
 };
 
-/** A decoder for a specific method, that is a specific character encoding, like utf-8, iso-8859-2, koi8, cp1261, gbk, etc. A decoder takes a stream of bytes as input and emits a stream of code points. For a more scalable, non-native library, see StringView – a C-like representation of strings based on typed arrays. */
+/** Un decodificador para un método específico, es decir, una codificación de caracteres específica, como utf-8, iso-8859-2, koi8, cp1261, gbk, etc. Un decodificador toma un flujo de bytes como entrada y emite un flujo de puntos de código. Para obtener una biblioteca no nativa más escalable, consulta StringView: una representación similar a C de cadenas basada en arreglos tipados. */
 interface TextDecoder extends TextDecoderCommon {
     /**
-     * Returns the result of running encoding's decoder. The method can be invoked zero or more times with options's stream set to true, and then once without options's stream (or set to false), to process a fragmented input. If the invocation without options's stream (or set to false) has no input, it's clearest to omit both arguments.
+     * Devuelve el resultado de ejecutar el decodificador de codificación. El método se puede invocar cero o más veces con el flujo de opciones establecido en true, y luego una vez sin el flujo de opciones (o establecido en false), para procesar una entrada fragmentada. Si la invocación sin flujo de opciones (o establecida en false) no tiene entrada, es más claro omitir ambos argumentos.
      *
      * ```
      * var string = "", decoder = new TextDecoder(encoding), buffer;
@@ -14377,7 +14377,7 @@ interface TextDecoder extends TextDecoderCommon {
      * string += decoder.decode(); // end-of-queue
      * ```
      *
-     * If the error mode is "fatal" and encoding's decoder returns error, throws a TypeError.
+     * Si el modo de error es "fatal" y el decodificador de codificación devuelve un error, arroja un TypeError.
      */
     decode(input?: BufferSource, options?: TextDecodeOptions): string;
 }
@@ -14389,15 +14389,15 @@ declare var TextDecoder: {
 
 interface TextDecoderCommon {
     /**
-     * Returns encoding's name, lowercased.
+     * Devuelve el nombre de la codificación, en minúsculas.
      */
     readonly encoding: string;
     /**
-     * Returns true if error mode is "fatal", otherwise false.
+     * Devuelve true si el modo de error es "fatal", de lo contrario, false.
      */
     readonly fatal: boolean;
     /**
-     * Returns the value of ignore BOM.
+     * Devuelve el valor de ignorar BOM.
      */
     readonly ignoreBOM: boolean;
 }
@@ -14412,14 +14412,14 @@ declare var TextDecoderStream: {
     new(label?: string, options?: TextDecoderOptions): TextDecoderStream;
 };
 
-/** TextEncoder takes a stream of code points as input and emits a stream of bytes. For a more scalable, non-native library, see StringView – a C-like representation of strings based on typed arrays. */
+/** TextEncoder toma un flujo de puntos de código como entrada y emite un flujo de bytes. Para obtener una biblioteca no nativa más escalable, consulta StringView: una representación similar a C de cadenas basada en arreglos tipados. */
 interface TextEncoder extends TextEncoderCommon {
     /**
-     * Returns the result of running UTF-8's encoder.
+     * Devuelve el resultado de ejecutar el codificador UTF-8.
      */
     encode(input?: string): Uint8Array;
     /**
-     * Runs the UTF-8 encoder on source, stores the result of that operation into destination, and returns the progress made as an object wherein read is the number of converted code units of source and written is the number of bytes modified in destination.
+     * Ejecuta el codificador UTF-8 en el origen, almacena el resultado de esa operación en el destino y devuelve el progreso realizado como un objeto donde lectura es el número de unidades de código convertidas del origen y escrito es el número de bytes modificados en el destino.
      */
     encodeInto(source: string, destination: Uint8Array): TextEncoderEncodeIntoResult;
 }
@@ -14431,7 +14431,7 @@ declare var TextEncoder: {
 
 interface TextEncoderCommon {
     /**
-     * Returns "utf-8".
+     * Devuelve "utf-8".
      */
     readonly encoding: string;
 }
@@ -14446,34 +14446,34 @@ declare var TextEncoderStream: {
     new(): TextEncoderStream;
 };
 
-/** The dimensions of a piece of text in the canvas, as created by the CanvasRenderingContext2D.measureText() method. */
+/** Las dimensiones de un fragmento de texto en el canvas, creado por el método CanvasRenderingContext2D.measureText(). */
 interface TextMetrics {
     /**
-     * Returns the measurement described below.
+     * Devuelve la medida descrita a continuación.
      */
     readonly actualBoundingBoxAscent: number;
     /**
-     * Returns the measurement described below.
+     * Devuelve la medida descrita a continuación.
      */
     readonly actualBoundingBoxDescent: number;
     /**
-     * Returns the measurement described below.
+     * Devuelve la medida descrita a continuación.
      */
     readonly actualBoundingBoxLeft: number;
     /**
-     * Returns the measurement described below.
+     * Devuelve la medida descrita a continuación.
      */
     readonly actualBoundingBoxRight: number;
     /**
-     * Returns the measurement described below.
+     * Devuelve la medida descrita a continuación.
      */
     readonly fontBoundingBoxAscent: number;
     /**
-     * Returns the measurement described below.
+     * Devuelve la medida descrita a continuación.
      */
     readonly fontBoundingBoxDescent: number;
     /**
-     * Returns the measurement described below.
+     * Devuelve la medida descrita a continuación.
      */
     readonly width: number;
 }
@@ -14487,53 +14487,53 @@ interface TextTrackEventMap {
     "cuechange": Event;
 }
 
-/** This interface also inherits properties from EventTarget. */
+/** Esta interfaz también hereda propiedades de EventTarget. */
 interface TextTrack extends EventTarget {
     /**
-     * Returns the text track cues from the text track list of cues that are currently active (i.e. that start before the current playback position and end after it), as a TextTrackCueList object.
+     * Devuelve las pistas de texto de la lista de pistas de texto que están actualmente activas (es decir, que comienzan antes de la posición de reproducción actual y terminan después), como un objeto TextTrackCueList.
      */
     readonly activeCues: TextTrackCueList | null;
     /**
-     * Returns the text track list of cues, as a TextTrackCueList object.
+     * Devuelve la lista de pistas de texto, como un objeto TextTrackCueList.
      */
     readonly cues: TextTrackCueList | null;
     /**
-     * Returns the ID of the given track.
+     * Devuelve el ID de la pista dada.
      *
-     * For in-band tracks, this is the ID that can be used with a fragment if the format supports media fragment syntax, and that can be used with the getTrackById() method.
+     * Para las pistas en banda, este es el ID que se puede usar con un fragmento si el formato admite la sintaxis de fragmentos de medios y que se puede usar con el método getTrackById().
      *
-     * For TextTrack objects corresponding to track elements, this is the ID of the track element.
+     * Para objetos TextTrack correspondientes a elementos de seguimiento, este es el ID del elemento track.
      */
     readonly id: string;
     /**
-     * Returns the text track in-band metadata track dispatch type string.
+     * Devuelve la cadena de tipo de despacho de la pista de metadatos en banda de la pista de texto.
      */
     readonly inBandMetadataTrackDispatchType: string;
     /**
-     * Returns the text track kind string.
+     * Devuelve la cadena de tipo de pista de texto.
      */
     readonly kind: TextTrackKind;
     /**
-     * Returns the text track label, if there is one, or the empty string otherwise (indicating that a custom label probably needs to be generated from the other attributes of the object if the object is exposed to the user).
+     * Devuelve la etiqueta de la pista de texto, si hay una, o la cadena vacía de lo contrario (lo que indica que probablemente se deba generar una etiqueta personalizada a partir de los otros atributos del objeto si el objeto está expuesto al usuario).
      */
     readonly label: string;
     /**
-     * Returns the text track language string.
+     * Devuelve la cadena de idioma de la pista de texto.
      */
     readonly language: string;
     /**
-     * Returns the text track mode, represented by a string from the following list:
+     * Devuelve el modo de pista de texto, representado por una cadena de la siguiente lista:
      *
-     * Can be set, to change the mode.
+     * Se puede configurar para cambiar el modo.
      */
     mode: TextTrackMode;
     oncuechange: ((this: TextTrack, ev: Event) => any) | null;
     /**
-     * Adds the given cue to textTrack's text track list of cues.
+     * Agrega la señal dada a la lista de pistas de pistas de texto de textTrack.
      */
     addCue(cue: TextTrackCue): void;
     /**
-     * Removes the given cue from textTrack's text track list of cues.
+     * Elimina la entrada dada de la lista de pistas de pistas de texto de textTrack.
      */
     removeCue(cue: TextTrackCue): void;
     addEventListener<K extends keyof TextTrackEventMap>(type: K, listener: (this: TextTrack, ev: TextTrackEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -14552,36 +14552,36 @@ interface TextTrackCueEventMap {
     "exit": Event;
 }
 
-/** TextTrackCues represent a string of text that will be displayed for some duration of time on a TextTrack. This includes the start and end times that the cue will be displayed. A TextTrackCue cannot be used directly, instead one of the derived types (e.g. VTTCue) must be used. */
+/** TextTrackCues representa una cadena de texto que se mostrará durante algún tiempo en un TextTrack. Esto incluye las horas de inicio y finalización en que se mostrará la señal. Un TextTrackCue no se puede usar directamente, en su lugar se debe usar uno de los tipos derivados (por ejemplo, VTTCue). */
 interface TextTrackCue extends EventTarget {
     /**
-     * Returns the text track cue end time, in seconds.
+     * Devuelve el tiempo de finalización de la señal de la pista de texto, en segundos.
      *
-     * Can be set.
+     * Se puede ajustar.
      */
     endTime: number;
     /**
-     * Returns the text track cue identifier.
+     * Devuelve el identificador de señal de la pista de texto.
      *
-     * Can be set.
+     * Se puede ajustar.
      */
     id: string;
     onenter: ((this: TextTrackCue, ev: Event) => any) | null;
     onexit: ((this: TextTrackCue, ev: Event) => any) | null;
     /**
-     * Returns true if the text track cue pause-on-exit flag is set, false otherwise.
+     * Devuelve true si el indicador de pausa al salir de la señal de la pista de texto está establecido; de lo contrario, devuelve false.
      *
-     * Can be set.
+     * Se puede ajustar.
      */
     pauseOnExit: boolean;
     /**
-     * Returns the text track cue start time, in seconds.
+     * Devuelve el tiempo de inicio de la señal de la pista de texto, en segundos.
      *
-     * Can be set.
+     * Se puede ajustar.
      */
     startTime: number;
     /**
-     * Returns the TextTrack object to which this text track cue belongs, if any, or null otherwise.
+     * Devuelve el objeto TextTrack al que pertenece esta señal de pista de texto, si corresponde, o null en caso contrario.
      */
     readonly track: TextTrack | null;
     addEventListener<K extends keyof TextTrackCueEventMap>(type: K, listener: (this: TextTrackCue, ev: TextTrackCueEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -14597,13 +14597,13 @@ declare var TextTrackCue: {
 
 interface TextTrackCueList {
     /**
-     * Returns the number of cues in the list.
+     * Devuelve el número de cues en la lista.
      */
     readonly length: number;
     /**
-     * Returns the first text track cue (in text track cue order) with text track cue identifier id.
+     * Devuelve la primera señal de pista de texto (en orden de señal de pista de texto) con el identificador de señal de pista de texto.
      *
-     * Returns null if none of the cues have the given identifier or if the argument is the empty string.
+     * Devuelve null si ninguna de las señales tiene el identificador dado o si el argumento es una cadena vacía.
      */
     getCueById(id: string): TextTrackCue | null;
     [index: number]: TextTrackCue;
@@ -14638,22 +14638,22 @@ declare var TextTrackList: {
     new(): TextTrackList;
 };
 
-/** Used to represent a set of time ranges, primarily for the purpose of tracking which portions of media have been buffered when loading it for use by the <audio> and <video> elements. */
+/** Se utiliza para representar un conjunto de intervalos de tiempo, principalmente con el fin de rastrear qué partes de los medios se han almacenado en el búfer al cargarlos para que los utilicen los elementos <audio> y <video>. */
 interface TimeRanges {
     /**
-     * Returns the number of ranges in the object.
+     * Devuelve el número de rangos en el objeto.
      */
     readonly length: number;
     /**
-     * Returns the time for the end of the range with the given index.
+     * Devuelve el tiempo para el final del rango con el índice dado.
      *
-     * Throws an "IndexSizeError" DOMException if the index is out of range.
+     * Lanza una excepción DOMException "IndexSizeError" si el índice está fuera de rango.
      */
     end(index: number): number;
     /**
-     * Returns the time for the start of the range with the given index.
+     * Devuelve el tiempo para el inicio del rango con el índice dado.
      *
-     * Throws an "IndexSizeError" DOMException if the index is out of range.
+     * Lanza una excepción DOMException "IndexSizeError" si el índice está fuera de rango.
      */
     start(index: number): number;
 }
@@ -14663,7 +14663,7 @@ declare var TimeRanges: {
     new(): TimeRanges;
 };
 
-/** A single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad. */
+/** Un único punto de contacto en un dispositivo sensible al tacto. El punto de contacto suele ser un dedo o un lápiz y el dispositivo puede ser una pantalla táctil o un trackpad. */
 interface Touch {
     readonly clientX: number;
     readonly clientY: number;
@@ -14684,7 +14684,7 @@ declare var Touch: {
     new(touchInitDict: TouchInit): Touch;
 };
 
-/** An event sent when the state of contacts with a touch-sensitive surface changes. This surface can be a touch screen or trackpad, for example. The event can describe one or more points of contact with the screen and includes support for detecting movement, addition and removal of contact points, and so forth. */
+/** Un evento enviado cuando cambia el estado de los contactos con una superficie sensible al tacto. Esta superficie puede ser una pantalla táctil o un trackpad, por ejemplo. El evento puede describir uno o más puntos de contacto con la pantalla e incluye soporte para detectar movimiento, agregar y quitar puntos de contacto, etc. */
 interface TouchEvent extends UIEvent {
     readonly altKey: boolean;
     readonly changedTouches: TouchList;
@@ -14700,7 +14700,7 @@ declare var TouchEvent: {
     new(type: string, eventInitDict?: TouchEventInit): TouchEvent;
 };
 
-/** A list of contact points on a touch surface. For example, if the user has three fingers on the touch surface (such as a screen or trackpad), the corresponding TouchList object would have one Touch object for each finger, for a total of three entries. */
+/** Una lista de puntos de contacto en una superficie táctil. Por ejemplo, si el usuario tiene tres dedos en la superficie táctil (como una pantalla o un trackpad), el objeto TouchList correspondiente tendría un objeto Touch para cada dedo, para un total de tres entradas. */
 interface TouchList {
     readonly length: number;
     item(index: number): Touch | null;
@@ -14712,10 +14712,10 @@ declare var TouchList: {
     new(): TouchList;
 };
 
-/** The TrackEvent interface, part of the HTML DOM specification, is used for events which represent changes to the set of available tracks on an HTML media element; these events are addtrack and removetrack. */
+/** La interfaz TrackEvent, parte de la especificación HTML DOM, se utiliza para eventos que representan cambios en el conjunto de pistas disponibles en un elemento multimedia HTML; estos eventos son addtrack y removetrack. */
 interface TrackEvent extends Event {
     /**
-     * Returns the track object (TextTrack, AudioTrack, or VideoTrack) to which the event relates.
+     * Devuelve el objeto de seguimiento (TextTrack, AudioTrack o VideoTrack) con el que se relaciona el evento.
      */
     readonly track: TextTrack | null;
 }
@@ -14747,7 +14747,7 @@ declare var TransformStreamDefaultController: {
     new(): TransformStreamDefaultController;
 };
 
-/** Events providing information related to transitions. */
+/** Eventos que proporcionan información relacionada con las transiciones. */
 interface TransitionEvent extends Event {
     readonly elapsedTime: number;
     readonly propertyName: string;
@@ -14759,7 +14759,7 @@ declare var TransitionEvent: {
     new(type: string, transitionEventInitDict?: TransitionEventInit): TransitionEvent;
 };
 
-/** The nodes of a document subtree and a position within them. */
+/** Los nodos de un subárbol de documentos y una posición dentro de ellos. */
 interface TreeWalker {
     currentNode: Node;
     readonly filter: NodeFilter | null;
@@ -14779,7 +14779,7 @@ declare var TreeWalker: {
     new(): TreeWalker;
 };
 
-/** Simple user interface events. */
+/** Eventos simples de la interfaz de usuario. */
 interface UIEvent extends Event {
     readonly detail: number;
     readonly view: Window | null;
@@ -14794,7 +14794,7 @@ declare var UIEvent: {
     new(type: string, eventInitDict?: UIEventInit): UIEvent;
 };
 
-/** The URL interface represents an object providing static methods used for creating object URLs. */
+/** La interfaz de URL representa un objeto que proporciona métodos estáticos utilizados para crear URL de objetos. */
 interface URL {
     hash: string;
     host: string;
@@ -14824,32 +14824,32 @@ declare var webkitURL: typeof URL;
 
 interface URLSearchParams {
     /**
-     * Appends a specified key/value pair as a new search parameter.
+     * Agrega un par clave/valor específico como un nuevo parámetro de búsqueda.
      */
     append(name: string, value: string): void;
     /**
-     * Deletes the given search parameter, and its associated value, from the list of all search parameters.
+     * Elimina el parámetro de búsqueda dado y su valor asociado de la lista de todos los parámetros de búsqueda.
      */
     delete(name: string): void;
     /**
-     * Returns the first value associated to the given search parameter.
+     * Devuelve el primer valor asociado al parámetro de búsqueda dado.
      */
     get(name: string): string | null;
     /**
-     * Returns all the values association with a given search parameter.
+     * Devuelve toda la asociación de valores con un parámetro de búsqueda dado.
      */
     getAll(name: string): string[];
     /**
-     * Returns a Boolean indicating if such a search parameter exists.
+     * Devuelve un valor booleano que indica si existe dicho parámetro de búsqueda.
      */
     has(name: string): boolean;
     /**
-     * Sets the value associated to a given search parameter to the given value. If there were several values, delete the others.
+     * Establece el valor asociado a un parámetro de búsqueda dado al valor dado. Si hubiera múltiples valores, elimina los demás.
      */
     set(name: string, value: string): void;
     sort(): void;
     /**
-     * Returns a string containing a query string suitable for use in a URL. Does not include the question mark.
+     * Devuelve una cadena que contiene una cadena de consulta adecuada para usar en una URL. No incluye el signo de interrogación.
      */
     toString(): string;
     forEach(callbackfn: (value: string, key: string, parent: URLSearchParams) => void, thisArg?: any): void;
@@ -14900,7 +14900,7 @@ declare var VTTRegion: {
     new(): VTTRegion;
 };
 
-/** The validity states that an element can be in, with respect to constraint validation. Together, they help explain why an element's value fails to validate, if it's not valid. */
+/** La validez establece que un elemento puede estar dentro, con respecto a la validación de restricciones. Juntos, ayudan a explicar por qué el valor de un elemento no se valida, si no es válido. */
 interface ValidityState {
     readonly badInput: boolean;
     readonly customError: boolean;
@@ -15022,7 +15022,7 @@ interface WEBGL_compressed_texture_pvrtc {
     readonly COMPRESSED_RGB_PVRTC_4BPPV1_IMG: GLenum;
 }
 
-/** The WEBGL_compressed_texture_s3tc extension is part of the WebGL API and exposes four S3TC compressed texture formats. */
+/** La extensión WEBGL_compressed_texture_s3tc es parte de la API de WebGL y expone cuatro formatos de textura comprimida S3TC. */
 interface WEBGL_compressed_texture_s3tc {
     readonly COMPRESSED_RGBA_S3TC_DXT1_EXT: GLenum;
     readonly COMPRESSED_RGBA_S3TC_DXT3_EXT: GLenum;
@@ -15037,7 +15037,7 @@ interface WEBGL_compressed_texture_s3tc_srgb {
     readonly COMPRESSED_SRGB_S3TC_DXT1_EXT: GLenum;
 }
 
-/** The WEBGL_debug_renderer_info extension is part of the WebGL API and exposes two constants with information about the graphics driver for debugging purposes. */
+/** La extensión WEBGL_debug_renderer_info es parte de la API de WebGL y expone dos constantes con información sobre el controlador de gráficos con fines de depuración. */
 interface WEBGL_debug_renderer_info {
     readonly UNMASKED_RENDERER_WEBGL: GLenum;
     readonly UNMASKED_VENDOR_WEBGL: GLenum;
@@ -15047,7 +15047,7 @@ interface WEBGL_debug_shaders {
     getTranslatedShaderSource(shader: WebGLShader): string;
 }
 
-/** The WEBGL_depth_texture extension is part of the WebGL API and defines 2D depth and depth-stencil textures. */
+/** La extensión WEBGL_ depth_texture es parte de la API de WebGL y define texturas de plantilla de profundidad y profundidad 2D. */
 interface WEBGL_depth_texture {
     readonly UNSIGNED_INT_24_8_WEBGL: GLenum;
 }
@@ -15095,7 +15095,7 @@ interface WEBGL_lose_context {
     restoreContext(): void;
 }
 
-/** A WaveShaperNode always has exactly one input and one output. */
+/** Un WaveShaperNode siempre tiene exactamente una entrada y una salida. */
 interface WaveShaperNode extends AudioNode {
     curve: Float32Array | null;
     oversample: OverSampleType;
@@ -16070,7 +16070,7 @@ interface WebGL2RenderingContextOverloads {
     uniformMatrix4fv(location: WebGLUniformLocation | null, transpose: GLboolean, data: Float32List, srcOffset?: GLuint, srcLength?: GLuint): void;
 }
 
-/** Part of the WebGL API and represents the information returned by calling the WebGLRenderingContext.getActiveAttrib() and WebGLRenderingContext.getActiveUniform() methods. */
+/** Parte de la API de WebGL y representa la información devuelta al llamar a los métodos WebGLRenderingContext.getActiveAttrib() y WebGLRenderingContext.getActiveUniform(). */
 interface WebGLActiveInfo {
     readonly name: string;
     readonly size: GLint;
@@ -16082,7 +16082,7 @@ declare var WebGLActiveInfo: {
     new(): WebGLActiveInfo;
 };
 
-/** Part of the WebGL API and represents an opaque buffer object storing data such as vertices or colors. */
+/** Parte de la API de WebGL y representa un objeto de búfer opaco que almacena datos como vértices o colores. */
 interface WebGLBuffer {
 }
 
@@ -16091,7 +16091,7 @@ declare var WebGLBuffer: {
     new(): WebGLBuffer;
 };
 
-/** The WebContextEvent interface is part of the WebGL API and is an interface for an event that is generated in response to a status change to the WebGL rendering context. */
+/** La interfaz WebContextEvent es parte de la API de WebGL y es una interfaz para un evento que se genera en respuesta a un cambio de estado en el contexto de renderizado de WebGL. */
 interface WebGLContextEvent extends Event {
     readonly statusMessage: string;
 }
@@ -16101,7 +16101,7 @@ declare var WebGLContextEvent: {
     new(type: string, eventInit?: WebGLContextEventInit): WebGLContextEvent;
 };
 
-/** Part of the WebGL API and represents a collection of buffers that serve as a rendering destination. */
+/** Parte de la API de WebGL y representa una colección de búferes que sirven como destino de renderización. */
 interface WebGLFramebuffer {
 }
 
@@ -16110,7 +16110,7 @@ declare var WebGLFramebuffer: {
     new(): WebGLFramebuffer;
 };
 
-/** The WebGLProgram is part of the WebGL API and is a combination of two compiled WebGLShaders consisting of a vertex shader and a fragment shader (both written in GLSL). */
+/** El programa WebGL es parte de la API de WebGL y es una combinación de dos WebGLShaders compilados que consisten en un sombreador de vértices y un sombreador de fragmentos (ambos escritos en GLSL). */
 interface WebGLProgram {
 }
 
@@ -16127,7 +16127,7 @@ declare var WebGLQuery: {
     new(): WebGLQuery;
 };
 
-/** Part of the WebGL API and represents a buffer that can contain an image, or can be source or target of an rendering operation. */
+/** Parte de la API de WebGL y representa un búfer que puede contener una imagen o puede ser el origen o el destino de una operación de renderizado. */
 interface WebGLRenderbuffer {
 }
 
@@ -16136,7 +16136,7 @@ declare var WebGLRenderbuffer: {
     new(): WebGLRenderbuffer;
 };
 
-/** Provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML <canvas> element. */
+/** Proporciona una interfaz para el contexto de renderización de gráficos de OpenGL ES 2.0 para la superficie de dibujo de un elemento HTML <canvas>. */
 interface WebGLRenderingContext extends WebGLRenderingContextBase, WebGLRenderingContextOverloads {
 }
 
@@ -16922,7 +16922,7 @@ declare var WebGLSampler: {
     new(): WebGLSampler;
 };
 
-/** The WebGLShader is part of the WebGL API and can either be a vertex or a fragment shader. A WebGLProgram requires both types of shaders. */
+/** El WebGLShader es parte de la API de WebGL y puede ser un vértice o un sombreador de fragmentos. Un WebGLProgram requiere ambos tipos de shaders. */
 interface WebGLShader {
 }
 
@@ -16931,7 +16931,7 @@ declare var WebGLShader: {
     new(): WebGLShader;
 };
 
-/** Part of the WebGL API and represents the information returned by calling the WebGLRenderingContext.getShaderPrecisionFormat() method. */
+/** Parte de la API de WebGL y representa la información devuelta al llamar al método WebGLRenderingContext.getShaderPrecisionFormat(). */
 interface WebGLShaderPrecisionFormat {
     readonly precision: GLint;
     readonly rangeMax: GLint;
@@ -16951,7 +16951,7 @@ declare var WebGLSync: {
     new(): WebGLSync;
 };
 
-/** Part of the WebGL API and represents an opaque texture object providing storage and state for texturing operations. */
+/** Parte de la API de WebGL y representa un objeto de textura opaco que proporciona almacenamiento y estado para las operaciones de texturizado. */
 interface WebGLTexture {
 }
 
@@ -16968,7 +16968,7 @@ declare var WebGLTransformFeedback: {
     new(): WebGLTransformFeedback;
 };
 
-/** Part of the WebGL API and represents the location of a uniform variable in a shader program. */
+/** Parte de la API de WebGL y representa la ubicación de una variable uniforme en un programa de sombreado. */
 interface WebGLUniformLocation {
 }
 
@@ -16995,22 +16995,22 @@ interface WebSocketEventMap {
     "open": Event;
 }
 
-/** Provides the API for creating and managing a WebSocket connection to a server, as well as for sending and receiving data on the connection. */
+/** Proporciona la API para crear y administrar una conexión WebSocket a un servidor, así como para enviar y recibir datos en la conexión. */
 interface WebSocket extends EventTarget {
     /**
-     * Returns a string that indicates how binary data from the WebSocket object is exposed to scripts:
+     * Devuelve una cadena que indica cómo se exponen los datos binarios del objeto WebSocket a los scripts:
      *
-     * Can be set, to change how binary data is returned. The default is "blob".
+     * Se puede configurar para cambiar la forma en que se devuelven los datos binarios. El valor predeterminado es "blob".
      */
     binaryType: BinaryType;
     /**
-     * Returns the number of bytes of application data (UTF-8 text and binary data) that have been queued using send() but not yet been transmitted to the network.
+     * Devuelve el número de bytes de datos de la aplicación (texto UTF-8 y datos binarios) que se han puesto en cola mediante send() pero que aún no se han transmitido a la red.
      *
      * Si la conexión WebSocket está cerrada, el valor de este atributo solo aumentará con cada llamada al método send(). (El número no se restablece a cero una vez que se cierra la conexión).
      */
     readonly bufferedAmount: number;
     /**
-     * Returns the extensions selected by the server, if any.
+     * Devuelve las extensiones seleccionadas por el servidor, si las hay.
      */
     readonly extensions: string;
     onclose: ((this: WebSocket, ev: CloseEvent) => any) | null;
@@ -17038,7 +17038,7 @@ interface WebSocket extends EventTarget {
      */
     close(code?: number, reason?: string): void;
     /**
-     * Transmits data using the WebSocket connection. data can be a string, a Blob, an ArrayBuffer, or an ArrayBufferView.
+     * Transmite datos usando la conexión WebSocket. los datos pueden ser una cadena, un Blob, un ArrayBuffer o un ArrayBufferView.
      */
     send(data: string | ArrayBufferLike | Blob | ArrayBufferView): void;
     readonly CLOSED: number;
@@ -17060,7 +17060,7 @@ declare var WebSocket: {
     readonly OPEN: number;
 };
 
-/** Events that occur due to the user moving a mouse wheel or similar input device. */
+/** Eventos que ocurren debido a que el usuario mueve la rueda del mouse o un dispositivo de entrada similar. */
 interface WheelEvent extends MouseEvent {
     readonly deltaMode: number;
     readonly deltaX: number;
@@ -17087,15 +17087,15 @@ interface WindowEventMap extends GlobalEventHandlersEventMap, WindowEventHandler
     "orientationchange": Event;
 }
 
-/** A window containing a DOM document; the document property points to the DOM document loaded in that window. */
+/** Una ventana que contiene un documento DOM; la propiedad del documento apunta al documento DOM cargado en esa ventana. */
 interface Window extends EventTarget, AnimationFrameProvider, GlobalEventHandlers, WindowEventHandlers, WindowLocalStorage, WindowOrWorkerGlobalScope, WindowSessionStorage {
     HTMLDocument: Document;
     /**
-     * Returns true if the window has been closed, false otherwise.
+     * Devuelve true si la ventana ha sido cerrada, false en caso contrario.
      */
     readonly closed: boolean;
     /**
-     * Defines a new custom element, mapping the given name to the given constructor as an autonomous custom element.
+     * Define un nuevo elemento personalizado, asignando el nombre dado al constructor dado como un elemento personalizado autónomo.
      */
     readonly customElements: CustomElementRegistry;
     readonly devicePixelRatio: number;
@@ -17113,11 +17113,11 @@ interface Window extends EventTarget, AnimationFrameProvider, GlobalEventHandler
     get location(): Location;
     set location(href: string | Location);
     /**
-     * Returns true if the location bar is visible; otherwise, returns false.
+     * Devuelve true si la barra de ubicación está visible; de lo contrario, devuelve false.
      */
     readonly locationbar: BarProp;
     /**
-     * Returns true if the menu bar is visible; otherwise, returns false.
+     * Devuelve true si la barra de menú está visible; de lo contrario, devuelve false.
      */
     readonly menubar: BarProp;
     name: string;
@@ -17135,7 +17135,7 @@ interface Window extends EventTarget, AnimationFrameProvider, GlobalEventHandler
     readonly pageYOffset: number;
     readonly parent: WindowProxy | null;
     /**
-     * Returns true if the personal bar is visible; otherwise, returns false.
+     * Devuelve true si la barra personal está visible; de lo contrario, devuelve false.
      */
     readonly personalbar: BarProp;
     readonly screen: Screen;
@@ -17146,7 +17146,7 @@ interface Window extends EventTarget, AnimationFrameProvider, GlobalEventHandler
     readonly scrollX: number;
     readonly scrollY: number;
     /**
-     * Returns true if the scrollbars are visible; otherwise, returns false.
+     * Devuelve true si las barras de desplazamiento están visibles; de lo contrario, devuelve false.
      */
     readonly scrollbars: BarProp;
     readonly self: Window & typeof globalThis;
@@ -17154,11 +17154,11 @@ interface Window extends EventTarget, AnimationFrameProvider, GlobalEventHandler
     /** @deprecated */
     status: string;
     /**
-     * Returns true if the status bar is visible; otherwise, returns false.
+     * Devuelve true si la barra de estado está visible; de lo contrario, devuelve false.
      */
     readonly statusbar: BarProp;
     /**
-     * Returns true if the toolbar is visible; otherwise, returns false.
+     * Devuelve true si la barra de herramientas está visible; de lo contrario, devuelve false.
      */
     readonly toolbar: BarProp;
     readonly top: WindowProxy | null;
@@ -17170,12 +17170,12 @@ interface Window extends EventTarget, AnimationFrameProvider, GlobalEventHandler
     /** @deprecated */
     captureEvents(): void;
     /**
-     * Closes the window.
+     * Cierra la ventana.
      */
     close(): void;
     confirm(message?: string): boolean;
     /**
-     * Moves the focus to the window's browsing context, if any.
+     * Mueve el foco al contexto de navegación de la ventana, si lo hay.
      */
     focus(): void;
     getComputedStyle(elt: Element, pseudoElt?: string | null): CSSStyleDeclaration;
@@ -17185,15 +17185,15 @@ interface Window extends EventTarget, AnimationFrameProvider, GlobalEventHandler
     moveTo(x: number, y: number): void;
     open(url?: string | URL, target?: string, features?: string): WindowProxy | null;
     /**
-     * Posts a message to the given window. Messages can be structured objects, e.g. nested objects and arrays, can contain JavaScript values (strings, numbers, Date objects, etc), and can contain certain data objects such as File Blob, FileList, and ArrayBuffer objects.
+     * Publica un mensaje en la ventana dada. Los mensajes pueden ser objetos estructurados, p. ej. arreglos y objetos anidados, pueden contener valores de JavaScript (cadenas, números, objetos de fecha, etc.) y pueden contener ciertos objetos de datos, como objetos File Blob, FileList y ArrayBuffer.
      *
-     * Objects listed in the transfer member of options are transferred, not just cloned, meaning that they are no longer usable on the sending side.
+     * Los objetos enumerados en el miembro de transferencia de opciones se transfieren, no solo se clonan, lo cual significa que ya no se pueden utilizar en el lado de envío.
      *
-     * A target origin can be specified using the targetOrigin member of options. If not provided, it defaults to "/". This default restricts the message to same-origin targets only.
+     * Se puede especificar un origen de destino mediante el miembro de opciones targetOrigin. Si no se proporciona, el valor predeterminado es "/". Este valor predeterminado restringe el mensaje solo a destinos del mismo origen.
      *
-     * If the origin of the target window doesn't match the given target origin, the message is discarded, to avoid information leakage. To send the message to the target regardless of origin, set the target origin to "*".
+     * Si el origen de la ventana de destino no coincide con el origen de destino dado, el mensaje se descarta para evitar la fuga de información. Para enviar el mensaje al destino independientemente del origen, establece el origen del destino en "*".
      *
-     * Throws a "DataCloneError" DOMException if transfer array contains duplicate objects or if message could not be cloned.
+     * Lanza una DOMException "DataCloneError" si el arreglo de transferencia contiene objetos duplicados o si el mensaje no se pudo clonar.
      */
     postMessage(message: any, targetOrigin: string, transfer?: Transferable[]): void;
     postMessage(message: any, options?: WindowPostMessageOptions): void;
@@ -17211,7 +17211,7 @@ interface Window extends EventTarget, AnimationFrameProvider, GlobalEventHandler
     scrollTo(options?: ScrollToOptions): void;
     scrollTo(x: number, y: number): void;
     /**
-     * Cancels the document load.
+     * Cancela la carga del documento.
      */
     stop(): void;
     addEventListener<K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -17305,17 +17305,17 @@ interface WorkerEventMap extends AbstractWorkerEventMap {
     "messageerror": MessageEvent;
 }
 
-/** This Web Workers API interface represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker() constructor and specifying a script to be run in the worker thread. */
+/** Esta API de la interfaz de Web Workers representa una tarea en segundo plano que se puede crear fácilmente y puede enviar mensajes a su creador. Crear un trabajador es tan simple como llamar al constructor Worker() y especificar un script para que se ejecute en el subproceso del trabajador. */
 interface Worker extends EventTarget, AbstractWorker {
     onmessage: ((this: Worker, ev: MessageEvent) => any) | null;
     onmessageerror: ((this: Worker, ev: MessageEvent) => any) | null;
     /**
-     * Clones message and transmits it to worker's global environment. transfer can be passed as a list of objects that are to be transferred rather than cloned.
+     * Clona el mensaje y lo transmite al entorno global del trabajador. La transferencia se puede pasar como una lista de objetos que se transferirán en lugar de clonarse.
      */
     postMessage(message: any, transfer: Transferable[]): void;
     postMessage(message: any, options?: PostMessageOptions): void;
     /**
-     * Aborts worker's associated global environment.
+     * Aborta el entorno global asociado del trabajador.
      */
     terminate(): void;
     addEventListener<K extends keyof WorkerEventMap>(type: K, listener: (this: Worker, ev: WorkerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -17331,11 +17331,11 @@ declare var Worker: {
 
 interface Worklet {
     /**
-     * Loads and executes the module script given by moduleURL into all of worklet's global scopes. It can also create additional global scopes as part of this process, depending on the worklet type. The returned promise will fulfill once the script has been successfully loaded and run in all global scopes.
+     * Carga y ejecuta el script del módulo proporcionado por moduleURL en todos los ámbitos globales del worklet. También puede crear ámbitos globales adicionales como parte de este proceso, según el tipo de worklet. La promesa devuelta se cumplirá una vez que el script se haya cargado y ejecutado correctamente en todos los ámbitos globales.
      *
-     * The credentials option can be set to a credentials mode to modify the script-fetching process. It defaults to "same-origin".
+     * La opción de credenciales se puede establecer en un modo credentials para modificar el proceso de recuperación de scripts. De manera predeterminada es "same-origin".
      *
-     * Any failures in fetching the script or its dependencies will cause the returned promise to be rejected with an "AbortError" DOMException. Any errors in parsing the script or its dependencies will cause the returned promise to be rejected with the exception generated during parsing.
+     * Cualquier falla al obtener el script o sus dependencias hará que la promesa devuelta sea rechazada con una DOMException "AbortError". Cualquier error al analizar el script o sus dependencias hará que se rechace la promesa devuelta con la excepción generada durante el análisis.
      */
     addModule(moduleURL: string | URL, options?: WorkletOptions): Promise<void>;
 }
@@ -17345,7 +17345,7 @@ declare var Worklet: {
     new(): Worklet;
 };
 
-/** This Streams API interface provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing. */
+/** Esta API de la interfaz de Streams proporciona una abstracción estándar para escribir datos de transmisión en un destino, conocido como sumidero. Este objeto viene con contrapresión y colas incorporadas. */
 interface WritableStream<W = any> {
     readonly locked: boolean;
     abort(reason?: any): Promise<void>;
@@ -17358,7 +17358,7 @@ declare var WritableStream: {
     new<W = any>(underlyingSink?: UnderlyingSink<W>, strategy?: QueuingStrategy<W>): WritableStream<W>;
 };
 
-/** This Streams API interface represents a controller allowing control of a WritableStream's state. When constructing a WritableStream, the underlying sink is given a corresponding WritableStreamDefaultController instance to manipulate. */
+/** Esta API de la interfaz de Streams representa un controlador que permite controlar el estado de un WritableStream. Al construir un WritableStream, el sumidero subyacente recibe una instancia de WritableStreamDefaultController correspondiente para manipular. */
 interface WritableStreamDefaultController {
     error(e?: any): void;
 }
@@ -17368,7 +17368,7 @@ declare var WritableStreamDefaultController: {
     new(): WritableStreamDefaultController;
 };
 
-/** This Streams API interface is the object returned by WritableStream.getWriter() and once created locks the < writer to the WritableStream ensuring that no other streams can write to the underlying sink. */
+/** Esta API de la interfaz de Streams es el objeto devuelto por WritableStream.getWriter() y, una vez creado, bloquea el escritor < en WritableStream, lo que garantiza que ningún otro flujo pueda escribir en el receptor subyacente. */
 interface WritableStreamDefaultWriter<W = any> {
     readonly closed: Promise<undefined>;
     readonly desiredSize: number | null;
@@ -17384,7 +17384,7 @@ declare var WritableStreamDefaultWriter: {
     new<W = any>(stream: WritableStream<W>): WritableStreamDefaultWriter<W>;
 };
 
-/** An XML document. It inherits from the generic Document and does not add any specific methods or properties to it: nevertheless, several algorithms behave differently with the two types of documents. */
+/** Un documento XML. Hereda del documento genérico y no le agrega ningún método o propiedad específica: sin embargo, varios algoritmos se comportan de manera diferente con los dos tipos de documentos. */
 interface XMLDocument extends Document {
     addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: XMLDocument, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListener, options?: boolean | AddEventListenerOptions): void;
@@ -17401,74 +17401,74 @@ interface XMLHttpRequestEventMap extends XMLHttpRequestEventTargetEventMap {
     "readystatechange": Event;
 }
 
-/** Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing. */
+/** Utiliza objetos XMLHttpRequest (XHR) para interactuar con los servidores. Puedes recuperar datos de una URL sin tener que actualizar la página completa. Esto permite que una página web actualice solo una parte de una página sin interrumpir lo que está haciendo el usuario. */
 interface XMLHttpRequest extends XMLHttpRequestEventTarget {
     onreadystatechange: ((this: XMLHttpRequest, ev: Event) => any) | null;
     /**
-     * Returns client's state.
+     * Devuelve el estado del cliente.
      */
     readonly readyState: number;
     /**
-     * Returns the response body.
+     * Devuelve el cuerpo de la respuesta.
      */
     readonly response: any;
     /**
-     * Returns response as text.
+     * Devuelve la respuesta como texto.
      *
-     * Throws an "InvalidStateError" DOMException if responseType is not the empty string or "text".
+     * Lanza una DOMException "InvalidStateError" si el tipo de respuesta no es una cadena vacía o "text".
      */
     readonly responseText: string;
     /**
-     * Returns the response type.
+     * Devuelve el tipo de respuesta.
      *
-     * Can be set to change the response type. Values are: the empty string (default), "arraybuffer", "blob", "document", "json", and "text".
+     * Se puede configurar para cambiar el tipo de respuesta. Los valores son: la cadena vacía (predeterminada), "arraybuffer", "blob", "document", "json" y "text".
      *
-     * When set: setting to "document" is ignored if current global object is not a Window object.
+     * Cuando se establece: la configuración de "document" se ignora si el objeto global actual no es un objeto Window.
      *
-     * When set: throws an "InvalidStateError" DOMException if state is loading or done.
+     * Cuando se establece: lanza una excepción DOMException "InvalidStateError" si el estado se está cargando o está terminado.
      *
-     * When set: throws an "InvalidAccessError" DOMException if the synchronous flag is set and current global object is a Window object.
+     * Cuando se establece: lanza una DOMException "InvalidAccessError" si el indicador síncrono está establecido y el objeto global actual es un objeto Window.
      */
     responseType: XMLHttpRequestResponseType;
     readonly responseURL: string;
     /**
-     * Returns the response as document.
+     * Devuelve la respuesta como documento.
      *
-     * Throws an "InvalidStateError" DOMException if responseType is not the empty string or "document".
+     * Lanza una DOMException "InvalidStateError" si el tipo de respuesta no es la cadena vacía o "document".
      */
     readonly responseXML: Document | null;
     readonly status: number;
     readonly statusText: string;
     /**
-     * Can be set to a time in milliseconds. When set to a non-zero value will cause fetching to terminate after the given time has passed. When the time has passed, the request has not yet completed, and this's synchronous flag is unset, a timeout event will then be dispatched, or a "TimeoutError" DOMException will be thrown otherwise (for the send() method).
+     * Se puede establecer un tiempo en milisegundos. Cuando se establece en un valor distinto de cero, la recuperación finalizará después de que haya pasado el tiempo dado. Cuando haya pasado el tiempo, la solicitud aún no se haya completado y este indicador síncrono no esté establecido, se enviará un evento de tiempo de espera o se lanzará una DOMException "TimeoutError" de lo contrario (para el método send()).
      *
-     * When set: throws an "InvalidAccessError" DOMException if the synchronous flag is set and current global object is a Window object.
+     * Cuando se establece: lanza una DOMException "InvalidAccessError" si el indicador síncrono está establecido y el objeto global actual es un objeto Window.
      */
     timeout: number;
     /**
-     * Returns the associated XMLHttpRequestUpload object. It can be used to gather transmission information when data is transferred to a server.
+     * Devuelve el objeto XMLHttpRequestUpload asociado. Se puede utilizar para recopilar información de transmisión cuando los datos se transfieren a un servidor.
      */
     readonly upload: XMLHttpRequestUpload;
     /**
-     * True when credentials are to be included in a cross-origin request. False when they are to be excluded in a cross-origin request and when cookies are to be ignored in its response. Initially false.
+     * True cuando las credenciales se deben incluir en una solicitud de origen cruzado. False cuando se deben excluir en una solicitud de origen cruzado y cuando las cookies se deben ignorar en su respuesta. Inicialmente false.
      *
-     * When set: throws an "InvalidStateError" DOMException if state is not unsent or opened, or if the send() flag is set.
+     * Cuando se establece: lanza una DOMException "InvalidStateError" si el estado no se envía o abre, o si el indicador send() está establecido.
      */
     withCredentials: boolean;
     /**
-     * Cancels any network activity.
+     * Cancela cualquier actividad de red.
      */
     abort(): void;
     getAllResponseHeaders(): string;
     getResponseHeader(name: string): string | null;
     /**
-     * Sets the request method, request URL, and synchronous flag.
+     * Establece el método de solicitud, la URL de solicitud y el indicador síncrono.
      *
-     * Throws a "SyntaxError" DOMException if either method is not a valid method or url cannot be parsed.
+     * Lanza una excepción DOMException "SyntaxError" si alguno de los métodos no es un método válido o si la URL no se puede analizar.
      *
-     * Throws a "SecurityError" DOMException if method is a case-insensitive match for `CONNECT`, `TRACE`, or `TRACK`.
+     * Lanza una DOMException "SecurityError" si el método es una coincidencia que no distingue entre mayúsculas y minúsculas para `CONNECT`, `TRACE` o `TRACK`.
      *
-     * Throws an "InvalidAccessError" DOMException if async is false, current global object is a Window object, and the timeout attribute is not zero or the responseType attribute is not the empty string.
+     * Lanza una DOMException "InvalidAccessError" si asíncrono es false, el objeto global actual es un objeto Window y el atributo de tiempo de espera no es cero o el atributo de tipo de respuesta no es la cadena vacía.
      */
     open(method: string, url: string | URL): void;
     open(method: string, url: string | URL, async: boolean, username?: string | null, password?: string | null): void;
@@ -17486,11 +17486,11 @@ interface XMLHttpRequest extends XMLHttpRequestEventTarget {
      */
     send(body?: Document | XMLHttpRequestBodyInit | null): void;
     /**
-     * Combines a header in author request headers.
+     * Combina un encabezado en encabezados de solicitud de autor.
      *
      * Lanza un "InvalidStateError" de Domexception si no se abre ninguno de los estados o se establece el indicador send().
      *
-     * Throws a "SyntaxError" DOMException if name is not a header name or if value is not a header value.
+     * Lanza una excepción DOMException "SyntaxError" si el nombre no es un nombre de encabezado o si el valor no es un valor de encabezado.
      */
     setRequestHeader(name: string, value: string): void;
     readonly DONE: number;
@@ -17555,7 +17555,7 @@ declare var XMLHttpRequestUpload: {
     new(): XMLHttpRequestUpload;
 };
 
-/** Provides the serializeToString() method to construct an XML string representing a DOM tree. */
+/** Proporciona el método serializeToString() para construir una cadena XML que representa un árbol DOM. */
 interface XMLSerializer {
     serializeToString(root: Node): string;
 }
@@ -17565,7 +17565,7 @@ declare var XMLSerializer: {
     new(): XMLSerializer;
 };
 
-/** The XPathEvaluator interface allows to compile and evaluate XPath expressions. */
+/** La interfaz XPathEvaluator permite compilar y evaluar expresiones XPath. */
 interface XPathEvaluator extends XPathEvaluatorBase {
 }
 
@@ -17580,7 +17580,7 @@ interface XPathEvaluatorBase {
     evaluate(expression: string, contextNode: Node, resolver?: XPathNSResolver | null, type?: number, result?: XPathResult | null): XPathResult;
 }
 
-/** This interface is a compiled XPath expression that can be evaluated on a document or specific node to return information its DOM tree. */
+/** Esta interfaz es una expresión XPath compilada que se puede evaluar en un documento o nodo específico para devolver información de su árbol DOM. */
 interface XPathExpression {
     evaluate(contextNode: Node, type?: number, result?: XPathResult | null): XPathResult;
 }
@@ -17590,7 +17590,7 @@ declare var XPathExpression: {
     new(): XPathExpression;
 };
 
-/** The results generated by evaluating an XPath expression within the context of a given node. */
+/** El resultado generado al evaluar una expresión XPath dentro del contexto de un nodo dado. */
 interface XPathResult {
     readonly booleanValue: boolean;
     readonly invalidIteratorState: boolean;
@@ -17628,7 +17628,7 @@ declare var XPathResult: {
     readonly UNORDERED_NODE_SNAPSHOT_TYPE: number;
 };
 
-/** An XSLTProcessor applies an XSLT stylesheet transformation to an XML document to produce a new XML document as output. It has methods to load the XSLT stylesheet, to manipulate <xsl:param> parameter values, and to apply the transformation to documents. */
+/** Un XSLTProcessor aplica una transformación de hoja de estilo XSLT a un documento XML para producir un nuevo documento XML como salida. Tiene métodos para cargar la hoja de estilo XSLT, para manipular los valores de los parámetros <xsl:param> y para aplicar la transformación a los documentos. */
 interface XSLTProcessor {
     clearParameters(): void;
     getParameter(namespaceURI: string | null, localName: string): any;
@@ -17670,7 +17670,7 @@ interface Console {
 
 declare var console: Console;
 
-/** Holds useful CSS-related methods. No object with this interface are implemented: it contains only static methods and therefore is a utilitarian interface. */
+/** Contiene métodos útiles relacionados con CSS. No se implementa ningún objeto con esta interfaz: contiene solo métodos estáticos y, por lo tanto, es una interfaz utilitaria. */
 declare namespace CSS {
     function escape(ident: string): string;
     function supports(property: string, value: string): boolean;
@@ -18137,7 +18137,7 @@ interface SVGElementTagNameMap {
     "view": SVGViewElement;
 }
 
-/** @deprecated Directly use HTMLElementTagNameMap or SVGElementTagNameMap as appropriate, instead. */
+/** @deprecated En su lugar, usa directamente HTMLElementTagNameMap o SVGElementTagNameMap según corresponda. */
 type ElementTagNameMap = HTMLElementTagNameMap & Pick<SVGElementTagNameMap, Exclude<keyof SVGElementTagNameMap, keyof HTMLElementTagNameMap>>;
 
 declare var Audio: {
@@ -18151,11 +18151,11 @@ declare var Option: {
 };
 declare var HTMLDocument: Document;
 /**
- * Returns true if the window has been closed, false otherwise.
+ * Devuelve true si la ventana ha sido cerrada, false en caso contrario.
  */
 declare var closed: boolean;
 /**
- * Defines a new custom element, mapping the given name to the given constructor as an autonomous custom element.
+ * Define un nuevo elemento personalizado, asignando el nombre dado al constructor dado como un elemento personalizado autónomo.
  */
 declare var customElements: CustomElementRegistry;
 declare var devicePixelRatio: number;
@@ -18172,11 +18172,11 @@ declare var innerWidth: number;
 declare var length: number;
 declare var location: Location;
 /**
- * Returns true if the location bar is visible; otherwise, returns false.
+ * Devuelve true si la barra de ubicación está visible; de lo contrario, devuelve false.
  */
 declare var locationbar: BarProp;
 /**
- * Returns true if the menu bar is visible; otherwise, returns false.
+ * Devuelve true si la barra de menú está visible; de lo contrario, devuelve false.
  */
 declare var menubar: BarProp;
 /** @deprecated */
@@ -18195,7 +18195,7 @@ declare var pageXOffset: number;
 declare var pageYOffset: number;
 declare var parent: WindowProxy | null;
 /**
- * Returns true if the personal bar is visible; otherwise, returns false.
+ * Devuelve true si la barra personal está visible; de lo contrario, devuelve false.
  */
 declare var personalbar: BarProp;
 declare var screen: Screen;
@@ -18206,7 +18206,7 @@ declare var screenY: number;
 declare var scrollX: number;
 declare var scrollY: number;
 /**
- * Returns true if the scrollbars are visible; otherwise, returns false.
+ * Devuelve true si las barras de desplazamiento están visibles; de lo contrario, devuelve false.
  */
 declare var scrollbars: BarProp;
 declare var self: Window & typeof globalThis;
@@ -18214,11 +18214,11 @@ declare var speechSynthesis: SpeechSynthesis;
 /** @deprecated */
 declare var status: string;
 /**
- * Returns true if the status bar is visible; otherwise, returns false.
+ * Devuelve true si la barra de estado está visible; de lo contrario, devuelve false.
  */
 declare var statusbar: BarProp;
 /**
- * Returns true if the toolbar is visible; otherwise, returns false.
+ * Devuelve true si la barra de herramientas está visible; de lo contrario, devuelve false.
  */
 declare var toolbar: BarProp;
 declare var top: WindowProxy | null;
@@ -18230,12 +18230,12 @@ declare function cancelIdleCallback(handle: number): void;
 /** @deprecated */
 declare function captureEvents(): void;
 /**
- * Closes the window.
+ * Cierra la ventana.
  */
 declare function close(): void;
 declare function confirm(message?: string): boolean;
 /**
- * Moves the focus to the window's browsing context, if any.
+ * Mueve el foco al contexto de navegación de la ventana, si lo hay.
  */
 declare function focus(): void;
 declare function getComputedStyle(elt: Element, pseudoElt?: string | null): CSSStyleDeclaration;
@@ -18245,15 +18245,15 @@ declare function moveBy(x: number, y: number): void;
 declare function moveTo(x: number, y: number): void;
 declare function open(url?: string | URL, target?: string, features?: string): WindowProxy | null;
 /**
- * Posts a message to the given window. Messages can be structured objects, e.g. nested objects and arrays, can contain JavaScript values (strings, numbers, Date objects, etc), and can contain certain data objects such as File Blob, FileList, and ArrayBuffer objects.
+ * Publica un mensaje en la ventana dada. Los mensajes pueden ser objetos estructurados, p. ej. arreglos y objetos anidados, pueden contener valores de JavaScript (cadenas, números, objetos de fecha, etc.) y pueden contener ciertos objetos de datos, como objetos File Blob, FileList y ArrayBuffer.
  *
- * Objects listed in the transfer member of options are transferred, not just cloned, meaning that they are no longer usable on the sending side.
+ * Los objetos enumerados en el miembro de transferencia de opciones se transfieren, no solo se clonan, lo cual significa que ya no se pueden utilizar en el lado de envío.
  *
- * A target origin can be specified using the targetOrigin member of options. If not provided, it defaults to "/". This default restricts the message to same-origin targets only.
+ * Se puede especificar un origen de destino mediante el miembro de opciones targetOrigin. Si no se proporciona, el valor predeterminado es "/". Este valor predeterminado restringe el mensaje solo a destinos del mismo origen.
  *
- * If the origin of the target window doesn't match the given target origin, the message is discarded, to avoid information leakage. To send the message to the target regardless of origin, set the target origin to "*".
+ * Si el origen de la ventana de destino no coincide con el origen de destino dado, el mensaje se descarta para evitar la fuga de información. Para enviar el mensaje al destino independientemente del origen, establece el origen del destino en "*".
  *
- * Throws a "DataCloneError" DOMException if transfer array contains duplicate objects or if message could not be cloned.
+ * Lanza una DOMException "DataCloneError" si el arreglo de transferencia contiene objetos duplicados o si el mensaje no se pudo clonar.
  */
 declare function postMessage(message: any, targetOrigin: string, transfer?: Transferable[]): void;
 declare function postMessage(message: any, options?: WindowPostMessageOptions): void;
@@ -18271,7 +18271,7 @@ declare function scrollBy(x: number, y: number): void;
 declare function scrollTo(options?: ScrollToOptions): void;
 declare function scrollTo(x: number, y: number): void;
 /**
- * Cancels the document load.
+ * Cancela la carga del documento.
  */
 declare function stop(): void;
 declare function toString(): string;

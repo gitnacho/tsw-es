@@ -1,6 +1,6 @@
 ---
 display: "Excluye"
-oneline: "Filtra los resultados de la opción [`include`](#include)."
+oneline: "Filtra el resultado de la opción [`include`](#include)."
 ---
 
 Especifica un arreglo de nombres de archivo o patrones que se deben omitir al resolver [`include`](#include).

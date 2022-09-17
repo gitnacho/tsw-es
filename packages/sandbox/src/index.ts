@@ -387,7 +387,7 @@ export const createTypeScriptSandbox = (
     monaco,
     /** Obtiene un trabajador monaco-typescript, esto te dará acceso a un servidor de idioma. Nota: prefiere esto para el trabajo del servidor de idiomas porque sucede en un trabajador web. */
     getWorkerProcess,
-    /** Se puede usar una copia de require("@typescript/vfs") para configurar rápidamente un compilador en memoria que se ejecute para AST, o para obtener resultados complejos del servidor de idiomas (todo lo anterior se debe serializar cuando se pasa)*/
+    /** Se puede usar una copia de require("@typescript/vfs") para configurar rápidamente un compilador en memoria que se ejecute para AST, o para obtener el resultado complejo del servidor de idiomas (todo lo anterior se debe serializar cuando se pasa)*/
     tsvfs,
     /** Obtiene todos los diferentes archivos emitidos después de ejecutar TypeScript */
     getEmitResult,

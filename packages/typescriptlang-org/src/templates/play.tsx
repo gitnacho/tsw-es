@@ -159,7 +159,7 @@ const Play: React.FC<Props> = (props) => {
         const extension = (!!params.get("useJavaScript") ? "js" : params.get("filetype") || "ts") as any
         const workerPath = params.get("multiFile") ? `${document.location.origin + playgroundWorker}?filetype=${extension}` : undefined
 
-        // Crea la caja de arena — sandbox
+        // Crea el recinto de seguridad — sandbox
         const sandboxEnv = await sandbox.createTypeScriptSandbox({
           text: localStorage.getItem('sandbox-history') || i("play_default_code_sample"),
           compilerOptions: {},

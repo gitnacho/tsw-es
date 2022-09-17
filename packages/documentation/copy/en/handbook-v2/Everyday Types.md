@@ -57,7 +57,7 @@ El tipo `any` es útil cuando no deseas escribir un tipo `long` solo para conven
 
 ### `noImplicitAny`
 
-Cuando no especificas un tipo, y *TypeScript* no lo puede inferir a partir del contexto, el compilador normalmente tomará el valor predeterminado de `any`.
+Cuando no especificas un tipo, y *TypeScript* no lo puede inferir a partir del contexto, el compilador normalmente tomará el valor `any` predeterminado.
 
 Sin embargo, normalmente querrás evitar esto, porque de `any` no se comprueba el tipo.
 Usa la marca del compilador [`noImplicitAny`](/tsconfig#noImplicitAny) para marcar cualquier `any` implícito como un error.
@@ -183,7 +183,7 @@ printCoord({ x: 3, y: 7 });
 Aquí, anotamos el parámetro con un tipo con dos propiedades ⏤ `x` e `y` ⏤ que ambos son de tipo `number`.
 Puedes usar `,` o `;` para separar las propiedades, y el último separador es opcional de cualquier manera.
 
-La parte de tipo de cada propiedad también es opcional.
+La parte 'tipo' de cada propiedad también es opcional.
 Si no especificas un tipo, se asumirá que es `any`.
 
 ### Propiedades opcionales
@@ -281,10 +281,10 @@ Otro ejemplo es usar una función como `Array.isArray`:
 ```ts twoslash
 function welcomePeople(x: string[] | string) {
   if (Array.isArray(x)) {
-    // Aquí: 'x' is 'string[]'
+    // Aquí: 'x' es 'string[]'
     console.log("Hola, " + x.join(" and "));
   } else {
-    // Aquí: 'x' is 'string'
+    // Aquí: 'x' es 'string'
     console.log("Welcome lone traveler " + x);
   }
 }
@@ -457,10 +457,10 @@ Aprenderás más sobre estos conceptos en capítulos posteriores, así que no te
 
 - Antes de la versión 4.2 de *TypeScript*, nombres alias de tipo [*pueden* aparecer en mensajes de error](/play?#code/PTAEGEHsFsAcEsA2BTATqNrLusgzngIYDm+oA7koqIYuYQJ56gCueyoAUCKAC4AWHAHaFcoSADMaQ0PCG80EwgGNkALk6c5C1EtWgAsqOi1QAb06groEbjWg8vVHOKcAvpokshy3vEgyyMr8kEbQJogAFND2YREAlOaW1soBeJAoAHSIkMTRmbbI8e6aPMiZxJmgACqCGKhY6ABGyDnkFFQ0dIzMbBwCwqIccabcYLyQoKjIEmh8kwN8DLAc5PzwwbLMyAAeK77IACYaQSEjUWZWhfYAjABMAMwALA+gbsVjoADqgjKESytQPxCHghAByXigYgBfr8LAsYj8aQMUASbDQcRSExCeCwFiIQh+AKfAYyBiQFgOPyIaikSGLQo0Zj-aazaY+dSaXjLDgAGXgAC9CKhDqAALxJaw2Ib2RzOISuDycLw+ImBYKQflCkWRRD2LXCw6JCxS1JCdJZHJ5RAFIbFJU8ADKC3WzEcnVZaGYE1ABpFnFOmsFhsil2uoHuzwArO9SmAAEIsSFrZB-GgAjjA5gtVN8VCEc1o1C4Q4AGlR2AwO1EsBQoAAbvB-gJ4HhPgB5aDwem-Ph1TCV3AEEirTp4ELtRbTPD4vwKjOfAuioSQHuDXBcnmgACC+eCONFEs73YAPGGZVT5cRyyhiHh7AAON7lsG3vBggB8XGV3l8-nVISOgghxoLq9i7io-AHsayRWGaFrlFauq2rg9qaIGQHwCBqChtKdgRo8TxRjeyB3o+7xAA), a veces en lugar del tipo anónimo equivalente (que puede ser deseable o no). Las interfaces siempre se nombrarán en los mensajes de error.
 - Los alias de tipo no pueden participar [en la combinación de declaraciones, pero las interfaces sí pueden](/play?#code/PTAEEEDtQS0gXApgJwGYEMDGjSfdAIx2UQFoB7AB0UkQBMAoEUfO0Wgd1ADd0AbAK6IAzizp16ALgYM4SNFhwBZdAFtV-UAG8GoPaADmNAcMmhh8ZHAMMAvjLkoM2UCvWad+0ARL0A-GYWVpA29gyY5JAWLJAwGnxmbvGgALzauvpGkCZmAEQAjABMAMwALLkANBl6zABi6DB8okR4Jjg+iPSgABboovDk3jjo5pbW1d6+dGb5djLwAJ7UoABKiJTwjThpnpnGpqPBoTLMAJrkArj4kOTwYmycPOhW6AR8IrDQ8N04wmo4HHQCwYi2Waw2W1S6S8HX8gTGITsQA).
-- Las interfaces solo se pueden usar para [declarar las formas de los objetos, no cambiar el nombre de los primitivos](/play?#code/PTAEAkFMCdIcgM6gC4HcD2pIA8CGBbABwBtIl0AzUAKBFAFcEBLAOwHMUBPQs0XFgCahWyGBVwBjMrTDJMAshOhMARpD4tQ6FQCtIE5DWoixk9QEEWAeV37kARlABvaqDegAbrmL1IALlAEZGV2agBfampkbgtrWwMAJlAAXmdXdy8ff0Dg1jZwyLoAVWZ2Lh5QVHUJflAlSFxROsY5fFAWAmk6CnRoLGwmILzQQmV8JmQmDzI-SOiKgGV+CaYAL0gBBdyy1KCQ-Pn1AFFplgA5enw1PtSWS+vCsAAVAAtB4QQWOEMKBuYVUiVCYvYQsUTQcRSBDGMGmKSgAAa-VEgiQe2GLgKQA).
+- Las interfaces solo se pueden usar para [declarar la forma de los objetos, no cambiar el nombre de los primitivos](/play?#code/PTAEAkFMCdIcgM6gC4HcD2pIA8CGBbABwBtIl0AzUAKBFAFcEBLAOwHMUBPQs0XFgCahWyGBVwBjMrTDJMAshOhMARpD4tQ6FQCtIE5DWoixk9QEEWAeV37kARlABvaqDegAbrmL1IALlAEZGV2agBfampkbgtrWwMAJlAAXmdXdy8ff0Dg1jZwyLoAVWZ2Lh5QVHUJflAlSFxROsY5fFAWAmk6CnRoLGwmILzQQmV8JmQmDzI-SOiKgGV+CaYAL0gBBdyy1KCQ-Pn1AFFplgA5enw1PtSWS+vCsAAVAAtB4QQWOEMKBuYVUiVCYvYQsUTQcRSBDGMGmKSgAAa-VEgiQe2GLgKQA).
 - Los nombres de las interfaces [*siempre* aparecerán en su forma original](/play?#code/PTAEGEHsFsAcEsA2BTATqNrLusgzngIYDm+oA7koqIYuYQJ56gCueyoAUCKAC4AWHAHaFcoSADMaQ0PCG80EwgGNkALk6c5C1EtWgAsqOi1QAb06groEbjWg8vVHOKcAvpokshy3vEgyyMr8kEbQJogAFND2YREAlOaW1soBeJAoAHSIkMTRmbbI8e6aPMiZxJmgACqCGKhY6ABGyDnkFFQ0dIzMbBwCwqIccabcYLyQoKjIEmh8kwN8DLAc5PzwwbLMyAAeK77IACYaQSEjUWY2Q-YAjABMAMwALA+gbsVjNXW8yxySoAADaAA0CCaZbPh1XYqXgOIY0ZgmcK0AA0nyaLFhhGY8F4AHJmEJILCWsgZId4NNfIgGFdcIcUTVfgBlZTOWC8T7kAJ42G4eT+GS42QyRaYbCgXAEEguTzeXyCjDBSAAQSE8Ai0Xsl0K9kcziExDeiQs1lAqSE6SyOTy0AKQ2KHk4p1V6s1OuuoHuzwArMagA) en los mensajes de error, pero *sólo* cuando se utilizan por su nombre.
 
-En su mayor parte, puedes elegir según tus preferencias personales, y *TypeScript* te dirá si necesitas algo para ser otro tipo de declaración. Si deseas una heurística, usa `interface` hasta que necesites usar las funciones de `type`.
+En su mayor parte, puedes elegir según tus preferencias personales, y *TypeScript* te dirá si necesitas algo para ser otro tipo de declaración. Si deseas una heurística, usa `interface` hasta que necesites usar las características de `type`.
 
 ## Aserciones de tipo
 
@@ -513,7 +513,7 @@ Una forma de pensar en esto es considerar cómo *JavaScript* viene con diferente
 let changingString = "Hello World";
 changingString = "Olá Mundo";
 // Dado que `changingString` puede representar cualquier cadena posible,
-// eso es como TypeScript lo describe en el sistema de tipos
+// es como TypeScript lo describe en el sistema de tipos
 changingString;
 // ^?
 
@@ -571,8 +571,8 @@ configure("auto");
 configure("automatic");
 ```
 
-Hay un tipo más de tipo literal: Booleanos literales
-Solo hay dos tipos de literales booleanos y, como puedes adivinar, son los tipos `true` y `false`.
+Hay un tipo más de tipo literal: booleanos literales.
+Solo hay dos tipos de booleanos literales, y como puedes adivinar, son los tipos `true` y `false`.
 El tipo `boolean` en sí mismo en realidad solo es un alias para la unión `true | false`.
 
 ### Inferencia literal
@@ -674,7 +674,7 @@ Al igual que otras aserciones de tipo, esto no cambia el comportamiento en el en
 
 ## Enums
 
-Las enumeraciones son una característica agregada a *JavaScript* por *TypeScript* que permite describir un valor que podría ser uno de un conjunto de posibles constantes nombradas. A diferencia de la mayoría de las funciones de *TypeScript*, esto *no* es una adición de nivel de tipo a *JavaScript*, sino algo que se agrega al lenguaje y al entorno de ejecución. Debido a esto, es una característica que debes saber que existe, pero tal vez dejes de usarla a menos que estés seguro. Puedes leer más sobre enumeraciones en la [página de referencia de Enum](/docs/handbook/enums.html).
+Las enumeraciones son una característica agregada a *JavaScript* por *TypeScript* que permite describir un valor que podría ser uno de un conjunto de posibles constantes nombradas. A diferencia de la mayoría de las características de *TypeScript*, esto *no* es una adición a nivel de tipo a *JavaScript*, sino algo que se agrega al lenguaje y al entorno de ejecución. Debido a esto, es una característica que debes saber que existe, pero tal vez dejes de usarla a menos que estés seguro. Puedes leer más sobre enumeraciones en la [página de referencia de Enum](/docs/handbook/enums.html).
 
 ## Primitivos menos comunes
 

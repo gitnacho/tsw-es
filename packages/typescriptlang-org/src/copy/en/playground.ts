@@ -63,7 +63,7 @@ export const playCopy = {
 //
 //  - Un lugar para aprender TypeScript donde nada se puede romper
 //  - Un lugar para experimentar con la sintaxis de TypeScript y compartir las URL con otros.
-//  - Una caja de arena para experimentar con diferentes características del compilador de TypeScript
+//  - Un recinto de seguridad para experimentar con diferentes características del compilador de TypeScript
 
 const anExampleVariable = "Hello World"
 console.log(anExampleVariable)

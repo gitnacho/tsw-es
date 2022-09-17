@@ -560,7 +560,7 @@ function makeUnique<T>(
   if (collection instanceof Set) {
     return collection;
     //     ~~~~~~~~~~
-    // error: Type 'Set<T>' is not assignable to type 'C'.
+    // error: El tipo 'Set<T>' no es asignable al tipo 'C'.
     //          'Set<T>' se puede asignar a la restricción de tipo 'C', pero
     //          Se podría crear una instancia de 'C' con un subtipo de restricción diferente 'Set<T> | T[]'.
   }
@@ -738,7 +738,7 @@ Por ejemplo, podrás ir a la definición en `bar` en `@link bar` en el siguiente
 function harvestCarrot(carrot: Carrot) {}
 
 /**
- * Llamada anticipada en primavera para obtener mejores resultados. Agregada en v2.1.0.
+ * Llamada anticipada en primavera para obtener mejor resultado. Agregada en v2.1.0.
  * @param seed ¡Asegúrate de que sea una semilla de zanahoria!
  */
 function plantCarrot(seed: Seed) {

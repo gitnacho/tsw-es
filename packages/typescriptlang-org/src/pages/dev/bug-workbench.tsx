@@ -88,7 +88,7 @@ const Play: React.FC<Props> = (props) => {
         const height = Math.max(window.innerHeight, 600)
         container.style.height = `${height - Math.round(container.getClientRects()[0].top) - 18}px`
 
-        // Crea la caja de arena — sandbox
+        // Crea el recinto de seguridad — sandbox
         const sandboxEnv = await sandbox.createTypeScriptSandbox({
           text: localStorage.getItem('sandbox-history') || i("play_default_code_sample"),
           compilerOptions: {},

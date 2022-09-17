@@ -107,7 +107,7 @@ export default async function () {
     <>
       <Layout
         title="Desarrolladores - Sandbox"
-        description="La zona de pruebas de TypeScript potencia el TypeScript Playground. Aprende cómo puedes hacer que tus experiencias sean como el playground usando la caja de arena."
+        description="La zona de pruebas de TypeScript potencia el TypeScript Playground. Aprende cómo puedes hacer que tus experiencias sean como el playground usando el recinto de seguridad."
         lang="es"
       >
         <div id="dev">

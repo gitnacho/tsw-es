@@ -12,7 +12,7 @@ export const dtCopy = {
   dt_s_module: "Módulo",
   dt_s_last_update: "Actualizado recientemente",
   dt_s_install: "Instalar",
-  dt_s_no_results: "No se encontraron resultados para",
+  dt_s_no_results: "No se encontró resultado para",
   dt_s_no_results_try: "¿Intentar otra búsqueda?",
   dt_s_copy: "copiar",
   dt_s_copied: "copiado",

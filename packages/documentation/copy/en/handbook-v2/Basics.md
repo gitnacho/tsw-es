@@ -22,7 +22,7 @@ message();
 Si la desglosamos, la primera línea de código ejecutable accede a una propiedad llamada `toLowerCase` y luego la llama.
 La segunda intenta llamar a `message` directamente.
 
-Pero, asumiendo que no conocemos el valor de `message` ⏤ y eso es bastante común ⏤ no podemos decir de manera confiable qué resultados obtendremos al intentar ejecutar cualquier línea de este código.
+Pero, asumiendo que no conocemos el valor de `message` ⏤ y eso es bastante común ⏤ no podemos decir de manera confiable qué resultado obtendremos al intentar ejecutar cualquier línea de este código.
 El comportamiento de cada operación depende completamente del valor que teníamos en primer lugar.
 
 - ¿Se puede llamar a `message`?
@@ -83,7 +83,7 @@ O si tuviéramos la suerte de presenciar el error, podríamos haber terminado ha
 
 Idealmente, podríamos tener una herramienta que nos ayude a encontrar estos errores *antes* de que se ejecute nuestro código.
 Eso es lo que hace un comprobador estático de tipos como *TypeScript*.
-Los *sistemas de tipos estáticos* describen las formas y comportamientos de cuáles serán nuestros valores cuando ejecutemos nuestros programas.
+Los *sistemas de tipos estáticos* describen las formas y comportamiento de cuáles serán nuestros valores cuando ejecutemos nuestros programas.
 Un comprobador de tipos como *TypeScript* usa esa información y nos dice cuándo las cosas se podrían estar saliendo de los rieles.
 
 ```ts twoslash

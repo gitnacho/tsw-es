@@ -76,7 +76,7 @@ Como hemos visto, *JavaScript* admite un operador `typeof` que puede proporciona
 - `"object"`
 - `"function"`
 
-Como vimos con `padLeft`, este operador aparece con bastante frecuencia en varias bibliotecas de *JavaScript*, y *TypeScript* puede entenderlo para restringir tipos en diferentes ramas.
+Como vimos con `padLeft`, este operador aparece con bastante frecuencia en varias bibliotecas de *JavaScript*, y *TypeScript* lo puede entender para restringir tipos en diferentes ramas.
 
 En *TypeScript*, la comprobación con el valor devuelto por `typeof` es una protección de tipo.
 Debido a que *TypeScript* codifica cómo opera `typeof` en diferentes valores, conoce algunas de sus peculiaridades en *JavaScript*.
@@ -108,7 +108,7 @@ Esta podría ser una buena transición a lo que llamaremos comprobación de "ver
 
 # Reducción de verdad
 
-"Truthiness" (traducida como "verdad") puede no ser una palabra que encuentres en el diccionario, pero es algo que escucharás en *JavaScript*.
+"Truthiness" (traducida como "verdad") puede ser una palabra que no encuentres en el diccionario, pero es algo que escucharás en *JavaScript*.
 
 En *JavaScript*, podemos usar cualquier expresión en condicionales, `&&`s, `||`s, declaraciones `if`, negaciones booleanas (`!`), y más.
 Como ejemplo, las declaraciones `if` no esperan que su condición siempre tenga el tipo `boolean`.
@@ -133,12 +133,12 @@ Valores como
 - `undefined`
 
 todos coaccionan a `false`, y otros valores se convierten en `true`.
-Siempre puedes convertir los valores en `boolean` ejecutándolos a través de la función `Boolean` o usando la doble negación booleana más corta. (Esta última tiene la ventaja de que *TypeScript* infiere un tipo booleano literal reducido `true`, mientras que infiere el primero como tipo `boolean`).
+Siempre puedes convertir los valores en `boolean` ejecutándolos a través de la función `Boolean` o usando la doble negación booleana más corta. (Esta última tiene la ventaja de que *TypeScript* infiere un tipo booleano literal `true` reducido, mientras que infiere el primero como tipo `boolean`).
 
 ```ts twoslash
 // ambos resultan en 'true'
-Boolean("hello"); // type: boolean, value: true
-!!"world"; // type: true,    value: true
+Boolean("hello"); // type: boolean, valor: true
+!!"world"; // type: true,    valor: true
 ```
 
 Es bastante popular aprovechar este comportamiento, especialmente para protegerse contra valores como `null` o `undefined`.
@@ -156,11 +156,11 @@ function printAll(strs: string | string[] | null) {
 }
 ```
 
-Notarás que nos hemos deshecho del error anterior comprobando si `strs` es verdad.
+Notarás que nos hemos deshecho del error anterior comprobando si `strs` es `true`.
 Esto al menos, nos evita los temidos errores cuando ejecutamos nuestro código como:
 
 ```text
-TypeError: null is not iterable
+TypeError: null no es iterable
 ```
 
 Sin embargo, ten en cuenta que la comprobación de verdad en primitivos a menudo puede ser propensa a errores.
@@ -316,7 +316,7 @@ function move(animal: Fish | Bird | Human) {
 *JavaScript* tiene un operador para comprobar si un valor es una "instancia" de otro valor.
 Específicamente, en *JavaScript*, `x instanceof Foo` comprueba si la *cadena de prototipos* de `x` contiene `Foo.prototype`.
 Si bien no profundizaremos aquí, y verás más de esto cuando entremos en las clases, aún pueden ser útiles para la mayoría de los valores que se pueden construir con `new`.
-Como habrás adivinado, `instanceof` también es un protector de tipo, y *TypeScript* se reduce en las ramas protegidas por `instanceof`s.
+Como habrás adivinado, `instanceof` también es un protector de tipo, y *TypeScript* reduce en las ramas protegidas por `instanceof`s.
 
 ```ts twoslash
 function logValue(x: Date | string) {
@@ -478,7 +478,7 @@ const underWater3: Fish[] = zoo.filter((pet): pet is Fish => {
 });
 ```
 
-Además, las clases pueden [usar `this is Type`](/docs/handbook/2/classes.html#this-based-type-guards) para reducir su tipo.
+Además, las clases pueden usar [`this is Type`](/docs/handbook/2/classes.html#guardias-basados-en-el-tipo-de-this) para limitar su tipo.
 
 # Uniones discriminadas
 
@@ -688,7 +688,7 @@ function getArea(shape: Shape) {
 ```
 
 Lo importante aquí fue la codificación de `Shape`.
-Comunicar la información correcta a *TypeScript* ⏤ que `Circle` y `Square` en realidad eran dos tipos separados con campos específicos de `kind` ⏤ fue crucial.
+Comunicar la información correcta a *TypeScript* ⏤ que `Circle` y `Square` en realidad eran dos tipos separados con campos `kind` específicos ⏤ fue crucial.
 Hacer eso nos permite escribir código *TypeScript* de tipo seguro que no se ve diferente al *JavaScript* que habríamos escrito de otra manera.
 A partir de ahí, el sistema de tipos pudo hacer lo "correcto" y descubrir los tipos en cada rama de nuestra declaración `switch`.
 

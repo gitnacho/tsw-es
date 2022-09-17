@@ -56,4 +56,4 @@ Antes de comenzar con [Conceptos básicos](/docs/handbook/2/basic-types.html), r
 - [*TypeScript* para programadores *POO*](/docs/handbook/typescript-in-5-minutes-oop.html)
 - [*TypeScript* para programadores funcionales](/docs/handbook/typescript-in-5-minutes-func.html)
 
-De lo contrario, ve a [Conceptos básicos](/docs/handbook/2/basic-types.html) u consigue una copia en formato [*Epub*](/assets/typescript-handbook.epub) o [*PDF*](/assets/typescript-handbook.pdf).
+De lo contrario, ve a [Conceptos básicos](/docs/handbook/2/basic-types.html) o consigue una copia en formato [*Epub*](/assets/typescript-handbook.epub) o [*PDF*](/assets/typescript-handbook.pdf).
