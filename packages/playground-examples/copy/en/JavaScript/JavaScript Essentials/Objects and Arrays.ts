@@ -99,7 +99,7 @@ readonlyOrders.pop();
 // proporciona mucha seguridad adicional.
 
 // Puedes obtener más información sobre readonly:
-//  - https://www.typescriptlang.org/docs/handbook/interfaces.html#readonly-properties
+//  - https://www.typescriptlang.org/es/docs/handbook/interfaces.html#propiedades-de-solo-lectura
 //  - https://basarat.gitbooks.io/typescript/content/docs/types/readonly.html
 
 // Y puedes seguir aprendiendo sobre JavaScript y

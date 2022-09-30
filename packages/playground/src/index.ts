@@ -216,7 +216,7 @@ export const setupPlayground = (
   // el texto en ejemplos
   let suppressNextTextChangeForHashChange = false
 
-  // Establece la URL y el almacenamiento de la cadena de sandbox
+  // Establece el URL y el almacenamiento de la cadena de sandbox
   const playgroundDebouncedMainFunction = () => {
     showFileCodeLens = sandbox.getText().includes("// @filename")
     localStorage.setItem("sandbox-history", sandbox.getText())
@@ -237,7 +237,7 @@ export const setupPlayground = (
   // Realiza un seguimiento de si el proyecto se ha configurado como un módulo ESM a través de un paquete.json
   let isESMMode = false
 
-  // Cuando se cambien los indicadores del compilador, activa un posible cambio en la URL
+  // Cuando se cambien los indicadores del compilador, activa un posible cambio en el URL
   sandbox.setDidUpdateCompilerSettings(async () => {
     playgroundDebouncedMainFunction()
     // @ts-ignore
@@ -319,7 +319,7 @@ export const setupPlayground = (
       const hash = document.location.hash.length ? document.location.hash : ""
       const newURL = `${document.location.protocol}//${document.location.host}${document.location.pathname}?${params}${hash}`
 
-      // @ts-ignore - está permitido
+      // de  TypeScript  @ts-ignore  - está permitido
       document.location = newURL
     }
 
@@ -389,7 +389,7 @@ export const setupPlayground = (
     if ("key" in evt) {
       isEscape = evt.key === "Escape" || evt.key === "Esc"
     } else {
-      // @ts-ignore - este solía ser el caso
+      // de  TypeScript  @ts-ignore  - este solía ser el caso
       isEscape = evt.keyCode === 27
     }
     if (isEscape) escapePressed()
@@ -404,7 +404,7 @@ export const setupPlayground = (
     contextMenuOrder: 1.5,
 
     run: function () {
-      // Actualiza la URL, luego la escribe en el portapapeles
+      // Actualiza el URL, luego la escribe en el portapapeles
       const newURL = sandbox.createURLQueryWithCompilerOptions(sandbox)
       window.history.replaceState({}, "", newURL)
       window.navigator.clipboard.writeText(location.href.toString()).then(

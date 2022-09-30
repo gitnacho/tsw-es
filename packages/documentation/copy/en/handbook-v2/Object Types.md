@@ -1,5 +1,5 @@
 ---
-title: Tipos Objeto
+title: Tipos Object
 layout: docs
 permalink: /docs/handbook/2/objects.html
 oneline: "Cómo describe TypeScript las formas de los objetos JavaScript."
@@ -152,7 +152,7 @@ function paintShape({ shape, xPos = 0, yPos = 0 }: PaintOptions) {
 }
 ```
 
-Aquí usamos [un patrón de desestructuración](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Destructuring_assignment) para el parámetro de `paintShape`, y proporcionamos [valores predeterminados](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Destructuring_assignment#Default_values) para `xPos` y `yPos`.
+Aquí usamos [un patrón de desestructuración](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Destructuring_assignment) para el parámetro de `paintShape`, y proporcionamos [valores predeterminados](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Destructuring_assignment#ejemplos) para `xPos` y `yPos`.
 Ahora, `xPos` y `yPos` están definitivamente presentes en el cuerpo de `paintShape`, pero son opcionales para cualquier persona que llame a `paintShape`.
 
 > Ten en cuenta que actualmente no hay forma de colocar anotaciones de tipo dentro de patrones de desestructuración.
@@ -173,7 +173,7 @@ function draw({ shape: Shape, xPos: number = 100 /*...*/ }) {
 En un patrón de desestructuración de objetos, `shape: Shape` significa "toma la propiedad `shape` y redefínela localmente como una variable llamada `Shape`.
 Asimismo, `xPos: number` crea una variable llamada `number` cuyo valor se basa en `xPos` del parámetro.
 
-Con [modificadores de mapeo](/docs/handbook/2/mapped-types.html#modificadores-de-mapeo), puedes eliminar los atributos `optional`.
+Con [modificadores de mapeo](/es/docs/handbook/2/mapped-types.html#modificadores-de-mapeo), puedes eliminar los atributos `optional`.
 
 ### Propiedades `readonly`
 
@@ -247,7 +247,7 @@ writablePerson.age++;
 console.log(readonlyPerson.age); // prints '43'
 ```
 
-Con [Modificadores de mapeo](/docs/handbook/2/mapped-types.html#modificadores-de-mapeo), puedes eliminar los atributos `readonly`.
+Con [Modificadores de mapeo](/es/docs/handbook/2/mapped-types.html#modificadores-de-mapeo), puedes eliminar los atributos `readonly`.
 
 ### Índice de firmas
 
@@ -590,7 +590,7 @@ interface Apple {
 type AppleBox = Box<Apple>;
 ```
 
-Esto también significa que podemos evitar las sobrecargas por completo utilizando en su lugar [funciones genéricas](/docs/handbook/2/functions.html#generic-functions).
+Esto también significa que podemos evitar las sobrecargas por completo utilizando en su lugar [funciones genéricas](/es/docs/handbook/2/functions.html#funciones-genéricas).
 
 ```ts twoslash
 interface Box<Type> {
@@ -782,7 +782,7 @@ function doSomething(pair: [string, number]) {
 }
 ```
 
-También podemos [desestructurar tuplas](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Destructuring_assignment#Desestructuraci%C3%B3n_de_arreglos) usando la desestructuración de arreglos de *JavaScript*.
+También podemos [desestructurar tuplas](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#desestructuraci%C3%B3n_de_arreglos) usando la desestructuración de arreglos de *JavaScript*.
 
 ```ts twoslash
 function doSomething(stringHash: [string, number]) {
@@ -855,7 +855,7 @@ const c: StringNumberBooleans = ["world", 3, true, false, true, false, true];
 
 ¿Por qué podrían ser útiles los elementos opcionales y `rest`?
 Bueno, permiten que *TypeScript* corresponda tuplas con listas de parámetros.
-Los tipos tupla se pueden usar en [parámetros y argumentos `rest`](/docs/handbook/2/functions.html#parametros-rest-y-argumentos), de modo que lo siguiente:
+Los tipos tupla se pueden usar en [parámetros y argumentos `rest`](/es/docs/handbook/2/functions.html#par%C3%A1metros-rest-y-argumentos), de modo que lo siguiente:
 
 ```ts twoslash
 function readButtonInput(...args: [string, number, ...boolean[]]) {

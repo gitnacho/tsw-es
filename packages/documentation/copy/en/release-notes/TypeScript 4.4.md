@@ -299,7 +299,7 @@ declare function executeSomeThirdPartyCode(): void;
 try {
   executeSomeThirdPartyCode();
 } catch (err) {
-  // err: unknown
+  // err: unknown  requiere
 
   // ¡Error! La propiedad 'message' no existe en el tipo 'unknown'.
   console.error(err.message);
@@ -515,7 +515,7 @@ Nos gustaría extender nuestro agradecimiento a [David Michon](https://github.co
 
 ### Compilaciones de `--force` más rápidas
 
-Cuando se usa el modo `--build` en referencias de proyectos, *TypeScript* tiene que realizar comprobaciones actualizadas para determinar qué archivos se deben reconstruir.
+Cuando se usa el modo `--build` en proyectos de referencia, *TypeScript* tiene que realizar comprobaciones actualizadas para determinar qué archivos se deben reconstruir.
 Sin embargo, al realizar una compilación [`--force`](/tsconfig#force), esa información es irrelevante ya que cada dependencia del proyecto se reconstruirá desde cero.
 En *TypeScript 4.4*, las compilaciones [`--force`](/tsconfig#force) evitan esos pasos innecesarios y comienzan una compilación completa.
 Obtén más información sobre el cambio [aquí](https://github.com/microsoft/TypeScript/pull/43666).

@@ -1,20 +1,20 @@
 ---
 title: Declarar variable
 layout: docs
-permalink: /docs/handbook/variable-declarations.html
+permalink: /es/docs/handbook/variable-declarations.html
 oneline: Cómo maneja TypeScript la declaración de variables
 translatable: true
 ---
 
 `let` y `const` son dos conceptos relativamente nuevos para declaración de variables en *JavaScript*.
-[Como mencionamos anteriormente](/docs/handbook/basic-types.html#a-note-about-let), `let` es similar a `var` en algunos aspectos, pero permite a los usuarios evitar algunos de los " errores "que los usuarios encuentran en *JavaScript*.
+[Como mencionamos anteriormente](/es/docs/handbook/basic-types.html#una-nota-sobre-let), `let` es similar a `var` en algunos aspectos, pero permite a los usuarios evitar algunos de los "inconvenientes" que los usuarios encuentran en *JavaScript*.
 
 `const` es un aumento de `let` en el sentido de que evita la reasignación a una variable.
 
 Dado que *TypeScript* es una extensión de *JavaScript*, el lenguaje naturalmente admite `let` y `const`.
 Aquí profundizaremos más en estas nuevas declaraciones y por qué son preferibles a `var`.
 
-Si has utilizado *JavaScript* de forma descuidada, la siguiente sección podría ser una buena forma de refrescar tu memoria.
+Si has utilizado *JavaScript* informalmente, la siguiente sección podría ser una buena forma de refrescar tu memoria.
 Si estás íntimamente familiarizado con todas las peculiaridades de las declaraciones `var` en *JavaScript*, puede que te resulte más fácil saltar adelante.
 
 ## Declaraciones `var`
@@ -261,7 +261,7 @@ foo();
 let a;
 ```
 
-Para obtener más información sobre las zonas muertas temporales, consulta el contenido relevante en [Mozilla Developer Network](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let).
+Para obtener más información sobre las zonas muertas temporales, consulta el contenido relevante en [Mozilla Developer Network](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/let#zona_muerta_temporal_y_errores_con_let).
 
 ## Redeclaración y sombreado
 

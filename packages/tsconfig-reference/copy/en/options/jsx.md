@@ -12,7 +12,7 @@ Esto solo afecta la salida de archivos *JS* que comenzaron en archivos `.tsx`.
 - `preserve` ⏤ Emite archivos `.jsx` con *JSX* sin cambios
 - `react-native` ⏤ Emite archivos `.js` con el *JSX* sin cambios
 
-### Por ejemplo
+### Por ejemplo  una  API
 
 Este código de ejemplo:
 

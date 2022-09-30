@@ -397,7 +397,7 @@ export interface TwoSlashReturn {
     character: number | undefined
   }[]
 
-  /** La URL de este ejemplo en el playground */
+  /** El URL de este ejemplo en el playground */
   playgroundURL: string
 }
 

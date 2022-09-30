@@ -4,10 +4,10 @@ layout: docs
 permalink: /docs/handbook/unions-and-intersections.html
 oneline: Cómo usar uniones y tipos intersección en TypeScript
 handbook: "true"
-deprecated_by: /docs/handbook/2/everyday-types.html#union-types
+deprecated_by: /es/docs/handbook/2/everyday-types.html#tipos-unión
 # prettier-ignore
 deprecation_redirects: [
-  discriminating-unions, /docs/handbook/2/narrowing.html#discriminated-unions
+  discriminating-unions, /es/docs/handbook/2/narrowing.html#uniones-discriminadas
 ]
 ---
 
@@ -384,7 +384,7 @@ Por ejemplo, si tienes solicitudes de red con un manejo de errores consistente, 
 ```ts twoslash
 interface ErrorHandling {
   success: boolean;
-  error?: { mensaje: string };
+  error?: { message: string };
 }
 
 interface ArtworksData {

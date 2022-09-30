@@ -1,6 +1,6 @@
 ---
 display: "Suprimir errores de índice implícitos"
-oneline: "Suprime los errores `noImplicitAny` al indexar objetos que carecen de índice de firmas."
+oneline: "Suprime los errores [`noImplicitAny`](#noImplicitAny) al indexar objetos que carecen de índice de firmas."
 ---
 
 Al activar `suppressImplicitAnyIndexErrors`, se suprime la notificación del error sobre `any`s implícitos al indexar en objetos, como se muestra en el siguiente ejemplo:

@@ -20,23 +20,23 @@ deprecated_by: /docs/handbook/2/types-from-types.html
 
 # prettier-ignore
 deprecation_redirects: [
-  type-guards-and-differentiating-types, /docs/handbook/2/narrowing.html,
-  user-defined-type-guards, /docs/handbook/2/narrowing.html#usar-predicados-de-tipo,
-  typeof-type-guards, "/docs/handbook/2/narrowing.html#typeof-type-guards",
-  instanceof-type-guards, /docs/handbook/2/narrowing.html#instanceof-narrowing,
-  tipos-que-aceptan-valores-null, /docs/handbook/2/everyday-types.html#null-y-undefined,
-  alias-de-tipo, /docs/handbook/2/everyday-types.html#alias-de-tipo,
-  interfaces-vs-type-aliases, /docs/handbook/2/everyday-types.html#diferencias-entre-los-alias-de-tipo-y-las-interfaces,
-  enum-member-types, /docs/handbook/enums.html,
-  polymorphic-this-types, /docs/handbook/2/classes.html,
-  index-types, /docs/handbook/2/indexed-access-types.html,
-  index-types-and-index-signatures, /docs/handbook/2/indexed-access-types.html,
-  mapped-types, /docs/handbook/2/mapped-types.html,
-  inference-from-mapped-types, /docs/handbook/2/mapped-types.html,
-  conditional-types, /docs/handbook/2/conditional-types.html,
-  tipos-condicionales-distributivos, /docs/handbook/2/conditional-types.html#tipos-condicionales-distributivos,
-  inferencia-de-tipos-en-tipos-condicionales, /docs/handbook/2/conditional-types.html#inferencia-dentro-de-tipos-condicionales,
-  predefined-conditional-types, /docs/handbook/utility-types.html,
+  type-guards-and-differentiating-types, /es/docs/handbook/2/narrowing.html,
+  user-defined-type-guards, /es/docs/handbook/2/narrowing.html#usar-predicados-de-tipo,
+  typeof-type-guards, "/es/docs/handbook/2/narrowing.html#protector-de-tipo-typeof",
+  instanceof-type-guards, /es/docs/handbook/2/narrowing.html#reducci%C3%B3n-instanceof,
+  tipos-que-aceptan-valores-null, /es/docs/handbook/2/everyday-types.html#null-y-undefined,
+  alias-de-tipo, /es/docs/handbook/2/everyday-types.html#alias-de-tipo,
+  interfaces-vs-type-aliases, /es/docs/handbook/2/everyday-types.html#diferencias-entre-los-alias-de-tipo-y-las-interfaces,
+  enum-member-types, /es/docs/handbook/enums.html,
+  polymorphic-this-types, /es/docs/handbook/2/classes.html,
+  index-types, /es/docs/handbook/2/indexed-access-types.html,
+  index-types-and-index-signatures, /es/docs/handbook/2/indexed-access-types.html,
+  mapped-types, /es/docs/handbook/2/mapped-types.html,
+  inference-from-mapped-types, /es/docs/handbook/2/mapped-types.html,
+  conditional-types, /es/docs/handbook/2/conditional-types.html,
+  tipos-condicionales-distributivos, /es/docs/handbook/2/conditional-types.html#tipos-condicionales-distributivos,
+  inferencia-de-tipos-en-tipos-condicionales, (es/docs/handbook/2/conditional-types.html#inferencia-dentro-de-tipos-condicionales,
+  predefined-conditional-types, /es/docs/handbook/utility-types.html,
 ]
 ---
 
@@ -58,4 +58,4 @@ Si cargas la página anterior en tu navegador y ejecutas este JS en el inspector
 document.querySelectorAll(".markdown h2, .markdown h3").forEach(h => console.log(h.id))
 ```
 
-Imprimirá todos los anclajes del encabezado, y ese es el lado izquierdo de tus pareados de arreglo. El sitio tiene un código del lado del cliente para anular la URL `deprecated_by` en el entorno de ejecución si detecta que un usuario tiene un hash coincidente en la *URL*.
+Imprimirá todos los anclajes del encabezado, y ese es el lado izquierdo de tus pareados de arreglo. El sitio tiene un código del lado del cliente para anular el URL `deprecated_by` en el entorno de ejecución si detecta que un usuario tiene un hash coincidente en el *URL*.

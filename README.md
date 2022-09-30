@@ -1,6 +1,6 @@
 ### Meta
 
-- **URLs**: [producción](https://www.typescriptlang.org), [andamiaje](http://www.staging-typescript.org/)
+- **URLs:** [producción](https://www.typescriptlang.org), [andamiaje](http://www.staging-typescript.org/)
 - **Admin**: Prod: [Portal de Azure](https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/resource/subscriptions/99160d5b-9289-4b66-8074-ed268e739e8e/resourceGroups/Default-Web-WestUS/providers/Microsoft.Web/sites/TypeScript-1ebb3390-2634-4956-a955-eab987b7bb25/appServices), [Deploy logs](https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/resource/subscriptions/99160d5b-9289-4b66-8074-ed268e739e8e/resourceGroups/Default-Web-WestUS/providers/Microsoft.Web/sites/TypeScript-1ebb3390-2634-4956-a955-eab987b7bb25/vstscd), [App Insights](https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/resource/subscriptions/57bfeeed-c34a-4ffd-a06b-ccff27ac91b8/resourceGroups/typescriptlang-org/providers/microsoft.insights/components/TypeScriptLang-Prod-Ai/overview)
 - **Traducciones**: [microsoft/TypeScript-Website-Localizations](https://github.com/microsoft/TypeScript-Website-Localizations)
 
@@ -50,9 +50,9 @@ Puedes encontrar los registros de compilación en [Acciones de GitHub](https://g
 
 Si deseas conocer *en profundidad* cómo funciona este sitio web, hay un [video de una hora de duración que cubre el código base, despliegue y herramientas en YouTube](https://www.youtube.com/watch?v=HOvivt6B7hE). De lo contrario, hay algunas guías breves:
 
-- [Conversión código de ejemplo de `twoslash`](./docs/Converting%20Twoslash%20Code%20Samples.md)
-- [Cómo funciona i8n para copiar el sitio](./docs/How%20i8n%20Works%20For%20Site%20Copy.md)
-- [Actualización de la versión de TypeScript](./docs/New%20TypeScript%20Version.md)
+- [Conversión del código de ejemplo `twoslash`](./docs/Converting%20Twoslash%20Code%20Samples.md)
+- [Cómo funciona i18n para copiar el sitio](./docs/How%20i8n%20Works%20For%20Site%20Copy.md)
+- [Actualizar la versión de TypeScript](./docs/New%20TypeScript%20Version.md)
 - [Algo salió mal](./docs/Something%20Went%20Wrong.md)
 
 # Sitios web de paquetes
@@ -74,7 +74,7 @@ con código *TypeScript* o *JavaScript*.
 
 ## `Playground`
 
-El código *JS* tiene un módulo *AMD* para el área de juegos que se carga en el entorno de ejecución en el sitio web de *Playground*.
+El código *JS* tiene un módulo *AMD* para la ludoteca que se carga en el entorno de ejecución en el sitio web de *Playground*.
 
 # Paquetes *Doc*
 
@@ -103,7 +103,7 @@ yarn workspace tsconfig-reference run lint resolveJson
 
 ## Documentación
 
-Los documentos de *TypeScript*. Originalmente transferidos desde [microsoft/TypeScript-Handbook](https://github.com/microsoft/TypeScript-Handbook/) y luego mezclados con [microsoft/TypeScript-New-Handbook](https://github.com/microsoft/TypeScript-New-Handbook), y finalmente actualízalos para [Twoslash](http://www.staging-typescript.org/dev/twoslash/) con nuevo contenido.
+Los documentos de *TypeScript*. Originalmente transferidos desde [microsoft/TypeScript-Handbook](https://github.com/microsoft/TypeScript-Handbook/) y luego mezclados con [microsoft/TypeScript-New-Handbook](https://github.com/microsoft/TypeScript-New-Handbook), y finalmente actualizados para [Twoslash](http://www.staging-typescript.org/dev/twoslash/) con nuevo contenido.
 
 ## Esquema *JSON*
 
@@ -167,7 +167,7 @@ ponte en contacto con [opencode@microsoft.com](mailto:opencode@microsoft.com) si
 
 # Avisos legales
 
-Microsoft y cualquier colaborador te otorgan una licencia para la documentación de Microsoft y otro contenido.
+Microsoft y cualquier colaborador te otorgan una licencia para la documentación de Microsoft y otro contenido
 en este repositorio bajo la [Licencia pública internacional Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/legalcode),
 ve el archivo [LICENSE](LICENSE) y otórgarte una licencia para cualquier código en el repositorio bajo la [Licencia MIT](https://opensource.org/licenses/MIT), consulta el archivo
 [LICENSE-CODE](LICENSE-CODE).

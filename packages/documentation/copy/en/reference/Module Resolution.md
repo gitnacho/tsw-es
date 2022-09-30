@@ -20,7 +20,7 @@ Primero, el compilador intentará localizar un archivo que represente el módulo
 Para hacerlo, el compilador sigue una de dos diferentes estrategias: [`Classic`](#classic) o [`Node`](#node).
 Estas estrategias le dicen al compilador *donde* buscar `moduleA`.
 
-Si eso no funcionó y si el nombre del módulo no es relativo (y en el caso de `"moduleA"`, lo es), entonces el compilador intentará localizar una [declaración de módulos ambientales](/docs/handbook/modules.html#modulos-ambientales).
+Si eso no funcionó y si el nombre del módulo no es relativo (y en el caso de `"moduleA"`, lo es), entonces el compilador intentará localizar una [declaración de módulos ambientales](/es/docs/handbook/modules.html#m%C3%B3dulos-ambientales).
 A continuación, cubriremos las importaciones no relativas.
 
 Finalmente, si el compilador no pudo resolver el módulo, registrará un error.
@@ -47,7 +47,7 @@ Una importación relativa se resuelve en relación con el archivo de importació
 Debes usar importaciones relativas para tus propios módulos que está garantizado que mantienes su ubicación relativa en el entorno de ejecución.
 
 Una importación no relativa se puede resolver en relación con [`baseUrl`](/tsconfig#baseUrl), o mediante el mapeo de rutas, que cubriremos a continuación.
-También se pueden resolver en [declaraciones de módulos ambientales](/docs/handbook/modules.html#modulos-ambientales).
+También se pueden resolver en [declaraciones de módulos ambientales](/es/docs/handbook/modules.html#m%C3%B3dulos-ambientales).
 Utiliza rutas no relativas al importar cualquiera de tus dependencias externas.
 
 ## Estrategias de resolución de módulos
@@ -213,7 +213,7 @@ El valor de `baseUrl` se determina como:
 
 Ten en cuenta que las importaciones relativas de módulos no se ven afectadas por la configuración de `baseUrl`, ya que siempre se resuelven en relación con sus archivos de importación.
 
-Puedes encontrar más documentación sobre `baseUrl` en [`RequireJS`](http://requirejs.org/docs/api.html#config-baseUrl) y en la documentación de [`SystemJS`](https://github.com/systemjs/systemjs/blob/main /docs/api.md).
+Puedes encontrar más documentación sobre `baseUrl` en [`RequireJS`](http://requirejs.org/docs/api.html#config-baseUrl) y en la documentación de [`SystemJS`](https://github.com/systemjs/systemjs/blob/main/docs/api.md).
 
 ### Mapeo de rutas
 

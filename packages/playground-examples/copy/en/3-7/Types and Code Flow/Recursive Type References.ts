@@ -7,7 +7,7 @@
 // Puedes encontrar más información sobre esto en example:types-vs-interfaces
 
 // Se ​​usaba para que no pudieras referirte al tipo que
-// está definiendo dentro del tipo en sí. Esto fue un limite
+// estás definiendo dentro del tipo en sí. Esto fue un limite
 // que no existía dentro de una interfaz y se podía evadir
 // con un poco de trabajo.
 

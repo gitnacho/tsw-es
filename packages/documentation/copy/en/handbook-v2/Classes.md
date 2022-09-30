@@ -279,7 +279,7 @@ class Thing {
 
 ### Índice de firmas
 
-Las clases pueden declarar índices de firmas; funcionan igual que el [Indice de firmas para otros tipos de objetos](/docs/handbook/2/objects.html#indice-de-firmas):
+Las clases pueden declarar índices de firmas; funcionan igual que el [Indice de firmas para otros tipos de objetos](/es/docs/handbook/2/objects.html#%C3%ADndice-de-firmas):
 
 ```ts twoslash
 class MyClass {

@@ -59,7 +59,7 @@ const stringedNumbers = [1, 4, 6, 10].map(i => numberToString(i));
 const stringedNumbersTerse = [1, 4, 6, 10].map(numberToString);
 
 // Puedes tener funciones que podrían aceptar muchos tipos
-// pero solo te interesan algunas propiedades. Este es
+// pero solo te interesan algunas propiedades. de
 // un caso útil para firmas indexadas en tipos. El
 // siguiente tipo declara que esta función se puede usar
 // cualquier objeto siempre que incluya el nombre de la propiedad:
@@ -77,7 +77,7 @@ printFormattedName({ name: "joey", age: 23 });
 // Si deseas obtener más información sobre índice de firmas
 // nosotros recomendamos:
 //
-// https://www.typescriptlang.org/docs/handbook/interfaces.html#excess-property-checks
+// https://www.typescriptlang.org/es/docs/handbook/interfaces.html#exceso-de-comprobaci%C3%B3n-de-propiedades
 // https://basarat.gitbooks.io/typescript/docs/types/index-signatures.html
 
 // También puedes permitir este tipo de comportamiento en todas partes.
@@ -132,5 +132,5 @@ const boolValue2 = boolOrNumberOrStringFunction("string");
 // Estos proporcionan una forma de tener tipos como marcadores de posición
 // de variables en definiciones de tipo.
 
-// ejemplo: funciones-genéricas
+// example:generic-functions
 // example:function-chaining

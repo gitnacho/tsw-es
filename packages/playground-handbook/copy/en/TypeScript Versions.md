@@ -6,7 +6,7 @@ La capacidad de cambiar la versión de *TypeScript* facilita descubrir posibles 
 
 El menú desplegable muestra la versión de parche más alta para una versión de *TypeScript*, pero no todas las versiones están disponibles. Puedes consultar estos dos archivos *JSON* para obtener la lista completa de [versiones de lanzamiento](https://typescript.azureedge.net/indexes/releases.json) y [versiones preliminares](https://typescript.azureedge.net/indexes/pre-releases.json).
 
-Si configuras una versión de *TypeScript*, se agregará `?ts=[versión]` a tu *URL* y se volverá a cargar. Por ejemplo, si configuras la versión de *TypeScript* en 4.3.5, se agregará `?ts=4.3.5` a la *URL*, que es un paso correcto a la descripción general de la [estructura de la *URL*](/play#handbook-10).
+Si configuras una versión de *TypeScript*, se agregará `?ts=[versión]` a tu *URL* y se volverá a cargar. Por ejemplo, si configuras la versión de *TypeScript* en 4.3.5, se agregará `?ts=4.3.5` al *URL*, que es un paso correcto a la descripción general de la [estructura del *URL*](/play#handbook-10).
 
 Hay un caso especial en el que `?ts=Nightly` encontrará la última versión de *TypeScript* que se creó para *Playground* y la usará.
 

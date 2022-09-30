@@ -13,7 +13,7 @@ const dogsToOwnersOrID = {
 } as Record<string, string | number>;
 
 // Una propiedad calculada es un acceso a la propiedad que no está codificada,
-// por ejemplo:
+// ejemplo:
 
 const owner = dogsToOwnersOrID[dog];
 //    ^?

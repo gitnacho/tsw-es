@@ -139,17 +139,17 @@ type T01 = unknown & undefined; // undefined
 type T02 = unknown & null & undefined; // null y undefined (que se convierte en never)
 type T03 = unknown & string; // string
 type T04 = unknown & string[]; // string[]
-type T05 = unknown & unknown; // unknown
+type T05 = unknown & unknown; // unknown  requiere
 type T06 = unknown & any; // any
 
 // En una unión unknown lo absorbe todo
 
-type T10 = unknown | null; // unknown
-type T11 = unknown | undefined; // unknown
-type T12 = unknown | null | undefined; // unknown
-type T13 = unknown | string; // unknown
-type T14 = unknown | string[]; // unknown
-type T15 = unknown | unknown; // unknown
+type T10 = unknown | null; // unknown  requiere
+type T11 = unknown | undefined; // unknown  requiere
+type T12 = unknown | null | undefined; // unknown  requiere
+type T13 = unknown | string; // unknown  requiere
+type T14 = unknown | string[]; // unknown  requiere
+type T15 = unknown | unknown; // unknown  requiere
 type T16 = unknown | any; // any
 
 // Tipo variable y unknown en unión e intersección
@@ -157,7 +157,7 @@ type T16 = unknown | any; // any
 type T20<T> = T & {}; // T & {}
 type T21<T> = T | {}; // T | {}
 type T22<T> = T & unknown; // T
-type T23<T> = T | unknown; // unknown
+type T23<T> = T | unknown; // unknown  requiere
 
 // unknown en tipos condicionales
 
@@ -266,7 +266,7 @@ function f25() {
 
 function f26(x: {}, y: unknown, z: any) {
   let o1 = { a: 42, ...x }; // { a: number }
-  let o2 = { a: 42, ...x, ...y }; // unknown
+  let o2 = { a: 42, ...x, ...y }; // unknown  requiere
   let o3 = { a: 42, ...x, ...y, ...z }; // any
 }
 
@@ -289,7 +289,7 @@ class C1 {
 }
 ```
 
-## Soporte para `defaultProps` en *JSX*
+## Soporte para `defaultProps` en&nbsp;*JSX*
 
 *TypeScript 2.9* y versiones anteriores no aprovecharon las declaraciones [`defaultProps` de *React*](https://reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values) dentro de los componentes *JSX*.
 Los usuarios a menudo tendrían que declarar propiedades opcionales y usar aserciones no nulas dentro de `render`, o usarían aserciones de tipo para corregir el tipo del componente antes de exportarlo.
@@ -337,7 +337,7 @@ function Greet({ name = "world" }: Props) {
 Aún se necesitan los cambios correspondientes para agregar la definición de `LibraryManagedAttributes` al espacio de nombres `JSX` en `@types/React`.
 Ten en cuenta que existen algunas limitaciones.
 
-## `/// <reference lib="..."/>` directivas de referencia
+## Directivas de referencia `/// <reference lib="..."/>`
 
 *TypeScript* agrega una nueva directiva de referencia de triple barra (`/// <reference lib="name"/>`), la cual permite que un archivo incluya explícitamente un archivo *lib* incorporado existente.
 

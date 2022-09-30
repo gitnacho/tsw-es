@@ -11,6 +11,6 @@ type Point = { x: number; y: number };
 const p: Point = { x: 1, y: 3, m: 10 };
 ```
 
-Esta marca se agregó para ayudar a las personas a migrar a la comprobación más estricta de nuevos objetos literales en [*TypeScript 1.6*](/docs/handbook/release-notes/typescript-1-6.html#stricter-object-literal-assign-checks).
+Esta marca se agregó para ayudar a las personas a migrar a la comprobación más estricta de nuevos objetos literales en [*TypeScript 1.6*](/es/docs/handbook/release-notes/typescript-1-6.html#comprobaci%C3%B3n-de-asignaci%C3%B3n-literal-de-objetos-m%C3%A1s-estricta).
 
 No recomendamos usar esta bandera en un código base moderno, puedes suprimir los casos únicos en los que lo necesites usando `//@ts-ignore`.

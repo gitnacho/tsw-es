@@ -285,7 +285,7 @@ function watchMovie(title: string) {
 }
 ```
 
-Por supuesto, para cualquier título de película que aún no esté en el diccionario, `movieWatchCount[title]` será `undefined` (*TypeScript 4.1* agregó la opción [`noUncheckedIndexedAccess`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-1.html#check-indexed-accesses---nouncheckedindexedaccess) para incluir `undefined` al leer de una firma de índice como esta).
+Por supuesto, para cualquier título de película que aún no esté en el diccionario, `movieWatchCount[title]` será `undefined` (*TypeScript 4.1* agregó la opción [`noUncheckedIndexedAccess`](https://www.typescriptlang.org/es/docs/handbook/release-notes/typescript-4-1.html#accesos-indexados-comprobados---nouncheckedindexedaccess) para incluir `undefined` al leer de una firma de índice como esta).
 Aunque está claro que debe haber algunas cadenas que no estén presentes en `movieWatchCount`, las versiones anteriores de *TypeScript* trataban las propiedades de objetos opcionales como no asignables a índices de firmas compatibles, debido a la presencia de `undefined`.
 
 ```ts
@@ -1854,7 +1854,7 @@ Para obtener más información sobre este cambio, [consulta la solicitud de extr
 ### Intersecciones reducidas por propiedades discriminantes
 
 Hay algunos casos en los que puedes terminar con tipos que describen valores que simplemente no existen.
-Por ejemplo
+Por ejemplo  una  API
 
 ```ts
 declare function smushObjects<T, U>(x: T, y: U): T & U;
@@ -2387,7 +2387,7 @@ if (foo?.bar?.baz) {
 }
 ```
 
-Ten en cuenta que `? .` actúa de manera diferente a las operaciones `&&` ya que `&&` actuará especialmente en valores "falsos" (por ejemplo, la cadena vacía, `0`, `NaN` y, bueno, `false`) , pero esta es una característica intencionada del constructor.
+Ten en cuenta que `? .` actúa de manera diferente a las operaciones `&&` ya que `&&` actuará especialmente en valores "falsos" (por ejemplo, la cadena vacía, `0`, `NaN` y, bueno, `false`), pero esta es una característica intencionada del constructor.
 No produce un cortocircuito en datos válidos como `0` o cadenas vacías.
 
 El encadenamiento opcional también incluye otras dos operaciones.
@@ -3042,13 +3042,13 @@ Para obtener más información, puedes [echar un vistazo a la solicitud de extra
 Recomendamos encarecidamente a los usuarios que prueben la marca [`useDefineForClassFields`](/tsconfig#useDefineForClassFields) e informen sobre nuestro rastreador de problemas o en los comentarios a continuación.
 Esto incluye comentarios sobre la dificultad de adoptar la bandera para que podamos entender cómo podemos facilitar la migración.
 
-## Edición sin compilación con referencias de proyectos
+## Edición sin compilación con proyectos de referencia
 
-Las referencias de proyectos *TypeScript* nos brindan una manera fácil de dividir el código base para brindarnos compilaciones más rápidas.
+Los proyectos de referencia *TypeScript* nos brindan una manera fácil de dividir el código base para brindarnos compilaciones más rápidas.
 Desafortunadamente, editar un proyecto cuyas dependencias no se habían creado (o cuya salida estaba desactualizada) significaba que la experiencia de edición no funcionaría bien.
 
 En *TypeScript 3.7*, al abrir un proyecto con dependencias, *TypeScript* utilizará automáticamente los archivos fuente `.ts`/`.tsx` en su lugar.
-Esto significa que los proyectos que utilizan referencias de proyectos ahora verán una experiencia de edición mejorada donde las operaciones semánticas están actualizadas y "simplemente funcionan".
+Esto significa que los proyectos que utilizan proyectos de referencia ahora verán una experiencia de edición mejorada donde las operaciones semánticas están actualizadas y "simplemente funcionan".
 Puedes deshabilitar este comportamiento con la opción del compilador [`disableSourceOfProjectReferenceRedirect`](/tsconfig#disableSourceOfProjectReferenceRedirect) que puede ser apropiada cuando se trabaja en proyectos muy grandes donde este cambio puede afectar el rendimiento de la edición.
 
 Puedes [leer más sobre este cambio leyendo su solicitud de extracción](https://github.com/microsoft/TypeScript/pull/32028).
@@ -3126,7 +3126,7 @@ El formateador integrado de *TypeScript* ahora admite la inserción y eliminaci�
 
 <img width="833" alt="Nueva opción de formateador de punto y coma en VS Code" src="https://user-images.githubusercontent.com/3277153/65913194-10066e80-e395-11e9-8a3a-4f7305c397d5.png">
 
-La elección de un valor de "insertar" o "eliminar" también afecta el formato de las importaciones automáticas, los tipos extraídos y otro código generado proporcionado por los servicios de *TypeScript*. Dejar la configuración en su valor predeterminado de "ignorar" hace que el código generado coincida con la preferencia de punto y coma detectada en el archivo actual.
+La elección de un valor de "insertar" o "eliminar" también afecta el formato de las importaciones automáticas, los tipos extraídos y otro código generado proporcionado por los servicios de *TypeScript*. Dejar la configuración en su valor "ignore" predeterminado, hace que el código generado coincida con la preferencia de punto y coma detectada en el archivo actual.
 
 ## 3.7 Cambios importantes
 
@@ -3484,7 +3484,7 @@ Para obtener más detalles, [consulta la *SE* original en *GitHub*](https://gith
 Además, *TypeScript 3.4* introdujo el indicador [`incremental`](/tsconfig#incremental) para guardar información sobre compilaciones anteriores para reconstruir solo ciertos archivos.
 Estas banderas fueron increíblemente útiles para estructurar proyectos de manera más flexible y acelerar las construcciones.
 Desafortunadamente, el uso de estos indicadores no funcionó con herramientas de compilación de terceros como *Gulp* y *Webpack*.
-*TypeScript 3.6* ahora expone dos conjuntos de *API*s para operar en referencias de proyectos y creación de programas incrementales.
+*TypeScript 3.6* ahora expone dos conjuntos de *API*s para operar en proyectos de referencia y creación de programas incrementales.
 
 Para crear compilaciones [`incremental`](/tsconfig#incremental), los usuarios pueden aprovechar las *API*s `createIncrementalProgram` y `createIncrementalCompilerHost`.
 Los usuarios también pueden rehidratar instancias de programas antiguos a partir de archivos `.tsbuildinfo` generados por esta *API* utilizando la función `readBuilderProgram` recién expuesta, que solo se debe usar para crear nuevos programas (es decir, no puedes modificar la instancia devuelta ⏤ solo está destinado a ser utilizado para el parámetro `oldProgram` en otras funciones de `create*Program`).
@@ -3545,7 +3545,7 @@ Estas mejoras son significativamente más pronunciadas en escenarios del editor 
 ### Mejoras `--incrementales`
 
 *TypeScript 3.5* mejora el modo de compilación [`incremental`](/tsconfig#incremental) de 3.4, al guardar información sobre cómo se calculó el estado del mundo ⏤ la configuración del compilador, por qué se buscaron los archivos, dónde se encontraron los archivos, etc.
-En escenarios que involucran cientos de proyectos que usan referencias de proyectos *TypeScript* en modo `--build`, [hemos encontrado que la cantidad de tiempo de reconstrucción se puede reducir hasta en un 68% en comparación con *TypeScript 3.4*](https://github.com/Microsoft/TypeScript/pull/31101)!
+En escenarios que involucran cientos de proyectos que usan proyectos de referencia *TypeScript* en modo `--build`, [hemos encontrado que la cantidad de tiempo de reconstrucción se puede reducir hasta en un 68% en comparación con *TypeScript 3.4*](https://github.com/Microsoft/TypeScript/pull/31101)!
 
 Para obtener más detalles, puedes ver las solicitudes de extracción para
 
@@ -3875,7 +3875,7 @@ makeBoxedArray("hello!").value[0].toUpperCase();
 
 En versiones anteriores, *TypeScript* inferiría el tipo de objeto vacío (`{}`) al inferir de otras variables de tipo como `T` y `U`.
 
-Durante la inferencia del tipo de argumentos en *TypeScript 3.4*, para una llamada a una función genérica que devuelve un tipo función, *TypeScript* , según corresponda, propagará los parámetros de tipo de los argumentos de la función genérica al tipo de función resultante.
+Durante la inferencia del tipo de argumentos en *TypeScript 3.4*, para una llamada a una función genérica que devuelve un tipo función, *TypeScript*, según corresponda, propagará los parámetros de tipo de los argumentos de la función genérica al tipo de función resultante.
 
 En otras palabras, en lugar de producir el tipo
 
@@ -4443,7 +4443,7 @@ Estamos agradecidos por la contribución y estamos seguros de que nuestros usuar
 ### Advertencias
 
 Como mencionamos, el soporte de `BigInt` solo está disponible para el objetivo `esnext`.
-Puede que no sea obvio, pero debido a que los `BigInts` tienen un comportamiento diferente para operadores matemáticos como `+`, `-`, `*`, etc., brindan funcionalidad para objetivos más antiguos donde la función no existe (como `es2017` e inferior ) implicaría reescribir cada una de estas operaciones.
+Puede que no sea obvio, pero debido a que los `BigInts` tienen un comportamiento diferente para operadores matemáticos como `+`, `-`, `*`, etc., brindan funcionalidad para objetivos más antiguos donde la función no existe (como `es2017` e inferior) implicaría reescribir cada una de estas operaciones.
 *TypeScript* necesitaría distribuirse al comportamiento correcto según el tipo, por lo que cada adición, concatenación de cadenas, multiplicación, etc. implicaría una llamada a función.
 
 Por esa razón, no tenemos planes inmediatos para brindar soporte de nivel inferior.
@@ -4780,17 +4780,17 @@ type T01 = unknown & undefined; // undefined
 type T02 = unknown & null & undefined; // null y undefined (que se convierte en never)
 type T03 = unknown & string; // string
 type T04 = unknown & string[]; // string[]
-type T05 = unknown & unknown; // unknown
+type T05 = unknown & unknown; // unknown  requiere
 type T06 = unknown & any; // any
 
 // En una unión unknown lo absorbe todo
 
-type T10 = unknown | null; // unknown
-type T11 = unknown | undefined; // unknown
-type T12 = unknown | null | undefined; // unknown
-type T13 = unknown | string; // unknown
-type T14 = unknown | string[]; // unknown
-type T15 = unknown | unknown; // unknown
+type T10 = unknown | null; // unknown  requiere
+type T11 = unknown | undefined; // unknown  requiere
+type T12 = unknown | null | undefined; // unknown  requiere
+type T13 = unknown | string; // unknown  requiere
+type T14 = unknown | string[]; // unknown  requiere
+type T15 = unknown | unknown; // unknown  requiere
 type T16 = unknown | any; // any
 
 // Tipo variable y unknown en unión e intersección
@@ -4798,7 +4798,7 @@ type T16 = unknown | any; // any
 type T20<T> = T & {}; // T & {}
 type T21<T> = T | {}; // T | {}
 type T22<T> = T & unknown; // T
-type T23<T> = T | unknown; // unknown
+type T23<T> = T | unknown; // unknown  requiere
 
 // unknown en tipos condicionales
 
@@ -4907,7 +4907,7 @@ function f25() {
 
 function f26(x: {}, y: unknown, z: any) {
   let o1 = { a: 42, ...x }; // { a: number }
-  let o2 = { a: 42, ...x, ...y }; // unknown
+  let o2 = { a: 42, ...x, ...y }; // unknown  requiere
   let o3 = { a: 42, ...x, ...y, ...z }; // any
 }
 
@@ -4930,7 +4930,7 @@ class C1 {
 }
 ```
 
-## Soporte para `defaultProps` en *JSX*
+## Soporte para `defaultProps` en&nbsp;*JSX*
 
 *TypeScript 2.9* y versiones anteriores no aprovecharon las declaraciones [`defaultProps` de *React*](https://reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values) dentro de los componentes *JSX*.
 Los usuarios a menudo tendrían que declarar propiedades opcionales y usar aserciones no nulas dentro de `render`, o usarían aserciones de tipo para corregir el tipo del componente antes de exportarlo.
@@ -4978,7 +4978,7 @@ function Greet({ name = "world" }: Props) {
 Aún se necesitan los cambios correspondientes para agregar la definición de `LibraryManagedAttributes` al espacio de nombres `JSX` en `@types/React`.
 Ten en cuenta que existen algunas limitaciones.
 
-## `/// <reference lib="..."/>` directivas de referencia
+## Directivas de referencia `/// <reference lib="..."/>`
 
 *TypeScript* agrega una nueva directiva de referencia de triple barra (`/// <reference lib="name"/>`), la cual permite que un archivo incluya explícitamente un archivo *lib* incorporado existente.
 
@@ -5837,7 +5837,7 @@ if (Foo === Bar) {
 
 *TypeScript 2.7* introduce una nueva marca llamada [`strictPropertyInitialization`](/tsconfig#strictPropertyInitialization).
 Este indicador realiza comprobaciones para garantizar que cada propiedad de instancia de una clase se inicie en el cuerpo del constructor o mediante un iniciador de propiedad.
-Por ejemplo
+Por ejemplo  una  API
 
 ```ts
 class C {
@@ -6840,7 +6840,7 @@ Consulta la [Documentación de archivos sobre la comprobación de tipos *JavaScr
 
 ## Soporte para clases mixtas
 
-*TypeScript 2.2* agrega soporte para el patrón de clase mixin *ECMAScript 2015* (ve la [Descripción MDN de Mixin](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes#Mix-ins) y [Mixins "Real" con Clases *JavaScript*](http://justinfagnani.com/2015/12/21/real-mixins-with-javascript-classes/) para obtener más detalles), así como reglas para combinar firmas de construcción mixin con firmas de construcción regulares en tipos de intersección.
+*TypeScript 2.2* agrega soporte para el patrón de clase mixin *ECMAScript 2015* (ve la [Descripción MDN de Mixin](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes#mix-ins) y [Mixins "Real" con Clases *JavaScript*](http://justinfagnani.com/2015/12/21/real-mixins-with-javascript-classes/) para obtener más detalles), así como reglas para combinar firmas de construcción mixin con firmas de construcción regulares en tipos de intersección.
 
 ##### Primero algo de terminología:
 
@@ -7502,7 +7502,7 @@ Solo unas pocas opciones de configuración cambian entre estos dos destinos, y m
 
 *TypeScript 2.1* admite la configuración heredada usando `extends`, donde:
 
-- `extends` es una nueva propiedad de nivel superior en `tsconfig.json` (junto con `compilerOptions`, [`files`](/tsconfig#files), [`include`](/tsconfig#include) y `exclude` ).
+- `extends` es una nueva propiedad de nivel superior en `tsconfig.json` (junto con `compilerOptions`, [`files`](/tsconfig#files), [`include`](/tsconfig#include) y `exclude`).
 - El valor de `extends` debe ser una cadena que contenga una ruta a otro archivo de configuración del que heredar.
 - La configuración del archivo base se carga primero y luego se reemplaza por las del archivo de configuración heredado.
 - No se permite la circularidad entre archivos de configuración.
@@ -7859,7 +7859,7 @@ El tipo `never` tiene las siguientes características:
 
 - `never` es un subtipo y se puede asignar a todos los tipos.
 - Ningún tipo es un subtipo de o asignable a `never` (excepto `never` en sí mismo).
-- En una expresión de función o función de flecha sin anotación de tipo de retorno, si la función no tiene declaraciones `return`, o solo declaraciones `return` con expresiones de tipo `never`, y si el punto final de la función no es accesible (como determinado por el análisis de control de flujo ), el tipo de retorno inferido para la función es `never`.
+- En una expresión de función o función de flecha sin anotación de tipo de retorno, si la función no tiene declaraciones `return`, o solo declaraciones `return` con expresiones de tipo `never`, y si el punto final de la función no es accesible (como determinado por el análisis de control de flujo), el tipo de retorno inferido para la función es `never`.
 - En una función con una anotación explícita de tipo de retorno `never`, todas las declaraciones de `return` (si las hay) deben tener expresiones de tipo `never` y el punto final de la función no debe ser accesible.
 
 Debido a que `never` es un subtipo de todos los tipos, siempre se omite de los tipos unión y se ignora en la inferencia del tipo de retorno de la función siempre que se devuelvan otros tipos.
@@ -8057,7 +8057,7 @@ Si un segmento de un patrón `glob` incluye solo `*` o `.*`, entonces solo se in
 Si [`files`](/tsconfig#files) e [`include`](/tsconfig#include) se dejan sin especificar, el compilador de manera predeterminada incluye todos los *TypeScript* (`.ts`, `.d.ts` y `.tsx`) en el directorio y subdirectorios que los contienen, excepto los excluidos mediante la propiedad `exclude`. Los archivos *JS* (`.js` y `.jsx`) también se incluyen si [`allowJs`](/tsconfig#allowJs) se establece en `true`.
 
 Si se especifican las propiedades [`files`](/tsconfig#files) o [`include`](/tsconfig#include), el compilador incluirá en su lugar la unión de los archivos incluidos por esas dos propiedades.
-Los archivos en el directorio especificado usando la opción del compilador [`outDir`](/tsconfig#outDir) siempre se excluyen a menos que se incluyan explícitamente a través de la propiedad [`files`](/tsconfig#files) (incluso cuando se especifica la propiedad `exclude` ).
+Los archivos en el directorio especificado usando la opción del compilador [`outDir`](/tsconfig#outDir) siempre se excluyen a menos que se incluyan explícitamente a través de la propiedad [`files`](/tsconfig#files) (incluso cuando se especifica la propiedad `exclude`).
 
 Los archivos incluidos usando [`include`](/tsconfig#include) se pueden filtrar usando la propiedad `exclude`.
 Sin embargo, los archivos incluidos explícitamente usando la propiedad [`files`](/tsconfig#files) siempre se incluyen independientemente de `exclude`.
@@ -8067,7 +8067,7 @@ La propiedad `exclude` de manera predeterminada excluye los directorios `node_mo
 
 *TypeScript 2.0* proporciona un conjunto de botones de resolución de módulo adicionales para *informar* al compilador dónde encontrar declaraciones para un módulo determinado.
 
-Consulta la documentación de [Resolución de módulo](http://www.typescriptlang.org/docs/handbook/module-resolution.html) para obtener más detalles.
+Consulta la documentación de [Resolución de módulo](https://www.typescriptlang.org/es/docs/handbook/module-resolution.html) para obtener más detalles.
 
 ### *URL* base
 
@@ -9982,7 +9982,7 @@ function makeNode(name: string, initialNeighbor: Node): Node {
 
 Además de los cargadores de módulos `AMD` y `CommonJS`, *TypeScript* ahora admite módulos emisores `UMD` ([Definición de módulo universal](https://github.com/umdjs/umd)) y [`System`](https://github.com/systemjs/systemjs) formatos de módulo.
 
-**Uso**:
+**Uso:**
 
 > `tsc --module umd`
 

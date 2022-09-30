@@ -87,7 +87,7 @@ const TSConfigReferenceTemplateComponent = (props: Props) => {
         event.preventDefault()
         scrollToHash(link.hash)
 
-        // Actualiza la URL sin activar el comportamiento de desplazamiento predeterminado
+        // Actualiza el URL sin activar el comportamiento de desplazamiento predeterminado
         window.history.pushState(null, "", link.hash)
       })
     })

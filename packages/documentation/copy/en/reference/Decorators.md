@@ -39,7 +39,7 @@ tsc --target ES5 --experimentalDecorators
 
 ## Decoradores
 
-Un *Decorator* es un tipo especial de declaración que se puede adjuntar a una [declaración de clase](#decoradores-de-clase), [método](#decoradores-de-metodo), [descriptor de acceso](#decoradores-de-acceso), [propiedad](#decoradores-de-propiedades) o [parámetro](#-decoradores-de-parametros).
+Un *Decorator* es un tipo especial de declaración que se puede adjuntar a una [declaración de clase](#decoradores-de-clase), [método](#decoradores-de-metodo), [descriptor de acceso](#decoradores-de-acceso), [propiedad](#decoradores-de-propiedades) o [parámetro](#decoradores-de-parametros).
 Los decoradores usan la forma `@expression`, donde `expression` debe evaluar una función que será llamada en el entorno de ejecución con información sobre la declaración decorada.
 
 Por ejemplo, el decorador `@sealed` dado podríamos escribir la función `sealed` de la siguiente manera:

@@ -463,7 +463,7 @@ function watchMovie(title: string) {
 }
 ```
 
-Por supuesto, para cualquier título de película que aún no esté en el diccionario, `movieWatchCount[title]` será `undefined` (*TypeScript 4.1* agregó la opción [`noUncheckedIndexedAccess`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-1.html#check-indexed-accesses---nouncheckedindexedaccess) para incluir `undefined` al leer de una firma de índice como esta).
+Por supuesto, para cualquier título de película que aún no esté en el diccionario, `movieWatchCount[title]` será `undefined` (*TypeScript 4.1* agregó la opción [`noUncheckedIndexedAccess`](https://www.typescriptlang.org/es/docs/handbook/release-notes/typescript-4-1.html#accesos-indexados-comprobados---nouncheckedindexedaccess) para incluir `undefined` al leer de una firma de índice como esta).
 Aunque está claro que debe haber algunas cadenas que no estén presentes en `movieWatchCount`, las versiones anteriores de *TypeScript* trataban las propiedades de objetos opcionales como no asignables a índices de firmas compatibles, debido a la presencia de `undefined`.
 
 ```ts twoslash

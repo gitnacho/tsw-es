@@ -3,7 +3,7 @@ display: "Rutas"
 oneline: "Especifica un conjunto de entradas que reasignen las importaciones a ubicaciones de búsqueda adicionales."
 ---
 
-Una serie de entradas que reasignan importaciones a ubicaciones de búsqueda relativas a [`baseUrl`](#baseUrl). Hay una mayor cobertura de `paths` en [el manual](/docs/handbook/module-solution.html#path-mapping).
+Una serie de entradas que reasignan importaciones a ubicaciones de búsqueda relativas a [`baseUrl`](#baseUrl). Hay una mayor cobertura de `paths` en [el manual](/es/docs/handbook/module-resolution.html#mapeo-de-rutas).
 
 `paths` te permite declarar cómo *TypeScript* debe resolver una importación en tus `require`/`import`s.
 

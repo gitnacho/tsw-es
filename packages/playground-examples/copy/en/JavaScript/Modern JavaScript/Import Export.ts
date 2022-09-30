@@ -87,7 +87,7 @@ export default stickerGenerator;
 // en código moderno. Cubriendo todas las formas en que el código se puede cruzar
 // los límites del módulo es un tema muy extenso en el manual:
 //
-// https://www.typescriptlang.org/docs/handbook/modules.html
+// https://www.typescriptlang.org/es/docs/handbook/modules.html
 
 // Sin embargo, para intentar cubrir esa última pregunta. Si miras
 // el código JavaScript para este ejemplo ⏤ verás esto:

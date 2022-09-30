@@ -70,7 +70,7 @@ La forma de hacerlo depende de exactamente para qué tipo de biblioteca estás o
 Si una biblioteca que estás utilizando está publicada como un paquete `npm`, es posible que ya incluya archivos de declaración de tipos como parte de su distribución.
 Puedes leer la documentación del proyecto para averiguarlo, o simplemente intentar importar el paquete y ver si *TypeScript* puede resolver automáticamente los tipos.
 
-Si eres un autor de paquetes que está considerando agrupar definiciones de tipos con tu paquete, puedes leer nuestra guía sobre [agrupar definiciones de tipos](/docs/handbook/statement-files/ publishing.html#incluir-declaraciones-en-tu-paquete-npm).
+Si eres un autor de paquetes que está considerando agrupar definiciones de tipos con tu paquete, puedes leer nuestra guía sobre [agrupar definiciones de tipos](/es/docs/handbook/declaration-files/publishing.html#incluir-declaraciones-en-tu-paquete-npm).
 
 ### `DefinitelyTyped`/`@types`
 

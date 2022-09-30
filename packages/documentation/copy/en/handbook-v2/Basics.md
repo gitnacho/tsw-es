@@ -4,7 +4,7 @@ layout: docs
 permalink: /docs/handbook/2/basic-types.html
 oneline: "Paso uno para aprender TypeScript: Tipos básicos."
 preamble: >
-  <p>Bienvenido a la primera página del manual. Si esta es tu primera experiencia con TypeScript ⏤ es posible que desees comenzar en una de las guías de '<a href='/docs/handbook/intro.html#get-started'>primeros pasos</a>'</p>
+  <p>Bienvenido a la primera página del manual. Si esta es tu primera experiencia con TypeScript ⏤ es posible que desees comenzar en una de las guías de '<a href="https://www.typescriptlang.org/es/docs/handbook/intro.html#empecemos">Empecemos</a>'
 ---
 
 Todos y cada uno de los valores en *JavaScript* tienen un conjunto de comportamientos que puedes observar al ejecutar diferentes operaciones.
@@ -232,7 +232,7 @@ Bueno, no hubo errores de tipo, por lo que no obtuvimos ningún resultado en nue
 Pero revisa de nuevo ⏤ obtuvimos como  resultado un nuevo *archivo* en su lugar.
 Si buscamos en nuestro directorio actual, veremos un archivo `hello.js` junto a `hello.ts`.
 Esa es la salida de nuestro archivo `hello.ts` después de que `tsc` *compila* o *transforma* en un archivo *JavaScript* puro.
-Y si revisamos el contenido, veremos lo que *TypeScript* escupe después de que procesa un archivo `.ts`:
+Y si revisamos el contenido, veremos lo que *TypeScript* vierte después de procesar un archivo `.ts`:
 
 ```js
 // Saluda al mundo.
@@ -243,7 +243,7 @@ En este caso, *TypeScript* tenía muy poco que transformar, por lo que parece id
 El compilador intenta emitir un código legible y limpio que parece algo que una persona escribiría.
 Si bien eso no siempre es tan fácil, *TypeScript* aplica sangrías de manera consistente, es consciente de cuándo nuestro código abarca diferentes líneas de código e intenta mantener los comentarios.
 
-¿Qué pasa si *nosotros* introdujimos un error de comprobación de tipo?
+¿Qué pasa si introducimos un error de comprobación de tipo?
 Reescribamos `hello.ts`:
 
 ```ts twoslash
@@ -302,7 +302,7 @@ function greet(person: string, date: Date) {
 ```
 
 Lo que hicimos fue agregar *anotaciones de tipo* en `person` y `date` para describir con qué tipos de valores se puede llamar a `greet`.
-Puedes leer esa firma como "`greet` toma una `person` de tipo `string` y un `date` de tipo `Date` ".
+Puedes leer esa firma como "`greet` toma una `person` de tipo `string` y un `date` de tipo `Date`".
 
 Con esto, *TypeScript* nos puede informar sobre otros casos en los que se podría haber llamado incorrectamente a `greet`.
 Por ejemplo...
@@ -421,7 +421,7 @@ Esto puede requerir un poco de trabajo adicional, pero en general, se amortiza a
 Cuando sea posible, un nuevo código base siempre debe activar estos controles rigurosos.
 
 *TypeScript* tiene varios indicadores de rigurosidad de comprobación de tipo que se pueden activar o desactivar, y todos nuestros ejemplos se escribirán con todos ellos habilitados a menos que se indique lo contrario.
-El indicador [`strict`](/tsconfig#strict) en la *CLI*, o `"strict": true` en un [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) los activa todos simultáneamente, pero podemos optar por activarlos individualmente.
+El indicador [`strict`](/tsconfig#strict) en la *CLI*, o `"strict": true` en un [`tsconfig.json`](https://www.typescriptlang.org/es/docs/handbook/tsconfig-json.html) los activa todos simultáneamente, pero podemos optar por activarlos individualmente.
 Los dos más importantes que debes conocer son [`noImplicitAny`](/tsconfig#noImplicitAny) y [`strictNullChecks`](/tsconfig#strictNullChecks).
 
 ## `noImplicitAny`

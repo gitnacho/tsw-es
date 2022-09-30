@@ -38,7 +38,7 @@ Aquí hay un ejemplo
 ```ts
 // Definiciones de tipo para [~NOMBRE BIBLIOTECA~] [~OPCIONAL NUMERO VERSION~]
 // Proyecto: [~NOMBRE PROYECTO~]
-// Definiciones por: [~TU NOMBRE~] <[~UNA URL TUYA~]>
+// Definiciones por: [~TU NOMBRE~] <[~UN URL TUYO~]>
 
 /*~ Este es el archivo de plantilla de módulo de modificación global. Debes cambiarle el nombre a index.d.ts
  *~ y colócalo en un directorio con el mismo nombre que el módulo.

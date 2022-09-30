@@ -297,7 +297,7 @@ Para obtener más detalles, [consulta la *SE* original en *GitHub*](https://gith
 Además, *TypeScript 3.4* introdujo el indicador [`incremental`](/tsconfig#incremental) para guardar información sobre compilaciones anteriores para reconstruir solo ciertos archivos.
 Estas banderas fueron increíblemente útiles para estructurar proyectos de manera más flexible y acelerar las construcciones.
 Desafortunadamente, el uso de estos indicadores no funcionó con herramientas de compilación de terceros como *Gulp* y *Webpack*.
-*TypeScript 3.6* ahora expone dos conjuntos de *API*s para operar en referencias de proyectos y creación de programas incrementales.
+*TypeScript 3.6* ahora expone dos conjuntos de *API*s para operar en proyectos de referencia y creación de programas incrementales.
 
 Para crear compilaciones [`incremental`](/tsconfig#incremental), los usuarios pueden aprovechar las *API*s `createIncrementalProgram` y `createIncrementalCompilerHost`.
 Los usuarios también pueden rehidratar instancias de programas antiguos a partir de archivos `.tsbuildinfo` generados por esta *API* utilizando la función `readBuilderProgram` recién expuesta, que solo se debe usar para crear nuevos programas (es decir, no puedes modificar la instancia devuelta ⏤ solo está destinado a ser utilizado para el parámetro `oldProgram` en otras funciones de `create*Program`).

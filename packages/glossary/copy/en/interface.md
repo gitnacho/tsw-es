@@ -13,4 +13,4 @@ interface Dog {
 }
 ```
 
-Esto significa que solo un objeto con un `name`, `dateOfBirth` y `markings` se podría clasificar como un "Dog" en el [Sistema de tipos](#sistema de tipos).
+Esto significa que solo un objeto con un `name`, `dateOfBirth` y `markings` se podría clasificar como un "Dog" en el [Sistema de tipos](#sistema-de-tipos).

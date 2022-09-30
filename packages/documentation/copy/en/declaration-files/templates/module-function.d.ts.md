@@ -18,7 +18,7 @@ Para manejar tanto la importación a través de *UMD* como los módulos:
 ```ts
 // Definiciones de tipo para [~NOMBRE BIBLIOTECA~] [~OPCIONAL NUMERO VERSION~]
 // Proyecto: [~NOMBRE PROYECTO~]
-// Definiciones por: [~TU NOMBRE~] <[~UNA URL TUYA~]>
+// Definiciones por: [~TU NOMBRE~] <[~UN URL TUYO~]>
 
 /*~ Este es el archivo de plantilla de módulo para módulos de función.
  *~ Deberías cambiarle el nombre a index.d.ts y colocarlo en un directorio con el mismo nombre que el módulo.
@@ -36,7 +36,7 @@ Para manejar tanto la importación a través de *UMD* como los módulos:
 //   import x from '[~EL MODULO~]';
 //
 // Consulta la documentación de TypeScript en
-// https://www.typescriptlang.org/docs/handbook/modules.html#export--and-import--require
+// https://www.typescriptlang.org/es/docs/handbook/modules.html#export--e-import--require
 // para comprender soluciones alternativas comunes para esta limitación de los módulos ES6.
 
 /*~ Si este módulo es un módulo UMD que expone una variable global 'myFuncLib' cuando

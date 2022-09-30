@@ -45,7 +45,7 @@ if (foo?.bar?.baz) {
 }
 ```
 
-Ten en cuenta que `? .` actúa de manera diferente a las operaciones `&&` ya que `&&` actuará especialmente en valores "falsos" (por ejemplo, la cadena vacía, `0`, `NaN` y, bueno, `false`) , pero esta es una característica intencionada del constructor.
+Ten en cuenta que `? .` actúa de manera diferente a las operaciones `&&` ya que `&&` actuará especialmente en valores "falsos" (por ejemplo, la cadena vacía, `0`, `NaN` y, bueno, `false`), pero esta es una característica intencionada del constructor.
 No produce un cortocircuito en datos válidos como `0` o cadenas vacías.
 
 El encadenamiento opcional también incluye otras dos operaciones.
@@ -700,13 +700,13 @@ Para obtener más información, puedes [echar un vistazo a la solicitud de extra
 Recomendamos encarecidamente a los usuarios que prueben la marca [`useDefineForClassFields`](/tsconfig#useDefineForClassFields) e informen sobre nuestro rastreador de problemas o en los comentarios a continuación.
 Esto incluye comentarios sobre la dificultad de adoptar la bandera para que podamos entender cómo podemos facilitar la migración.
 
-## Edición sin compilación con referencias de proyectos
+## Edición sin compilación con proyectos de referencia
 
-Las referencias de proyectos *TypeScript* nos brindan una manera fácil de dividir el código base para brindarnos compilaciones más rápidas.
+Los proyectos de referencia *TypeScript* nos brindan una manera fácil de dividir el código base para brindarnos compilaciones más rápidas.
 Desafortunadamente, editar un proyecto cuyas dependencias no se habían creado (o cuya salida estaba desactualizada) significaba que la experiencia de edición no funcionaría bien.
 
 En *TypeScript 3.7*, al abrir un proyecto con dependencias, *TypeScript* utilizará automáticamente los archivos fuente `.ts`/`.tsx` en su lugar.
-Esto significa que los proyectos que utilizan referencias de proyectos ahora verán una experiencia de edición mejorada donde las operaciones semánticas están actualizadas y "simplemente funcionan".
+Esto significa que los proyectos que utilizan proyectos de referencia ahora verán una experiencia de edición mejorada donde las operaciones semánticas están actualizadas y "simplemente funcionan".
 Puedes deshabilitar este comportamiento con la opción del compilador [`disableSourceOfProjectReferenceRedirect`](/tsconfig#disableSourceOfProjectReferenceRedirect) que puede ser apropiada cuando se trabaja en proyectos muy grandes donde este cambio puede afectar el rendimiento de la edición.
 
 Puedes [leer más sobre este cambio leyendo su solicitud de extracción](https://github.com/microsoft/TypeScript/pull/32028).
@@ -784,7 +784,7 @@ El formateador integrado de *TypeScript* ahora admite la inserción y eliminaci�
 
 <img width="833" alt="Nueva opción de formateador de punto y coma en VS Code" src="https://user-images.githubusercontent.com/3277153/65913194-10066e80-e395-11e9-8a3a-4f7305c397d5.png">
 
-La elección de un valor de "insertar" o "eliminar" también afecta el formato de las importaciones automáticas, los tipos extraídos y otro código generado proporcionado por los servicios de *TypeScript*. Dejar la configuración en su valor predeterminado de "ignorar" hace que el código generado coincida con la preferencia de punto y coma detectada en el archivo actual.
+La elección de un valor de "insertar" o "eliminar" también afecta el formato de las importaciones automáticas, los tipos extraídos y otro código generado proporcionado por los servicios de *TypeScript*. Dejar la configuración en su valor "ignore" predeterminado, hace que el código generado coincida con la preferencia de punto y coma detectada en el archivo actual.
 
 ## 3.7 Cambios importantes
 

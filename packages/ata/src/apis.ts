@@ -38,7 +38,7 @@ export const getDTSFileForModuleWithVersion = async (
   version: string,
   file: string
 ) => {
-  // el archivo viene on una / prefija 
+  // el archivo viene con una / prefija 
   const url = `https://cdn.jsdelivr.net/npm/${moduleName}@${version}${file}`
   const f = config.fetcher || fetch
   const res = await f(url)

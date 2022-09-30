@@ -92,7 +92,7 @@ if (Foo === Bar) {
 
 *TypeScript 2.7* introduce una nueva marca llamada [`strictPropertyInitialization`](/tsconfig#strictPropertyInitialization).
 Este indicador realiza comprobaciones para garantizar que cada propiedad de instancia de una clase se inicie en el cuerpo del constructor o mediante un iniciador de propiedad.
-Por ejemplo
+Por ejemplo  una  API
 
 ```ts
 class C {

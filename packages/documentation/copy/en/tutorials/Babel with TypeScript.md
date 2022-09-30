@@ -10,7 +10,7 @@ translatable: true
 
 Al hacer un proyecto de *JavaScript* moderno, se puede preguntar cuál es la forma correcta de convertir archivos de *TypeScript* a *JavaScript*.
 
-Muchas veces la respuesta es *"depende"* o *"alguien puede haber decidido por ti"* dependiendo del proyecto. Si estás creando tu proyecto con un marco existente como [`tsdx`](https://tsdx.io), [*Angular*](https://angular.io/), [*NestJS*](https://nestjs.com/ ) o cualquier marco mencionado en la [Introducción](/docs/home), esta decisión se gestiona por ti.
+Muchas veces la respuesta es *"depende"* o *"alguien puede haber decidido por ti"* dependiendo del proyecto. Si estás creando tu proyecto con un marco existente como [`tsdx`](https://tsdx.io), [*Angular*](https://angular.io/), [*NestJS*](https://nestjs.com/) o cualquier marco mencionado en la [Introducción](/docs/home), esta decisión se gestiona por ti.
 
 Sin embargo, una heurística útil podría ser:
 

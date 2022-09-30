@@ -1,5 +1,5 @@
 // En 4.0, la etiqueta JSDoc @deprecated se agrega al
-// sistema de tipos. Puedes usar @deprecated en cualquier lugar
+// tipos. Puedes usar @deprecated en cualquier lugar
 // puedes utilizar JSDoc actualmente.
 
 interface AccountInfo {

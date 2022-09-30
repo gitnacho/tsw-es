@@ -32,7 +32,7 @@ Para especificar el tipo de un arreglo como `[1, 2, 3]`, puedes usar la sintaxis
 También puedes ver esto escrito como `Array<number>`, que significa lo mismo.
 Aprenderemos más sobre la sintaxis `T<U>` cuando cubramos `generics`.
 
-> Ten en cuenta que `[number]` es una cosa diferente; consulta la sección sobre [Tuplas](/docs/handbook/2objects.html#tipos-tupla).
+> Ten en cuenta que `[number]` es una cosa diferente; consulta la sección sobre [Tuplas](/es/docs/handbook/2/objects.html#tipos-tupla).
 
 
 ## `any`
@@ -162,7 +162,7 @@ Este proceso se llama *tipificación contextual* porque el *contexto* en el que 
 De manera similar a las reglas de inferencia, no es necesario que aprendas explícitamente cómo sucede esto, pero comprender qué *sucede* puede ayudar a darte cuenta de cuándo no se necesitan anotaciones de tipo.
 Más adelante, veremos más ejemplos de cómo el contexto en el que ocurre un valor puede afectar su tipo.
 
-## Tipos Objeto
+## Tipos Object
 
 Aparte de los primitivos, el tipo más común que encontrarás es un *tipo objeto*.
 Esto se refiere a cualquier valor de *JavaScript* con propiedades, ¡que son casi todos!
@@ -457,7 +457,7 @@ Aprenderás más sobre estos conceptos en capítulos posteriores, así que no te
 
 - Antes de la versión 4.2 de *TypeScript*, nombres alias de tipo [*pueden* aparecer en mensajes de error](/play?#code/PTAEGEHsFsAcEsA2BTATqNrLusgzngIYDm+oA7koqIYuYQJ56gCueyoAUCKAC4AWHAHaFcoSADMaQ0PCG80EwgGNkALk6c5C1EtWgAsqOi1QAb06groEbjWg8vVHOKcAvpokshy3vEgyyMr8kEbQJogAFND2YREAlOaW1soBeJAoAHSIkMTRmbbI8e6aPMiZxJmgACqCGKhY6ABGyDnkFFQ0dIzMbBwCwqIccabcYLyQoKjIEmh8kwN8DLAc5PzwwbLMyAAeK77IACYaQSEjUWZWhfYAjABMAMwALA+gbsVjoADqgjKESytQPxCHghAByXigYgBfr8LAsYj8aQMUASbDQcRSExCeCwFiIQh+AKfAYyBiQFgOPyIaikSGLQo0Zj-aazaY+dSaXjLDgAGXgAC9CKhDqAALxJaw2Ib2RzOISuDycLw+ImBYKQflCkWRRD2LXCw6JCxS1JCdJZHJ5RAFIbFJU8ADKC3WzEcnVZaGYE1ABpFnFOmsFhsil2uoHuzwArO9SmAAEIsSFrZB-GgAjjA5gtVN8VCEc1o1C4Q4AGlR2AwO1EsBQoAAbvB-gJ4HhPgB5aDwem-Ph1TCV3AEEirTp4ELtRbTPD4vwKjOfAuioSQHuDXBcnmgACC+eCONFEs73YAPGGZVT5cRyyhiHh7AAON7lsG3vBggB8XGV3l8-nVISOgghxoLq9i7io-AHsayRWGaFrlFauq2rg9qaIGQHwCBqChtKdgRo8TxRjeyB3o+7xAA), a veces en lugar del tipo anónimo equivalente (que puede ser deseable o no). Las interfaces siempre se nombrarán en los mensajes de error.
 - Los alias de tipo no pueden participar [en la combinación de declaraciones, pero las interfaces sí pueden](/play?#code/PTAEEEDtQS0gXApgJwGYEMDGjSfdAIx2UQFoB7AB0UkQBMAoEUfO0Wgd1ADd0AbAK6IAzizp16ALgYM4SNFhwBZdAFtV-UAG8GoPaADmNAcMmhh8ZHAMMAvjLkoM2UCvWad+0ARL0A-GYWVpA29gyY5JAWLJAwGnxmbvGgALzauvpGkCZmAEQAjABMAMwALLkANBl6zABi6DB8okR4Jjg+iPSgABboovDk3jjo5pbW1d6+dGb5djLwAJ7UoABKiJTwjThpnpnGpqPBoTLMAJrkArj4kOTwYmycPOhW6AR8IrDQ8N04wmo4HHQCwYi2Waw2W1S6S8HX8gTGITsQA).
-- Las interfaces solo se pueden usar para [declarar la forma de los objetos, no cambiar el nombre de los primitivos](/play?#code/PTAEAkFMCdIcgM6gC4HcD2pIA8CGBbABwBtIl0AzUAKBFAFcEBLAOwHMUBPQs0XFgCahWyGBVwBjMrTDJMAshOhMARpD4tQ6FQCtIE5DWoixk9QEEWAeV37kARlABvaqDegAbrmL1IALlAEZGV2agBfampkbgtrWwMAJlAAXmdXdy8ff0Dg1jZwyLoAVWZ2Lh5QVHUJflAlSFxROsY5fFAWAmk6CnRoLGwmILzQQmV8JmQmDzI-SOiKgGV+CaYAL0gBBdyy1KCQ-Pn1AFFplgA5enw1PtSWS+vCsAAVAAtB4QQWOEMKBuYVUiVCYvYQsUTQcRSBDGMGmKSgAAa-VEgiQe2GLgKQA).
+- Las interfaces solo se pueden usar para [declarar la forma de los objetos, no para cambiar el nombre de los primitivos](/play?#code/PTAEAkFMCdIcgM6gC4HcD2pIA8CGBbABwBtIl0AzUAKBFAFcEBLAOwHMUBPQs0XFgCahWyGBVwBjMrTDJMAshOhMARpD4tQ6FQCtIE5DWoixk9QEEWAeV37kARlABvaqDegAbrmL1IALlAEZGV2agBfampkbgtrWwMAJlAAXmdXdy8ff0Dg1jZwyLoAVWZ2Lh5QVHUJflAlSFxROsY5fFAWAmk6CnRoLGwmILzQQmV8JmQmDzI-SOiKgGV+CaYAL0gBBdyy1KCQ-Pn1AFFplgA5enw1PtSWS+vCsAAVAAtB4QQWOEMKBuYVUiVCYvYQsUTQcRSBDGMGmKSgAAa-VEgiQe2GLgKQA).
 - Los nombres de las interfaces [*siempre* aparecerán en su forma original](/play?#code/PTAEGEHsFsAcEsA2BTATqNrLusgzngIYDm+oA7koqIYuYQJ56gCueyoAUCKAC4AWHAHaFcoSADMaQ0PCG80EwgGNkALk6c5C1EtWgAsqOi1QAb06groEbjWg8vVHOKcAvpokshy3vEgyyMr8kEbQJogAFND2YREAlOaW1soBeJAoAHSIkMTRmbbI8e6aPMiZxJmgACqCGKhY6ABGyDnkFFQ0dIzMbBwCwqIccabcYLyQoKjIEmh8kwN8DLAc5PzwwbLMyAAeK77IACYaQSEjUWY2Q-YAjABMAMwALA+gbsVjNXW8yxySoAADaAA0CCaZbPh1XYqXgOIY0ZgmcK0AA0nyaLFhhGY8F4AHJmEJILCWsgZId4NNfIgGFdcIcUTVfgBlZTOWC8T7kAJ42G4eT+GS42QyRaYbCgXAEEguTzeXyCjDBSAAQSE8Ai0Xsl0K9kcziExDeiQs1lAqSE6SyOTy0AKQ2KHk4p1V6s1OuuoHuzwArMagA) en los mensajes de error, pero *sólo* cuando se utilizan por su nombre.
 
 En su mayor parte, puedes elegir según tus preferencias personales, y *TypeScript* te dirá si necesitas algo para ser otro tipo de declaración. Si deseas una heurística, usa `interface` hasta que necesites usar las características de `type`.
@@ -695,7 +695,7 @@ const oneHundred: bigint = BigInt(100);
 const anotherHundred: bigint = 100n;
 ```
 
-Puedes obtener más información sobre `BigInt` en [las notas de la versión de *TypeScript 3.2*](/docs/handbook/release-notes/typescript-3-2.html#bigint).
+Puedes obtener más información sobre `BigInt` en [las notas de la versión de *TypeScript 3.2*](/es/docs/handbook/release-notes/typescript-3-2.html#bigint).
 
 #### `symbol`
 

@@ -50,7 +50,7 @@ export const playCopy = {
   play_export_vscode_dev_play: "Abrir en VSCode TS Playground (alfa)",
   play_export_sandbox: "Abrir en CodeSandbox",
   play_export_stackblitz: "Abrir en StackBlitz",
-  play_export_clipboard: "URL copiada al portapapeles",
+  play_export_clipboard: "URL copiado al portapapeles",
   play_esm_mode: "Cambió al modo ESM",
   play_clear_logs: "Registros borrados",
   play_run_js: "JavaScript ejecutado",
@@ -62,7 +62,7 @@ export const playCopy = {
 // Podrías pensar en ello de tres distintas maneras:
 //
 //  - Un lugar para aprender TypeScript donde nada se puede romper
-//  - Un lugar para experimentar con la sintaxis de TypeScript y compartir las URL con otros.
+//  - Un lugar para experimentar con la sintaxis de TypeScript y compartir los URLs con otros.
 //  - Un recinto de seguridad para experimentar con diferentes características del compilador de TypeScript
 
 const anExampleVariable = "Hello World"

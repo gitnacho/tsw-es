@@ -121,7 +121,7 @@ makeBoxedArray("hello!").value[0].toUpperCase();
 
 En versiones anteriores, *TypeScript* inferiría el tipo de objeto vacío (`{}`) al inferir de otras variables de tipo como `T` y `U`.
 
-Durante la inferencia del tipo de argumentos en *TypeScript 3.4*, para una llamada a una función genérica que devuelve un tipo función, *TypeScript* , según corresponda, propagará los parámetros de tipo de los argumentos de la función genérica al tipo de función resultante.
+Durante la inferencia del tipo de argumentos en *TypeScript 3.4*, para una llamada a una función genérica que devuelve un tipo función, *TypeScript*, según corresponda, propagará los parámetros de tipo de los argumentos de la función genérica al tipo de función resultante.
 
 En otras palabras, en lugar de producir el tipo
 

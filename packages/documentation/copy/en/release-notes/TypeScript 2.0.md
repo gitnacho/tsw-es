@@ -310,7 +310,7 @@ El tipo `never` tiene las siguientes características:
 
 - `never` es un subtipo y se puede asignar a todos los tipos.
 - Ningún tipo es un subtipo de o asignable a `never` (excepto `never` en sí mismo).
-- En una expresión de función o función de flecha sin anotación de tipo de retorno, si la función no tiene declaraciones `return`, o solo declaraciones `return` con expresiones de tipo `never`, y si el punto final de la función no es accesible (como determinado por el análisis de control de flujo ), el tipo de retorno inferido para la función es `never`.
+- En una expresión de función o función de flecha sin anotación de tipo de retorno, si la función no tiene declaraciones `return`, o solo declaraciones `return` con expresiones de tipo `never`, y si el punto final de la función no es accesible (como determinado por el análisis de control de flujo), el tipo de retorno inferido para la función es `never`.
 - En una función con una anotación explícita de tipo de retorno `never`, todas las declaraciones de `return` (si las hay) deben tener expresiones de tipo `never` y el punto final de la función no debe ser accesible.
 
 Debido a que `never` es un subtipo de todos los tipos, siempre se omite de los tipos unión y se ignora en la inferencia del tipo de retorno de la función siempre que se devuelvan otros tipos.
@@ -508,7 +508,7 @@ Si un segmento de un patrón `glob` incluye solo `*` o `.*`, entonces solo se in
 Si [`files`](/tsconfig#files) e [`include`](/tsconfig#include) se dejan sin especificar, el compilador de manera predeterminada incluye todos los *TypeScript* (`.ts`, `.d.ts` y `.tsx`) en el directorio y subdirectorios que los contienen, excepto los excluidos mediante la propiedad `exclude`. Los archivos *JS* (`.js` y `.jsx`) también se incluyen si [`allowJs`](/tsconfig#allowJs) se establece en `true`.
 
 Si se especifican las propiedades [`files`](/tsconfig#files) o [`include`](/tsconfig#include), el compilador incluirá en su lugar la unión de los archivos incluidos por esas dos propiedades.
-Los archivos en el directorio especificado usando la opción del compilador [`outDir`](/tsconfig#outDir) siempre se excluyen a menos que se incluyan explícitamente a través de la propiedad [`files`](/tsconfig#files) (incluso cuando se especifica la propiedad `exclude` ).
+Los archivos en el directorio especificado usando la opción del compilador [`outDir`](/tsconfig#outDir) siempre se excluyen a menos que se incluyan explícitamente a través de la propiedad [`files`](/tsconfig#files) (incluso cuando se especifica la propiedad `exclude`).
 
 Los archivos incluidos usando [`include`](/tsconfig#include) se pueden filtrar usando la propiedad `exclude`.
 Sin embargo, los archivos incluidos explícitamente usando la propiedad [`files`](/tsconfig#files) siempre se incluyen independientemente de `exclude`.
@@ -518,7 +518,7 @@ La propiedad `exclude` de manera predeterminada excluye los directorios `node_mo
 
 *TypeScript 2.0* proporciona un conjunto de botones de resolución de módulo adicionales para *informar* al compilador dónde encontrar declaraciones para un módulo determinado.
 
-Consulta la documentación de [Resolución de módulo](http://www.typescriptlang.org/docs/handbook/module-resolution.html) para obtener más detalles.
+Consulta la documentación de [Resolución de módulo](/es/docs/handbook/module-resolution.html) para obtener más detalles.
 
 ## *URL* base
 

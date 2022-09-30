@@ -162,9 +162,9 @@ export const createTypeScriptSandbox = (
     ? monaco.languages.typescript.javascriptDefaults
     : monaco.languages.typescript.typescriptDefaults
 
-  // @ts-ignore - estos existen
+  // de  TypeScript  @ts-ignore  - estos existen
   if (config.customTypeScriptWorkerPath && defaults.setWorkerOptions) {
-    // @ts-ignore - esta función debe existir para haber hasta llegado aquí
+    // de  TypeScript  @ts-ignore  - esta función debe existir para haber hasta llegado aquí
     defaults.setWorkerOptions({
       customWorkerPath: config.customTypeScriptWorkerPath,
     })

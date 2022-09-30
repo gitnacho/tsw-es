@@ -1,6 +1,6 @@
 //// { "compiler": { "ts": "4.7.3" } }
 // Antes de *TypeScript 4.7*, tendrías que llamar a una función
-// para reducir un tipo genérico a algo específico. Por
+// para reducir un tipo genérico a algo específico. Por ejemplo:
 // ejemplo, tomemos un objeto Map:
 
 const map = new Map<string, number>();

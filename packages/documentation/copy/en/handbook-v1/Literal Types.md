@@ -4,7 +4,7 @@ layout: docs
 permalink: /docs/handbook/literal-types.html
 oneline: Usar tipos literales con TypeScript
 handbook: "true"
-deprecated_by: /docs/handbook/2/everyday-types.html#literal-types
+deprecated_by: /es/docs/handbook/2/everyday-types.html#tipos-literales
 ---
 
 Un literal es un subtipo más concreto de un tipo colectivo.

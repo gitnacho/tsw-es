@@ -245,7 +245,7 @@ function sum(/* numbers */) {
 
 ## Los parámetros de tipo no especificado se establecen de forma predeterminada en `any`
 
-Dado que no existe una sintaxis natural para especificar parámetros de tipo genérico en *JavaScript*, un parámetro de tipo no especificado toma el valor predeterminado `any`.
+Dado que no existe una sintaxis natural para especificar parámetros de tipo genérico en *JavaScript*, un parámetro de tipo no especificado toma el valor `any` predeterminado.
 
 ### En la cláusula `extends`
 
@@ -279,7 +279,7 @@ class MyComponent extends Component {
 
 ### En referencias *JSDoc*
 
-Un argumento de tipo no especificado en *JSDoc* tiene como valor predeterminado `any`:
+Un argumento sin especificación de tipo *JSDoc* tiene `any` como valor predeterminado:
 
 ```js twoslash
 /** @type{Array} */

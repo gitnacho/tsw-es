@@ -371,7 +371,7 @@ console.log(x);
 
 Hasta este punto, hemos analizado algunos ejemplos básicos de cómo *TypeScript* se reduce dentro de ramas específicas.
 Pero hay algo más en juego que simplemente recorrer cada variable y buscar protección de tipos en condicionales, `if`s, `while`s, etc.
-Por ejemplo
+Por ejemplo  una  API
 
 ```ts twoslash
 function padLeft(padding: number | string, input: string) {
@@ -478,7 +478,7 @@ const underWater3: Fish[] = zoo.filter((pet): pet is Fish => {
 });
 ```
 
-Además, las clases pueden usar [`this is Type`](/docs/handbook/2/classes.html#guardias-basados-en-el-tipo-de-this) para limitar su tipo.
+Además, las clases pueden [usar `this is Type`](/es/docs/handbook/2/classes.html#guardias-basados-en-el-tipo-de-this) para reducir su tipo.
 
 # Uniones discriminadas
 

@@ -81,7 +81,7 @@ Puedes ver un ejemplo de DTS a continuación:
 ```ts
 // Definiciones de tipo para [~NOMBRE BIBLIOTECA~] [~OPCIONAL NUMERO VERSION~]
 // Proyecto: [~NOMBRE PROYECTO~]
-// Definiciones por: [~TU NOMBRE~] <[~UNA URL TUYA~]>
+// Definiciones por: [~TU NOMBRE~] <[~UN URL TUYO~]>
 
 /*~ Si esta biblioteca es invocable (por ejemplo, se puede invocar como myLib(3)),
  *~ incluye esas firmas de llamada aquí.

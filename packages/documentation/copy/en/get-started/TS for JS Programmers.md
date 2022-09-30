@@ -136,7 +136,7 @@ type MyBool = true | false;
 
 *Nota*: Si pasas el cursor sobre `MyBool` arriba, verás que está clasificado como `boolean`. Esa es una propiedad del Sistema estructural de tipo. Más sobre esto a continuación.
 
-Un caso de uso popular para los tipos unión es describir el conjunto de `string` o `number` [literales](/docs/handbook/2/everyday-types.html#tipos-literales) que un valor puede tener:
+Un caso de uso popular para los tipos unión es describir el conjunto de `string` o `number` [literales](/es/docs/handbook/2/everyday-types.html#tipos-literales) que un valor puede tener:
 
 ```ts twoslash
 type WindowStates = "open" | "closed" | "minimized";

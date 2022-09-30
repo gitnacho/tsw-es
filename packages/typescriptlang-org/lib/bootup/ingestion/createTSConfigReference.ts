@@ -62,7 +62,7 @@ export const createTSConfigReference = async (
     if (lang.length !== 2) return
     if (!isMultiLingual && lang !== "en") return
 
-    // Las URLs de soporte son consistentes con la infraestructura actual, p. ej. son sin prefijo
+    // Los URLs de soporte son consistentes con la infraestructura actual, p. ej. son sin prefijo
     const pagePath = (lang === "en" ? "" : "/" + lang) + "/tsconfig"
     addPathToSite(pagePath)
 

@@ -471,7 +471,7 @@ Solo unas pocas opciones de configuración cambian entre estos dos destinos, y m
 
 *TypeScript 2.1* admite la configuración heredada usando `extends`, donde:
 
-- `extends` es una nueva propiedad de nivel superior en `tsconfig.json` (junto con `compilerOptions`, [`files`](/tsconfig#files), [`include`](/tsconfig#include) y `exclude` ).
+- `extends` es una nueva propiedad de nivel superior en `tsconfig.json` (junto con `compilerOptions`, [`files`](/tsconfig#files), [`include`](/tsconfig#include) y `exclude`).
 - El valor de `extends` debe ser una cadena que contenga una ruta a otro archivo de configuración del que heredar.
 - La configuración del archivo base se carga primero y luego se reemplaza por las del archivo de configuración heredado.
 - No se permite la circularidad entre archivos de configuración.

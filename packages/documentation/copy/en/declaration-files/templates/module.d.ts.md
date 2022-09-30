@@ -168,7 +168,7 @@ export type ArrayMetadata = {
 export function getArrayMetadata(arr: any[]): ArrayMetadata;
 ```
 
-Este ejemplo es un buen caso para [usar genéricos](/docs/handbook/generics.html#generic-types) para proporcionar información de tipo más completa:
+Este ejemplo es un buen caso para [usar genéricos](/es/docs/handbook/2/generics.html#tipos-gen%C3%A9ricos) para proporcionar información de tipo más completa:
 
 ```ts
 export type ArrayMetadata<ArrType> = {
@@ -183,7 +183,7 @@ export function getArrayMetadata<ArrType>(
 
 Ahora el tipo de el arreglo se propaga al tipo `ArrayMetadata`.
 
-Los tipos que se exportan se pueden reutilizar en los consumidores de los módulos usando `import` o `import type` en el código *TypeScript* o [imports *JSDoc*](/docs/handbook/jsdoc-supported-types.html#import-tipos).
+Los tipos que se exportan se pueden reutilizar en los consumidores de los módulos usando `import` o `import type` en el código *TypeScript* o [imports *JSDoc*](/es/docs/handbook/jsdoc-supported-types.html#importar-tipos).
 
 ### Espacios de nombres en el módulo *Code*
 
@@ -230,7 +230,7 @@ Para darte una idea de cómo se pueden unir todas estas piezas, aquí tienes una
 ```ts
 // Definiciones de tipo para [~NOMBRE BIBLIOTECA~] [~OPCIONAL NUMERO VERSION~]
 // Proyecto: [~NOMBRE PROYECTO~]
-// Definiciones por: [~TU NOMBRE~] <[~UNA URL TUYA~]>
+// Definiciones por: [~TU NOMBRE~] <[~UN URL TUYO~]>
 
 /*~ Este es el archivo de plantilla del módulo. Debes cambiarle el nombre a index.d.ts
  *~ y colócalo en un directorio con el mismo nombre que el módulo.

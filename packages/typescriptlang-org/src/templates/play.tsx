@@ -56,15 +56,15 @@ const Play: React.FC<Props> = (props) => {
       return
     }
 
-    // @ts-ignore - para que el manual del playground pueda tomar estos datos
+    // de  TypeScript  @ts-ignore  - para que el manual del playground pueda tomar estos datos
     window.playgroundHandbookTOC = props.pageContext.playgroundHandbookTOC
-    // @ts-ignore - por lo tanto las opciones de configuración pueden usar descripciones localizadas
+    // de  TypeScript  @ts-ignore  - por lo tanto las opciones de configuración pueden usar descripciones localizadas
     window.optionsSummary = props.pageContext.optionsSummary
-    // @ts-ignore - para complementos basados ​​en React
+    // de  TypeScript  @ts-ignore  - para complementos basados ​​en React
     window.react = React
-    // @ts-ignore - para complementos basados ​​en React
+    // de  TypeScript  @ts-ignore  - para complementos basados ​​en React
     window.reactDOM = ReactDOM
-    // @ts-ignore - para que los complementos, etc. puedan usar i18n
+    // de  TypeScript  @ts-ignore  - para que los complementos, etc. puedan usar i18n
     window.i = i
 
     const getLoaderScript = document.createElement('script');

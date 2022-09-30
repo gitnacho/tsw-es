@@ -1,4 +1,7 @@
-/** Convierte algunas de las importaciones globales conocidas en nodos para que obtengamos la información correcta */
+/** 
+  * Convierte algunas de las  importaciones globales conocidas en nodos
+  * para que obtengamos la información correcta
+  */
 export const mapModuleNameToModule = (name: string) => {
   // en el blei node:
   // > require("module").builtinModules

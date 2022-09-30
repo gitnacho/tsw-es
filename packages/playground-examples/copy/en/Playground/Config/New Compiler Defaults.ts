@@ -10,7 +10,7 @@
 // indicadores del compilador que han cambiado desde los valores predeterminados
 // del playground y hacerlos compartibles en la URL.
 
-// Puedes leer más sobre las URL en
+// Puedes leer más sobre los URLs en
 // example:sharable-urls
 
 // ¿Me pregunto cuáles son los nuevos valores predeterminados?

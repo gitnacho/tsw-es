@@ -7,25 +7,25 @@ deprecated_by: /docs/handbook/2/types-from-types.html
 
 # prettier-ignore
 deprecation_redirects: [
-  type-guards-and-differentiating-types, /docs/handbook/2/narrowing.html,
-  user-defined-type-guards, /docs/handbook/2/narrowing.html#usar-predicados-de-tipo,
-  typeof-type-guards, "/docs/handbook/2/narrowing.html#typeof-type-guards",
-  instanceof-type-guards, /docs/handbook/2/narrowing.html#instanceof-narrowing,
-  tipos-que-aceptan-valores-null, /docs/handbook/2/everyday-types.html#null-y-undefined,
-  alias-de-tipo, /docs/handbook/2/everyday-types.html#alias-de-tipo,
-  interfaces-vs-type-aliases, /docs/handbook/2/everyday-types.html#diferencias-entre-los-alias-de-tipo-y-las-interfaces,
-  enum-member-types, /docs/handbook/enums.html,
-  polymorphic-this-types, /docs/handbook/2/classes.html,
-  index-types, /docs/handbook/2/objects.html#index-signatures,
-  index-types-and-index-signatures, /docs/handbook/2/indexed-access-types.html,
-  mapped-types, /docs/handbook/2/mapped-types.html,
-  inference-from-mapped-types, /docs/handbook/2/mapped-types.html,
-  conditional-types, /docs/handbook/2/conditional-types.html,
-  tipos-condicionales-distributivos, /docs/handbook/2/conditional-types.html#tipos-condicionales-distributivos,
-  inferencia-de-tipos-en-tipos-condicionales, /docs/handbook/2/conditional-types.html#inferencia-dentro-de-tipos-condicionales,
-  predefined-conditional-types, /docs/handbook/utility-types.html,
-  using-the-in-operator, "/docs/handbook/2/narrowing.html#the-in-operator-narrowing",
-  usar-predicados-de-tipo, "/docs/handbook/2/narrowing.html#usar-predicados-de-tipo"
+  type-guards-and-differentiating-types, /es/docs/handbook/2/narrowing.html,
+  user-defined-type-guards, /es/docs/handbook/2/narrowing.html#usar-predicados-de-tipo,
+  typeof-type-guards, "/es/docs/handbook/2/narrowing.html#protector-de-tipo-typeof",
+  instanceof-type-guards, /es/docs/handbook/2/narrowing.html#reducci%C3%B3n-instanceof,
+  tipos-que-aceptan-valores-null, /es/docs/handbook/2/everyday-types.html#null-y-undefined,
+  alias-de-tipo, /es/docs/handbook/2/everyday-types.html#alias-de-tipo,
+  interfaces-vs-type-aliases, /es/docs/handbook/2/everyday-types.html#diferencias-entre-los-alias-de-tipo-y-las-interfaces,
+  enum-member-types, /es/docs/handbook/enums.html,
+  polymorphic-this-types, /es/docs/handbook/2/classes.html,
+  index-types, /es/docs/handbook/2/objects.html#%C3%ADndice-de-firmas,
+  index-types-and-index-signatures, /es/docs/handbook/2/indexed-access-types.html,
+  mapped-types, /es/docs/handbook/2/mapped-types.html,
+  inference-from-mapped-types, /es/docs/handbook/2/mapped-types.html,
+  conditional-types, /es/docs/handbook/2/conditional-types.html,
+  tipos-condicionales-distributivos, /es/docs/handbook/2/conditional-types.html#tipos-condicionales-distributivos,
+  inferencia-de-tipos-en-tipos-condicionales, (es/docs/handbook/2/conditional-types.html#inferencia-dentro-de-tipos-condicionales,
+  predefined-conditional-types, /es/docs/handbook/utility-types.html,
+  using-the-in-operator, "/es/docs/handbook/2/narrowing.html#el-operador--in-reducido",
+  usar-predicados-de-tipo, "/es/docs/handbook/2/narrowing.html#usar-predicados-de-tipo"
 ]
 ---
 
@@ -200,7 +200,7 @@ function padLeft(value: string, padding: string | number) {
 }
 ```
 
-Estos *protectores de tipo `typeof`* se reconocen de dos formas diferentes: `typeof v === "typename"` y `typeof v !== "typename"`, donde `"typename"` puede ser uno de los [valores de retorno del operador `typeof`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/typeof#Description) (`"undefined"`, `"number"`, `"string"`, `"boolean"`, `"bigint"`, `"symbol"`, `"object"` o `"function"`).
+Estos *protectores de tipo `typeof`* se reconocen de dos formas diferentes: `typeof v === "typename"` y `typeof v !== "typename"`, donde `"typename"` puede ser uno de los [valores de retorno del operador `typeof`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/typeof#resumen) (`"undefined"`, `"number"`, `"string"`, `"boolean"`, `"bigint"`, `"symbol"`, `"object"` o `"function"`).
 Mientras que *TypeScript* no te impedirá comparar con otras cadenas, el lenguaje no reconocerá esas expresiones como protectoras de tipo.
 
 ## Protector de tipo `instanceof`
@@ -282,7 +282,7 @@ stringOrNull = undefined;
 Ten en cuenta que *TypeScript* trata a `null` y `undefined` de manera diferente para hacer coincidir la semántica de *JavaScript*.
 `string | null` es un tipo diferente que `string | undefined` y que `string | undefined | null`.
 
-A partir de *TypeScript 3.7* en adelante, puedes usar [encadenamiento opcional](/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) para simplificar el trabajo con tipos `null`ables.
+A partir de *TypeScript 3.7* en adelante, puedes usar [encadenamiento opcional](/es/docs/handbook/release-notes/typescript-3-7.html#encadenamiento-opcional) para simplificar el trabajo con tipos `null`ables.
 
 ### Parámetros y propiedades opcionales
 

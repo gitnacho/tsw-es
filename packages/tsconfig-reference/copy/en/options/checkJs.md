@@ -3,7 +3,7 @@ display: "Comprobación JS"
 oneline: "Habilita el informe de errores en la comprobación de tipo de archivos JavaScript."
 ---
 
-Funciona en conjunto con [`allowJs`](#allowJs). Cuando `checkJs` está habilitado, los errores se reportan en archivos *JavaScript*. Este es
+Funciona en conjunto con [`allowJs`](#allowJs). Cuando `checkJs` está habilitado, los errores se reportan en archivos *JavaScript*. de
 el equivalente de incluir `//@ts-check` en la parte superior de todos los archivos *JavaScript* que se incluyen en tu proyecto.
 
 Por ejemplo, esto es *JavaScript* incorrecto de acuerdo con la definición de tipo `parseFloat` que viene con *TypeScript*:

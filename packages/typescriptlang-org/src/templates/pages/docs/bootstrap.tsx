@@ -83,7 +83,7 @@ const Index: React.FC<Props> = (props) => {
             },
             {
               href:
-                "https://www.typescriptlang.org/docs/handbook/asp-net-core.html",
+                "https://www.typescriptlang.org/es/docs/handbook/asp-net-core.html",
               badge: "Guía",
               blurb: i("doc_frameworks_asp_blurb"),
               title: "ASP.NET Core",

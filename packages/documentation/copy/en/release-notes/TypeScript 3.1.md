@@ -73,4 +73,4 @@ fs.readFile(path, (err, data) => {
 La retroalimentación de nuestra comunidad, así como nuestra propia experiencia, nos han demostrado que aprovechar las funciones más nuevas de *TypeScript* y, al mismo tiempo, dar cabida a los usuarios de las versiones anteriores es difícil.
 *TypeScript* introduce una nueva función llamada `typesVersions` para ayudar a adaptarse a estos escenarios.
 
-Puedes leer [sobre esto en la sección *Publicación* de la sección de archivos de declaración](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#version-selection-with-typesversions)
+Puedes leer [sobre esto en la sección *Publicación* de la sección de archivos de declaración](https://www.typescriptlang.org/es/docs/handbook/declaration-files/publishing.html#selecci%C3%B3n-de-versi%C3%B3n-con-typesversions)

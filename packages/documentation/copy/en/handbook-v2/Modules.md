@@ -251,7 +251,7 @@ import fs = require("fs");
 const code = fs.readFileSync("hello.ts", "utf8");
 ```
 
-Puedes obtener más información sobre esta sintaxis en la [página de referencia de módulos](/docs/handbook/modules.html#export-and-import-require).
+Puedes obtener más información sobre esta sintaxis en la [página de referencia de módulos](/es/docs/handbook/modules.html#export--e-import--require).
 
 ## Sintaxis *CommonJS*
 

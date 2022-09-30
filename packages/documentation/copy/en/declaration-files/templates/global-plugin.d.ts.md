@@ -277,7 +277,7 @@ Por lo tanto, tus archivos de declaración deben ser
 ```ts
 // Definiciones de tipo para [~NOMBRE BIBLIOTECA~] [~OPCIONAL NUMERO VERSION~]
 // Proyecto: [~NOMBRE PROYECTO~]
-// Definiciones por: [~TU NOMBRE~] <[~UNA URL TUYA~]>
+// Definiciones por: [~TU NOMBRE~] <[~UN URL TUYO~]>
 
 /*~ Esta plantilla muestra cómo escribir un complemento global. */
 

@@ -100,7 +100,7 @@ Si te estás preguntando acerca de la diferencia entre `ES2015` (también conoci
 
 #### `node16`/`nodenext` (compilaciones nocturnas)
 
-Disponible a partir de 4.7+, los modos `node16` y `nodenext` se integran con el [soporte nativo del módulo *ECMAScript* de *Node*](https://nodejs.org/api/esm.html). El *JavaScript* emitido utiliza la salida `CommonJS` o `ES2020` según la extensión del archivo y el valor de la configuración `type` en el `package.json` más cercano. La resolución del módulo también funciona de manera diferente. Puedes obtener más información en el [manual](https://www.typescriptlang.org/docs/handbook/esm-node.html).
+Disponible a partir de 4.7+, los modos `node16` y `nodenext` se integran con el [soporte nativo del módulo *ECMAScript* de *Node*](https://nodejs.org/api/esm.html). El *JavaScript* emitido utiliza la salida `CommonJS` o `ES2020` según la extensión del archivo y el valor de la configuración `type` en el `package.json` más cercano. La resolución del módulo también funciona de manera diferente. Puedes obtener más información en el [manual](https://www.typescriptlang.org/es/docs/handbook/esm-node.html).
 
 #### `None`
 

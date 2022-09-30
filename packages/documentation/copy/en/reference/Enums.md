@@ -377,7 +377,7 @@ Estas implicaciones pertenecen solo a las enumeraciones de constantes _ambient_ 
    Estos errores son especialmente perniciosos porque es común ejecutar pruebas automatizadas aproximadamente al mismo tiempo que se construyen los proyectos, con las mismas versiones de dependencia, lo que pasa por alto estos errores por completo.
 3. [`importsNotUsedAsValues: "preserve"`](/tsconfig#importsNotUsedAsValues) no eliminará las importaciones de enumeraciones constantes utilizadas como valores, pero las enumeraciones constantes ambientales no garantizan que existan archivos `.js` en el entorno de ejecución.
    Las importaciones irresolubles provocan errores en el entorno de ejecución.
-   La forma habitual de eludir `imports` sin ambigüedades, [solo importar tipos](/docs/handbook/modules.html#importing-types), [no permite valores de enumeración constantes](https://github.com/microsoft/TypeScript/issues/40344), actualmente.
+   La forma habitual de eludir `imports` sin ambigüedades, [solo importar tipos](/es/docs/handbook/modules.html#importar-tipos), [no permite valores de enumeración constantes](https://github.com/microsoft/TypeScript/issues/40344), actualmente.
 
 Aquí hay dos enfoques para evitar estas trampas:
 

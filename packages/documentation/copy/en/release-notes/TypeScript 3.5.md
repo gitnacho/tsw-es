@@ -17,7 +17,7 @@ Estas mejoras son significativamente más pronunciadas en escenarios del editor 
 ### Mejoras `--incrementales`
 
 *TypeScript 3.5* mejora el modo de compilación [`incremental`](/tsconfig#incremental) de 3.4, al guardar información sobre cómo se calculó el estado del mundo ⏤ la configuración del compilador, por qué se buscaron los archivos, dónde se encontraron los archivos, etc.
-En escenarios que involucran cientos de proyectos que usan referencias de proyectos *TypeScript* en modo `--build`, [hemos encontrado que la cantidad de tiempo de reconstrucción se puede reducir hasta en un 68% en comparación con *TypeScript 3.4*](https://github.com/Microsoft/TypeScript/pull/31101)!
+En escenarios que involucran cientos de proyectos que usan proyectos de referencia *TypeScript* en modo `--build`, [hemos encontrado que la cantidad de tiempo de reconstrucción se puede reducir hasta en un 68% en comparación con *TypeScript 3.4*](https://github.com/Microsoft/TypeScript/pull/31101)!
 
 Para obtener más detalles, puedes ver las solicitudes de extracción para
 

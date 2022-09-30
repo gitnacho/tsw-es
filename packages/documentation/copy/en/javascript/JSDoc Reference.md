@@ -575,7 +575,7 @@ c.size;
 var result = C(1);
 ```
 
-> Nota: Los mensajes de error solo aparecen en el código base *JS* con [*JSConfig*](/docs/handbook/tsconfig-json.html) y [`checkJs`](/tsconfig#checkJs) habilitados.
+> Nota: Los mensajes de error solo aparecen en las bases de código *JS* con [*JSConfig*](/es/docs/handbook/tsconfig-json.html) y [`checkJs`](/tsconfig#checkJs) habilitados.
 
 Con `@constructor`, `this` se marca dentro de la función constructora `C`, por lo que obtendrás sugerencias para el método `initialize` y un error si le pasas un número. Tu editor también puede mostrar advertencias si llamas a "C" en lugar de construirlo.
 

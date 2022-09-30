@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { withPrefix } from "gatsby"
 import "./ShowExamples.scss"
 
-// @ts-ignore - esto es un retroceso al ingles
+// de  TypeScript  @ts-ignore  - esto es un retroceso al ingles
 import english from "../../static/js/examples/en"
 import { hasLocalStorage } from "../lib/hasLocalStorage"
 

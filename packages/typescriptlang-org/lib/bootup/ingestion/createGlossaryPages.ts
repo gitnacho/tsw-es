@@ -40,7 +40,7 @@ export const createGlossaryPages = async (
     // prettier-ignore
     const termsForLang = JSON.parse(readFileSync(path.join( __dirname, "..", "..", "..", "..", "glossary", "output", element.name + ".json"), "utf8"))
 
-    // Las URLs de soporte son consistentes con la infraestructura actual, p. ej. son sin prefijo
+    // Los URLs de soporte son consistentes con la infraestructura actual, p. ej. son sin prefijo
     const pagePath = (lang === "en" ? "" : "/" + lang) + "/glossary"
     addPathToSite(pagePath)
 

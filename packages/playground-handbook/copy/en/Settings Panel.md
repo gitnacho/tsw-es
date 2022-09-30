@@ -10,7 +10,7 @@ Desactiva [Adquisición de tipos](/play#handbook-5), lo cual significa que al im
 
 "**Desactivar Save-On-Type**"
 
-Cuando el editor pierde el foco o los indicadores del compilador cambian, *Playground* reemplazará la *URL* en tu navegador. Esto no cambia el comportamiento del botón Atrás, pero agrega entradas al historial en el navegador. Puedes desactivar este comportamiento a través de esta configuración, y puedes usar 'Compartir' (o presionar <kbd>cmd/ctrl</kbd> + <kbd>s</kbd>) para copiar la *URL* que se puede compartir.
+Cuando el editor pierde el foco o los indicadores del compilador cambian, *Playground* reemplazará el *URL* en tu navegador. Esto no cambia el comportamiento del botón Atrás, pero agrega entradas al historial en el navegador. Puedes desactivar este comportamiento a través de esta configuración, y puedes usar 'Compartir' (o presionar <kbd>cmd/ctrl</kbd> + <kbd>s</kbd>) para copiar el *URL* que se puede compartir.
 
 ### Pestañas de la barra lateral
 

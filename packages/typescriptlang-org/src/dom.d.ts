@@ -1457,7 +1457,7 @@ interface RequestInit {
      */
     cache?: RequestCache;
     /**
-     * Una cadena que indica si las credenciales se enviarán con la solicitud siempre, nunca o solo cuando se envíen a una URL del mismo origen. Establece las credenciales de la solicitud.
+     * Una cadena que indica si las credenciales se enviarán con la solicitud siempre, nunca o solo cuando se envíen a un URL del mismo origen. Establece las credenciales de la solicitud.
      */
     credentials?: RequestCredentials;
     /**
@@ -1477,7 +1477,7 @@ interface RequestInit {
      */
     method?: string;
     /**
-     * Una cadena para indicar si la solicitud usará CORS o estará restringida a las URL del mismo origen. Establece el modo de solicitud.
+     * Una cadena para indicar si la solicitud usará CORS o estará restringida a los URLs del mismo origen. Establece el modo de solicitud.
      */
     mode?: RequestMode;
     /**
@@ -1485,7 +1485,7 @@ interface RequestInit {
      */
     redirect?: RequestRedirect;
     /**
-     * Una cadena cuyo valor es una URL del mismo origen, "about:client", o la cadena vacía, para establecer la referencia de la solicitud.
+     * Una cadena cuyo valor es un URL del mismo origen, "about:client", o la cadena vacía, para establecer la referencia de la solicitud.
      */
     referrer?: string;
     /**
@@ -4205,7 +4205,7 @@ interface DocumentEventMap extends DocumentAndElementEventHandlersEventMap, Glob
 /** Cualquier página web cargada en el navegador y sirve como punto de entrada al contenido de la página web, que es el árbol DOM. */
 interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShadowRoot, FontFaceSource, GlobalEventHandlers, NonElementParentNode, ParentNode, XPathEvaluatorBase {
     /**
-     * Establece u obtiene la URL del documento actual.
+     * Establece u obtiene el URL del documento actual.
      */
     readonly URL: string;
     /**
@@ -4288,7 +4288,7 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     readonly documentElement: HTMLElement;
     /**
-     * Devuelve la URL del documento.
+     * Devuelve el URL del documento.
      */
     readonly documentURI: string;
     /**
@@ -4345,7 +4345,7 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     readonly links: HTMLCollectionOf<HTMLAnchorElement | HTMLAreaElement>;
     /**
-     * Contiene información sobre la URL actual.
+     * Contiene información sobre el URL actual.
      */
     get location(): Location;
     set location(href: string | Location);
@@ -4370,7 +4370,7 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     readonly readyState: DocumentReadyState;
     /**
-     * Obtiene la URL de la ubicación que refirió al usuario a la página actual.
+     * Obtiene el URL de la ubicación que refirió al usuario a la página actual.
      */
     readonly referrer: string;
     /**
@@ -4605,7 +4605,7 @@ interface Document extends Node, DocumentAndElementEventHandlers, DocumentOrShad
      */
     importNode<T extends Node>(node: T, deep?: boolean): T;
     /**
-     * Abre una nueva ventana y carga un documento especificado por una URL dada. Además, abre una nueva ventana que usa el parámetro url y el parámetro name para recopilar la salida del método write y el método writeln.
+     * Abre una nueva ventana y carga un documento especificado por un URL dado. Además, abre una nueva ventana que usa el parámetro url y el parámetro name para recopilar la salida del método write y el método writeln.
      * @param url Especifica un tipo MIME para el documento.
      * @param name Especifica el nombre de la ventana. Este nombre se usa como valor para el atributo TARGET en un formulario o un elemento ancla.
      * @param features Contiene una lista de elementos separados por comas. Cada elemento consta de una opción y un valor, separados por un signo igual (por ejemplo, "fullscreen=yes, toolbar=yes"). Se admiten los siguientes valores.
@@ -5093,11 +5093,11 @@ interface EventSource extends EventTarget {
      */
     readonly readyState: number;
     /**
-     * Devuelve la URL que proporciona el flujo de eventos.
+     * Devuelve el URL que proporciona el flujo de eventos.
      */
     readonly url: string;
     /**
-     * Devuelve true si el modo de credenciales para las solicitudes de conexión a la URL que proporciona el flujo de eventos está establecido en "include", y false en caso contrario.
+     * Devuelve true si el modo de credenciales para las solicitudes de conexión al URL que proporciona el flujo de eventos está establecido en "include", y false en caso contrario.
      */
     readonly withCredentials: boolean;
     /**
@@ -6367,7 +6367,7 @@ interface HTMLEmbedElement extends HTMLElement {
     /** @deprecated */
     name: string;
     /**
-     * Establece o recupera una URL para que la cargue el objeto.
+     * Establece o recupera un URL para que la cargue el objeto.
      */
     src: string;
     type: string;
@@ -6482,7 +6482,7 @@ interface HTMLFormElement extends HTMLElement {
      */
     acceptCharset: string;
     /**
-     * Establece o recupera la URL a la que se envía el contenido del formulario para su procesamiento.
+     * Establece o recupera el URL al que se envía el contenido del formulario para su procesamiento.
      */
     accion: string;
     /**
@@ -6596,7 +6596,7 @@ interface HTMLFrameElement extends HTMLElement {
     /** @deprecated */
     scrolling: string;
     /**
-     * Establece o recupera una URL para que la cargue el objeto.
+     * Establece o recupera un URL para que la cargue el objeto.
      */
     /** @deprecated */
     src: string;
@@ -6723,68 +6723,68 @@ declare var HTMLHtmlElement: {
 
 interface HTMLHyperlinkElementUtils {
     /**
-     * Devuelve el fragmento de URL del hipervínculo (incluye el "#" inicial si no está vacío).
+     * Devuelve el fragmento URL del hipervínculo (incluye el "#" inicial si no está vacío).
      *
-     * Se puede configurar para cambiar el fragmento de la URL (ignora el "#" inicial).
+     * Se puede configurar para cambiar el fragmento del URL (ignora el "#" inicial).
      */
     hash: string;
     /**
-     * Devuelve el host y el puerto de la URL del hipervínculo (si es diferente del puerto predeterminado para el esquema).
+     * Devuelve el host y el puerto del URL del hipervínculo (si es diferente del puerto predeterminado para el esquema).
      *
-     * Se puede configurar para cambiar el host y el puerto de la URL.
+     * Se puede configurar para cambiar el host y el puerto del URL.
      */
     host: string;
     /**
-     * Devuelve el host de la URL del hipervínculo.
+     * Devuelve el URL del host del hipervínculo.
      *
-     * Se puede configurar para cambiar el host de la URL.
+     * Se puede configurar para cambiar el host del URL.
      */
     hostname: string;
     /**
-     * Devuelve la URL del hipervínculo.
+     * Devuelve el URL del hipervínculo.
      *
-     * Se puede configurar, para cambiar la URL.
+     * Se puede configurar, para cambiar el URL.
      */
     href: string;
     toString(): string;
     /**
-     * Devuelve el origen de la URL del hipervínculo.
+     * Devuelve el URL origen del hipervínculo.
      */
     readonly origin: string;
     /**
-     * Devuelve la contraseña de la URL del hipervínculo.
+     * Devuelve el URL de la contraseña del hipervínculo.
      *
-     * Se puede configurar para cambiar la contraseña de la URL.
+     * Se puede configurar para cambiar la contraseña del URL.
      */
     password: string;
     /**
-     * Devuelve la ruta de la URL del hipervínculo.
+     * Devuelve la ruta del URL del hipervínculo.
      *
-     * Se puede configurar para cambiar la ruta de la URL.
+     * Se puede configurar para cambiar la ruta del URL.
      */
     pathname: string;
     /**
-     * Devuelve el puerto de la URL del hipervínculo.
+     * Devuelve el puerto URL del hipervínculo.
      *
-     * Se puede configurar para cambiar el puerto de la URL.
+     * Se puede configurar para cambiar el puerto del URL.
      */
     port: string;
     /**
-     * Devuelve el esquema de URL del hipervínculo.
+     * Devuelve el esquema URL del hipervínculo.
      *
-     * Se puede configurar para cambiar el esquema de la URL.
+     * Se puede configurar para cambiar el esquema del URL.
      */
     protocol: string;
     /**
-     * Devuelve la consulta de la URL del hipervínculo (incluye el "?" inicial si no está vacío).
+     * Devuelve la consulta del URL del hipervínculo (incluye el "?" inicial si no está vacío).
      *
-     * Se puede configurar para cambiar la consulta de la URL (ignora el "?" inicial).
+     * Se puede configurar para cambiar la consulta del URL (ignora el "?" inicial).
      */
     search: string;
     /**
-     * Devuelve el nombre de usuario de la URL del hipervínculo.
+     * Devuelve el nombre de usuario desde el URL del hipervínculo.
      *
-     * Se puede configurar para cambiar el nombre de usuario de la URL.
+     * Se puede configurar para cambiar el URL del nombre de usuario.
      */
     username: string;
 }
@@ -6842,7 +6842,7 @@ interface HTMLIFrameElement extends HTMLElement {
     /** @deprecated */
     scrolling: string;
     /**
-     * Establece o recupera una URL para que la cargue el objeto.
+     * Establece o recupera un URL para que la cargue el objeto.
      */
     src: string;
     /**
@@ -6930,7 +6930,7 @@ interface HTMLImageElement extends HTMLElement {
     src: string;
     srcset: string;
     /**
-     * Establece o recupera la URL, a menudo con una extensión de marcador (#name), para usarla como un mapa de imagen del lado del cliente.
+     * Establece o recupera el URL, a menudo con una extensión de marcador (#name), para usarlo como un mapa de imagen de lado del cliente.
      */
     useMap: string;
     /**
@@ -7088,7 +7088,7 @@ interface HTMLInputElement extends HTMLElement {
      */
     type: string;
     /**
-     * Establece o recupera la URL, a menudo con una extensión de marcador (#name), para usarla como un mapa de imagen del lado del cliente.
+     * Establece o recupera el URL, a menudo con una extensión de marcador (#name), para usarlo como un mapa de imagen de lado del cliente.
      */
     /** @deprecated */
     useMap: string;
@@ -7240,7 +7240,7 @@ interface HTMLLinkElement extends HTMLElement, LinkStyle {
     crossOrigin: string | null;
     disabled: boolean;
     /**
-     * Establece o recupera una URL de destino o un punto de anclaje.
+     * Establece o recupera un URL destino o un punto de anclaje.
      */
     href: string;
     /**
@@ -7611,12 +7611,12 @@ interface HTMLObjectElement extends HTMLElement {
     /** @deprecated */
     border: string;
     /**
-     * Establece o recupera la URL del archivo que contiene la clase Java compilada.
+     * Establece o recupera el URL del archivo que contiene la clase Java compilada.
      */
     /** @deprecated */
     code: string;
     /**
-     * Establece o recupera la URL del componente.
+     * Establece o recupera el URL del componente.
      */
     /** @deprecated */
     codeBase: string;
@@ -7631,7 +7631,7 @@ interface HTMLObjectElement extends HTMLElement {
     readonly contentDocument: Document | null;
     readonly contentWindow: WindowProxy | null;
     /**
-     * Establece o recupera la URL que hace referencia a los datos del objeto.
+     * Establece o recupera el URL que hace referencia a los datos del objeto.
      */
     data: string;
     /** @deprecated */
@@ -7660,7 +7660,7 @@ interface HTMLObjectElement extends HTMLElement {
      */
     type: string;
     /**
-     * Establece o recupera la URL, a menudo con una extensión de marcador (#name), para usarla como un mapa de imagen del lado del cliente.
+     * Establece o recupera el URL, a menudo con una extensión de marcador (#name), para usarlo como un mapa de imagen de lado del cliente.
      */
     useMap: string;
     /**
@@ -7992,7 +7992,7 @@ interface HTMLScriptElement extends HTMLElement {
     noModule: boolean;
     referrerPolicy: string;
     /**
-     * Recupera la URL de un archivo externo que contiene el código fuente o los datos.
+     * Recupera el URL de un archivo externo que contiene el código fuente o los datos.
      */
     src: string;
     /**
@@ -8753,7 +8753,7 @@ interface HTMLVideoElement extends HTMLMediaElement {
      */
     playsInline: boolean;
     /**
-     * Obtiene o establece una URL de una imagen para mostrar, por ejemplo, como un cartel de película. Puede ser un cuadro fijo del video u otra imagen si no hay datos de video disponibles.
+     * Obtiene o establece un URL de una imagen para mostrar, por ejemplo, como un cartel de película. Puede ser un cuadro fijo del video u otra imagen si no hay datos de video disponibles.
      */
     poster: string;
     /**
@@ -8781,14 +8781,14 @@ declare var HTMLVideoElement: {
     new(): HTMLVideoElement;
 };
 
-/** Eventos que se activan cuando el identificador de fragmento de la URL ha cambiado. */
+/** Eventos que se activan cuando el identificador de fragmento del URL ha cambiado. */
 interface HashChangeEvent extends Event {
     /**
-     * Devuelve la URL de la entrada del historial de la sesión que ahora es actual.
+     * Devuelve el URL de la entrada del historial de la sesión que ahora es actual.
      */
     readonly newURL: string;
     /**
-     * Devuelve la URL de la entrada del historial de la sesión que era actual anteriormente.
+     * Devuelve el URL de la entrada del historial de la sesión que era actual anteriormente.
      */
     readonly oldURL: string;
 }
@@ -9505,58 +9505,58 @@ interface Location {
     /**
      * Devuelve el fragmento de URL del objeto Location (incluye "#" inicial si no está vacío).
      *
-     * Se puede configurar para navegar a la misma URL con un fragmento modificado (ignora el "#" inicial).
+     * Se puede configurar para navegar al mismo URL con un fragmento modificado (ignora el "#" inicial).
      */
     hash: string;
     /**
-     * Devuelve el host y el puerto de la URL del objeto Location (si es diferente del puerto predeterminado para el esquema).
+     * Devuelve el host y el puerto del URL desde el objeto Location (si es diferente del puerto predeterminado para el esquema).
      *
-     * Se puede configurar para navegar a la misma URL con un host y puerto cambiados.
+     * Se puede configurar para navegar al mismo URL con un host y puerto cambiados.
      */
     host: string;
     /**
-     * Devuelve el host de URL del objeto de ubicación.
+     * Devuelve el URL del host desde el objeto Location.
      *
-     * Se puede configurar para navegar a la misma URL con un host cambiado.
+     * Se puede configurar para navegar al mismo URL con un host cambiado.
      */
     hostname: string;
     /**
-     * Devuelve la URL del objeto Location.
+     * Devuelve el URL desde el objeto Location.
      *
-     * Se puede configurar para navegar a la URL dada.
+     * Se puede configurar para navegar al URL dado.
      */
     href: string;
     toString(): string;
     /**
-     * Devuelve el origen de la URL del objeto Location.
+     * Devuelve el origen del URL desde el objeto Location.
      */
     readonly origin: string;
     /**
-     * Devuelve la ruta de la URL del objeto Location.
+     * Devuelve la ruta del URL desde el objeto Location.
      *
-     * Se puede configurar para navegar a la misma URL con una ruta modificada.
+     * Se puede configurar para navegar al mismo URL con una ruta modificada.
      */
     pathname: string;
     /**
-     * Devuelve el puerto de la URL del objeto Location.
+     * Devuelve el puerto del URL desde el objeto Location.
      *
-     * Se puede configurar para navegar a la misma URL con un puerto cambiado.
+     * Se puede configurar para navegar al mismo URL con un puerto cambiado.
      */
     port: string;
     /**
-     * Devuelve el esquema de URL del objeto Location.
+     * Devuelve el esquema URL del objeto Location.
      *
-     * Se puede configurar para navegar a la misma URL con un esquema modificado.
+     * Se puede configurar para navegar al mismo URL con un esquema modificado.
      */
     protocol: string;
     /**
      * Devuelve la consulta de URL del objeto Location (incluye "?" inicial si no está vacío).
      *
-     * Se puede configurar para navegar a la misma URL con una consulta modificada (ignora el "?" inicial).
+     * Se puede configurar para navegar al mismo URL con una consulta modificada (ignora el "?" inicial).
      */
     search: string;
     /**
-     * Navega a la URL dada.
+     * Navega al URL dado.
      */
     assign(url: string | URL): void;
     /**
@@ -9564,7 +9564,7 @@ interface Location {
      */
     reload(): void;
     /**
-     * Elimina la página actual del historial de la sesión y navega a la URL dada.
+     * Elimina la página actual del historial de la sesión y navega al URL dado.
      */
     replace(url: string | URL): void;
 }
@@ -10367,7 +10367,7 @@ declare var NetworkInformation: {
 /** El nodo es una interfaz de la que heredan una serie de tipos de objetos API DOM. Permite que esos tipos sean tratados de manera similar; por ejemplo, heredar el mismo conjunto de métodos o probarse de la misma manera. */
 interface Node extends EventTarget {
     /**
-     * Devuelve la URL base del documento del document de nodo del nodo.
+     * Devuelve el URL base del documento del nodo document del nodo.
      */
     readonly baseURI: string;
     /**
@@ -11426,7 +11426,7 @@ declare var PublicKeyCredential: {
     isUserVerifyingPlatformAuthenticatorAvailable(): Promise<boolean>;
 };
 
-/** Esta API de la interfaz de Push proporciona una forma de recibir notificaciones de servidores de terceros, así como de solicitudes de URL para notificaciones push. */
+/** Esta API de la interfaz Push proporciona una forma de recibir notificaciones de servidores de terceros, así como de URL de solicitudes para notificaciones push. */
 interface PushManager {
     getSubscription(): Promise<PushSubscription | null>;
     permissionState(options?: PushSubscriptionOptionsInit): Promise<PushPermissionState>;
@@ -11914,7 +11914,7 @@ interface Request extends Body {
      */
     readonly cache: RequestCache;
     /**
-     * Devuelve el modo credentials asociado con la solicitud, que es una cadena que indica si las credenciales se enviarán con la solicitud siempre, nunca o solo cuando se envíen a una URL del mismo origen.
+     * Devuelve el modo credentials asociado con la solicitud, que es una cadena que indica si las credenciales se enviarán con la solicitud siempre, nunca o solo cuando se envíen a un URL del mismo origen.
      */
     readonly credentials: RequestCredentials;
     /**
@@ -11938,7 +11938,7 @@ interface Request extends Body {
      */
     readonly method: string;
     /**
-     * Devuelve el modo asociado con la solicitud, que es una cadena que indica si la solicitud utilizará CORS o estará restringida a URL del mismo origen.
+     * Devuelve el modo asociado con la solicitud, que es una cadena que indica si la solicitud utilizará CORS o estará restringido al URL del mismo origen.
      */
     readonly mode: RequestMode;
     /**
@@ -11946,7 +11946,7 @@ interface Request extends Body {
      */
     readonly redirect: RequestRedirect;
     /**
-     * Devuelve el referente de la solicitud. Su valor puede ser una URL del mismo origen si se establece explícitamente en init, la cadena vacía para indicar que no hay referente y "about:client" cuando se establece de manera predeterminada en el valor predeterminado global. Esto se usa durante la obtención para determinar el valor del encabezado `Referer` de la solicitud que se está realizando.
+     * Devuelve el referente de la solicitud. Su valor puede ser un URL del mismo origen si se establece explícitamente en init, la cadena vacía para indicar que no hay referente y "about:client" cuando se establece de manera predeterminada en el valor predeterminado global. Esto se usa durante la obtención para determinar el valor del encabezado `Referer` de la solicitud que se está realizando.
      */
     readonly referrer: string;
     /**
@@ -11958,7 +11958,7 @@ interface Request extends Body {
      */
     readonly signal: AbortSignal;
     /**
-     * Devuelve la URL de la solicitud como una cadena.
+     * Devuelve el URL de la solicitud como una cadena.
      */
     readonly url: string;
     clone(): Request;
@@ -14259,7 +14259,7 @@ interface StorageEvent extends Event {
      */
     readonly storageArea: Storage | null;
     /**
-     * Devuelve la URL del documento cuyo elemento de almacenamiento cambió.
+     * Devuelve el URL del documento cuyo elemento de almacenamiento cambió.
      */
     readonly url: string;
     initStorageEvent(type: string, bubbles?: boolean, cancelable?: boolean, key?: string | null, oldValue?: string | null, newValue?: string | null, url?: string | URL, storageArea?: Storage | null): void;
@@ -14794,7 +14794,7 @@ declare var UIEvent: {
     new(type: string, eventInitDict?: UIEventInit): UIEvent;
 };
 
-/** La interfaz de URL representa un objeto que proporciona métodos estáticos utilizados para crear URL de objetos. */
+/** La interfaz de URL representa un objeto que proporciona métodos estáticos utilizados para crear URLs de objetos. */
 interface URL {
     hash: string;
     host: string;
@@ -14849,7 +14849,7 @@ interface URLSearchParams {
     set(name: string, value: string): void;
     sort(): void;
     /**
-     * Devuelve una cadena que contiene una cadena de consulta adecuada para usar en una URL. No incluye el signo de interrogación.
+     * Devuelve una cadena que contiene una cadena de consulta adecuada para usar en un URL. No incluye el signo de interrogación.
      */
     toString(): string;
     forEach(callbackfn: (value: string, key: string, parent: URLSearchParams) => void, thisArg?: any): void;
@@ -17028,7 +17028,7 @@ interface WebSocket extends EventTarget {
      */
     readonly readyState: number;
     /**
-     * Devuelve la URL que se utilizó para establecer la conexión WebSocket.
+     * Devuelve el URL que se utilizó para establecer la conexión WebSocket.
      */
     readonly url: string;
     /**
@@ -17401,7 +17401,7 @@ interface XMLHttpRequestEventMap extends XMLHttpRequestEventTargetEventMap {
     "readystatechange": Event;
 }
 
-/** Utiliza objetos XMLHttpRequest (XHR) para interactuar con los servidores. Puedes recuperar datos de una URL sin tener que actualizar la página completa. Esto permite que una página web actualice solo una parte de una página sin interrumpir lo que está haciendo el usuario. */
+/** Utiliza objetos XMLHttpRequest (XHR) para interactuar con los servidores. Puedes recuperar datos de un URL sin tener que actualizar la página completa. Esto permite que una página web actualice solo una parte de una página sin interrumpir lo que está haciendo el usuario. */
 interface XMLHttpRequest extends XMLHttpRequestEventTarget {
     onreadystatechange: ((this: XMLHttpRequest, ev: Event) => any) | null;
     /**
@@ -17462,9 +17462,9 @@ interface XMLHttpRequest extends XMLHttpRequestEventTarget {
     getAllResponseHeaders(): string;
     getResponseHeader(name: string): string | null;
     /**
-     * Establece el método de solicitud, la URL de solicitud y el indicador síncrono.
+     * Establece el método de solicitud, el URL de solicitud y el indicador síncrono.
      *
-     * Lanza una excepción DOMException "SyntaxError" si alguno de los métodos no es un método válido o si la URL no se puede analizar.
+     * Lanza una excepción DOMException "SyntaxError" si alguno de los métodos no es un método válido o si el URL no se puede procesar.
      *
      * Lanza una DOMException "SecurityError" si el método es una coincidencia que no distingue entre mayúsculas y minúsculas para `CONNECT`, `TRACE` o `TRACK`.
      *

@@ -79,7 +79,7 @@ export const useQuickInfoPopup = (lang: string) => {
     }, 300);
   }
 
-  // Obtiene contenido del JSON según la URL y configura el HTML interno
+  // Obtiene contenido del JSON según el URL y configura el HTML interno
   useEffect(() => {
     async function fetchHTML() {
 	  if (!showPopup.url) return

@@ -7,7 +7,7 @@ directorio [`./copy`](./copy).
 Aproximadamente:
 
 ```sh
-Compilador TypeScript + `tsconfigRules.ts` -> `generateJSON.ts` -> JSON (in output) -> `generateMarkdown.ts` -> Markdown (in output)
+TypeScript Compiler + `tsconfigRules.ts` -> `generateJSON.ts` -> JSON (in output) -> `generateMarkdown.ts` -> Markdown (in output)
 ```
 
 Esto ocurre por lenguaje con alternativas al inglés para cualquier documento que falte.

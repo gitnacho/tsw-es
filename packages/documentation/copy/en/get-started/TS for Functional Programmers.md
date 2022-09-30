@@ -128,7 +128,7 @@ dondequiera que aparezca. Por ejemplo, puedes insertar cualquier valor en un
 'any[]' sin marcar el valor de ninguna manera:
 
 ```ts twoslash
-// con "noImplicitAny": falso en tsconfig.json, anys: any[]
+// con "noImplicitAny": false en tsconfig.json, anys: any[]
 const anys = [];
 anys.push(1);
 anys.push("oh no");

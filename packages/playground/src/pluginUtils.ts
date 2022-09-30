@@ -47,9 +47,15 @@ export const createUtils = (sb: any, react: typeof React) => {
   }
 
   return {
-    /** Usa esto para hacer algunas funciones de generación de elementos tontos */
+    /** 
+ * Usa  esto para  hacer algunas  funciones de  generación de  elementos
+ * tontos
+ */
     el,
-    /** Obtiene una URL relativa para algo en tu directorio dist dependiendo de si estás en modo desarrollador o no */
+    /** 
+ * Obtiene un URL  relativo para algo en tu  directorio dist dependiendo
+ * de si estás en modo desarrollador o no
+ */
     requireURL,
     /** La copia Gatsby de React */
     react,

@@ -269,7 +269,7 @@ function makeNode(name: string, initialNeighbor: Node): Node {
 
 Además de los cargadores de módulos `AMD` y `CommonJS`, *TypeScript* ahora admite módulos emisores `UMD` ([Definición de módulo universal](https://github.com/umdjs/umd)) y [`System`](https://github.com/systemjs/systemjs) formatos de módulo.
 
-**Uso**:
+**Uso:**
 
 > `tsc --module umd`
 

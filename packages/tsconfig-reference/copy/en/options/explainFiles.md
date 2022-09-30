@@ -47,6 +47,6 @@ index.ts
 La salida anterior muestra:
 
 - La búsqueda inicial de `lib.d.ts` basada en [`target`](#target) y la cadena de archivos `.d.ts` a los que se hace referencia
-- El archivo `index.ts` ubicado a través del patrón predeterminado de [`include`](#include)
+- El archivo `index.ts` ubicado a través del patrón [`include`](#include) predeterminado
 
 Esta opción está pensada para depurar cómo un archivo se ha convertido en parte de tu compilación.

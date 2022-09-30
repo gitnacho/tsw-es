@@ -7,4 +7,4 @@ Esta marca se utiliza como parte de la migración a la próxima versión estánd
 
 Este indicador cambia al próximo comportamiento del entorno de ejecución de *ECMA*.
 
-Puedes leer más sobre la transición en [las notas de la versión 3.7](/docs/handbook/release-notes/typescript-3-7.html#el-indicador-usedefineforclassfields-y-el-modificador-de-propiedad-declare).
+Puedes leer más sobre la transición en [las notas de la versión 3.7](/es/docs/handbook/release-notes/typescript-3-7.html#el-indicador-usedefineforclassfields-y-el-modificador-de-propiedad-declare).

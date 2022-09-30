@@ -5,7 +5,7 @@
 
 // El patio de recreo te facilita experimentar de forma segura
 // con ideas en TypeScript al hacer que sea trivial compartir
-// estos proyectos. La URL de esta página es todo lo que
+// estos proyectos. El URL de esta página es todo lo que
 // necesitas para que alguien más cargue el proyecto.
 
 const hello = "Hello";

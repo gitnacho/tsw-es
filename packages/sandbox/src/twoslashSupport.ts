@@ -17,7 +17,7 @@ export const extractTwoSlashCompilerOptions = (ts: TS) => {
   if (!("optionDeclarations" in ts)) {
     console.error("Could not get compiler options from ts.optionDeclarations - skipping twoslash support.")
   } else {
-    // @ts-ignore - optionDeclarations no es una API pública
+    // de  TypeScript  @ts-ignore  - optionDeclarations no es una API pública
     for (const opt of ts.optionDeclarations) {
       optMap.set(opt.name.toLowerCase(), opt)
     }
@@ -161,7 +161,7 @@ export const twoslashCompletions = (ts: TS, monaco: typeof import("monaco-editor
     "noErrorValidation",
     "filename",
   ]
-  // @ts-ignore - ts.optionDeclarations is private
+  // de  TypeScript  @ts-ignore  - ts.optionDeclarations is private
   const optsNames = ts.optionDeclarations.map(o => o.name)
   knowns.concat(optsNames).forEach(name => {
     if (name.startsWith(word.slice(1))) {

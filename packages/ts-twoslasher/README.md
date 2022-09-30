@@ -60,7 +60,7 @@ console.log(x[0].substring(1));
 console.log(x[1].substring(1));
 ```</pre>
 
-[Obsérvalo en acción en el sitio](https://www.typescriptlang.org/docs/handbook/basic-types.html#tuple).
+[Obsérvalo en acción en el sitio](https://www.typescriptlang.org/es/docs/handbook/basic-types.html#tuple).
 
 ##### ¿Qué cambió?
 
@@ -904,7 +904,7 @@ export interface TwoSlashReturn {
     line: number | undefined
     character: number | undefined
   }[]
-  /** La URL de este ejemplo en el playground */
+  /** El URL de este ejemplo en el playground */
   playgroundURL: string
 }
 ```

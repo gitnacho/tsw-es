@@ -11,8 +11,8 @@
 // Para comprender cómo funciona TypeScript con los componentes de React
 // es posible que desees una introducción a los genéricos:
 //
-// - ejemplo: funciones-genéricas
-// - ejemplo: clases-genéricas
+// - example:generic-functions
+// - example:generic-classes
 
 // Primero veremos cómo se usan las interfaces genéricas para mapear
 // componentes React. Este es un componente funcional de faux-React:

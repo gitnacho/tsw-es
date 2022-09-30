@@ -6,7 +6,7 @@ Para empezar, necesitas aproximadamente 5 minutos, *Node.js*, *yarn* y *Firefox*
 
 - **Paso 1**: Utiliza la plantilla para arrancar: `yarn create typescript-playground-plugin playground-my-plugin`
 - **Paso 2**: Ejecuta `yarn start` en el nuevo repositorio, para iniciar el servidor de desarrollo de complementos local
-- **Paso 3**: Abre la pestaña "Configuración" de la barra lateral y habilita la configuración "Conectarse a localhost:5000/index.js"
+- **Paso 3**: Abre la pestaña "Configuración" de la barra lateral y habilita la configuración "Connect to localhost:5000/index.js"
 - **Paso 4**: Actualiza, y ve la nueva pestaña. Ese es tu complemento en funcionamiento.
 
 Si quieres entrar directamente, puedes leer los archivos `.d.ts` en `vendor` que describen las *APIs* de *Playground* y *Sandbox*.

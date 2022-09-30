@@ -15,12 +15,12 @@ La biblioteca del playground se encuentra encima del [*sandbox* de *TypeScript*]
 - Las funciones de exportación a *Code Sandbox*/*TS AST Viewer*/etc.
 
 Al decidir dónde agregar una función al *playground* de *TypeScript*, considera si sería útil para cualquiera que muestre
-*TypeScript* en un *REPL*. Si es así, agrégalo al *playground* y expón una función para que la use el *playground*. Por ejemplo
+*TypeScript* en un *REPL*. Si es así, agrégalo al *playground* y expón una función para que la use el *playground*. Por ejemplo  una  API
 La adquisición automática de tipo es una característica que vive en el *sandbox* y no en el *playground* porque casi cualquiera que muestre código *TypeScript* lo querría.
 
 ## Sintaxis del enlace
 
-*Playground* admite un conjunto de entradas de consulta desde la *URL*. El *hash* se usa para reflejar el código:
+*Playground* admite un conjunto de entradas de consulta desde el *URL*. El *hash* se usa para reflejar el código:
 
 - `#code/PRA` ⏤ Una versión base64 y comprimida del código que debería estar en el editor
 - `#src/The%20code` ⏤ Manera *URLEncoded* de tener el código para el editor

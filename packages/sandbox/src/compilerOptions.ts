@@ -165,7 +165,7 @@ export const createURLQueryWithCompilerOptions = (_sandbox: any, paramOverrides?
     urlParams = { ...urlParams, ...paramOverrides }
   }
 
-  // @ts-ignore - esto está en MDN pero no en libdom
+  // de  TypeScript  @ts-ignore  - esto está en MDN pero no en libdom
   const hasInitialOpts = initialOptions.keys().length > 0
 
   if (Object.keys(urlParams).length > 0 || hasInitialOpts) {

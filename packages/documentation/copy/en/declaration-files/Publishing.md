@@ -82,7 +82,7 @@ Si acabáramos de escribir una aplicación de línea de comandos y no esperáram
 ....
 ```
 
-Asegúrate de volver a visitar la sección [Consumir dependencias](/docs/handbook/statement-files/library-structure.html#consumir-dependencias) para obtener más información.
+Asegúrate de volver a visitar la sección [Consumir dependencias](/es/docs/handbook/declaration-files/library-structures.html#consumir-dependencias) para obtener más información.
 
 ### Declarar dependientes de paquetes
 

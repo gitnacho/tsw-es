@@ -61,7 +61,7 @@ Para los archivos de declaración generados durante la compilación, el compilad
 Un `/// <reference types="..."/>` en un archivo de declaración generado se agrega *si y solo si* el archivo resultante usa cualquier declaración del paquete referenciado.
 
 Para declarar una dependencia en un paquete `@types` en un archivo `.ts`, usa [`types`](/tsconfig#types) en la línea de comando o en tu `tsconfig.json` en su lugar.
-Consulta [uso de `@types`, `typeRoots` y `types` en archivos `tsconfig.json`](/docs/handbook/tsconfig-json.html#types-typeroots-and-types) para obtener más detalles.
+Consulta [uso de `@types`, `typeRoots` y `types` en archivos `tsconfig.json`](/es/docs/handbook/tsconfig-json.html#tsconfig-base) para obtener más detalles.
 
 ## `/// <reference lib="..." />`
 

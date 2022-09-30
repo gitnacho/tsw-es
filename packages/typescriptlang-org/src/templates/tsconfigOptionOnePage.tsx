@@ -25,7 +25,7 @@ const Play = (props: Props) => {
     // Mantén esta página disponible para que esté indexada en los motores de búsqueda.
     const isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent)
     if (!isBot) {
-      // @ts-ignore - esto está permitido en el DOM
+      // de  TypeScript  @ts-ignore  - esto está permitido en el DOM
       document.location = withPrefix(props.pageContext.redirectHref)
     }
   }, [])

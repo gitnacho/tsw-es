@@ -5,16 +5,6 @@ permalink: /docs/handbook/release-notes/typescript-4-6.html
 oneline: Notas de la versión TypeScript 4.6
 ---
 
-## ¿Qué hay de nuevo desde Beta y RC?
-
-Cuando anunciamos nuestra versión beta, nos perdimos de documentar dos excelentes características: [análisis de control de flujo para uniones discriminadas desestructuradas](#cfa-destructured-discriminated-unions) y [la adición del objetivo de salida `es2022`](#target-es2022).
-Un cambio notable adicional que ha estado presente desde nuestra versión beta es [la eliminación de los argumentos `void 0` en el modo `react-jsx`](#no-void-0-react-jsx)
-
-Un cambio que llegó a nuestro *RC*, pero que no capturamos en nuestro anuncio anterior fue [sugerencias para nombres de parámetros *JSDoc* no coincidentes](#sugerencias de nombres *jsdoc*).
-
-Desde nuestro *RC*, también hemos realizado una refactorización interna que solucionó ciertos problemas, corrigió algunos mensajes de error extraños y mejoró el rendimiento de verificación de tipos en un 3% en ciertos casos.
-Puedes [leer más sobre ese cambio aquí](https://github.com/microsoft/TypeScript/pull/47738).
-
 ## Permitir código en constructores antes de `super()`
 
 En las clases de *JavaScript* es obligatorio llamar a `super()` antes de referirse a `this`.
@@ -43,7 +33,7 @@ Esto hizo que fuera barato comprobar que se llama a `super()` antes de que se ha
 
 Nos gustaría extender nuestro agradecimiento a [Joshua Goldberg](https://github.com/JoshuaKGoldberg) por [trabajar pacientemente con nosotros para lograr este cambio](https://github.com/microsoft/TypeScript/pull/ 29374)!
 
-## Análisis de flujo de control para uniones desestructuradas discriminadas
+## Análisis del control de flujo para uniones discriminadas desestructuradas
 
 *TypeScript* puede restringir los tipos en función de lo que se denomina una propiedad discriminante.
 Por ejemplo, en el siguiente fragmento de código, *TypeScript* puede restringir el tipo de `action` en función de cada vez que comprobamos el valor de `kind`.
@@ -251,7 +241,7 @@ Para obtener más información, [consulta el cambio en *GitHub*](https://github.
 
 La opción `--target` de *TypeScript* ahora es compatible con `es2022`.
 Esto significa que las funciones como los campos de clase ahora tienen un destino de salida estable donde se pueden preservar.
-También significa que la nueva funcionalidad integrada como el método [`at()` en `Array`s](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/at), [`Object.hasOwn`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn), o [la opción `cause` en `new Error`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#rethrowing_an_error_with_a_cause) se puede usar con esta nueva configuración `--target`, o con `--lib es2022`.
+También significa que la nueva funcionalidad integrada como el método [`at()` en `Array`s](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/at), [`Object.hasOwn`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn), o [la opción `cause` en `new Error`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#rethrowing_an_error_with_a_cause) se puede usar con esta nueva configuración `--target`, o con `--lib es2022`.
 
 Esta funcionalidad fue [implementada](https://github.com/microsoft/TypeScript/pull/46291) por [Kagami Sascha Rosylight (saschanaz)](https://github.com/saschanaz) en varias **SE*, y ¡nosotros estamos agradecidos por esa contribución!
 

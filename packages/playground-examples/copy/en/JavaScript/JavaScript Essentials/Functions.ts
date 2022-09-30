@@ -81,7 +81,7 @@ const add4 = (x: number, y: number): number => {
 // sobre cómo funcionan las funciones en TypeScript en el manual y
 // dentro de la sección de JavaScript funcional de los ejemplos:
 //
-// https://www.typescriptlang.org/docs/handbook/functions.html
+// https://www.typescriptlang.org/es/docs/handbook/functions.html
 // example:function-chaining
 
 // Y para continuar nuestro recorrido por los conceptos básicos de JavaScript,

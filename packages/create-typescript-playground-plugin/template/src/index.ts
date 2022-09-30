@@ -7,8 +7,9 @@ const makePlugin = (utils: PluginUtils) => {
     didMount: (sandbox, container) => {
       console.log("Showing new plugin")
 
-      // Crea un objeto de sistema de diseño para manejar la hechura de elementos
-      // DOM que se ajusten al patio de recreo (y manejen móvil/claro/oscuro, etc.)
+      // Crea un objeto  de sistema de diseño para  manejar la hechura
+      // de  elementos  DOM  que  se  ajusten a la ludoteca (y manejen
+      // móvil/claro/oscuro, etc.)
       const ds = utils.createDesignSystem(container)
 
       ds.title("Example Plugin")
@@ -24,16 +25,16 @@ const makePlugin = (utils: PluginUtils) => {
       }
     },
 
-    // Esto se llama ocasionalmente ya que el texto cambia en monaco,
-    // no asigna directamente 1 tecla arriba para ejecutar una vez la función
-    // porque se llama intencionalmente como máximo una vez cada 0.3 segundos
-    // y luego siempre se ejecutará al final.
+    // Esto se llama ocasionalmente ya  que el texto cambia en monaco,
+    // no asigna directamente 1 tecla  arriba para ejecutar una vez la
+    // función porque  se llama  intencionalmente como máximo  una vez
+    // cada 0.3 segundos y luego siempre se ejecutará al final.
     modelChangedDebounce: async (_sandbox, _model) => {
       // Trabaja un poco con el nuevo texto
     },
 
-    // Le da la oportunidad de eliminar cualquier cosa instalada,
-    // el contenedor en sí mismo si se limpia de hijos después de esto.
+    // Te da la  oportunidad de eliminar cualquier  cosa instalada, el
+    // contenedor en sí mismo si se limpia de hijos después de esto.
     didUnmount: () => {
       console.log("De-focusing plugin")
     },

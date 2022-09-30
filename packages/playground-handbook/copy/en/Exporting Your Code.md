@@ -1,6 +1,6 @@
 ## Exportar código
 
-Además de aprender por ti mismo, necesitarás tener formas de compartir con los demás el trabajo que has realizado. A lo largo de este manual, nos hemos centrado en la *URL* del navegador como la forma de compartir el *PlayGround*, pero esa no es la única opción. Todas las opciones de exportación están disponibles en "Exportar" en la barra de herramientas del editor. Hay tres secciones principales:
+Además de aprender por ti mismo, necesitarás tener formas de compartir con los demás el trabajo que has realizado. A lo largo de este manual, nos hemos centrado en el *URL* del navegador como la forma de compartir el *PlayGround*, pero esa no es la única opción. Todas las opciones de exportación están disponibles en "Exportar" en la barra de herramientas del editor. Hay tres secciones principales:
 
 ### Exportar a Markdown
 

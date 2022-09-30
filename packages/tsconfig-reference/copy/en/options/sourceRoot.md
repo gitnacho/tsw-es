@@ -4,7 +4,7 @@ oneline: "Especifica la ruta raíz para que los depuradores encuentren el códig
 ---
 
 Especifica la ubicación donde un depurador debe ubicar los archivos de *TypeScript* en lugar de las ubicaciones fuente relativas.
-Esta cadena se trata literalmente dentro del mapa fuente donde puedes usar una ruta o una *URL*:
+Esta cadena se trata literalmente dentro del mapa fuente donde puedes usar una ruta o un *URL*:
 
 ```json tsconfig
 {

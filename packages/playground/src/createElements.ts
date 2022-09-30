@@ -51,7 +51,7 @@ export const createDragBar = (side: "left" | "right") => {
       window.localStorage.setItem("dragbar-window-width", "" + window.innerWidth)
     }
 
-    // @ts-ignore - Sé lo que estoy haciendo
+    // de  TypeScript  @ts-ignore  - Sé lo que estoy haciendo
     window.sandbox.editor.layout()
 
     // No permite la selección
@@ -147,7 +147,7 @@ export const setupSidebarToggle = () => {
 
     updateToggle()
 
-    // @ts-ignore - Sé lo que estoy haciendo
+    // de  TypeScript  @ts-ignore  - Sé lo que estoy haciendo
     window.sandbox.editor.layout()
 
     return false
@@ -218,7 +218,7 @@ export const activatePlugin = (
   container: HTMLDivElement
 ) => {
   let newPluginTab: Element, oldPluginTab: Element
-  // @ts-ignore - Esto trabaja en el entorno de ejecución
+  // de  TypeScript  @ts-ignore  - Esto trabaja en el entorno de ejecución
   for (const tab of tabBar.children) {
     if (tab.id === `playground-plugin-tab-${plugin.id}`) newPluginTab = tab
     if (previousPlugin && tab.id === `playground-plugin-tab-${previousPlugin.id}`) oldPluginTab = tab

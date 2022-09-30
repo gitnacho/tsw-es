@@ -13,7 +13,7 @@ export const createIntlLink = (currentLocale: string) => {
     let to = linkProps.to
 
     // /thing -> /ja/thing
-    // Esto ocurre cuando queremos que la URL sea compatible con el sitio anterior
+    // Esto ocurre cuando queremos que el URL sea compatible con el sitio anterior
 
     const localeVersion = "/" + currentLocale + to
     if (currentLocale !== "en" && paths.includes(localeVersion)) {

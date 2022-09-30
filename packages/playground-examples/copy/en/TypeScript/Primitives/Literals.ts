@@ -1,13 +1,13 @@
-// TypeScript tiene algunos divertidos casos especiales para literales en
-// código fuente.
+// TypeScript tiene  algunos divertidos casos especiales  para literales
+// en código fuente.
 
-// Por un lado, gran parte del soporte está cubierto por la ampliación
-// y reducción de tipos ( ejemplo: type-widening-narrowing ) y
-// vale la pena cubrir eso primero.
+// Por un lado, gran parte del soporte está cubierto por la ampliación y
+// reducción de  tipos ( example:type-widening-narrowing  )  y  vale  la
+// pena cubrir eso primero.
 
-// Un literal es un subtipo más concreto de tipo colectivo.
-// Lo cual significa es que "Hola mundo" es una cadena, pero una
-// una cadena no es "Hola mundo" dentro del sistema de tipos.
+// Un literal  es un subtipo  más concreto  de tipo colectivo.   Lo cual
+// significa que "Hola mundo" es una cadena, pero una cadena no es "Hola
+// mundo" dentro del sistema de tipos.
 
 const helloWorld = "Hello World";
 let hiWorld = "Hi World"; // esta es una cadena porque es let
@@ -22,8 +22,8 @@ declare function allowsOnlyHello(arg: "Hello World");
 allowsOnlyHello(helloWorld);
 allowsOnlyHello(hiWorld);
 
-// Esto te permite declarar APIs que usan uniones para decir
-// que solo acepta un literal particular:
+// Esto te  permite declarar APIs que  usan uniones para decir  que solo
+// acepta un literal particular:
 
 declare function allowsFirstFiveNumbers(arg: 1 | 2 | 3 | 4 | 5);
 allowsFirstFiveNumbers(1);
@@ -38,28 +38,28 @@ const myUser = {
   name: "Sabrina",
 };
 
-// Ve cómo transforma `name: "Sabrina"` a `name: string`
-// aunque se define como una constante. Esto es porque
-// el name aún puede cambiar en cualquier momento:
+// Ve  cómo transforma  `name:  "Sabrina"` a  `name:  string` aunque  se
+// define como una  constante. Esto es porque el name  aún puede cambiar
+// en cualquier momento:
 
 myUser.name = "Cynthia";
 
-// Debido a que la propiedad name de myUser puede cambiar, TypeScript
-// no puede utilizar la versión literal en el sistema de tipos. Allí
-// sin embargo, hay una característica que te permitirá hacer esto.
+// Debido a que la propiedad name de myUser puede cambiar, TypeScript no
+// puede utilizar  la versión literal en  el sistema de tipos.  Allí sin
+// embargo, hay una característica que te permitirá hacer esto.
 
 const myUnchangingUser = {
   name: "Fatma",
 } as const;
 
-// Cuando se aplica "as const" al objeto, se convierte en
-// un objeto literal que no cambia en lugar de un
-// objeto mutable que puede.
+// Cuando se  aplica "as  const" al  objeto, se  convierte en  un objeto
+// literal  que  no  cambia  en  lugar  de  un  objeto  mutable  que  si
+// puede.
 
 myUnchangingUser.name = "Raîssa";
 
-// "as const" es una gran herramienta para datos fijos y lugares
-// donde tratas el código como literales en línea. "as const" además
-// trabaja con arreglos:
+// "as const" es  una gran herramienta para datos fijos  y lugares donde
+// tratas el código  como literales en línea. "as  const" además trabaja
+// con arreglos:
 
 const exampleUsers = [{ name: "Brian" }, { name: "Fahrooq" }] as const;

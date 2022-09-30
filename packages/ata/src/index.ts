@@ -10,13 +10,16 @@ import { mapModuleNameToModule } from "./edgeCases"
 export interface ATABootstrapConfig {
   /** Un objeto que pasa para obtener devoluciones de llamada */
   delegate: {
-    /** La devolución de llamada que recibe cuando ATA decide que un archivo se debe escribir en tu VFS */
+    /** La devolución de  llamada que recibe cuando ATA decide que un
+     * archivo se debe escribir en tu VFS */
     receivedFile?: (code: string, path: string) => void
-    /** Una forma de monstrar el progreso */
+    /** Una forma de mostrar el progreso */
     progress?: (downloaded: number, estimatedTotal: number) => void
-    /** Nota: ¡Un mensaje de error no significa que ATA se ha detenido! */
+    /** Nota: ¡Un  mensaje  de  error  no significa  que  ATA  se  ha
+     * detenido! */
     errorMessage?: (userFacingMessage: string, error: Error) => void
-    /** Una devolución de llamada que indica que ATA realmente tiene trabajo que hacer */
+    /** Una devolución de  llamada que indica que ATA realmente tiene
+     * trabajo que hacer */
     started?: () => void
     /** La devolución de llamada cuando ATA ha terminado todo */
     finished?: (files: Map<string, string>) => void
@@ -27,20 +30,21 @@ export interface ATABootstrapConfig {
   typescript: typeof import("typescript")
   /** Si necesitas una versión personalizada de fetch */
   fetcher?: typeof fetch
-  /** Si necesitas un registrador personalizado en lugar de la consola global */
+  /** Si necesitas un registrador personalizado en lugar de la consola
+   * global */
   logger?: Logger
 }
 
 type ModuleMeta = { state: "loading" }
 
 /**
- * La función que inicia la adquisición de tipos,
- * devuelve una función a la que luego le pasas el código
- * fuente inicial de la aplicación con.
+ * La función que inicia la adquisición de tipos, devuelve una función
+ * a la que  luego le pasas el código fuente  inicial de la aplicación
+ * con.
  *
- * Esta es efectivamente la exportación principal, todo lo demás
- * básicamente es exportado para pruebas y se deben considerar
- * los detalles de implementación por parte de los consumidores.
+ * Esta  es  efectivamente la  exportación  principal,  todo lo  demás
+ * básicamente es  exportado para  pruebas y  se deben  considerar los
+ * detalles de implementación por parte de los consumidores.
  */
 export const setupTypeAcquisition = (config: ATABootstrapConfig) => {
   const moduleMap = new Map<string, ModuleMeta>()
@@ -67,7 +71,8 @@ export const setupTypeAcquisition = (config: ATABootstrapConfig) => {
 
     depsToGet.forEach(dep => moduleMap.set(dep.module, { state: "loading" }))
 
-    // Tome los árboles de módulos que nos dan una lista de archivos para descargar
+    // Toma los árboles  de módulos que nos dan una  lista de archivos
+    // para descargar
     const trees = await Promise.all(depsToGet.map(f => getFileTreeForModuleWithTag(config, f.module, f.version)))
     const treesOnly = trees.filter(t => !("error" in t)) as NPMTreeMeta[]
 
@@ -75,17 +80,20 @@ export const setupTypeAcquisition = (config: ATABootstrapConfig) => {
     const hasDTS = treesOnly.filter(t => t.files.find(f => f.name.endsWith(".d.ts")))
     const dtsFilesFromNPM = hasDTS.map(t => treeToDTSFiles(t, `/node_modules/${t.moduleName}`))
 
-    // Estos son los que debemos buscar en DT (que pueden no estar allí, quién sabe)
+    // Estos son  los que debemos  buscar en  DT (que pueden  no estar
+    // allí, quién sabe)
     const mightBeOnDT = treesOnly.filter(t => !hasDTS.includes(t))
     const dtTrees = await Promise.all(
-      // TODO: Cambia de más reciente (latest) a la versión del árbol original que es controlado por el usuario
+      // TODO: Cambia de más reciente  (latest) a la versión del árbol
+      //        original que es controlado por el usuario
       mightBeOnDT.map(f => getFileTreeForModuleWithTag(config, `@types/${getDTName(f.moduleName)}`, "latest"))
     )
 
     const dtTreesOnly = dtTrees.filter(t => !("error" in t)) as NPMTreeMeta[]
     const dtsFilesFromDT = dtTreesOnly.map(t => treeToDTSFiles(t, `/node_modules/@types/${getDTName(t.moduleName).replace("types__", "")}`))
 
-    // Recopila todas las solicitudes npm y DT DTS y aplana sus arreglos
+    // Recopila  todas las  solicitudes  npm  y DT  DTS  y aplana  sus
+    // arreglos
     const allDTSFiles = dtsFilesFromNPM.concat(dtsFilesFromDT).reduce((p, c) => p.concat(c), [])
     estimatedToDownload += allDTSFiles.length
     if (allDTSFiles.length && depth === 0) {
@@ -156,14 +164,16 @@ function treeToDTSFiles(tree: NPMTreeMeta, vfsPrefix: string) {
 }
 
 /**
- * Extrae cualquier posible referencia a otros módulos (incluidos los relativos) con su
- * versionado npm strat también si alguien opta por una versión diferente a través de un comentario de línea final
+ * Extrae cualquier posible referencia  a otros módulos (incluidos los
+ * relativos) con su versionado npm  strat también si alguien opta por
+ * una versión diferente a través de un comentario de línea final
  */
 export const getReferencesForModule = (ts: typeof import("typescript"), code: string) => {
   const meta = ts.preProcessFile(code)
 
-  // Se asegura de que no intentemos descargar las referencias de lib de TypeScript
-  // @ts-ignore - privado pero probablemente nunca cambie
+  // Se asegura de que no  intentemos descargar las referencias de lib
+  // de  TypeScript  @ts-ignore  - privado  pero  probablemente  nunca
+  // cambie
   const libMap: Map<string, string> = ts.libMap || new Map()
 
   // TODO: strip /// <reference path='X' />?
@@ -189,19 +199,26 @@ export const getReferencesForModule = (ts: typeof import("typescript"), code: st
   })
 }
 
-/** Una lista de módulos del archivo fuente actual para los que no tenemos archivos existentes */
+/** 
+ * Una lista  de módulos del  archivo fuente  actual para los  que no
+ * tenemos archivos existentes
+ */
 export function getNewDependencies(config: ATABootstrapConfig, moduleMap: Map<string, ModuleMeta>, code: string) {
   const refs = getReferencesForModule(config.typescript, code).map(ref => ({
     ...ref,
     module: mapModuleNameToModule(ref.module),
   }))
 
-  // Elimina las rutas relativas porque estamos obteniendo todos los archivos.
+  // Elimina las  rutas relativas porque estamos  obteniendo todos los
+  // archivos.
   const modules = refs.filter(f => !f.module.startsWith(".")).filter(m => !moduleMap.has(m.module))
   return modules
 }
 
-/** La carga masiva del trabajo para obtener el filetree en función de cómo piensa la gente sobre los nombres y versiones de npm */
+/** 
+ * La carga masiva del trabajo para  obtener el filetree en función de
+ * cómo piensa la gente sobre los nombres y versiones de npm
+ */
 export const getFileTreeForModuleWithTag = async (
   config: ATABootstrapConfig,
   moduleName: string,
@@ -209,11 +226,13 @@ export const getFileTreeForModuleWithTag = async (
 ) => {
   let toDownload = tag || "latest"
 
-  // Creo que tener al menos 2 puntos es un aproximado razonable para ser un semver y no una tag,
-  // podemos omitir una solicitud de API, TBH esto es probablemente raro
+  // Creo que tener al menos 2  puntos es un aproximado razonable para
+  // ser un semver y no una  tag, podemos omitir una solicitud de API,
+  // TBH esto es probablemente raro
   if (toDownload.split(".").length < 2) {
-    // La API jsdelivr necesita una _versión_, no una etiqueta. Entonces, tenemos que cambiar
-    // la etiqueta a la versión a través de una solicitud API.
+    // La   API    jsdelivr   necesita    una   _versión_,    no   una
+    // etiqueta. Entonces,  tenemos  que  cambiar la  etiqueta  a  la
+    // versión a través de una solicitud API.
     const response = await getNPMVersionForModuleReference(config, moduleName, toDownload)
     if (response instanceof Error) {
       return {
@@ -260,11 +279,12 @@ interface Logger {
   groupEnd: (...args: any[]) => void
 }
 
-// Tomado de dts-gen: https://github.com/microsoft/dts-gen/blob/master/lib/names.ts
+// Tomado de dts-gen:
+// https://github.com/microsoft/dts-gen/blob/master/lib/names.ts
 function getDTName(s: string) {
   if (s.indexOf("@") === 0 && s.indexOf("/") !== -1) {
-    // tenemos un módulo con ámbito, p. @bla/foo
-    // que debería convertirse en bla__foo
+    // tenemos  un   módulo  con  ámbito,  p. @bla/foo que se  debería
+    // convertir en bla__foo
     s = s.substr(1).replace("/", "__")
   }
   return s

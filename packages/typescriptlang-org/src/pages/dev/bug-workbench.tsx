@@ -34,11 +34,11 @@ const Play: React.FC<Props> = (props) => {
     if ("playgroundLoaded" in window) return
     window["playgroundLoaded"] = true
 
-    // @ts-ignore - para complementos basados ​​en React
+    // de  TypeScript  @ts-ignore  - para complementos basados ​​en React
     window.react = React
-    // @ts-ignore - para complementos basados ​​en React
+    // de  TypeScript  @ts-ignore  - para complementos basados ​​en React
     window.reactDOM = ReactDOM
-    // @ts-ignore - para que los complementos, etc. puedan usar funciones locales
+    // de  TypeScript  @ts-ignore  - para que los complementos, etc. puedan usar funciones locales
     window.i = i
 
     const getLoaderScript = document.createElement('script');

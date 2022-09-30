@@ -36,7 +36,7 @@ Podemos extender el módulo existente de la siguiente manera:
 ```ts
 // Definiciones de tipo para [~NOMBRE BIBLIOTECA~] [~OPCIONAL NUMERO VERSION~]
 // Proyecto: [~NOMBRE PROYECTO~]
-// Definiciones por: [~TU NOMBRE~] <[~UNA URL TUYA~]>
+// Definiciones por: [~TU NOMBRE~] <[~UN URL TUYO~]>
 
 /*~ Este es el archivo de plantilla del complemento del módulo. Debes cambiarle el nombre a index.d.ts
  *~ y colócalo en un directorio con el mismo nombre que el módulo.

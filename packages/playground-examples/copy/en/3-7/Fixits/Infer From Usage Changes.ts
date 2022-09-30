@@ -1,10 +1,10 @@
 //// { "compiler": {  "noImplicitAny": false }, "order": 2 }
 
 // Con la 'inferencia de uso' existente de TypeScript 3.7
-// la corrección de código se volvió más inteligente. Ahora usará una lista de
-// tipos importantes conocidos (string, number, array, Promise)
-// e inferir si el uso de un tipo coincide con la API
-// de estos objetos.
+// la corrección de código se volvió más inteligente. Ahora usará una
+// lista de tipos importantes conocidos (string, number, array,
+// Promise) e inferirá si el uso de un tipo coincide con la API de
+// estos objetos.
 
 // Para los siguientes ejemplos, selecciona los parámetros de
 // las funciones, haz clic en la bombilla y elige

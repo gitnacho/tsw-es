@@ -296,7 +296,7 @@ strings.forEach((s) => {
 
 ## Generación de código para módulos
 
-Dependiendo del destino del módulo especificado durante la compilación, el compilador generará el código apropiado para `Node.js` ([`CommonJS`](http://wiki.commonjs.org/wiki/CommonJS)), `require.js` ([`AMD`](https://github.com/amdjs/amdjs-api/wiki/AMD)), [`UMD`](https://github.com/umdjs/umd), [`SystemJS`](https://github.com/systemjs/systemjs ) o [módulos nativos *ECMAScript 2015*](http://www.ecma-international.org/ecma-262/6.0/#sec-modules) (*ES6*) sistemas de carga de módulos.
+Dependiendo del destino del módulo especificado durante la compilación, el compilador generará el código apropiado para `Node.js` ([`CommonJS`](http://wiki.commonjs.org/wiki/CommonJS)), `require.js` ([`AMD`](https://github.com/amdjs/amdjs-api/wiki/AMD)), [`UMD`](https://github.com/umdjs/umd), [`SystemJS`](https://github.com/systemjs/systemjs) o [módulos nativos *ECMAScript 2015*](http://www.ecma-international.org/ecma-262/6.0/#sec-modules) (*ES6*) sistemas de carga de módulos.
 Para obtener más información sobre lo que hacen las llamadas `define`, `require` y `register` en el código generado, consulta la documentación de cada cargador de módulo.
 
 Este sencillo ejemplo muestra cómo los nombres utilizados durante la importación y exportación se traducen al código cargado del módulo.

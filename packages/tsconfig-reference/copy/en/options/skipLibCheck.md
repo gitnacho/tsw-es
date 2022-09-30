@@ -16,4 +16,4 @@ una copia al comprender la resolución de dependencias para solucionar el proble
 
 Otra posibilidad es cuando estás migrando entre versiones de *TypeScript* y los cambios causan roturas en `node_modules` y las bibliotecas estándar de *JS* con las que no deseas tratar durante la actualización de *TypeScript*. 
 
-Ten en cuenta que si estos problemas provienen de la biblioteca estándar de *TypeScript*, puedes reemplazar la biblioteca usando la técnica de [reemplazo de biblioteca de *TypeScript 4.5*](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-5 .html # support-lib-from-node_modules).
+Ten en cuenta que si estos problemas provienen de la biblioteca estándar de *TypeScript*, puedes reemplazar la biblioteca usando la técnica de [reemplazo de biblioteca de *TypeScript 4.5*](https://www.typescriptlang.org/es/docs/handbook/release-notes/typescript-4-5 .html#compatible-con-lib-de-node_modules).

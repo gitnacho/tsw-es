@@ -7,9 +7,9 @@ handbook: "true"
 deprecated_by: /docs/handbook/2/everyday-types.html
 # prettier-ignore
 deprecation_redirects: [
-  never, /docs/handbook/2/narrowing.html#the-never-type,
-  unknown, /docs/handbook/2/functions.html#unknown,
-  void, /docs/handbook/2/functions.html#void
+  never, /es/docs/handbook/2/narrowing.html#el-tipo-never,
+  unknown, /es/docs/handbook/2/functions.html#unknown,
+  void, /es/docs/handbook/2/functions.html#void
 ]
 ---
 

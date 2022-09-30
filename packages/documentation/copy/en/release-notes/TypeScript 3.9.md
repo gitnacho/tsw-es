@@ -429,7 +429,7 @@ Para obtener más información sobre este cambio, [consulta la solicitud de extr
 ### Intersecciones reducidas por propiedades discriminantes
 
 Hay algunos casos en los que puedes terminar con tipos que describen valores que simplemente no existen.
-Por ejemplo
+Por ejemplo  una  API
 
 ```ts
 declare function smushObjects<T, U>(x: T, y: U): T & U;

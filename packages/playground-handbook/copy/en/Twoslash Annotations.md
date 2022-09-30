@@ -42,7 +42,7 @@ Puedes escribir una lista con una cadena separada por comas:
 // @lib: es2015,dom
 ```
 
-Escribir un comando de *twoslash* establecerá la marca del compilador a medida que escribes, y se establecerá instantáneamente si recargas o compartes la *URL* con otra persona. Esto puede actuar como una herramienta avanzada de usuario para configurar los indicadores del compilador *y* hacer que el cambio sea mucho más explícito que un parámetro de consulta (que puede requerir buscar en el menú desplegable de *Configuración de TS*).
+Escribir un comando de *twoslash* establecerá la marca del compilador a medida que escribes, y se establecerá instantáneamente si recargas o compartes el *URL* con otra persona. Esto puede actuar como una herramienta avanzada de usuario para configurar los indicadores del compilador *y* hacer que el cambio sea mucho más explícito que un parámetro de consulta (que puede requerir buscar en el menú desplegable de *Configuración de TS*).
 
 <details>
 <summary>¿Lo sabías?</summary>

@@ -97,4 +97,4 @@ function addTypedObjectToCache<Type, Cache extends CacheHostGeneric<Type>>(obj: 
 //
 // example:advanced-classes
 // example:typescript-with-react
-// https://www.typescriptlang.org/docs/handbook/generics.html
+// https://www.typescriptlang.org/es/docs/handbook/generics.html

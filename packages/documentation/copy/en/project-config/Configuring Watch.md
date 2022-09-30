@@ -48,7 +48,7 @@ La implementación `--watch` del compilador se basa en el uso de `fs.watch` y `f
 }
 ```
 
-Puedes leer más sobre esto en las [notas de la versión](/docs/handbook/release-notes/typescript-3-8.html#mejor-vigilancia-de-directorios-en-linux-y-watchoptions).
+Puedes leer más sobre esto en [las notas de la versión](/es/docs/handbook/release-notes/typescript-3-8.html#mejor-vigilancia-de-directorios-en-linux-y-watchoptions).
 
 ## Configurar la vigilancia de archivos utilizando la variable de entorno `TSC_WATCHFILE`
 

@@ -14,4 +14,4 @@ Cuando esta configuración está activada:
 
 - [`declaration`](#declaration) de manera predeterminada es `true`
 
-Puedes encontrar documentación sobre proyectos de *TypeScript* en [el manual](https://www.typescriptlang.org/docs/handbook/project-references.html).
+Puedes encontrar documentación sobre proyectos de *TypeScript* en [el manual](https://www.typescriptlang.org/es/docs/handbook/project-references.html).

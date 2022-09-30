@@ -868,6 +868,6 @@ const f3 = function (): void {
 Para obtener más información sobre `void`, consulta estas otras entradas de documentación:
 
 
-- [`handbook` v1](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)
-- [`handbook` v2](https://www.typescriptlang.org/docs/handbook/2/functions.html#void)
+- [`handbook` v1](https://www.typescriptlang.org/es/docs/handbook/functions.html#void)
+- [`handbook` v2](https://www.typescriptlang.org/es/docs/handbook/2/functions.html#void)
 - [PF - "¿Por qué las funciones devuelven no void asignables a la función devolviendo void?"](https://github.com/Microsoft/TypeScript/wiki/FAQ#why-are-functions-returning-non-void-assignable-to-function-returning-void)

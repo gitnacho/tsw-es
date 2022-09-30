@@ -28,7 +28,7 @@ export const SiteNav = (props: Props) => {
       }
     }
 
-    // @ts-ignore - esto viene del script de arriba
+    // de  TypeScript  @ts-ignore  - esto viene del script de arriba
     docsearch({
       appId: "BGCDYOIYZ5",
       apiKey: '37ee06fa68db6aef451a490df6df7c60',
@@ -42,7 +42,7 @@ export const SiteNav = (props: Props) => {
   useEffect(() => {
     setupStickyNavigation()
 
-    // @ts-ignore - esto viene del script de arriba
+    // de  TypeScript  @ts-ignore  - esto viene del script de arriba
     if (window.docsearch) {
       loadDocSearch();
     }
@@ -55,7 +55,7 @@ export const SiteNav = (props: Props) => {
     searchScript.src = withPrefix("/js/docsearch.js");
     searchScript.async = true;
     searchScript.onload = () => {
-      // @ts-ignore - esto viene del script de arriba
+      // de  TypeScript  @ts-ignore  - esto viene del script de arriba
       if (window.docsearch) {
         loadDocSearch();
 

@@ -45,9 +45,9 @@ La ruta para manejar esto es a través de un `rollup`:
 
 ## Despliegue
 
-Este módulo se debe implementar en `npm` cuando desees que el mundo lo vea, esto puede significar hacer que tu código maneje un entorno de ensayo frente a un entorno de producción (porque las *URL* serán diferentes).
+Este módulo se debe implementar en `npm` cuando desees que el mundo lo vea, esto puede significar hacer que tu código maneje un entorno de ensayo frente a un entorno de producción (porque los *URL*s serán diferentes).
 
-Por ejemplo, así es como puedes manejar la obtención de la *URL* de un archivo *CSS* que se incluye en tu directorio `dist`:
+Por ejemplo, así es como puedes manejar la obtención del *URL* de un archivo *CSS* que se incluye en tu directorio `dist`:
 
 ```ts
 const isDev = document.location.host.includes("localhost")
@@ -63,4 +63,4 @@ Una vez que estés satisfecho y esté refinado, puedes solicitar tenerlo en la l
 
 ## Apoya
 
-Haz preguntas sobre los problemas del sitio web de *TypeScript*](https://github.com/microsoft/TypeScript-Website/issues) o en la [comunidad *Discordia de TypeScript*](https://discord.gg/typescript) - en el canal del sitio web de *TypeScript*.
+Haz preguntas sobre los problemas del sitio web de *TypeScript*](https://github.com/microsoft/TypeScript-Website/issues) o en la [comunidad *Discord de TypeScript*](https://discord.gg/typescript) - en el canal del sitio web de *TypeScript*.

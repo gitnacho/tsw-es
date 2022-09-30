@@ -8,7 +8,7 @@ Sobre esta prosa hay dos barras de herramientas, una es la navegación del sitio
 
 El panel *TS Config* contiene una lista enfocada de las opciones del compilador *TypeScript* disponibles dentro de un `tsconfig.json`. Comienza con algunos menús desplegables para algunas de las opciones del compilador más importantes y luego baja a categorías con casillas de verificación booleanas. Esta lista ha crecido orgánicamente a lo largo del tiempo y, en general, representa los entornos que más utilizan las personas. Si necesitas establecer un valor que no está en esa lista, hay una manera de establecer cualquier opción a través de [anotaciones `twoslash`](/play?#Handbook-13) que veremos más adelante en el manual.
 
-Cambiar una bandera del compilador actualizará la *URL* en su navegador (a menos que lo tengas deshabilitado en la configuración). La estructura de la *URL* funciona comparando las opciones del compilador actual con la configuración predeterminada (que se describe a continuación) y solo muestra las opciones del compilador que difieren de las predeterminadas . Por ejemplo, el valor predeterminado para un *playground* es tener habilitado `esModuleInterop: true`, por lo que cambiar `esModuleInterop` a `false` agregaría `?esModuleInterop=false` a la *URL*:
+Cambiar una bandera del compilador actualizará el *URL* en tu navegador (a menos que lo tengas deshabilitado en la configuración). La estructura del *URL* funciona comparando las opciones del compilador actual con la configuración predeterminada (que se describe a continuación) y solo muestra las opciones del compilador que difieren de las predeterminadas . Por ejemplo, el valor predeterminado para un *playground* es tener habilitado `esModuleInterop: true`, por lo que cambiar `esModuleInterop` a `false` agregaría `?esModuleInterop=false` al *URL*:
 
 ```diff
 # Antes
@@ -18,7 +18,7 @@ Cambiar una bandera del compilador actualizará la *URL* en su navegador (a meno
 + https://www.typescriptlang.org/play?esModuleInterop=false
 ```
 
-Esto ayuda a mantener las *URL* de *Playground* en el lado corto, o al menos no aumenta su tamaño innecesariamente. Puedes notar que a veces las banderas del compilador no son exactamente los mismos en la *URL* que la interfaz de usuario, por ejemplo, `?Target=6` es `target: ES2019` esto nos permite guardar caracteres utilizando el valor numérico de la enumeración en lugar de la representación de cadena.
+Esto ayuda a mantener los *URL*s de *Playground* en el lado corto, o al menos no aumenta su tamaño innecesariamente. Puedes notar que a veces las banderas del compilador no son exactamente las mismas en el *URL* que la interfaz de usuario, por ejemplo, `?Target=6` es `target: ES2019` esto nos permite guardar caracteres utilizando el valor numérico de la enumeración en lugar de la representación de cadena.
 
 <details>
 <summary>Los valores predeterminados del compilador en un playground</summary>
@@ -40,7 +40,7 @@ Efectivamente, el *Playground* tiene configuraciones que se pueden resumir así:
 }
 ```
 
-La realidad es ⏤por supuesto⏤ un poco más compleja, detectamos si una configuración del compilador está en la siguiente lista como una señal para mostrar la configuración del compilador en la interfaz de usuario del panel *TS Config* y solo agregamos una configuración a la *URL* si difiere de esta lista.
+La realidad es ⏤por supuesto⏤ un poco más compleja, detectamos si una configuración del compilador está en la siguiente lista como una señal para mostrar la configuración del compilador en la interfaz de usuario del panel *TS Config* y solo agregamos una configuración al *URL* si difiere de esta lista.
 
 Entonces, la especificación completa para la configuración predeterminada del compilador (a partir de *TypeScript 4.5*) se ve así:
 
@@ -96,7 +96,7 @@ export function getDefaultSandboxCompilerOptions(config: SandboxConfig, monaco: 
 }
 ```
 
-Esto incluye muchos valores que también se establecen en su valor predeterminado. Lo que en realidad puede dificultar la configuración de un entorno *perfecto* porque 'ningún conjunto de valores' puede diferir de `false` para algunas configuraciones, pero romper este sistema rompería la compatibilidad con versiones anteriores (las *URL* cambiarían) y alargaría las *URL*, por lo que permanece tal como está.
+Esto incluye muchos valores que también se establecen en su valor predeterminado. Lo que en realidad puede dificultar la configuración de un entorno *perfecto* porque 'ningún conjunto de valores' puede diferir de `false` para algunas configuraciones, pero romper este sistema rompería la compatibilidad con versiones anteriores (los *URL*s cambiarían) y alargaría los *URL*s, por lo que permanece tal como está.
 
 </details>
 

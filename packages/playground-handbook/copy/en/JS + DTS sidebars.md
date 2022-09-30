@@ -14,7 +14,7 @@ Hay dos casos de uso para usar la pestaña `.d.ts`:
 
 - **TypeScript a `.d.ts`**. Comprender los efectos de `export` en tu código y cómo *TypeScript* resuelve sus tipos.
 
-- **JavaScript a `.d.ts`**. Cuando estás escribiendo una biblioteca en *JavaScript* y usas una combinación de inferencia de tipo y [soporte *JSDoc*](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html) para agregar anotaciones de tipo.
+- **JavaScript a `.d.ts`**. Cuando estás escribiendo una biblioteca en *JavaScript* y usas una combinación de inferencia de tipo y [soporte *JSDoc*](https://www.typescriptlang.org/es/docs/handbook/jsdoc-supported-types.html) para agregar anotaciones de tipo.
 
 ### Otros archivos
 

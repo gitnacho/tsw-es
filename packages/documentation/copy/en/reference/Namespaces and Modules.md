@@ -43,7 +43,7 @@ En esta sección, describiremos varios errores comunes en el uso de espacios de 
 ## `/// <reference>`-ar un módulo
 
 Un error común es intentar usar la sintaxis `/// <referencia ... />` para referirse a un archivo de módulo, en lugar de usar una instrucción `import`.
-Para entender la distinción, primero necesitamos entender cómo el compilador puede ubicar la información de tipo para un módulo basado en la ruta de una `import` (por ejemplo, los `...` en `import x from "...";` , `import x = require("...");`, etc.).
+Para entender la distinción, primero necesitamos entender cómo el compilador puede ubicar la información de tipo para un módulo basado en la ruta de una `import` (por ejemplo, los `...` en `import x from "...";`, `import x = require("...");`, etc.).
 
 El compilador intentará encontrar un `.ts`, `.tsx`, y luego un `.d.ts` con la ruta apropiada.
 Si no se pudo encontrar un archivo específico, el compilador buscará una *declaración de módulo ambiental*.

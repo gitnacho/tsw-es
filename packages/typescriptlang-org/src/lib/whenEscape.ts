@@ -8,7 +8,7 @@ export const whenEscape = (func: () => void) => (event: KeyboardEvent) => {
   if ("key" in evt) {
     isEscape = evt.key === "Escape" || evt.key === "Esc"
   } else {
-    // @ts-ignore - este solía ser el caso
+    // de  TypeScript  @ts-ignore  - este solía ser el caso
     isEscape = evt.keyCode === 27
   }
   if (isEscape) {

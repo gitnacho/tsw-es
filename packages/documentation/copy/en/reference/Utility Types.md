@@ -1,7 +1,7 @@
 ---
 title: Tipos utilitarios
 layout: docs
-permalink: /docs/handbook/utility-types.html
+permalink: /es/docs/handbook/utility-types.html
 oneline: Tipos que se incluyen globalmente en TypeScript
 translatable: true
 ---
@@ -39,7 +39,7 @@ type C = Awaited<boolean | Promise<number>>;
 <blockquote class=bg-reading>
 
 Liberado en:  
-[2.1](/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick)
+[2.1](/es/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-y-pick)
 
 </blockquote>
 
@@ -72,7 +72,7 @@ const todo2 = updateTodo(todo1, {
 <blockquote class=bg-reading>
 
 Liberado en:  
-[2.8](/docs/handbook/release-notes/typescript-2-8.html#improved-control-over-mapped-type-modifiers)
+[2.8](/es/docs/handbook/release-notes/typescript-2-8.html#control-mejorado-sobre-modificadores-de-tipo-asignados)
 
 </blockquote>
 
@@ -97,7 +97,7 @@ const obj2: Required<Props> = { a: 5 };
 <blockquote class=bg-reading>
 
 Liberado en:  
-[2.1](/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick)
+[2.1](/es/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-y-pick)
 
 </blockquote>
 
@@ -118,7 +118,7 @@ const todo: Readonly<Todo> = {
 todo.title = "Hola";
 ```
 
-Esta utilidad sirve para representar expresiones de asignación que fallarán en el entorno de ejecución (es decir, al intentar reasignar propiedades de un [objeto congelado](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze )).
+Esta utilidad sirve para representar expresiones de asignación que fallarán en el entorno de ejecución (es decir, al intentar reasignar propiedades de un [objeto congelado](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)).
 
 ##### `Object.freeze`
 
@@ -131,7 +131,7 @@ function freeze<Type>(obj: Type): Readonly<Type>;
 <blockquote class=bg-reading>
 
 Liberado en:  
-[2.1](/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick)
+[2.1](/es/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-y-pick)
 
 </blockquote>
 
@@ -162,7 +162,7 @@ cats.boris;
 <blockquote class=bg-reading>
 
 Liberado en:  
-[2.1](/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick)
+[2.1](/es/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-y-pick)
 
 </blockquote>
 
@@ -193,7 +193,7 @@ todo;
 <blockquote class=bg-reading>
 
 Liberado en:  
-[3.5](/docs/handbook/release-notes/typescript-3-5.html#the-omit-helper-type)
+[3.5](/es/docs/handbook/release-notes/typescript-3-5.html#el-tipo-de-ayudante-omit)
 
 </blockquote>
 
@@ -236,7 +236,7 @@ todoInfo;
 <blockquote class=bg-reading>
 
 Liberado en:  
-[2.8](/docs/handbook/release-notes/typescript-2-8.html#predefined-conditional-types)
+[2.8](/es/docs/handbook/release-notes/typescript-2-8.html#tipos-condicionales-predefinidos)
 
 </blockquote>
 
@@ -258,7 +258,7 @@ type T2 = Exclude<string | number | (() => void), Function>;
 <blockquote class=bg-reading>
 
 Liberado en:  
-[2.8](/docs/handbook/release-notes/typescript-2-8.html#predefined-conditional-types)
+[2.8](/es/docs/handbook/release-notes/typescript-2-8.html#tipos-condicionales-predefinidos)
 
 </blockquote>
 
@@ -278,7 +278,7 @@ type T1 = Extract<string | number | (() => void), Function>;
 <blockquote class=bg-reading>
 
 Liberado en:  
-[2.8](/docs/handbook/release-notes/typescript-2-8.html#predefined-conditional-types)
+[2.8](/es/docs/handbook/release-notes/typescript-2-8.html#tipos-condicionales-predefinidos)
 
 </blockquote>
 
@@ -362,7 +362,7 @@ type T4 = ConstructorParameters<Function>;
 <blockquote class=bg-reading>
 
 Liberado en:  
-[2.8](/docs/handbook/release-notes/typescript-2-8.html#predefined-conditional-types)
+[2.8](/es/docs/handbook/release-notes/typescript-2-8.html#tipos-condicionales-predefinidos)
 
 </blockquote>
 
@@ -399,7 +399,7 @@ type T8 = ReturnType<Function>;
 <blockquote class=bg-reading>
 
 Liberado en:  
-[2.8](/docs/handbook/release-notes/typescript-2-8.html#predefined-conditional-types)
+[2.8](/es/docs/handbook/release-notes/typescript-2-8.html#tipos-condicionales-predefinidos)
 
 </blockquote>
 
@@ -436,7 +436,7 @@ Liberado en:
 
 </blockquote>
 
-Extrae el tipo del parámetro [`this`](/docs/handbook/functions.html#this-parameters) para un tipo de función, o [`unknown`](/docs/handbook/release-notes/typescript-3-0.html#new-unknown-top-type) si el tipo `function` no tiene el parámetro `this`.
+Extrae el tipo del parámetro [`this`](/es/docs/handbook/functions.html#this-parameters) para un tipo de función, o [`unknown`](/es/docs/handbook/release-notes/typescript-3-0.html#nuevo-tipo-superior-unknown) si el tipo `function` no tiene el parámetro `this`.
 
 ##### Ejemplo
 
@@ -459,7 +459,7 @@ Liberado en:
 
 </blockquote>
 
-Elimina el parámetro [`this`](/docs/handbook/functions.html#this-parameters) de `Type`. Si `Type` no tiene un parámetro `this` declarado explícitamente, el resultado es simplemente `Type`. De lo contrario, se crea un nuevo tipo de función sin el parámetro `this` a partir de `Type`. Los genéricos se borran y solo la última firma de sobrecarga se propaga al nuevo tipo `function`.
+Elimina el parámetro [`this`](/es/docs/handbook/functions.html) de `Type`. Si `Type` no tiene un parámetro `this` declarado explícitamente, el resultado es simplemente `Type`. De lo contrario, se crea un nuevo tipo de función sin el parámetro `this` a partir de `Type`. Los genéricos se borran y solo la última firma de sobrecarga se propaga al nuevo tipo `function`.
 
 ##### Ejemplo
 
@@ -482,7 +482,7 @@ Liberado en:
 
 </blockquote>
 
-Esta utilidad no devuelve un tipo transformado. En cambio, sirve como marcador para un tipo [`this`](/docs/handbook/functions.html#this) contextual. Ten en cuenta que el indicador [`noImplicitThis`](/tsconfig#noImplicitThis) debe estar habilitado para utilizar esta utilidad.
+Esta utilidad no devuelve un tipo transformado. En cambio, sirve como marcador para un tipo [`this`](/es/docs/handbook/functions.html#this) contextual. Ten en cuenta que el indicador [`noImplicitThis`](/tsconfig#noImplicitThis) debe estar habilitado para utilizar esta utilidad.
 
 ##### Ejemplo
 
@@ -514,7 +514,7 @@ obj.y = 20;
 obj.moveBy(5, 5);
 ```
 
-En el ejemplo anterior, el objeto `methods` en el argumento de `makeObject` tiene un tipo contextual que incluye `ThisType<D & M>` y, por lo tanto, el tipo de [`this`](/docs/handbook/functions.html#this) en los métodos dentro del objeto `methods` es `{ x: number, y: number } & { moveBy(dx: number, dy: number): number }`. Observa cómo el tipo de la propiedad `methods` es simultáneamente un objetivo de inferencia y una fuente para el tipo `this` en los métodos.
+En el ejemplo anterior, el objeto `methods` en el argumento de `makeObject` tiene un tipo contextual que incluye `ThisType<D & M>` y, por lo tanto, el tipo de [`this`](/es/docs/handbook/functions.html#this) en los métodos dentro del objeto `methods` es `{ x: number, y: number } & { moveBy(dx: number, dy: number): number }`. Observa cómo el tipo de la propiedad `methods` es simultáneamente un objetivo de inferencia y una fuente para el tipo `this` en los métodos.
 
 La interfaz del marcador `ThisType<T>` simplemente es una interfaz vacía declarada en `lib.d.ts`. Más allá de ser reconocida en el tipo contextual de un objeto literal, la interfaz actúa como cualquier interfaz vacía.
 

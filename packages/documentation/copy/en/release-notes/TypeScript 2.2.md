@@ -7,7 +7,7 @@ oneline: TypeScript 2.2 Notas de la versión
 
 ## Soporte para clases mixtas
 
-*TypeScript 2.2* agrega soporte para el patrón de clase mixin *ECMAScript 2015* (ve la [Descripción MDN de Mixin](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes#Mix-ins) y [Mixins "Real" con Clases *JavaScript*](http://justinfagnani.com/2015/12/21/real-mixins-with-javascript-classes/) para obtener más detalles), así como reglas para combinar firmas de construcción mixin con firmas de construcción regulares en tipos de intersección.
+*TypeScript 2.2* agrega soporte para el patrón de clase mixin *ECMAScript 2015* (ve la [Descripción MDN de Mixin](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes#mix-ins) y [Mixins "Real" con Clases *JavaScript*](http://justinfagnani.com/2015/12/21/real-mixins-with-javascript-classes/) para obtener más detalles), así como reglas para combinar firmas de construcción mixin con firmas de construcción regulares en tipos de intersección.
 
 ##### Primero algo de terminología
 

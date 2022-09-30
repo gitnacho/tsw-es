@@ -2,7 +2,7 @@
 
 Si deseas explicar algo que requiere mirar un problema desde muchos ángulos, o siente que hay valor en intercalar texto entre muestras de código ⏤ puedes crear un *Playground Docset* impulsado por *GitHub Gist*. Estos conjuntos de documentos se generan en el entorno de ejecución a partir de archivos `.ts`, `.tsx`, `.tsx`, `.mjs` y `.md` dentro de una esencia que lo crea por separado del *Playground*.
 
-Por ejemplo, la recreación de la serie de publicaciones de blog de 2020 `Tipo | Trata` puedes ver https://gist.github.com/303ebff59a6fc37f88c86e86dbdeb0e8 ⏤ la *URL* para cargar esta esencia en *Playground* es:
+Por ejemplo, la recreación de la serie de publicaciones de blog de 2020 `Tipo | Trata` puedes ver https://gist.github.com/303ebff59a6fc37f88c86e86dbdeb0e8 ⏤ el *URL* para cargar esta esencia en *Playground* es:
 
 ```
 https://www.typescriptlang.org/play#gist/303ebff59a6fc37f88c86e86dbdeb0e8-6

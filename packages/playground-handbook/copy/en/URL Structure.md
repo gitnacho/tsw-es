@@ -1,15 +1,15 @@
-## Estructuras de *URL*
+## Estructura *URL*s
 
-Debido a que *Playground* se ejecuta en el navegador, nos esforzamos por representar todas las configuraciones ambientales posibles dentro de la *URL* para que puedas compartir fácilmente tu *Playground*. Esto incluye el código, los indicadores del compilador y la configuración.
+Debido a que *Playground* se ejecuta en el navegador, nos esforzamos por representar todas las configuraciones ambientales posibles dentro del *URL* para que puedas compartir fácilmente tu *Playground*. Esto incluye el código, los indicadores del compilador y la configuración.
 
-*Playground* admite dos formas de entradas de la *URL*: El hash y las consultas.
+*Playground* admite dos formas de entradas del *URL*: El hash y las consultas.
 
 ### El hash
 
 El hash generalmente representa el estado del editor:
 
 - `#code/PRAz3dDc3...` - Una versión base64 y comprimida del código que debería estar en el editor
-- `#src/The%20code...` - Manera *URLEncoded* de tener el código para el editor (usado para compatibilidad con versiones anteriores de *URL* más antiguas)
+- `#src/The%20code...` - Manera *URLEncoded* de tener el código para el editor (usado para compatibilidad con versiones anteriores de *URL* más antiguos)
 - `#example/generic-functions` ⏤ Tome el código de un ejemplo de *Playground* con *id generic-functions*
 - `#handbook-2` - El manual de *Playground* con el número de página
 - `#gist/92cf0a3...` ⏤ El *ID* de una esencia pública de *GitHub*, el *playground* renderizará un conjunto de documentos de archivos *Markdown* y *TS*/*JS* o tomará el contenido de un solo archivo y lo mostrará. Dado el soporte para páginas de múltiples archivos, puede agregar `-[n` para acceder al enésimo archivo (teniendo en cuenta la indexación 0) ⏤ así que `/play/#gist/303ebff59a6fc37f88c86e86dbdeb0e8-3` de manera predeterminada abrirá la cuarta página.

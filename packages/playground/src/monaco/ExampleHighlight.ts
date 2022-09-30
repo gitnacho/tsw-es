@@ -1,5 +1,5 @@
 /**
- * Permite hacer clic en línea en las URL internas para obtener un código de ejemplo diferente
+ * Permite hacer clic en línea en los URLs internos para obtener un código de ejemplo diferente
  */
 export class ExampleHighlighter {
   provideLinks(model: import('monaco-editor').editor.IModel) {

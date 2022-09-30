@@ -4,7 +4,7 @@
 import spellcheck from "danger-plugin-spellcheck"
 
 // Bloqueado en despliegues de SE, consulta CI.yml
-// importar faro desde "peligro-plugin-faro"
+// import lighthouse from "danger-plugin-lighthouse"
 
 // Revisa la ortografía de todas las cosas
 spellcheck({ settings: "microsoft/TypeScript-Website@spellcheck.json" })

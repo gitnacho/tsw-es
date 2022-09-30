@@ -25,7 +25,7 @@ Hay dos primitivos i18n aquí:
 
 Un `IntlLink` es un elemento `<Link>`, que efectivamente es `<a>`, pero que conoce todo el mapa del sitio y la configuración regional actual.
 
-Esto significa que el enlace detectará si hay una versión de la página disponible en la configuración regional actual si es posible. Simplemente escribe la URL en inglés.
+Esto significa que el enlace detectará si hay una versión de la página disponible en la configuración regional actual si es posible. Simplemente escribe el URL en inglés.
 
 ## i("x")
 

@@ -232,6 +232,6 @@ categoryMap["999"] = {
 
 writeJSON("tsconfigCategories.json", categoryMap);
 
-// @ts-ignore - Imprime los valores predeterminados para un archivo TS Config
+// de  TypeScript  @ts-ignore  - Imprime los valores predeterminados para un archivo TS Config
 const defaults = ts.defaultInitCompilerOptions;
 writeJSON("tsconfigDefaults.json", defaults);

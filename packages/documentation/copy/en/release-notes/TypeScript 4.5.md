@@ -5,25 +5,6 @@ permalink: /docs/handbook/release-notes/typescript-4-5.html
 oneline: Notas de la versión de TypeScript 4.5
 ---
 
-## ¿Qué hay de nuevo desde Beta y RC?
-
-Desde nuestra [publicación de lanzamiento beta](https://devblogs.microsoft.com/typescript/announcing-typescript-4-5-beta) y la [publicación de lanzamiento RC](https://devblogs.microsoft.com/typescript/announcing -typescript-4-5-rc), 4.5 ha sufrido algunos cambios.
-
-El mayor cambio que hemos realizado desde la versión beta es que [la compatibilidad con el módulo ECMAScript para Node.js 12 se ha diferido](#esm-nodejs) para una versión futura, y ahora solo está disponible como una bandera experimental en las versiones nocturnas.
-Esta no fue una decisión fácil, pero nuestro equipo tuvo una combinación de [preocupaciones sobre la preparación del ecosistema y orientación general sobre cómo/cuándo usar la función](https://github.com/microsoft/TypeScript/issues/46452).
-Pensamos que sería mejor suavizar la experiencia del usuario en lugar de lanzar algo que, en última instancia, sería demasiado frustrante para la mayoría de las personas.
-Mientras tanto, sin embargo, aún puedes usar el nuevo soporte para `--module nodenext` y `--moduleResolution nodenext` como características experimentales en [compilaciones nocturnas de TypeScript](https://www.typescriptlang.org/docs/handbook/nightly-builds.html).
-Si intentas usar esta configuración en *TypeScript 4.5*, recibirás un mensaje de error indicándote que, en su lugar, uses una compilación nocturna.
-
-A partir de nuestra publicación de RC, hemos agregado notas sobre [nuevas características de *JSDoc*](#jsdoc-const-and-type-arg-defaults).
-Si bien estas características en realidad se incluyeron en el RC, no se incluyeron en nuestras notas de la versión anterior.
-
-Desde el lado de la edición del lenguaje, hemos introducido más terminaciones de fragmentos desde *TypeScript 4.5 beta* ⏤ [específicamente, para implementación de métodos y redefiniciones](#subclass-method-snippets).
-
-También [hemos abordado una regresión de rendimiento en el modo `--build`](https://github.com/microsoft/TypeScript/pull/46209) debido a llamadas excesivas de `realpath` para archivos `package.json`.
-Este cambio se realizó para *TypeScript 4.5*, pero también se actualizó a *TypeScript 4.4.4*.
-Si esta regresión te impidió probar *TypeScript 4.4*, deberías ver una velocidad comparable o mejor en el modo `--build` en comparación con versiones anteriores.
-
 ### Compatible con `lib` de `node_modules`
 
 Para garantizar que la compatibilidad con *TypeScript* y *JavaScript* funcione correctamente desde el primer momento, *TypeScript* incluye una serie de archivos de declaración (archivos `.d.ts`).
@@ -389,7 +370,7 @@ Para obtener más información, [lee sobre la solicitud de extracción original]
 
 ### Mejor compatibilidad con el editor para tipos no resueltos
 
-En algunos casos, los editores aprovecharán un modo semántico ligero "parcial" ⏤ ya sea mientras el editor espera a que se cargue el proyecto completo o en contextos como el [editor basado en web de *GitHub*](https://docs.github.com/en/codespaces/developing-in-codespaces/web-based-editor ).
+En algunos casos, los editores aprovecharán un modo semántico ligero "parcial" ⏤ ya sea mientras el editor espera a que se cargue el proyecto completo o en contextos como el [editor basado en web de *GitHub*](https://docs.github.com/en/codespaces/developing-in-codespaces/web-based-editor).
 
 En versiones anteriores de *TypeScript*, si el servicio de lenguaje no podía encontrar un tipo, simplemente imprimía `any`.
 

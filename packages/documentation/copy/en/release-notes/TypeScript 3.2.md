@@ -144,7 +144,7 @@ Estamos agradecidos por la contribución y estamos seguros de que nuestros usuar
 ## Advertencias
 
 Como mencionamos, el soporte de `BigInt` solo está disponible para el objetivo `esnext`.
-Puede que no sea obvio, pero debido a que los `BigInts` tienen un comportamiento diferente para operadores matemáticos como `+`, `-`, `*`, etc., brindan funcionalidad para objetivos más antiguos donde la función no existe (como `es2017` e inferior ) implicaría reescribir cada una de estas operaciones.
+Puede que no sea obvio, pero debido a que los `BigInts` tienen un comportamiento diferente para operadores matemáticos como `+`, `-`, `*`, etc., brindan funcionalidad para objetivos más antiguos donde la función no existe (como `es2017` e inferior) implicaría reescribir cada una de estas operaciones.
 *TypeScript* necesitaría distribuirse al comportamiento correcto según el tipo, por lo que cada adición, concatenación de cadenas, multiplicación, etc. implicaría una llamada a función.
 
 Por esa razón, no tenemos planes inmediatos para brindar soporte de nivel inferior.

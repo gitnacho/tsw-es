@@ -10,7 +10,7 @@ translatable: true
 *TypeScript* agregó soporte para generar archivos `.d.ts` desde *JavaScript* utilizando la sintaxis `JSDoc`.
 
 Esta configuración significa que puedes poseer la experiencia de editor de los editores con tecnología *TypeScript* sin trasladar tu proyecto a *TypeScript* o tener que mantener archivos `.d.ts` en tu código base.
-*TypeScript* admite la mayoría de las etiquetas `JSDoc`, puedes encontrar [la referencia aquí](/docs/handbook/type-check-javascript-files.html#supported-jsdoc).
+*TypeScript* admite la mayoría de las etiquetas `JSDoc`, puedes encontrar [la referencia aquí](/es/docs/handbook/type-checking-javascript-files.html#los-m%C3%B3dulos-commonjs-son-compatibles).
 
 ## Configuración de tu proyecto para emitir archivos `.d.ts`
 

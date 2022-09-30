@@ -1,21 +1,21 @@
 //// { "order": 1 }
 
-// Con el nuevo Playground, las URL contienen mucho más
+// Con el nuevo Playground, los URLs contienen mucho más
 // información sobre tu configuración. Esto hace reproducciones
 // precisas, y no tienes que decirle a nadie que toque unaria
 // bandera particular del compilador para replicar tu configuración.
 
-// La URL contiene:
+// El URL contiene:
 //
 // - Si estás en un ejemplo
 // - El código fuente comprimido con gzip para tu TypeScript/JavaScript
-// - Compatibilidad con versiones anteriores de URL antiguas sin gzip
+// - Compatibilidad con versiones anteriores de URL antiguos sin gzip
 // - En qué lenguaje estás trabajando
 // - La diferencia de la configuración del compilador de los valores predeterminados
 //   example:new-compiler-defaults
 // - Tu selección de texto si tienes algún código resaltado
 //
-// La URL se actualiza en vivo con cualquiera de los cambios anteriores
+// El URL se actualiza en vivo con cualquiera de los cambios anteriores
 // usando replaceState de HTML5, por lo que el botón Atrás
 // todavía funciona como se esperaba.
 

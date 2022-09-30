@@ -6,7 +6,7 @@ La última vez que [hubo una interrupción](https://github.com/microsoft/TypeScr
 
 ### Acceso que necesitas
 
-- Debes tener acceso a ["TypeScript ⏤ Public Facing Services"](https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/asset/Microsoft_Azure_Billing/Subscription/subscriptions/57bfeeed-c34a-4ffd-a06b-ccff27ac91b8) suscripción en *Azure*
+- Debes tener acceso a ["TypeScript ⏤ Public Facing Services"](https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/asset/Microsoft_Azure_Billing/Subscription/subscriptions/57bfeeed-c34a-4ffd-a06b-ccff27ac91b8) por medio de una suscripción en *Azure*
 
 ### Lugares para leer registros
 
@@ -24,7 +24,7 @@ La compilación para el tren de despliegue normalmente se ve así:
 - Se realiza una implementación para *Azure Blob Storage* a través de [`.github/workflows/v2-merged-staging.yml`](https://github.com/microsoft/TypeScript-website/blob/v2/.github/workflows/v2-merged-staging.yml)
 - Todos los lunes, se realiza una implementación de *v2* a la aplicación de producción a través de [`.github/workflows/deploy-prod.yml`](https://github.com/microsoft/TypeScript-website/blob/v2/.github/workflows/deploy-prod.yml)
 
-Puedes implementar *v2* en producción en cualquier momento a través del [botón" Ejecutar flujo de trabajo "aquí](https://github.com/microsoft/TypeScript-Website/actions?query=workflow%3A%22Monday+Website+Push+To+Production%22), por lo que si tienes un compromiso de emergencia: ve a *v2* y luego puedes ejecutar la acción.
+Puedes implementar *v2* en producción en cualquier momento a través del [botón "Ejecutar flujo de trabajo" aquí](https://github.com/microsoft/TypeScript-Website/actions?query=workflow%3A%22Monday+Website+Push+To+Production%22), por lo que si tienes una confirmación de emergencia: ve a `v2` y luego puedes ejecutar la acción.
 
 Las aplicaciones de *App Service* están configuradas por [`Web.config`](https://github.com/microsoft/TypeScript-website/blob/v2/packages/typescriptlang-org/static/Web.config). [Aquí hay una referencia sobre el formato](https://hangouts.google.com/call/H553wrJ9d97l2LMpNh9hAEEE). He visto archivos (`*.json` y `*.manifest`) ser 404 en el sitio porque no estaban en la configuración.
 

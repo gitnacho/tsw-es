@@ -5,7 +5,7 @@ Una dependencia para descargar archivos `*.d.ts` correspondientes a un archivo f
 ### Uso
 
 ```ts
-// Cree la función para ejecutar ATA con una serie de devoluciones de llamada
+// Crea la función para ejecutar ATA con una serie de devoluciones de llamada
 const ata = setupTypeAcquisition({
   projectName: "My ATA Project",
   typescript: ts,

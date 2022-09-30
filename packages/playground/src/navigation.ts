@@ -164,7 +164,7 @@ const updateNavWithStoryContent = (title: string, storyContent: StoryContent[], 
               break;
           }
 
-          // Establece la URL después de seleccionar
+          // Establece el URL después de seleccionar
           const alwaysUpdateURL = !localStorage.getItem("disable-save-on-type")
           if (alwaysUpdateURL) {
             location.hash = `${prefix}-${i}`
@@ -195,8 +195,8 @@ const updateNavWithStoryContent = (title: string, storyContent: StoryContent[], 
   }
 }
 
-// Usa fetch para obtener el HTML de una URL, con un caso especial 
-// cuando esa es una URL gatsby donde sacamos lo importante
+// Usa fetch para obtener el HTML de un URL, con un caso especial 
+// cuando ese es un URL gatsby donde sacamos lo importante
 // HTML desde dentro del id de __gatsby.
 const setStoryViaHref = (href: string, sandbox: Sandbox) => {
   fetch(href).then(async req => {

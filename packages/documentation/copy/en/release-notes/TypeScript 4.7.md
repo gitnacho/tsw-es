@@ -703,7 +703,7 @@ export type TypeFromImport =
 export interface MergedType extends TypeFromRequire, TypeFromImport {}
 ```
 
-Las sintaxis `import type` e `import()` solo admiten el `resolution-mode` en [compilaciones nocturnas de *TypeScript*](https://www.typescriptlang.org/docs/handbook/nightly-builds.html).
+Las sintaxis `import type` e `import()` solo admiten el `resolution-mode` en [compilaciones nocturnas de *TypeScript*](https://www.typescriptlang.org/es/docs/handbook/nightly-builds.html).
 Es probable que obtenga un error como
 
 ```
@@ -804,7 +804,7 @@ Para obtener más detalles, [consulta la implementación de la solicitud de extr
 
 ### Actualizaciones de `lib.d.ts`
 
-Si bien *TypeScript* se esfuerza por evitar interrupciones importantes, incluso los pequeños cambios en las bibliotecas integradas pueden causar problemas.
+Si bien *TypeScript* se esfuerza por evitar rupturas importantes, incluso los pequeños cambios en las bibliotecas integradas pueden causar problemas.
 No esperamos interrupciones importantes como resultado de las actualizaciones del *DOM* y `lib.d.ts`, pero puede haber algunas pequeñas.
 
 ### Comprobaciones de propagación más estrictas en *JSX*

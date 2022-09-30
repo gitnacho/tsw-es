@@ -43,7 +43,7 @@ Hay un archivo JSON de tabla de contenido que contiene
 todos los metadatos útiles sobre la jerarquía y ordenación
 de los documentos.
 
-Es probable que necesitemos crear esto por traducción.
+Es probable que necesitemos crear esto por traducción
 en el futuro, pero por ahora la tabla de contenido
 predeterminada en inglés.
 

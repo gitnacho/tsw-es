@@ -6,7 +6,7 @@ oneline: Cómo dividir un gran proyecto de TypeScript
 translatable: true
 ---
 
-Las referencias de proyectos son una nueva característica de *TypeScript 3.0* que te permite estructurar tus programas *TypeScript* en partes más pequeñas.
+Los proyectos de referencia son una nueva característica de *TypeScript 3.0* que te permite estructurar tus programas *TypeScript* en partes más pequeñas.
 
 Al hacer esto, puedes mejorar en gran medida los tiempos de compilación, reforzar la separación lógica entre componentes y organizar tu código de nuevas y mejores formas.
 
@@ -14,7 +14,7 @@ También estamos introduciendo un nuevo modo para `tsc`, el indicador `--build`,
 
 ## Un proyecto de ejemplo
 
-Veamos un programa bastante normal y veamos cómo las referencias de proyectos pueden ayudarnos a organizarlo mejor.
+Veamos un programa bastante normal y veamos cómo los proyectos de referencia nos pueden ayudar a organizarlo mejor.
 Imagina que tienes un proyecto con dos módulos, `converter` y `units`, y un archivo de prueba correspondiente para cada uno:
 
 ```
@@ -50,7 +50,7 @@ Puedes usar varios archivos `tsconfig` para resolver *algunos* de esos problemas
 - Invocar `tsc` dos veces implica más tiempo de inicio de sobrecarga
 - `tsc -w` no se puede ejecutar en varios archivos de configuración a la vez
 
-Las referencias de proyectos pueden resolver todos estos problemas y más.
+Los proyectos de referencia pueden resolver todos estos problemas y más.
 
 ## ¿Qué es una referencia de proyecto?
 
@@ -120,9 +120,9 @@ B     C
 
 Es importante en esta situación no anteponer cada referencia, porque terminará con dos copias de "A" en la salida de "D" ⏤ esto puede dar lugar a resultados inesperados.
 
-## Advertencias para las referencias de proyectos
+## Advertencias para los proyectos de referencia
 
-Las referencias de proyectos tienen algunas ventajas y desventajas que debes conocer.
+Los proyectos de referencia tienen algunas ventajas y desventajas que debes conocer.
 
 Debido a que los proyectos dependientes hacen uso de archivos `.d.ts` que se construyen a partir de sus dependencias, tendrás que verificar ciertos resultados de compilación *o* compilar un proyecto después de clonarlo antes de poder navegar por el proyecto en un editor sin ver falsos errores.
 
